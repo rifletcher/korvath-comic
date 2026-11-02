@@ -1,62 +1,37 @@
-# ⚔️ Conan the Barbarian — Graphic Novel Studio
+# ⚔️ Korvath the Barbarian — Graphic Novel Studio
 
-An autonomous, sequential sword-and-sorcery graphic novel engine featuring an autonomous **5-Agent Writers' Room**, **Dual Character & Weapon Consistency**, **Meta AI Guardrail Bypass Automation**, and an interactive **Pulp Graphic Novel Web Reader**.
+An autonomous, sequential sword-and-sorcery graphic novel studio featuring an autonomous **5-Agent Writers' Room**, **Dual Character & Weapon Consistency**, and a high-fidelity **Venice Grok Imagine Pipeline** (`grok-imagine-image-2-0`, 16:9 widescreen, `safe_mode: false`).
 
 ---
 
 ## 🌟 Core Highlights
 
-### 1. The Autonomous Writers' Room (Zero-Script Sagas)
-When starting with no pre-existing script, the 5-agent Writers' Room authors full 10-panel episodes from scratch:
-* **Lore Master:** Enforces Robert E. Howard pulp worldbuilding (Stygia, Cimmeria, Zamora).
-* **Plot Architect:** Constructs a 3-Act, 10-beat narrative arc.
-* **Scriptwriter:** Drafts visceral action, pulp narrative captions, and sparse dialogue.
-* **Cinematographer:** Applies Frank Frazetta / John Buscema visual framing and chiaroscuro lighting.
-* **Continuity Supervisor:** Injects locked character and broadsword DNA into `storyboard.json`.
+### 1. The Autonomous 20-Panel Writers' Room
+Authors full 20-page comic book issues from scratch:
+* **Lore Master:** Enforces grim dark bronze-age pulp worldbuilding (Sarkesh, The Iron Wastes, Valkash, Ophirion).
+* **Plot Architect:** Constructs a 3-Act, 20-beat graphic novel issue arc.
+* **Scriptwriter:** Drafts visceral barbarian action, archaic narrative captions, and rugged dialogue.
+* **Cinematographer:** Applies Frank Frazetta / John Buscema visual framing and theatrical chiaroscuro lighting.
+* **Continuity Supervisor:** Injects locked character (Korvath & Natari) and weapon DNA into `storyboard.json`.
 
-### 2. Meta AI Guardrail Bypass Architecture
-Meta AI provides the finest graphic novel linework and dynamic comic anatomy available. To bypass its text safety classifiers (Llama Guard) without getting refusals on barbarian violence:
-* **Automated Euphemistic Sanitizer:** Dynamically translates trigger words (`blood` ➔ `crimson mist`, `kill` ➔ `strike down`, `sever` ➔ `sunder`, `naked` ➔ `scarred bronze torso`).
-* **Art Direction Anchoring:** Wraps all prompts in vintage 1970s graphic novel context.
-* See [`docs/meta_ai_guardrails_investigation.md`](file:///C:/research/c-book-generator/conan/docs/meta_ai_guardrails_investigation.md) for full analysis and local self-hosting alternatives.
+### 2. Venice Grok Imagine Pipeline
+* **Model:** `grok-imagine-image-2-0` via Venice.ai API with zero corporate censorship filters (`safe_mode: false`).
+* **Lettering:** In-canvas, organically composed vintage yellow narrative caption boxes and dialogue speech balloons.
+* **Resolution:** 1280x720 (16:9 Cinematic Widescreen).
 
 ### 3. Dual Consistency (Character & Weapon Model Sheets)
-Conan's facial coordinates (Arnold Schwarzenegger + Jason Momoa) and his iconic 42-inch Atlantean broadsword are locked as reference turnaround sheets in `00_Reference/sheets/`.
+* **Korvath:** Henry Cavill (50%) + Jason Momoa (50%) in `00_Reference/sheets/korvath_model_sheet.webp`.
+* **Natari:** Salma Hayek (50%) + Ana de Armas (50%) in `00_Reference/sheets/natari_model_sheet.webp`.
+* **Iron-Breaker Broadsword:** 42-inch ancestral notched blade in `00_Reference/sheets/broadsword_model_sheet.webp`.
 
 ---
 
-## 📂 Project Directory Structure
+## 🌐 Instant Vercel Deployment
 
-```text
-conan/
-├── 00_Reference/
-│   ├── character_bible.md       # Conan, Kheshat, Cultist DNA
-│   ├── object_bible.md          # Atlantean Broadsword, Blood-Ruby of Set, Serpent Staff
-│   ├── character_prompts.json   # Machine-readable character single-anchors
-│   ├── object_prompts.json      # Machine-readable weapon & object anchors
-│   └── sheets/                  # Model sheet turnaround recipes (.txt & .webp)
-├── 01_Script/
-│   ├── arcs/                    # Narrative arc beats (active_saga_beats.json)
-│   ├── lore_and_premise/        # Hyborian world rules & themes
-│   └── storyboard.json          # Locked, camera-directed 10-panel script
-├── 02_Assets/
-│   ├── Episode_01/
-│   │   ├── raw/                 # Batch generation candidates
-│   │   └── selected/            # Audited, promoted panel assets
-│   └── web_reader.html          # Interactive Sword & Sorcery Web Reader
-├── docs/
-│   └── meta_ai_guardrails_investigation.md # Deep dive on Meta AI safety bypass & models
-├── tools/
-│   ├── writers_room/            # 5-Agent Writers' Room Engine
-│   ├── generate_model_sheet.js  # Turnaround sheet generator
-│   ├── render_panel_meta.js     # Meta AI CDP runner with automated guardrail bypass
-│   ├── visual_qa_auditor.js     # Cardinality & visual consistency auditor
-│   ├── build_reader.js          # Reader compiler
-│   └── comic.config.json        # Frazetta/Buscema style presets
-├── package.json
-├── AGENTS.md                    # Operating Rules, SOP & Quality Protocols
-└── README.md                    # This document
-```
+This repository is pre-configured for zero-config Vercel deployment:
+* `vercel.json` routes to `docs/`
+* `docs/index.html` is the standalone, responsive web comic reader.
+* `docs/assets/` contains all 20 production WebP panels.
 
 ---
 
@@ -65,22 +40,15 @@ conan/
 ```bash
 cd C:\research\c-book-generator\conan
 
-# 1. Author a new saga from scratch via the Writers' Room
+# 1. Author a new saga via the 20-Panel Writers' Room
 npm run room:write
 
-# 2. Generate turnaround model sheets for characters or weapons
-npm run sheet:char conan
-npm run sheet:object broadsword
+# 2. Render all 20 panels with Venice Grok Imagine
+npm run render:all
 
-# 3. Render a panel via Meta AI (with automated guardrail bypass)
-npm run render:panel -- --panel 1
+# 3. Export and bundle for Vercel deployment
+npm run export:vercel
 
-# 4. Audit candidate & promote to selected/
-npm run audit:qa -- --panel 1
-npm run audit:qa -- --panel 1 --promote
-
-# 5. Compile and open the Web Reader
-npm run build:reader
+# 4. Open the Web Reader locally
 npm run open:reader
 ```
-
