@@ -1,0 +1,29 @@
+{
+  "projectName": "Korvath the Barbarian",
+  "seriesSubtitle": "The Slumbering Serpent of Sarkesh",
+  "style": {
+    "preset": "sword_and_sorcery_graphic_novel",
+    "baseStylePrompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta and John Buscema illustration style, dramatic heavy black ink brushwork, crisp fine cross-hatching, rich cel-shaded digital colors, theatrical chiaroscuro lighting, dark pulp fantasy aesthetic, masterwork sequential art",
+    "avoidTokens": "photorealistic, 3d render, blurry, modern anime, cutesy cartoon, clean digital CGI, soft pastel airbrushing, deformed hands, extra limbs, modern clothing, missing fingers, low resolution, flat lighting",
+    "aspectRatio": "16:9",
+    "renderDimensions": {
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "inference": {
+    "engine": "venice_grok",
+    "model": "grok-imagine-image-2-0",
+    "safe_mode": false,
+    "fallbackEngine": "meta_ai"
+  },
+  "paths": {
+    "storyboard": "01_Script/storyboard.json",
+    "characterBible": "00_Reference/character_bible.md",
+    "objectBible": "00_Reference/object_bible.md",
+    "characterPrompts": "00_Reference/character_prompts.json",
+    "objectPrompts": "00_Reference/object_prompts.json",
+    "assetsDir": "02_Assets"
+  }
+}
+

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Korvath the Barbarian — Issue #1: The Slumbering Serpent of Sarkesh</title>
+  <meta name="description" content="A 20-page vintage sword-and-sorcery graphic novel comic book issue.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Cinzel:wght@700;900&family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #070709;
+      --card-bg: #0f1015;
+      --border: #2a2015;
+      --blood-gold: #fca311;
+      --crimson: #e63946;
+      --text: #eae2d6;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Cinzel', Georgia, serif;
+      line-height: 1.6;
+      padding-bottom: 80px;
+    }
+    header {
+      background: #120a06;
+      border-bottom: 2px solid var(--border);
+      padding: 24px 32px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.9);
+    }
+    h1 {
+      font-size: 32px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--blood-gold);
+      text-shadow: 0 0 16px rgba(252, 163, 17, 0.4);
+    }
+    .series-sub {
+      font-size: 14px;
+      letter-spacing: 4px;
+      color: var(--crimson);
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-top: 4px;
+    }
+    .controls {
+      margin-top: 12px;
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+    .btn {
+      background: #2a1c13;
+      border: 1px solid var(--blood-gold);
+      color: #fff;
+      padding: 6px 16px;
+      border-radius: 4px;
+      font-family: inherit;
+      cursor: pointer;
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: background 0.2s;
+    }
+    .btn:hover {
+      background: var(--crimson);
+    }
+    .comic-page {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+    .panel-card {
+      background: #000;
+      border: 3px solid #1a1a24;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.9);
+      position: relative;
+      overflow: hidden;
+      border-radius: 4px;
+    }
+    .panel-img-wrap {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      position: relative;
+      background: #0d0d12;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .panel-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .panel-footer-meta {
+      background: #111218;
+      padding: 10px 18px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: #888;
+      border-top: 1px solid #222;
+      letter-spacing: 1px;
+    }
+    .page-indicator {
+      color: var(--blood-gold);
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Korvath the Barbarian</h1>
+    <div class="series-sub">Issue #1: The Slumbering Serpent of Sarkesh</div>
+  </header>
+
+  <main class="comic-page">
+    
+      <div class="panel-card" id="panel-1">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="./assets/panel_01.webp" 
+               loading="lazy"
+               alt="Panel 1: The Windswept Ruins">
+        </div>
+        <div class="panel-footer-meta">
+          <span class="page-indicator">PANEL 1 OF 20</span>
+          <span>The Windswept Ruins</span>
+          <span>Ultra-Wide Panoramic Establishing Shot</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-2">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="./assets/panel_02.webp" 
+               loading="lazy"
+               alt="Panel 2: Eyes in the Dust">
+        </div>
+        <div class="panel-footer-meta">
+          <span class="page-indicator">PANEL 2 OF 20</span>
+          <span>Eyes in the Dust</span>
+          <span>Medium Kneeling Hero Shot</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-3">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="./assets/panel_03.webp" 
+               loading="lazy"
+               alt="Panel 3: The Crypt of the Serpent">
+        </div>
+        <div class="panel-footer-meta">
+          <span class="page-indicator">PANEL 3 OF 20</span>
+          <span>The Crypt of the Serpent</span>
+          <span>Low-Angle Entrance Shot</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-4">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="./assets/panel_04.webp" 
+               loading="lazy"
+               alt="Panel 4: Hall of Serpent Kings">
+        </div>
+        <div class="panel-footer-meta">
+          <span class="page-indicator">PANEL 4 OF 20</span>
+          <span>Hall of Serpent Kings</span>
+          <span>Long Corridor Tracking Shot</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-5">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="./assets/panel_05.webp" 
+               loading="lazy"
+               alt="Panel 5: Blades of the Cult">
+        </div>
+        <div class="panel-footer-meta">
+          <span class="page-indicator">PANEL 5 OF 20</span>
+          <span>Blades of the Cult</span>
+          <span>Dynamic Three-Shot Composition</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-6">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="./assets/panel_06.webp" 
+               loading="lazy"
+               alt="Panel 6: The Iron Cleave">
+        </div>
+        <div class="panel-footer-meta">
+          <span class="page-indicator">PANEL 6 OF 20</span>
+          <span>The Iron Cleave</span>
+          <span>Dynamic Action Freeze-Frame</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-7">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="./assets/panel_07.webp" 
+               loading="lazy"
+               alt="Panel 7: The Cavern of the Lotus">
+        </div>
+        <div class="panel-footer-meta">
+          <span class="page-indicator">PANEL 7 OF 20</span>
+          <span>The Cavern of the Lotus</span>
+          <span>Wide Cavern High-Angle View</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-8">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="./assets/panel_08.webp" 
+               loading="lazy"
+               alt="Panel 8: The Captive Maiden">
+        </div>
+        <div class="panel-footer-meta">
+          <span class="page-indicator">PANEL 8 OF 20</span>
+          <span>The Captive Maiden</span>
+          <span>Medium Close Heroine Portrait</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-9">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="./assets/panel_09.webp" 
+               loading="lazy"
+               alt="Panel 9: The Altar of Sarkath">
+        </div>
+        <div class="panel-footer-meta">
+          <span class="page-indicator">PANEL 9 OF 20</span>
+          <span>The Altar of Sarkath</span>
+          <span>Wide Ritual Colonnade View</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-10">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="./assets/panel_10.webp" 
+               loading="lazy"
+               alt="Panel 10: The Barbarian Charge">
+        </div>
+        <div class="panel-footer-meta">
+          <span class="page-indicator">PANEL 10 OF 20</span>
+          <span>The Barbarian Charge</span>
+          <span>Dynamic Low-Angle Impact Shot</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-11">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="./assets/panel_11.webp" 
+               loading="lazy"
+               alt="Panel 11: Awakening of the Shadow">
+        </div>
+        <div class="panel-footer-meta">
+          <span class="page-indicator">PANEL 11 OF 20</span>
+          <span>Awakening of the Shadow</span>
+          <span>Colossal Creature Reveal Shot</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-12">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="./assets/panel_12.webp" 
+               loading="lazy"
+               alt="Panel 12: Wrath of the Titan">
+        </div>
+        <div class="panel-footer-meta">
+          <span class="page-indicator">PANEL 12 OF 20</span>
+          <span>Wrath of the Titan</span>
+          <span>Wide Cataclysmic Destruction Shot</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-13">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="./assets/panel_13.webp" 
+               loading="lazy"
+               alt="Panel 13: Poetic Justice">
+        </div>
+        <div class="panel-footer-meta">
+          <span class="page-indicator">PANEL 13 OF 20</span>
+          <span>Poetic Justice</span>
+          <span>Dramatic Lethal Strike Shot</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-14">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="./assets/panel_14.webp" 
+               loading="lazy"
+               alt="Panel 14: Laughing at Doom">
+        </div>
+        <div class="panel-footer-meta">
+          <span class="page-indicator">PANEL 14 OF 20</span>
+          <span>Laughing at Doom</span>
+          <span>Tight Chiaroscuro Hero Portrait</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-15">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="./assets/panel_15.webp" 
+               loading="lazy"
+               alt="Panel 15: Venom and Stone">
+        </div>
+        <div class="panel-footer-meta">
+          <span class="page-indicator">PANEL 15 OF 20</span>
+          <span>Venom and Stone</span>
+          <span>Dynamic Low-Angle Action Evasion</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-16">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="./assets/panel_16.webp" 
+               loading="lazy"
+               alt="Panel 16: The Fatal Leap">
+        </div>
+        <div class="panel-footer-meta">
+          <span class="page-indicator">PANEL 16 OF 20</span>
+          <span>The Fatal Leap</span>
+          <span>Peak Climax Midair Action Shot</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-17">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="./assets/panel_17.webp" 
+               loading="lazy"
+               alt="Panel 17: Death Agony of the Beast">
+        </div>
+        <div class="panel-footer-meta">
+          <span class="page-indicator">PANEL 17 OF 20</span>
+          <span>Death Agony of the Beast</span>
+          <span>Full Catastrophe Wide Shot</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-18">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="./assets/panel_18.webp" 
+               loading="lazy"
+               alt="Panel 18: Severing the Chains">
+        </div>
+        <div class="panel-footer-meta">
+          <span class="page-indicator">PANEL 18 OF 20</span>
+          <span>Severing the Chains</span>
+          <span>Medium Dynamic Hero Duo Shot</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-19">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="./assets/panel_19.webp" 
+               loading="lazy"
+               alt="Panel 19: Escape into the Blinding Light">
+        </div>
+        <div class="panel-footer-meta">
+          <span class="page-indicator">PANEL 19 OF 20</span>
+          <span>Escape into the Blinding Light</span>
+          <span>Exterior Action Breakthrough Shot</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-20">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="./assets/panel_20.webp" 
+               loading="lazy"
+               alt="Panel 20: The Crimson Dawn">
+        </div>
+        <div class="panel-footer-meta">
+          <span class="page-indicator">PANEL 20 OF 20</span>
+          <span>The Crimson Dawn</span>
+          <span>Epic Panoramic Sunset/Sunrise Hero Shot</span>
+        </div>
+      </div>
+  </main>
+</body>
+</html>

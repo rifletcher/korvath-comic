@@ -1,0 +1,23 @@
+{
+  "name": "korvath-graphic-novel",
+  "version": "1.0.0",
+  "description": "Korvath the Barbarian Graphic Novel Studio with Venice Grok Imagine Pipeline",
+  "main": "tools/writers_room/writers_room.js",
+  "scripts": {
+    "room:write": "node tools/writers_room/writers_room.js",
+    "sheet:char": "node tools/generate_model_sheet.js --type char",
+    "sheet:object": "node tools/generate_model_sheet.js --type object",
+    "render:panel": "node tools/render_panel_venice.js",
+    "render:meta": "node tools/render_panel_meta.js",
+    "render:all": "node tools/render_panel_venice.js --all --promote",
+    "audit:qa": "node tools/visual_qa_auditor.js",
+    "build:reader": "node tools/build_reader.js",
+    "open:reader": "start 02_Assets/web_reader.html",
+    "export:vercel": "node tools/export_for_vercel.js",
+    "build:vercel": "node tools/export_for_vercel.js"
+  },
+  "keywords": ["korvath", "graphic-novel", "venice-ai", "grok", "sword-and-sorcery"],
+  "author": "Antigravity & User",
+  "license": "MIT"
+}
+

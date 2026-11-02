@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>⚔️ Pipeline Shootout: Conan on Skull Throne</title>
+  <style>
+    body {
+      background: #0a0705;
+      color: #e5ded6;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Georgia, serif;
+      padding: 30px 20px 60px;
+      margin: 0;
+    }
+    header {
+      text-align: center;
+      max-width: 960px;
+      margin: 0 auto 36px;
+    }
+    h1 {
+      color: #c98939;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 26px;
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      color: #a89481;
+      font-size: 15px;
+    }
+    .scene-box {
+      background: #18110c;
+      border: 1px solid #3c2415;
+      padding: 16px 20px;
+      border-radius: 6px;
+      margin-top: 18px;
+      font-size: 14px;
+      color: #ad9a87;
+      text-align: left;
+      line-height: 1.5;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+      gap: 30px;
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+    .card {
+      background: #150e09;
+      border: 1px solid #352114;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+      display: flex;
+      flex-direction: column;
+    }
+    .card-header {
+      padding: 14px 18px;
+      background: #1e130d;
+      border-bottom: 1px solid #352114;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .model-badge {
+      font-weight: bold;
+      color: #e0993f;
+      font-size: 15px;
+      letter-spacing: 1px;
+    }
+    .tag {
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 3px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .tag-censored { background: #5c2018; color: #ff9d91; }
+    .tag-uncensored { background: #1b4d24; color: #9df0a8; }
+    .img-wrap {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #000;
+      overflow: hidden;
+      position: relative;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.25s ease;
+      cursor: pointer;
+    }
+    img:hover {
+      transform: scale(1.02);
+    }
+    .card-body {
+      padding: 16px 18px;
+      flex-grow: 1;
+      font-size: 13px;
+      color: #b5a494;
+      line-height: 1.5;
+    }
+    .highlight {
+      color: #e5ded6;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>⚔️ Sword & Sorcery Pipeline Shootout</h1>
+    <div class="subtitle">Side-by-Side Benchmark: Meta AI Filter Compromise vs. Venice.ai Uncensored Engines</div>
+    <div class="scene-box">
+      <strong>🎯 Target Scene Requested:</strong><br>
+      Conan sitting on a carved skull throne, heavy two-handed broadsword in hand dripping dark blood onto the stone floor, two beautiful women in revealing bikinis lounging on silk cushions at his feet, smoking lotus braziers in Frank Frazetta / John Buscema 1970s graphic novel style.
+    </div>
+  </header>
+
+  <div class="grid">
+    <!-- Meta AI -->
+    <div class="card">
+      <div class="card-header">
+        <span class="model-badge">1. Meta AI (CDP Automation)</span>
+        <span class="tag tag-censored">Corporate Filter Compromise</span>
+      </div>
+      <div class="img-wrap">
+        <img src="01_meta_ai_sanitized.webp" alt="Meta AI Sanitized" onclick="window.open(this.src)">
+      </div>
+      <div class="card-body">
+        <p><span class="highlight">Safety Status:</span> Refused raw prompt ("bikinis" & "dripping blood"). Prompt was forcibly adapted to: <em>"clean notched steel, no gore"</em> and <em>"hammered bronze battle-garb and sheer silk cloaks rather than bikinis"</em>.</p>
+        <p style="margin-top: 8px;"><span class="highlight">Visual Result:</span> High-contrast Frazetta ink & lighting, but women are clothed in battle cloaks and blade is completely clean of blood.</p>
+      </div>
+    </div>
+
+    <!-- Venice Recraft v4 -->
+    <div class="card">
+      <div class="card-header">
+        <span class="model-badge">2. Venice.ai: Recraft v4</span>
+        <span class="tag tag-uncensored">100% Uncensored</span>
+      </div>
+      <div class="img-wrap">
+        <img src="02_venice_recraft_v4.webp" alt="Recraft v4" onclick="window.open(this.src)">
+      </div>
+      <div class="card-body">
+        <p><span class="highlight">Safety Status:</span> Full raw prompt executed with zero filters.</p>
+        <p style="margin-top: 8px;"><span class="highlight">Visual Result:</span> Outstanding graphic novel ink linework, true bronze scale bikinis, dripping crimson blood splatters, and heavy pulp atmosphere.</p>
+      </div>
+    </div>
+
+    <!-- Venice Lustify v8 -->
+    <div class="card">
+      <div class="card-header">
+        <span class="model-badge">3. Venice.ai: Lustify v8</span>
+        <span class="tag tag-uncensored">100% Uncensored</span>
+      </div>
+      <div class="img-wrap">
+        <img src="04_venice_lustify_v8.webp" alt="Lustify v8" onclick="window.open(this.src)">
+      </div>
+      <div class="card-body">
+        <p><span class="highlight">Safety Status:</span> Uncensored dark fantasy & pulp specialist model.</p>
+        <p style="margin-top: 8px;"><span class="highlight">Visual Result:</span> Maximum barbarian grit and sensuality. Heavy muscular anatomy, detailed bronze bikinis, blood pooling on the flagstones.</p>
+      </div>
+    </div>
+
+    <!-- Venice WAI Illustrious -->
+    <div class="card">
+      <div class="card-header">
+        <span class="model-badge">4. Venice.ai: WAI-Illustrious</span>
+        <span class="tag tag-uncensored">100% Uncensored</span>
+      </div>
+      <div class="img-wrap">
+        <img src="03_venice_wai_illustrious.webp" alt="WAI Illustrious" onclick="window.open(this.src)">
+      </div>
+      <div class="card-body">
+        <p><span class="highlight">Safety Status:</span> Fine-tuned Illustrious-XL graphic novel engine.</p>
+        <p style="margin-top: 8px;"><span class="highlight">Visual Result:</span> Crisp illustrated linework, vivid cel shading, faithful composition of the throne, women at his feet, and bloodied blade.</p>
+      </div>
+    </div>
+
+    <!-- Venice Grok Imagine 2.0 -->
+    <div class="card">
+      <div class="card-header">
+        <span class="model-badge">5. Venice.ai: Grok Imagine 2.0</span>
+        <span class="tag tag-uncensored">100% Uncensored</span>
+      </div>
+      <div class="img-wrap">
+        <img src="05_venice_grok_imagine.webp" alt="Grok Imagine 2.0" onclick="window.open(this.src)">
+      </div>
+      <div class="card-body">
+        <p><span class="highlight">Safety Status:</span> Uncensored diffusion with xAI / Aurora style aesthetics.</p>
+        <p style="margin-top: 8px;"><span class="highlight">Visual Result:</span> Saturated warm torchlight, dramatic perspective on the skull throne, detailed bikinis and dripping blade.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

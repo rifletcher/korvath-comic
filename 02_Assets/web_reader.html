@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Korvath the Barbarian: The Slumbering Serpent of Sarkesh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Cinzel:wght@700;900&family=Comic+Neue:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #070709;
+      --card-bg: #0f1015;
+      --border: #2a2015;
+      --blood-gold: #fca311;
+      --crimson: #e63946;
+      --text: #eae2d6;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Cinzel', Georgia, serif;
+      line-height: 1.6;
+      padding-bottom: 80px;
+    }
+    header {
+      background: #120a06;
+      border-bottom: 2px solid var(--border);
+      padding: 24px 32px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.9);
+    }
+    h1 {
+      font-size: 32px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--blood-gold);
+      text-shadow: 0 0 16px rgba(252, 163, 17, 0.4);
+    }
+    .series-sub {
+      font-size: 14px;
+      letter-spacing: 4px;
+      color: var(--crimson);
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-top: 4px;
+    }
+    .comic-page {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+    .panel-card {
+      background: #000;
+      border: 3px solid #1a1a24;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.9);
+      position: relative;
+      overflow: hidden;
+    }
+    .panel-img-wrap {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      position: relative;
+      background: #0d0d12;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .panel-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* --- AUTHENTIC COMIC LETTERING OVERLAYS --- */
+    .comic-caption-box {
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      max-width: 55%;
+      background: #fff6a6;
+      color: #111;
+      border: 2px solid #000;
+      box-shadow: 4px 4px 0px rgba(0,0,0,0.85);
+      padding: 10px 14px;
+      font-family: 'Comic Neue', 'Bangers', cursive, sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 1.35;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      z-index: 10;
+    }
+    .comic-speech-balloon {
+      position: absolute;
+      bottom: 24px;
+      right: 24px;
+      max-width: 48%;
+      background: #ffffff;
+      color: #111;
+      border: 2px solid #000;
+      border-radius: 20px;
+      box-shadow: 4px 4px 0px rgba(0,0,0,0.85);
+      padding: 10px 18px;
+      font-family: 'Comic Neue', 'Bangers', cursive, sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 1.3;
+      text-transform: uppercase;
+      z-index: 10;
+    }
+    .speaker-name {
+      color: var(--crimson);
+      font-size: 11px;
+      letter-spacing: 1px;
+      margin-bottom: 2px;
+      display: block;
+    }
+
+    .panel-footer-meta {
+      background: #111218;
+      padding: 8px 16px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      color: #777;
+      border-top: 1px solid #222;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Korvath the Barbarian</h1>
+    <div class="series-sub">Issue #1: The Slumbering Serpent of Sarkesh</div>
+  </header>
+
+  <main class="comic-page">
+    
+      <div class="panel-card" id="panel-1">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="Episode_01/selected/panel_01.webp" 
+               onerror="this.src='Episode_01/raw/panel_01.webp'; this.onerror=() => this.parentElement.innerHTML='<div style=\'padding:60px;color:#555;\'>Panel 1: Pending Render</div>';"
+               alt="Panel 1">
+        </div>
+        <div class="panel-footer-meta">
+          <span>PAGE / PANEL 1 OF 20</span>
+          <span>The Windswept Ruins</span>
+          <span>Ultra-Wide Panoramic Establishing Shot</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-2">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="Episode_01/selected/panel_02.webp" 
+               onerror="this.src='Episode_01/raw/panel_02.webp'; this.onerror=() => this.parentElement.innerHTML='<div style=\'padding:60px;color:#555;\'>Panel 2: Pending Render</div>';"
+               alt="Panel 2">
+        </div>
+        <div class="panel-footer-meta">
+          <span>PAGE / PANEL 2 OF 20</span>
+          <span>Eyes in the Dust</span>
+          <span>Medium Kneeling Hero Shot</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-3">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="Episode_01/selected/panel_03.webp" 
+               onerror="this.src='Episode_01/raw/panel_03.webp'; this.onerror=() => this.parentElement.innerHTML='<div style=\'padding:60px;color:#555;\'>Panel 3: Pending Render</div>';"
+               alt="Panel 3">
+        </div>
+        <div class="panel-footer-meta">
+          <span>PAGE / PANEL 3 OF 20</span>
+          <span>The Crypt of the Serpent</span>
+          <span>Low-Angle Entrance Shot</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-4">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="Episode_01/selected/panel_04.webp" 
+               onerror="this.src='Episode_01/raw/panel_04.webp'; this.onerror=() => this.parentElement.innerHTML='<div style=\'padding:60px;color:#555;\'>Panel 4: Pending Render</div>';"
+               alt="Panel 4">
+        </div>
+        <div class="panel-footer-meta">
+          <span>PAGE / PANEL 4 OF 20</span>
+          <span>Hall of Serpent Kings</span>
+          <span>Long Corridor Tracking Shot</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-5">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="Episode_01/selected/panel_05.webp" 
+               onerror="this.src='Episode_01/raw/panel_05.webp'; this.onerror=() => this.parentElement.innerHTML='<div style=\'padding:60px;color:#555;\'>Panel 5: Pending Render</div>';"
+               alt="Panel 5">
+        </div>
+        <div class="panel-footer-meta">
+          <span>PAGE / PANEL 5 OF 20</span>
+          <span>Blades of the Cult</span>
+          <span>Dynamic Three-Shot Composition</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-6">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="Episode_01/selected/panel_06.webp" 
+               onerror="this.src='Episode_01/raw/panel_06.webp'; this.onerror=() => this.parentElement.innerHTML='<div style=\'padding:60px;color:#555;\'>Panel 6: Pending Render</div>';"
+               alt="Panel 6">
+        </div>
+        <div class="panel-footer-meta">
+          <span>PAGE / PANEL 6 OF 20</span>
+          <span>The Iron Cleave</span>
+          <span>Dynamic Action Freeze-Frame</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-7">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="Episode_01/selected/panel_07.webp" 
+               onerror="this.src='Episode_01/raw/panel_07.webp'; this.onerror=() => this.parentElement.innerHTML='<div style=\'padding:60px;color:#555;\'>Panel 7: Pending Render</div>';"
+               alt="Panel 7">
+        </div>
+        <div class="panel-footer-meta">
+          <span>PAGE / PANEL 7 OF 20</span>
+          <span>The Cavern of the Lotus</span>
+          <span>Wide Cavern High-Angle View</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-8">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="Episode_01/selected/panel_08.webp" 
+               onerror="this.src='Episode_01/raw/panel_08.webp'; this.onerror=() => this.parentElement.innerHTML='<div style=\'padding:60px;color:#555;\'>Panel 8: Pending Render</div>';"
+               alt="Panel 8">
+        </div>
+        <div class="panel-footer-meta">
+          <span>PAGE / PANEL 8 OF 20</span>
+          <span>The Captive Maiden</span>
+          <span>Medium Close Heroine Portrait</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-9">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="Episode_01/selected/panel_09.webp" 
+               onerror="this.src='Episode_01/raw/panel_09.webp'; this.onerror=() => this.parentElement.innerHTML='<div style=\'padding:60px;color:#555;\'>Panel 9: Pending Render</div>';"
+               alt="Panel 9">
+        </div>
+        <div class="panel-footer-meta">
+          <span>PAGE / PANEL 9 OF 20</span>
+          <span>The Altar of Sarkath</span>
+          <span>Wide Ritual Colonnade View</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-10">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="Episode_01/selected/panel_10.webp" 
+               onerror="this.src='Episode_01/raw/panel_10.webp'; this.onerror=() => this.parentElement.innerHTML='<div style=\'padding:60px;color:#555;\'>Panel 10: Pending Render</div>';"
+               alt="Panel 10">
+        </div>
+        <div class="panel-footer-meta">
+          <span>PAGE / PANEL 10 OF 20</span>
+          <span>The Barbarian Charge</span>
+          <span>Dynamic Low-Angle Impact Shot</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-11">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="Episode_01/selected/panel_11.webp" 
+               onerror="this.src='Episode_01/raw/panel_11.webp'; this.onerror=() => this.parentElement.innerHTML='<div style=\'padding:60px;color:#555;\'>Panel 11: Pending Render</div>';"
+               alt="Panel 11">
+        </div>
+        <div class="panel-footer-meta">
+          <span>PAGE / PANEL 11 OF 20</span>
+          <span>Awakening of the Shadow</span>
+          <span>Colossal Creature Reveal Shot</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-12">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="Episode_01/selected/panel_12.webp" 
+               onerror="this.src='Episode_01/raw/panel_12.webp'; this.onerror=() => this.parentElement.innerHTML='<div style=\'padding:60px;color:#555;\'>Panel 12: Pending Render</div>';"
+               alt="Panel 12">
+        </div>
+        <div class="panel-footer-meta">
+          <span>PAGE / PANEL 12 OF 20</span>
+          <span>Wrath of the Titan</span>
+          <span>Wide Cataclysmic Destruction Shot</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-13">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="Episode_01/selected/panel_13.webp" 
+               onerror="this.src='Episode_01/raw/panel_13.webp'; this.onerror=() => this.parentElement.innerHTML='<div style=\'padding:60px;color:#555;\'>Panel 13: Pending Render</div>';"
+               alt="Panel 13">
+        </div>
+        <div class="panel-footer-meta">
+          <span>PAGE / PANEL 13 OF 20</span>
+          <span>Poetic Justice</span>
+          <span>Dramatic Lethal Strike Shot</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-14">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="Episode_01/selected/panel_14.webp" 
+               onerror="this.src='Episode_01/raw/panel_14.webp'; this.onerror=() => this.parentElement.innerHTML='<div style=\'padding:60px;color:#555;\'>Panel 14: Pending Render</div>';"
+               alt="Panel 14">
+        </div>
+        <div class="panel-footer-meta">
+          <span>PAGE / PANEL 14 OF 20</span>
+          <span>Laughing at Doom</span>
+          <span>Tight Chiaroscuro Hero Portrait</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-15">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="Episode_01/selected/panel_15.webp" 
+               onerror="this.src='Episode_01/raw/panel_15.webp'; this.onerror=() => this.parentElement.innerHTML='<div style=\'padding:60px;color:#555;\'>Panel 15: Pending Render</div>';"
+               alt="Panel 15">
+        </div>
+        <div class="panel-footer-meta">
+          <span>PAGE / PANEL 15 OF 20</span>
+          <span>Venom and Stone</span>
+          <span>Dynamic Low-Angle Action Evasion</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-16">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="Episode_01/selected/panel_16.webp" 
+               onerror="this.src='Episode_01/raw/panel_16.webp'; this.onerror=() => this.parentElement.innerHTML='<div style=\'padding:60px;color:#555;\'>Panel 16: Pending Render</div>';"
+               alt="Panel 16">
+        </div>
+        <div class="panel-footer-meta">
+          <span>PAGE / PANEL 16 OF 20</span>
+          <span>The Fatal Leap</span>
+          <span>Peak Climax Midair Action Shot</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-17">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="Episode_01/selected/panel_17.webp" 
+               onerror="this.src='Episode_01/raw/panel_17.webp'; this.onerror=() => this.parentElement.innerHTML='<div style=\'padding:60px;color:#555;\'>Panel 17: Pending Render</div>';"
+               alt="Panel 17">
+        </div>
+        <div class="panel-footer-meta">
+          <span>PAGE / PANEL 17 OF 20</span>
+          <span>Death Agony of the Beast</span>
+          <span>Full Catastrophe Wide Shot</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-18">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="Episode_01/selected/panel_18.webp" 
+               onerror="this.src='Episode_01/raw/panel_18.webp'; this.onerror=() => this.parentElement.innerHTML='<div style=\'padding:60px;color:#555;\'>Panel 18: Pending Render</div>';"
+               alt="Panel 18">
+        </div>
+        <div class="panel-footer-meta">
+          <span>PAGE / PANEL 18 OF 20</span>
+          <span>Severing the Chains</span>
+          <span>Medium Dynamic Hero Duo Shot</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-19">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="Episode_01/selected/panel_19.webp" 
+               onerror="this.src='Episode_01/raw/panel_19.webp'; this.onerror=() => this.parentElement.innerHTML='<div style=\'padding:60px;color:#555;\'>Panel 19: Pending Render</div>';"
+               alt="Panel 19">
+        </div>
+        <div class="panel-footer-meta">
+          <span>PAGE / PANEL 19 OF 20</span>
+          <span>Escape into the Blinding Light</span>
+          <span>Exterior Action Breakthrough Shot</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-20">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="Episode_01/selected/panel_20.webp" 
+               onerror="this.src='Episode_01/raw/panel_20.webp'; this.onerror=() => this.parentElement.innerHTML='<div style=\'padding:60px;color:#555;\'>Panel 20: Pending Render</div>';"
+               alt="Panel 20">
+        </div>
+        <div class="panel-footer-meta">
+          <span>PAGE / PANEL 20 OF 20</span>
+          <span>The Crimson Dawn</span>
+          <span>Epic Panoramic Sunset/Sunrise Hero Shot</span>
+        </div>
+      </div>
+  </main>
+</body>
+</html>

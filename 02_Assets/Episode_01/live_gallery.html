@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Korvath Issue #1 — Production Gallery</title>
+  <style>
+    body {
+      background: #0b0c10;
+      color: #c5c6c7;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 24px;
+    }
+    h1 {
+      color: #e63946;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 4px;
+    }
+    .subtitle {
+      color: #fca311;
+      font-size: 1.1rem;
+      margin-bottom: 24px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+      gap: 24px;
+    }
+    .card {
+      background: #1f2833;
+      border: 1px solid #45a29e;
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      background: #000;
+    }
+    .info {
+      padding: 12px 16px;
+    }
+    .panel-num {
+      color: #66fcf1;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    .action {
+      font-size: 0.9rem;
+      margin-top: 6px;
+      line-height: 1.4;
+      color: #e5e5e5;
+    }
+    .caption {
+      margin-top: 8px;
+      font-style: italic;
+      color: #fca311;
+      font-size: 0.85rem;
+      border-left: 2px solid #e63946;
+      padding-left: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Korvath the Barbarian — Issue #1</h1>
+  <div class="subtitle">"The Slumbering Serpent of Sarkesh" — Live Production Gallery</div>
+
+  <div class="grid" id="gallery"></div>
+
+  <script>
+    const panels = [
+      { id: 1, name: "The Windswept Ruins", caption: "Before the first iron towers rose, and before the empires of dust forgot their makers, there walked an older breed of men—forged in blood, bound by no king's law." },
+      { id: 2, name: "Eyes in the Dust", caption: "He smelled the bitter smoke of grey lotus on the desert wind—and the cold oil of drawn blades." },
+      { id: 3, name: "The Crypt of the Serpent", caption: "Into the bowels of forgotten Sarkesh he strode, where gods older than mankind slept in stagnant gloom." },
+      { id: 4, name: "Hall of Serpent Kings", caption: "The air tasted of tomb-rot and dried venom. A thousand dead eyes watched from the stone." },
+      { id: 5, name: "Blades of the Cult", caption: "They sprang like shadows from the tomb pillars—silent as striking adders." },
+      { id: 6, name: "The Iron Cleave", caption: "Civilized men debate right and wrong. The Northman answered with four feet of tempered steel." },
+      { id: 7, name: "Cavern of the Lotus", caption: "Behind the charnel-house lay decadence. Scented lotus, velvet pillows, and the captive flowers of conquered desert tribes." },
+      { id: 8, name: "The Captive Maiden", caption: "She did not weep like the women of the south. Her dark eyes held the fire of a desert panther waiting for blood." },
+      { id: 9, name: "The Altar of Sarkath", caption: "Upon the dais stood the high priest of the serpent, drunk on dark lotus and foul sorceries." },
+      { id: 10, name: "The Barbarian Charge", caption: "He did not parley. He did not boast. A barbarian strikes while civilized men are still clearing their throats." }
+    ];
+
+    const gallery = document.getElementById('gallery');
+    panels.forEach(p => {
+      const padId = String(p.id).padStart(2, '0');
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = `
+        <img src="selected/panel_${padId}.webp" alt="Panel ${p.id}" onerror="this.src='raw/panel_${padId}.webp'; this.onerror=() => this.style.display='none';">
+        <div class="info">
+          <div class="panel-num">Panel ${p.id}: ${p.name}</div>
+          <div class="caption">${p.caption}</div>
+        </div>
+      `;
+      gallery.appendChild(card);
+    });
+  </script>
+</body>
+</html>
+
