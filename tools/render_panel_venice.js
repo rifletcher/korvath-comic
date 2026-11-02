@@ -24,7 +24,7 @@ try {
   config = { style: { aspectRatio: '16:9', renderDimensions: { width: 1280, height: 720 } } };
 }
 
-async function renderPromptVenice(prompt, outPath, options = {}) {
+async function renderPromptVenice(prompt, outPath, options = {}, retries = 2) {
   const width = options.width || config.style?.renderDimensions?.width || 1280;
   const height = options.height || config.style?.renderDimensions?.height || 720;
   const aspectRatio = options.aspect_ratio || config.style?.aspectRatio || '16:9';
@@ -42,52 +42,75 @@ async function renderPromptVenice(prompt, outPath, options = {}) {
     safe_mode: false
   };
 
-  const startTime = Date.now();
-  const res = await fetch('https://api.venice.ai/api/v1/image/generate', {
-    method: 'POST',
-    headers: {
-      'Authorization': 'Bearer ' + VENICE_API_KEY,
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(payload)
-  });
+  for (let attempt = 1; attempt <= retries + 1; attempt++) {
+    const startTime = Date.now();
+    try {
+      const res = await fetch('https://api.venice.ai/api/v1/image/generate', {
+        method: 'POST',
+        headers: {
+          'Authorization': 'Bearer ' + VENICE_API_KEY,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
 
-  if (!res.ok) {
-    const errorText = await res.text();
-    throw new Error(`Venice API returned error ${res.status}: ${errorText}`);
+      if (!res.ok) {
+        const errorText = await res.text();
+        throw new Error(`Venice API returned error ${res.status}: ${errorText}`);
+      }
+
+      const data = await res.json();
+      if (!data.images || !data.images[0]) {
+        throw new Error(`Venice API response missing images: ${JSON.stringify(data)}`);
+      }
+
+      const buf = Buffer.from(data.images[0], 'base64');
+      fs.mkdirSync(path.dirname(outPath), { recursive: true });
+      fs.writeFileSync(outPath, buf);
+
+      const durationSec = ((Date.now() - startTime) / 1000).toFixed(1);
+      console.log(`✅ [Venice Grok] Successfully generated in ${durationSec}s: ${outPath} (${Math.round(buf.length / 1024)} KB)`);
+      return outPath;
+    } catch (err) {
+      console.warn(`⚠️ Attempt ${attempt} failed: ${err.message}`);
+      if (attempt <= retries) {
+        console.log(`🔄 Retrying in 5 seconds...`);
+        await new Promise(r => setTimeout(r, 5000));
+      } else {
+        throw err;
+      }
+    }
   }
+}
 
-  const data = await res.json();
-  if (!data.images || !data.images[0]) {
-    throw new Error(`Venice API response missing images: ${JSON.stringify(data)}`);
+function getStoryboard(episodeNum) {
+  const epStr = String(episodeNum || 1).padStart(2, '0');
+  const epPath = path.join(__dirname, '..', '01_Script', 'episodes', `episode_${epStr}.json`);
+  if (fs.existsSync(epPath)) {
+    return { storyboard: JSON.parse(fs.readFileSync(epPath, 'utf8')), episodeNum };
   }
-
-  const buf = Buffer.from(data.images[0], 'base64');
-  fs.mkdirSync(path.dirname(outPath), { recursive: true });
-  fs.writeFileSync(outPath, buf);
-
-  const durationSec = ((Date.now() - startTime) / 1000).toFixed(1);
-  console.log(`✅ [Venice Grok] Successfully generated in ${durationSec}s: ${outPath} (${Math.round(buf.length / 1024)} KB)`);
-  return outPath;
+  const defaultPath = path.join(__dirname, '..', '01_Script', 'storyboard.json');
+  return { storyboard: JSON.parse(fs.readFileSync(defaultPath, 'utf8')), episodeNum: episodeNum || 1 };
 }
 
 async function renderPanel(panelId, options = {}) {
-  const storyboardPath = path.join(__dirname, '..', '01_Script', 'storyboard.json');
-  const storyboard = JSON.parse(fs.readFileSync(storyboardPath, 'utf8'));
+  const episodeNum = options.episode || 1;
+  const epStr = String(episodeNum).padStart(2, '0');
+  const { storyboard } = getStoryboard(episodeNum);
   const panel = storyboard.find(p => p.panelId === parseInt(panelId, 10));
 
   if (!panel) {
-    throw new Error(`Panel ${panelId} not found in ${storyboardPath}`);
+    throw new Error(`Panel ${panelId} not found in episode ${episodeNum}`);
   }
 
   console.log(`\n==================================================`);
-  console.log(`🎬 RENDER PANEL ${panel.panelId}: "${panel.beat?.name || 'Untitled'}"`);
+  console.log(`🎬 [EPISODE ${episodeNum}] RENDER PANEL ${panel.panelId}: "${panel.beat?.name || 'Untitled'}"`);
   console.log(`==================================================`);
   console.log(`Action: ${panel.action}`);
   console.log(`Camera: ${panel.camera?.shotType || 'Standard'}, ${panel.camera?.angle || ''}`);
 
-  const rawDir = path.join(__dirname, '..', '02_Assets', 'Episode_01', 'raw');
-  const selectedDir = path.join(__dirname, '..', '02_Assets', 'Episode_01', 'selected');
+  const rawDir = path.join(__dirname, '..', '02_Assets', `Episode_${epStr}`, 'raw');
+  const selectedDir = path.join(__dirname, '..', '02_Assets', `Episode_${epStr}`, 'selected');
   const filename = `panel_${String(panel.panelId).padStart(2, '0')}.webp`;
   const rawPath = path.join(rawDir, filename);
 
@@ -112,9 +135,13 @@ if (require.main === module) {
   let endId = null;
   let promote = false;
   let all = false;
+  let episode = 1;
 
   for (let i = 0; i < args.length; i++) {
-    if (args[i] === '--panel' && args[i + 1]) {
+    if ((args[i] === '--episode' || args[i] === '-e') && args[i + 1]) {
+      episode = parseInt(args[i + 1], 10);
+      i++;
+    } else if (args[i] === '--panel' && args[i + 1]) {
       panelId = parseInt(args[i + 1], 10);
       i++;
     } else if (args[i] === '--start' && args[i + 1]) {
@@ -132,26 +159,25 @@ if (require.main === module) {
 
   (async () => {
     try {
-      const storyboardPath = path.join(__dirname, '..', '01_Script', 'storyboard.json');
-      const storyboard = JSON.parse(fs.readFileSync(storyboardPath, 'utf8'));
+      const { storyboard } = getStoryboard(episode);
 
       if (startId !== null && endId !== null) {
-        console.log(`🚀 Rendering Batch: Panels ${startId} through ${endId} with Venice Grok Imagine...`);
+        console.log(`🚀 Rendering Batch: Episode ${episode} Panels ${startId} through ${endId} with Venice Grok Imagine...`);
         const targets = storyboard.filter(p => p.panelId >= startId && p.panelId <= endId);
         for (const p of targets) {
-          await renderPanel(p.panelId, { promote });
+          await renderPanel(p.panelId, { episode, promote });
         }
-        console.log(`\n🎉 Batch ${startId}-${endId} rendered successfully!`);
+        console.log(`\n🎉 Episode ${episode} Batch ${startId}-${endId} rendered successfully!`);
       } else if (all) {
-        console.log(`🚀 Rendering ALL ${storyboard.length} panels with Venice Grok Imagine...`);
+        console.log(`🚀 Rendering ALL ${storyboard.length} panels for Episode ${episode} with Venice Grok Imagine...`);
         for (const p of storyboard) {
-          await renderPanel(p.panelId, { promote });
+          await renderPanel(p.panelId, { episode, promote });
         }
-        console.log(`\n🎉 All panels rendered successfully!`);
+        console.log(`\n🎉 Episode ${episode} all ${storyboard.length} panels rendered successfully!`);
       } else if (panelId) {
-        await renderPanel(panelId, { promote });
+        await renderPanel(panelId, { episode, promote });
       } else {
-        console.log(`Usage: node tools/render_panel_venice.js [--panel <id>] [--start <id> --end <id>] [--promote] [--all]`);
+        console.log(`Usage: node tools/render_panel_venice.js [--episode <num>] [--panel <id>] [--start <id> --end <id>] [--promote] [--all]`);
       }
     } catch (err) {
       console.error(`❌ Render failed:`, err.message);
@@ -163,6 +189,6 @@ if (require.main === module) {
 module.exports = {
   renderPromptVenice,
   renderPanel,
+  getStoryboard,
   MODEL_NAME
 };
-

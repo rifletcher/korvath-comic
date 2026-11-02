@@ -1,0 +1,609 @@
+[
+  {
+    "panelId": 1,
+    "beat": {
+      "beat": 1,
+      "act": "Act I: City of Shadows",
+      "name": "Gates of Valkash",
+      "summary": "Korvath and Natari arrive at the towering stone gates of Valkash under a brooding moonlit dusk, minarets and thieves' towers silhouetted against a purple twilight."
+    },
+    "action": "Wide panoramic establishing shot. Korvath and Natari approach the colossal archway gates of Valkash, the City of Shadows. Torches flicker along high crenelated walls, while ancient minarets and domed palaces rise into a bruised purple twilight sky. Korvath's massive two-handed straight iron broadsword is strapped in a weathered leather sheath vertically across his broad muscular back, featuring a simple straight dark wire-wrapped handle, plain rectangular iron crossguard, and unadorned solid iron octagonal pommel visible over his shoulder. Strictly NO jewels or gems on sword, NO curved handle, NO bizarre loops.",
+    "caption": "Beyond the red sands of Sarkesh lay Valkash—city of thieves, poisoned wine, and men whose smiles were sharper than their daggers.",
+    "dialogue": [],
+    "characters": [
+      "korvath",
+      "natari"
+    ],
+    "objects": [
+      "broadsword"
+    ],
+    "focalSubject": "environment",
+    "camera": {
+      "shotType": "Ultra-Wide Panoramic Establishing Shot",
+      "angle": "Low Horizon-Level Perspective",
+      "lighting": "Deep twilight purple sky, warm amber torchlight along parapets, long ominous shadows"
+    },
+    "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta and John Buscema illustration style, dramatic heavy black ink brushwork, crisp fine cross-hatching, rich cel-shaded digital colors, theatrical chiaroscuro lighting, dark pulp fantasy aesthetic, masterwork sequential art, Ultra-Wide Panoramic Establishing Shot, Low Horizon-Level Perspective, Deep twilight purple sky, warm amber torchlight along parapets, long ominous shadows, Wide panoramic establishing shot. Korvath and Natari approach the colossal archway gates of Valkash, the City of Shadows. Torches flicker along high crenelated walls, while ancient minarets and domed palaces rise into a bruised purple twilight sky. Korvath's massive two-handed straight iron broadsword is strapped in a weathered leather sheath vertically across his broad muscular back, simple straight dark wire-wrapped handle, plain rectangular iron crossguard, and unadorned solid iron octagonal pommel visible over his shoulder, strictly NO jewels or gems on the sword, NO curved handle, NO loops., korvath, towering 6'4 barbarian warrior, facial blend of Henry Cavill and Jason Momoa, massive chiseled square jaw with subtle cleft, smoldering steely blue wolfish eyes, heavy dark brooding brow, distinctive square-cut mane of thick coarse raven-black hair with jagged front bangs, hair length strictly shoulder-length stopping at the collarbone, strictly NOT waist length, NOT past the shoulders, NOT tied in a ponytail, NOT short cropped, deeply muscled scarred bronze torso, weathered leather chest harness with brass studs, wolf-fur loincloth, heavy leather combat boots with calf wraps, diagonal scar across left collarbone, natari, breathtaking exotic desert maiden, facial blend of Salma Hayek and Ana de Armas, high chiseled cheekbones, smoldering kohl-lined feline eyes, luscious lips, long cascading glossy raven hair adorned with bronze beads, revealing hammered bronze scale bikini top, matching low-slung chain bikini bottoms, sheer gossamer crimson silk loincloth sash, coiled gilded serpent armbands and jeweled hip chains, flawless sun-kissed bronze skin, massive 42-inch two-handed barbarian iron broadsword, heavy straight double-edged steel blade with central fuller, rectangular solid iron crossguard, simple straight dark wire-wrapped two-handed grip, plain solid octagonal iron pommel, unadorned utilitarian iron weapon, strictly NO jewels on sword, NO gems on hilt, NO curved blade, NO curved handle, NO weird loops, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"Beyond the red sands of Sarkesh lay Valkash—city of thieves, poisoned wine, and men whose smiles were sharper than their daggers.\"",
+    "avoidTokens": "photorealistic, 3d render, blurry, modern anime, cutesy cartoon, clean digital CGI, soft pastel airbrushing, deformed hands, extra limbs, modern clothing, missing fingers, low resolution, flat lighting",
+    "status": "pending_render"
+  },
+  {
+    "panelId": 2,
+    "beat": {
+      "beat": 2,
+      "act": "Act I: City of Shadows",
+      "name": "The Midnight Bazaar",
+      "summary": "Korvath and Natari navigate a crowded, smoky night bazaar filled with snake charmers, spice merchants, and lurking cutthroats in the shadows."
+    },
+    "action": "Crowded medium tracking shot. Korvath, towering broadsword over shoulder, strides through the bustling midnight bazaar beside Natari in her revealing hammered bronze scale bikini and gossamer silk sash, as hooded cutthroats and beggars eye the glowing pouch containing the Blood-Ruby.",
+    "caption": "Every shadow in Valkash had eyes. And every eye was hungry for northern blood.",
+    "dialogue": [
+      {
+        "speaker": "Natari",
+        "text": "Keep your hand on your hilt, Korvath. A purse in Valkash buys you a slit throat before dawn."
+      }
+    ],
+    "characters": [
+      "korvath",
+      "natari"
+    ],
+    "objects": [
+      "broadsword"
+    ],
+    "focalSubject": "korvath",
+    "camera": {
+      "shotType": "Medium Street Tracking Shot",
+      "angle": "Eye-Level Dynamic Angle",
+      "lighting": "Vibrant hanging lanterns, swirling grey incense smoke, heavy chiaroscuro alleyway pockets"
+    },
+    "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta and John Buscema illustration style, dramatic heavy black ink brushwork, crisp fine cross-hatching, rich cel-shaded digital colors, theatrical chiaroscuro lighting, dark pulp fantasy aesthetic, masterwork sequential art, Medium Street Tracking Shot, Eye-Level Dynamic Angle, Vibrant hanging lanterns, swirling grey incense smoke, heavy chiaroscuro alleyway pockets, Crowded medium tracking shot. Korvath, towering broadsword over shoulder, strides through the bustling midnight bazaar beside Natari in her revealing hammered bronze scale bikini and gossamer silk sash, as hooded cutthroats and beggars eye the glowing pouch containing the Blood-Ruby., korvath, towering 6'4 barbarian warrior, facial blend of Henry Cavill and Jason Momoa, massive chiseled square jaw with subtle cleft, smoldering steely blue wolfish eyes, heavy dark brooding brow, distinctive square-cut mane of thick coarse raven-black hair with jagged front bangs, hair length strictly shoulder-length stopping at the collarbone, strictly NOT waist length, NOT past the shoulders, NOT tied in a ponytail, NOT short cropped, deeply muscled scarred bronze torso, weathered leather chest harness with brass studs, wolf-fur loincloth, heavy leather combat boots with calf wraps, diagonal scar across left collarbone, natari, breathtaking exotic desert maiden, facial blend of Salma Hayek and Ana de Armas, high chiseled cheekbones, smoldering kohl-lined feline eyes, luscious lips, long cascading glossy raven hair adorned with bronze beads, revealing hammered bronze scale bikini top, matching low-slung chain bikini bottoms, sheer gossamer crimson silk loincloth sash, coiled gilded serpent armbands and jeweled hip chains, flawless sun-kissed bronze skin, massive 42-inch two-handed barbarian iron broadsword, heavy straight double-edged steel blade with central fuller, rectangular solid iron crossguard, straight dark wire-wrapped grip, plain solid octagonal iron pommel, unadorned utilitarian iron weapon, strictly NO jewels on sword, NO gems on hilt, NO curved blade, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"Every shadow in Valkash had eyes. And every eye was hungry for northern blood.\", Include an authentic white comic book speech balloon with black ink outline and directional pointer pointing toward Natari with the text: \"Keep your hand on your hilt, Korvath. A purse in Valkash buys you a slit throat before dawn.\"",
+    "avoidTokens": "photorealistic, 3d render, blurry, modern anime, cutesy cartoon, clean digital CGI, soft pastel airbrushing, deformed hands, extra limbs, modern clothing, missing fingers, low resolution, flat lighting",
+    "status": "pending_render"
+  },
+  {
+    "panelId": 3,
+    "beat": {
+      "beat": 3,
+      "act": "Act I: City of Shadows",
+      "name": "The Black Lotus Tavern",
+      "summary": "Inside a dim, smoke-filled tavern, Korvath drinks dark ale while Natari reclines beside him, scanning the room as cutthroats whisper in the corner."
+    },
+    "action": "Interior tavern scene. Korvath sits at a heavy scarred oak table, slamming down an iron flagon of ale, muscles gleaming in warm firelight. Beside him, Natari lounges with feline grace on a wooden bench, smoldering eyes watching three hooded assassins whispering in the rear alcove. Resting flat on the heavy wooden table directly in front of Korvath, positioned right before his hands, lies his massive two-handed straight iron broadsword, featuring a long straight double-edged steel blade with central fuller, simple rectangular carved iron crossguard, straight dark wire-wrapped two-handed grip, and unadorned solid iron octagonal pommel. Strictly NO curved scimitar blade, NO oriental saber, NO curved handle, NO jewels or gems on the sword.",
+    "caption": "The ale tasted of ditch-water, but the danger smelled fresh.",
+    "dialogue": [
+      {
+        "speaker": "Korvath",
+        "text": "Let them whisper. Iron speaks louder than gossip."
+      }
+    ],
+    "characters": [
+      "korvath",
+      "natari"
+    ],
+    "objects": [
+      "broadsword"
+    ],
+    "focalSubject": "korvath",
+    "camera": {
+      "shotType": "Tavern Interior Medium Three-Shot",
+      "angle": "Three-Quarter Low Ground Perspective",
+      "lighting": "Flickering tallow candles and hearthfire casting deep dramatic ink shadows"
+    },
+    "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta and John Buscema illustration style, dramatic heavy black ink brushwork, crisp fine cross-hatching, rich cel-shaded digital colors, theatrical chiaroscuro lighting, dark pulp fantasy aesthetic, masterwork sequential art, Tavern Interior Medium Three-Shot, Three-Quarter Low Ground Perspective, Flickering tallow candles and warm hearthfire casting deep dramatic ink shadows, Interior tavern scene. Korvath sits at a heavy scarred oak table, slamming down an iron flagon of ale, muscles gleaming in warm firelight. Beside him, Natari lounges with feline grace on a wooden bench, smoldering eyes watching three hooded assassins whispering in the rear alcove. Resting flat across the heavy scarred oak table directly in front of Korvath, positioned right before his scarred hands, lies his massive two-handed straight iron broadsword, featuring a long straight double-edged steel blade with central fuller, simple rectangular carved iron crossguard, straight dark wire-wrapped two-handed grip, and unadorned solid iron octagonal pommel. Strictly NO curved scimitar, NO oriental saber, NO curved handle, NO jewels or gems on the sword., korvath, towering 6'4 barbarian warrior, facial blend of Henry Cavill and Jason Momoa, massive chiseled square jaw with subtle cleft, smoldering steely blue wolfish eyes, heavy dark brooding brow, distinctive square-cut mane of thick coarse raven-black hair with jagged front bangs, hair length strictly shoulder-length stopping at the collarbone, strictly NOT waist length, NOT past the shoulders, NOT tied in a ponytail, NOT short cropped, deeply muscled scarred bronze torso, weathered leather chest harness with brass studs, wolf-fur loincloth, heavy leather combat boots with calf wraps, diagonal scar across left collarbone, natari, breathtaking exotic desert maiden, facial blend of Salma Hayek and Ana de Armas, high chiseled cheekbones, smoldering kohl-lined feline eyes, luscious lips, long cascading glossy raven hair adorned with bronze beads, revealing hammered bronze scale bikini top, matching low-slung chain bikini bottoms, sheer gossamer crimson silk loincloth sash, coiled gilded serpent armbands and jeweled hip chains, flawless sun-kissed bronze skin, massive 42-inch two-handed barbarian iron broadsword, heavy straight double-edged steel blade with central fuller, rectangular solid iron crossguard perpendicular to blade, simple straight dark wire-wrapped two-handed grip, plain solid octagonal iron pommel, unadorned utilitarian iron weapon, strictly NO jewels on sword, NO gems on hilt, NO curved blade, NO curved handle, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"The ale tasted of ditch-water, but the danger smelled fresh.\", Include an authentic white comic book speech balloon with black ink outline and directional pointer pointing toward Korvath with the text: \"Let them whisper. Iron speaks louder than gossip.\"",
+    "avoidTokens": "photorealistic, 3d render, blurry, modern anime, cutesy cartoon, clean digital CGI, soft pastel airbrushing, deformed hands, extra limbs, modern clothing, missing fingers, low resolution, flat lighting",
+    "status": "pending_render"
+  },
+  {
+    "panelId": 4,
+    "beat": {
+      "beat": 4,
+      "act": "Act I: City of Shadows",
+      "name": "The Crooked Broker",
+      "summary": "A gaunt broker in greasy velvet leans over their table, demanding the Blood-Ruby for a pittance; Korvath seizes him by the throat."
+    },
+    "action": "Close dynamic confrontation. Korvath's scarred, massive hand seizes the cloaked broker by the collar, lifting him clean off his boots over the table, while the broker's eyes bulge in terror as Natari draws a concealed dagger.",
+    "caption": "Civilized merchants understand contracts. Korvath understood only fair trade and broken bones.",
+    "dialogue": [
+      {
+        "speaker": "Korvath",
+        "text": "Offer me copper for blood again, dog, and I will feed you your own tongue."
+      }
+    ],
+    "characters": [
+      "korvath"
+    ],
+    "objects": [
+      "broadsword"
+    ],
+    "focalSubject": "korvath",
+    "camera": {
+      "shotType": "Tight Chiaroscuro Confrontation Shot",
+      "angle": "Low Dutch Angle",
+      "lighting": "Harsh single-source candle glare, high-contrast black shadows"
+    },
+    "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta and John Buscema illustration style, dramatic heavy black ink brushwork, crisp fine cross-hatching, rich cel-shaded digital colors, theatrical chiaroscuro lighting, dark pulp fantasy aesthetic, masterwork sequential art, Tight Chiaroscuro Confrontation Shot, Low Dutch Angle, Harsh single-source candle glare, high-contrast black shadows, Close dynamic confrontation. Korvath's scarred, massive hand seizes the cloaked broker by the collar, lifting him clean off his boots over the table, while the broker's eyes bulge in terror as Natari draws a concealed dagger., korvath, towering 6'4 barbarian warrior, facial blend of Henry Cavill and Jason Momoa, massive chiseled square jaw with subtle cleft, smoldering steely blue wolfish eyes, heavy dark brooding brow, distinctive square-cut mane of thick coarse raven-black hair with jagged front bangs, hair length strictly shoulder-length stopping at the collarbone, strictly NOT waist length, NOT past the shoulders, NOT tied in a ponytail, NOT short cropped, deeply muscled scarred bronze torso, weathered leather chest harness with brass studs, wolf-fur loincloth, heavy leather combat boots with calf wraps, diagonal scar across left collarbone, massive 42-inch two-handed barbarian iron broadsword, heavy straight double-edged steel blade with central fuller, rectangular solid iron crossguard, straight dark wire-wrapped grip, plain solid octagonal iron pommel, unadorned utilitarian iron weapon, strictly NO jewels on sword, NO gems on hilt, NO curved blade, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"Civilized merchants understand contracts. Korvath understood only fair trade and broken bones.\", Include an authentic white comic book speech balloon with black ink outline and directional pointer pointing toward Korvath with the text: \"Offer me copper for blood again, dog, and I will feed you your own tongue.\"",
+    "avoidTokens": "photorealistic, 3d render, blurry, modern anime, cutesy cartoon, clean digital CGI, soft pastel airbrushing, deformed hands, extra limbs, modern clothing, missing fingers, low resolution, flat lighting",
+    "status": "pending_render"
+  },
+  {
+    "panelId": 5,
+    "beat": {
+      "beat": 5,
+      "act": "Act I: City of Shadows",
+      "name": "Blades in the Smoke",
+      "summary": "Three hooded spider-guild assassins leap from the shadows with curved poisoned daggers, overturning heavy wooden tables."
+    },
+    "action": "Three agile shadow-assassins in black leather and web-spun masks leap from the tavern shadows, curved poisoned kris blades gleaming, overturning tables as tankards shatter across the stone floor.",
+    "caption": "The trap sprang not with a shout, but with the hiss of oiled steel.",
+    "dialogue": [
+      {
+        "speaker": "Spider Assassin",
+        "text": "Lord Malakor claims the jewel and your hides, northman!"
+      }
+    ],
+    "characters": [
+      "spider_assassins"
+    ],
+    "objects": [],
+    "focalSubject": "spider_assassins",
+    "camera": {
+      "shotType": "Dynamic Action Ambush Shot",
+      "angle": "High Dutch Angle (Tension)",
+      "lighting": "Shattered fire embers, gleaming blades catching candle flame"
+    },
+    "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta and John Buscema illustration style, dramatic heavy black ink brushwork, crisp fine cross-hatching, rich cel-shaded digital colors, theatrical chiaroscuro lighting, dark pulp fantasy aesthetic, masterwork sequential art, Dynamic Action Ambush Shot, High Dutch Angle (Tension), Shattered fire embers, gleaming blades catching candle flame, Three agile shadow-assassins in black leather and web-spun masks leap from the tavern shadows, curved poisoned kris blades gleaming, overturning tables as tankards shatter across the stone floor., At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"The trap sprang not with a shout, but with the hiss of oiled steel.\", Include an authentic white comic book speech balloon with black ink outline and directional pointer pointing toward Spider Assassin with the text: \"Lord Malakor claims the jewel and your hides, northman!\"",
+    "avoidTokens": "photorealistic, 3d render, blurry, modern anime, cutesy cartoon, clean digital CGI, soft pastel airbrushing, deformed hands, extra limbs, modern clothing, missing fingers, low resolution, flat lighting",
+    "status": "pending_render"
+  },
+  {
+    "panelId": 6,
+    "beat": {
+      "beat": 6,
+      "act": "Act I: City of Shadows",
+      "name": "Savage Tavern Cleave",
+      "summary": "With ferocious speed, Korvath swings his two-handed broadsword, cleaving the lead assassin in a spray of blood while Natari buries a dagger into another."
+    },
+    "action": "Full heroic comic book action freeze-frame. Korvath swings his massive two-handed iron broadsword in a sweeping horizontal arc, shattering the lead assassin's heavy iron shield into flying splintered debris across the tavern, while Natari hurls an ornate throwing dagger with feline precision to strike down a second cloaked attacker's weapon.",
+    "caption": "When the red mist took Korvath, taverns became slaughterhouses.",
+    "dialogue": [],
+    "characters": [
+      "korvath",
+      "natari"
+    ],
+    "objects": [
+      "broadsword"
+    ],
+    "focalSubject": "korvath",
+    "camera": {
+      "shotType": "Peak Combat Action Freeze-Frame",
+      "angle": "Low-Angle Diagonal Tracking Angle",
+      "lighting": "Dynamic spotlighting on muscular bronze bodies, flying crimson blood droplets, deep ink shadows"
+    },
+    "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta and John Buscema illustration style, dramatic heavy black ink brushwork, crisp fine cross-hatching, rich cel-shaded digital colors, theatrical chiaroscuro lighting, dark pulp fantasy aesthetic, masterwork sequential art, Peak Combat Action Freeze-Frame, Low-Angle Diagonal Tracking Angle, Bright blazing golden tavern hearthfire lighting, high-contrast dynamic action illumination, Full heroic comic book action freeze-frame. Korvath swings his massive two-handed iron broadsword in a sweeping horizontal arc, shattering the lead assassin's heavy iron shield into flying splintered debris across the tavern, while Natari hurls an ornate throwing dagger with feline precision to strike down a second cloaked attacker's weapon, korvath, towering 6'4 barbarian warrior, facial blend of Henry Cavill and Jason Momoa, massive chiseled square jaw with subtle cleft, smoldering steely blue wolfish eyes, heavy dark brooding brow, distinctive square-cut mane of thick coarse raven-black hair with jagged front bangs, hair length strictly shoulder-length stopping at the collarbone, strictly NOT waist length, NOT past the shoulders, NOT tied in a ponytail, NOT short cropped, deeply muscled scarred bronze torso, weathered leather chest harness with brass studs, wolf-fur loincloth, heavy leather combat boots with calf wraps, diagonal scar across left collarbone, natari, breathtaking exotic desert maiden, facial blend of Salma Hayek and Ana de Armas, high chiseled cheekbones, smoldering kohl-lined feline eyes, luscious lips, long cascading glossy raven hair adorned with bronze beads, revealing hammered bronze scale bikini top, matching low-slung chain bikini bottoms, sheer gossamer crimson silk loincloth sash, coiled gilded serpent armbands and jeweled hip chains, flawless sun-kissed bronze skin, massive 42-inch two-handed barbarian iron broadsword, heavy straight double-edged steel blade with central fuller, rectangular solid iron crossguard, straight dark wire-wrapped grip, plain solid octagonal iron pommel, unadorned utilitarian iron weapon, strictly NO jewels on sword, NO gems on hilt, NO curved blade, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"When the fury of the north awakens, steel carves the only law.\"",
+    "avoidTokens": "photorealistic, 3d render, blurry, modern anime, cutesy cartoon, clean digital CGI, soft pastel airbrushing, deformed hands, extra limbs, modern clothing, missing fingers, low resolution, flat lighting",
+    "status": "pending_render"
+  },
+  {
+    "panelId": 7,
+    "beat": {
+      "beat": 7,
+      "act": "Act II: The Webbed Vault",
+      "name": "Rooftops of Valkash",
+      "summary": "Korvath and Natari sprint across clay-tiled rooftops under a blood-red crescent moon, leaping an alley gap toward Lord Malakor's palace."
+    },
+    "action": "Dynamic high rooftop action shot. Korvath and Natari leap across a wide alleyway between terracotta tiled roofs under a stark crescent moon, the sprawling moonlit towers of Lord Malakor's palace looming in the near background.",
+    "caption": "Above the filth of the streets ran the highway of thieves.",
+    "dialogue": [
+      {
+        "speaker": "Natari",
+        "text": "Malakor's pleasure gardens are ahead! If the jewel is anywhere, it is in his private vault!"
+      }
+    ],
+    "characters": [
+      "korvath",
+      "natari"
+    ],
+    "objects": [
+      "broadsword"
+    ],
+    "focalSubject": "korvath",
+    "camera": {
+      "shotType": "Dynamic Midair Rooftop Leap Shot",
+      "angle": "High Dutch Perspective",
+      "lighting": "Cool silver moonlight washing over their athletic forms, dark silhouettes of city below"
+    },
+    "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta and John Buscema illustration style, dramatic heavy black ink brushwork, crisp fine cross-hatching, rich cel-shaded digital colors, theatrical chiaroscuro lighting, dark pulp fantasy aesthetic, masterwork sequential art, Dynamic Midair Rooftop Leap Shot, High Dutch Perspective, Cool silver moonlight washing over their athletic forms, dark silhouettes of city below, Dynamic high rooftop action shot. Korvath and Natari leap across a wide alleyway between terracotta tiled roofs under a stark crescent moon, the sprawling moonlit towers of Lord Malakor's palace looming in the near background., korvath, towering 6'4 barbarian warrior, facial blend of Henry Cavill and Jason Momoa, massive chiseled square jaw with subtle cleft, smoldering steely blue wolfish eyes, heavy dark brooding brow, distinctive square-cut mane of thick coarse raven-black hair with jagged front bangs, hair length strictly shoulder-length stopping at the collarbone, strictly NOT waist length, NOT past the shoulders, NOT tied in a ponytail, NOT short cropped, deeply muscled scarred bronze torso, weathered leather chest harness with brass studs, wolf-fur loincloth, heavy leather combat boots with calf wraps, diagonal scar across left collarbone, natari, breathtaking exotic desert maiden, facial blend of Salma Hayek and Ana de Armas, high chiseled cheekbones, smoldering kohl-lined feline eyes, luscious lips, long cascading glossy raven hair adorned with bronze beads, revealing hammered bronze scale bikini top, matching low-slung chain bikini bottoms, sheer gossamer crimson silk loincloth sash, coiled gilded serpent armbands and jeweled hip chains, flawless sun-kissed bronze skin, massive 42-inch two-handed barbarian iron broadsword, heavy straight double-edged steel blade with central fuller, rectangular solid iron crossguard, straight dark wire-wrapped grip, plain solid octagonal iron pommel, unadorned utilitarian iron weapon, strictly NO jewels on sword, NO gems on hilt, NO curved blade, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"Above the filth of the streets ran the highway of thieves.\", Include an authentic white comic book speech balloon with black ink outline and directional pointer pointing toward Natari with the text: \"Malakor's pleasure gardens are ahead! If the jewel is anywhere, it is in his private vault!\"",
+    "avoidTokens": "photorealistic, 3d render, blurry, modern anime, cutesy cartoon, clean digital CGI, soft pastel airbrushing, deformed hands, extra limbs, modern clothing, missing fingers, low resolution, flat lighting",
+    "status": "pending_render"
+  },
+  {
+    "panelId": 8,
+    "beat": {
+      "beat": 8,
+      "act": "Act II: The Webbed Vault",
+      "name": "The Harem Terrace",
+      "summary": "Natari and Korvath drop onto an opulent marble terrace, where exotic courtesans in sheer silk drapes lounge around a smoking fountain."
+    },
+    "action": "Opulent palace terrace view. Surrounded by carved alabaster colonnades and a steaming rosewater fountain, two distinct palace courtesans recline on velvet cushions in shocked awe as Korvath and Natari drop silently onto the marble tiles: one fair-skinned concubine with braided golden blonde hair draped in sheer emerald-green silks and silver bangles, and one striking dark-skinned maiden with sculpted obsidian curls draped in translucent saffron-gold harem silks and hammered brass armlets. Both look completely distinct from Natari; strictly NO scale armor or bronze bikinis on the courtesans.",
+    "caption": "Silk and perfume could not mask the stench of spider venom that hung in the palace air.",
+    "dialogue": [],
+    "characters": [
+      "temple_maidens"
+    ],
+    "objects": [],
+    "focalSubject": "temple_maidens",
+    "camera": {
+      "shotType": "Wide Opulent Terrace Shot",
+      "angle": "Low Eye-Level Angle",
+      "lighting": "Lush hanging brass lanterns, moonlit reflecting pools, swirling steam"
+    },
+    "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta and John Buscema illustration style, dramatic heavy black ink brushwork, crisp fine cross-hatching, rich cel-shaded digital colors, theatrical chiaroscuro lighting, dark pulp fantasy aesthetic, masterwork sequential art, Wide Opulent Terrace Shot, Low Eye-Level Angle, Lush hanging brass lanterns, moonlit reflecting pools, swirling rosewater steam, Opulent palace terrace view. Surrounded by carved alabaster colonnades and a steaming rosewater fountain, two distinct palace courtesans recline on silk cushions in shocked awe as Korvath and Natari drop silently onto the marble tiles. One courtesan is a fair-skinned beauty with cascading golden blonde hair adorned with pearls, wearing sheer emerald-green silk wraps and delicate silver bangles. The second courtesan is a gorgeous dark-skinned maiden with sculpted braided raven curls, wearing translucent saffron-yellow harem veils and beaten copper armlets. Both women are dressed in flowing sheer silks, completely different from Natari, strictly NO bronze scale bikinis on the courtesans., natari, breathtaking exotic desert maiden, facial blend of Salma Hayek and Ana de Armas, high chiseled cheekbones, smoldering kohl-lined feline eyes, luscious lips, long cascading glossy raven hair adorned with bronze beads, signature revealing hammered bronze scale bikini top, matching low-slung chain bikini bottoms, sheer gossamer crimson silk loincloth sash, coiled gilded serpent armbands and jeweled hip chains, flawless sun-kissed bronze skin, korvath, towering 6'4 barbarian warrior, facial blend of Henry Cavill and Jason Momoa, massive chiseled square jaw with subtle cleft, smoldering steely blue wolfish eyes, heavy dark brooding brow, distinctive square-cut mane of thick coarse raven-black hair with jagged front bangs, hair length strictly shoulder-length stopping at the collarbone, strictly NOT waist length, NOT past the shoulders, NOT tied in a ponytail, NOT short cropped, deeply muscled scarred bronze torso, weathered leather chest harness with brass studs, wolf-fur loincloth, heavy leather combat boots with calf wraps, diagonal scar across left collarbone, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"Silk and perfume could not mask the stench of spider venom that hung in the palace air.\"",
+    "avoidTokens": "photorealistic, 3d render, blurry, modern anime, cutesy cartoon, clean digital CGI, soft pastel airbrushing, deformed hands, extra limbs, modern clothing, missing fingers, low resolution, flat lighting",
+    "status": "pending_render"
+  },
+  {
+    "panelId": 9,
+    "beat": {
+      "beat": 9,
+      "act": "Act II: The Webbed Vault",
+      "name": "The Merchant's Vault",
+      "summary": "Korvath kicks open the heavy iron doors to Lord Malakor's vault, revealing chests of glittering gold coins and ancient relics."
+    },
+    "action": "Korvath kicks open a massive iron vault door with a splintering crash, revealing a treasure vault overflowing with open iron chests of sparkling gold coins, jeweled chalices, and thick hanging cobwebs.",
+    "caption": "The wealth of fifty plundered caravans, guarded only by silence.",
+    "dialogue": [
+      {
+        "speaker": "Korvath",
+        "text": "Too quiet. A spider never leaves its larder unguarded."
+      }
+    ],
+    "characters": [
+      "korvath",
+      "natari"
+    ],
+    "objects": [
+      "broadsword"
+    ],
+    "focalSubject": "korvath",
+    "camera": {
+      "shotType": "Vault Door Breakthrough Shot",
+      "angle": "Low-Angle Entrance Perspective",
+      "lighting": "Golden glint of glittering coins clashing against deep velvet gloom"
+    },
+    "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta and John Buscema illustration style, dramatic heavy black ink brushwork, crisp fine cross-hatching, rich cel-shaded digital colors, theatrical chiaroscuro lighting, dark pulp fantasy aesthetic, masterwork sequential art, Vault Door Breakthrough Shot, Low-Angle Entrance Perspective, Golden glint of glittering coins clashing against deep velvet gloom, Korvath kicks open a massive iron vault door with a splintering crash, revealing a treasure vault overflowing with open iron chests of sparkling gold coins, jeweled chalices, and thick hanging cobwebs., korvath, towering 6'4 barbarian warrior, facial blend of Henry Cavill and Jason Momoa, massive chiseled square jaw with subtle cleft, smoldering steely blue wolfish eyes, heavy dark brooding brow, distinctive square-cut mane of thick coarse raven-black hair with jagged front bangs, hair length strictly shoulder-length stopping at the collarbone, strictly NOT waist length, NOT past the shoulders, NOT tied in a ponytail, NOT short cropped, deeply muscled scarred bronze torso, weathered leather chest harness with brass studs, wolf-fur loincloth, heavy leather combat boots with calf wraps, diagonal scar across left collarbone, natari, breathtaking exotic desert maiden, facial blend of Salma Hayek and Ana de Armas, high chiseled cheekbones, smoldering kohl-lined feline eyes, luscious lips, long cascading glossy raven hair adorned with bronze beads, revealing hammered bronze scale bikini top, matching low-slung chain bikini bottoms, sheer gossamer crimson silk loincloth sash, coiled gilded serpent armbands and jeweled hip chains, flawless sun-kissed bronze skin, massive 42-inch two-handed barbarian iron broadsword, heavy straight double-edged steel blade with central fuller, rectangular solid iron crossguard, straight dark wire-wrapped grip, plain solid octagonal iron pommel, unadorned utilitarian iron weapon, strictly NO jewels on sword, NO gems on hilt, NO curved blade, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"The wealth of fifty plundered caravans, guarded only by silence.\", Include an authentic white comic book speech balloon with black ink outline and directional pointer pointing toward Korvath with the text: \"Too quiet. A spider never leaves its larder unguarded.\"",
+    "avoidTokens": "photorealistic, 3d render, blurry, modern anime, cutesy cartoon, clean digital CGI, soft pastel airbrushing, deformed hands, extra limbs, modern clothing, missing fingers, low resolution, flat lighting",
+    "status": "pending_render"
+  },
+  {
+    "panelId": 10,
+    "beat": {
+      "beat": 10,
+      "act": "Act II: The Webbed Vault",
+      "name": "Caught in the Web",
+      "summary": "Iron portcullises slam shut; heavy sticky spiderwebs drop from the vaulted ceiling, entangling Korvath and Natari."
+    },
+    "action": "Sudden trap action. Heavy iron grates crash down behind them as massive thick, fibrous spiderwebs drop from the darkness above, sticking to Korvath's broad shoulders and trapping Natari against the gold chests.",
+    "caption": "The iron door was the jaws of the trap. The web was its teeth.",
+    "dialogue": [
+      {
+        "speaker": "Natari",
+        "text": "It's a trap! The webs... they burn like acid!"
+      }
+    ],
+    "characters": [
+      "korvath",
+      "natari"
+    ],
+    "objects": [
+      "broadsword"
+    ],
+    "focalSubject": "korvath",
+    "camera": {
+      "shotType": "Dynamic Entanglement Shot",
+      "angle": "High Dutch Angle Looking Down",
+      "lighting": "Gleaming white web strands contrasting against dark stone and gold coins"
+    },
+    "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta and John Buscema illustration style, dramatic heavy black ink brushwork, crisp fine cross-hatching, rich cel-shaded digital colors, theatrical chiaroscuro lighting, dark pulp fantasy aesthetic, masterwork sequential art, Dynamic Entanglement Shot, High Dutch Angle Looking Down, Gleaming white web strands contrasting against dark stone and gold coins, Sudden trap action. Heavy iron grates crash down behind them as massive thick, fibrous spiderwebs drop from the darkness above, sticking to Korvath's broad shoulders and trapping Natari against the gold chests., korvath, towering 6'4 barbarian warrior, facial blend of Henry Cavill and Jason Momoa, massive chiseled square jaw with subtle cleft, smoldering steely blue wolfish eyes, heavy dark brooding brow, distinctive square-cut mane of thick coarse raven-black hair with jagged front bangs, hair length strictly shoulder-length stopping at the collarbone, strictly NOT waist length, NOT past the shoulders, NOT tied in a ponytail, NOT short cropped, deeply muscled scarred bronze torso, weathered leather chest harness with brass studs, wolf-fur loincloth, heavy leather combat boots with calf wraps, diagonal scar across left collarbone, natari, breathtaking exotic desert maiden, facial blend of Salma Hayek and Ana de Armas, high chiseled cheekbones, smoldering kohl-lined feline eyes, luscious lips, long cascading glossy raven hair adorned with bronze beads, revealing hammered bronze scale bikini top, matching low-slung chain bikini bottoms, sheer gossamer crimson silk loincloth sash, coiled gilded serpent armbands and jeweled hip chains, flawless sun-kissed bronze skin, massive 42-inch two-handed barbarian iron broadsword, heavy straight double-edged steel blade with central fuller, rectangular solid iron crossguard, straight dark wire-wrapped grip, plain solid octagonal iron pommel, unadorned utilitarian iron weapon, strictly NO jewels on sword, NO gems on hilt, NO curved blade, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"The iron door was the jaws of the trap. The web was its teeth.\", Include an authentic white comic book speech balloon with black ink outline and directional pointer pointing toward Natari with the text: \"It's a trap! The webs... they burn like acid!\"",
+    "avoidTokens": "photorealistic, 3d render, blurry, modern anime, cutesy cartoon, clean digital CGI, soft pastel airbrushing, deformed hands, extra limbs, modern clothing, missing fingers, low resolution, flat lighting",
+    "status": "pending_render"
+  },
+  {
+    "panelId": 11,
+    "beat": {
+      "beat": 11,
+      "act": "Act II: The Webbed Vault",
+      "name": "The Brood Queen Descends",
+      "summary": "From the vault dome above, a colossal elder spider demon with obsidian chitin and a cluster of glowing red eyes descends on thick silk ropes."
+    },
+    "action": "Colossal creature reveal. An enormous, monstrous spider demon with razor-jointed barbed legs and glistening black carapace descends from the vaulted ceiling, its central cluster of multifaceted ruby eyes burning with demonic hunger as pale venom drips from huge fangs.",
+    "caption": "Spawned in the forgotten pits beneath Valkash—Zor-Malkor, the living god of shadows.",
+    "dialogue": [],
+    "characters": [
+      "demon_spider"
+    ],
+    "objects": [],
+    "focalSubject": "demon_spider",
+    "camera": {
+      "shotType": "Colossal Monster Reveal Shot",
+      "angle": "Extreme Low Worm's Eye View",
+      "lighting": "Sickly red eye glows, glistening obsidian chitin, shadowy vaulted ceiling"
+    },
+    "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta and John Buscema illustration style, dramatic heavy black ink brushwork, crisp fine cross-hatching, rich cel-shaded digital colors, theatrical chiaroscuro lighting, dark pulp fantasy aesthetic, masterwork sequential art, Colossal Monster Reveal Shot, Extreme Low Worm's Eye View, Sickly red eye glows, glistening obsidian chitin, shadowy vaulted ceiling, Colossal creature reveal. An enormous, monstrous spider demon with razor-jointed barbed legs and glistening black carapace descends from the vaulted ceiling, its central cluster of multifaceted ruby eyes burning with demonic hunger as pale venom drips from huge fangs., At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"Spawned in the forgotten pits beneath Valkash—Zor-Malkor, the living god of shadows.\"",
+    "avoidTokens": "photorealistic, 3d render, blurry, modern anime, cutesy cartoon, clean digital CGI, soft pastel airbrushing, deformed hands, extra limbs, modern clothing, missing fingers, low resolution, flat lighting",
+    "status": "pending_render"
+  },
+  {
+    "panelId": 12,
+    "beat": {
+      "beat": 12,
+      "act": "Act II: The Webbed Vault",
+      "name": "The Merchant's Gloat",
+      "summary": "Lord Malakor stands behind the reinforced iron grate holding aloft the Blood-Ruby, mocking the trapped barbarian."
+    },
+    "action": "Lord Malakor, fat merchant prince draped in emerald silk and gold chains, sneers in cruel triumph through the iron bars above, holding high the glowing Blood-Ruby of Sarkath as the spider looms over Korvath.",
+    "caption": "Civilized lords pay assassins with gold. Malakor paid his with living flesh.",
+    "dialogue": [
+      {
+        "speaker": "Lord Malakor",
+        "text": "The ruby belongs to me, savage! Feed well on him, my beauty!"
+      }
+    ],
+    "characters": [
+      "merchant_lord"
+    ],
+    "objects": [
+      "blood_ruby"
+    ],
+    "focalSubject": "merchant_lord",
+    "camera": {
+      "shotType": "Balcony Mockery Shot",
+      "angle": "High-Angle Gaze Down",
+      "lighting": "Warm torchlight on sneering merchant face, ruby casting scarlet reflections"
+    },
+    "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta and John Buscema illustration style, dramatic heavy black ink brushwork, crisp fine cross-hatching, rich cel-shaded digital colors, theatrical chiaroscuro lighting, dark pulp fantasy aesthetic, masterwork sequential art, Balcony Mockery Shot, High-Angle Gaze Down, Warm torchlight on sneering merchant face, ruby casting scarlet reflections, Lord Malakor, fat merchant prince draped in emerald silk and gold chains, sneers in cruel triumph through the iron bars above, holding high the glowing Blood-Ruby of Sarkath as the spider looms over Korvath., fist-sized rough-faceted dark scarlet blood-ruby glowing with internal red ember, mounted in tarnished black iron serpent-talon setting on braided copper torc, worn as separate necklace pendant never attached to weapons, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"Civilized lords pay assassins with gold. Malakor paid his with living flesh.\", Include an authentic white comic book speech balloon with black ink outline and directional pointer pointing toward Lord Malakor with the text: \"The ruby belongs to me, savage! Feed well on him, my beauty!\"",
+    "avoidTokens": "photorealistic, 3d render, blurry, modern anime, cutesy cartoon, clean digital CGI, soft pastel airbrushing, deformed hands, extra limbs, modern clothing, missing fingers, low resolution, flat lighting",
+    "status": "pending_render"
+  },
+  {
+    "panelId": 13,
+    "beat": {
+      "beat": 13,
+      "act": "Act II: The Webbed Vault",
+      "name": "Venom and Fire",
+      "summary": "The demon spider lunges with razor forelegs; Korvath sweeps an overturned torch against the webs, igniting a wall of flame."
+    },
+    "action": "Violent combat clash. The spider demon's jagged barbed leg strikes downward, shattering an iron chest, while Korvath sweeps a roaring brass oil torch against the tangled webs, igniting a wall of blazing orange fire to shield Natari.",
+    "caption": "Iron, flame, and unyielding will—the barbarian answered horror with fury.",
+    "dialogue": [],
+    "characters": [
+      "korvath",
+      "demon_spider"
+    ],
+    "objects": [
+      "broadsword"
+    ],
+    "focalSubject": "korvath",
+    "camera": {
+      "shotType": "Dynamic Mid-Range Combat Clash",
+      "angle": "Low-Angle Diagonal Tracking Perspective",
+      "lighting": "Explosive wall of roaring orange flame illuminating the terrifying black spider bulk"
+    },
+    "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta and John Buscema illustration style, dramatic heavy black ink brushwork, crisp fine cross-hatching, rich cel-shaded digital colors, theatrical chiaroscuro lighting, dark pulp fantasy aesthetic, masterwork sequential art, Dynamic Mid-Range Combat Clash, Low-Angle Diagonal Tracking Perspective, Explosive wall of roaring orange flame illuminating the terrifying black spider bulk, Violent combat clash. The spider demon's jagged barbed leg strikes downward, shattering an iron chest, while Korvath sweeps a roaring brass oil torch against the tangled webs, igniting a wall of blazing orange fire to shield Natari., korvath, towering 6'4 barbarian warrior, facial blend of Henry Cavill and Jason Momoa, massive chiseled square jaw with subtle cleft, smoldering steely blue wolfish eyes, heavy dark brooding brow, distinctive square-cut mane of thick coarse raven-black hair with jagged front bangs, hair length strictly shoulder-length stopping at the collarbone, strictly NOT waist length, NOT past the shoulders, NOT tied in a ponytail, NOT short cropped, deeply muscled scarred bronze torso, weathered leather chest harness with brass studs, wolf-fur loincloth, heavy leather combat boots with calf wraps, diagonal scar across left collarbone, massive 42-inch two-handed barbarian iron broadsword, heavy straight double-edged steel blade with central fuller, rectangular solid iron crossguard, straight dark wire-wrapped grip, plain solid octagonal iron pommel, unadorned utilitarian iron weapon, strictly NO jewels on sword, NO gems on hilt, NO curved blade, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"Iron, flame, and unyielding will—the barbarian answered horror with fury.\"",
+    "avoidTokens": "photorealistic, 3d render, blurry, modern anime, cutesy cartoon, clean digital CGI, soft pastel airbrushing, deformed hands, extra limbs, modern clothing, missing fingers, low resolution, flat lighting",
+    "status": "pending_render"
+  },
+  {
+    "panelId": 14,
+    "beat": {
+      "beat": 14,
+      "act": "Act III: The Sunder & Escape",
+      "name": "The Flaming Cleave",
+      "summary": "With broadsword blade coated in flaming oil, Korvath delivers a savage blow, severing two barbed spider limbs with a spray of black ichor."
+    },
+    "action": "Peak action shot. Korvath swings his massive two-handed broadsword—its steel blade roaring with yellow fire—cleaving clean through two of the demon spider's armored jointed legs with a massive spray of hissing black ichor as the monster shrieks.",
+    "caption": "The iron gods give no gifts. A man carves his own way with steel.",
+    "dialogue": [
+      {
+        "speaker": "Korvath",
+        "text": "Die, vermin! Back to the pit that spat you!"
+      }
+    ],
+    "characters": [
+      "korvath",
+      "demon_spider"
+    ],
+    "objects": [
+      "broadsword"
+    ],
+    "focalSubject": "korvath",
+    "camera": {
+      "shotType": "Dynamic Cleave Freeze-Frame",
+      "angle": "Dramatic Low Dutch Angle",
+      "lighting": "Roaring flaming sword blade illuminating Korvath's shredded bronze muscles and severed chitin"
+    },
+    "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta and John Buscema illustration style, dramatic heavy black ink brushwork, crisp fine cross-hatching, rich cel-shaded digital colors, theatrical chiaroscuro lighting, dark pulp fantasy aesthetic, masterwork sequential art, Dynamic Cleave Freeze-Frame, Dramatic Low Dutch Angle, Roaring flaming sword blade illuminating Korvath's shredded bronze muscles and severed chitin, Peak action shot. Korvath swings his massive two-handed broadsword—its steel blade roaring with yellow fire—cleaving clean through two of the demon spider's armored jointed legs with a massive spray of hissing black ichor as the monster shrieks., korvath, towering 6'4 barbarian warrior, facial blend of Henry Cavill and Jason Momoa, massive chiseled square jaw with subtle cleft, smoldering steely blue wolfish eyes, heavy dark brooding brow, distinctive square-cut mane of thick coarse raven-black hair with jagged front bangs, hair length strictly shoulder-length stopping at the collarbone, strictly NOT waist length, NOT past the shoulders, NOT tied in a ponytail, NOT short cropped, deeply muscled scarred bronze torso, weathered leather chest harness with brass studs, wolf-fur loincloth, heavy leather combat boots with calf wraps, diagonal scar across left collarbone, massive 42-inch two-handed barbarian iron broadsword, heavy straight double-edged steel blade with central fuller, rectangular solid iron crossguard, straight dark wire-wrapped grip, plain solid octagonal iron pommel, unadorned utilitarian iron weapon, strictly NO jewels on sword, NO gems on hilt, NO curved blade, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"The iron gods give no gifts. A man carves his own way with steel.\", Include an authentic white comic book speech balloon with black ink outline and directional pointer pointing toward Korvath with the text: \"Die, vermin! Back to the pit that spat you!\"",
+    "avoidTokens": "photorealistic, 3d render, blurry, modern anime, cutesy cartoon, clean digital CGI, soft pastel airbrushing, deformed hands, extra limbs, modern clothing, missing fingers, low resolution, flat lighting",
+    "status": "pending_render"
+  },
+  {
+    "panelId": 15,
+    "beat": {
+      "beat": 15,
+      "act": "Act III: The Sunder & Escape",
+      "name": "Natari's Retribution",
+      "summary": "Natari burns through her bonds, scales the balcony grate, and drives her dagger into Lord Malakor's chest, snatching back the Blood-Ruby."
+    },
+    "action": "Heroic action shot. Natari, bronze scale bikini gleaming, leaps onto the upper iron balcony railing and drives her ornate dagger straight through Lord Malakor's heart, tearing the glowing Blood-Ruby of Sarkath from his limp dying fingers.",
+    "caption": "A desert rogue never forgets a debt. Especially one written in blood.",
+    "dialogue": [
+      {
+        "speaker": "Natari",
+        "text": "The ruby was never yours, merchant dog!"
+      }
+    ],
+    "characters": [
+      "natari",
+      "merchant_lord"
+    ],
+    "objects": [
+      "blood_ruby"
+    ],
+    "focalSubject": "natari",
+    "camera": {
+      "shotType": "Heroic Balcony Strike Shot",
+      "angle": "Medium Low-Angle Tilt",
+      "lighting": "Scarlet ruby glow and torchlight washing over Natari's fierce, sun-kissed face"
+    },
+    "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta and John Buscema illustration style, dramatic heavy black ink brushwork, crisp fine cross-hatching, rich cel-shaded digital colors, theatrical chiaroscuro lighting, dark pulp fantasy aesthetic, masterwork sequential art, Heroic Balcony Strike Shot, Medium Low-Angle Tilt, Scarlet ruby glow and torchlight washing over Natari's fierce, sun-kissed face, Heroic action shot. Natari, bronze scale bikini gleaming, leaps onto the upper iron balcony railing and drives her ornate dagger straight through Lord Malakor's heart, tearing the glowing Blood-Ruby of Sarkath from his limp dying fingers., natari, breathtaking exotic desert maiden, facial blend of Salma Hayek and Ana de Armas, high chiseled cheekbones, smoldering kohl-lined feline eyes, luscious lips, long cascading glossy raven hair adorned with bronze beads, revealing hammered bronze scale bikini top, matching low-slung chain bikini bottoms, sheer gossamer crimson silk loincloth sash, coiled gilded serpent armbands and jeweled hip chains, flawless sun-kissed bronze skin, fist-sized rough-faceted dark scarlet blood-ruby glowing with internal red ember, mounted in tarnished black iron serpent-talon setting on braided copper torc, worn as separate necklace pendant never attached to weapons, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"A desert rogue never forgets a debt. Especially one written in blood.\", Include an authentic white comic book speech balloon with black ink outline and directional pointer pointing toward Natari with the text: \"The ruby was never yours, merchant dog!\"",
+    "avoidTokens": "photorealistic, 3d render, blurry, modern anime, cutesy cartoon, clean digital CGI, soft pastel airbrushing, deformed hands, extra limbs, modern clothing, missing fingers, low resolution, flat lighting",
+    "status": "pending_render"
+  },
+  {
+    "panelId": 16,
+    "beat": {
+      "beat": 16,
+      "act": "Act III: The Sunder & Escape",
+      "name": "The Abyssal Skull-Strike",
+      "summary": "Korvath leaps high from an iron chest, driving his broadsword downward between the spider demon's cluster of burning red eyes."
+    },
+    "action": "Peak climax midair leap. Korvath leaps from a mountain of gold coins into midair, both scarred hands gripping his heavy broadsword overhead, plunging the massive iron blade straight down into the spider demon's armored skull between its burning cluster of ruby eyes amidst an explosion of hissing dark demonic ichor.",
+    "caption": "Even gods of the dark bleed when iron meets skull.",
+    "dialogue": [],
+    "characters": [
+      "korvath",
+      "demon_spider"
+    ],
+    "objects": [
+      "broadsword"
+    ],
+    "focalSubject": "korvath",
+    "camera": {
+      "shotType": "Peak Climax Midair Action Shot",
+      "angle": "Dramatic High-Impact Dutch Angle",
+      "lighting": "Blinding spark explosion, silhouetted muscular barbarian form against thrashing spider monster"
+    },
+    "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta and John Buscema illustration style, dramatic heavy black ink brushwork, crisp fine cross-hatching, rich cel-shaded digital colors, theatrical chiaroscuro lighting, dark pulp fantasy aesthetic, masterwork sequential art, Peak Climax Midair Action Shot, Dramatic High-Impact Dutch Angle, Blinding spark explosion, silhouetted muscular barbarian form against thrashing spider monster, Peak climax midair leap. Korvath leaps from a mountain of gold coins into midair, both scarred hands gripping his heavy broadsword overhead, plunging the massive iron blade straight down into the spider demon's armored skull between its burning cluster of ruby eyes amidst an explosion of hissing dark demonic ichor., korvath, towering 6'4 barbarian warrior, facial blend of Henry Cavill and Jason Momoa, massive chiseled square jaw with subtle cleft, smoldering steely blue wolfish eyes, heavy dark brooding brow, distinctive square-cut mane of thick coarse raven-black hair with jagged front bangs, hair length strictly shoulder-length stopping at the collarbone, strictly NOT waist length, NOT past the shoulders, NOT tied in a ponytail, NOT short cropped, deeply muscled scarred bronze torso, weathered leather chest harness with brass studs, wolf-fur loincloth, heavy leather combat boots with calf wraps, diagonal scar across left collarbone, massive 42-inch two-handed barbarian iron broadsword, heavy straight double-edged steel blade with central fuller, rectangular solid iron crossguard, straight dark wire-wrapped grip, plain solid octagonal iron pommel, unadorned utilitarian iron weapon, strictly NO jewels on sword, NO gems on hilt, NO curved blade, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"Even gods of the dark bleed when iron meets skull.\"",
+    "avoidTokens": "photorealistic, 3d render, blurry, modern anime, cutesy cartoon, clean digital CGI, soft pastel airbrushing, deformed hands, extra limbs, modern clothing, missing fingers, low resolution, flat lighting",
+    "status": "pending_render"
+  },
+  {
+    "panelId": 17,
+    "beat": {
+      "beat": 17,
+      "act": "Act III: The Sunder & Escape",
+      "name": "Collapse of the Palace Vault",
+      "summary": "The dying spider demon thrashes in agony, crashing through the outer palace walls and bringing down the vaulted marble structure."
+    },
+    "action": "Wide cataclysmic destruction. The dying spider monstrosity crashes through the palace's outer marble colonnade, tearing down pillars and balustrades as stone blocks and chests of gold cascade into the courtyard below.",
+    "caption": "The pride of Valkash crumbled into dust and broken bone.",
+    "dialogue": [],
+    "characters": [
+      "demon_spider"
+    ],
+    "objects": [],
+    "focalSubject": "demon_spider",
+    "camera": {
+      "shotType": "Full Palace Catastrophe Wide Shot",
+      "angle": "High Dutch Angle",
+      "lighting": "Billowing dust clouds lit by moonbeams and flickering palace fires"
+    },
+    "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta and John Buscema illustration style, dramatic heavy black ink brushwork, crisp fine cross-hatching, rich cel-shaded digital colors, theatrical chiaroscuro lighting, dark pulp fantasy aesthetic, masterwork sequential art, Full Palace Catastrophe Wide Shot, High Dutch Angle, Billowing dust clouds lit by moonbeams and flickering palace fires, Wide cataclysmic destruction. The dying spider monstrosity crashes through the palace's outer marble colonnade, tearing down pillars and balustrades as stone blocks and chests of gold cascade into the courtyard below., At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"The pride of Valkash crumbled into dust and broken bone.\"",
+    "avoidTokens": "photorealistic, 3d render, blurry, modern anime, cutesy cartoon, clean digital CGI, soft pastel airbrushing, deformed hands, extra limbs, modern clothing, missing fingers, low resolution, flat lighting",
+    "status": "pending_render"
+  },
+  {
+    "panelId": 18,
+    "beat": {
+      "beat": 18,
+      "act": "Act III: The Sunder & Escape",
+      "name": "The Leaping Escape",
+      "summary": "Korvath scoops up Natari and leaps from the collapsing balcony into the night air toward a passing hay wagon in the street below."
+    },
+    "action": "High dynamic action leap. Amid tumbling marble debris, Korvath swings Natari into his arm and leaps from the shattered second-story palace balustrade into the midnight air toward an open merchant wagon in the cobblestone alley below.",
+    "caption": "A leap into the dark—trusting only strength and fortune.",
+    "dialogue": [
+      {
+        "speaker": "Korvath",
+        "text": "Hold tight, girl!"
+      },
+      {
+        "speaker": "Natari",
+        "text": "I have the ruby!"
+      }
+    ],
+    "characters": [
+      "korvath",
+      "natari"
+    ],
+    "objects": [
+      "broadsword",
+      "blood_ruby"
+    ],
+    "focalSubject": "korvath",
+    "camera": {
+      "shotType": "Midair Escape Tracking Shot",
+      "angle": "Dramatic Downward Perspective",
+      "lighting": "Silhouetted figures against roaring palace fire, moonlit cobblestones below"
+    },
+    "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta and John Buscema illustration style, dramatic heavy black ink brushwork, crisp fine cross-hatching, rich cel-shaded digital colors, theatrical chiaroscuro lighting, dark pulp fantasy aesthetic, masterwork sequential art, Midair Escape Tracking Shot, Dramatic Downward Perspective, Silhouetted figures against roaring palace fire, moonlit cobblestones below, High dynamic action leap. Amid tumbling marble debris, Korvath swings Natari into his arm and leaps from the shattered second-story palace balustrade into the midnight air toward an open merchant wagon in the cobblestone alley below., korvath, towering 6'4 barbarian warrior, facial blend of Henry Cavill and Jason Momoa, massive chiseled square jaw with subtle cleft, smoldering steely blue wolfish eyes, heavy dark brooding brow, distinctive square-cut mane of thick coarse raven-black hair with jagged front bangs, hair length strictly shoulder-length stopping at the collarbone, strictly NOT waist length, NOT past the shoulders, NOT tied in a ponytail, NOT short cropped, deeply muscled scarred bronze torso, weathered leather chest harness with brass studs, wolf-fur loincloth, heavy leather combat boots with calf wraps, diagonal scar across left collarbone, natari, breathtaking exotic desert maiden, facial blend of Salma Hayek and Ana de Armas, high chiseled cheekbones, smoldering kohl-lined feline eyes, luscious lips, long cascading glossy raven hair adorned with bronze beads, revealing hammered bronze scale bikini top, matching low-slung chain bikini bottoms, sheer gossamer crimson silk loincloth sash, coiled gilded serpent armbands and jeweled hip chains, flawless sun-kissed bronze skin, massive 42-inch two-handed barbarian iron broadsword, heavy straight double-edged steel blade with central fuller, rectangular solid iron crossguard, straight dark wire-wrapped grip, plain solid octagonal iron pommel, unadorned utilitarian iron weapon, strictly NO jewels on sword, NO gems on hilt, NO curved blade, fist-sized rough-faceted dark scarlet blood-ruby glowing with internal red ember, mounted in tarnished black iron serpent-talon setting on braided copper torc, worn as separate necklace pendant never attached to weapons, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"A leap into the dark—trusting only strength and fortune.\", Include an authentic white comic book speech balloon with black ink outline and directional pointer pointing toward Korvath with the text: \"Hold tight, girl!\", Include an authentic white comic book speech balloon with black ink outline and directional pointer pointing toward Natari with the text: \"I have the ruby!\"",
+    "avoidTokens": "photorealistic, 3d render, blurry, modern anime, cutesy cartoon, clean digital CGI, soft pastel airbrushing, deformed hands, extra limbs, modern clothing, missing fingers, low resolution, flat lighting",
+    "status": "pending_render"
+  },
+  {
+    "panelId": 19,
+    "beat": {
+      "beat": 19,
+      "act": "Act III: The Sunder & Escape",
+      "name": "Breaching the Southern Gate",
+      "summary": "Crashing through the city gates on stolen war horses, Korvath and Natari scatter the stunned city guards beneath the stars."
+    },
+    "action": "Dynamic galloping action shot. Korvath and Natari, riding hard on two black desert stallions, charge straight through the splintered southern wooden gate of Valkash, broadsword swinging to scatter the panicked city guards into the night.",
+    "caption": "Behind them lay a burning palace, a dead merchant, and the wrath of an entire city.",
+    "dialogue": [],
+    "characters": [
+      "korvath",
+      "natari"
+    ],
+    "objects": [
+      "broadsword"
+    ],
+    "focalSubject": "korvath",
+    "camera": {
+      "shotType": "Low-Angle Gallop Action Shot",
+      "angle": "Dynamic Ground-Level Tracking Angle",
+      "lighting": "Torch glare from gatehouse, flying sparks, starry night sky"
+    },
+    "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta and John Buscema illustration style, dramatic heavy black ink brushwork, crisp fine cross-hatching, rich cel-shaded digital colors, theatrical chiaroscuro lighting, dark pulp fantasy aesthetic, masterwork sequential art, Low-Angle Gallop Action Shot, Dynamic Ground-Level Tracking Angle, Torch glare from gatehouse, flying sparks, starry night sky, Dynamic galloping action shot. Korvath and Natari, riding hard on two black desert stallions, charge straight through the splintered southern wooden gate of Valkash, broadsword swinging to scatter the panicked city guards into the night., korvath, towering 6'4 barbarian warrior, facial blend of Henry Cavill and Jason Momoa, massive chiseled square jaw with subtle cleft, smoldering steely blue wolfish eyes, heavy dark brooding brow, distinctive square-cut mane of thick coarse raven-black hair with jagged front bangs, hair length strictly shoulder-length stopping at the collarbone, strictly NOT waist length, NOT past the shoulders, NOT tied in a ponytail, NOT short cropped, deeply muscled scarred bronze torso, weathered leather chest harness with brass studs, wolf-fur loincloth, heavy leather combat boots with calf wraps, diagonal scar across left collarbone, natari, breathtaking exotic desert maiden, facial blend of Salma Hayek and Ana de Armas, high chiseled cheekbones, smoldering kohl-lined feline eyes, luscious lips, long cascading glossy raven hair adorned with bronze beads, revealing hammered bronze scale bikini top, matching low-slung chain bikini bottoms, sheer gossamer crimson silk loincloth sash, coiled gilded serpent armbands and jeweled hip chains, flawless sun-kissed bronze skin, massive 42-inch two-handed barbarian iron broadsword, heavy straight double-edged steel blade with central fuller, rectangular solid iron crossguard, straight dark wire-wrapped grip, plain solid octagonal iron pommel, unadorned utilitarian iron weapon, strictly NO jewels on sword, NO gems on hilt, NO curved blade, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"Behind them lay a burning palace, a dead merchant, and the wrath of an entire city.\"",
+    "avoidTokens": "photorealistic, 3d render, blurry, modern anime, cutesy cartoon, clean digital CGI, soft pastel airbrushing, deformed hands, extra limbs, modern clothing, missing fingers, low resolution, flat lighting",
+    "status": "pending_render"
+  },
+  {
+    "panelId": 20,
+    "beat": {
+      "beat": 20,
+      "act": "Act III: The Sunder & Escape",
+      "name": "Riders of the Midnight Dunes",
+      "summary": "Triumphant climax: Korvath and Natari rein in their stallions atop a high desert dune beneath a sea of stars, looking toward the open frontier."
+    },
+    "action": "Epic panoramic hero shot. Korvath and Natari rein in their desert horses atop a towering windswept sand dune beneath a magnificent canopy of brilliant desert stars. Korvath rests his blood-notched broadsword on his shoulder, while Natari, stunning in her hammered bronze scale bikini, holds aloft the pulsing Blood-Ruby of Sarkath, both gazing into the boundless wild unknown.",
+    "caption": "The road was long, and the world was wide. But wherever men built thrones of gold and deceit, the barbarian would come to break them.",
+    "dialogue": [],
+    "characters": [
+      "korvath",
+      "natari"
+    ],
+    "objects": [
+      "broadsword",
+      "blood_ruby"
+    ],
+    "focalSubject": "korvath",
+    "camera": {
+      "shotType": "Epic Panoramic Moonlit Climax Shot",
+      "angle": "Low Heroic Upward Perspective",
+      "lighting": "Cool silver starlight washing over bronze skin, brilliant crimson pulse from the Blood-Ruby, endless sand dune horizon"
+    },
+    "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta and John Buscema illustration style, dramatic heavy black ink brushwork, crisp fine cross-hatching, rich cel-shaded digital colors, theatrical chiaroscuro lighting, dark pulp fantasy aesthetic, masterwork sequential art, Epic Panoramic Moonlit Climax Shot, Low Heroic Upward Perspective, Cool silver starlight washing over bronze skin, brilliant crimson pulse from the Blood-Ruby, endless sand dune horizon, Epic panoramic hero shot. Korvath and Natari rein in their desert horses atop a towering windswept sand dune beneath a magnificent canopy of brilliant desert stars. Korvath rests his blood-notched broadsword on his shoulder, while Natari, stunning in her hammered bronze scale bikini, holds aloft the pulsing Blood-Ruby of Sarkath, both gazing into the boundless wild unknown., korvath, towering 6'4 barbarian warrior, facial blend of Henry Cavill and Jason Momoa, massive chiseled square jaw with subtle cleft, smoldering steely blue wolfish eyes, heavy dark brooding brow, distinctive square-cut mane of thick coarse raven-black hair with jagged front bangs, hair length strictly shoulder-length stopping at the collarbone, strictly NOT waist length, NOT past the shoulders, NOT tied in a ponytail, NOT short cropped, deeply muscled scarred bronze torso, weathered leather chest harness with brass studs, wolf-fur loincloth, heavy leather combat boots with calf wraps, diagonal scar across left collarbone, natari, breathtaking exotic desert maiden, facial blend of Salma Hayek and Ana de Armas, high chiseled cheekbones, smoldering kohl-lined feline eyes, luscious lips, long cascading glossy raven hair adorned with bronze beads, revealing hammered bronze scale bikini top, matching low-slung chain bikini bottoms, sheer gossamer crimson silk loincloth sash, coiled gilded serpent armbands and jeweled hip chains, flawless sun-kissed bronze skin, massive 42-inch two-handed barbarian iron broadsword, heavy straight double-edged steel blade with central fuller, rectangular solid iron crossguard, straight dark wire-wrapped grip, plain solid octagonal iron pommel, unadorned utilitarian iron weapon, strictly NO jewels on sword, NO gems on hilt, NO curved blade, fist-sized rough-faceted dark scarlet blood-ruby glowing with internal red ember, mounted in tarnished black iron serpent-talon setting on braided copper torc, worn as separate necklace pendant never attached to weapons, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"The road was long, and the world was wide. But wherever men built thrones of gold and deceit, the barbarian would come to break them.\"",
+    "avoidTokens": "photorealistic, 3d render, blurry, modern anime, cutesy cartoon, clean digital CGI, soft pastel airbrushing, deformed hands, extra limbs, modern clothing, missing fingers, low resolution, flat lighting",
+    "status": "pending_render"
+  }
+]

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Korvath the Barbarian — Issue #1: The Slumbering Serpent of Sarkesh</title>
-  <meta name="description" content="A 20-page vintage sword-and-sorcery graphic novel comic book issue.">
+  <title>Korvath the Barbarian — Graphic Novel Reader</title>
+  <meta name="description" content="A vintage sword-and-sorcery graphic novel comic book saga created in the spirit of Frank Frazetta and John Buscema.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Cinzel:wght@700;900&family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
@@ -28,7 +28,7 @@
     header {
       background: #120a06;
       border-bottom: 2px solid var(--border);
-      padding: 24px 32px;
+      padding: 20px 32px;
       text-align: center;
       position: sticky;
       top: 0;
@@ -43,34 +43,44 @@
       text-shadow: 0 0 16px rgba(252, 163, 17, 0.4);
     }
     .series-sub {
-      font-size: 14px;
-      letter-spacing: 4px;
+      font-size: 13px;
+      letter-spacing: 3px;
       color: var(--crimson);
       text-transform: uppercase;
       font-weight: 700;
-      margin-top: 4px;
+      margin-top: 2px;
     }
-    .controls {
-      margin-top: 12px;
+    .issue-selector {
+      margin-top: 14px;
       display: flex;
       justify-content: center;
-      gap: 16px;
+      gap: 12px;
+      flex-wrap: wrap;
     }
-    .btn {
-      background: #2a1c13;
+    .issue-btn {
+      background: #1c1510;
       border: 1px solid var(--blood-gold);
-      color: #fff;
-      padding: 6px 16px;
+      color: #ccc;
+      padding: 8px 18px;
       border-radius: 4px;
       font-family: inherit;
       cursor: pointer;
       font-size: 12px;
       letter-spacing: 1px;
       text-transform: uppercase;
-      transition: background 0.2s;
+      font-weight: 700;
+      transition: all 0.2s ease;
     }
-    .btn:hover {
+    .issue-btn:hover {
+      background: #2f1d14;
+      color: #fff;
+      border-color: #ffd166;
+    }
+    .issue-btn.active {
       background: var(--crimson);
+      color: #fff;
+      border-color: #ff6b6b;
+      box-shadow: 0 0 12px rgba(230, 57, 70, 0.6);
     }
     .comic-page {
       max-width: 1200px;
@@ -79,6 +89,14 @@
       display: flex;
       flex-direction: column;
       gap: 48px;
+    }
+    .issue-container {
+      display: none;
+      flex-direction: column;
+      gap: 48px;
+    }
+    .issue-container.active {
+      display: flex;
     }
     .panel-card {
       background: #000;
@@ -117,20 +135,51 @@
       color: var(--blood-gold);
       font-weight: bold;
     }
+    .issue-header-banner {
+      background: linear-gradient(180deg, #1f120c 0%, #0c0806 100%);
+      border: 2px solid var(--border);
+      padding: 24px;
+      text-align: center;
+      border-radius: 6px;
+      margin-bottom: -16px;
+    }
+    .issue-header-banner h2 {
+      font-size: 24px;
+      color: var(--blood-gold);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .issue-header-banner p {
+      font-size: 14px;
+      color: #aaa;
+      max-width: 800px;
+      margin: 0 auto;
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>Korvath the Barbarian</h1>
-    <div class="series-sub">Issue #1: The Slumbering Serpent of Sarkesh</div>
+    <div class="series-sub">The High Savage Chronicles</div>
+    <div class="issue-selector">
+      <button class="issue-btn" onclick="showIssue(1)" id="btn-issue-1">Issue #1: The Slumbering Serpent</button>
+      <button class="issue-btn active" onclick="showIssue(2)" id="btn-issue-2">Issue #2: The Blood-Thieves of Valkash</button>
+    </div>
   </header>
 
   <main class="comic-page">
-    
-      <div class="panel-card" id="panel-1">
+    <!-- Issue 1 Container -->
+    <section class="issue-container" id="issue-1">
+      <div class="issue-header-banner">
+        <h2>Issue #1: The Slumbering Serpent of Sarkesh</h2>
+        <p>From the frozen crags of the northern wastes strode Korvath—lone wolf, reaver, breaker of chains. In the sun-blasted ruins of Sarkesh, he confronts serpent cultists and ancient horror.</p>
+      </div>
+      
+      <div class="panel-card" id="panel-ep1-1">
         <div class="panel-img-wrap">
           <img class="panel-img" 
-               src="./assets/panel_01.webp" 
+               src="./assets/ep1/panel_01.webp" 
                loading="lazy"
                alt="Panel 1: The Windswept Ruins">
         </div>
@@ -141,10 +190,10 @@
         </div>
       </div>
 
-      <div class="panel-card" id="panel-2">
+      <div class="panel-card" id="panel-ep1-2">
         <div class="panel-img-wrap">
           <img class="panel-img" 
-               src="./assets/panel_02.webp" 
+               src="./assets/ep1/panel_02.webp" 
                loading="lazy"
                alt="Panel 2: Eyes in the Dust">
         </div>
@@ -155,10 +204,10 @@
         </div>
       </div>
 
-      <div class="panel-card" id="panel-3">
+      <div class="panel-card" id="panel-ep1-3">
         <div class="panel-img-wrap">
           <img class="panel-img" 
-               src="./assets/panel_03.webp" 
+               src="./assets/ep1/panel_03.webp" 
                loading="lazy"
                alt="Panel 3: The Crypt of the Serpent">
         </div>
@@ -169,10 +218,10 @@
         </div>
       </div>
 
-      <div class="panel-card" id="panel-4">
+      <div class="panel-card" id="panel-ep1-4">
         <div class="panel-img-wrap">
           <img class="panel-img" 
-               src="./assets/panel_04.webp" 
+               src="./assets/ep1/panel_04.webp" 
                loading="lazy"
                alt="Panel 4: Hall of Serpent Kings">
         </div>
@@ -183,10 +232,10 @@
         </div>
       </div>
 
-      <div class="panel-card" id="panel-5">
+      <div class="panel-card" id="panel-ep1-5">
         <div class="panel-img-wrap">
           <img class="panel-img" 
-               src="./assets/panel_05.webp" 
+               src="./assets/ep1/panel_05.webp" 
                loading="lazy"
                alt="Panel 5: Blades of the Cult">
         </div>
@@ -197,10 +246,10 @@
         </div>
       </div>
 
-      <div class="panel-card" id="panel-6">
+      <div class="panel-card" id="panel-ep1-6">
         <div class="panel-img-wrap">
           <img class="panel-img" 
-               src="./assets/panel_06.webp" 
+               src="./assets/ep1/panel_06.webp" 
                loading="lazy"
                alt="Panel 6: The Iron Cleave">
         </div>
@@ -211,10 +260,10 @@
         </div>
       </div>
 
-      <div class="panel-card" id="panel-7">
+      <div class="panel-card" id="panel-ep1-7">
         <div class="panel-img-wrap">
           <img class="panel-img" 
-               src="./assets/panel_07.webp" 
+               src="./assets/ep1/panel_07.webp" 
                loading="lazy"
                alt="Panel 7: The Cavern of the Lotus">
         </div>
@@ -225,10 +274,10 @@
         </div>
       </div>
 
-      <div class="panel-card" id="panel-8">
+      <div class="panel-card" id="panel-ep1-8">
         <div class="panel-img-wrap">
           <img class="panel-img" 
-               src="./assets/panel_08.webp" 
+               src="./assets/ep1/panel_08.webp" 
                loading="lazy"
                alt="Panel 8: The Captive Maiden">
         </div>
@@ -239,10 +288,10 @@
         </div>
       </div>
 
-      <div class="panel-card" id="panel-9">
+      <div class="panel-card" id="panel-ep1-9">
         <div class="panel-img-wrap">
           <img class="panel-img" 
-               src="./assets/panel_09.webp" 
+               src="./assets/ep1/panel_09.webp" 
                loading="lazy"
                alt="Panel 9: The Altar of Sarkath">
         </div>
@@ -253,10 +302,10 @@
         </div>
       </div>
 
-      <div class="panel-card" id="panel-10">
+      <div class="panel-card" id="panel-ep1-10">
         <div class="panel-img-wrap">
           <img class="panel-img" 
-               src="./assets/panel_10.webp" 
+               src="./assets/ep1/panel_10.webp" 
                loading="lazy"
                alt="Panel 10: The Barbarian Charge">
         </div>
@@ -267,10 +316,10 @@
         </div>
       </div>
 
-      <div class="panel-card" id="panel-11">
+      <div class="panel-card" id="panel-ep1-11">
         <div class="panel-img-wrap">
           <img class="panel-img" 
-               src="./assets/panel_11.webp" 
+               src="./assets/ep1/panel_11.webp" 
                loading="lazy"
                alt="Panel 11: Awakening of the Shadow">
         </div>
@@ -281,10 +330,10 @@
         </div>
       </div>
 
-      <div class="panel-card" id="panel-12">
+      <div class="panel-card" id="panel-ep1-12">
         <div class="panel-img-wrap">
           <img class="panel-img" 
-               src="./assets/panel_12.webp" 
+               src="./assets/ep1/panel_12.webp" 
                loading="lazy"
                alt="Panel 12: Wrath of the Titan">
         </div>
@@ -295,10 +344,10 @@
         </div>
       </div>
 
-      <div class="panel-card" id="panel-13">
+      <div class="panel-card" id="panel-ep1-13">
         <div class="panel-img-wrap">
           <img class="panel-img" 
-               src="./assets/panel_13.webp" 
+               src="./assets/ep1/panel_13.webp" 
                loading="lazy"
                alt="Panel 13: Poetic Justice">
         </div>
@@ -309,10 +358,10 @@
         </div>
       </div>
 
-      <div class="panel-card" id="panel-14">
+      <div class="panel-card" id="panel-ep1-14">
         <div class="panel-img-wrap">
           <img class="panel-img" 
-               src="./assets/panel_14.webp" 
+               src="./assets/ep1/panel_14.webp" 
                loading="lazy"
                alt="Panel 14: Laughing at Doom">
         </div>
@@ -323,10 +372,10 @@
         </div>
       </div>
 
-      <div class="panel-card" id="panel-15">
+      <div class="panel-card" id="panel-ep1-15">
         <div class="panel-img-wrap">
           <img class="panel-img" 
-               src="./assets/panel_15.webp" 
+               src="./assets/ep1/panel_15.webp" 
                loading="lazy"
                alt="Panel 15: Venom and Stone">
         </div>
@@ -337,10 +386,10 @@
         </div>
       </div>
 
-      <div class="panel-card" id="panel-16">
+      <div class="panel-card" id="panel-ep1-16">
         <div class="panel-img-wrap">
           <img class="panel-img" 
-               src="./assets/panel_16.webp" 
+               src="./assets/ep1/panel_16.webp" 
                loading="lazy"
                alt="Panel 16: The Fatal Leap">
         </div>
@@ -351,10 +400,10 @@
         </div>
       </div>
 
-      <div class="panel-card" id="panel-17">
+      <div class="panel-card" id="panel-ep1-17">
         <div class="panel-img-wrap">
           <img class="panel-img" 
-               src="./assets/panel_17.webp" 
+               src="./assets/ep1/panel_17.webp" 
                loading="lazy"
                alt="Panel 17: Death Agony of the Beast">
         </div>
@@ -365,10 +414,10 @@
         </div>
       </div>
 
-      <div class="panel-card" id="panel-18">
+      <div class="panel-card" id="panel-ep1-18">
         <div class="panel-img-wrap">
           <img class="panel-img" 
-               src="./assets/panel_18.webp" 
+               src="./assets/ep1/panel_18.webp" 
                loading="lazy"
                alt="Panel 18: Severing the Chains">
         </div>
@@ -379,10 +428,10 @@
         </div>
       </div>
 
-      <div class="panel-card" id="panel-19">
+      <div class="panel-card" id="panel-ep1-19">
         <div class="panel-img-wrap">
           <img class="panel-img" 
-               src="./assets/panel_19.webp" 
+               src="./assets/ep1/panel_19.webp" 
                loading="lazy"
                alt="Panel 19: Escape into the Blinding Light">
         </div>
@@ -393,10 +442,10 @@
         </div>
       </div>
 
-      <div class="panel-card" id="panel-20">
+      <div class="panel-card" id="panel-ep1-20">
         <div class="panel-img-wrap">
           <img class="panel-img" 
-               src="./assets/panel_20.webp" 
+               src="./assets/ep1/panel_20.webp" 
                loading="lazy"
                alt="Panel 20: The Crimson Dawn">
         </div>
@@ -406,6 +455,318 @@
           <span>Epic Panoramic Sunset/Sunrise Hero Shot</span>
         </div>
       </div>
+    </section>
+
+    <!-- Issue 2 Container -->
+    <section class="issue-container active" id="issue-2">
+      <div class="issue-header-banner">
+        <h2>Issue #2: The Blood-Thieves of Valkash</h2>
+        <p>Deep within the thieves' city of Valkash, Korvath and Natari track the treacherous merchant prince Malakor into subterranean vaults where webs drip with demon poison.</p>
+      </div>
+      
+      <div class="panel-card" id="panel-ep2-1">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="./assets/ep2/panel_01.webp" 
+               loading="lazy"
+               alt="Panel 1: Gates of Valkash">
+        </div>
+        <div class="panel-footer-meta">
+          <span class="page-indicator">PANEL 1 OF 20</span>
+          <span>Gates of Valkash</span>
+          <span>Ultra-Wide Panoramic Establishing Shot</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-ep2-2">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="./assets/ep2/panel_02.webp" 
+               loading="lazy"
+               alt="Panel 2: The Midnight Bazaar">
+        </div>
+        <div class="panel-footer-meta">
+          <span class="page-indicator">PANEL 2 OF 20</span>
+          <span>The Midnight Bazaar</span>
+          <span>Medium Street Tracking Shot</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-ep2-3">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="./assets/ep2/panel_03.webp" 
+               loading="lazy"
+               alt="Panel 3: The Black Lotus Tavern">
+        </div>
+        <div class="panel-footer-meta">
+          <span class="page-indicator">PANEL 3 OF 20</span>
+          <span>The Black Lotus Tavern</span>
+          <span>Tavern Interior Medium Three-Shot</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-ep2-4">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="./assets/ep2/panel_04.webp" 
+               loading="lazy"
+               alt="Panel 4: The Crooked Broker">
+        </div>
+        <div class="panel-footer-meta">
+          <span class="page-indicator">PANEL 4 OF 20</span>
+          <span>The Crooked Broker</span>
+          <span>Tight Chiaroscuro Confrontation Shot</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-ep2-5">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="./assets/ep2/panel_05.webp" 
+               loading="lazy"
+               alt="Panel 5: Blades in the Smoke">
+        </div>
+        <div class="panel-footer-meta">
+          <span class="page-indicator">PANEL 5 OF 20</span>
+          <span>Blades in the Smoke</span>
+          <span>Dynamic Action Ambush Shot</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-ep2-6">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="./assets/ep2/panel_06.webp" 
+               loading="lazy"
+               alt="Panel 6: Savage Tavern Cleave">
+        </div>
+        <div class="panel-footer-meta">
+          <span class="page-indicator">PANEL 6 OF 20</span>
+          <span>Savage Tavern Cleave</span>
+          <span>Peak Combat Action Freeze-Frame</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-ep2-7">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="./assets/ep2/panel_07.webp" 
+               loading="lazy"
+               alt="Panel 7: Rooftops of Valkash">
+        </div>
+        <div class="panel-footer-meta">
+          <span class="page-indicator">PANEL 7 OF 20</span>
+          <span>Rooftops of Valkash</span>
+          <span>Dynamic Midair Rooftop Leap Shot</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-ep2-8">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="./assets/ep2/panel_08.webp" 
+               loading="lazy"
+               alt="Panel 8: The Harem Terrace">
+        </div>
+        <div class="panel-footer-meta">
+          <span class="page-indicator">PANEL 8 OF 20</span>
+          <span>The Harem Terrace</span>
+          <span>Wide Opulent Terrace Shot</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-ep2-9">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="./assets/ep2/panel_09.webp" 
+               loading="lazy"
+               alt="Panel 9: The Merchant's Vault">
+        </div>
+        <div class="panel-footer-meta">
+          <span class="page-indicator">PANEL 9 OF 20</span>
+          <span>The Merchant's Vault</span>
+          <span>Vault Door Breakthrough Shot</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-ep2-10">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="./assets/ep2/panel_10.webp" 
+               loading="lazy"
+               alt="Panel 10: Caught in the Web">
+        </div>
+        <div class="panel-footer-meta">
+          <span class="page-indicator">PANEL 10 OF 20</span>
+          <span>Caught in the Web</span>
+          <span>Dynamic Entanglement Shot</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-ep2-11">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="./assets/ep2/panel_11.webp" 
+               loading="lazy"
+               alt="Panel 11: The Brood Queen Descends">
+        </div>
+        <div class="panel-footer-meta">
+          <span class="page-indicator">PANEL 11 OF 20</span>
+          <span>The Brood Queen Descends</span>
+          <span>Colossal Monster Reveal Shot</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-ep2-12">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="./assets/ep2/panel_12.webp" 
+               loading="lazy"
+               alt="Panel 12: The Merchant's Gloat">
+        </div>
+        <div class="panel-footer-meta">
+          <span class="page-indicator">PANEL 12 OF 20</span>
+          <span>The Merchant's Gloat</span>
+          <span>Balcony Mockery Shot</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-ep2-13">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="./assets/ep2/panel_13.webp" 
+               loading="lazy"
+               alt="Panel 13: Venom and Fire">
+        </div>
+        <div class="panel-footer-meta">
+          <span class="page-indicator">PANEL 13 OF 20</span>
+          <span>Venom and Fire</span>
+          <span>Dynamic Mid-Range Combat Clash</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-ep2-14">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="./assets/ep2/panel_14.webp" 
+               loading="lazy"
+               alt="Panel 14: The Flaming Cleave">
+        </div>
+        <div class="panel-footer-meta">
+          <span class="page-indicator">PANEL 14 OF 20</span>
+          <span>The Flaming Cleave</span>
+          <span>Dynamic Cleave Freeze-Frame</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-ep2-15">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="./assets/ep2/panel_15.webp" 
+               loading="lazy"
+               alt="Panel 15: Natari's Retribution">
+        </div>
+        <div class="panel-footer-meta">
+          <span class="page-indicator">PANEL 15 OF 20</span>
+          <span>Natari's Retribution</span>
+          <span>Heroic Balcony Strike Shot</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-ep2-16">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="./assets/ep2/panel_16.webp" 
+               loading="lazy"
+               alt="Panel 16: The Abyssal Skull-Strike">
+        </div>
+        <div class="panel-footer-meta">
+          <span class="page-indicator">PANEL 16 OF 20</span>
+          <span>The Abyssal Skull-Strike</span>
+          <span>Peak Climax Midair Action Shot</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-ep2-17">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="./assets/ep2/panel_17.webp" 
+               loading="lazy"
+               alt="Panel 17: Collapse of the Palace Vault">
+        </div>
+        <div class="panel-footer-meta">
+          <span class="page-indicator">PANEL 17 OF 20</span>
+          <span>Collapse of the Palace Vault</span>
+          <span>Full Palace Catastrophe Wide Shot</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-ep2-18">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="./assets/ep2/panel_18.webp" 
+               loading="lazy"
+               alt="Panel 18: The Leaping Escape">
+        </div>
+        <div class="panel-footer-meta">
+          <span class="page-indicator">PANEL 18 OF 20</span>
+          <span>The Leaping Escape</span>
+          <span>Midair Escape Tracking Shot</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-ep2-19">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="./assets/ep2/panel_19.webp" 
+               loading="lazy"
+               alt="Panel 19: Breaching the Southern Gate">
+        </div>
+        <div class="panel-footer-meta">
+          <span class="page-indicator">PANEL 19 OF 20</span>
+          <span>Breaching the Southern Gate</span>
+          <span>Low-Angle Gallop Action Shot</span>
+        </div>
+      </div>
+
+      <div class="panel-card" id="panel-ep2-20">
+        <div class="panel-img-wrap">
+          <img class="panel-img" 
+               src="./assets/ep2/panel_20.webp" 
+               loading="lazy"
+               alt="Panel 20: Riders of the Midnight Dunes">
+        </div>
+        <div class="panel-footer-meta">
+          <span class="page-indicator">PANEL 20 OF 20</span>
+          <span>Riders of the Midnight Dunes</span>
+          <span>Epic Panoramic Moonlit Climax Shot</span>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <script>
+    function showIssue(num) {
+      document.querySelectorAll('.issue-container').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.issue-btn').forEach(el => el.classList.remove('active'));
+
+      const targetIssue = document.getElementById('issue-' + num);
+      const targetBtn = document.getElementById('btn-issue-' + num);
+
+      if (targetIssue) targetIssue.classList.add('active');
+      if (targetBtn) targetBtn.classList.add('active');
+
+      window.history.replaceState(null, null, '#issue-' + num);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Check hash on load
+    if (window.location.hash === '#issue-1') {
+      showIssue(1);
+    } else {
+      showIssue(2);
+    }
+  </script>
 </body>
 </html>

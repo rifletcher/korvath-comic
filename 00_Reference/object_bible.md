@@ -18,12 +18,12 @@ Whenever a signature weapon, relic, or vehicle/beast is introduced:
 ### 1. `broadsword` — Korvath's Iron-Breaker Broadsword
 * **Entity Type:** Melee Weapon / Signature Broadsword
 * **Anchor Description:**
-  > Massive two-handed heavy iron barbarian broadsword, 42-inch straight double-edged blade with deep central blood fuller and subtle battle notches, heavy rectangular iron crossguard with carved ancestral knotwork, wire-wrapped leather grip, solid octagonal iron pommel stone.
+  > Massive two-handed utilitarian iron barbarian broadsword, 42-inch straight double-edged blade with deep central blood fuller and subtle battle notches, plain rectangular carved iron crossguard, straight black wire-wrapped leather grip, solid unadorned octagonal iron pommel. Strictly NO jewels or gems on the sword hilt or pommel.
 * **3 Signature Props:**
-  1. Straight heavy double-edged broad blade with central fuller.
-  2. Rectangular carved iron crossguard.
-  3. Wire-wrapped dark leather hilt with heavy octagonal pommel.
-* **Avoidance Tokens:** katana, thin rapier, glowing fantasy laser sword, ornate gold filigree.
+  1. Straight heavy double-edged broad blade with central fuller (NOT curved).
+  2. Plain rectangular carved iron crossguard.
+  3. Straight dark wire-wrapped leather hilt with unadorned solid iron octagonal pommel (NO jewels).
+* **Avoidance Tokens:** jewels on hilt, glowing gem on pommel, ornate fantasy weapon, curved saber, katana, thin rapier, ornate gold filigree.
 
 ---
 

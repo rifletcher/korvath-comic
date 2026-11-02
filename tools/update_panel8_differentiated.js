@@ -1,0 +1,17 @@
+const fs = require('fs');
+const path = require('path');
+
+const ep2Path = path.join(__dirname, '..', '01_Script', 'episodes', 'episode_02.json');
+const sbPath = path.join(__dirname, '..', '01_Script', 'storyboard.json');
+
+const ep2 = JSON.parse(fs.readFileSync(ep2Path, 'utf8'));
+
+const p8 = ep2.find(p => p.panelId === 8);
+p8.action = "Opulent palace terrace view. Surrounded by carved alabaster colonnades and a steaming rosewater fountain, two distinct palace courtesans recline on velvet cushions in shocked awe as Korvath and Natari drop silently onto the marble tiles: one fair-skinned concubine with braided golden blonde hair draped in sheer emerald-green silks and silver bangles, and one striking dark-skinned maiden with sculpted obsidian curls draped in translucent saffron-gold harem silks and hammered brass armlets. Both look completely distinct from Natari; strictly NO scale armor or bronze bikinis on the courtesans.";
+
+p8.prompt = `classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta and John Buscema illustration style, dramatic heavy black ink brushwork, crisp fine cross-hatching, rich cel-shaded digital colors, theatrical chiaroscuro lighting, dark pulp fantasy aesthetic, masterwork sequential art, Wide Opulent Terrace Shot, Low Eye-Level Angle, Lush hanging brass lanterns, moonlit reflecting pools, swirling rosewater steam, Opulent palace terrace view. Surrounded by carved alabaster colonnades and a steaming rosewater fountain, two distinct palace courtesans recline on silk cushions in shocked awe as Korvath and Natari drop silently onto the marble tiles. One courtesan is a fair-skinned beauty with cascading golden blonde hair adorned with pearls, wearing sheer emerald-green silk wraps and delicate silver bangles. The second courtesan is a gorgeous dark-skinned maiden with sculpted braided raven curls, wearing translucent saffron-yellow harem veils and beaten copper armlets. Both women are dressed in flowing sheer silks, completely different from Natari, strictly NO bronze scale bikinis on the courtesans., natari, breathtaking exotic desert maiden, facial blend of Salma Hayek and Ana de Armas, high chiseled cheekbones, smoldering kohl-lined feline eyes, luscious lips, long cascading glossy raven hair adorned with bronze beads, signature revealing hammered bronze scale bikini top, matching low-slung chain bikini bottoms, sheer gossamer crimson silk loincloth sash, coiled gilded serpent armbands and jeweled hip chains, flawless sun-kissed bronze skin, korvath, towering 6'4 barbarian warrior, facial blend of Henry Cavill and Jason Momoa, massive chiseled square jaw with subtle cleft, smoldering steely blue wolfish eyes, heavy dark brooding brow, square-cut shaggy raven-black hair falling to broad shoulders, deeply muscled scarred bronze torso, weathered leather chest harness with brass studs, wolf-fur loincloth, heavy leather combat boots with calf wraps, diagonal scar across left collarbone, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: "Silk and perfume could not mask the stench of spider venom that hung in the palace air."`;
+
+fs.writeFileSync(ep2Path, JSON.stringify(ep2, null, 2), 'utf8');
+fs.writeFileSync(sbPath, JSON.stringify(ep2, null, 2), 'utf8');
+console.log('✅ Updated Panel 8 in episode_02.json and storyboard.json with differentiated courtesans (blonde emerald silk & dark-skinned saffron silk).');
+

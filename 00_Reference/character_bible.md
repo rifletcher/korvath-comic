@@ -17,7 +17,7 @@
 * **Role:** Protagonist, barbarian mercenary, slayer, wanderer.
 * **Celebrity Blend DNA:** **Henry Cavill + Jason Momoa** (chiseled square jaw with subtle cleft, fierce smoldering steely blue-grey wolfish eyes, scarred weather-beaten bronze skin, heavy brooding dark brow, untamed savage warrior poise).
 * **3 Signature Props:**
-  1. Square-cut unruly mane of shaggy raven-black hair falling to broad muscular shoulders.
+  1. Distinctive square-cut mane of thick coarse raven-black hair with jagged front bangs; hair length strictly shoulder-length stopping at the collarbone (strictly NOT waist length, NOT past shoulders, NOT tied in a ponytail, NOT short cropped).
   2. Heavy scarred bronze muscular torso, wide weathered leather chest harness with tarnished brass studs, wolf-fur trimmed loincloth, and thick leather combat sandals with criss-crossed calf wraps.
   3. Faint pale battle scar diagonally across left collarbone down to chest.
 * **Color Palette:** Weathered brown leather, iron grey, wolf pelt ochre, bronze skin.
