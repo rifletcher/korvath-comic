@@ -1,0 +1,122 @@
+[
+  {
+    "panelId": 1,
+    "title": "Gates of Valkash",
+    "startTime": 0,
+    "duration": 10.2
+  },
+  {
+    "panelId": 2,
+    "title": "The Midnight Bazaar",
+    "startTime": 10.2,
+    "duration": 14.56
+  },
+  {
+    "panelId": 3,
+    "title": "The Black Lotus Tavern",
+    "startTime": 24.759999999999998,
+    "duration": 11.166667
+  },
+  {
+    "panelId": 4,
+    "title": "The Crooked Broker",
+    "startTime": 35.926666999999995,
+    "duration": 14.9
+  },
+  {
+    "panelId": 5,
+    "title": "Blades in the Smoke",
+    "startTime": 50.82666699999999,
+    "duration": 10.26
+  },
+  {
+    "panelId": 6,
+    "title": "Savage Tavern Cleave",
+    "startTime": 61.08666699999999,
+    "duration": 6.1
+  },
+  {
+    "panelId": 7,
+    "title": "Rooftops of Valkash",
+    "startTime": 67.18666699999999,
+    "duration": 11.7
+  },
+  {
+    "panelId": 8,
+    "title": "The Harem Terrace",
+    "startTime": 78.88666699999999,
+    "duration": 6.766667
+  },
+  {
+    "panelId": 9,
+    "title": "The Merchant's Vault",
+    "startTime": 85.65333399999999,
+    "duration": 12.2
+  },
+  {
+    "panelId": 10,
+    "title": "Caught in the Web",
+    "startTime": 97.85333399999999,
+    "duration": 10.9
+  },
+  {
+    "panelId": 11,
+    "title": "The Brood Queen Descends",
+    "startTime": 108.753334,
+    "duration": 7.3
+  },
+  {
+    "panelId": 12,
+    "title": "The Merchant's Gloat",
+    "startTime": 116.05333399999999,
+    "duration": 14.6
+  },
+  {
+    "panelId": 13,
+    "title": "Venom and Fire",
+    "startTime": 130.653334,
+    "duration": 7.2
+  },
+  {
+    "panelId": 14,
+    "title": "The Flaming Cleave",
+    "startTime": 137.853334,
+    "duration": 12.8
+  },
+  {
+    "panelId": 15,
+    "title": "Natari's Retribution",
+    "startTime": 150.653334,
+    "duration": 10.4
+  },
+  {
+    "panelId": 16,
+    "title": "The Abyssal Skull-Strike",
+    "startTime": 161.053334,
+    "duration": 5.1
+  },
+  {
+    "panelId": 17,
+    "title": "Collapse of the Palace Vault",
+    "startTime": 166.153334,
+    "duration": 5.5
+  },
+  {
+    "panelId": 18,
+    "title": "The Leaping Escape",
+    "startTime": 171.653334,
+    "duration": 11
+  },
+  {
+    "panelId": 19,
+    "title": "Breaching the Southern Gate",
+    "startTime": 182.653334,
+    "duration": 7
+  },
+  {
+    "panelId": 20,
+    "title": "Riders of the Midnight Dunes",
+    "startTime": 189.653334,
+    "duration": 10.9
+  }
+]
