@@ -186,13 +186,21 @@
     </div>
   </main>
 
-  <div style="margin: 20px 0 0; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; width: 100%; max-width: 1100px;">
-    <button onclick="switchVideo('./episode_02_motion_comic.mp4', 'FULL 20-PANEL MOVIE')" class="chapter-btn" style="background:#201712; border: 1px solid #fca311; color:#fca311; font-weight:bold; padding:12px 20px; font-size:13px; cursor:pointer;">
-      🎬 Play Full 20-Panel Movie (3.4 min)
-    </button>
-    <button onclick="switchVideo('./panel_10_elevenlabs_trial.mp4', '🔥 ELEVENLABS TRIAL (PANEL 10 SCREAM)')" class="chapter-btn" style="background:#3d1118; border: 1px solid #e63946; color:#ffdddd; font-weight:bold; padding:12px 20px; font-size:13px; cursor:pointer;">
-      🔥 Play ElevenLabs Screaming Trial (Panel 10)
-    </button>
+  <div style="margin: 20px 0 0; background: #12131a; border: 1px solid #33281e; border-radius: 8px; padding: 18px 24px; width: 100%; max-width: 1100px; text-align: center;">
+    <div style="color: #fca311; font-size: 14px; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px;">
+      ⚔️ Panel 10 Audio Comparison (A/B Test)
+    </div>
+    <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+      <button onclick="switchVideo('./panel_10_original.mp4', 'OPTION A: ORIGINAL (EDGE TTS)')" class="chapter-btn" style="background:#1b1d26; border: 2px solid #555; color:#fff; font-weight:bold; padding:12px 22px; font-size:13px; cursor:pointer;">
+        🔊 Option A: Original Voice (Edge TTS)
+      </button>
+      <button onclick="switchVideo('./panel_10_elevenlabs_trial.mp4', 'OPTION B: ELEVENLABS SCREAM')" class="chapter-btn" style="background:#3d1118; border: 2px solid #e63946; color:#ffdddd; font-weight:bold; padding:12px 22px; font-size:13px; cursor:pointer; box-shadow: 0 0 14px rgba(230, 57, 70, 0.4);">
+        🔥 Option B: ElevenLabs Voice (Panicked Scream)
+      </button>
+      <button onclick="switchVideo('./episode_02_motion_comic.mp4', 'FULL 20-PANEL CINEMATIC MOVIE')" class="chapter-btn" style="background:#241910; border: 2px solid #fca311; color:#fca311; font-weight:bold; padding:12px 22px; font-size:13px; cursor:pointer;">
+        🎬 Play Full 20-Panel Movie (3.4 min)
+      </button>
+    </div>
   </div>
 
   <section class="content-grid">
