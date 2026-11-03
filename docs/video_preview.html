@@ -176,7 +176,7 @@
       Your browser does not support the video tag.
     </video>
     <div class="meta-bar">
-      <span class="badge">FULL 20-PANEL CINEMATIC MOVIE</span>
+      <span class="badge" id="video-badge">FULL 20-PANEL CINEMATIC MOVIE</span>
       <div class="cast-credits">
         <span><strong>Chronicler:</strong> British Neural</span>
         <span><strong>Korvath:</strong> Northern Guttural</span>
@@ -185,6 +185,15 @@
       </div>
     </div>
   </main>
+
+  <div style="margin: 20px 0 0; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; width: 100%; max-width: 1100px;">
+    <button onclick="switchVideo('./episode_02_motion_comic.mp4', 'FULL 20-PANEL MOVIE')" class="chapter-btn" style="background:#201712; border: 1px solid #fca311; color:#fca311; font-weight:bold; padding:12px 20px; font-size:13px; cursor:pointer;">
+      🎬 Play Full 20-Panel Movie (3.4 min)
+    </button>
+    <button onclick="switchVideo('./panel_10_elevenlabs_trial.mp4', '🔥 ELEVENLABS TRIAL (PANEL 10 SCREAM)')" class="chapter-btn" style="background:#3d1118; border: 1px solid #e63946; color:#ffdddd; font-weight:bold; padding:12px 20px; font-size:13px; cursor:pointer;">
+      🔥 Play ElevenLabs Screaming Trial (Panel 10)
+    </button>
+  </div>
 
   <section class="content-grid">
     <div class="card">
@@ -226,6 +235,17 @@
       const m = Math.floor(sec / 60);
       const s = Math.floor(sec % 60);
       return m + ':' + (s < 10 ? '0' : '') + s;
+    }
+
+    function switchVideo(src, badgeText) {
+      const player = document.getElementById('player');
+      player.src = src;
+      player.load();
+      player.play();
+      if (badgeText) {
+        document.getElementById('video-badge').textContent = badgeText;
+      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   </script>
 </body>
