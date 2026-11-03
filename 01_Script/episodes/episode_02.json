@@ -287,7 +287,7 @@
     "dialogue": [
       {
         "speaker": "Natari",
-        "text": "KORVATH! It's a trap! The webs—AHHH! THEY BURN LIKE ACID! GET THEM OFF ME!!"
+        "text": "Korvath, it's a trap! The webs... they burn like acid!"
       }
     ],
     "characters": [
@@ -320,11 +320,11 @@
     "dialogue": [
       {
         "speaker": "Natari",
-        "text": "LOOK OUT! ABOVE US! KORVATH, IT'S ON ME! AAAAAGH!!"
+        "text": "Look out, Korvath! Above us!"
       },
       {
         "speaker": "Korvath",
-        "text": "GET AWAY FROM HER, YOU HELL-SPAWN! ROAAARGH!"
+        "text": "Get behind me, girl!"
       }
     ],
     "characters": [
@@ -354,7 +354,7 @@
     "dialogue": [
       {
         "speaker": "Lord Malakor",
-        "text": "The ruby belongs to me, savage! Feed on them, my beauty! TEAR THEM APART! HAHAHAHA!"
+        "text": "The ruby belongs to me, savage! Feed on them, my beauty!"
       }
     ],
     "characters": [
@@ -419,7 +419,7 @@
     "dialogue": [
       {
         "speaker": "Korvath",
-        "text": "DIE, VERMIN! ROAAARGH! BACK TO THE PIT THAT SPAT YOU!"
+        "text": "Die, vermin! Back to the pit that spat you!"
       }
     ],
     "characters": [
@@ -538,11 +538,11 @@
     "dialogue": [
       {
         "speaker": "Korvath",
-        "text": "HOLD TIGHT, GIRL! JUMP!!"
+        "text": "Hold tight, girl! Jump!"
       },
       {
         "speaker": "Natari",
-        "text": "I HAVE THE RUBY! JUMP, KORVATH, JUMP!!"
+        "text": "I have the ruby! Jump!"
       }
     ],
     "characters": [

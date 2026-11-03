@@ -53,61 +53,22 @@ function ensureSFX() {
   return sfxFiles;
 }
 
-// --- 2. Dynamic Emotional Performance Engine ---
+// --- 2. Grounded Cinematic Voice Engine ---
 function getEmotionProfile(speaker, text, panelId) {
   const s = (speaker || '').toLowerCase().trim();
-  const t = (text || '').toLowerCase();
 
-  // Chronicler / Narrator
+  // Chronicler / Narrator: Steady British pulp chronicle
   if (s === 'narrator') {
-    // Action / Horror panels get faster, urgent cadence
-    if ([5, 6, 10, 11, 13, 14, 16, 17].includes(panelId)) {
-      return {
-        voice: 'en-GB-RyanNeural',
-        pitch: '-4Hz',
-        rate: '+4%',
-        fxFilter: 'bass=g=3:f=120,acompressor=threshold=-12dB:ratio=3:attack=5:release=50,volume=1.2'
-      };
-    }
-    // Atmospheric / Introspective panels
     return {
       voice: 'en-GB-RyanNeural',
-      pitch: '-8Hz',
-      rate: '-8%',
-      fxFilter: 'volume=1.1'
+      pitch: '-6Hz',
+      rate: '-6%',
+      fxFilter: 'volume=1.15'
     };
   }
 
-  // Natari
+  // Natari: Sultry, sharp desert rogue (strictly natural human pacing)
   if (s === 'natari') {
-    // Terrified screaming when attacked by webs or spider (Panel 10 & 11)
-    if (panelId === 10 || panelId === 11 || t.includes('burn') || t.includes('acid') || t.includes('above us') || t.includes('aaagh')) {
-      return {
-        voice: 'en-US-AvaNeural',
-        pitch: '+38Hz',
-        rate: '+32%',
-        fxFilter: 'equalizer=f=3400:width_type=o:width=1.2:g=5,acompressor=threshold=-15dB:ratio=4:attack=2:release=50,aecho=0.8:0.6:35|55:0.3|0.2,volume=1.7'
-      };
-    }
-    // Adrenaline / shouting over collapsing palace or jumping (Panel 15 & 18)
-    if (panelId === 15 || panelId === 18 || t.includes('jump') || t.includes('ruby')) {
-      return {
-        voice: 'en-US-AvaNeural',
-        pitch: '+22Hz',
-        rate: '+24%',
-        fxFilter: 'equalizer=f=3000:width_type=o:width=1.0:g=4,acompressor=threshold=-12dB:ratio=3:attack=5:release=50,volume=1.5'
-      };
-    }
-    // Urgent rooftop sprint (Panel 7)
-    if (panelId === 7) {
-      return {
-        voice: 'en-US-AvaNeural',
-        pitch: '+15Hz',
-        rate: '+18%',
-        fxFilter: 'volume=1.35'
-      };
-    }
-    // Default sensual / streetwise rogue (Panel 2)
     return {
       voice: 'en-US-AvaNeural',
       pitch: '+2Hz',
@@ -116,69 +77,40 @@ function getEmotionProfile(speaker, text, panelId) {
     };
   }
 
-  // Korvath the Barbarian
+  // Korvath the Barbarian: Deep, heavy guttural warrior
   if (s === 'korvath') {
-    // Battle roar / berserker fury (Panel 11, 13, 14, 18)
-    if (panelId === 11 || panelId === 13 || panelId === 14 || panelId === 18 || t.includes('die') || t.includes('roargh') || t.includes('fire') || t.includes('jump')) {
-      return {
-        voice: 'en-US-ChristopherNeural',
-        pitch: '-8Hz',
-        rate: '+18%',
-        fxFilter: 'bass=g=7:f=110,equalizer=f=2400:width_type=o:width=1.0:g=3,acompressor=threshold=-12dB:ratio=5:attack=4:release=50,volume=1.65'
-      };
-    }
-    // Threatening snarl / cold intimidation (Panel 4)
-    if (panelId === 4 || t.includes('tongue') || t.includes('copper')) {
-      return {
-        voice: 'en-US-ChristopherNeural',
-        pitch: '-20Hz',
-        rate: '-10%',
-        fxFilter: 'bass=g=5:f=100,volume=1.35'
-      };
-    }
-    // Tavern contempt (Panel 3)
-    if (panelId === 3) {
-      return {
-        voice: 'en-US-ChristopherNeural',
-        pitch: '-16Hz',
-        rate: '-6%',
-        fxFilter: 'bass=g=4:f=110,volume=1.3'
-      };
-    }
-    // Cautious warrior rumble (Panel 9)
     return {
       voice: 'en-US-ChristopherNeural',
-      pitch: '-18Hz',
-      rate: '-8%',
-      fxFilter: 'bass=g=4:f=110,volume=1.3'
+      pitch: '-14Hz',
+      rate: '-5%',
+      fxFilter: 'bass=g=4:f=120,volume=1.35'
     };
   }
 
-  // Lord Malakor (Cruel Patrician / Merchant Prince)
+  // Lord Malakor (Arrogant Merchant Prince)
   if (s.includes('malakor')) {
     return {
       voice: 'en-GB-ThomasNeural',
-      pitch: '+4Hz',
-      rate: '+8%',
-      fxFilter: 'aecho=0.8:0.7:60:0.35,volume=1.45'
+      pitch: '-2Hz',
+      rate: '-4%',
+      fxFilter: 'volume=1.25'
     };
   }
 
-  // Spider Assassin (Fanatic Ambush Hiss)
+  // Spider Assassin (Sinister cutthroat)
   if (s.includes('assassin')) {
     return {
       voice: 'en-US-EricNeural',
-      pitch: '+12Hz',
-      rate: '+26%',
-      fxFilter: 'highpass=f=400,volume=1.4'
+      pitch: '-6Hz',
+      rate: '+0%',
+      fxFilter: 'volume=1.25'
     };
   }
 
-  // Fallback
   return {
     voice: 'en-GB-RyanNeural',
-    pitch: '-8Hz',
-    rate: '-8%',
+    pitch: '-6Hz',
+    rate: '-6%',
     fxFilter: 'volume=1.0'
   };
 }
