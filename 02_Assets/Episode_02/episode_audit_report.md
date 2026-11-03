@@ -28,3 +28,4 @@
 - **Multi-Issue Selector:** Supports instant switching between Issue #1 and Issue #2.
 - **GitHub Repository:** [`https://github.com/rifletcher/korvath-comic`](https://github.com/rifletcher/korvath-comic)
 - **Vercel Deployment:** Linked via repository sync (`vercel.json` pointing to `docs/`).
+
