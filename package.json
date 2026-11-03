@@ -16,8 +16,16 @@
     "export:vercel": "node tools/export_for_vercel.js",
     "build:vercel": "node tools/export_for_vercel.js"
   },
-  "keywords": ["korvath", "graphic-novel", "venice-ai", "grok", "sword-and-sorcery"],
+  "keywords": [
+    "korvath",
+    "graphic-novel",
+    "venice-ai",
+    "grok",
+    "sword-and-sorcery"
+  ],
   "author": "Antigravity & User",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "msedge-tts": "^2.1.1"
+  }
 }
-

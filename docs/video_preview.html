@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Korvath Motion Comic Prototype — Panel 3 Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Cinzel:wght@700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #070709;
+      --card: #0f1015;
+      --border: #2a2015;
+      --blood-gold: #fca311;
+      --crimson: #e63946;
+      --text: #eae2d6;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Cinzel', Georgia, serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    h1 {
+      font-size: 32px;
+      letter-spacing: 3px;
+      color: var(--blood-gold);
+      text-transform: uppercase;
+      text-shadow: 0 0 16px rgba(252, 163, 17, 0.4);
+    }
+    .sub {
+      color: var(--crimson);
+      font-size: 14px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-top: 6px;
+    }
+    .player-wrap {
+      max-width: 960px;
+      width: 100%;
+      background: #000;
+      border: 3px solid #1a1a24;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.9);
+    }
+    video {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      display: block;
+      background: #000;
+    }
+    .meta-box {
+      background: #111218;
+      padding: 20px 24px;
+      border-top: 1px solid #222;
+    }
+    .meta-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .badge {
+      background: #2a1a14;
+      color: var(--blood-gold);
+      border: 1px solid var(--blood-gold);
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+    .dialogue-timeline {
+      margin-top: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-family: Georgia, serif;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .cue {
+      background: #181922;
+      border-left: 4px solid var(--crimson);
+      padding: 8px 14px;
+      border-radius: 0 4px 4px 0;
+    }
+    .cue.korvath {
+      border-left-color: var(--blood-gold);
+    }
+    .cue-speaker {
+      font-weight: bold;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+      color: #aaa;
+    }
+    .back-nav {
+      margin-top: 24px;
+    }
+    .back-btn {
+      color: #888;
+      text-decoration: none;
+      font-size: 13px;
+      letter-spacing: 1px;
+      transition: color 0.2s;
+    }
+    .back-btn:hover {
+      color: var(--blood-gold);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Motion Comic Prototype</h1>
+    <div class="sub">Episode 2, Panel 3: "The Black Lotus Tavern"</div>
+  </header>
+
+  <main class="player-wrap">
+    <video controls autoplay playsinline poster="./assets/ep2/panel_03.webp">
+      <source src="./panel_03_motion_comic.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="meta-box">
+      <div class="meta-row">
+        <span class="badge">PROTOTYPE: 2.5D MOTION COMIC + MULTI-VOICE TTS</span>
+        <span style="font-size: 12px; color: #888;">Duration: 11.2s • 1080p Master</span>
+      </div>
+      <div class="dialogue-timeline">
+        <div class="cue">
+          <div class="cue-speaker">0:00 – Narrator (British Dramatic Neural)</div>
+          <em>"The ale tasted of ditch-water, but the danger smelled fresh."</em>
+        </div>
+        <div class="cue korvath">
+          <div class="cue-speaker">0:05 – Korvath (Deep Northern Guttural Neural)</div>
+          <strong>"Let them whisper. Iron speaks louder than gossip."</strong>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="back-nav">
+    <a href="./index.html#issue-2" class="back-btn">← Back to Full Graphic Novel Reader</a>
+  </div>
+</body>
+</html>
