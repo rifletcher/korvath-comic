@@ -287,7 +287,7 @@
     "dialogue": [
       {
         "speaker": "Natari",
-        "text": "It's a trap! The webs... they burn like acid!"
+        "text": "KORVATH! It's a trap! The webs—AHHH! THEY BURN LIKE ACID! GET THEM OFF ME!!"
       }
     ],
     "characters": [
@@ -317,7 +317,16 @@
     },
     "action": "Colossal creature reveal. An enormous, monstrous spider demon with razor-jointed barbed legs and glistening black carapace descends from the vaulted ceiling, its central cluster of multifaceted ruby eyes burning with demonic hunger as pale venom drips from huge fangs.",
     "caption": "Spawned in the forgotten pits beneath Valkash—Zor-Malkor, the living god of shadows.",
-    "dialogue": [],
+    "dialogue": [
+      {
+        "speaker": "Natari",
+        "text": "LOOK OUT! ABOVE US! KORVATH, IT'S ON ME! AAAAAGH!!"
+      },
+      {
+        "speaker": "Korvath",
+        "text": "GET AWAY FROM HER, YOU HELL-SPAWN! ROAAARGH!"
+      }
+    ],
     "characters": [
       "demon_spider"
     ],
@@ -345,7 +354,7 @@
     "dialogue": [
       {
         "speaker": "Lord Malakor",
-        "text": "The ruby belongs to me, savage! Feed well on him, my beauty!"
+        "text": "The ruby belongs to me, savage! Feed on them, my beauty! TEAR THEM APART! HAHAHAHA!"
       }
     ],
     "characters": [
@@ -374,7 +383,12 @@
     },
     "action": "Violent combat clash. The spider demon's jagged barbed leg strikes downward, shattering an iron chest, while Korvath sweeps a roaring brass oil torch against the tangled webs, igniting a wall of blazing orange fire to shield Natari.",
     "caption": "Iron, flame, and unyielding will—the barbarian answered horror with fury.",
-    "dialogue": [],
+    "dialogue": [
+      {
+        "speaker": "Korvath",
+        "text": "TASTE CROM'S FIRE, BEAST!"
+      }
+    ],
     "characters": [
       "korvath",
       "demon_spider"
@@ -405,7 +419,7 @@
     "dialogue": [
       {
         "speaker": "Korvath",
-        "text": "Die, vermin! Back to the pit that spat you!"
+        "text": "DIE, VERMIN! ROAAARGH! BACK TO THE PIT THAT SPAT YOU!"
       }
     ],
     "characters": [
@@ -438,7 +452,7 @@
     "dialogue": [
       {
         "speaker": "Natari",
-        "text": "The ruby was never yours, merchant dog!"
+        "text": "The ruby was never yours, merchant dog! Korvath, the vault is collapsing—MOVE!"
       }
     ],
     "characters": [
@@ -524,11 +538,11 @@
     "dialogue": [
       {
         "speaker": "Korvath",
-        "text": "Hold tight, girl!"
+        "text": "HOLD TIGHT, GIRL! JUMP!!"
       },
       {
         "speaker": "Natari",
-        "text": "I have the ruby!"
+        "text": "I HAVE THE RUBY! JUMP, KORVATH, JUMP!!"
       }
     ],
     "characters": [

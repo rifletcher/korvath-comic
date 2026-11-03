@@ -208,10 +208,12 @@
         chapters.forEach(c => {
           const btn = document.createElement('button');
           btn.className = 'chapter-btn';
-          btn.innerHTML = '<span><span class="chapter-num">P' + c.panelId + '</span> ' + c.title + '</span><span style="color:#666;font-size:11px;">' + formatTime(c.startTime) + '</span>';
+          const time = (c.timestamp !== undefined) ? c.timestamp : (c.startTime || 0);
+          const timeStr = c.formattedTime || formatTime(time);
+          btn.innerHTML = '<span><span class="chapter-num">P' + c.panelId + '</span> ' + c.title + '</span><span style="color:#fca311;font-size:11px;font-weight:bold;">' + timeStr + '</span>';
           btn.onclick = () => {
             const player = document.getElementById('player');
-            player.currentTime = c.startTime;
+            player.currentTime = time;
             player.play();
             window.scrollTo({ top: 0, behavior: 'smooth' });
           };
