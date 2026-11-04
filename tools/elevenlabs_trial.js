@@ -30,9 +30,9 @@ const VOICES = {
   natari: {
     id: 'EXAVITQu4vr4xnSDxMaL', // Sarah
     settings: {
-      stability: 0.28,         // Low stability = explosive emotional range
-      similarity_boost: 0.82,
-      style: 0.75,             // Maximum dramatic / expressive intensity
+      stability: 0.18,         // Maximum terror volatility & voice strain
+      similarity_boost: 0.80,
+      style: 0.90,             // Extreme theatrical terror
       use_speaker_boost: true
     }
   },
@@ -103,8 +103,8 @@ async function runTrial() {
 
   // 1. Synthesize Natari's terrified scream via ElevenLabs
   const natariFile = path.join(outDir, 'p10_natari_eleven.mp3');
-  const natariPrompt = "Korvath! It's a trap! The webs... they burn like acid! Get them off me! Ahhh!";
-  console.log('\n▶️ Synthesizing Natari terrified yell via ElevenLabs (Sarah)...');
+  const natariPrompt = "Korvath! It's a trap! The webs... they burn like acid! No, get them off me! GET THEM OFF ME! AAAAAAAHHH!";
+  console.log('\n▶️ Synthesizing Natari terrified yell via ElevenLabs (Sarah - Max Terror)...');
   console.log(`   Text: "${natariPrompt}"`);
   await callElevenLabs(VOICES.natari.id, natariPrompt, VOICES.natari.settings, natariFile);
   const natariDur = getAudioDuration(natariFile);
