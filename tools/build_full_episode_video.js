@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const https = require('https');
 const { execSync } = require('child_process');
 const { MsEdgeTTS, OUTPUT_FORMAT } = require('msedge-tts');
 
@@ -9,6 +10,77 @@ const FFPROBE_PATH = 'C:\\Users\\robert.fletcher\\AppData\\Local\\Microsoft\\Win
 const rootDir = path.join(__dirname, '..');
 const ep2Path = path.join(rootDir, '01_Script', 'episodes', 'episode_02.json');
 const selectedDir = path.join(rootDir, '02_Assets', 'Episode_02', 'selected');
+
+// --- ElevenLabs Credentials & Voice Map ---
+let elevenApiKey = process.env.ELEVENLABS_API_KEY;
+if (!elevenApiKey && fs.existsSync(path.join(rootDir, '.env'))) {
+  const envContent = fs.readFileSync(path.join(rootDir, '.env'), 'utf8');
+  const match = envContent.match(/ELEVENLABS_API_KEY=([^\r\n]+)/);
+  if (match) elevenApiKey = match[1].trim();
+}
+
+const ELEVEN_VOICES = {
+  natari: {
+    id: 'EXAVITQu4vr4xnSDxMaL', // Sarah (High emotion, terrified screams, sultry rogue)
+    defaultStability: 0.28,
+    defaultStyle: 0.75
+  },
+  korvath: {
+    id: 'pNInz6obpgDQGcFmaJgB', // Adam (Deep, menacing, authoritative barbarian warrior)
+    defaultStability: 0.35,
+    defaultStyle: 0.65
+  },
+  malakor: {
+    id: 'nPczCjzI2devNBz1zQrb', // Brian (Haughty, aristocratic merchant prince)
+    defaultStability: 0.50,
+    defaultStyle: 0.45
+  },
+  assassin: {
+    id: 'JBFqnCBsd6RMkjVDRZzb', // George (Raspy, sinister stealth cutthroat)
+    defaultStability: 0.45,
+    defaultStyle: 0.50
+  }
+};
+
+function callElevenLabs(voiceId, text, voiceSettings, outFile) {
+  return new Promise((resolve, reject) => {
+    const postData = JSON.stringify({
+      text: text,
+      model_id: 'eleven_multilingual_v2',
+      voice_settings: voiceSettings
+    });
+
+    const options = {
+      hostname: 'api.elevenlabs.io',
+      port: 443,
+      path: `/v1/text-to-speech/${voiceId}`,
+      method: 'POST',
+      headers: {
+        'Accept': 'audio/mpeg',
+        'Content-Type': 'application/json',
+        'xi-api-key': elevenApiKey,
+        'Content-Length': Buffer.byteLength(postData)
+      }
+    };
+
+    const req = https.request(options, (res) => {
+      if (res.statusCode !== 200) {
+        let errData = '';
+        res.on('data', chunk => errData += chunk);
+        res.on('end', () => reject(new Error(`ElevenLabs HTTP ${res.statusCode}: ${errData}`)));
+        return;
+      }
+      const fileStream = fs.createWriteStream(outFile);
+      res.pipe(fileStream);
+      fileStream.on('finish', () => resolve(outFile));
+      fileStream.on('error', reject);
+    });
+
+    req.on('error', reject);
+    req.write(postData);
+    req.end();
+  });
+}
 
 const workDir = path.join(rootDir, '02_Assets', 'full_movie_build');
 const audioDir = path.join(workDir, 'audio');
@@ -156,6 +228,56 @@ async function synthesizeClip(emotionProfile, text, rawFile, fxFile) {
   }
 }
 
+async function synthesizeDialogueClip(speaker, dialogueObj, panelId, rawFile, fxFile) {
+  if (fs.existsSync(fxFile) && fs.statSync(fxFile).size > 1000) {
+    return fxFile;
+  }
+
+  const sLower = (speaker || '').toLowerCase().trim();
+  let key = 'korvath';
+  if (sLower.includes('natari')) key = 'natari';
+  else if (sLower.includes('malakor')) key = 'malakor';
+  else if (sLower.includes('assassin')) key = 'assassin';
+  else if (sLower.includes('korvath')) key = 'korvath';
+
+  const voiceCfg = ELEVEN_VOICES[key];
+  const audioDirObj = dialogueObj.audioDirection || {};
+  const textToSpeak = audioDirObj.performanceText || dialogueObj.text.trim();
+
+  let synthesized = false;
+
+  if (elevenApiKey && voiceCfg) {
+    try {
+      const voiceSettings = {
+        stability: audioDirObj.stability !== undefined ? audioDirObj.stability : voiceCfg.defaultStability,
+        similarity_boost: 0.85,
+        style: audioDirObj.style !== undefined ? audioDirObj.style : voiceCfg.defaultStyle,
+        use_speaker_boost: true
+      };
+      console.log(`   🎭 ElevenLabs Synthesis [${speaker}]: "${textToSpeak.slice(0, 48)}..." (stability: ${voiceSettings.stability}, style: ${voiceSettings.style})`);
+      await callElevenLabs(voiceCfg.id, textToSpeak, voiceSettings, rawFile);
+      synthesized = true;
+    } catch (err) {
+      console.warn(`   ⚠️ ElevenLabs synthesis fallback: ${err.message}`);
+    }
+  }
+
+  if (!synthesized) {
+    // Graceful fallback to Edge TTS
+    const profile = getEmotionProfile(speaker, dialogueObj.text.trim(), panelId);
+    await synthesizeClip(profile, dialogueObj.text.trim(), rawFile, fxFile);
+    return fxFile;
+  }
+
+  // Apply subtle acoustic mastering based on speaker & room
+  let fxFilter = 'volume=1.2';
+  if (key === 'korvath') fxFilter = 'bass=g=3:f=120,volume=1.35';
+  if (key === 'natari') fxFilter = 'volume=1.25';
+
+  execSync(`"${FFMPEG_PATH}" -y -i "${rawFile}" -af "${fxFilter}" "${fxFile}"`, { stdio: 'ignore' });
+  return fxFile;
+}
+
 function getAudioDuration(filePath) {
   const out = execSync(`"${FFPROBE_PATH}" -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "${filePath}"`, { encoding: 'utf8' });
   return parseFloat(out.trim());
@@ -194,14 +316,13 @@ async function main() {
       clips.push({ file: fxFile, speaker: 'Narrator', duration: getAudioDuration(fxFile) });
     }
 
-    // Dialogue (Characters with intense yells, screams, roars)
+    // Dialogue (Characters with intense ElevenLabs dramatic performance)
     if (p.dialogue && p.dialogue.length > 0) {
       for (let i = 0; i < p.dialogue.length; i++) {
         const d = p.dialogue[i];
         const rawFile = path.join(audioDir, `p${padId}_dia_${i}_${d.speaker.replace(/\s+/g, '_')}_raw.mp3`);
         const fxFile = path.join(audioDir, `p${padId}_dia_${i}_${d.speaker.replace(/\s+/g, '_')}_fx.mp3`);
-        const profile = getEmotionProfile(d.speaker, d.text.trim(), p.panelId);
-        await synthesizeClip(profile, d.text.trim(), rawFile, fxFile);
+        await synthesizeDialogueClip(d.speaker, d, p.panelId, rawFile, fxFile);
         clips.push({ file: fxFile, speaker: d.speaker, duration: getAudioDuration(fxFile) });
       }
     }
