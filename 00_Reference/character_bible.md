@@ -2,12 +2,15 @@
 
 ---
 
-## 🎯 Protocol: Character Onboarding (Mandatory Dual-DNA)
+## 🎯 Protocol: Character Onboarding (Mandatory Triple-DNA)
 
-1. **Celebrity Blend DNA:** 2-Actor blend formula to pin latent coordinates.
+1. **Celebrity Blend DNA:** 2-Actor blend formula to pin latent visual coordinates.
 2. **3 Non-Negotiable Silhouette Props:** Distinctive clothes, scars, gear.
-3. **Turnaround Model Sheet:** (Front, 3/4 Portrait, Action).
-4. **Register in `character_prompts.json`:** Single-anchor prompt string.
+3. **Canonical Voice DNA & Audition Sample:**
+   * Vocal Actor Persona Blend + Timbre + Signature Benchmark Line.
+   * Synthesize canonical audio sample to: `00_Reference/audio/<key>_voice_sample.mp3`.
+4. **Turnaround Model Sheet:** (Front, 3/4 Portrait, Action) saved to `00_Reference/sheets/<key>_model_sheet.webp`.
+5. **Register in `character_prompts.json`:** Single-anchor prompt string.
 
 ---
 
@@ -21,6 +24,12 @@
   2. Heavy scarred bronze muscular torso, wide weathered leather chest harness with tarnished brass studs, wolf-fur trimmed loincloth, and thick leather combat sandals with criss-crossed calf wraps.
   3. Faint pale battle scar diagonally across left collarbone down to chest.
 * **Color Palette:** Weathered brown leather, iron grey, wolf pelt ochre, bronze skin.
+* **🎙️ Canonical Voice DNA:**
+  * **Vocal Actor Persona:** Arnold Schwarzenegger + Christopher Judge (Kratos).
+  * **Timbre & Resonance:** Deep, heavy guttural rumble, chest-thumping sub-bass, cold ruthless certainty, booming acoustic authority.
+  * **Acoustic Engine Profile:** `en-US-ChristopherNeural` pitched down `-14Hz`, `-5%` rate, with dynamic sub-bass boost (`bass=g=5:f=110,volume=1.45`).
+  * **Benchmark Audition Line:** *"I live, I burn with life, I love, I slay... and I am content. Let iron speak for me."*
+  * **Canonical Sample:** [`00_Reference/audio/korvath_voice_sample.mp3`](file:///c:/research/c-book-generator/conan/00_Reference/audio/korvath_voice_sample.mp3)
 
 ---
 
@@ -54,6 +63,12 @@
   2. Coiled gilded serpent arm torcs and jeweled hip chains resting over sheer gossamer crimson silk loin-sash.
   3. Long cascading glossy black hair woven with tiny bronze beads, ornamental bronze choker collar.
 * **Color Palette:** Hammered bronze, shimmering gold, sheer crimson silk, sun-kissed bronze skin.
+* **🎙️ Canonical Voice DNA:**
+  * **Vocal Actor Persona:** Salma Hayek + Ana de Armas.
+  * **Timbre & Resonance:** Sultry, husky, cunning desert street-smarts, sharp mocking banter, explosive dynamic range for horrified screaming.
+  * **Acoustic Engine Profile:** ElevenLabs `Sarah` (`EXAVITQu4vr4xnSDxMaL`, `stability: 0.28`, `style: 0.75`).
+  * **Benchmark Audition Line:** *"Keep your hand on your hilt, Korvath. A purse in Valkash buys you a slit throat before dawn."*
+  * **Canonical Sample:** [`00_Reference/audio/natari_voice_sample.mp3`](file:///c:/research/c-book-generator/conan/00_Reference/audio/natari_voice_sample.mp3)
 
 ---
 

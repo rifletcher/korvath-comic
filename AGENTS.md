@@ -4,18 +4,20 @@ These rules govern the autonomous execution, writers' room saga creation, dual c
 
 ---
 
-## 🎯 Protocol 1: Dual Entity Onboarding (Characters & Weapons/Relics)
+## 🎯 Protocol 1: Triple Entity Onboarding (Visual Look, Weapons, & Canonical Voice DNA)
 
-Whenever a new character or recurring weapon/relic/monster is introduced, **NEVER** write or generate panel prompts until the 3-step sequence is 100% complete:
+Whenever a new character or recurring weapon/relic/monster is introduced, **NEVER** write or generate panel prompts until the 4-step sequence is 100% complete:
 
 1. **Bible Documentation:**
-   * **Characters ([`00_Reference/character_bible.md`](file:///C:/research/c-book-generator/conan/00_Reference/character_bible.md)):** 2-Actor celebrity blend formula + 3 non-negotiable silhouette props + signature color palette.
+   * **Characters ([`00_Reference/character_bible.md`](file:///C:/research/c-book-generator/conan/00_Reference/character_bible.md)):** 2-Actor celebrity blend formula + 3 silhouette props + signature color palette + **Canonical Voice DNA** (vocal persona blend, timbre, benchmark audition line).
    * **Objects & Relics ([`00_Reference/object_bible.md`](file:///C:/research/c-book-generator/conan/00_Reference/object_bible.md)):** Geometric shape language + surface materials + 3 non-negotiable silhouette anchors.
-2. **Turnaround Model Sheet Generation:**
-   * Character: `node tools/generate_model_sheet.js --type char <key>` (Front, 3/4, Action).
-   * Weapon/Object: `node tools/generate_model_sheet.js --type object <key>` (Side Profile, Perspective, Action).
-   * Save canonical webp to: `00_Reference/sheets/<key>_model_sheet.webp`.
-3. **Dictionary Registration:**
+2. **Turnaround Model Sheet & Canonical Voice Audition Generation:**
+   * Character Model Sheet: `node tools/generate_model_sheet.js --type char <key>` $\rightarrow$ `00_Reference/sheets/<key>_model_sheet.webp`.
+   * Character Voice Audition: `node tools/generate_voice_sample.js --char <key>` $\rightarrow$ `00_Reference/audio/<key>_voice_sample.mp3`.
+   * Weapon/Object Model Sheet: `node tools/generate_model_sheet.js --type object <key>` $\rightarrow$ `00_Reference/sheets/<key>_model_sheet.webp`.
+3. **Audition Approval:**
+   * Audition the character's voice clip in the web player before rendering sequential story panels to verify resonant depth, emotional range, and power.
+4. **Dictionary Registration:**
    * Register the machine-readable single-anchor in `00_Reference/character_prompts.json` or `00_Reference/object_prompts.json`.
 
 ---

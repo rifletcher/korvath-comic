@@ -1,0 +1,38 @@
+[
+  {
+    "key": "korvath",
+    "name": "Korvath the Barbarian",
+    "actorBlend": "Arnold Schwarzenegger + Christopher Judge (Kratos)",
+    "timbre": "Deep, heavy guttural rumble, chest-thumping sub-bass, cold ruthless certainty",
+    "engine": "Edge TTS ChristopherNeural (-14Hz pitch, -5% rate, +5dB sub-bass @ 110Hz)",
+    "signatureLine": "I live, I burn with life, I love, I slay... and I am content. Let iron speak for me.",
+    "audioFile": "audio/korvath_voice_sample.mp3"
+  },
+  {
+    "key": "natari",
+    "name": "Natari the Desert Rogue",
+    "actorBlend": "Salma Hayek + Ana de Armas",
+    "timbre": "Sultry, husky, cunning desert street-smarts, explosive terrified screaming agility",
+    "engine": "ElevenLabs Sarah (stability: 0.28, style: 0.75)",
+    "signatureLine": "Keep your hand on your hilt, Korvath. A purse in Valkash buys you a slit throat before dawn.",
+    "audioFile": "audio/natari_voice_sample.mp3"
+  },
+  {
+    "key": "malakor",
+    "name": "Lord Malakor",
+    "actorBlend": "Christopher Lee + Charles Dance",
+    "timbre": "Aristocratic, haughty, cold merchant prince with clipped consonants",
+    "engine": "ElevenLabs Brian (stability: 0.50, style: 0.45)",
+    "signatureLine": "Every man in Valkash has a price, barbarian. What is yours... before my beasts feed on you?",
+    "audioFile": "audio/malakor_voice_sample.mp3"
+  },
+  {
+    "key": "narrator",
+    "name": "The Pulp Chronicler (Narrator)",
+    "actorBlend": "John Hurt + Orson Welles",
+    "timbre": "Resonant, gravelly British chronicle, weathered storyteller",
+    "engine": "Edge TTS en-GB-RyanNeural (-6Hz pitch, -6% rate)",
+    "signatureLine": "Beyond the red sands of Sarkesh lay Valkash—city of thieves, poisoned wine, and men whose smiles were sharper than their daggers.",
+    "audioFile": "audio/narrator_voice_sample.mp3"
+  }
+]

@@ -31,8 +31,8 @@
   {
     "panelId": 4,
     "title": "The Crooked Broker",
-    "timestamp": 32.33,
-    "formattedTime": "0:32",
+    "timestamp": 33.535000000000004,
+    "formattedTime": "0:33",
     "speakers": [
       "Narrator",
       "Korvath"
@@ -41,8 +41,8 @@
   {
     "panelId": 5,
     "title": "Blades in the Smoke",
-    "timestamp": 46.067,
-    "formattedTime": "0:46",
+    "timestamp": 47.937000000000005,
+    "formattedTime": "0:47",
     "speakers": [
       "Narrator",
       "Spider Assassin"
@@ -51,8 +51,8 @@
   {
     "panelId": 6,
     "title": "Savage Tavern Cleave",
-    "timestamp": 54.987,
-    "formattedTime": "0:54",
+    "timestamp": 56.857000000000006,
+    "formattedTime": "0:56",
     "speakers": [
       "Narrator"
     ]
@@ -60,8 +60,8 @@
   {
     "panelId": 7,
     "title": "Rooftops of Valkash",
-    "timestamp": 60.761,
-    "formattedTime": "1:00",
+    "timestamp": 62.63100000000001,
+    "formattedTime": "1:02",
     "speakers": [
       "Narrator",
       "Natari"
@@ -70,8 +70,8 @@
   {
     "panelId": 8,
     "title": "The Harem Terrace",
-    "timestamp": 68.833,
-    "formattedTime": "1:08",
+    "timestamp": 70.703,
+    "formattedTime": "1:10",
     "speakers": [
       "Narrator"
     ]
@@ -79,8 +79,8 @@
   {
     "panelId": 9,
     "title": "The Merchant's Vault",
-    "timestamp": 75.231,
-    "formattedTime": "1:15",
+    "timestamp": 77.101,
+    "formattedTime": "1:17",
     "speakers": [
       "Narrator",
       "Korvath"
@@ -89,8 +89,8 @@
   {
     "panelId": 10,
     "title": "Caught in the Web",
-    "timestamp": 85.816,
-    "formattedTime": "1:25",
+    "timestamp": 88.815,
+    "formattedTime": "1:28",
     "speakers": [
       "Narrator",
       "Natari"
@@ -99,8 +99,8 @@
   {
     "panelId": 11,
     "title": "The Brood Queen Descends",
-    "timestamp": 100.173,
-    "formattedTime": "1:40",
+    "timestamp": 103.172,
+    "formattedTime": "1:43",
     "speakers": [
       "Narrator",
       "Natari",
@@ -110,8 +110,8 @@
   {
     "panelId": 12,
     "title": "The Merchant's Gloat",
-    "timestamp": 111.925,
-    "formattedTime": "1:51",
+    "timestamp": 116.217,
+    "formattedTime": "1:56",
     "speakers": [
       "Narrator",
       "Lord Malakor"
@@ -120,8 +120,8 @@
   {
     "panelId": 13,
     "title": "Venom and Fire",
-    "timestamp": 123.14399999999999,
-    "formattedTime": "2:03",
+    "timestamp": 127.43599999999999,
+    "formattedTime": "2:07",
     "speakers": [
       "Narrator",
       "Korvath"
@@ -130,8 +130,8 @@
   {
     "panelId": 14,
     "title": "The Flaming Cleave",
-    "timestamp": 132.10899999999998,
-    "formattedTime": "2:12",
+    "timestamp": 137.82999999999998,
+    "formattedTime": "2:17",
     "speakers": [
       "Narrator",
       "Korvath"
@@ -140,8 +140,8 @@
   {
     "panelId": 15,
     "title": "Natari's Retribution",
-    "timestamp": 142.93999999999997,
-    "formattedTime": "2:22",
+    "timestamp": 150.09599999999998,
+    "formattedTime": "2:30",
     "speakers": [
       "Narrator",
       "Natari"
@@ -150,8 +150,8 @@
   {
     "panelId": 16,
     "title": "The Abyssal Skull-Strike",
-    "timestamp": 152.45899999999997,
-    "formattedTime": "2:32",
+    "timestamp": 159.61499999999998,
+    "formattedTime": "2:39",
     "speakers": [
       "Narrator"
     ]
@@ -159,8 +159,8 @@
   {
     "panelId": 17,
     "title": "Collapse of the Palace Vault",
-    "timestamp": 157.27299999999997,
-    "formattedTime": "2:37",
+    "timestamp": 164.42899999999997,
+    "formattedTime": "2:44",
     "speakers": [
       "Narrator"
     ]
@@ -168,8 +168,8 @@
   {
     "panelId": 18,
     "title": "The Leaping Escape",
-    "timestamp": 162.44699999999997,
-    "formattedTime": "2:42",
+    "timestamp": 169.60299999999998,
+    "formattedTime": "2:49",
     "speakers": [
       "Narrator",
       "Korvath",
@@ -179,8 +179,8 @@
   {
     "panelId": 19,
     "title": "Breaching the Southern Gate",
-    "timestamp": 172.41199999999998,
-    "formattedTime": "2:52",
+    "timestamp": 181.85299999999998,
+    "formattedTime": "3:01",
     "speakers": [
       "Narrator"
     ]
@@ -188,8 +188,8 @@
   {
     "panelId": 20,
     "title": "Riders of the Midnight Dunes",
-    "timestamp": 179.07399999999998,
-    "formattedTime": "2:59",
+    "timestamp": 188.515,
+    "formattedTime": "3:08",
     "speakers": [
       "Narrator"
     ]

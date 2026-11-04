@@ -193,9 +193,10 @@ async function synthesizeClip(emotionProfile, text, rawFile, fxFile) {
   }
 
   let attempts = 0;
-  while (attempts < 3) {
+  while (attempts < 5) {
+    let tts = null;
     try {
-      const tts = new MsEdgeTTS({ connectionTimeoutMs: 30000, synthesisTimeoutMs: 60000 });
+      tts = new MsEdgeTTS({ connectionTimeoutMs: 30000, synthesisTimeoutMs: 60000 });
       await tts.setMetadata(emotionProfile.voice, OUTPUT_FORMAT.AUDIO_24KHZ_48KBITRATE_MONO_MP3);
       const { audioStream } = tts.toStream(text, {
         pitch: emotionProfile.pitch,
@@ -211,10 +212,19 @@ async function synthesizeClip(emotionProfile, text, rawFile, fxFile) {
       tts.close();
       break;
     } catch (err) {
+      if (tts) { try { tts.close(); } catch(e) {} }
+      if (fs.existsSync(rawFile)) { try { fs.unlinkSync(rawFile); } catch(e) {} }
       attempts++;
-      console.warn(`   ⚠️ TTS retry ${attempts}/3 (${emotionProfile.voice}): ${err.message}`);
-      if (attempts >= 3) throw err;
-      await new Promise(r => setTimeout(r, 2000));
+      console.warn(`   ⚠️ TTS retry ${attempts}/5 (${emotionProfile.voice}): ${err.message}`);
+      if (attempts >= 5) {
+        if (elevenApiKey) {
+          console.log(`   🔄 Fallback to ElevenLabs Adam for "${text.slice(0, 30)}..."`);
+          await callElevenLabs('pNInz6obpgDQGcFmaJgB', text, { stability: 0.35, similarity_boost: 0.85, style: 0.65 }, rawFile);
+          break;
+        }
+        throw err;
+      }
+      await new Promise(r => setTimeout(r, 1500 * attempts));
     }
   }
 
@@ -240,10 +250,23 @@ async function synthesizeDialogueClip(speaker, dialogueObj, panelId, rawFile, fx
   else if (sLower.includes('assassin')) key = 'assassin';
   else if (sLower.includes('korvath')) key = 'korvath';
 
-  const voiceCfg = ELEVEN_VOICES[key];
   const audioDirObj = dialogueObj.audioDirection || {};
   const textToSpeak = audioDirObj.performanceText || dialogueObj.text.trim();
 
+  // Korvath Canonical Voice: Booming, heavy guttural rumble (Deep -14Hz ChristopherNeural with heavy sub-bass boost)
+  if (key === 'korvath') {
+    const profile = {
+      voice: 'en-US-ChristopherNeural',
+      pitch: '-14Hz',
+      rate: '-5%',
+      fxFilter: 'bass=g=5:f=110,volume=1.45'
+    };
+    console.log(`   ⚔️ Korvath Booming Deep Voice: "${textToSpeak.slice(0, 48)}..."`);
+    await synthesizeClip(profile, textToSpeak, rawFile, fxFile);
+    return fxFile;
+  }
+
+  const voiceCfg = ELEVEN_VOICES[key];
   let synthesized = false;
 
   if (elevenApiKey && voiceCfg) {
