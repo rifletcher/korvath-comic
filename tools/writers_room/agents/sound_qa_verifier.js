@@ -129,3 +129,4 @@ function verifyPanelAudio(panels, options = {}) {
 }
 
 module.exports = { verifyPanelAudio };
+

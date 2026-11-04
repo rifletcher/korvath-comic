@@ -270,18 +270,23 @@ async function main() {
     });
     cumulativeTime += totalDuration;
 
-    // 3. Render 2.5D Motion Video Segment
+    // 3. Render 2.5D Motion Video Segment (Text-Safe Hybrid: 1.2s Read Hold + Top-Anchored Drift)
     const segFile = path.join(segDir, `p${padId}_seg.mp4`);
     const totalFrames = Math.ceil(totalDuration * 30);
+    const holdFrames = 36; // 1.2s static hold at 30fps to read caption & absorb composition
 
-    let zoomExpr = "min(zoom+0.00035,1.11)";
+    // Gentle zoom: stays 1.0 for first 36 frames, then creeps to max 1.04
+    const zoomExpr = `if(lte(on,${holdFrames}),1.0,min(1.0+(on-${holdFrames})*0.00012,1.04))`;
+
+    // Top-anchored y: keeps narrative caption box at y=0 so it NEVER gets cropped
+    const yExpr = "0";
+
+    // Subtle horizontal drift: +/- 15px max (alternating direction by panel)
     let xExpr = "iw/2-(iw/zoom/2)";
-    let yExpr = "ih/2-(ih/zoom/2)";
-
-    if (p.panelId % 3 === 0) {
-      xExpr = `iw/2-(iw/zoom/2)+((on/${totalFrames})-0.5)*80`;
-    } else if (p.panelId % 3 === 1) {
-      yExpr = `ih/2-(ih/zoom/2)-((on/${totalFrames})-0.5)*40`;
+    if (p.panelId % 2 === 0) {
+      xExpr = `iw/2-(iw/zoom/2)+((on/${totalFrames})-0.5)*30`;
+    } else {
+      xExpr = `iw/2-(iw/zoom/2)-((on/${totalFrames})-0.5)*30`;
     }
 
     const videoFilter = `scale=1536:864,zoompan=z='${zoomExpr}':x='${xExpr}':y='${yExpr}':d=${totalFrames}:s=1280x720:fps=30,format=yuv420p`;

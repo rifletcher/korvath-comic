@@ -134,13 +134,17 @@ async function runTrial() {
   const mixCmd = `"${FFMPEG_PATH}" -y -i "${capFile}" -i "${vaultSlam}" -i "${natariFile}" -i "${acidSizzle}" -filter_complex "${filterComplex}" -map "[aout]" "${mixedAudio}"`;
   execSync(mixCmd, { stdio: 'ignore' });
 
-  // 4. Render Panel 10 Video
-  console.log('\n🎥 Rendering 2.5D Motion Video for Panel 10...');
+  // 4. Render Panel 10 Video (Text-Safe Hybrid Camera)
+  console.log('\n🎥 Rendering 2.5D Motion Video for Panel 10 (Text-Safe Hybrid)...');
   const p10Image = path.join(rootDir, '02_Assets', 'Episode_02', 'selected', 'panel_10.webp');
   const p10Video = path.join(rootDir, 'docs', 'panel_10_elevenlabs_trial.mp4');
   const totalFrames = Math.ceil(totalDur * 30);
+  const holdFrames = 36;
+  const zoomExpr = `if(lte(on,${holdFrames}),1.0,min(1.0+(on-${holdFrames})*0.00012,1.04))`;
+  const xExpr = `iw/2-(iw/zoom/2)+((on/${totalFrames})-0.5)*30`;
+  const yExpr = "0";
 
-  const renderCmd = `"${FFMPEG_PATH}" -y -loop 1 -i "${p10Image}" -i "${mixedAudio}" -filter_complex "[0:v]scale=1536:864,zoompan=z='min(zoom+0.00035,1.10)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=${totalFrames}:s=1280x720:fps=30,format=yuv420p[v]" -map "[v]" -map 1:a -c:v libx264 -preset medium -crf 22 -c:a aac -b:a 192k -shortest -t ${totalDur.toFixed(2)} "${p10Video}"`;
+  const renderCmd = `"${FFMPEG_PATH}" -y -loop 1 -i "${p10Image}" -i "${mixedAudio}" -filter_complex "[0:v]scale=1536:864,zoompan=z='${zoomExpr}':x='${xExpr}':y='${yExpr}':d=${totalFrames}:s=1280x720:fps=30,format=yuv420p[v]" -map "[v]" -map 1:a -c:v libx264 -preset medium -crf 22 -c:a aac -b:a 192k -shortest -t ${totalDur.toFixed(2)} "${p10Video}"`;
   execSync(renderCmd, { stdio: 'inherit' });
 
   console.log(`\n🎉 ELEVENLABS TRIAL VIDEO COMPLETE!`);
