@@ -11,6 +11,7 @@
     "render:meta": "node tools/render_panel_meta.js",
     "render:all": "node tools/render_panel_venice.js --all --promote",
     "audit:qa": "node tools/visual_qa_auditor.js",
+    "audit:audio": "node -e \"const { verifyPanelAudio } = require('./tools/writers_room/agents/sound_qa_verifier'); const sb = require('./01_Script/storyboard.json'); verifyPanelAudio(sb, { audioDir: '02_Assets/full_movie_build/audio' });\"",
     "build:reader": "node tools/build_reader.js",
     "open:reader": "start 02_Assets/web_reader.html",
     "export:vercel": "node tools/export_for_vercel.js",
