@@ -14,6 +14,7 @@
     "audit:audio": "node -e \"const { verifyPanelAudio } = require('./tools/writers_room/agents/sound_qa_verifier'); const sb = require('./01_Script/storyboard.json'); verifyPanelAudio(sb, { audioDir: '02_Assets/full_movie_build/audio' });\"",
     "voice:sample": "node tools/generate_voice_sample.js",
     "movie:build": "node tools/build_full_episode_video.js",
+    "brand:kit": "node tools/generate_brand_kit.js",
     "youtube:bundle": "node tools/export_youtube_bundle.js",
     "youtube:short": "node tools/export_youtube_short.js",
     "build:reader": "node tools/build_reader.js",
