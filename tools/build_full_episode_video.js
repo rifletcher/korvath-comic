@@ -20,25 +20,30 @@ if (!elevenApiKey && fs.existsSync(path.join(rootDir, '.env'))) {
 }
 
 const ELEVEN_VOICES = {
-  natari: {
-    id: 'EXAVITQu4vr4xnSDxMaL', // Sarah (High emotion, terrified screams, sultry rogue)
-    defaultStability: 0.28,
-    defaultStyle: 0.75
-  },
-  korvath: {
-    id: 'pNInz6obpgDQGcFmaJgB', // Adam (Deep, menacing, authoritative barbarian warrior)
-    defaultStability: 0.35,
+  narrator: {
+    id: 'nPczCjzI2devNBz1zQrb', // Brian (Theatrical Cinematic Movie Trailer Narrator)
+    defaultStability: 0.30,
     defaultStyle: 0.65
   },
+  korvath: {
+    id: 'nPczCjzI2devNBz1zQrb', // Brian + Subterranean Kratos Chain (-12% pitch + 8dB sub-bass @ 95Hz)
+    defaultStability: 0.22,
+    defaultStyle: 0.85
+  },
+  natari: {
+    id: 'EXAVITQu4vr4xnSDxMaL', // Sarah (High emotion, terrified screams, sultry rogue)
+    defaultStability: 0.25,
+    defaultStyle: 0.80
+  },
   malakor: {
-    id: 'nPczCjzI2devNBz1zQrb', // Brian (Haughty, aristocratic merchant prince)
-    defaultStability: 0.50,
-    defaultStyle: 0.45
+    id: 'JBFqnCBsd6RMkjVDRZzb', // George (Sinister, decadent, corrupt merchant prince)
+    defaultStability: 0.38,
+    defaultStyle: 0.70
   },
   assassin: {
     id: 'JBFqnCBsd6RMkjVDRZzb', // George (Raspy, sinister stealth cutthroat)
-    defaultStability: 0.45,
-    defaultStyle: 0.50
+    defaultStability: 0.30,
+    defaultStyle: 0.80
   }
 };
 
@@ -189,19 +194,30 @@ function getEmotionProfile(speaker, text, panelId) {
 
 async function synthesizeClip(emotionProfile, text, rawFile, fxFile) {
   if (fs.existsSync(fxFile) && fs.statSync(fxFile).size > 1000) {
-    // Sanity check: Ensure it is not an accidental ElevenLabs fallback file for narrator
-    const buf = fs.readFileSync(rawFile);
-    const isID3 = buf[0] === 0x49 && buf[1] === 0x44 && buf[2] === 0x33;
-    if (!isID3) {
-      return fxFile;
-    }
-    console.log(`   🔄 Removing stale ElevenLabs Adam cache for: ${path.basename(rawFile)}`);
-    try { fs.unlinkSync(rawFile); } catch(e) {}
-    try { fs.unlinkSync(fxFile); } catch(e) {}
+    return fxFile;
   }
 
+  // 1. Primary: Theatrical ElevenLabs Cinematic Narrator (Brian)
+  if (elevenApiKey && ELEVEN_VOICES.narrator) {
+    try {
+      console.log(`   📜 ElevenLabs Dramatic Narrator (Brian): "${text.slice(0, 42)}..."`);
+      await callElevenLabs(ELEVEN_VOICES.narrator.id, text, {
+        stability: ELEVEN_VOICES.narrator.defaultStability,
+        similarity_boost: 0.85,
+        style: ELEVEN_VOICES.narrator.defaultStyle,
+        use_speaker_boost: true
+      }, rawFile);
+
+      execSync(`"${FFMPEG_PATH}" -y -i "${rawFile}" -af "volume=1.25" "${fxFile}"`, { stdio: 'ignore' });
+      return fxFile;
+    } catch (err) {
+      console.warn(`   ⚠️ ElevenLabs Narrator synthesis failed, falling back to Edge TTS: ${err.message}`);
+    }
+  }
+
+  // 2. Fallback: Edge TTS (Andrew)
   let attempts = 0;
-  const maxAttempts = 8;
+  const maxAttempts = 6;
   while (attempts < maxAttempts) {
     let tts = null;
     try {
@@ -224,15 +240,12 @@ async function synthesizeClip(emotionProfile, text, rawFile, fxFile) {
       if (tts) { try { tts.close(); } catch(e) {} }
       if (fs.existsSync(rawFile)) { try { fs.unlinkSync(rawFile); } catch(e) {} }
       attempts++;
-      console.warn(`   ⚠️ TTS retry ${attempts}/${maxAttempts} (${emotionProfile.voice}): ${err.message}`);
-      if (attempts >= maxAttempts) {
-        throw new Error(`Failed to synthesize ${emotionProfile.voice} after ${maxAttempts} attempts: ${err.message}`);
-      }
+      console.warn(`   ⚠️ Edge TTS retry ${attempts}/${maxAttempts}: ${err.message}`);
+      if (attempts >= maxAttempts) throw err;
       await new Promise(r => setTimeout(r, 1200 * attempts));
     }
   }
 
-  // Apply dynamic FX post-processing filter
   if (emotionProfile.fxFilter && emotionProfile.fxFilter !== 'volume=1.0') {
     execSync(`"${FFMPEG_PATH}" -y -i "${rawFile}" -af "${emotionProfile.fxFilter}" "${fxFile}"`, { stdio: 'ignore' });
     return fxFile;
@@ -256,20 +269,6 @@ async function synthesizeDialogueClip(speaker, dialogueObj, panelId, rawFile, fx
 
   const audioDirObj = dialogueObj.audioDirection || {};
   const textToSpeak = audioDirObj.performanceText || dialogueObj.text.trim();
-
-  // Korvath Canonical Voice: Booming, heavy guttural rumble (Deep -14Hz ChristopherNeural with heavy sub-bass boost)
-  if (key === 'korvath') {
-    const profile = {
-      voice: 'en-US-ChristopherNeural',
-      pitch: '-14Hz',
-      rate: '-5%',
-      fxFilter: 'bass=g=5:f=110,volume=1.45'
-    };
-    console.log(`   ⚔️ Korvath Booming Deep Voice: "${textToSpeak.slice(0, 48)}..."`);
-    await synthesizeClip(profile, textToSpeak, rawFile, fxFile);
-    return fxFile;
-  }
-
   const voiceCfg = ELEVEN_VOICES[key];
   let synthesized = false;
 
@@ -290,18 +289,24 @@ async function synthesizeDialogueClip(speaker, dialogueObj, panelId, rawFile, fx
   }
 
   if (!synthesized) {
-    // Graceful fallback to Edge TTS
     const profile = getEmotionProfile(speaker, dialogueObj.text.trim(), panelId);
     await synthesizeClip(profile, dialogueObj.text.trim(), rawFile, fxFile);
     return fxFile;
   }
 
-  // Apply subtle acoustic mastering based on speaker & room
-  let fxFilter = 'volume=1.2';
-  if (key === 'korvath') fxFilter = 'bass=g=3:f=120,volume=1.35';
-  if (key === 'natari') fxFilter = 'volume=1.25';
+  // Specialized DSP Mastering Chain
+  if (key === 'korvath') {
+    // Subterranean Kratos Mastering Chain: -12% pitch + 8dB sub-bass at 95Hz
+    const kratosFilter = 'asetrate=44100*0.88,atempo=1.136,bass=g=8:f=95,volume=1.45';
+    execSync(`"${FFMPEG_PATH}" -y -i "${rawFile}" -af "${kratosFilter}" "${fxFile}"`, { stdio: 'ignore' });
+  } else if (key === 'malakor') {
+    execSync(`"${FFMPEG_PATH}" -y -i "${rawFile}" -af "volume=1.30" "${fxFile}"`, { stdio: 'ignore' });
+  } else if (key === 'natari') {
+    execSync(`"${FFMPEG_PATH}" -y -i "${rawFile}" -af "volume=1.25" "${fxFile}"`, { stdio: 'ignore' });
+  } else {
+    execSync(`"${FFMPEG_PATH}" -y -i "${rawFile}" -af "volume=1.20" "${fxFile}"`, { stdio: 'ignore' });
+  }
 
-  execSync(`"${FFMPEG_PATH}" -y -i "${rawFile}" -af "${fxFilter}" "${fxFile}"`, { stdio: 'ignore' });
   return fxFile;
 }
 

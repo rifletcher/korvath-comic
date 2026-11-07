@@ -4,21 +4,26 @@ These rules govern the autonomous execution, writers' room saga creation, dual c
 
 ---
 
-## 🎯 Protocol 1: Triple Entity Onboarding (Visual Look, Weapons, & Canonical Voice DNA)
+## 🎯 Protocol 1: Quad-Pillar Entity Onboarding (Visual Look, Weapons, & Dual-Emotion Voice DNA)
 
 Whenever a new character or recurring weapon/relic/monster is introduced, **NEVER** write or generate panel prompts until the 4-step sequence is 100% complete:
 
-1. **Bible Documentation:**
-   * **Characters ([`00_Reference/character_bible.md`](file:///C:/research/c-book-generator/conan/00_Reference/character_bible.md)):** 2-Actor celebrity blend formula + 3 silhouette props + signature color palette + **Canonical Voice DNA** (vocal persona blend, timbre, benchmark audition line).
-   * **Objects & Relics ([`00_Reference/object_bible.md`](file:///C:/research/c-book-generator/conan/00_Reference/object_bible.md)):** Geometric shape language + surface materials + 3 non-negotiable silhouette anchors.
-2. **Turnaround Model Sheet & Canonical Voice Audition Generation:**
+1. **Bible Documentation ([`00_Reference/character_bible.md`](file:///C:/research/c-book-generator/conan/00_Reference/character_bible.md)):**
+   * **Visual Latent Anchor:** 2-Actor celebrity blend formula + 3 non-negotiable silhouette props + signature color palette.
+   * **Dual-Emotion Voice DNA:**
+     * Vocal Actor Persona blend & timbre.
+     * **Benchmark Line A (Conversational / Baseline):** Normal dialogue, cunning banter, or calm threat.
+     * **Benchmark Line B (High-Emotion / Combat / Trauma):** Battle roar, panicked scream, or villain death cry.
+     * **Acoustic Engine Profile:** Engine (ElevenLabs/Edge), Voice ID, stability targets (`0.18-0.35`), style targets (`0.65-0.85`), and DSP mastering chain (pitch-shift, sub-bass EQ, acoustic space reverb).
+2. **Turnaround Model Sheet & Dual Audition Generation:**
    * Character Model Sheet: `node tools/generate_model_sheet.js --type char <key>` $\rightarrow$ `00_Reference/sheets/<key>_model_sheet.webp`.
-   * Character Voice Audition: `node tools/generate_voice_sample.js --char <key>` $\rightarrow$ `00_Reference/audio/<key>_voice_sample.mp3`.
+   * Dual Voice Auditions: `node tools/onboard_character.js --key <key>` $\rightarrow$ `docs/audio/<key>_audition_normal.mp3` & `docs/audio/<key>_audition_combat.mp3`.
    * Weapon/Object Model Sheet: `node tools/generate_model_sheet.js --type object <key>` $\rightarrow$ `00_Reference/sheets/<key>_model_sheet.webp`.
-3. **Audition Approval:**
-   * Audition the character's voice clip in the web player before rendering sequential story panels to verify resonant depth, emotional range, and power.
-4. **Dictionary Registration:**
+3. **Audition Approval & Casting Deck:**
+   * Audition both the baseline and combat scream/roar in the web player ([`docs/video_preview.html`](file:///C:/research/c-book-generator/conan/docs/video_preview.html)) to verify visceral depth and dynamic emotional range before rendering sequential story panels.
+4. **Dictionary & Engine Pipeline Registration:**
    * Register the machine-readable single-anchor in `00_Reference/character_prompts.json` or `00_Reference/object_prompts.json`.
+   * Register the acoustic profile in `tools/build_full_episode_video.js` (`ELEVEN_VOICES` and DSP mapping).
 
 ---
 
