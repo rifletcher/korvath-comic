@@ -106,11 +106,11 @@
 * **Color Palette:** Imperial purple, emerald green, beaten gold.
 * **🎙️ Canonical Voice DNA:**
   * **Vocal Actor Persona:** Charles Dance + Peter Cushing.
-  * **Timbre & Resonance:** Sinister, arrogant, decadent merchant prince. Aristocratic contempt turning to furious desperation when threatened.
-  * **Acoustic Engine Profile:** ElevenLabs `George` (`JBFqnCBsd6RMkjVDRZzb`, `stability: 0.28-0.45`, `style: 0.80`).
+  * **Timbre & Resonance:** Haughty, aggressive, aristocratic silk merchant prince. Sharp condescension turning to violent desperation when threatened.
+  * **Acoustic Engine Profile:** ElevenLabs `Charlie` (`IKne3meq5aSn9XLyUdCD`, `stability: 0.25-0.40`, `style: 0.75`).
   * **Benchmark Audition A (Arrogant Gloat):** *"Every man in Valkash has a price, barbarian. What is yours...? A purse of gold, or a cup of poisoned wine?"*
   * **Benchmark Audition B (Villain Panic):** *"Guards! Slay him! Cut the northern dog down before he ruins me!"*
-  * **Canonical Audio Samples:** [`docs/audio/malakor_george_sneer.mp3`](file:///c:/research/c-book-generator/conan/docs/audio/malakor_george_sneer.mp3) & [`docs/audio/malakor_george_shout.mp3`](file:///c:/research/c-book-generator/conan/docs/audio/malakor_george_shout.mp3)
+  * **Canonical Audio Samples:** [`docs/audio/malakor_charlie_sneer.mp3`](file:///c:/research/c-book-generator/conan/docs/audio/malakor_charlie_sneer.mp3) & [`docs/audio/malakor_charlie_shout.mp3`](file:///c:/research/c-book-generator/conan/docs/audio/malakor_charlie_shout.mp3)
 
 ---
 

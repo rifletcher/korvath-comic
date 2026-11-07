@@ -36,8 +36,8 @@ const ELEVEN_VOICES = {
     defaultStyle: 0.80
   },
   malakor: {
-    id: 'JBFqnCBsd6RMkjVDRZzb', // George (Sinister, decadent, corrupt merchant prince)
-    defaultStability: 0.38,
+    id: 'IKne3meq5aSn9XLyUdCD', // Charlie (Haughty, aggressive, aristocratic merchant prince)
+    defaultStability: 0.30,
     defaultStyle: 0.70
   },
   assassin: {

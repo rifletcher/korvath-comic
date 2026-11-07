@@ -95,11 +95,11 @@ Beyond the red sands of Sarkesh lies Valkash—the City of Shadows, where thieve
 
 ${timestampsText}
 CAST & CREW:
-⚔️ Korvath the Barbarian: Booming Warrior Voice
+⚔️ Korvath the Barbarian: Subterranean Kratos (Brian -12% Pitch + 8dB Bass)
 💃 Natari the Desert Rogue: Sarah
-🐍 Lord Malakor: Brian
+🐍 Lord Malakor: Charlie
 🗡️ Spider Assassin: George
-📜 The Pulp Chronicler (Narrator): The Dark Bard (Andrew)
+📜 The Pulp Chronicler (Narrator): The Dark Bard (Brian)
 
 PRODUCTION & ART STYLE:
 🎨 Illustrated in classic 1970s Sword & Sorcery pulp aesthetic (Homage to Frank Frazetta & John Buscema).
