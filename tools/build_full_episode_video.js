@@ -129,13 +129,13 @@ function ensureSFX() {
 function getEmotionProfile(speaker, text, panelId) {
   const s = (speaker || '').toLowerCase().trim();
 
-  // Chronicler / Narrator: Steady British pulp chronicle
+  // Chronicler / Narrator: The Dark Bard (Andrew - deep, hypnotic dark fantasy chronicler)
   if (s === 'narrator') {
     return {
-      voice: 'en-GB-RyanNeural',
-      pitch: '-6Hz',
+      voice: 'en-US-AndrewMultilingualNeural',
+      pitch: '-8Hz',
       rate: '-6%',
-      fxFilter: 'volume=1.15'
+      fxFilter: 'bass=g=5:f=110,volume=1.35'
     };
   }
 
@@ -180,10 +180,10 @@ function getEmotionProfile(speaker, text, panelId) {
   }
 
   return {
-    voice: 'en-GB-RyanNeural',
-    pitch: '-6Hz',
+    voice: 'en-US-AndrewMultilingualNeural',
+    pitch: '-8Hz',
     rate: '-6%',
-    fxFilter: 'volume=1.0'
+    fxFilter: 'bass=g=5:f=110,volume=1.35'
   };
 }
 
@@ -441,21 +441,35 @@ async function main() {
     segmentFiles.push(segFile);
   }
 
-  // 4. Concatenate All 20 Segments into Full Master Movie
-  console.log('\n🎞️ Stitches all 20 segments into master episode movie...');
+  // 4. Concatenate All Segments via MPEG Transport Streams (.ts)
+  // Converting MP4 segments to .ts before concat prevents AAC sample rate / audio drift decode crashes
+  console.log('\n🎞️ Stitches all 20 segments into master episode movie via TS transport stream...');
+  const tsList = [];
+  for (let i = 0; i < segmentFiles.length; i++) {
+    const mp4Seg = segmentFiles[i];
+    const tsSeg = mp4Seg.replace(/\.mp4$/, '.ts');
+    execSync(`"${FFMPEG_PATH}" -y -i "${mp4Seg}" -c copy -bsf:v h264_mp4toannexb "${tsSeg}"`, { stdio: 'ignore' });
+    tsList.push(`file '${tsSeg.replace(/\\/g, '/')}'`);
+  }
+
   const concatList = path.join(workDir, 'concat_list.txt');
-  fs.writeFileSync(concatList, segmentFiles.map(f => `file '${f.replace(/\\/g, '/')}'`).join('\n'), 'utf8');
+  fs.writeFileSync(concatList, tsList.join('\n'), 'utf8');
 
   const masterVideo = path.join(rootDir, '02_Assets', 'video_test', 'episode_02_motion_comic.mp4');
   const docsMasterVideo = path.join(docsDir, 'episode_02_motion_comic.mp4');
 
-  const concatCmd = `"${FFMPEG_PATH}" -y -f concat -safe 0 -i "${concatList}" -c copy "${masterVideo}"`;
+  // Master build (CRF 25, 128k AAC audio)
+  const concatCmd = `"${FFMPEG_PATH}" -y -f concat -safe 0 -i "${concatList}" -c:v libx264 -preset fast -crf 25 -c:a aac -b:a 128k "${docsMasterVideo}"`;
   execSync(concatCmd, { stdio: 'inherit' });
+  fs.copyFileSync(docsMasterVideo, masterVideo);
 
-  // 5. Transcode to Web Compressed Release (< 45 MB)
-  console.log('\n📦 Transcoding high-efficiency web release for docs/ (CRF 25)...');
-  const webCompressCmd = `"${FFMPEG_PATH}" -y -i "${masterVideo}" -c:v libx264 -preset medium -crf 25 -c:a aac -b:a 128k "${docsMasterVideo}"`;
-  execSync(webCompressCmd, { stdio: 'inherit' });
+  // Clean up intermediate .ts files
+  for (let i = 0; i < segmentFiles.length; i++) {
+    const tsSeg = segmentFiles[i].replace(/\.mp4$/, '.ts');
+    if (fs.existsSync(tsSeg)) {
+      try { fs.unlinkSync(tsSeg); } catch (e) {}
+    }
+  }
 
   const webSizeMB = (fs.statSync(docsMasterVideo).size / (1024 * 1024)).toFixed(2);
   const masterDuration = getAudioDuration(docsMasterVideo);

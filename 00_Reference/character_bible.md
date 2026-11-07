@@ -80,3 +80,14 @@
   1. Revealing hammered bronze scale bikinis.
   2. Coiled serpent armbands and jeweled hip chains.
   3. Sheer gossamer silk drapes.
+
+---
+
+### 6. `narrator` — The Dark Bard (Chronicler of Iron & Ink)
+* **Role:** Omnipresent pulp chronicler, narrator of dark sagas and savage ages.
+* **Vocal Actor Persona:** Vincent Price + Ralph Fiennes + Jeremy Irons.
+* **Timbre & Resonance:** Deep, hypnotic, magnetic dark fantasy chronicler. Rich resonant baritone with slow deliberate gravitas, avoiding ubiquitous generic AI voiceover tropes.
+* **Acoustic Engine Profile:** `en-US-AndrewMultilingualNeural` pitched down `-8Hz`, `-6%` rate, with $+5\text{dB}$ sub-bass boost at $110\text{Hz}$ (`bass=g=5:f=110,volume=1.35`).
+* **Benchmark Audition Line:** *"Beyond the red sands of Sarkesh lay Valkash—city of thieves, poisoned wine, and men whose smiles were sharper than their daggers."*
+* **Canonical Sample:** [`00_Reference/audio/narrator_voice_sample.mp3`](file:///c:/research/c-book-generator/conan/00_Reference/audio/narrator_voice_sample.mp3)
+

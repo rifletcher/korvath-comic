@@ -99,7 +99,7 @@ CAST & CREW:
 💃 Natari the Desert Rogue: Sarah
 🐍 Lord Malakor: Brian
 🗡️ Spider Assassin: George
-📜 The Pulp Chronicler (Narrator): Adam
+📜 The Pulp Chronicler (Narrator): The Dark Bard (Andrew)
 
 PRODUCTION & ART STYLE:
 🎨 Illustrated in classic 1970s Sword & Sorcery pulp aesthetic (Homage to Frank Frazetta & John Buscema).
