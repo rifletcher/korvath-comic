@@ -189,11 +189,20 @@ function getEmotionProfile(speaker, text, panelId) {
 
 async function synthesizeClip(emotionProfile, text, rawFile, fxFile) {
   if (fs.existsSync(fxFile) && fs.statSync(fxFile).size > 1000) {
-    return fxFile;
+    // Sanity check: Ensure it is not an accidental ElevenLabs fallback file for narrator
+    const buf = fs.readFileSync(rawFile);
+    const isID3 = buf[0] === 0x49 && buf[1] === 0x44 && buf[2] === 0x33;
+    if (!isID3) {
+      return fxFile;
+    }
+    console.log(`   🔄 Removing stale ElevenLabs Adam cache for: ${path.basename(rawFile)}`);
+    try { fs.unlinkSync(rawFile); } catch(e) {}
+    try { fs.unlinkSync(fxFile); } catch(e) {}
   }
 
   let attempts = 0;
-  while (attempts < 5) {
+  const maxAttempts = 8;
+  while (attempts < maxAttempts) {
     let tts = null;
     try {
       tts = new MsEdgeTTS({ connectionTimeoutMs: 30000, synthesisTimeoutMs: 60000 });
@@ -215,16 +224,11 @@ async function synthesizeClip(emotionProfile, text, rawFile, fxFile) {
       if (tts) { try { tts.close(); } catch(e) {} }
       if (fs.existsSync(rawFile)) { try { fs.unlinkSync(rawFile); } catch(e) {} }
       attempts++;
-      console.warn(`   ⚠️ TTS retry ${attempts}/5 (${emotionProfile.voice}): ${err.message}`);
-      if (attempts >= 5) {
-        if (elevenApiKey) {
-          console.log(`   🔄 Fallback to ElevenLabs Adam for "${text.slice(0, 30)}..."`);
-          await callElevenLabs('pNInz6obpgDQGcFmaJgB', text, { stability: 0.35, similarity_boost: 0.85, style: 0.65 }, rawFile);
-          break;
-        }
-        throw err;
+      console.warn(`   ⚠️ TTS retry ${attempts}/${maxAttempts} (${emotionProfile.voice}): ${err.message}`);
+      if (attempts >= maxAttempts) {
+        throw new Error(`Failed to synthesize ${emotionProfile.voice} after ${maxAttempts} attempts: ${err.message}`);
       }
-      await new Promise(r => setTimeout(r, 1500 * attempts));
+      await new Promise(r => setTimeout(r, 1200 * attempts));
     }
   }
 
