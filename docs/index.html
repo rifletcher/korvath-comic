@@ -3,846 +3,430 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Korvath the Barbarian — Graphic Novel Reader</title>
-  <meta name="description" content="A vintage sword-and-sorcery graphic novel comic book saga created in the spirit of Frank Frazetta and John Buscema.">
+  <title>Korvath the Barbarian — Issue #1: The Slumbering Serpent</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Cinzel:wght@700;900&family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=MedievalSharp&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #070709;
-      --card-bg: #0f1015;
-      --border: #2a2015;
-      --blood-gold: #fca311;
+      --card: #0f1015;
+      --border: #222533;
+      --gold: #fca311;
       --crimson: #e63946;
+      --meta-blue: #00b4d8;
       --text: #eae2d6;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       background: var(--bg);
       color: var(--text);
-      font-family: 'Cinzel', Georgia, serif;
-      line-height: 1.6;
+      font-family: 'Montserrat', sans-serif;
       padding-bottom: 80px;
     }
     header {
-      background: #120a06;
+      background: #111218;
       border-bottom: 2px solid var(--border);
-      padding: 20px 32px;
+      padding: 20px 24px;
       text-align: center;
       position: sticky;
       top: 0;
-      z-index: 100;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.9);
-    }
-    h1 {
-      font-size: 32px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--blood-gold);
-      text-shadow: 0 0 16px rgba(252, 163, 17, 0.4);
+      z-index: 1000;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.9);
     }
     .series-sub {
+      font-family: 'Cinzel', serif;
       font-size: 13px;
       letter-spacing: 3px;
       color: var(--crimson);
       text-transform: uppercase;
-      font-weight: 700;
-      margin-top: 2px;
+      font-weight: 900;
     }
-    .issue-selector {
-      margin-top: 14px;
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 30px;
+      letter-spacing: 2px;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin: 4px 0 14px;
+      text-shadow: 0 0 16px rgba(252, 163, 17, 0.4);
+    }
+
+    /* EDITION SWITCHER BUTTONS */
+    .controls {
       display: flex;
       justify-content: center;
-      gap: 12px;
+      gap: 14px;
       flex-wrap: wrap;
     }
-    .issue-btn {
-      background: #1c1510;
-      border: 1px solid var(--blood-gold);
-      color: #ccc;
-      padding: 8px 18px;
-      border-radius: 4px;
-      font-family: inherit;
+    .toggle-btn {
+      font-family: 'Cinzel', serif;
+      font-size: 13px;
+      font-weight: bold;
+      padding: 10px 24px;
+      border-radius: 6px;
       cursor: pointer;
-      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      transition: all 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-grok {
+      background: #15161d;
+      border: 2px solid #444;
+      color: #999;
+    }
+    .btn-grok.active {
+      background: #241910;
+      border-color: var(--gold);
+      color: var(--gold);
+      box-shadow: 0 0 16px rgba(252, 163, 17, 0.4);
+    }
+    .btn-meta {
+      background: #111420;
+      border: 2px solid #2a3550;
+      color: #7f95c2;
+    }
+    .btn-meta.active {
+      background: #0a1f2e;
+      border-color: var(--meta-blue);
+      color: #90e0ef;
+      box-shadow: 0 0 16px rgba(0, 180, 216, 0.45);
+    }
+
+    /* CINEMATIC VIDEO THEATER */
+    .theater-container {
+      max-width: 1100px;
+      margin: 30px auto 40px;
+      padding: 0 16px;
+    }
+    .video-card {
+      background: #000;
+      border: 2px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.95);
+    }
+    .video-header-bar {
+      background: #14151e;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #222434;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .video-title {
+      font-family: 'Cinzel', serif;
+      font-size: 15px;
+      color: var(--gold);
       letter-spacing: 1px;
       text-transform: uppercase;
-      font-weight: 700;
-      transition: all 0.2s ease;
     }
-    .issue-btn:hover {
-      background: #2f1d14;
-      color: #fff;
-      border-color: #ffd166;
-    }
-    .issue-btn.active {
-      background: var(--crimson);
-      color: #fff;
-      border-color: #ff6b6b;
-      box-shadow: 0 0 12px rgba(230, 57, 70, 0.6);
-    }
-    .comic-page {
-      max-width: 1200px;
-      margin: 40px auto;
-      padding: 0 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 48px;
-    }
-    .issue-container {
-      display: none;
-      flex-direction: column;
-      gap: 48px;
-    }
-    .issue-container.active {
-      display: flex;
-    }
-    .panel-card {
-      background: #000;
-      border: 3px solid #1a1a24;
-      box-shadow: 0 16px 40px rgba(0,0,0,0.9);
-      position: relative;
-      overflow: hidden;
+    .video-edition-tag {
+      font-size: 11px;
+      padding: 4px 10px;
       border-radius: 4px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .tag-grok { background: #3d2508; color: #ffbe0b; border: 1px solid #fca311; }
+    .tag-meta { background: #072a3a; color: #48cae4; border: 1px solid #00b4d8; }
+
+    video {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      display: block;
+      background: #000;
+    }
+    .video-footer-bar {
+      background: #0f1016;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: #888;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .video-footer-bar strong {
+      color: var(--gold);
+    }
+
+    /* COMIC STRIP */
+    .comic-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+    }
+    .comic-section-header {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .comic-section-title {
+      font-family: 'Cinzel', serif;
+      font-size: 22px;
+      color: var(--gold);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .comic-section-desc {
+      font-size: 13px;
+      color: #888;
+      margin-top: 4px;
+    }
+
+    .panel-card {
+      background: var(--card);
+      border: 2px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.8);
+      position: relative;
     }
     .panel-img-wrap {
       width: 100%;
-      aspect-ratio: 16 / 9;
+      background: #000;
       position: relative;
-      background: #0d0d12;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      cursor: zoom-in;
     }
     .panel-img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+      height: auto;
       display: block;
+      transition: transform 0.25s ease;
+    }
+    .panel-img:hover {
+      transform: scale(1.015);
     }
     .panel-footer-meta {
       background: #111218;
-      padding: 10px 18px;
+      padding: 12px 20px;
       display: flex;
       justify-content: space-between;
+      align-items: center;
       font-size: 12px;
-      color: #888;
-      border-top: 1px solid #222;
+      color: #999;
+      border-top: 1px solid #1c1d28;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .panel-num {
+      color: var(--crimson);
+      font-family: 'Cinzel', serif;
+      font-weight: bold;
       letter-spacing: 1px;
     }
-    .page-indicator {
-      color: var(--blood-gold);
+    .panel-name {
+      color: var(--gold);
       font-weight: bold;
     }
-    .issue-header-banner {
-      background: linear-gradient(180deg, #1f120c 0%, #0c0806 100%);
-      border: 2px solid var(--border);
-      padding: 24px;
-      text-align: center;
+
+    /* LIGHTBOX */
+    #lightbox {
+      display: none;
+      position: fixed;
+      z-index: 99999;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.94);
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    #lightbox.active {
+      display: flex;
+    }
+    #lightbox img {
+      max-width: 95vw;
+      max-height: 95vh;
+      object-fit: contain;
+      box-shadow: 0 0 50px rgba(0,0,0,0.9);
+      border: 2px solid #333;
+    }
+    #lightbox-caption {
+      position: absolute;
+      bottom: 24px;
+      background: rgba(0,0,0,0.85);
+      padding: 8px 24px;
       border-radius: 6px;
-      margin-bottom: -16px;
-    }
-    .issue-header-banner h2 {
-      font-size: 24px;
-      color: var(--blood-gold);
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 6px;
-    }
-    .issue-header-banner p {
+      color: #fff;
+      font-family: 'Cinzel', serif;
       font-size: 14px;
-      color: #aaa;
-      max-width: 800px;
-      margin: 0 auto;
+      letter-spacing: 1px;
+    }
+    #lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: #fff;
+      font-size: 36px;
+      cursor: pointer;
+      user-select: none;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>Korvath the Barbarian</h1>
-    <div class="series-sub">The High Savage Chronicles</div>
-    <div class="issue-selector">
-      <button class="issue-btn active" onclick="showIssue(1)" id="btn-issue-1">⚔️ Issue #1: The Slumbering Serpent</button>
-      <button class="issue-btn" onclick="showIssue(2)" id="btn-issue-2">🗡️ Issue #2: The Blood-Thieves of Valkash</button>
-      <a href="./compare_grok_meta.html" class="issue-btn" style="background:#0c1a24;border-color:#00b4d8;color:#00b4d8;text-decoration:none;">⚖️ Studio Compare & Videos (Grok vs Meta AI)</a>
-      <a href="./video_preview.html" class="issue-btn" style="background:#2d1115;border-color:var(--crimson);color:#ffd166;text-decoration:none;">🎬 Motion Comic Video Theater</a>
+    <div class="series-sub">Conan the Barbarian Studio</div>
+    <h1>Issue #1: The Slumbering Serpent</h1>
+
+    <div class="controls">
+      <button class="toggle-btn btn-grok active" id="btn-grok" onclick="switchGlobalEdition('grok')">
+        🎨 Grok Edition (Original)
+      </button>
+      <button class="toggle-btn btn-meta" id="btn-meta" onclick="switchGlobalEdition('meta')">
+        🌟 Meta AI Edition (2K Frazetta)
+      </button>
+      <a href="./compare_grok_meta.html" class="toggle-btn" style="background:#141724; border:2px solid #334; color:#bbb; text-decoration:none;">
+        ⚖️ Side-by-Side Split View
+      </a>
     </div>
   </header>
 
-  <main class="comic-page">
-    <!-- Issue 1 Container -->
-    <section class="issue-container" id="issue-1">
-      <div class="issue-header-banner">
-        <h2>Issue #1: The Slumbering Serpent of Sarkesh</h2>
-        <p>From the frozen crags of the northern wastes strode Korvath—lone wolf, reaver, breaker of chains. In the sun-blasted ruins of Sarkesh, he confronts serpent cultists and ancient horror.</p>
-        <div style="margin-top: 14px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
-          <button id="reader-ep1-btn-grok" onclick="switchReaderEditionEp1('grok')" style="padding: 8px 18px; font-family: inherit; font-size: 11px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; border-radius: 4px; cursor: pointer; border: 1px solid #fca311; background: #241910; color: #fca311; box-shadow: 0 0 10px rgba(252, 163, 17, 0.3);">
-            🎨 Grok Edition
-          </button>
-          <button id="reader-ep1-btn-meta" onclick="switchReaderEditionEp1('meta')" style="padding: 8px 18px; font-family: inherit; font-size: 11px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; border-radius: 4px; cursor: pointer; border: 1px solid #334; background: #111420; color: #8fa0c0;">
-            🌟 Meta AI Edition (2K Frazetta)
-          </button>
-        </div>
+  <!-- 1. CINEMATIC VIDEO THEATER -->
+  <main class="theater-container">
+    <div class="video-card">
+      <div class="video-header-bar">
+        <div class="video-title">🎬 Episode 1 Motion Comic Movie (Full 20-Panel Cinematic Score)</div>
+        <span class="video-edition-tag tag-grok" id="video-tag">🎨 Grok Edition</span>
       </div>
-      
-      <div class="panel-card" id="panel-ep1-1">
-        <div class="panel-img-wrap">
-          <img class="panel-img" 
-               src="./assets/ep1/panel_01.webp" 
-               loading="lazy"
-               alt="Panel 1: The Windswept Ruins">
-        </div>
-        <div class="panel-footer-meta">
-          <span class="page-indicator">PANEL 1 OF 20</span>
-          <span>The Windswept Ruins</span>
-          <span>Ultra-Wide Panoramic Establishing Shot</span>
-        </div>
+      <video id="player" controls playsinline poster="./assets/ep1/panel_01.webp">
+        <source id="video-src" src="./episode_01_motion_comic.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="video-footer-bar">
+        <span><strong>Voice Cast:</strong> Brian (Narrator) • Subterranean Kratos Korvath • Sarah (Natari) • Charlie (Kheshat)</span>
+        <span><strong>Length:</strong> 3.2 min • 1080p Cinema</span>
       </div>
-
-      <div class="panel-card" id="panel-ep1-2">
-        <div class="panel-img-wrap">
-          <img class="panel-img" 
-               src="./assets/ep1/panel_02.webp" 
-               loading="lazy"
-               alt="Panel 2: Eyes in the Dust">
-        </div>
-        <div class="panel-footer-meta">
-          <span class="page-indicator">PANEL 2 OF 20</span>
-          <span>Eyes in the Dust</span>
-          <span>Medium Kneeling Hero Shot</span>
-        </div>
-      </div>
-
-      <div class="panel-card" id="panel-ep1-3">
-        <div class="panel-img-wrap">
-          <img class="panel-img" 
-               src="./assets/ep1/panel_03.webp" 
-               loading="lazy"
-               alt="Panel 3: The Crypt of the Serpent">
-        </div>
-        <div class="panel-footer-meta">
-          <span class="page-indicator">PANEL 3 OF 20</span>
-          <span>The Crypt of the Serpent</span>
-          <span>Low-Angle Entrance Shot</span>
-        </div>
-      </div>
-
-      <div class="panel-card" id="panel-ep1-4">
-        <div class="panel-img-wrap">
-          <img class="panel-img" 
-               src="./assets/ep1/panel_04.webp" 
-               loading="lazy"
-               alt="Panel 4: Hall of Serpent Kings">
-        </div>
-        <div class="panel-footer-meta">
-          <span class="page-indicator">PANEL 4 OF 20</span>
-          <span>Hall of Serpent Kings</span>
-          <span>Long Corridor Tracking Shot</span>
-        </div>
-      </div>
-
-      <div class="panel-card" id="panel-ep1-5">
-        <div class="panel-img-wrap">
-          <img class="panel-img" 
-               src="./assets/ep1/panel_05.webp" 
-               loading="lazy"
-               alt="Panel 5: Blades of the Cult">
-        </div>
-        <div class="panel-footer-meta">
-          <span class="page-indicator">PANEL 5 OF 20</span>
-          <span>Blades of the Cult</span>
-          <span>Dynamic Three-Shot Composition</span>
-        </div>
-      </div>
-
-      <div class="panel-card" id="panel-ep1-6">
-        <div class="panel-img-wrap">
-          <img class="panel-img" 
-               src="./assets/ep1/panel_06.webp" 
-               loading="lazy"
-               alt="Panel 6: The Iron Cleave">
-        </div>
-        <div class="panel-footer-meta">
-          <span class="page-indicator">PANEL 6 OF 20</span>
-          <span>The Iron Cleave</span>
-          <span>Dynamic Action Freeze-Frame</span>
-        </div>
-      </div>
-
-      <div class="panel-card" id="panel-ep1-7">
-        <div class="panel-img-wrap">
-          <img class="panel-img" 
-               src="./assets/ep1/panel_07.webp" 
-               loading="lazy"
-               alt="Panel 7: The Cavern of the Lotus">
-        </div>
-        <div class="panel-footer-meta">
-          <span class="page-indicator">PANEL 7 OF 20</span>
-          <span>The Cavern of the Lotus</span>
-          <span>Wide Cavern High-Angle View</span>
-        </div>
-      </div>
-
-      <div class="panel-card" id="panel-ep1-8">
-        <div class="panel-img-wrap">
-          <img class="panel-img" 
-               src="./assets/ep1/panel_08.webp" 
-               loading="lazy"
-               alt="Panel 8: The Captive Maiden">
-        </div>
-        <div class="panel-footer-meta">
-          <span class="page-indicator">PANEL 8 OF 20</span>
-          <span>The Captive Maiden</span>
-          <span>Medium Close Heroine Portrait</span>
-        </div>
-      </div>
-
-      <div class="panel-card" id="panel-ep1-9">
-        <div class="panel-img-wrap">
-          <img class="panel-img" 
-               src="./assets/ep1/panel_09.webp" 
-               loading="lazy"
-               alt="Panel 9: The Altar of Sarkath">
-        </div>
-        <div class="panel-footer-meta">
-          <span class="page-indicator">PANEL 9 OF 20</span>
-          <span>The Altar of Sarkath</span>
-          <span>Wide Ritual Colonnade View</span>
-        </div>
-      </div>
-
-      <div class="panel-card" id="panel-ep1-10">
-        <div class="panel-img-wrap">
-          <img class="panel-img" 
-               src="./assets/ep1/panel_10.webp" 
-               loading="lazy"
-               alt="Panel 10: The Barbarian Charge">
-        </div>
-        <div class="panel-footer-meta">
-          <span class="page-indicator">PANEL 10 OF 20</span>
-          <span>The Barbarian Charge</span>
-          <span>Dynamic Low-Angle Impact Shot</span>
-        </div>
-      </div>
-
-      <div class="panel-card" id="panel-ep1-11">
-        <div class="panel-img-wrap">
-          <img class="panel-img" 
-               src="./assets/ep1/panel_11.webp" 
-               loading="lazy"
-               alt="Panel 11: Awakening of the Shadow">
-        </div>
-        <div class="panel-footer-meta">
-          <span class="page-indicator">PANEL 11 OF 20</span>
-          <span>Awakening of the Shadow</span>
-          <span>Colossal Creature Reveal Shot</span>
-        </div>
-      </div>
-
-      <div class="panel-card" id="panel-ep1-12">
-        <div class="panel-img-wrap">
-          <img class="panel-img" 
-               src="./assets/ep1/panel_12.webp" 
-               loading="lazy"
-               alt="Panel 12: Wrath of the Titan">
-        </div>
-        <div class="panel-footer-meta">
-          <span class="page-indicator">PANEL 12 OF 20</span>
-          <span>Wrath of the Titan</span>
-          <span>Wide Cataclysmic Destruction Shot</span>
-        </div>
-      </div>
-
-      <div class="panel-card" id="panel-ep1-13">
-        <div class="panel-img-wrap">
-          <img class="panel-img" 
-               src="./assets/ep1/panel_13.webp" 
-               loading="lazy"
-               alt="Panel 13: Poetic Justice">
-        </div>
-        <div class="panel-footer-meta">
-          <span class="page-indicator">PANEL 13 OF 20</span>
-          <span>Poetic Justice</span>
-          <span>Dramatic Lethal Strike Shot</span>
-        </div>
-      </div>
-
-      <div class="panel-card" id="panel-ep1-14">
-        <div class="panel-img-wrap">
-          <img class="panel-img" 
-               src="./assets/ep1/panel_14.webp" 
-               loading="lazy"
-               alt="Panel 14: Laughing at Doom">
-        </div>
-        <div class="panel-footer-meta">
-          <span class="page-indicator">PANEL 14 OF 20</span>
-          <span>Laughing at Doom</span>
-          <span>Tight Chiaroscuro Hero Portrait</span>
-        </div>
-      </div>
-
-      <div class="panel-card" id="panel-ep1-15">
-        <div class="panel-img-wrap">
-          <img class="panel-img" 
-               src="./assets/ep1/panel_15.webp" 
-               loading="lazy"
-               alt="Panel 15: Venom and Stone">
-        </div>
-        <div class="panel-footer-meta">
-          <span class="page-indicator">PANEL 15 OF 20</span>
-          <span>Venom and Stone</span>
-          <span>Dynamic Low-Angle Action Evasion</span>
-        </div>
-      </div>
-
-      <div class="panel-card" id="panel-ep1-16">
-        <div class="panel-img-wrap">
-          <img class="panel-img" 
-               src="./assets/ep1/panel_16.webp" 
-               loading="lazy"
-               alt="Panel 16: The Fatal Leap">
-        </div>
-        <div class="panel-footer-meta">
-          <span class="page-indicator">PANEL 16 OF 20</span>
-          <span>The Fatal Leap</span>
-          <span>Peak Climax Midair Action Shot</span>
-        </div>
-      </div>
-
-      <div class="panel-card" id="panel-ep1-17">
-        <div class="panel-img-wrap">
-          <img class="panel-img" 
-               src="./assets/ep1/panel_17.webp" 
-               loading="lazy"
-               alt="Panel 17: Death Agony of the Beast">
-        </div>
-        <div class="panel-footer-meta">
-          <span class="page-indicator">PANEL 17 OF 20</span>
-          <span>Death Agony of the Beast</span>
-          <span>Full Catastrophe Wide Shot</span>
-        </div>
-      </div>
-
-      <div class="panel-card" id="panel-ep1-18">
-        <div class="panel-img-wrap">
-          <img class="panel-img" 
-               src="./assets/ep1/panel_18.webp" 
-               loading="lazy"
-               alt="Panel 18: Severing the Chains">
-        </div>
-        <div class="panel-footer-meta">
-          <span class="page-indicator">PANEL 18 OF 20</span>
-          <span>Severing the Chains</span>
-          <span>Medium Dynamic Hero Duo Shot</span>
-        </div>
-      </div>
-
-      <div class="panel-card" id="panel-ep1-19">
-        <div class="panel-img-wrap">
-          <img class="panel-img" 
-               src="./assets/ep1/panel_19.webp" 
-               loading="lazy"
-               alt="Panel 19: Escape into the Blinding Light">
-        </div>
-        <div class="panel-footer-meta">
-          <span class="page-indicator">PANEL 19 OF 20</span>
-          <span>Escape into the Blinding Light</span>
-          <span>Exterior Action Breakthrough Shot</span>
-        </div>
-      </div>
-
-      <div class="panel-card" id="panel-ep1-20">
-        <div class="panel-img-wrap">
-          <img class="panel-img" 
-               src="./assets/ep1/panel_20.webp" 
-               loading="lazy"
-               alt="Panel 20: The Crimson Dawn">
-        </div>
-        <div class="panel-footer-meta">
-          <span class="page-indicator">PANEL 20 OF 20</span>
-          <span>The Crimson Dawn</span>
-          <span>Epic Panoramic Sunset/Sunrise Hero Shot</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- Issue 2 Container -->
-    <section class="issue-container active" id="issue-2">
-      <div class="issue-header-banner">
-        <h2>Issue #2: The Blood-Thieves of Valkash</h2>
-        <p>Deep within the thieves' city of Valkash, Korvath and Natari track the treacherous merchant prince Malakor into subterranean vaults where webs drip with demon poison.</p>
-        <div style="margin-top: 14px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
-          <button id="reader-btn-grok" onclick="switchReaderEdition('grok')" style="padding: 8px 18px; font-family: inherit; font-size: 11px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; border-radius: 4px; cursor: pointer; border: 1px solid #fca311; background: #241910; color: #fca311; box-shadow: 0 0 10px rgba(252, 163, 17, 0.3);">
-            🎨 Grok Edition
-          </button>
-          <button id="reader-btn-meta" onclick="switchReaderEdition('meta')" style="padding: 8px 18px; font-family: inherit; font-size: 11px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; border-radius: 4px; cursor: pointer; border: 1px solid #334; background: #111420; color: #8fa0c0;">
-            🌟 Meta AI Edition (2K Frazetta)
-          </button>
-        </div>
-      </div>
-      
-      <div class="panel-card" id="panel-ep2-1">
-        <div class="panel-img-wrap">
-          <img class="panel-img" 
-               src="./assets/ep2/panel_01.webp" 
-               loading="lazy"
-               alt="Panel 1: Gates of Valkash">
-        </div>
-        <div class="panel-footer-meta">
-          <span class="page-indicator">PANEL 1 OF 20</span>
-          <span>Gates of Valkash</span>
-          <span>Ultra-Wide Panoramic Establishing Shot</span>
-        </div>
-      </div>
-
-      <div class="panel-card" id="panel-ep2-2">
-        <div class="panel-img-wrap">
-          <img class="panel-img" 
-               src="./assets/ep2/panel_02.webp" 
-               loading="lazy"
-               alt="Panel 2: The Midnight Bazaar">
-        </div>
-        <div class="panel-footer-meta">
-          <span class="page-indicator">PANEL 2 OF 20</span>
-          <span>The Midnight Bazaar</span>
-          <span>Medium Street Tracking Shot</span>
-        </div>
-      </div>
-
-      <div class="panel-card" id="panel-ep2-3">
-        <div class="panel-img-wrap">
-          <img class="panel-img" 
-               src="./assets/ep2/panel_03.webp" 
-               loading="lazy"
-               alt="Panel 3: The Black Lotus Tavern">
-        </div>
-        <div class="panel-footer-meta">
-          <span class="page-indicator">PANEL 3 OF 20</span>
-          <span>The Black Lotus Tavern</span>
-          <span>Tavern Interior Medium Three-Shot</span>
-        </div>
-      </div>
-
-      <div class="panel-card" id="panel-ep2-4">
-        <div class="panel-img-wrap">
-          <img class="panel-img" 
-               src="./assets/ep2/panel_04.webp" 
-               loading="lazy"
-               alt="Panel 4: The Crooked Broker">
-        </div>
-        <div class="panel-footer-meta">
-          <span class="page-indicator">PANEL 4 OF 20</span>
-          <span>The Crooked Broker</span>
-          <span>Tight Chiaroscuro Confrontation Shot</span>
-        </div>
-      </div>
-
-      <div class="panel-card" id="panel-ep2-5">
-        <div class="panel-img-wrap">
-          <img class="panel-img" 
-               src="./assets/ep2/panel_05.webp" 
-               loading="lazy"
-               alt="Panel 5: Blades in the Smoke">
-        </div>
-        <div class="panel-footer-meta">
-          <span class="page-indicator">PANEL 5 OF 20</span>
-          <span>Blades in the Smoke</span>
-          <span>Dynamic Action Ambush Shot</span>
-        </div>
-      </div>
-
-      <div class="panel-card" id="panel-ep2-6">
-        <div class="panel-img-wrap">
-          <img class="panel-img" 
-               src="./assets/ep2/panel_06.webp" 
-               loading="lazy"
-               alt="Panel 6: Savage Tavern Cleave">
-        </div>
-        <div class="panel-footer-meta">
-          <span class="page-indicator">PANEL 6 OF 20</span>
-          <span>Savage Tavern Cleave</span>
-          <span>Peak Combat Action Freeze-Frame</span>
-        </div>
-      </div>
-
-      <div class="panel-card" id="panel-ep2-7">
-        <div class="panel-img-wrap">
-          <img class="panel-img" 
-               src="./assets/ep2/panel_07.webp" 
-               loading="lazy"
-               alt="Panel 7: Rooftops of Valkash">
-        </div>
-        <div class="panel-footer-meta">
-          <span class="page-indicator">PANEL 7 OF 20</span>
-          <span>Rooftops of Valkash</span>
-          <span>Dynamic Midair Rooftop Leap Shot</span>
-        </div>
-      </div>
-
-      <div class="panel-card" id="panel-ep2-8">
-        <div class="panel-img-wrap">
-          <img class="panel-img" 
-               src="./assets/ep2/panel_08.webp" 
-               loading="lazy"
-               alt="Panel 8: The Harem Terrace">
-        </div>
-        <div class="panel-footer-meta">
-          <span class="page-indicator">PANEL 8 OF 20</span>
-          <span>The Harem Terrace</span>
-          <span>Wide Opulent Terrace Shot</span>
-        </div>
-      </div>
-
-      <div class="panel-card" id="panel-ep2-9">
-        <div class="panel-img-wrap">
-          <img class="panel-img" 
-               src="./assets/ep2/panel_09.webp" 
-               loading="lazy"
-               alt="Panel 9: The Merchant's Vault">
-        </div>
-        <div class="panel-footer-meta">
-          <span class="page-indicator">PANEL 9 OF 20</span>
-          <span>The Merchant's Vault</span>
-          <span>Vault Door Breakthrough Shot</span>
-        </div>
-      </div>
-
-      <div class="panel-card" id="panel-ep2-10">
-        <div class="panel-img-wrap">
-          <img class="panel-img" 
-               src="./assets/ep2/panel_10.webp" 
-               loading="lazy"
-               alt="Panel 10: Caught in the Web">
-        </div>
-        <div class="panel-footer-meta">
-          <span class="page-indicator">PANEL 10 OF 20</span>
-          <span>Caught in the Web</span>
-          <span>Dynamic Entanglement Shot</span>
-        </div>
-      </div>
-
-      <div class="panel-card" id="panel-ep2-11">
-        <div class="panel-img-wrap">
-          <img class="panel-img" 
-               src="./assets/ep2/panel_11.webp" 
-               loading="lazy"
-               alt="Panel 11: The Brood Queen Descends">
-        </div>
-        <div class="panel-footer-meta">
-          <span class="page-indicator">PANEL 11 OF 20</span>
-          <span>The Brood Queen Descends</span>
-          <span>Colossal Monster Reveal Shot</span>
-        </div>
-      </div>
-
-      <div class="panel-card" id="panel-ep2-12">
-        <div class="panel-img-wrap">
-          <img class="panel-img" 
-               src="./assets/ep2/panel_12.webp" 
-               loading="lazy"
-               alt="Panel 12: The Merchant's Gloat">
-        </div>
-        <div class="panel-footer-meta">
-          <span class="page-indicator">PANEL 12 OF 20</span>
-          <span>The Merchant's Gloat</span>
-          <span>Balcony Mockery Shot</span>
-        </div>
-      </div>
-
-      <div class="panel-card" id="panel-ep2-13">
-        <div class="panel-img-wrap">
-          <img class="panel-img" 
-               src="./assets/ep2/panel_13.webp" 
-               loading="lazy"
-               alt="Panel 13: Venom and Fire">
-        </div>
-        <div class="panel-footer-meta">
-          <span class="page-indicator">PANEL 13 OF 20</span>
-          <span>Venom and Fire</span>
-          <span>Dynamic Mid-Range Combat Clash</span>
-        </div>
-      </div>
-
-      <div class="panel-card" id="panel-ep2-14">
-        <div class="panel-img-wrap">
-          <img class="panel-img" 
-               src="./assets/ep2/panel_14.webp" 
-               loading="lazy"
-               alt="Panel 14: The Flaming Cleave">
-        </div>
-        <div class="panel-footer-meta">
-          <span class="page-indicator">PANEL 14 OF 20</span>
-          <span>The Flaming Cleave</span>
-          <span>Dynamic Cleave Freeze-Frame</span>
-        </div>
-      </div>
-
-      <div class="panel-card" id="panel-ep2-15">
-        <div class="panel-img-wrap">
-          <img class="panel-img" 
-               src="./assets/ep2/panel_15.webp" 
-               loading="lazy"
-               alt="Panel 15: Natari's Retribution">
-        </div>
-        <div class="panel-footer-meta">
-          <span class="page-indicator">PANEL 15 OF 20</span>
-          <span>Natari's Retribution</span>
-          <span>Heroic Balcony Strike Shot</span>
-        </div>
-      </div>
-
-      <div class="panel-card" id="panel-ep2-16">
-        <div class="panel-img-wrap">
-          <img class="panel-img" 
-               src="./assets/ep2/panel_16.webp" 
-               loading="lazy"
-               alt="Panel 16: The Abyssal Skull-Strike">
-        </div>
-        <div class="panel-footer-meta">
-          <span class="page-indicator">PANEL 16 OF 20</span>
-          <span>The Abyssal Skull-Strike</span>
-          <span>Peak Climax Midair Action Shot</span>
-        </div>
-      </div>
-
-      <div class="panel-card" id="panel-ep2-17">
-        <div class="panel-img-wrap">
-          <img class="panel-img" 
-               src="./assets/ep2/panel_17.webp" 
-               loading="lazy"
-               alt="Panel 17: Collapse of the Palace Vault">
-        </div>
-        <div class="panel-footer-meta">
-          <span class="page-indicator">PANEL 17 OF 20</span>
-          <span>Collapse of the Palace Vault</span>
-          <span>Full Palace Catastrophe Wide Shot</span>
-        </div>
-      </div>
-
-      <div class="panel-card" id="panel-ep2-18">
-        <div class="panel-img-wrap">
-          <img class="panel-img" 
-               src="./assets/ep2/panel_18.webp" 
-               loading="lazy"
-               alt="Panel 18: The Leaping Escape">
-        </div>
-        <div class="panel-footer-meta">
-          <span class="page-indicator">PANEL 18 OF 20</span>
-          <span>The Leaping Escape</span>
-          <span>Midair Escape Tracking Shot</span>
-        </div>
-      </div>
-
-      <div class="panel-card" id="panel-ep2-19">
-        <div class="panel-img-wrap">
-          <img class="panel-img" 
-               src="./assets/ep2/panel_19.webp" 
-               loading="lazy"
-               alt="Panel 19: Breaching the Southern Gate">
-        </div>
-        <div class="panel-footer-meta">
-          <span class="page-indicator">PANEL 19 OF 20</span>
-          <span>Breaching the Southern Gate</span>
-          <span>Low-Angle Gallop Action Shot</span>
-        </div>
-      </div>
-
-      <div class="panel-card" id="panel-ep2-20">
-        <div class="panel-img-wrap">
-          <img class="panel-img" 
-               src="./assets/ep2/panel_20.webp" 
-               loading="lazy"
-               alt="Panel 20: Riders of the Midnight Dunes">
-        </div>
-        <div class="panel-footer-meta">
-          <span class="page-indicator">PANEL 20 OF 20</span>
-          <span>Riders of the Midnight Dunes</span>
-          <span>Epic Panoramic Moonlit Climax Shot</span>
-        </div>
-      </div>
-    </section>
+    </div>
   </main>
 
+  <!-- 2. GRAPHIC NOVEL COMIC STRIP -->
+  <section class="comic-section">
+    <div class="comic-section-header">
+      <div class="comic-section-title">Sequential Graphic Novel Panels (1 to 20)</div>
+      <div class="comic-section-desc">Click any panel to zoom in full 2K resolution</div>
+    </div>
+
+    <!-- PANELS RENDERED DYNAMICALLY -->
+    <div id="panels-container"></div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" onclick="closeLightbox()">
+    <span id="lightbox-close">&times;</span>
+    <img id="lightbox-img" src="" alt="Zoomed View">
+    <div id="lightbox-caption"></div>
+  </div>
+
   <script>
-    function showIssue(num) {
-      const iss1 = document.getElementById('issue-1');
-      const iss2 = document.getElementById('issue-2');
-      const b1 = document.getElementById('btn-issue-1');
-      const b2 = document.getElementById('btn-issue-2');
-      if (iss1) iss1.classList.toggle('active', num === 1);
-      if (iss2) iss2.classList.toggle('active', num === 2);
-      if (b1) b1.classList.toggle('active', num === 1);
-      if (b2) b2.classList.toggle('active', num === 2);
-      history.replaceState(null, '', '#issue-' + num);
+    let currentEdition = 'grok';
+
+    // Episode 1 Panels Data
+    const panels = [
+      { id: 1, name: "The Windswept Ruins", type: "Ultra-Wide Panoramic Establishing Shot" },
+      { id: 2, name: "Eyes in the Dust", type: "Medium Kneeling Hero Shot" },
+      { id: 3, name: "The Crypt of the Serpent", type: "Low-Angle Entrance Shot" },
+      { id: 4, name: "Hall of Serpent Kings", type: "Long Corridor Tracking Shot" },
+      { id: 5, name: "Blades of the Cult", type: "Dynamic Three-Shot Composition" },
+      { id: 6, name: "The Iron Cleave", type: "Dynamic Action Freeze-Frame" },
+      { id: 7, name: "The Cavern of the Lotus", type: "Decadent Wide Interior Shot" },
+      { id: 8, name: "The Captive Maiden", type: "Dramatic Low-Angle Altar Shot" },
+      { id: 9, name: "The Altar of Sarkath", type: "Atmospheric Sorcery Center Shot" },
+      { id: 10, name: "The Barbarian Charge", type: "Dynamic Low-Angle Action Plunge" },
+      { id: 11, name: "Awakening of the Shadow", type: "Monumental Low-Angle Creature Reveal" },
+      { id: 12, name: "Wrath of the Titan", type: "Chaotic Wide Destruction Shot" },
+      { id: 13, name: "Poetic Justice", type: "Brutal Monster Action Mid-Shot" },
+      { id: 14, name: "Laughing at Doom", type: "Iconic Low-Angle Hero Close-Up" },
+      { id: 15, name: "Venom and Stone", type: "Kinetic Action Tracking Shot" },
+      { id: 16, name: "The Fatal Leap", type: "Peak Climax Midair Action Shot" },
+      { id: 17, name: "Death Agony of the Beast", type: "Full Catastrophe Wide Shot" },
+      { id: 18, name: "Severing the Chains", type: "Medium Dynamic Hero Duo Shot" },
+      { id: 19, name: "Escape into the Blinding Light", type: "Exterior Action Breakthrough Shot" },
+      { id: 20, name: "The Crimson Dawn", type: "Epic Panoramic Sunset/Sunrise Hero Shot" }
+    ];
+
+    function renderPanels() {
+      const container = document.getElementById('panels-container');
+      const prefix = currentEdition === 'meta' ? './assets/ep1_meta/' : './assets/ep1/';
+
+      container.innerHTML = panels.map(p => {
+        const pad = String(p.id).padStart(2, '0');
+        const imgSrc = prefix + 'panel_' + pad + '.webp';
+        return `
+          <div class="panel-card" id="panel-${p.id}">
+            <div class="panel-img-wrap" onclick="openLightbox('${imgSrc}', 'Panel ${p.id}: ${p.name} (${currentEdition === 'meta' ? 'Meta AI 2K Frazetta' : 'Grok'})')">
+              <img class="panel-img" src="${imgSrc}" loading="lazy" alt="Panel ${p.id}: ${p.name}">
+            </div>
+            <div class="panel-footer-meta">
+              <span class="panel-num">PANEL ${p.id} OF 20</span>
+              <span class="panel-name">${p.name}</span>
+              <span>${p.type}</span>
+            </div>
+          </div>
+        `;
+      }).join('');
     }
 
-    function switchReaderEditionEp1(edition) {
-      const isMeta = edition === 'meta';
-      document.querySelectorAll('#issue-1 .panel-img').forEach(img => {
-        if (isMeta) {
-          img.src = img.src.replace('/assets/ep1/', '/assets/ep1_meta/');
-        } else {
-          img.src = img.src.replace('/assets/ep1_meta/', '/assets/ep1/');
-        }
-      });
-      const btnGrok = document.getElementById('reader-ep1-btn-grok');
-      const btnMeta = document.getElementById('reader-ep1-btn-meta');
-      if (isMeta) {
-        btnMeta.style.border = '1px solid #0084ff';
-        btnMeta.style.background = '#0d1b2a';
-        btnMeta.style.color = '#90e0ef';
-        btnMeta.style.boxShadow = '0 0 12px rgba(0, 180, 216, 0.4)';
-        btnGrok.style.border = '1px solid #333';
-        btnGrok.style.background = '#15161d';
-        btnGrok.style.color = '#777';
-        btnGrok.style.boxShadow = 'none';
+    function switchGlobalEdition(edition) {
+      currentEdition = edition;
+      const btnGrok = document.getElementById('btn-grok');
+      const btnMeta = document.getElementById('btn-meta');
+      const player = document.getElementById('player');
+      const tag = document.getElementById('video-tag');
+      const currentTime = player.currentTime;
+      const isPaused = player.paused;
+
+      if (edition === 'meta') {
+        btnMeta.classList.add('active');
+        btnGrok.classList.remove('active');
+        tag.className = 'video-edition-tag tag-meta';
+        tag.textContent = '🌟 Meta AI (2K Frazetta) Edition';
+        player.src = './episode_01_meta_motion_comic.mp4';
+        player.poster = './assets/ep1_meta/panel_01.webp';
       } else {
-        btnGrok.style.border = '1px solid #fca311';
-        btnGrok.style.background = '#241910';
-        btnGrok.style.color = '#fca311';
-        btnGrok.style.boxShadow = '0 0 10px rgba(252, 163, 17, 0.3)';
-        btnMeta.style.border = '1px solid #334';
-        btnMeta.style.background = '#111420';
-        btnMeta.style.color = '#8fa0c0';
-        btnMeta.style.boxShadow = 'none';
+        btnGrok.classList.add('active');
+        btnMeta.classList.remove('active');
+        tag.className = 'video-edition-tag tag-grok';
+        tag.textContent = '🎨 Grok Edition';
+        player.src = './episode_01_motion_comic.mp4';
+        player.poster = './assets/ep1/panel_01.webp';
       }
+
+      player.currentTime = currentTime;
+      if (!isPaused) player.play();
+
+      renderPanels();
     }
 
-    function switchReaderEdition(edition) {
-      const isMeta = edition === 'meta';
-      document.querySelectorAll('#issue-2 .panel-img').forEach(img => {
-        if (isMeta) {
-          img.src = img.src.replace('/assets/ep2/', '/assets/ep2_meta/');
-        } else {
-          img.src = img.src.replace('/assets/ep2_meta/', '/assets/ep2/');
-        }
-      });
-      const btnGrok = document.getElementById('reader-btn-grok');
-      const btnMeta = document.getElementById('reader-btn-meta');
-      if (isMeta) {
-        btnMeta.style.border = '1px solid #0084ff';
-        btnMeta.style.background = '#0d1b2a';
-        btnMeta.style.color = '#90e0ef';
-        btnMeta.style.boxShadow = '0 0 12px rgba(0, 180, 216, 0.4)';
-        btnGrok.style.border = '1px solid #333';
-        btnGrok.style.background = '#15161d';
-        btnGrok.style.color = '#777';
-        btnGrok.style.boxShadow = 'none';
-      } else {
-        btnGrok.style.border = '1px solid #fca311';
-        btnGrok.style.background = '#241910';
-        btnGrok.style.color = '#fca311';
-        btnGrok.style.boxShadow = '0 0 10px rgba(252, 163, 17, 0.3)';
-        btnMeta.style.border = '1px solid #334';
-        btnMeta.style.background = '#111420';
-        btnMeta.style.color = '#8fa0c0';
-        btnMeta.style.boxShadow = 'none';
-      }
+    function openLightbox(src, caption) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox-caption').innerText = caption;
+      document.getElementById('lightbox').classList.add('active');
     }
 
-    // Check hash on load - default to Issue 1
-    showIssue(1);
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+
+    // Initial render
+    renderPanels();
   </script>
 </body>
 </html>

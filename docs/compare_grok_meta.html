@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Conan the Barbarian — Studio Comparison: Grok vs Meta AI</title>
+  <title>Issue #1: The Slumbering Serpent — Grok vs Meta AI</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=MedievalSharp&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
@@ -32,7 +32,7 @@
     }
     .series-title {
       font-family: 'Cinzel', serif;
-      font-size: 14px;
+      font-size: 13px;
       color: var(--crimson);
       letter-spacing: 4px;
       text-transform: uppercase;
@@ -41,51 +41,38 @@
     }
     h1 {
       font-family: 'Cinzel', serif;
-      font-size: 34px;
+      font-size: 32px;
       color: var(--gold);
       letter-spacing: 2px;
       text-transform: uppercase;
       text-shadow: 0 0 20px rgba(252, 163, 17, 0.4);
     }
     .subtitle {
-      font-size: 15px;
+      font-size: 14px;
       color: #aaa;
-      margin-top: 8px;
+      margin-top: 6px;
       letter-spacing: 1px;
     }
-
     .controls {
       display: flex;
       justify-content: center;
       gap: 14px;
-      margin-top: 22px;
+      margin-top: 20px;
       flex-wrap: wrap;
     }
     .btn {
       font-family: 'Cinzel', serif;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: bold;
       padding: 10px 22px;
       border-radius: 6px;
       cursor: pointer;
       text-transform: uppercase;
       letter-spacing: 1.5px;
-      transition: all 0.25s ease;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
       gap: 8px;
-    }
-    .btn-tab {
-      background: #181924;
-      border: 1px solid #333;
-      color: #bbb;
-    }
-    .btn-tab.active {
-      background: #241910;
-      border-color: var(--gold);
-      color: var(--gold);
-      box-shadow: 0 0 15px rgba(252, 163, 17, 0.35);
     }
     .btn-nav {
       background: #101924;
@@ -119,7 +106,7 @@
     }
     .video-title {
       font-family: 'Cinzel', serif;
-      font-size: 16px;
+      font-size: 15px;
       color: var(--gold);
       letter-spacing: 1.5px;
       text-transform: uppercase;
@@ -175,62 +162,12 @@
       color: var(--gold);
     }
 
-    /* VOICE DNA CAST BAR */
-    .voice-bar {
-      max-width: 1700px;
-      margin: 0 auto 30px;
-      background: #12131b;
-      border: 1px solid #282a3a;
-      border-radius: 10px;
-      padding: 14px 22px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-    .voice-title {
-      font-family: 'Cinzel', serif;
-      font-size: 13px;
-      color: var(--gold);
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-    }
-    .voice-chips {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-    .voice-chip {
-      background: #1a1c27;
-      border: 1px solid #33374d;
-      border-radius: 6px;
-      padding: 5px 10px;
-      font-size: 11px;
-      color: #ccc;
-    }
-    .voice-chip strong {
-      color: var(--gold);
-    }
-    .voice-chip span.actor {
-      color: var(--meta-blue);
-      font-weight: 600;
-    }
-
     .comparison-container {
       max-width: 1700px;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
       gap: 50px;
-    }
-    .issue-section {
-      display: none;
-      flex-direction: column;
-      gap: 50px;
-    }
-    .issue-section.active {
-      display: flex;
     }
 
     .panel-row {
@@ -284,57 +221,6 @@
       color: #ffd166;
       font-family: 'MedievalSharp', serif;
       font-size: 14px;
-    }
-
-    /* AUDIO PLAYER ROW */
-    .panel-audio-bar {
-      background: #151622;
-      padding: 10px 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 1px solid #222436;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-    .audio-info {
-      font-size: 12px;
-      color: #bbb;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .audio-info strong {
-      color: var(--gold);
-    }
-    .audio-player-widget audio {
-      height: 32px;
-      outline: none;
-      filter: invert(0.85) hue-rotate(180deg);
-    }
-
-    /* DIALOGUE BOX */
-    .dialogue-box {
-      margin-top: 10px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-    .dia-line {
-      font-size: 12px;
-      background: #151722;
-      padding: 6px 12px;
-      border-radius: 4px;
-      border-left: 3px solid var(--gold);
-    }
-    .dia-speaker {
-      font-weight: bold;
-      color: var(--gold);
-      margin-right: 8px;
-    }
-    .dia-text {
-      color: #e2e2e8;
-      font-style: italic;
     }
 
     .split-grid {
@@ -405,17 +291,6 @@
       transform: scale(1.02);
     }
 
-    .pill-badge {
-      font-size: 10px;
-      padding: 3px 8px;
-      border-radius: 4px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-weight: bold;
-    }
-    .pill-grok { background: #3d2508; color: #ffbe0b; }
-    .pill-meta { background: #072a3a; color: #48cae4; }
-
     /* LIGHTBOX MODAL */
     #lightbox {
       display: none;
@@ -466,1951 +341,822 @@
 
   <header>
     <div class="series-title">Conan the Barbarian Studio</div>
-    <h1>Multi-Comic Studio Comparison</h1>
-    <div class="subtitle">Complete Side-by-Side Comparison: Grok Edition vs. Meta AI (2K Frazetta) Edition — with Full Motion Comic Video & Audio</div>
+    <h1>Issue #1: The Slumbering Serpent</h1>
+    <div class="subtitle">Side-by-Side Comparison: Grok vs Meta AI (2K Frazetta) — with Full Episode 1 Motion Comic Video & Audio</div>
 
     <div class="controls">
-      <button class="btn btn-tab active" id="btn-ep1" onclick="switchEpisode(1)">⚔️ Issue #1: The Slumbering Serpent</button>
-      <button class="btn btn-tab" id="btn-ep2" onclick="switchEpisode(2)">🗡️ Issue #2: The Blood-Thieves of Valkash</button>
-      <a href="./index.html" class="btn btn-nav">📖 Graphic Novel Reader</a>
-      <a href="./video_preview.html" class="btn btn-nav">🎬 Standalone Video Theater</a>
+      <a href="./index.html" class="btn btn-nav">📖 Full Episode 1 Reader & Movie Theater</a>
     </div>
   </header>
 
   <!-- DUAL MOTION COMIC MOVIE PLAYER -->
   <section class="video-section">
     <div class="video-header">
-      <div class="video-title">🎬 Motion Comic Movie Player (Dual Edition)</div>
+      <div class="video-title">🎬 Episode 1 Motion Comic Movie (Dual Edition)</div>
       <div class="video-switcher">
         <button class="video-btn active grok" id="vbtn-grok" onclick="switchVideoEdition('grok')">🎨 Grok Video</button>
         <button class="video-btn meta" id="vbtn-meta" onclick="switchVideoEdition('meta')">🌟 Meta AI (2K Frazetta) Video</button>
       </div>
     </div>
-    <video id="dual-video-player" controls playsinline poster="./assets/ep2/panel_01.webp">
-      <source id="video-src" src="./episode_02_motion_comic.mp4" type="video/mp4">
+    <video id="dual-video-player" controls playsinline poster="./assets/ep1/panel_01.webp">
+      <source id="video-src" src="./episode_01_motion_comic.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
     <div class="video-meta-bar">
-      <span><strong>Track:</strong> <span id="video-edition-label">Grok Edition</span> (Full 20-Panel Cinematic Motion Comic)</span>
-      <span><strong>Voices:</strong> Brian (Korvath Kratos DSP) • Sarah (Natari) • Charlie (Lord Malakor)</span>
+      <span><strong>Track:</strong> <span id="video-edition-label">Grok Edition</span> (Full 20-Panel Movie)</span>
+      <span><strong>Voice Cast:</strong> Brian (Narrator) • Subterranean Kratos Korvath • Sarah (Natari)</span>
     </div>
   </section>
 
-  <!-- CANONICAL VOICE CAST DNA -->
-  <div class="voice-bar">
-    <div class="voice-title">🎙️ Canonical Voice Cast & DSP Engine:</div>
-    <div class="voice-chips">
-      <div class="voice-chip">
-        <strong>Korvath:</strong> <span class="actor">Subterranean Kratos</span> (Brian -12% Pitch + 8dB Sub-Bass)
-      </div>
-      <div class="voice-chip">
-        <strong>Natari:</strong> <span class="actor">Sarah</span> (Sultry Rogue / Terrified Screams)
-      </div>
-      <div class="voice-chip">
-        <strong>Lord Malakor:</strong> <span class="actor">Charlie</span> (Charles Dance Silk Prince)
-      </div>
-      <div class="voice-chip">
-        <strong>Spider Assassin:</strong> <span class="actor">George</span> (Whispered Hiss)
-      </div>
-      <div class="voice-chip">
-        <strong>Narrator:</strong> <span class="actor">The Dark Bard</span> (Brian Cinematic Trailer Actor)
-      </div>
-    </div>
-  </div>
-
   <main class="comparison-container">
-
-    <!-- ISSUE 1 -->
-    <section class="issue-section active" id="sec-issue-1">
+    
+      <article class="panel-row" id="panel-ep1-1">
+        <div class="panel-header-bar">
+          <div class="panel-title">
+            <span class="panel-number">PANEL 1 / 20</span>
+            <span>The Windswept Ruins</span>
+          </div>
+          <div style="font-size:12px; color:#888;">Ultra-Wide Panoramic Establishing Shot</div>
+        </div>
+        <div class="panel-action">
+          <strong>Action:</strong> A solitary, massive barbarian warrior treks through towering scarlet desert dunes toward a monolithic, crumbling black basalt pyramid half-buried in shifting sand under a violent blood-orange dusk.
+          <div class="panel-caption-text">📜 "Before the first iron towers rose, and before the empires of dust forgot their makers, there walked an older breed of men—forged in blood, bound by no king's law."</div>
+          
+        </div>
+        <div class="split-grid">
+          <!-- GROK -->
+          <div class="edition-col col-grok">
+            <div class="edition-tag tag-grok">
+              <span>🎨 Grok Edition</span>
+            </div>
+            <div class="image-wrap" onclick="openLightbox('./assets/ep1/panel_01.webp', 'Panel 1 — Grok Edition')">
+              <img src="./assets/ep1/panel_01.webp" loading="lazy" alt="Issue 1 Panel 1 Grok">
+            </div>
+          </div>
+          <!-- META AI -->
+          <div class="edition-col col-meta">
+            <div class="edition-tag tag-meta">
+              <span>🌟 Meta AI Edition</span>
+            </div>
+            <div class="image-wrap" onclick="openLightbox('./assets/ep1_meta/panel_01.webp', 'Panel 1 — Meta AI Edition')">
+              <img src="./assets/ep1_meta/panel_01.webp" loading="lazy" alt="Issue 1 Panel 1 Meta AI">
+            </div>
+          </div>
+        </div>
+      </article>
       
-        <article class="panel-row" id="panel-ep1-1">
-          <div class="panel-header-bar">
-            <div class="panel-title">
-              <span class="panel-number">PANEL 1 / 20</span>
-              <span>The Windswept Ruins</span>
-            </div>
-            <div style="font-size:12px; color:#888;">Ultra-Wide Panoramic Establishing Shot</div>
+      <article class="panel-row" id="panel-ep1-2">
+        <div class="panel-header-bar">
+          <div class="panel-title">
+            <span class="panel-number">PANEL 2 / 20</span>
+            <span>Eyes in the Dust</span>
           </div>
-          <div class="panel-action">
-            <strong>Action:</strong> A solitary, massive barbarian warrior treks through towering scarlet desert dunes toward a monolithic, crumbling black basalt pyramid half-buried in shifting sand under a violent blood-orange dusk.
-            <div class="panel-caption-text">📜 "Before the first iron towers rose, and before the empires of dust forgot their makers, there walked an older breed of men—forged in blood, bound by no king's law."</div>
-            
-          </div>
-          <div class="split-grid">
-            <!-- GROK -->
-            <div class="edition-col col-grok">
-              <div class="edition-tag tag-grok">
-                <span>🎨 Grok Edition</span>
-                <span class="pill-badge pill-grok">Original</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep1/panel_01.webp', 'Issue 1 Panel 1 — Grok Edition')">
-                <img src="./assets/ep1/panel_01.webp" loading="lazy" alt="Issue 1 Panel 1 Grok">
-              </div>
+          <div style="font-size:12px; color:#888;">Medium Kneeling Hero Shot</div>
+        </div>
+        <div class="panel-action">
+          <strong>Action:</strong> Korvath kneels upon one knee in the wind-whipped sand, inspecting freshly disturbed footprints near a dry animal skull, scarred weathered fingers resting securely on the wire-bound hilt of his massive broadsword.
+          <div class="panel-caption-text">📜 "He smelled the bitter smoke of grey lotus on the desert wind—and the cold oil of drawn blades."</div>
+          
+        </div>
+        <div class="split-grid">
+          <!-- GROK -->
+          <div class="edition-col col-grok">
+            <div class="edition-tag tag-grok">
+              <span>🎨 Grok Edition</span>
             </div>
-            <!-- META AI -->
-            <div class="edition-col col-meta">
-              <div class="edition-tag tag-meta">
-                <span>🌟 Meta AI Edition</span>
-                <span class="pill-badge pill-meta">2K Frazetta</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep1_meta/panel_01.webp', 'Issue 1 Panel 1 — Meta AI Edition')">
-                <img src="./assets/ep1_meta/panel_01.webp" loading="lazy" alt="Issue 1 Panel 1 Meta AI">
-              </div>
+            <div class="image-wrap" onclick="openLightbox('./assets/ep1/panel_02.webp', 'Panel 2 — Grok Edition')">
+              <img src="./assets/ep1/panel_02.webp" loading="lazy" alt="Issue 1 Panel 2 Grok">
             </div>
           </div>
-        </article>
-        
-        <article class="panel-row" id="panel-ep1-2">
-          <div class="panel-header-bar">
-            <div class="panel-title">
-              <span class="panel-number">PANEL 2 / 20</span>
-              <span>Eyes in the Dust</span>
+          <!-- META AI -->
+          <div class="edition-col col-meta">
+            <div class="edition-tag tag-meta">
+              <span>🌟 Meta AI Edition</span>
             </div>
-            <div style="font-size:12px; color:#888;">Medium Kneeling Hero Shot</div>
-          </div>
-          <div class="panel-action">
-            <strong>Action:</strong> Korvath kneels upon one knee in the wind-whipped sand, inspecting freshly disturbed footprints near a dry animal skull, scarred weathered fingers resting securely on the wire-bound hilt of his massive broadsword.
-            <div class="panel-caption-text">📜 "He smelled the bitter smoke of grey lotus on the desert wind—and the cold oil of drawn blades."</div>
-            
-          </div>
-          <div class="split-grid">
-            <!-- GROK -->
-            <div class="edition-col col-grok">
-              <div class="edition-tag tag-grok">
-                <span>🎨 Grok Edition</span>
-                <span class="pill-badge pill-grok">Original</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep1/panel_02.webp', 'Issue 1 Panel 2 — Grok Edition')">
-                <img src="./assets/ep1/panel_02.webp" loading="lazy" alt="Issue 1 Panel 2 Grok">
-              </div>
-            </div>
-            <!-- META AI -->
-            <div class="edition-col col-meta">
-              <div class="edition-tag tag-meta">
-                <span>🌟 Meta AI Edition</span>
-                <span class="pill-badge pill-meta">2K Frazetta</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep1_meta/panel_02.webp', 'Issue 1 Panel 2 — Meta AI Edition')">
-                <img src="./assets/ep1_meta/panel_02.webp" loading="lazy" alt="Issue 1 Panel 2 Meta AI">
-              </div>
+            <div class="image-wrap" onclick="openLightbox('./assets/ep1_meta/panel_02.webp', 'Panel 2 — Meta AI Edition')">
+              <img src="./assets/ep1_meta/panel_02.webp" loading="lazy" alt="Issue 1 Panel 2 Meta AI">
             </div>
           </div>
-        </article>
-        
-        <article class="panel-row" id="panel-ep1-3">
-          <div class="panel-header-bar">
-            <div class="panel-title">
-              <span class="panel-number">PANEL 3 / 20</span>
-              <span>The Crypt of the Serpent</span>
-            </div>
-            <div style="font-size:12px; color:#888;">Low-Angle Entrance Shot</div>
-          </div>
-          <div class="panel-action">
-            <strong>Action:</strong> Korvath heaves aside an ancient shattered granite door slab carved with writhing serpent reliefs, descending down steep stone stairs into the shadowed crypt, holding high a blazing pine pitch torch.
-            <div class="panel-caption-text">📜 "Into the bowels of forgotten Sarkesh he strode, where gods older than mankind slept in stagnant gloom."</div>
-            
-          </div>
-          <div class="split-grid">
-            <!-- GROK -->
-            <div class="edition-col col-grok">
-              <div class="edition-tag tag-grok">
-                <span>🎨 Grok Edition</span>
-                <span class="pill-badge pill-grok">Original</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep1/panel_03.webp', 'Issue 1 Panel 3 — Grok Edition')">
-                <img src="./assets/ep1/panel_03.webp" loading="lazy" alt="Issue 1 Panel 3 Grok">
-              </div>
-            </div>
-            <!-- META AI -->
-            <div class="edition-col col-meta">
-              <div class="edition-tag tag-meta">
-                <span>🌟 Meta AI Edition</span>
-                <span class="pill-badge pill-meta">2K Frazetta</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep1_meta/panel_03.webp', 'Issue 1 Panel 3 — Meta AI Edition')">
-                <img src="./assets/ep1_meta/panel_03.webp" loading="lazy" alt="Issue 1 Panel 3 Meta AI">
-              </div>
-            </div>
-          </div>
-        </article>
-        
-        <article class="panel-row" id="panel-ep1-4">
-          <div class="panel-header-bar">
-            <div class="panel-title">
-              <span class="panel-number">PANEL 4 / 20</span>
-              <span>Hall of Serpent Kings</span>
-            </div>
-            <div style="font-size:12px; color:#888;">Long Corridor Tracking Shot</div>
-          </div>
-          <div class="panel-action">
-            <strong>Action:</strong> Korvath stalks cautiously down a grand subterranean hall between colossal stone pillars carved like giant rearing cobras, dust and ancient web filaments floating in the orange torch flare.
-            <div class="panel-caption-text">📜 "The air tasted of tomb-rot and dried venom. A thousand dead eyes watched from the stone."</div>
-            
-          </div>
-          <div class="split-grid">
-            <!-- GROK -->
-            <div class="edition-col col-grok">
-              <div class="edition-tag tag-grok">
-                <span>🎨 Grok Edition</span>
-                <span class="pill-badge pill-grok">Original</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep1/panel_04.webp', 'Issue 1 Panel 4 — Grok Edition')">
-                <img src="./assets/ep1/panel_04.webp" loading="lazy" alt="Issue 1 Panel 4 Grok">
-              </div>
-            </div>
-            <!-- META AI -->
-            <div class="edition-col col-meta">
-              <div class="edition-tag tag-meta">
-                <span>🌟 Meta AI Edition</span>
-                <span class="pill-badge pill-meta">2K Frazetta</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep1_meta/panel_04.webp', 'Issue 1 Panel 4 — Meta AI Edition')">
-                <img src="./assets/ep1_meta/panel_04.webp" loading="lazy" alt="Issue 1 Panel 4 Meta AI">
-              </div>
-            </div>
-          </div>
-        </article>
-        
-        <article class="panel-row" id="panel-ep1-5">
-          <div class="panel-header-bar">
-            <div class="panel-title">
-              <span class="panel-number">PANEL 5 / 20</span>
-              <span>Blades of the Cult</span>
-            </div>
-            <div style="font-size:12px; color:#888;">Dynamic Three-Shot Composition</div>
-          </div>
-          <div class="panel-action">
-            <strong>Action:</strong> Three masked Sarkeshian cultists in flowing crimson robes and gilded bronze cobra masks drop from carved temple pillars, curved steel scimitars raised in ambush.
-            <div class="panel-caption-text">📜 "They sprang like shadows from the tomb pillars—silent as striking adders."</div>
-            
-              <div class="dialogue-box">
-                
-                  <div class="dia-line">
-                    <span class="dia-speaker">Sarkeshian Cultist:</span>
-                    <span class="dia-text">"Die, dog of the north! Sarkath claims your flesh!"</span>
-                  </div>
-                
-              </div>
-            
-          </div>
-          <div class="split-grid">
-            <!-- GROK -->
-            <div class="edition-col col-grok">
-              <div class="edition-tag tag-grok">
-                <span>🎨 Grok Edition</span>
-                <span class="pill-badge pill-grok">Original</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep1/panel_05.webp', 'Issue 1 Panel 5 — Grok Edition')">
-                <img src="./assets/ep1/panel_05.webp" loading="lazy" alt="Issue 1 Panel 5 Grok">
-              </div>
-            </div>
-            <!-- META AI -->
-            <div class="edition-col col-meta">
-              <div class="edition-tag tag-meta">
-                <span>🌟 Meta AI Edition</span>
-                <span class="pill-badge pill-meta">2K Frazetta</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep1_meta/panel_05.webp', 'Issue 1 Panel 5 — Meta AI Edition')">
-                <img src="./assets/ep1_meta/panel_05.webp" loading="lazy" alt="Issue 1 Panel 5 Meta AI">
-              </div>
-            </div>
-          </div>
-        </article>
-        
-        <article class="panel-row" id="panel-ep1-6">
-          <div class="panel-header-bar">
-            <div class="panel-title">
-              <span class="panel-number">PANEL 6 / 20</span>
-              <span>The Iron Cleave</span>
-            </div>
-            <div style="font-size:12px; color:#888;">Dynamic Action Freeze-Frame</div>
-          </div>
-          <div class="panel-action">
-            <strong>Action:</strong> With explosive pantherish speed, Korvath ducks beneath a curved scimitar and swings his massive two-handed broadsword in a brutal horizontal cleave, cleaving through the central cultist's torso with a spray of crimson blood as the shattered bronze cobra mask flies across the flagstones, the other cultists recoiling in terror.
-            <div class="panel-caption-text">📜 "Civilized men debate right and wrong. The Northman answered with four feet of tempered steel."</div>
-            
-              <div class="dialogue-box">
-                
-                  <div class="dia-line">
-                    <span class="dia-speaker">Korvath:</span>
-                    <span class="dia-text">"Tell Sarkath his rent is due."</span>
-                  </div>
-                
-              </div>
-            
-          </div>
-          <div class="split-grid">
-            <!-- GROK -->
-            <div class="edition-col col-grok">
-              <div class="edition-tag tag-grok">
-                <span>🎨 Grok Edition</span>
-                <span class="pill-badge pill-grok">Original</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep1/panel_06.webp', 'Issue 1 Panel 6 — Grok Edition')">
-                <img src="./assets/ep1/panel_06.webp" loading="lazy" alt="Issue 1 Panel 6 Grok">
-              </div>
-            </div>
-            <!-- META AI -->
-            <div class="edition-col col-meta">
-              <div class="edition-tag tag-meta">
-                <span>🌟 Meta AI Edition</span>
-                <span class="pill-badge pill-meta">2K Frazetta</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep1_meta/panel_06.webp', 'Issue 1 Panel 6 — Meta AI Edition')">
-                <img src="./assets/ep1_meta/panel_06.webp" loading="lazy" alt="Issue 1 Panel 6 Meta AI">
-              </div>
-            </div>
-          </div>
-        </article>
-        
-        <article class="panel-row" id="panel-ep1-7">
-          <div class="panel-header-bar">
-            <div class="panel-title">
-              <span class="panel-number">PANEL 7 / 20</span>
-              <span>The Cavern of the Lotus</span>
-            </div>
-            <div style="font-size:12px; color:#888;">Wide Cavern High-Angle View</div>
-          </div>
-          <div class="panel-action">
-            <strong>Action:</strong> Wide view of the opulent temple cavern bathed in hazy green light and swirling lotus smoke. On plush silk cushions lounge two gorgeous exotic maidens in revealing hammered bronze scale bikinis and jeweled arm torcs, while smoking bronze serpent braziers exhale swirling grey incense into the vaulted gloom.
-            <div class="panel-caption-text">📜 "Behind the charnel-house lay decadence. Scented lotus, velvet pillows, and the captive flowers of conquered desert tribes."</div>
-            
-          </div>
-          <div class="split-grid">
-            <!-- GROK -->
-            <div class="edition-col col-grok">
-              <div class="edition-tag tag-grok">
-                <span>🎨 Grok Edition</span>
-                <span class="pill-badge pill-grok">Original</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep1/panel_07.webp', 'Issue 1 Panel 7 — Grok Edition')">
-                <img src="./assets/ep1/panel_07.webp" loading="lazy" alt="Issue 1 Panel 7 Grok">
-              </div>
-            </div>
-            <!-- META AI -->
-            <div class="edition-col col-meta">
-              <div class="edition-tag tag-meta">
-                <span>🌟 Meta AI Edition</span>
-                <span class="pill-badge pill-meta">2K Frazetta</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep1_meta/panel_07.webp', 'Issue 1 Panel 7 — Meta AI Edition')">
-                <img src="./assets/ep1_meta/panel_07.webp" loading="lazy" alt="Issue 1 Panel 7 Meta AI">
-              </div>
-            </div>
-          </div>
-        </article>
-        
-        <article class="panel-row" id="panel-ep1-8">
-          <div class="panel-header-bar">
-            <div class="panel-title">
-              <span class="panel-number">PANEL 8 / 20</span>
-              <span>The Captive Maiden</span>
-            </div>
-            <div style="font-size:12px; color:#888;">Medium Close Heroine Portrait</div>
-          </div>
-          <div class="panel-action">
-            <strong>Action:</strong> Dramatic medium shot of Natari, breathtaking exotic desert maiden in a revealing hammered bronze scale bikini and jeweled hip chains, bound by delicate gilded serpent chains to a black basalt pillar before the sacrificial dais, her smoldering kohl-lined feline eyes looking upward into the shadows where Korvath crouches ready.
-            <div class="panel-caption-text">📜 "She did not weep like the women of the south. Her dark eyes held the fire of a desert panther waiting for blood."</div>
-            
-              <div class="dialogue-box">
-                
-                  <div class="dia-line">
-                    <span class="dia-speaker">Natari:</span>
-                    <span class="dia-text">"Strike swiftly, barbarian... or we both feed the abyss."</span>
-                  </div>
-                
-              </div>
-            
-          </div>
-          <div class="split-grid">
-            <!-- GROK -->
-            <div class="edition-col col-grok">
-              <div class="edition-tag tag-grok">
-                <span>🎨 Grok Edition</span>
-                <span class="pill-badge pill-grok">Original</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep1/panel_08.webp', 'Issue 1 Panel 8 — Grok Edition')">
-                <img src="./assets/ep1/panel_08.webp" loading="lazy" alt="Issue 1 Panel 8 Grok">
-              </div>
-            </div>
-            <!-- META AI -->
-            <div class="edition-col col-meta">
-              <div class="edition-tag tag-meta">
-                <span>🌟 Meta AI Edition</span>
-                <span class="pill-badge pill-meta">2K Frazetta</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep1_meta/panel_08.webp', 'Issue 1 Panel 8 — Meta AI Edition')">
-                <img src="./assets/ep1_meta/panel_08.webp" loading="lazy" alt="Issue 1 Panel 8 Meta AI">
-              </div>
-            </div>
-          </div>
-        </article>
-        
-        <article class="panel-row" id="panel-ep1-9">
-          <div class="panel-header-bar">
-            <div class="panel-title">
-              <span class="panel-number">PANEL 9 / 20</span>
-              <span>The Altar of Sarkath</span>
-            </div>
-            <div style="font-size:12px; color:#888;">Wide Ritual Colonnade View</div>
-          </div>
-          <div class="panel-action">
-            <strong>Action:</strong> At the far end of the grand colonnade, High Priest Kheshat in pleated black silk robes stands before an ancient stone dais bathed in swirling emerald sorcerous fire, holding aloft a carved ebony serpent staff, invoking the dark rites.
-            <div class="panel-caption-text">📜 "Upon the dais stood the high priest of the serpent, drunk on dark lotus and foul sorceries."</div>
-            
-              <div class="dialogue-box">
-                
-                  <div class="dia-line">
-                    <span class="dia-speaker">Kheshat:</span>
-                    <span class="dia-text">"O Sleeper of the Deep! Taste the virgin blood and rise!"</span>
-                  </div>
-                
-              </div>
-            
-          </div>
-          <div class="split-grid">
-            <!-- GROK -->
-            <div class="edition-col col-grok">
-              <div class="edition-tag tag-grok">
-                <span>🎨 Grok Edition</span>
-                <span class="pill-badge pill-grok">Original</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep1/panel_09.webp', 'Issue 1 Panel 9 — Grok Edition')">
-                <img src="./assets/ep1/panel_09.webp" loading="lazy" alt="Issue 1 Panel 9 Grok">
-              </div>
-            </div>
-            <!-- META AI -->
-            <div class="edition-col col-meta">
-              <div class="edition-tag tag-meta">
-                <span>🌟 Meta AI Edition</span>
-                <span class="pill-badge pill-meta">2K Frazetta</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep1_meta/panel_09.webp', 'Issue 1 Panel 9 — Meta AI Edition')">
-                <img src="./assets/ep1_meta/panel_09.webp" loading="lazy" alt="Issue 1 Panel 9 Meta AI">
-              </div>
-            </div>
-          </div>
-        </article>
-        
-        <article class="panel-row" id="panel-ep1-10">
-          <div class="panel-header-bar">
-            <div class="panel-title">
-              <span class="panel-number">PANEL 10 / 20</span>
-              <span>The Barbarian Charge</span>
-            </div>
-            <div style="font-size:12px; color:#888;">Dynamic Low-Angle Impact Shot</div>
-          </div>
-          <div class="panel-action">
-            <strong>Action:</strong> Korvath drops from the high balcony into the center of the sanctuary with earth-shaking impact, broadsword raised in two-handed grip, hurling his blazing torch directly into the altar brazier as sparks explode and temple guards scramble in panic.
-            <div class="panel-caption-text">📜 "He did not parley. He did not boast. A barbarian strikes while civilized men are still clearing their throats."</div>
-            
-              <div class="dialogue-box">
-                
-                  <div class="dia-line">
-                    <span class="dia-speaker">Korvath:</span>
-                    <span class="dia-text">"The only god you answer to today is cold iron!"</span>
-                  </div>
-                
-              </div>
-            
-          </div>
-          <div class="split-grid">
-            <!-- GROK -->
-            <div class="edition-col col-grok">
-              <div class="edition-tag tag-grok">
-                <span>🎨 Grok Edition</span>
-                <span class="pill-badge pill-grok">Original</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep1/panel_10.webp', 'Issue 1 Panel 10 — Grok Edition')">
-                <img src="./assets/ep1/panel_10.webp" loading="lazy" alt="Issue 1 Panel 10 Grok">
-              </div>
-            </div>
-            <!-- META AI -->
-            <div class="edition-col col-meta">
-              <div class="edition-tag tag-meta">
-                <span>🌟 Meta AI Edition</span>
-                <span class="pill-badge pill-meta">2K Frazetta</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep1_meta/panel_10.webp', 'Issue 1 Panel 10 — Meta AI Edition')">
-                <img src="./assets/ep1_meta/panel_10.webp" loading="lazy" alt="Issue 1 Panel 10 Meta AI">
-              </div>
-            </div>
-          </div>
-        </article>
-        
-        <article class="panel-row" id="panel-ep1-11">
-          <div class="panel-header-bar">
-            <div class="panel-title">
-              <span class="panel-number">PANEL 11 / 20</span>
-              <span>Awakening of the Shadow</span>
-            </div>
-            <div style="font-size:12px; color:#888;">Colossal Creature Reveal Shot</div>
-          </div>
-          <div class="panel-action">
-            <strong>Action:</strong> An immense primordial serpent beast emerges from a subterranean trench behind the altar, emerald iridescent scales catching the mystic fire, unhinging jaws lined with dagger-like fangs as it hisses with earth-shaking venom.
-            <div class="panel-caption-text">📜 "Not a beast of nature, but a nightmare spawned before the stars grew cold."</div>
-            
-          </div>
-          <div class="split-grid">
-            <!-- GROK -->
-            <div class="edition-col col-grok">
-              <div class="edition-tag tag-grok">
-                <span>🎨 Grok Edition</span>
-                <span class="pill-badge pill-grok">Original</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep1/panel_11.webp', 'Issue 1 Panel 11 — Grok Edition')">
-                <img src="./assets/ep1/panel_11.webp" loading="lazy" alt="Issue 1 Panel 11 Grok">
-              </div>
-            </div>
-            <!-- META AI -->
-            <div class="edition-col col-meta">
-              <div class="edition-tag tag-meta">
-                <span>🌟 Meta AI Edition</span>
-                <span class="pill-badge pill-meta">2K Frazetta</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep1_meta/panel_11.webp', 'Issue 1 Panel 11 — Meta AI Edition')">
-                <img src="./assets/ep1_meta/panel_11.webp" loading="lazy" alt="Issue 1 Panel 11 Meta AI">
-              </div>
-            </div>
-          </div>
-        </article>
-        
-        <article class="panel-row" id="panel-ep1-12">
-          <div class="panel-header-bar">
-            <div class="panel-title">
-              <span class="panel-number">PANEL 12 / 20</span>
-              <span>Wrath of the Titan</span>
-            </div>
-            <div style="font-size:12px; color:#888;">Wide Cataclysmic Destruction Shot</div>
-          </div>
-          <div class="panel-action">
-            <strong>Action:</strong> The colossal serpent thrashes violently, thick armored coils smashing through a massive stone pillar which splinters into falling granite boulders. In the foreground, Natari and the maidens in their bronze scale bikinis dive for cover behind the heavy throne dais.
-            <div class="panel-caption-text">📜 "The temple groaned under the wrath of an elder age. The foundations of Sarkesh began to crumble."</div>
-            
-          </div>
-          <div class="split-grid">
-            <!-- GROK -->
-            <div class="edition-col col-grok">
-              <div class="edition-tag tag-grok">
-                <span>🎨 Grok Edition</span>
-                <span class="pill-badge pill-grok">Original</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep1/panel_12.webp', 'Issue 1 Panel 12 — Grok Edition')">
-                <img src="./assets/ep1/panel_12.webp" loading="lazy" alt="Issue 1 Panel 12 Grok">
-              </div>
-            </div>
-            <!-- META AI -->
-            <div class="edition-col col-meta">
-              <div class="edition-tag tag-meta">
-                <span>🌟 Meta AI Edition</span>
-                <span class="pill-badge pill-meta">2K Frazetta</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep1_meta/panel_12.webp', 'Issue 1 Panel 12 — Meta AI Edition')">
-                <img src="./assets/ep1_meta/panel_12.webp" loading="lazy" alt="Issue 1 Panel 12 Meta AI">
-              </div>
-            </div>
-          </div>
-        </article>
-        
-        <article class="panel-row" id="panel-ep1-13">
-          <div class="panel-header-bar">
-            <div class="panel-title">
-              <span class="panel-number">PANEL 13 / 20</span>
-              <span>Poetic Justice</span>
-            </div>
-            <div style="font-size:12px; color:#888;">Dramatic Lethal Strike Shot</div>
-          </div>
-          <div class="panel-action">
-            <strong>Action:</strong> High Priest Kheshat screams in horror as the titan serpent's gargantuan horned maw snaps shut around him, splintering his ebony staff and black silk robes mid-prayer as dark crimson blood sprays across the altar stones.
-            <div class="panel-caption-text">📜 "The gods of darkness have no love for their priests—only hunger."</div>
-            
-              <div class="dialogue-box">
-                
-                  <div class="dia-line">
-                    <span class="dia-speaker">Kheshat:</span>
-                    <span class="dia-text">"No! I am your voice! I am your—AARRGH!"</span>
-                  </div>
-                
-              </div>
-            
-          </div>
-          <div class="split-grid">
-            <!-- GROK -->
-            <div class="edition-col col-grok">
-              <div class="edition-tag tag-grok">
-                <span>🎨 Grok Edition</span>
-                <span class="pill-badge pill-grok">Original</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep1/panel_13.webp', 'Issue 1 Panel 13 — Grok Edition')">
-                <img src="./assets/ep1/panel_13.webp" loading="lazy" alt="Issue 1 Panel 13 Grok">
-              </div>
-            </div>
-            <!-- META AI -->
-            <div class="edition-col col-meta">
-              <div class="edition-tag tag-meta">
-                <span>🌟 Meta AI Edition</span>
-                <span class="pill-badge pill-meta">2K Frazetta</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep1_meta/panel_13.webp', 'Issue 1 Panel 13 — Meta AI Edition')">
-                <img src="./assets/ep1_meta/panel_13.webp" loading="lazy" alt="Issue 1 Panel 13 Meta AI">
-              </div>
-            </div>
-          </div>
-        </article>
-        
-        <article class="panel-row" id="panel-ep1-14">
-          <div class="panel-header-bar">
-            <div class="panel-title">
-              <span class="panel-number">PANEL 14 / 20</span>
-              <span>Laughing at Doom</span>
-            </div>
-            <div style="font-size:12px; color:#888;">Tight Chiaroscuro Hero Portrait</div>
-          </div>
-          <div class="panel-action">
-            <strong>Action:</strong> Korvath stands firm amid the green sorcerous glare and crashing debris, broad scarred muscles tensed, smoldering blue wolfish eyes wide with battle-fury, lips pulled back in a fierce, fearless warrior grin.
-            <div class="panel-caption-text">📜 "Men bred in cities trembled before the dark gods. But a barbarian from the northern crags knew only that anything that breathes can die."</div>
-            
-              <div class="dialogue-box">
-                
-                  <div class="dia-line">
-                    <span class="dia-speaker">Korvath:</span>
-                    <span class="dia-text">"Hiss all you want, worm! The Iron Gods do not care, and neither do I!"</span>
-                  </div>
-                
-              </div>
-            
-          </div>
-          <div class="split-grid">
-            <!-- GROK -->
-            <div class="edition-col col-grok">
-              <div class="edition-tag tag-grok">
-                <span>🎨 Grok Edition</span>
-                <span class="pill-badge pill-grok">Original</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep1/panel_14.webp', 'Issue 1 Panel 14 — Grok Edition')">
-                <img src="./assets/ep1/panel_14.webp" loading="lazy" alt="Issue 1 Panel 14 Grok">
-              </div>
-            </div>
-            <!-- META AI -->
-            <div class="edition-col col-meta">
-              <div class="edition-tag tag-meta">
-                <span>🌟 Meta AI Edition</span>
-                <span class="pill-badge pill-meta">2K Frazetta</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep1_meta/panel_14.webp', 'Issue 1 Panel 14 — Meta AI Edition')">
-                <img src="./assets/ep1_meta/panel_14.webp" loading="lazy" alt="Issue 1 Panel 14 Meta AI">
-              </div>
-            </div>
-          </div>
-        </article>
-        
-        <article class="panel-row" id="panel-ep1-15">
-          <div class="panel-header-bar">
-            <div class="panel-title">
-              <span class="panel-number">PANEL 15 / 20</span>
-              <span>Venom and Stone</span>
-            </div>
-            <div style="font-size:12px; color:#888;">Dynamic Low-Angle Action Evasion</div>
-          </div>
-          <div class="panel-action">
-            <strong>Action:</strong> The monstrous serpent lunges downward with dagger fangs bared, acidic venom hissing as it corrodes the flagstones, while Korvath executes an athletic combat roll across the shattered floor, broadsword trailing sparks across the stone.
-            <div class="panel-caption-text">📜 "Fast as a striking viper—faster still was the barbarian's wolfish instinct."</div>
-            
-          </div>
-          <div class="split-grid">
-            <!-- GROK -->
-            <div class="edition-col col-grok">
-              <div class="edition-tag tag-grok">
-                <span>🎨 Grok Edition</span>
-                <span class="pill-badge pill-grok">Original</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep1/panel_15.webp', 'Issue 1 Panel 15 — Grok Edition')">
-                <img src="./assets/ep1/panel_15.webp" loading="lazy" alt="Issue 1 Panel 15 Grok">
-              </div>
-            </div>
-            <!-- META AI -->
-            <div class="edition-col col-meta">
-              <div class="edition-tag tag-meta">
-                <span>🌟 Meta AI Edition</span>
-                <span class="pill-badge pill-meta">2K Frazetta</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep1_meta/panel_15.webp', 'Issue 1 Panel 15 — Meta AI Edition')">
-                <img src="./assets/ep1_meta/panel_15.webp" loading="lazy" alt="Issue 1 Panel 15 Meta AI">
-              </div>
-            </div>
-          </div>
-        </article>
-        
-        <article class="panel-row" id="panel-ep1-16">
-          <div class="panel-header-bar">
-            <div class="panel-title">
-              <span class="panel-number">PANEL 16 / 20</span>
-              <span>The Fatal Leap</span>
-            </div>
-            <div style="font-size:12px; color:#888;">Peak Climax Midair Action Shot</div>
-          </div>
-          <div class="panel-action">
-            <strong>Action:</strong> Korvath leaps through the air from a shattered pillar, both hands gripping his broadsword overhead, driving the heavy broadsword downward with ferocious two-handed force deep between the serpent's armored skull plates, a violent eruption of dark venomous blood and emerald sorcerous sparks bursting from the fatal wound as the monster thrashes.
-            <div class="panel-caption-text">📜 "A leap that defied human limits—steel meeting ancient scale with the crash of thunder."</div>
-            
-          </div>
-          <div class="split-grid">
-            <!-- GROK -->
-            <div class="edition-col col-grok">
-              <div class="edition-tag tag-grok">
-                <span>🎨 Grok Edition</span>
-                <span class="pill-badge pill-grok">Original</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep1/panel_16.webp', 'Issue 1 Panel 16 — Grok Edition')">
-                <img src="./assets/ep1/panel_16.webp" loading="lazy" alt="Issue 1 Panel 16 Grok">
-              </div>
-            </div>
-            <!-- META AI -->
-            <div class="edition-col col-meta">
-              <div class="edition-tag tag-meta">
-                <span>🌟 Meta AI Edition</span>
-                <span class="pill-badge pill-meta">2K Frazetta</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep1_meta/panel_16.webp', 'Issue 1 Panel 16 — Meta AI Edition')">
-                <img src="./assets/ep1_meta/panel_16.webp" loading="lazy" alt="Issue 1 Panel 16 Meta AI">
-              </div>
-            </div>
-          </div>
-        </article>
-        
-        <article class="panel-row" id="panel-ep1-17">
-          <div class="panel-header-bar">
-            <div class="panel-title">
-              <span class="panel-number">PANEL 17 / 20</span>
-              <span>Death Agony of the Beast</span>
-            </div>
-            <div style="font-size:12px; color:#888;">Full Catastrophe Wide Shot</div>
-          </div>
-          <div class="panel-action">
-            <strong>Action:</strong> The dying serpent titan convulses violently, black venom and blood pouring over the altar steps, as its heavy thrashing coils pull down the cavern ceiling in an avalanche of shattered stone and billowing dust clouds.
-            <div class="panel-caption-text">📜 "The serpent died as it lived—in a tempest of fury and black ichor that brought down the roof of the world."</div>
-            
-          </div>
-          <div class="split-grid">
-            <!-- GROK -->
-            <div class="edition-col col-grok">
-              <div class="edition-tag tag-grok">
-                <span>🎨 Grok Edition</span>
-                <span class="pill-badge pill-grok">Original</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep1/panel_17.webp', 'Issue 1 Panel 17 — Grok Edition')">
-                <img src="./assets/ep1/panel_17.webp" loading="lazy" alt="Issue 1 Panel 17 Grok">
-              </div>
-            </div>
-            <!-- META AI -->
-            <div class="edition-col col-meta">
-              <div class="edition-tag tag-meta">
-                <span>🌟 Meta AI Edition</span>
-                <span class="pill-badge pill-meta">2K Frazetta</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep1_meta/panel_17.webp', 'Issue 1 Panel 17 — Meta AI Edition')">
-                <img src="./assets/ep1_meta/panel_17.webp" loading="lazy" alt="Issue 1 Panel 17 Meta AI">
-              </div>
-            </div>
-          </div>
-        </article>
-        
-        <article class="panel-row" id="panel-ep1-18">
-          <div class="panel-header-bar">
-            <div class="panel-title">
-              <span class="panel-number">PANEL 18 / 20</span>
-              <span>Severing the Chains</span>
-            </div>
-            <div style="font-size:12px; color:#888;">Medium Dynamic Hero Duo Shot</div>
-          </div>
-          <div class="panel-action">
-            <strong>Action:</strong> Amid falling stone boulders and billowing smoke, Korvath uses his notched broadsword to cleave the bronze chains binding Natari, pulling the beautiful bronze-bikini-clad maiden to her feet while clutching the glowing fist-sized Blood-Ruby of Sarkath in his scarred hand.
-            <div class="panel-caption-text">📜 "Gold, jewels, and a woman with fire in her veins—the only currency a barbarian respects."</div>
-            
-              <div class="dialogue-box">
-                
-                  <div class="dia-line">
-                    <span class="dia-speaker">Korvath:</span>
-                    <span class="dia-text">"Up, girl! Unless you fancy being buried with dead snakes!"</span>
-                  </div>
-                
-                  <div class="dia-line">
-                    <span class="dia-speaker">Natari:</span>
-                    <span class="dia-text">"Lead on, northern wolf!"</span>
-                  </div>
-                
-              </div>
-            
-          </div>
-          <div class="split-grid">
-            <!-- GROK -->
-            <div class="edition-col col-grok">
-              <div class="edition-tag tag-grok">
-                <span>🎨 Grok Edition</span>
-                <span class="pill-badge pill-grok">Original</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep1/panel_18.webp', 'Issue 1 Panel 18 — Grok Edition')">
-                <img src="./assets/ep1/panel_18.webp" loading="lazy" alt="Issue 1 Panel 18 Grok">
-              </div>
-            </div>
-            <!-- META AI -->
-            <div class="edition-col col-meta">
-              <div class="edition-tag tag-meta">
-                <span>🌟 Meta AI Edition</span>
-                <span class="pill-badge pill-meta">2K Frazetta</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep1_meta/panel_18.webp', 'Issue 1 Panel 18 — Meta AI Edition')">
-                <img src="./assets/ep1_meta/panel_18.webp" loading="lazy" alt="Issue 1 Panel 18 Meta AI">
-              </div>
-            </div>
-          </div>
-        </article>
-        
-        <article class="panel-row" id="panel-ep1-19">
-          <div class="panel-header-bar">
-            <div class="panel-title">
-              <span class="panel-number">PANEL 19 / 20</span>
-              <span>Escape into the Blinding Light</span>
-            </div>
-            <div style="font-size:12px; color:#888;">Exterior Action Breakthrough Shot</div>
-          </div>
-          <div class="panel-action">
-            <strong>Action:</strong> Korvath and Natari burst through the shattering stone entrance arch of the black pyramid into the blinding white-hot desert sunshine as the entire monolithic portal collapses behind them in a massive roaring eruption of sand and granite debris.
-            <div class="panel-caption-text">📜 "Behind them, a thousand years of serpent worship crashed into dust."</div>
-            
-          </div>
-          <div class="split-grid">
-            <!-- GROK -->
-            <div class="edition-col col-grok">
-              <div class="edition-tag tag-grok">
-                <span>🎨 Grok Edition</span>
-                <span class="pill-badge pill-grok">Original</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep1/panel_19.webp', 'Issue 1 Panel 19 — Grok Edition')">
-                <img src="./assets/ep1/panel_19.webp" loading="lazy" alt="Issue 1 Panel 19 Grok">
-              </div>
-            </div>
-            <!-- META AI -->
-            <div class="edition-col col-meta">
-              <div class="edition-tag tag-meta">
-                <span>🌟 Meta AI Edition</span>
-                <span class="pill-badge pill-meta">2K Frazetta</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep1_meta/panel_19.webp', 'Issue 1 Panel 19 — Meta AI Edition')">
-                <img src="./assets/ep1_meta/panel_19.webp" loading="lazy" alt="Issue 1 Panel 19 Meta AI">
-              </div>
-            </div>
-          </div>
-        </article>
-        
-        <article class="panel-row" id="panel-ep1-20">
-          <div class="panel-header-bar">
-            <div class="panel-title">
-              <span class="panel-number">PANEL 20 / 20</span>
-              <span>The Crimson Dawn</span>
-            </div>
-            <div style="font-size:12px; color:#888;">Epic Panoramic Sunset/Sunrise Hero Shot</div>
-          </div>
-          <div class="panel-action">
-            <strong>Action:</strong> Epic panoramic hero shot. Korvath stands upon the crest of a crimson sand dune, broadsword rested across his scarred bronze shoulders, wolf-fur loincloth windswept. At his side stands Natari, breathtaking desert maiden in her revealing hammered bronze scale bikini and crimson silk sash, gazing out over the vast untamed desert toward distant purple mountain peaks under a glorious golden sunrise.
-            <div class="panel-caption-text">📜 "From the frozen crags of the northern wastes strode Korvath—lone wolf, reaver, breaker of chains. With cold steel and an unbending will, he carved his legend across the burning sands of a dying world."</div>
-            
-          </div>
-          <div class="split-grid">
-            <!-- GROK -->
-            <div class="edition-col col-grok">
-              <div class="edition-tag tag-grok">
-                <span>🎨 Grok Edition</span>
-                <span class="pill-badge pill-grok">Original</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep1/panel_20.webp', 'Issue 1 Panel 20 — Grok Edition')">
-                <img src="./assets/ep1/panel_20.webp" loading="lazy" alt="Issue 1 Panel 20 Grok">
-              </div>
-            </div>
-            <!-- META AI -->
-            <div class="edition-col col-meta">
-              <div class="edition-tag tag-meta">
-                <span>🌟 Meta AI Edition</span>
-                <span class="pill-badge pill-meta">2K Frazetta</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep1_meta/panel_20.webp', 'Issue 1 Panel 20 — Meta AI Edition')">
-                <img src="./assets/ep1_meta/panel_20.webp" loading="lazy" alt="Issue 1 Panel 20 Meta AI">
-              </div>
-            </div>
-          </div>
-        </article>
-        
-    </section>
-
-    <!-- ISSUE 2 -->
-    <section class="issue-section" id="sec-issue-2">
+        </div>
+      </article>
       
-        <article class="panel-row" id="panel-ep2-1">
-          <div class="panel-header-bar">
-            <div class="panel-title">
-              <span class="panel-number">PANEL 1 / 20</span>
-              <span>Gates of Valkash</span>
-            </div>
-            <div style="font-size:12px; color:#888;">Ultra-Wide Panoramic Establishing Shot</div>
-          </div>
-          <div class="panel-action">
-            <strong>Action:</strong> Wide panoramic establishing shot. Korvath and Natari approach the colossal archway gates of Valkash, the City of Shadows. Torches flicker along high crenelated walls, while ancient minarets and domed palaces rise into a bruised purple twilight sky. Korvath's massive two-handed straight iron broadsword is strapped in a weathered leather sheath vertically across his broad muscular back, featuring a simple straight dark wire-wrapped handle, plain rectangular iron crossguard, and unadorned solid iron octagonal pommel visible over his shoulder. Strictly NO jewels or gems on sword, NO curved handle, NO bizarre loops.
-            <div class="panel-caption-text">📜 "Beyond the red sands of Sarkesh lay Valkash—city of thieves, poisoned wine, and men whose smiles were sharper than their daggers."</div>
-            
-          </div>
-          <!-- AUDIO PLAYER BAR -->
-          <div class="panel-audio-bar">
-            <div class="audio-info">
-              <span>🎙️ <strong>Master Audio & Voice Track:</strong> Narration + Dynamic SFX & Ambient Score</span>
-            </div>
-            <div class="audio-player-widget">
-              <audio controls preload="none" src="./assets/audio/ep2/p01_mixed.mp3"></audio>
-            </div>
-          </div>
-          <div class="split-grid">
-            <!-- GROK -->
-            <div class="edition-col col-grok">
-              <div class="edition-tag tag-grok">
-                <span>🎨 Grok Edition</span>
-                <span class="pill-badge pill-grok">Original</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep2/panel_01.webp', 'Issue 2 Panel 1 — Grok Edition')">
-                <img src="./assets/ep2/panel_01.webp" loading="lazy" alt="Issue 2 Panel 1 Grok">
-              </div>
-            </div>
-            <!-- META AI -->
-            <div class="edition-col col-meta">
-              <div class="edition-tag tag-meta">
-                <span>🌟 Meta AI Edition</span>
-                <span class="pill-badge pill-meta">2K Frazetta</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep2_meta/panel_01.webp', 'Issue 2 Panel 1 — Meta AI Edition')">
-                <img src="./assets/ep2_meta/panel_01.webp" loading="lazy" alt="Issue 2 Panel 1 Meta AI">
-              </div>
-            </div>
-          </div>
-        </article>
-        
-        <article class="panel-row" id="panel-ep2-2">
-          <div class="panel-header-bar">
-            <div class="panel-title">
-              <span class="panel-number">PANEL 2 / 20</span>
-              <span>The Midnight Bazaar</span>
-            </div>
-            <div style="font-size:12px; color:#888;">Medium Street Tracking Shot</div>
-          </div>
-          <div class="panel-action">
-            <strong>Action:</strong> Crowded medium tracking shot. Korvath, towering broadsword over shoulder, strides through the bustling midnight bazaar beside Natari in her revealing hammered bronze scale bikini and gossamer silk sash, as hooded cutthroats and beggars eye the glowing pouch containing the Blood-Ruby.
-            <div class="panel-caption-text">📜 "Every shadow in Valkash had eyes. And every eye was hungry for northern blood."</div>
-            
-              <div class="dialogue-box">
-                
-                  <div class="dia-line">
-                    <span class="dia-speaker">Natari:</span>
-                    <span class="dia-text">"Keep your hand on your hilt, Korvath. A purse in Valkash buys you a slit throat before dawn."</span>
-                  </div>
-                
-              </div>
-            
-          </div>
-          <!-- AUDIO PLAYER BAR -->
-          <div class="panel-audio-bar">
-            <div class="audio-info">
-              <span>🎙️ <strong>Master Audio & Voice Track:</strong> Natari + Dynamic SFX & Ambient Score</span>
-            </div>
-            <div class="audio-player-widget">
-              <audio controls preload="none" src="./assets/audio/ep2/p02_mixed.mp3"></audio>
-            </div>
-          </div>
-          <div class="split-grid">
-            <!-- GROK -->
-            <div class="edition-col col-grok">
-              <div class="edition-tag tag-grok">
-                <span>🎨 Grok Edition</span>
-                <span class="pill-badge pill-grok">Original</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep2/panel_02.webp', 'Issue 2 Panel 2 — Grok Edition')">
-                <img src="./assets/ep2/panel_02.webp" loading="lazy" alt="Issue 2 Panel 2 Grok">
-              </div>
-            </div>
-            <!-- META AI -->
-            <div class="edition-col col-meta">
-              <div class="edition-tag tag-meta">
-                <span>🌟 Meta AI Edition</span>
-                <span class="pill-badge pill-meta">2K Frazetta</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep2_meta/panel_02.webp', 'Issue 2 Panel 2 — Meta AI Edition')">
-                <img src="./assets/ep2_meta/panel_02.webp" loading="lazy" alt="Issue 2 Panel 2 Meta AI">
-              </div>
-            </div>
-          </div>
-        </article>
-        
-        <article class="panel-row" id="panel-ep2-3">
-          <div class="panel-header-bar">
-            <div class="panel-title">
-              <span class="panel-number">PANEL 3 / 20</span>
-              <span>The Black Lotus Tavern</span>
-            </div>
-            <div style="font-size:12px; color:#888;">Tavern Interior Medium Three-Shot</div>
-          </div>
-          <div class="panel-action">
-            <strong>Action:</strong> Interior tavern scene. Korvath sits at a heavy scarred oak table, slamming down an iron flagon of ale, muscles gleaming in warm firelight. Beside him, Natari lounges with feline grace on a wooden bench, smoldering eyes watching three hooded assassins whispering in the rear alcove. Resting flat on the heavy wooden table directly in front of Korvath, positioned right before his hands, lies his massive two-handed straight iron broadsword, featuring a long straight double-edged steel blade with central fuller, simple rectangular carved iron crossguard, straight dark wire-wrapped two-handed grip, and unadorned solid iron octagonal pommel. Strictly NO curved scimitar blade, NO oriental saber, NO curved handle, NO jewels or gems on the sword.
-            <div class="panel-caption-text">📜 "The ale tasted of ditch-water, but the danger smelled fresh."</div>
-            
-              <div class="dialogue-box">
-                
-                  <div class="dia-line">
-                    <span class="dia-speaker">Korvath:</span>
-                    <span class="dia-text">"Let them whisper. Iron speaks louder than gossip."</span>
-                  </div>
-                
-              </div>
-            
-          </div>
-          <!-- AUDIO PLAYER BAR -->
-          <div class="panel-audio-bar">
-            <div class="audio-info">
-              <span>🎙️ <strong>Master Audio & Voice Track:</strong> Korvath + Dynamic SFX & Ambient Score</span>
-            </div>
-            <div class="audio-player-widget">
-              <audio controls preload="none" src="./assets/audio/ep2/p03_mixed.mp3"></audio>
-            </div>
-          </div>
-          <div class="split-grid">
-            <!-- GROK -->
-            <div class="edition-col col-grok">
-              <div class="edition-tag tag-grok">
-                <span>🎨 Grok Edition</span>
-                <span class="pill-badge pill-grok">Original</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep2/panel_03.webp', 'Issue 2 Panel 3 — Grok Edition')">
-                <img src="./assets/ep2/panel_03.webp" loading="lazy" alt="Issue 2 Panel 3 Grok">
-              </div>
-            </div>
-            <!-- META AI -->
-            <div class="edition-col col-meta">
-              <div class="edition-tag tag-meta">
-                <span>🌟 Meta AI Edition</span>
-                <span class="pill-badge pill-meta">2K Frazetta</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep2_meta/panel_03.webp', 'Issue 2 Panel 3 — Meta AI Edition')">
-                <img src="./assets/ep2_meta/panel_03.webp" loading="lazy" alt="Issue 2 Panel 3 Meta AI">
-              </div>
-            </div>
-          </div>
-        </article>
-        
-        <article class="panel-row" id="panel-ep2-4">
-          <div class="panel-header-bar">
-            <div class="panel-title">
-              <span class="panel-number">PANEL 4 / 20</span>
-              <span>The Crooked Broker</span>
-            </div>
-            <div style="font-size:12px; color:#888;">Tight Chiaroscuro Confrontation Shot</div>
-          </div>
-          <div class="panel-action">
-            <strong>Action:</strong> Close dynamic confrontation. Korvath's scarred, massive hand seizes the cloaked broker by the collar, lifting him clean off his boots over the table, while the broker's eyes bulge in terror as Natari draws a concealed dagger.
-            <div class="panel-caption-text">📜 "Civilized merchants understand contracts. Korvath understood only fair trade and broken bones."</div>
-            
-              <div class="dialogue-box">
-                
-                  <div class="dia-line">
-                    <span class="dia-speaker">Korvath:</span>
-                    <span class="dia-text">"Offer me copper for blood again, dog, and I will feed you your own tongue."</span>
-                  </div>
-                
-              </div>
-            
-          </div>
-          <!-- AUDIO PLAYER BAR -->
-          <div class="panel-audio-bar">
-            <div class="audio-info">
-              <span>🎙️ <strong>Master Audio & Voice Track:</strong> Korvath + Dynamic SFX & Ambient Score</span>
-            </div>
-            <div class="audio-player-widget">
-              <audio controls preload="none" src="./assets/audio/ep2/p04_mixed.mp3"></audio>
-            </div>
-          </div>
-          <div class="split-grid">
-            <!-- GROK -->
-            <div class="edition-col col-grok">
-              <div class="edition-tag tag-grok">
-                <span>🎨 Grok Edition</span>
-                <span class="pill-badge pill-grok">Original</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep2/panel_04.webp', 'Issue 2 Panel 4 — Grok Edition')">
-                <img src="./assets/ep2/panel_04.webp" loading="lazy" alt="Issue 2 Panel 4 Grok">
-              </div>
-            </div>
-            <!-- META AI -->
-            <div class="edition-col col-meta">
-              <div class="edition-tag tag-meta">
-                <span>🌟 Meta AI Edition</span>
-                <span class="pill-badge pill-meta">2K Frazetta</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep2_meta/panel_04.webp', 'Issue 2 Panel 4 — Meta AI Edition')">
-                <img src="./assets/ep2_meta/panel_04.webp" loading="lazy" alt="Issue 2 Panel 4 Meta AI">
-              </div>
-            </div>
-          </div>
-        </article>
-        
-        <article class="panel-row" id="panel-ep2-5">
-          <div class="panel-header-bar">
-            <div class="panel-title">
-              <span class="panel-number">PANEL 5 / 20</span>
-              <span>Blades in the Smoke</span>
-            </div>
-            <div style="font-size:12px; color:#888;">Dynamic Action Ambush Shot</div>
-          </div>
-          <div class="panel-action">
-            <strong>Action:</strong> Three agile shadow-assassins in black leather and web-spun masks leap from the tavern shadows, curved poisoned kris blades gleaming, overturning tables as tankards shatter across the stone floor, while Korvath in the foreground turns with cold savage fury, square-cut raven-black mane and clean-shaven chiseled jaw.
-            <div class="panel-caption-text">📜 "The trap sprang not with a shout, but with the hiss of oiled steel."</div>
-            
-              <div class="dialogue-box">
-                
-                  <div class="dia-line">
-                    <span class="dia-speaker">Spider Assassin:</span>
-                    <span class="dia-text">"Lord Malakor claims the jewel and your hides, northman!"</span>
-                  </div>
-                
-              </div>
-            
-          </div>
-          <!-- AUDIO PLAYER BAR -->
-          <div class="panel-audio-bar">
-            <div class="audio-info">
-              <span>🎙️ <strong>Master Audio & Voice Track:</strong> Spider Assassin + Dynamic SFX & Ambient Score</span>
-            </div>
-            <div class="audio-player-widget">
-              <audio controls preload="none" src="./assets/audio/ep2/p05_mixed.mp3"></audio>
-            </div>
-          </div>
-          <div class="split-grid">
-            <!-- GROK -->
-            <div class="edition-col col-grok">
-              <div class="edition-tag tag-grok">
-                <span>🎨 Grok Edition</span>
-                <span class="pill-badge pill-grok">Original</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep2/panel_05.webp', 'Issue 2 Panel 5 — Grok Edition')">
-                <img src="./assets/ep2/panel_05.webp" loading="lazy" alt="Issue 2 Panel 5 Grok">
-              </div>
-            </div>
-            <!-- META AI -->
-            <div class="edition-col col-meta">
-              <div class="edition-tag tag-meta">
-                <span>🌟 Meta AI Edition</span>
-                <span class="pill-badge pill-meta">2K Frazetta</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep2_meta/panel_05.webp', 'Issue 2 Panel 5 — Meta AI Edition')">
-                <img src="./assets/ep2_meta/panel_05.webp" loading="lazy" alt="Issue 2 Panel 5 Meta AI">
-              </div>
-            </div>
-          </div>
-        </article>
-        
-        <article class="panel-row" id="panel-ep2-6">
-          <div class="panel-header-bar">
-            <div class="panel-title">
-              <span class="panel-number">PANEL 6 / 20</span>
-              <span>Savage Tavern Cleave</span>
-            </div>
-            <div style="font-size:12px; color:#888;">Peak Combat Action Freeze-Frame</div>
-          </div>
-          <div class="panel-action">
-            <strong>Action:</strong> Full heroic comic book action freeze-frame. Korvath swings his massive two-handed iron broadsword in a sweeping horizontal arc, shattering the lead assassin's heavy iron shield into flying splintered debris across the tavern, while Natari hurls an ornate throwing dagger with feline precision to strike down a second cloaked attacker's weapon.
-            <div class="panel-caption-text">📜 "When the red mist took Korvath, taverns became slaughterhouses."</div>
-            
-          </div>
-          <!-- AUDIO PLAYER BAR -->
-          <div class="panel-audio-bar">
-            <div class="audio-info">
-              <span>🎙️ <strong>Master Audio & Voice Track:</strong> Narration + Dynamic SFX & Ambient Score</span>
-            </div>
-            <div class="audio-player-widget">
-              <audio controls preload="none" src="./assets/audio/ep2/p06_mixed.mp3"></audio>
-            </div>
-          </div>
-          <div class="split-grid">
-            <!-- GROK -->
-            <div class="edition-col col-grok">
-              <div class="edition-tag tag-grok">
-                <span>🎨 Grok Edition</span>
-                <span class="pill-badge pill-grok">Original</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep2/panel_06.webp', 'Issue 2 Panel 6 — Grok Edition')">
-                <img src="./assets/ep2/panel_06.webp" loading="lazy" alt="Issue 2 Panel 6 Grok">
-              </div>
-            </div>
-            <!-- META AI -->
-            <div class="edition-col col-meta">
-              <div class="edition-tag tag-meta">
-                <span>🌟 Meta AI Edition</span>
-                <span class="pill-badge pill-meta">2K Frazetta</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep2_meta/panel_06.webp', 'Issue 2 Panel 6 — Meta AI Edition')">
-                <img src="./assets/ep2_meta/panel_06.webp" loading="lazy" alt="Issue 2 Panel 6 Meta AI">
-              </div>
-            </div>
-          </div>
-        </article>
-        
-        <article class="panel-row" id="panel-ep2-7">
-          <div class="panel-header-bar">
-            <div class="panel-title">
-              <span class="panel-number">PANEL 7 / 20</span>
-              <span>Rooftops of Valkash</span>
-            </div>
-            <div style="font-size:12px; color:#888;">Dynamic Midair Rooftop Leap Shot</div>
-          </div>
-          <div class="panel-action">
-            <strong>Action:</strong> Dynamic high rooftop action shot. Korvath and Natari leap across a wide alleyway between terracotta tiled roofs under a stark crescent moon, the sprawling moonlit towers of Lord Malakor's palace looming in the near background.
-            <div class="panel-caption-text">📜 "Above the filth of the streets ran the highway of thieves."</div>
-            
-              <div class="dialogue-box">
-                
-                  <div class="dia-line">
-                    <span class="dia-speaker">Natari:</span>
-                    <span class="dia-text">"Malakor's pleasure gardens are ahead! If the jewel is anywhere, it is in his private vault!"</span>
-                  </div>
-                
-              </div>
-            
-          </div>
-          <!-- AUDIO PLAYER BAR -->
-          <div class="panel-audio-bar">
-            <div class="audio-info">
-              <span>🎙️ <strong>Master Audio & Voice Track:</strong> Natari + Dynamic SFX & Ambient Score</span>
-            </div>
-            <div class="audio-player-widget">
-              <audio controls preload="none" src="./assets/audio/ep2/p07_mixed.mp3"></audio>
-            </div>
-          </div>
-          <div class="split-grid">
-            <!-- GROK -->
-            <div class="edition-col col-grok">
-              <div class="edition-tag tag-grok">
-                <span>🎨 Grok Edition</span>
-                <span class="pill-badge pill-grok">Original</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep2/panel_07.webp', 'Issue 2 Panel 7 — Grok Edition')">
-                <img src="./assets/ep2/panel_07.webp" loading="lazy" alt="Issue 2 Panel 7 Grok">
-              </div>
-            </div>
-            <!-- META AI -->
-            <div class="edition-col col-meta">
-              <div class="edition-tag tag-meta">
-                <span>🌟 Meta AI Edition</span>
-                <span class="pill-badge pill-meta">2K Frazetta</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep2_meta/panel_07.webp', 'Issue 2 Panel 7 — Meta AI Edition')">
-                <img src="./assets/ep2_meta/panel_07.webp" loading="lazy" alt="Issue 2 Panel 7 Meta AI">
-              </div>
-            </div>
-          </div>
-        </article>
-        
-        <article class="panel-row" id="panel-ep2-8">
-          <div class="panel-header-bar">
-            <div class="panel-title">
-              <span class="panel-number">PANEL 8 / 20</span>
-              <span>The Harem Terrace</span>
-            </div>
-            <div style="font-size:12px; color:#888;">Wide Opulent Terrace Shot</div>
-          </div>
-          <div class="panel-action">
-            <strong>Action:</strong> Opulent palace terrace view. Surrounded by carved alabaster colonnades and a steaming rosewater fountain, two distinct palace courtesans recline on velvet cushions in shocked awe as Korvath and Natari drop silently onto the marble tiles: one fair-skinned concubine with braided golden blonde hair draped in sheer emerald-green silks and silver bangles, and one striking dark-skinned maiden with sculpted obsidian curls draped in translucent saffron-gold harem silks and hammered brass armlets. Both look completely distinct from Natari; strictly NO scale armor or bronze bikinis on the courtesans.
-            <div class="panel-caption-text">📜 "Silk and perfume could not mask the stench of spider venom that hung in the palace air."</div>
-            
-          </div>
-          <!-- AUDIO PLAYER BAR -->
-          <div class="panel-audio-bar">
-            <div class="audio-info">
-              <span>🎙️ <strong>Master Audio & Voice Track:</strong> Narration + Dynamic SFX & Ambient Score</span>
-            </div>
-            <div class="audio-player-widget">
-              <audio controls preload="none" src="./assets/audio/ep2/p08_mixed.mp3"></audio>
-            </div>
-          </div>
-          <div class="split-grid">
-            <!-- GROK -->
-            <div class="edition-col col-grok">
-              <div class="edition-tag tag-grok">
-                <span>🎨 Grok Edition</span>
-                <span class="pill-badge pill-grok">Original</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep2/panel_08.webp', 'Issue 2 Panel 8 — Grok Edition')">
-                <img src="./assets/ep2/panel_08.webp" loading="lazy" alt="Issue 2 Panel 8 Grok">
-              </div>
-            </div>
-            <!-- META AI -->
-            <div class="edition-col col-meta">
-              <div class="edition-tag tag-meta">
-                <span>🌟 Meta AI Edition</span>
-                <span class="pill-badge pill-meta">2K Frazetta</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep2_meta/panel_08.webp', 'Issue 2 Panel 8 — Meta AI Edition')">
-                <img src="./assets/ep2_meta/panel_08.webp" loading="lazy" alt="Issue 2 Panel 8 Meta AI">
-              </div>
-            </div>
-          </div>
-        </article>
-        
-        <article class="panel-row" id="panel-ep2-9">
-          <div class="panel-header-bar">
-            <div class="panel-title">
-              <span class="panel-number">PANEL 9 / 20</span>
-              <span>The Merchant's Vault</span>
-            </div>
-            <div style="font-size:12px; color:#888;">Vault Door Breakthrough Shot</div>
-          </div>
-          <div class="panel-action">
-            <strong>Action:</strong> Korvath kicks open a massive iron vault door with a splintering crash, revealing a treasure vault overflowing with open iron chests of sparkling gold coins, jeweled chalices, and thick hanging cobwebs.
-            <div class="panel-caption-text">📜 "The wealth of fifty plundered caravans, guarded only by silence."</div>
-            
-              <div class="dialogue-box">
-                
-                  <div class="dia-line">
-                    <span class="dia-speaker">Korvath:</span>
-                    <span class="dia-text">"Too quiet. A spider never leaves its larder unguarded."</span>
-                  </div>
-                
-              </div>
-            
-          </div>
-          <!-- AUDIO PLAYER BAR -->
-          <div class="panel-audio-bar">
-            <div class="audio-info">
-              <span>🎙️ <strong>Master Audio & Voice Track:</strong> Korvath + Dynamic SFX & Ambient Score</span>
-            </div>
-            <div class="audio-player-widget">
-              <audio controls preload="none" src="./assets/audio/ep2/p09_mixed.mp3"></audio>
-            </div>
-          </div>
-          <div class="split-grid">
-            <!-- GROK -->
-            <div class="edition-col col-grok">
-              <div class="edition-tag tag-grok">
-                <span>🎨 Grok Edition</span>
-                <span class="pill-badge pill-grok">Original</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep2/panel_09.webp', 'Issue 2 Panel 9 — Grok Edition')">
-                <img src="./assets/ep2/panel_09.webp" loading="lazy" alt="Issue 2 Panel 9 Grok">
-              </div>
-            </div>
-            <!-- META AI -->
-            <div class="edition-col col-meta">
-              <div class="edition-tag tag-meta">
-                <span>🌟 Meta AI Edition</span>
-                <span class="pill-badge pill-meta">2K Frazetta</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep2_meta/panel_09.webp', 'Issue 2 Panel 9 — Meta AI Edition')">
-                <img src="./assets/ep2_meta/panel_09.webp" loading="lazy" alt="Issue 2 Panel 9 Meta AI">
-              </div>
-            </div>
-          </div>
-        </article>
-        
-        <article class="panel-row" id="panel-ep2-10">
-          <div class="panel-header-bar">
-            <div class="panel-title">
-              <span class="panel-number">PANEL 10 / 20</span>
-              <span>Caught in the Web</span>
-            </div>
-            <div style="font-size:12px; color:#888;">Dynamic Entanglement Shot</div>
-          </div>
-          <div class="panel-action">
-            <strong>Action:</strong> Sudden trap action. Heavy iron grates crash down behind them as massive thick, fibrous spiderwebs drop from the darkness above, sticking to Korvath's broad shoulders and trapping Natari against the gold chests.
-            <div class="panel-caption-text">📜 "The iron door was the jaws of the trap. The web was its teeth."</div>
-            
-              <div class="dialogue-box">
-                
-                  <div class="dia-line">
-                    <span class="dia-speaker">Natari:</span>
-                    <span class="dia-text">"Korvath, it's a trap! The webs... they burn like acid!"</span>
-                  </div>
-                
-              </div>
-            
-          </div>
-          <!-- AUDIO PLAYER BAR -->
-          <div class="panel-audio-bar">
-            <div class="audio-info">
-              <span>🎙️ <strong>Master Audio & Voice Track:</strong> Natari + Dynamic SFX & Ambient Score</span>
-            </div>
-            <div class="audio-player-widget">
-              <audio controls preload="none" src="./assets/audio/ep2/p10_mixed.mp3"></audio>
-            </div>
-          </div>
-          <div class="split-grid">
-            <!-- GROK -->
-            <div class="edition-col col-grok">
-              <div class="edition-tag tag-grok">
-                <span>🎨 Grok Edition</span>
-                <span class="pill-badge pill-grok">Original</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep2/panel_10.webp', 'Issue 2 Panel 10 — Grok Edition')">
-                <img src="./assets/ep2/panel_10.webp" loading="lazy" alt="Issue 2 Panel 10 Grok">
-              </div>
-            </div>
-            <!-- META AI -->
-            <div class="edition-col col-meta">
-              <div class="edition-tag tag-meta">
-                <span>🌟 Meta AI Edition</span>
-                <span class="pill-badge pill-meta">2K Frazetta</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep2_meta/panel_10.webp', 'Issue 2 Panel 10 — Meta AI Edition')">
-                <img src="./assets/ep2_meta/panel_10.webp" loading="lazy" alt="Issue 2 Panel 10 Meta AI">
-              </div>
-            </div>
-          </div>
-        </article>
-        
-        <article class="panel-row" id="panel-ep2-11">
-          <div class="panel-header-bar">
-            <div class="panel-title">
-              <span class="panel-number">PANEL 11 / 20</span>
-              <span>The Brood Queen Descends</span>
-            </div>
-            <div style="font-size:12px; color:#888;">Colossal Monster Reveal Shot</div>
-          </div>
-          <div class="panel-action">
-            <strong>Action:</strong> Colossal creature reveal. An enormous, monstrous spider demon with razor-jointed barbed legs and glistening black carapace descends from the vaulted ceiling, its central cluster of multifaceted ruby eyes burning with demonic hunger as pale venom drips from huge fangs.
-            <div class="panel-caption-text">📜 "Spawned in the forgotten pits beneath Valkash—Zor-Malkor, the living god of shadows."</div>
-            
-              <div class="dialogue-box">
-                
-                  <div class="dia-line">
-                    <span class="dia-speaker">Natari:</span>
-                    <span class="dia-text">"Look out, Korvath! Above us!"</span>
-                  </div>
-                
-                  <div class="dia-line">
-                    <span class="dia-speaker">Korvath:</span>
-                    <span class="dia-text">"Get behind me, girl!"</span>
-                  </div>
-                
-              </div>
-            
-          </div>
-          <!-- AUDIO PLAYER BAR -->
-          <div class="panel-audio-bar">
-            <div class="audio-info">
-              <span>🎙️ <strong>Master Audio & Voice Track:</strong> Natari & Korvath + Dynamic SFX & Ambient Score</span>
-            </div>
-            <div class="audio-player-widget">
-              <audio controls preload="none" src="./assets/audio/ep2/p11_mixed.mp3"></audio>
-            </div>
-          </div>
-          <div class="split-grid">
-            <!-- GROK -->
-            <div class="edition-col col-grok">
-              <div class="edition-tag tag-grok">
-                <span>🎨 Grok Edition</span>
-                <span class="pill-badge pill-grok">Original</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep2/panel_11.webp', 'Issue 2 Panel 11 — Grok Edition')">
-                <img src="./assets/ep2/panel_11.webp" loading="lazy" alt="Issue 2 Panel 11 Grok">
-              </div>
-            </div>
-            <!-- META AI -->
-            <div class="edition-col col-meta">
-              <div class="edition-tag tag-meta">
-                <span>🌟 Meta AI Edition</span>
-                <span class="pill-badge pill-meta">2K Frazetta</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep2_meta/panel_11.webp', 'Issue 2 Panel 11 — Meta AI Edition')">
-                <img src="./assets/ep2_meta/panel_11.webp" loading="lazy" alt="Issue 2 Panel 11 Meta AI">
-              </div>
-            </div>
-          </div>
-        </article>
-        
-        <article class="panel-row" id="panel-ep2-12">
-          <div class="panel-header-bar">
-            <div class="panel-title">
-              <span class="panel-number">PANEL 12 / 20</span>
-              <span>The Merchant's Gloat</span>
-            </div>
-            <div style="font-size:12px; color:#888;">Balcony Mockery Shot</div>
-          </div>
-          <div class="panel-action">
-            <strong>Action:</strong> Lord Malakor, fat merchant prince draped in emerald silk and gold chains, sneers in cruel triumph through the iron bars above, holding high the glowing Blood-Ruby of Sarkath as the spider looms over Korvath.
-            <div class="panel-caption-text">📜 "Civilized lords pay assassins with gold. Malakor paid his with living flesh."</div>
-            
-              <div class="dialogue-box">
-                
-                  <div class="dia-line">
-                    <span class="dia-speaker">Lord Malakor:</span>
-                    <span class="dia-text">"The ruby belongs to me, savage! Feed on them, my beauty!"</span>
-                  </div>
-                
-              </div>
-            
-          </div>
-          <!-- AUDIO PLAYER BAR -->
-          <div class="panel-audio-bar">
-            <div class="audio-info">
-              <span>🎙️ <strong>Master Audio & Voice Track:</strong> Lord Malakor + Dynamic SFX & Ambient Score</span>
-            </div>
-            <div class="audio-player-widget">
-              <audio controls preload="none" src="./assets/audio/ep2/p12_mixed.mp3"></audio>
-            </div>
-          </div>
-          <div class="split-grid">
-            <!-- GROK -->
-            <div class="edition-col col-grok">
-              <div class="edition-tag tag-grok">
-                <span>🎨 Grok Edition</span>
-                <span class="pill-badge pill-grok">Original</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep2/panel_12.webp', 'Issue 2 Panel 12 — Grok Edition')">
-                <img src="./assets/ep2/panel_12.webp" loading="lazy" alt="Issue 2 Panel 12 Grok">
-              </div>
-            </div>
-            <!-- META AI -->
-            <div class="edition-col col-meta">
-              <div class="edition-tag tag-meta">
-                <span>🌟 Meta AI Edition</span>
-                <span class="pill-badge pill-meta">2K Frazetta</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep2_meta/panel_12.webp', 'Issue 2 Panel 12 — Meta AI Edition')">
-                <img src="./assets/ep2_meta/panel_12.webp" loading="lazy" alt="Issue 2 Panel 12 Meta AI">
-              </div>
-            </div>
-          </div>
-        </article>
-        
-        <article class="panel-row" id="panel-ep2-13">
-          <div class="panel-header-bar">
-            <div class="panel-title">
-              <span class="panel-number">PANEL 13 / 20</span>
-              <span>Venom and Fire</span>
-            </div>
-            <div style="font-size:12px; color:#888;">Dynamic Mid-Range Combat Clash</div>
-          </div>
-          <div class="panel-action">
-            <strong>Action:</strong> Violent combat clash. The spider demon's jagged barbed leg strikes downward, shattering an iron chest, while Korvath sweeps a roaring brass oil torch against the tangled webs, igniting a wall of blazing orange fire to shield Natari.
-            <div class="panel-caption-text">📜 "Iron, flame, and unyielding will—the barbarian answered horror with fury."</div>
-            
-              <div class="dialogue-box">
-                
-                  <div class="dia-line">
-                    <span class="dia-speaker">Korvath:</span>
-                    <span class="dia-text">"TASTE CROM'S FIRE, BEAST!"</span>
-                  </div>
-                
-              </div>
-            
-          </div>
-          <!-- AUDIO PLAYER BAR -->
-          <div class="panel-audio-bar">
-            <div class="audio-info">
-              <span>🎙️ <strong>Master Audio & Voice Track:</strong> Korvath + Dynamic SFX & Ambient Score</span>
-            </div>
-            <div class="audio-player-widget">
-              <audio controls preload="none" src="./assets/audio/ep2/p13_mixed.mp3"></audio>
-            </div>
-          </div>
-          <div class="split-grid">
-            <!-- GROK -->
-            <div class="edition-col col-grok">
-              <div class="edition-tag tag-grok">
-                <span>🎨 Grok Edition</span>
-                <span class="pill-badge pill-grok">Original</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep2/panel_13.webp', 'Issue 2 Panel 13 — Grok Edition')">
-                <img src="./assets/ep2/panel_13.webp" loading="lazy" alt="Issue 2 Panel 13 Grok">
-              </div>
-            </div>
-            <!-- META AI -->
-            <div class="edition-col col-meta">
-              <div class="edition-tag tag-meta">
-                <span>🌟 Meta AI Edition</span>
-                <span class="pill-badge pill-meta">2K Frazetta</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep2_meta/panel_13.webp', 'Issue 2 Panel 13 — Meta AI Edition')">
-                <img src="./assets/ep2_meta/panel_13.webp" loading="lazy" alt="Issue 2 Panel 13 Meta AI">
-              </div>
-            </div>
-          </div>
-        </article>
-        
-        <article class="panel-row" id="panel-ep2-14">
-          <div class="panel-header-bar">
-            <div class="panel-title">
-              <span class="panel-number">PANEL 14 / 20</span>
-              <span>The Flaming Cleave</span>
-            </div>
-            <div style="font-size:12px; color:#888;">Dynamic Cleave Freeze-Frame</div>
-          </div>
-          <div class="panel-action">
-            <strong>Action:</strong> Peak action shot. Korvath swings his massive two-handed broadsword—its steel blade roaring with yellow fire—cleaving clean through two of the demon spider's armored jointed legs with a massive spray of hissing black ichor as the monster shrieks.
-            <div class="panel-caption-text">📜 "The iron gods give no gifts. A man carves his own way with steel."</div>
-            
-              <div class="dialogue-box">
-                
-                  <div class="dia-line">
-                    <span class="dia-speaker">Korvath:</span>
-                    <span class="dia-text">"Die, vermin! Back to the pit that spat you!"</span>
-                  </div>
-                
-              </div>
-            
-          </div>
-          <!-- AUDIO PLAYER BAR -->
-          <div class="panel-audio-bar">
-            <div class="audio-info">
-              <span>🎙️ <strong>Master Audio & Voice Track:</strong> Korvath + Dynamic SFX & Ambient Score</span>
-            </div>
-            <div class="audio-player-widget">
-              <audio controls preload="none" src="./assets/audio/ep2/p14_mixed.mp3"></audio>
-            </div>
-          </div>
-          <div class="split-grid">
-            <!-- GROK -->
-            <div class="edition-col col-grok">
-              <div class="edition-tag tag-grok">
-                <span>🎨 Grok Edition</span>
-                <span class="pill-badge pill-grok">Original</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep2/panel_14.webp', 'Issue 2 Panel 14 — Grok Edition')">
-                <img src="./assets/ep2/panel_14.webp" loading="lazy" alt="Issue 2 Panel 14 Grok">
-              </div>
-            </div>
-            <!-- META AI -->
-            <div class="edition-col col-meta">
-              <div class="edition-tag tag-meta">
-                <span>🌟 Meta AI Edition</span>
-                <span class="pill-badge pill-meta">2K Frazetta</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep2_meta/panel_14.webp', 'Issue 2 Panel 14 — Meta AI Edition')">
-                <img src="./assets/ep2_meta/panel_14.webp" loading="lazy" alt="Issue 2 Panel 14 Meta AI">
-              </div>
-            </div>
-          </div>
-        </article>
-        
-        <article class="panel-row" id="panel-ep2-15">
-          <div class="panel-header-bar">
-            <div class="panel-title">
-              <span class="panel-number">PANEL 15 / 20</span>
-              <span>Natari's Retribution</span>
-            </div>
-            <div style="font-size:12px; color:#888;">Heroic Balcony Strike Shot</div>
-          </div>
-          <div class="panel-action">
-            <strong>Action:</strong> Heroic action shot. Natari, bronze scale bikini gleaming, leaps onto the upper iron balcony railing and drives her ornate dagger straight through Lord Malakor's heart, tearing the glowing Blood-Ruby of Sarkath from his limp dying fingers.
-            <div class="panel-caption-text">📜 "A desert rogue never forgets a debt. Especially one written in blood."</div>
-            
-              <div class="dialogue-box">
-                
-                  <div class="dia-line">
-                    <span class="dia-speaker">Natari:</span>
-                    <span class="dia-text">"The ruby was never yours, merchant dog! Korvath, the vault is collapsing—MOVE!"</span>
-                  </div>
-                
-              </div>
-            
-          </div>
-          <!-- AUDIO PLAYER BAR -->
-          <div class="panel-audio-bar">
-            <div class="audio-info">
-              <span>🎙️ <strong>Master Audio & Voice Track:</strong> Natari + Dynamic SFX & Ambient Score</span>
-            </div>
-            <div class="audio-player-widget">
-              <audio controls preload="none" src="./assets/audio/ep2/p15_mixed.mp3"></audio>
-            </div>
-          </div>
-          <div class="split-grid">
-            <!-- GROK -->
-            <div class="edition-col col-grok">
-              <div class="edition-tag tag-grok">
-                <span>🎨 Grok Edition</span>
-                <span class="pill-badge pill-grok">Original</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep2/panel_15.webp', 'Issue 2 Panel 15 — Grok Edition')">
-                <img src="./assets/ep2/panel_15.webp" loading="lazy" alt="Issue 2 Panel 15 Grok">
-              </div>
-            </div>
-            <!-- META AI -->
-            <div class="edition-col col-meta">
-              <div class="edition-tag tag-meta">
-                <span>🌟 Meta AI Edition</span>
-                <span class="pill-badge pill-meta">2K Frazetta</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep2_meta/panel_15.webp', 'Issue 2 Panel 15 — Meta AI Edition')">
-                <img src="./assets/ep2_meta/panel_15.webp" loading="lazy" alt="Issue 2 Panel 15 Meta AI">
-              </div>
-            </div>
-          </div>
-        </article>
-        
-        <article class="panel-row" id="panel-ep2-16">
-          <div class="panel-header-bar">
-            <div class="panel-title">
-              <span class="panel-number">PANEL 16 / 20</span>
-              <span>The Abyssal Skull-Strike</span>
-            </div>
-            <div style="font-size:12px; color:#888;">Peak Climax Midair Action Shot</div>
-          </div>
-          <div class="panel-action">
-            <strong>Action:</strong> Peak climax midair leap. Korvath leaps from a mountain of gold coins into midair, both scarred hands gripping his heavy broadsword overhead, plunging the massive iron blade straight down into the spider demon's armored skull between its burning cluster of ruby eyes amidst an explosion of hissing dark demonic ichor.
-            <div class="panel-caption-text">📜 "Even gods of the dark bleed when iron meets skull."</div>
-            
-          </div>
-          <!-- AUDIO PLAYER BAR -->
-          <div class="panel-audio-bar">
-            <div class="audio-info">
-              <span>🎙️ <strong>Master Audio & Voice Track:</strong> Narration + Dynamic SFX & Ambient Score</span>
-            </div>
-            <div class="audio-player-widget">
-              <audio controls preload="none" src="./assets/audio/ep2/p16_mixed.mp3"></audio>
-            </div>
-          </div>
-          <div class="split-grid">
-            <!-- GROK -->
-            <div class="edition-col col-grok">
-              <div class="edition-tag tag-grok">
-                <span>🎨 Grok Edition</span>
-                <span class="pill-badge pill-grok">Original</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep2/panel_16.webp', 'Issue 2 Panel 16 — Grok Edition')">
-                <img src="./assets/ep2/panel_16.webp" loading="lazy" alt="Issue 2 Panel 16 Grok">
-              </div>
-            </div>
-            <!-- META AI -->
-            <div class="edition-col col-meta">
-              <div class="edition-tag tag-meta">
-                <span>🌟 Meta AI Edition</span>
-                <span class="pill-badge pill-meta">2K Frazetta</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep2_meta/panel_16.webp', 'Issue 2 Panel 16 — Meta AI Edition')">
-                <img src="./assets/ep2_meta/panel_16.webp" loading="lazy" alt="Issue 2 Panel 16 Meta AI">
-              </div>
-            </div>
-          </div>
-        </article>
-        
-        <article class="panel-row" id="panel-ep2-17">
-          <div class="panel-header-bar">
-            <div class="panel-title">
-              <span class="panel-number">PANEL 17 / 20</span>
-              <span>Collapse of the Palace Vault</span>
-            </div>
-            <div style="font-size:12px; color:#888;">Full Palace Catastrophe Wide Shot</div>
-          </div>
-          <div class="panel-action">
-            <strong>Action:</strong> Wide cataclysmic destruction. The dying spider monstrosity crashes through the palace's outer marble colonnade, tearing down pillars and balustrades as stone blocks and chests of gold cascade into the courtyard below.
-            <div class="panel-caption-text">📜 "The pride of Valkash crumbled into dust and broken bone."</div>
-            
-          </div>
-          <!-- AUDIO PLAYER BAR -->
-          <div class="panel-audio-bar">
-            <div class="audio-info">
-              <span>🎙️ <strong>Master Audio & Voice Track:</strong> Narration + Dynamic SFX & Ambient Score</span>
-            </div>
-            <div class="audio-player-widget">
-              <audio controls preload="none" src="./assets/audio/ep2/p17_mixed.mp3"></audio>
-            </div>
-          </div>
-          <div class="split-grid">
-            <!-- GROK -->
-            <div class="edition-col col-grok">
-              <div class="edition-tag tag-grok">
-                <span>🎨 Grok Edition</span>
-                <span class="pill-badge pill-grok">Original</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep2/panel_17.webp', 'Issue 2 Panel 17 — Grok Edition')">
-                <img src="./assets/ep2/panel_17.webp" loading="lazy" alt="Issue 2 Panel 17 Grok">
-              </div>
-            </div>
-            <!-- META AI -->
-            <div class="edition-col col-meta">
-              <div class="edition-tag tag-meta">
-                <span>🌟 Meta AI Edition</span>
-                <span class="pill-badge pill-meta">2K Frazetta</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep2_meta/panel_17.webp', 'Issue 2 Panel 17 — Meta AI Edition')">
-                <img src="./assets/ep2_meta/panel_17.webp" loading="lazy" alt="Issue 2 Panel 17 Meta AI">
-              </div>
-            </div>
-          </div>
-        </article>
-        
-        <article class="panel-row" id="panel-ep2-18">
-          <div class="panel-header-bar">
-            <div class="panel-title">
-              <span class="panel-number">PANEL 18 / 20</span>
-              <span>The Leaping Escape</span>
-            </div>
-            <div style="font-size:12px; color:#888;">Midair Escape Tracking Shot</div>
-          </div>
-          <div class="panel-action">
-            <strong>Action:</strong> High dynamic action leap. Amid tumbling marble debris, Korvath swings Natari into his arm and leaps from the shattered second-story palace balustrade into the midnight air toward an open merchant wagon in the cobblestone alley below.
-            <div class="panel-caption-text">📜 "A leap into the dark—trusting only strength and fortune."</div>
-            
-              <div class="dialogue-box">
-                
-                  <div class="dia-line">
-                    <span class="dia-speaker">Korvath:</span>
-                    <span class="dia-text">"Hold tight, girl! Jump!"</span>
-                  </div>
-                
-                  <div class="dia-line">
-                    <span class="dia-speaker">Natari:</span>
-                    <span class="dia-text">"I have the ruby! Jump!"</span>
-                  </div>
-                
-              </div>
-            
-          </div>
-          <!-- AUDIO PLAYER BAR -->
-          <div class="panel-audio-bar">
-            <div class="audio-info">
-              <span>🎙️ <strong>Master Audio & Voice Track:</strong> Korvath & Natari + Dynamic SFX & Ambient Score</span>
-            </div>
-            <div class="audio-player-widget">
-              <audio controls preload="none" src="./assets/audio/ep2/p18_mixed.mp3"></audio>
-            </div>
-          </div>
-          <div class="split-grid">
-            <!-- GROK -->
-            <div class="edition-col col-grok">
-              <div class="edition-tag tag-grok">
-                <span>🎨 Grok Edition</span>
-                <span class="pill-badge pill-grok">Original</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep2/panel_18.webp', 'Issue 2 Panel 18 — Grok Edition')">
-                <img src="./assets/ep2/panel_18.webp" loading="lazy" alt="Issue 2 Panel 18 Grok">
-              </div>
-            </div>
-            <!-- META AI -->
-            <div class="edition-col col-meta">
-              <div class="edition-tag tag-meta">
-                <span>🌟 Meta AI Edition</span>
-                <span class="pill-badge pill-meta">2K Frazetta</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep2_meta/panel_18.webp', 'Issue 2 Panel 18 — Meta AI Edition')">
-                <img src="./assets/ep2_meta/panel_18.webp" loading="lazy" alt="Issue 2 Panel 18 Meta AI">
-              </div>
-            </div>
-          </div>
-        </article>
-        
-        <article class="panel-row" id="panel-ep2-19">
-          <div class="panel-header-bar">
-            <div class="panel-title">
-              <span class="panel-number">PANEL 19 / 20</span>
-              <span>Breaching the Southern Gate</span>
-            </div>
-            <div style="font-size:12px; color:#888;">Low-Angle Gallop Action Shot</div>
-          </div>
-          <div class="panel-action">
-            <strong>Action:</strong> Dynamic galloping action shot. Korvath and Natari, riding hard on two black desert stallions, charge straight through the splintered southern wooden gate of Valkash, broadsword swinging to scatter the panicked city guards into the night.
-            <div class="panel-caption-text">📜 "Behind them lay a burning palace, a dead merchant, and the wrath of an entire city."</div>
-            
-          </div>
-          <!-- AUDIO PLAYER BAR -->
-          <div class="panel-audio-bar">
-            <div class="audio-info">
-              <span>🎙️ <strong>Master Audio & Voice Track:</strong> Narration + Dynamic SFX & Ambient Score</span>
-            </div>
-            <div class="audio-player-widget">
-              <audio controls preload="none" src="./assets/audio/ep2/p19_mixed.mp3"></audio>
-            </div>
-          </div>
-          <div class="split-grid">
-            <!-- GROK -->
-            <div class="edition-col col-grok">
-              <div class="edition-tag tag-grok">
-                <span>🎨 Grok Edition</span>
-                <span class="pill-badge pill-grok">Original</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep2/panel_19.webp', 'Issue 2 Panel 19 — Grok Edition')">
-                <img src="./assets/ep2/panel_19.webp" loading="lazy" alt="Issue 2 Panel 19 Grok">
-              </div>
-            </div>
-            <!-- META AI -->
-            <div class="edition-col col-meta">
-              <div class="edition-tag tag-meta">
-                <span>🌟 Meta AI Edition</span>
-                <span class="pill-badge pill-meta">2K Frazetta</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep2_meta/panel_19.webp', 'Issue 2 Panel 19 — Meta AI Edition')">
-                <img src="./assets/ep2_meta/panel_19.webp" loading="lazy" alt="Issue 2 Panel 19 Meta AI">
-              </div>
-            </div>
-          </div>
-        </article>
-        
-        <article class="panel-row" id="panel-ep2-20">
-          <div class="panel-header-bar">
-            <div class="panel-title">
-              <span class="panel-number">PANEL 20 / 20</span>
-              <span>Riders of the Midnight Dunes</span>
-            </div>
-            <div style="font-size:12px; color:#888;">Epic Panoramic Moonlit Climax Shot</div>
-          </div>
-          <div class="panel-action">
-            <strong>Action:</strong> Epic panoramic hero shot. Korvath and Natari rein in their desert horses atop a towering windswept sand dune beneath a magnificent canopy of brilliant desert stars. Korvath rests his blood-notched broadsword on his shoulder, while Natari, stunning in her hammered bronze scale bikini, holds aloft the pulsing Blood-Ruby of Sarkath, both gazing into the boundless wild unknown.
-            <div class="panel-caption-text">📜 "The road was long, and the world was wide. But wherever men built thrones of gold and deceit, the barbarian would come to break them."</div>
-            
-          </div>
-          <!-- AUDIO PLAYER BAR -->
-          <div class="panel-audio-bar">
-            <div class="audio-info">
-              <span>🎙️ <strong>Master Audio & Voice Track:</strong> Narration + Dynamic SFX & Ambient Score</span>
-            </div>
-            <div class="audio-player-widget">
-              <audio controls preload="none" src="./assets/audio/ep2/p20_mixed.mp3"></audio>
-            </div>
-          </div>
-          <div class="split-grid">
-            <!-- GROK -->
-            <div class="edition-col col-grok">
-              <div class="edition-tag tag-grok">
-                <span>🎨 Grok Edition</span>
-                <span class="pill-badge pill-grok">Original</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep2/panel_20.webp', 'Issue 2 Panel 20 — Grok Edition')">
-                <img src="./assets/ep2/panel_20.webp" loading="lazy" alt="Issue 2 Panel 20 Grok">
-              </div>
-            </div>
-            <!-- META AI -->
-            <div class="edition-col col-meta">
-              <div class="edition-tag tag-meta">
-                <span>🌟 Meta AI Edition</span>
-                <span class="pill-badge pill-meta">2K Frazetta</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep2_meta/panel_20.webp', 'Issue 2 Panel 20 — Meta AI Edition')">
-                <img src="./assets/ep2_meta/panel_20.webp" loading="lazy" alt="Issue 2 Panel 20 Meta AI">
-              </div>
-            </div>
-          </div>
-        </article>
-        
-    </section>
+      <article class="panel-row" id="panel-ep1-3">
+        <div class="panel-header-bar">
+          <div class="panel-title">
+            <span class="panel-number">PANEL 3 / 20</span>
+            <span>The Crypt of the Serpent</span>
+          </div>
+          <div style="font-size:12px; color:#888;">Low-Angle Entrance Shot</div>
+        </div>
+        <div class="panel-action">
+          <strong>Action:</strong> Korvath heaves aside an ancient shattered granite door slab carved with writhing serpent reliefs, descending down steep stone stairs into the shadowed crypt, holding high a blazing pine pitch torch.
+          <div class="panel-caption-text">📜 "Into the bowels of forgotten Sarkesh he strode, where gods older than mankind slept in stagnant gloom."</div>
+          
+        </div>
+        <div class="split-grid">
+          <!-- GROK -->
+          <div class="edition-col col-grok">
+            <div class="edition-tag tag-grok">
+              <span>🎨 Grok Edition</span>
+            </div>
+            <div class="image-wrap" onclick="openLightbox('./assets/ep1/panel_03.webp', 'Panel 3 — Grok Edition')">
+              <img src="./assets/ep1/panel_03.webp" loading="lazy" alt="Issue 1 Panel 3 Grok">
+            </div>
+          </div>
+          <!-- META AI -->
+          <div class="edition-col col-meta">
+            <div class="edition-tag tag-meta">
+              <span>🌟 Meta AI Edition</span>
+            </div>
+            <div class="image-wrap" onclick="openLightbox('./assets/ep1_meta/panel_03.webp', 'Panel 3 — Meta AI Edition')">
+              <img src="./assets/ep1_meta/panel_03.webp" loading="lazy" alt="Issue 1 Panel 3 Meta AI">
+            </div>
+          </div>
+        </div>
+      </article>
+      
+      <article class="panel-row" id="panel-ep1-4">
+        <div class="panel-header-bar">
+          <div class="panel-title">
+            <span class="panel-number">PANEL 4 / 20</span>
+            <span>Hall of Serpent Kings</span>
+          </div>
+          <div style="font-size:12px; color:#888;">Long Corridor Tracking Shot</div>
+        </div>
+        <div class="panel-action">
+          <strong>Action:</strong> Korvath stalks cautiously down a grand subterranean hall between colossal stone pillars carved like giant rearing cobras, dust and ancient web filaments floating in the orange torch flare.
+          <div class="panel-caption-text">📜 "The air tasted of tomb-rot and dried venom. A thousand dead eyes watched from the stone."</div>
+          
+        </div>
+        <div class="split-grid">
+          <!-- GROK -->
+          <div class="edition-col col-grok">
+            <div class="edition-tag tag-grok">
+              <span>🎨 Grok Edition</span>
+            </div>
+            <div class="image-wrap" onclick="openLightbox('./assets/ep1/panel_04.webp', 'Panel 4 — Grok Edition')">
+              <img src="./assets/ep1/panel_04.webp" loading="lazy" alt="Issue 1 Panel 4 Grok">
+            </div>
+          </div>
+          <!-- META AI -->
+          <div class="edition-col col-meta">
+            <div class="edition-tag tag-meta">
+              <span>🌟 Meta AI Edition</span>
+            </div>
+            <div class="image-wrap" onclick="openLightbox('./assets/ep1_meta/panel_04.webp', 'Panel 4 — Meta AI Edition')">
+              <img src="./assets/ep1_meta/panel_04.webp" loading="lazy" alt="Issue 1 Panel 4 Meta AI">
+            </div>
+          </div>
+        </div>
+      </article>
+      
+      <article class="panel-row" id="panel-ep1-5">
+        <div class="panel-header-bar">
+          <div class="panel-title">
+            <span class="panel-number">PANEL 5 / 20</span>
+            <span>Blades of the Cult</span>
+          </div>
+          <div style="font-size:12px; color:#888;">Dynamic Three-Shot Composition</div>
+        </div>
+        <div class="panel-action">
+          <strong>Action:</strong> Three masked Sarkeshian cultists in flowing crimson robes and gilded bronze cobra masks drop from carved temple pillars, curved steel scimitars raised in ambush.
+          <div class="panel-caption-text">📜 "They sprang like shadows from the tomb pillars—silent as striking adders."</div>
+          
+            <div style="margin-top:10px; display:flex; flex-direction:column; gap:6px;">
+              
+                <div style="font-size:12px; background:#151722; padding:6px 12px; border-radius:4px; border-left:3px solid var(--gold);">
+                  <strong style="color:var(--gold); margin-right:8px;">Sarkeshian Cultist:</strong>
+                  <span style="color:#e2e2e8; font-style:italic;">"Die, dog of the north! Sarkath claims your flesh!"</span>
+                </div>
+              
+            </div>
+          
+        </div>
+        <div class="split-grid">
+          <!-- GROK -->
+          <div class="edition-col col-grok">
+            <div class="edition-tag tag-grok">
+              <span>🎨 Grok Edition</span>
+            </div>
+            <div class="image-wrap" onclick="openLightbox('./assets/ep1/panel_05.webp', 'Panel 5 — Grok Edition')">
+              <img src="./assets/ep1/panel_05.webp" loading="lazy" alt="Issue 1 Panel 5 Grok">
+            </div>
+          </div>
+          <!-- META AI -->
+          <div class="edition-col col-meta">
+            <div class="edition-tag tag-meta">
+              <span>🌟 Meta AI Edition</span>
+            </div>
+            <div class="image-wrap" onclick="openLightbox('./assets/ep1_meta/panel_05.webp', 'Panel 5 — Meta AI Edition')">
+              <img src="./assets/ep1_meta/panel_05.webp" loading="lazy" alt="Issue 1 Panel 5 Meta AI">
+            </div>
+          </div>
+        </div>
+      </article>
+      
+      <article class="panel-row" id="panel-ep1-6">
+        <div class="panel-header-bar">
+          <div class="panel-title">
+            <span class="panel-number">PANEL 6 / 20</span>
+            <span>The Iron Cleave</span>
+          </div>
+          <div style="font-size:12px; color:#888;">Dynamic Action Freeze-Frame</div>
+        </div>
+        <div class="panel-action">
+          <strong>Action:</strong> With explosive pantherish speed, Korvath ducks beneath a curved scimitar and swings his massive two-handed broadsword in a brutal horizontal cleave, cleaving through the central cultist's torso with a spray of crimson blood as the shattered bronze cobra mask flies across the flagstones, the other cultists recoiling in terror.
+          <div class="panel-caption-text">📜 "Civilized men debate right and wrong. The Northman answered with four feet of tempered steel."</div>
+          
+            <div style="margin-top:10px; display:flex; flex-direction:column; gap:6px;">
+              
+                <div style="font-size:12px; background:#151722; padding:6px 12px; border-radius:4px; border-left:3px solid var(--gold);">
+                  <strong style="color:var(--gold); margin-right:8px;">Korvath:</strong>
+                  <span style="color:#e2e2e8; font-style:italic;">"Tell Sarkath his rent is due."</span>
+                </div>
+              
+            </div>
+          
+        </div>
+        <div class="split-grid">
+          <!-- GROK -->
+          <div class="edition-col col-grok">
+            <div class="edition-tag tag-grok">
+              <span>🎨 Grok Edition</span>
+            </div>
+            <div class="image-wrap" onclick="openLightbox('./assets/ep1/panel_06.webp', 'Panel 6 — Grok Edition')">
+              <img src="./assets/ep1/panel_06.webp" loading="lazy" alt="Issue 1 Panel 6 Grok">
+            </div>
+          </div>
+          <!-- META AI -->
+          <div class="edition-col col-meta">
+            <div class="edition-tag tag-meta">
+              <span>🌟 Meta AI Edition</span>
+            </div>
+            <div class="image-wrap" onclick="openLightbox('./assets/ep1_meta/panel_06.webp', 'Panel 6 — Meta AI Edition')">
+              <img src="./assets/ep1_meta/panel_06.webp" loading="lazy" alt="Issue 1 Panel 6 Meta AI">
+            </div>
+          </div>
+        </div>
+      </article>
+      
+      <article class="panel-row" id="panel-ep1-7">
+        <div class="panel-header-bar">
+          <div class="panel-title">
+            <span class="panel-number">PANEL 7 / 20</span>
+            <span>The Cavern of the Lotus</span>
+          </div>
+          <div style="font-size:12px; color:#888;">Wide Cavern High-Angle View</div>
+        </div>
+        <div class="panel-action">
+          <strong>Action:</strong> Wide view of the opulent temple cavern bathed in hazy green light and swirling lotus smoke. On plush silk cushions lounge two gorgeous exotic maidens in revealing hammered bronze scale bikinis and jeweled arm torcs, while smoking bronze serpent braziers exhale swirling grey incense into the vaulted gloom.
+          <div class="panel-caption-text">📜 "Behind the charnel-house lay decadence. Scented lotus, velvet pillows, and the captive flowers of conquered desert tribes."</div>
+          
+        </div>
+        <div class="split-grid">
+          <!-- GROK -->
+          <div class="edition-col col-grok">
+            <div class="edition-tag tag-grok">
+              <span>🎨 Grok Edition</span>
+            </div>
+            <div class="image-wrap" onclick="openLightbox('./assets/ep1/panel_07.webp', 'Panel 7 — Grok Edition')">
+              <img src="./assets/ep1/panel_07.webp" loading="lazy" alt="Issue 1 Panel 7 Grok">
+            </div>
+          </div>
+          <!-- META AI -->
+          <div class="edition-col col-meta">
+            <div class="edition-tag tag-meta">
+              <span>🌟 Meta AI Edition</span>
+            </div>
+            <div class="image-wrap" onclick="openLightbox('./assets/ep1_meta/panel_07.webp', 'Panel 7 — Meta AI Edition')">
+              <img src="./assets/ep1_meta/panel_07.webp" loading="lazy" alt="Issue 1 Panel 7 Meta AI">
+            </div>
+          </div>
+        </div>
+      </article>
+      
+      <article class="panel-row" id="panel-ep1-8">
+        <div class="panel-header-bar">
+          <div class="panel-title">
+            <span class="panel-number">PANEL 8 / 20</span>
+            <span>The Captive Maiden</span>
+          </div>
+          <div style="font-size:12px; color:#888;">Medium Close Heroine Portrait</div>
+        </div>
+        <div class="panel-action">
+          <strong>Action:</strong> Dramatic medium shot of Natari, breathtaking exotic desert maiden in a revealing hammered bronze scale bikini and jeweled hip chains, bound by delicate gilded serpent chains to a black basalt pillar before the sacrificial dais, her smoldering kohl-lined feline eyes looking upward into the shadows where Korvath crouches ready.
+          <div class="panel-caption-text">📜 "She did not weep like the women of the south. Her dark eyes held the fire of a desert panther waiting for blood."</div>
+          
+            <div style="margin-top:10px; display:flex; flex-direction:column; gap:6px;">
+              
+                <div style="font-size:12px; background:#151722; padding:6px 12px; border-radius:4px; border-left:3px solid var(--gold);">
+                  <strong style="color:var(--gold); margin-right:8px;">Natari:</strong>
+                  <span style="color:#e2e2e8; font-style:italic;">"Strike swiftly, barbarian... or we both feed the abyss."</span>
+                </div>
+              
+            </div>
+          
+        </div>
+        <div class="split-grid">
+          <!-- GROK -->
+          <div class="edition-col col-grok">
+            <div class="edition-tag tag-grok">
+              <span>🎨 Grok Edition</span>
+            </div>
+            <div class="image-wrap" onclick="openLightbox('./assets/ep1/panel_08.webp', 'Panel 8 — Grok Edition')">
+              <img src="./assets/ep1/panel_08.webp" loading="lazy" alt="Issue 1 Panel 8 Grok">
+            </div>
+          </div>
+          <!-- META AI -->
+          <div class="edition-col col-meta">
+            <div class="edition-tag tag-meta">
+              <span>🌟 Meta AI Edition</span>
+            </div>
+            <div class="image-wrap" onclick="openLightbox('./assets/ep1_meta/panel_08.webp', 'Panel 8 — Meta AI Edition')">
+              <img src="./assets/ep1_meta/panel_08.webp" loading="lazy" alt="Issue 1 Panel 8 Meta AI">
+            </div>
+          </div>
+        </div>
+      </article>
+      
+      <article class="panel-row" id="panel-ep1-9">
+        <div class="panel-header-bar">
+          <div class="panel-title">
+            <span class="panel-number">PANEL 9 / 20</span>
+            <span>The Altar of Sarkath</span>
+          </div>
+          <div style="font-size:12px; color:#888;">Wide Ritual Colonnade View</div>
+        </div>
+        <div class="panel-action">
+          <strong>Action:</strong> At the far end of the grand colonnade, High Priest Kheshat in pleated black silk robes stands before an ancient stone dais bathed in swirling emerald sorcerous fire, holding aloft a carved ebony serpent staff, invoking the dark rites.
+          <div class="panel-caption-text">📜 "Upon the dais stood the high priest of the serpent, drunk on dark lotus and foul sorceries."</div>
+          
+            <div style="margin-top:10px; display:flex; flex-direction:column; gap:6px;">
+              
+                <div style="font-size:12px; background:#151722; padding:6px 12px; border-radius:4px; border-left:3px solid var(--gold);">
+                  <strong style="color:var(--gold); margin-right:8px;">Kheshat:</strong>
+                  <span style="color:#e2e2e8; font-style:italic;">"O Sleeper of the Deep! Taste the virgin blood and rise!"</span>
+                </div>
+              
+            </div>
+          
+        </div>
+        <div class="split-grid">
+          <!-- GROK -->
+          <div class="edition-col col-grok">
+            <div class="edition-tag tag-grok">
+              <span>🎨 Grok Edition</span>
+            </div>
+            <div class="image-wrap" onclick="openLightbox('./assets/ep1/panel_09.webp', 'Panel 9 — Grok Edition')">
+              <img src="./assets/ep1/panel_09.webp" loading="lazy" alt="Issue 1 Panel 9 Grok">
+            </div>
+          </div>
+          <!-- META AI -->
+          <div class="edition-col col-meta">
+            <div class="edition-tag tag-meta">
+              <span>🌟 Meta AI Edition</span>
+            </div>
+            <div class="image-wrap" onclick="openLightbox('./assets/ep1_meta/panel_09.webp', 'Panel 9 — Meta AI Edition')">
+              <img src="./assets/ep1_meta/panel_09.webp" loading="lazy" alt="Issue 1 Panel 9 Meta AI">
+            </div>
+          </div>
+        </div>
+      </article>
+      
+      <article class="panel-row" id="panel-ep1-10">
+        <div class="panel-header-bar">
+          <div class="panel-title">
+            <span class="panel-number">PANEL 10 / 20</span>
+            <span>The Barbarian Charge</span>
+          </div>
+          <div style="font-size:12px; color:#888;">Dynamic Low-Angle Impact Shot</div>
+        </div>
+        <div class="panel-action">
+          <strong>Action:</strong> Korvath drops from the high balcony into the center of the sanctuary with earth-shaking impact, broadsword raised in two-handed grip, hurling his blazing torch directly into the altar brazier as sparks explode and temple guards scramble in panic.
+          <div class="panel-caption-text">📜 "He did not parley. He did not boast. A barbarian strikes while civilized men are still clearing their throats."</div>
+          
+            <div style="margin-top:10px; display:flex; flex-direction:column; gap:6px;">
+              
+                <div style="font-size:12px; background:#151722; padding:6px 12px; border-radius:4px; border-left:3px solid var(--gold);">
+                  <strong style="color:var(--gold); margin-right:8px;">Korvath:</strong>
+                  <span style="color:#e2e2e8; font-style:italic;">"The only god you answer to today is cold iron!"</span>
+                </div>
+              
+            </div>
+          
+        </div>
+        <div class="split-grid">
+          <!-- GROK -->
+          <div class="edition-col col-grok">
+            <div class="edition-tag tag-grok">
+              <span>🎨 Grok Edition</span>
+            </div>
+            <div class="image-wrap" onclick="openLightbox('./assets/ep1/panel_10.webp', 'Panel 10 — Grok Edition')">
+              <img src="./assets/ep1/panel_10.webp" loading="lazy" alt="Issue 1 Panel 10 Grok">
+            </div>
+          </div>
+          <!-- META AI -->
+          <div class="edition-col col-meta">
+            <div class="edition-tag tag-meta">
+              <span>🌟 Meta AI Edition</span>
+            </div>
+            <div class="image-wrap" onclick="openLightbox('./assets/ep1_meta/panel_10.webp', 'Panel 10 — Meta AI Edition')">
+              <img src="./assets/ep1_meta/panel_10.webp" loading="lazy" alt="Issue 1 Panel 10 Meta AI">
+            </div>
+          </div>
+        </div>
+      </article>
+      
+      <article class="panel-row" id="panel-ep1-11">
+        <div class="panel-header-bar">
+          <div class="panel-title">
+            <span class="panel-number">PANEL 11 / 20</span>
+            <span>Awakening of the Shadow</span>
+          </div>
+          <div style="font-size:12px; color:#888;">Colossal Creature Reveal Shot</div>
+        </div>
+        <div class="panel-action">
+          <strong>Action:</strong> An immense primordial serpent beast emerges from a subterranean trench behind the altar, emerald iridescent scales catching the mystic fire, unhinging jaws lined with dagger-like fangs as it hisses with earth-shaking venom.
+          <div class="panel-caption-text">📜 "Not a beast of nature, but a nightmare spawned before the stars grew cold."</div>
+          
+        </div>
+        <div class="split-grid">
+          <!-- GROK -->
+          <div class="edition-col col-grok">
+            <div class="edition-tag tag-grok">
+              <span>🎨 Grok Edition</span>
+            </div>
+            <div class="image-wrap" onclick="openLightbox('./assets/ep1/panel_11.webp', 'Panel 11 — Grok Edition')">
+              <img src="./assets/ep1/panel_11.webp" loading="lazy" alt="Issue 1 Panel 11 Grok">
+            </div>
+          </div>
+          <!-- META AI -->
+          <div class="edition-col col-meta">
+            <div class="edition-tag tag-meta">
+              <span>🌟 Meta AI Edition</span>
+            </div>
+            <div class="image-wrap" onclick="openLightbox('./assets/ep1_meta/panel_11.webp', 'Panel 11 — Meta AI Edition')">
+              <img src="./assets/ep1_meta/panel_11.webp" loading="lazy" alt="Issue 1 Panel 11 Meta AI">
+            </div>
+          </div>
+        </div>
+      </article>
+      
+      <article class="panel-row" id="panel-ep1-12">
+        <div class="panel-header-bar">
+          <div class="panel-title">
+            <span class="panel-number">PANEL 12 / 20</span>
+            <span>Wrath of the Titan</span>
+          </div>
+          <div style="font-size:12px; color:#888;">Wide Cataclysmic Destruction Shot</div>
+        </div>
+        <div class="panel-action">
+          <strong>Action:</strong> The colossal serpent thrashes violently, thick armored coils smashing through a massive stone pillar which splinters into falling granite boulders. In the foreground, Natari and the maidens in their bronze scale bikinis dive for cover behind the heavy throne dais.
+          <div class="panel-caption-text">📜 "The temple groaned under the wrath of an elder age. The foundations of Sarkesh began to crumble."</div>
+          
+        </div>
+        <div class="split-grid">
+          <!-- GROK -->
+          <div class="edition-col col-grok">
+            <div class="edition-tag tag-grok">
+              <span>🎨 Grok Edition</span>
+            </div>
+            <div class="image-wrap" onclick="openLightbox('./assets/ep1/panel_12.webp', 'Panel 12 — Grok Edition')">
+              <img src="./assets/ep1/panel_12.webp" loading="lazy" alt="Issue 1 Panel 12 Grok">
+            </div>
+          </div>
+          <!-- META AI -->
+          <div class="edition-col col-meta">
+            <div class="edition-tag tag-meta">
+              <span>🌟 Meta AI Edition</span>
+            </div>
+            <div class="image-wrap" onclick="openLightbox('./assets/ep1_meta/panel_12.webp', 'Panel 12 — Meta AI Edition')">
+              <img src="./assets/ep1_meta/panel_12.webp" loading="lazy" alt="Issue 1 Panel 12 Meta AI">
+            </div>
+          </div>
+        </div>
+      </article>
+      
+      <article class="panel-row" id="panel-ep1-13">
+        <div class="panel-header-bar">
+          <div class="panel-title">
+            <span class="panel-number">PANEL 13 / 20</span>
+            <span>Poetic Justice</span>
+          </div>
+          <div style="font-size:12px; color:#888;">Dramatic Lethal Strike Shot</div>
+        </div>
+        <div class="panel-action">
+          <strong>Action:</strong> High Priest Kheshat screams in horror as the titan serpent's gargantuan horned maw snaps shut around him, splintering his ebony staff and black silk robes mid-prayer as dark crimson blood sprays across the altar stones.
+          <div class="panel-caption-text">📜 "The gods of darkness have no love for their priests—only hunger."</div>
+          
+            <div style="margin-top:10px; display:flex; flex-direction:column; gap:6px;">
+              
+                <div style="font-size:12px; background:#151722; padding:6px 12px; border-radius:4px; border-left:3px solid var(--gold);">
+                  <strong style="color:var(--gold); margin-right:8px;">Kheshat:</strong>
+                  <span style="color:#e2e2e8; font-style:italic;">"No! I am your voice! I am your—AARRGH!"</span>
+                </div>
+              
+            </div>
+          
+        </div>
+        <div class="split-grid">
+          <!-- GROK -->
+          <div class="edition-col col-grok">
+            <div class="edition-tag tag-grok">
+              <span>🎨 Grok Edition</span>
+            </div>
+            <div class="image-wrap" onclick="openLightbox('./assets/ep1/panel_13.webp', 'Panel 13 — Grok Edition')">
+              <img src="./assets/ep1/panel_13.webp" loading="lazy" alt="Issue 1 Panel 13 Grok">
+            </div>
+          </div>
+          <!-- META AI -->
+          <div class="edition-col col-meta">
+            <div class="edition-tag tag-meta">
+              <span>🌟 Meta AI Edition</span>
+            </div>
+            <div class="image-wrap" onclick="openLightbox('./assets/ep1_meta/panel_13.webp', 'Panel 13 — Meta AI Edition')">
+              <img src="./assets/ep1_meta/panel_13.webp" loading="lazy" alt="Issue 1 Panel 13 Meta AI">
+            </div>
+          </div>
+        </div>
+      </article>
+      
+      <article class="panel-row" id="panel-ep1-14">
+        <div class="panel-header-bar">
+          <div class="panel-title">
+            <span class="panel-number">PANEL 14 / 20</span>
+            <span>Laughing at Doom</span>
+          </div>
+          <div style="font-size:12px; color:#888;">Tight Chiaroscuro Hero Portrait</div>
+        </div>
+        <div class="panel-action">
+          <strong>Action:</strong> Korvath stands firm amid the green sorcerous glare and crashing debris, broad scarred muscles tensed, smoldering blue wolfish eyes wide with battle-fury, lips pulled back in a fierce, fearless warrior grin.
+          <div class="panel-caption-text">📜 "Men bred in cities trembled before the dark gods. But a barbarian from the northern crags knew only that anything that breathes can die."</div>
+          
+            <div style="margin-top:10px; display:flex; flex-direction:column; gap:6px;">
+              
+                <div style="font-size:12px; background:#151722; padding:6px 12px; border-radius:4px; border-left:3px solid var(--gold);">
+                  <strong style="color:var(--gold); margin-right:8px;">Korvath:</strong>
+                  <span style="color:#e2e2e8; font-style:italic;">"Hiss all you want, worm! The Iron Gods do not care, and neither do I!"</span>
+                </div>
+              
+            </div>
+          
+        </div>
+        <div class="split-grid">
+          <!-- GROK -->
+          <div class="edition-col col-grok">
+            <div class="edition-tag tag-grok">
+              <span>🎨 Grok Edition</span>
+            </div>
+            <div class="image-wrap" onclick="openLightbox('./assets/ep1/panel_14.webp', 'Panel 14 — Grok Edition')">
+              <img src="./assets/ep1/panel_14.webp" loading="lazy" alt="Issue 1 Panel 14 Grok">
+            </div>
+          </div>
+          <!-- META AI -->
+          <div class="edition-col col-meta">
+            <div class="edition-tag tag-meta">
+              <span>🌟 Meta AI Edition</span>
+            </div>
+            <div class="image-wrap" onclick="openLightbox('./assets/ep1_meta/panel_14.webp', 'Panel 14 — Meta AI Edition')">
+              <img src="./assets/ep1_meta/panel_14.webp" loading="lazy" alt="Issue 1 Panel 14 Meta AI">
+            </div>
+          </div>
+        </div>
+      </article>
+      
+      <article class="panel-row" id="panel-ep1-15">
+        <div class="panel-header-bar">
+          <div class="panel-title">
+            <span class="panel-number">PANEL 15 / 20</span>
+            <span>Venom and Stone</span>
+          </div>
+          <div style="font-size:12px; color:#888;">Dynamic Low-Angle Action Evasion</div>
+        </div>
+        <div class="panel-action">
+          <strong>Action:</strong> The monstrous serpent lunges downward with dagger fangs bared, acidic venom hissing as it corrodes the flagstones, while Korvath executes an athletic combat roll across the shattered floor, broadsword trailing sparks across the stone.
+          <div class="panel-caption-text">📜 "Fast as a striking viper—faster still was the barbarian's wolfish instinct."</div>
+          
+        </div>
+        <div class="split-grid">
+          <!-- GROK -->
+          <div class="edition-col col-grok">
+            <div class="edition-tag tag-grok">
+              <span>🎨 Grok Edition</span>
+            </div>
+            <div class="image-wrap" onclick="openLightbox('./assets/ep1/panel_15.webp', 'Panel 15 — Grok Edition')">
+              <img src="./assets/ep1/panel_15.webp" loading="lazy" alt="Issue 1 Panel 15 Grok">
+            </div>
+          </div>
+          <!-- META AI -->
+          <div class="edition-col col-meta">
+            <div class="edition-tag tag-meta">
+              <span>🌟 Meta AI Edition</span>
+            </div>
+            <div class="image-wrap" onclick="openLightbox('./assets/ep1_meta/panel_15.webp', 'Panel 15 — Meta AI Edition')">
+              <img src="./assets/ep1_meta/panel_15.webp" loading="lazy" alt="Issue 1 Panel 15 Meta AI">
+            </div>
+          </div>
+        </div>
+      </article>
+      
+      <article class="panel-row" id="panel-ep1-16">
+        <div class="panel-header-bar">
+          <div class="panel-title">
+            <span class="panel-number">PANEL 16 / 20</span>
+            <span>The Fatal Leap</span>
+          </div>
+          <div style="font-size:12px; color:#888;">Peak Climax Midair Action Shot</div>
+        </div>
+        <div class="panel-action">
+          <strong>Action:</strong> Korvath leaps through the air from a shattered pillar, both hands gripping his broadsword overhead, driving the heavy broadsword downward with ferocious two-handed force deep between the serpent's armored skull plates, a violent eruption of dark venomous blood and emerald sorcerous sparks bursting from the fatal wound as the monster thrashes.
+          <div class="panel-caption-text">📜 "A leap that defied human limits—steel meeting ancient scale with the crash of thunder."</div>
+          
+        </div>
+        <div class="split-grid">
+          <!-- GROK -->
+          <div class="edition-col col-grok">
+            <div class="edition-tag tag-grok">
+              <span>🎨 Grok Edition</span>
+            </div>
+            <div class="image-wrap" onclick="openLightbox('./assets/ep1/panel_16.webp', 'Panel 16 — Grok Edition')">
+              <img src="./assets/ep1/panel_16.webp" loading="lazy" alt="Issue 1 Panel 16 Grok">
+            </div>
+          </div>
+          <!-- META AI -->
+          <div class="edition-col col-meta">
+            <div class="edition-tag tag-meta">
+              <span>🌟 Meta AI Edition</span>
+            </div>
+            <div class="image-wrap" onclick="openLightbox('./assets/ep1_meta/panel_16.webp', 'Panel 16 — Meta AI Edition')">
+              <img src="./assets/ep1_meta/panel_16.webp" loading="lazy" alt="Issue 1 Panel 16 Meta AI">
+            </div>
+          </div>
+        </div>
+      </article>
+      
+      <article class="panel-row" id="panel-ep1-17">
+        <div class="panel-header-bar">
+          <div class="panel-title">
+            <span class="panel-number">PANEL 17 / 20</span>
+            <span>Death Agony of the Beast</span>
+          </div>
+          <div style="font-size:12px; color:#888;">Full Catastrophe Wide Shot</div>
+        </div>
+        <div class="panel-action">
+          <strong>Action:</strong> The dying serpent titan convulses violently, black venom and blood pouring over the altar steps, as its heavy thrashing coils pull down the cavern ceiling in an avalanche of shattered stone and billowing dust clouds.
+          <div class="panel-caption-text">📜 "The serpent died as it lived—in a tempest of fury and black ichor that brought down the roof of the world."</div>
+          
+        </div>
+        <div class="split-grid">
+          <!-- GROK -->
+          <div class="edition-col col-grok">
+            <div class="edition-tag tag-grok">
+              <span>🎨 Grok Edition</span>
+            </div>
+            <div class="image-wrap" onclick="openLightbox('./assets/ep1/panel_17.webp', 'Panel 17 — Grok Edition')">
+              <img src="./assets/ep1/panel_17.webp" loading="lazy" alt="Issue 1 Panel 17 Grok">
+            </div>
+          </div>
+          <!-- META AI -->
+          <div class="edition-col col-meta">
+            <div class="edition-tag tag-meta">
+              <span>🌟 Meta AI Edition</span>
+            </div>
+            <div class="image-wrap" onclick="openLightbox('./assets/ep1_meta/panel_17.webp', 'Panel 17 — Meta AI Edition')">
+              <img src="./assets/ep1_meta/panel_17.webp" loading="lazy" alt="Issue 1 Panel 17 Meta AI">
+            </div>
+          </div>
+        </div>
+      </article>
+      
+      <article class="panel-row" id="panel-ep1-18">
+        <div class="panel-header-bar">
+          <div class="panel-title">
+            <span class="panel-number">PANEL 18 / 20</span>
+            <span>Severing the Chains</span>
+          </div>
+          <div style="font-size:12px; color:#888;">Medium Dynamic Hero Duo Shot</div>
+        </div>
+        <div class="panel-action">
+          <strong>Action:</strong> Amid falling stone boulders and billowing smoke, Korvath uses his notched broadsword to cleave the bronze chains binding Natari, pulling the beautiful bronze-bikini-clad maiden to her feet while clutching the glowing fist-sized Blood-Ruby of Sarkath in his scarred hand.
+          <div class="panel-caption-text">📜 "Gold, jewels, and a woman with fire in her veins—the only currency a barbarian respects."</div>
+          
+            <div style="margin-top:10px; display:flex; flex-direction:column; gap:6px;">
+              
+                <div style="font-size:12px; background:#151722; padding:6px 12px; border-radius:4px; border-left:3px solid var(--gold);">
+                  <strong style="color:var(--gold); margin-right:8px;">Korvath:</strong>
+                  <span style="color:#e2e2e8; font-style:italic;">"Up, girl! Unless you fancy being buried with dead snakes!"</span>
+                </div>
+              
+                <div style="font-size:12px; background:#151722; padding:6px 12px; border-radius:4px; border-left:3px solid var(--gold);">
+                  <strong style="color:var(--gold); margin-right:8px;">Natari:</strong>
+                  <span style="color:#e2e2e8; font-style:italic;">"Lead on, northern wolf!"</span>
+                </div>
+              
+            </div>
+          
+        </div>
+        <div class="split-grid">
+          <!-- GROK -->
+          <div class="edition-col col-grok">
+            <div class="edition-tag tag-grok">
+              <span>🎨 Grok Edition</span>
+            </div>
+            <div class="image-wrap" onclick="openLightbox('./assets/ep1/panel_18.webp', 'Panel 18 — Grok Edition')">
+              <img src="./assets/ep1/panel_18.webp" loading="lazy" alt="Issue 1 Panel 18 Grok">
+            </div>
+          </div>
+          <!-- META AI -->
+          <div class="edition-col col-meta">
+            <div class="edition-tag tag-meta">
+              <span>🌟 Meta AI Edition</span>
+            </div>
+            <div class="image-wrap" onclick="openLightbox('./assets/ep1_meta/panel_18.webp', 'Panel 18 — Meta AI Edition')">
+              <img src="./assets/ep1_meta/panel_18.webp" loading="lazy" alt="Issue 1 Panel 18 Meta AI">
+            </div>
+          </div>
+        </div>
+      </article>
+      
+      <article class="panel-row" id="panel-ep1-19">
+        <div class="panel-header-bar">
+          <div class="panel-title">
+            <span class="panel-number">PANEL 19 / 20</span>
+            <span>Escape into the Blinding Light</span>
+          </div>
+          <div style="font-size:12px; color:#888;">Exterior Action Breakthrough Shot</div>
+        </div>
+        <div class="panel-action">
+          <strong>Action:</strong> Korvath and Natari burst through the shattering stone entrance arch of the black pyramid into the blinding white-hot desert sunshine as the entire monolithic portal collapses behind them in a massive roaring eruption of sand and granite debris.
+          <div class="panel-caption-text">📜 "Behind them, a thousand years of serpent worship crashed into dust."</div>
+          
+        </div>
+        <div class="split-grid">
+          <!-- GROK -->
+          <div class="edition-col col-grok">
+            <div class="edition-tag tag-grok">
+              <span>🎨 Grok Edition</span>
+            </div>
+            <div class="image-wrap" onclick="openLightbox('./assets/ep1/panel_19.webp', 'Panel 19 — Grok Edition')">
+              <img src="./assets/ep1/panel_19.webp" loading="lazy" alt="Issue 1 Panel 19 Grok">
+            </div>
+          </div>
+          <!-- META AI -->
+          <div class="edition-col col-meta">
+            <div class="edition-tag tag-meta">
+              <span>🌟 Meta AI Edition</span>
+            </div>
+            <div class="image-wrap" onclick="openLightbox('./assets/ep1_meta/panel_19.webp', 'Panel 19 — Meta AI Edition')">
+              <img src="./assets/ep1_meta/panel_19.webp" loading="lazy" alt="Issue 1 Panel 19 Meta AI">
+            </div>
+          </div>
+        </div>
+      </article>
+      
+      <article class="panel-row" id="panel-ep1-20">
+        <div class="panel-header-bar">
+          <div class="panel-title">
+            <span class="panel-number">PANEL 20 / 20</span>
+            <span>The Crimson Dawn</span>
+          </div>
+          <div style="font-size:12px; color:#888;">Epic Panoramic Sunset/Sunrise Hero Shot</div>
+        </div>
+        <div class="panel-action">
+          <strong>Action:</strong> Epic panoramic hero shot. Korvath stands upon the crest of a crimson sand dune, broadsword rested across his scarred bronze shoulders, wolf-fur loincloth windswept. At his side stands Natari, breathtaking desert maiden in her revealing hammered bronze scale bikini and crimson silk sash, gazing out over the vast untamed desert toward distant purple mountain peaks under a glorious golden sunrise.
+          <div class="panel-caption-text">📜 "From the frozen crags of the northern wastes strode Korvath—lone wolf, reaver, breaker of chains. With cold steel and an unbending will, he carved his legend across the burning sands of a dying world."</div>
+          
+        </div>
+        <div class="split-grid">
+          <!-- GROK -->
+          <div class="edition-col col-grok">
+            <div class="edition-tag tag-grok">
+              <span>🎨 Grok Edition</span>
+            </div>
+            <div class="image-wrap" onclick="openLightbox('./assets/ep1/panel_20.webp', 'Panel 20 — Grok Edition')">
+              <img src="./assets/ep1/panel_20.webp" loading="lazy" alt="Issue 1 Panel 20 Grok">
+            </div>
+          </div>
+          <!-- META AI -->
+          <div class="edition-col col-meta">
+            <div class="edition-tag tag-meta">
+              <span>🌟 Meta AI Edition</span>
+            </div>
+            <div class="image-wrap" onclick="openLightbox('./assets/ep1_meta/panel_20.webp', 'Panel 20 — Meta AI Edition')">
+              <img src="./assets/ep1_meta/panel_20.webp" loading="lazy" alt="Issue 1 Panel 20 Meta AI">
+            </div>
+          </div>
+        </div>
+      </article>
+      
   </main>
 
   <!-- LIGHTBOX -->
   <div id="lightbox" onclick="closeLightbox()">
     <span id="lightbox-close">&times;</span>
-    <img id="lightbox-img" src="" alt="Zoomed Panel">
+    <img id="lightbox-img" src="" alt="Zoomed View">
     <div id="lightbox-caption"></div>
   </div>
 
   <script>
-    function switchEpisode(epNum) {
-      document.getElementById('sec-issue-1').classList.toggle('active', epNum === 1);
-      document.getElementById('sec-issue-2').classList.toggle('active', epNum === 2);
-      document.getElementById('btn-ep1').classList.toggle('active', epNum === 1);
-      document.getElementById('btn-ep2').classList.toggle('active', epNum === 2);
-      window.scrollTo({ top: document.querySelector('.comparison-container').offsetTop - 30, behavior: 'smooth' });
-    }
-
     function switchVideoEdition(edition) {
       const player = document.getElementById('dual-video-player');
       const label = document.getElementById('video-edition-label');
@@ -2420,12 +1166,14 @@
       const isPaused = player.paused;
 
       if (edition === 'meta') {
-        player.src = './episode_02_meta_motion_comic.mp4';
+        player.src = './episode_01_meta_motion_comic.mp4';
+        player.poster = './assets/ep1_meta/panel_01.webp';
         label.innerText = 'Meta AI Edition (2K Frank Frazetta Artwork)';
         btnMeta.classList.add('active');
         btnGrok.classList.remove('active');
       } else {
-        player.src = './episode_02_motion_comic.mp4';
+        player.src = './episode_01_motion_comic.mp4';
+        player.poster = './assets/ep1/panel_01.webp';
         label.innerText = 'Grok Edition (Original Motion Comic)';
         btnGrok.classList.add('active');
         btnMeta.classList.remove('active');
@@ -2440,9 +1188,11 @@
       document.getElementById('lightbox-caption').innerText = caption;
       document.getElementById('lightbox').classList.add('active');
     }
+
     function closeLightbox() {
       document.getElementById('lightbox').classList.remove('active');
     }
+
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') closeLightbox();
     });

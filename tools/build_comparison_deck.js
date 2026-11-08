@@ -3,14 +3,13 @@ const path = require('path');
 
 const rootDir = path.join(__dirname, '..');
 const ep1 = JSON.parse(fs.readFileSync(path.join(rootDir, '01_Script', 'episodes', 'episode_01.json'), 'utf8'));
-const ep2 = JSON.parse(fs.readFileSync(path.join(rootDir, '01_Script', 'episodes', 'episode_02.json'), 'utf8'));
 
 const html = `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Conan the Barbarian — Studio Comparison: Grok vs Meta AI</title>
+  <title>Issue #1: The Slumbering Serpent — Grok vs Meta AI</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=MedievalSharp&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
@@ -39,7 +38,7 @@ const html = `<!DOCTYPE html>
     }
     .series-title {
       font-family: 'Cinzel', serif;
-      font-size: 14px;
+      font-size: 13px;
       color: var(--crimson);
       letter-spacing: 4px;
       text-transform: uppercase;
@@ -48,51 +47,38 @@ const html = `<!DOCTYPE html>
     }
     h1 {
       font-family: 'Cinzel', serif;
-      font-size: 34px;
+      font-size: 32px;
       color: var(--gold);
       letter-spacing: 2px;
       text-transform: uppercase;
       text-shadow: 0 0 20px rgba(252, 163, 17, 0.4);
     }
     .subtitle {
-      font-size: 15px;
+      font-size: 14px;
       color: #aaa;
-      margin-top: 8px;
+      margin-top: 6px;
       letter-spacing: 1px;
     }
-
     .controls {
       display: flex;
       justify-content: center;
       gap: 14px;
-      margin-top: 22px;
+      margin-top: 20px;
       flex-wrap: wrap;
     }
     .btn {
       font-family: 'Cinzel', serif;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: bold;
       padding: 10px 22px;
       border-radius: 6px;
       cursor: pointer;
       text-transform: uppercase;
       letter-spacing: 1.5px;
-      transition: all 0.25s ease;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
       gap: 8px;
-    }
-    .btn-tab {
-      background: #181924;
-      border: 1px solid #333;
-      color: #bbb;
-    }
-    .btn-tab.active {
-      background: #241910;
-      border-color: var(--gold);
-      color: var(--gold);
-      box-shadow: 0 0 15px rgba(252, 163, 17, 0.35);
     }
     .btn-nav {
       background: #101924;
@@ -126,7 +112,7 @@ const html = `<!DOCTYPE html>
     }
     .video-title {
       font-family: 'Cinzel', serif;
-      font-size: 16px;
+      font-size: 15px;
       color: var(--gold);
       letter-spacing: 1.5px;
       text-transform: uppercase;
@@ -182,62 +168,12 @@ const html = `<!DOCTYPE html>
       color: var(--gold);
     }
 
-    /* VOICE DNA CAST BAR */
-    .voice-bar {
-      max-width: 1700px;
-      margin: 0 auto 30px;
-      background: #12131b;
-      border: 1px solid #282a3a;
-      border-radius: 10px;
-      padding: 14px 22px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-    .voice-title {
-      font-family: 'Cinzel', serif;
-      font-size: 13px;
-      color: var(--gold);
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-    }
-    .voice-chips {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-    .voice-chip {
-      background: #1a1c27;
-      border: 1px solid #33374d;
-      border-radius: 6px;
-      padding: 5px 10px;
-      font-size: 11px;
-      color: #ccc;
-    }
-    .voice-chip strong {
-      color: var(--gold);
-    }
-    .voice-chip span.actor {
-      color: var(--meta-blue);
-      font-weight: 600;
-    }
-
     .comparison-container {
       max-width: 1700px;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
       gap: 50px;
-    }
-    .issue-section {
-      display: none;
-      flex-direction: column;
-      gap: 50px;
-    }
-    .issue-section.active {
-      display: flex;
     }
 
     .panel-row {
@@ -291,57 +227,6 @@ const html = `<!DOCTYPE html>
       color: #ffd166;
       font-family: 'MedievalSharp', serif;
       font-size: 14px;
-    }
-
-    /* AUDIO PLAYER ROW */
-    .panel-audio-bar {
-      background: #151622;
-      padding: 10px 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 1px solid #222436;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-    .audio-info {
-      font-size: 12px;
-      color: #bbb;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .audio-info strong {
-      color: var(--gold);
-    }
-    .audio-player-widget audio {
-      height: 32px;
-      outline: none;
-      filter: invert(0.85) hue-rotate(180deg);
-    }
-
-    /* DIALOGUE BOX */
-    .dialogue-box {
-      margin-top: 10px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-    .dia-line {
-      font-size: 12px;
-      background: #151722;
-      padding: 6px 12px;
-      border-radius: 4px;
-      border-left: 3px solid var(--gold);
-    }
-    .dia-speaker {
-      font-weight: bold;
-      color: var(--gold);
-      margin-right: 8px;
-    }
-    .dia-text {
-      color: #e2e2e8;
-      font-style: italic;
     }
 
     .split-grid {
@@ -412,17 +297,6 @@ const html = `<!DOCTYPE html>
       transform: scale(1.02);
     }
 
-    .pill-badge {
-      font-size: 10px;
-      padding: 3px 8px;
-      border-radius: 4px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-weight: bold;
-    }
-    .pill-grok { background: #3d2508; color: #ffbe0b; }
-    .pill-meta { background: #072a3a; color: #48cae4; }
-
     /* LIGHTBOX MODAL */
     #lightbox {
       display: none;
@@ -473,196 +347,93 @@ const html = `<!DOCTYPE html>
 
   <header>
     <div class="series-title">Conan the Barbarian Studio</div>
-    <h1>Multi-Comic Studio Comparison</h1>
-    <div class="subtitle">Complete Side-by-Side Comparison: Grok Edition vs. Meta AI (2K Frazetta) Edition — with Full Motion Comic Video & Audio</div>
+    <h1>Issue #1: The Slumbering Serpent</h1>
+    <div class="subtitle">Side-by-Side Comparison: Grok vs Meta AI (2K Frazetta) — with Full Episode 1 Motion Comic Video & Audio</div>
 
     <div class="controls">
-      <button class="btn btn-tab active" id="btn-ep1" onclick="switchEpisode(1)">⚔️ Issue #1: The Slumbering Serpent</button>
-      <button class="btn btn-tab" id="btn-ep2" onclick="switchEpisode(2)">🗡️ Issue #2: The Blood-Thieves of Valkash</button>
-      <a href="./index.html" class="btn btn-nav">📖 Graphic Novel Reader</a>
-      <a href="./video_preview.html" class="btn btn-nav">🎬 Standalone Video Theater</a>
+      <a href="./index.html" class="btn btn-nav">📖 Full Episode 1 Reader & Movie Theater</a>
     </div>
   </header>
 
   <!-- DUAL MOTION COMIC MOVIE PLAYER -->
   <section class="video-section">
     <div class="video-header">
-      <div class="video-title">🎬 Motion Comic Movie Player (Dual Edition)</div>
+      <div class="video-title">🎬 Episode 1 Motion Comic Movie (Dual Edition)</div>
       <div class="video-switcher">
         <button class="video-btn active grok" id="vbtn-grok" onclick="switchVideoEdition('grok')">🎨 Grok Video</button>
         <button class="video-btn meta" id="vbtn-meta" onclick="switchVideoEdition('meta')">🌟 Meta AI (2K Frazetta) Video</button>
       </div>
     </div>
-    <video id="dual-video-player" controls playsinline poster="./assets/ep2/panel_01.webp">
-      <source id="video-src" src="./episode_02_motion_comic.mp4" type="video/mp4">
+    <video id="dual-video-player" controls playsinline poster="./assets/ep1/panel_01.webp">
+      <source id="video-src" src="./episode_01_motion_comic.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
     <div class="video-meta-bar">
-      <span><strong>Track:</strong> <span id="video-edition-label">Grok Edition</span> (Full 20-Panel Cinematic Motion Comic)</span>
-      <span><strong>Voices:</strong> Brian (Korvath Kratos DSP) • Sarah (Natari) • Charlie (Lord Malakor)</span>
+      <span><strong>Track:</strong> <span id="video-edition-label">Grok Edition</span> (Full 20-Panel Movie)</span>
+      <span><strong>Voice Cast:</strong> Brian (Narrator) • Subterranean Kratos Korvath • Sarah (Natari)</span>
     </div>
   </section>
 
-  <!-- CANONICAL VOICE CAST DNA -->
-  <div class="voice-bar">
-    <div class="voice-title">🎙️ Canonical Voice Cast & DSP Engine:</div>
-    <div class="voice-chips">
-      <div class="voice-chip">
-        <strong>Korvath:</strong> <span class="actor">Subterranean Kratos</span> (Brian -12% Pitch + 8dB Sub-Bass)
-      </div>
-      <div class="voice-chip">
-        <strong>Natari:</strong> <span class="actor">Sarah</span> (Sultry Rogue / Terrified Screams)
-      </div>
-      <div class="voice-chip">
-        <strong>Lord Malakor:</strong> <span class="actor">Charlie</span> (Charles Dance Silk Prince)
-      </div>
-      <div class="voice-chip">
-        <strong>Spider Assassin:</strong> <span class="actor">George</span> (Whispered Hiss)
-      </div>
-      <div class="voice-chip">
-        <strong>Narrator:</strong> <span class="actor">The Dark Bard</span> (Brian Cinematic Trailer Actor)
-      </div>
-    </div>
-  </div>
-
   <main class="comparison-container">
-
-    <!-- ISSUE 1 -->
-    <section class="issue-section active" id="sec-issue-1">
-      ${ep1.map(p => {
-        const pad = String(p.panelId).padStart(2, '0');
-        const hasDialogue = p.dialogue && p.dialogue.length > 0;
-        return `
-        <article class="panel-row" id="panel-ep1-${p.panelId}">
-          <div class="panel-header-bar">
-            <div class="panel-title">
-              <span class="panel-number">PANEL ${p.panelId} / 20</span>
-              <span>${p.beat?.name || 'Scene ' + p.panelId}</span>
-            </div>
-            <div style="font-size:12px; color:#888;">${p.camera?.shotType || ''}</div>
+    ${ep1.map(p => {
+      const pad = String(p.panelId).padStart(2, '0');
+      const hasDialogue = p.dialogue && p.dialogue.length > 0;
+      return `
+      <article class="panel-row" id="panel-ep1-${p.panelId}">
+        <div class="panel-header-bar">
+          <div class="panel-title">
+            <span class="panel-number">PANEL ${p.panelId} / 20</span>
+            <span>${p.beat?.name || 'Scene ' + p.panelId}</span>
           </div>
-          <div class="panel-action">
-            <strong>Action:</strong> ${p.action}
-            ${p.caption ? `<div class="panel-caption-text">📜 "${p.caption}"</div>` : ''}
-            ${hasDialogue ? `
-              <div class="dialogue-box">
-                ${p.dialogue.map(d => `
-                  <div class="dia-line">
-                    <span class="dia-speaker">${d.speaker}:</span>
-                    <span class="dia-text">"${d.text}"</span>
-                  </div>
-                `).join('')}
-              </div>
-            ` : ''}
-          </div>
-          <div class="split-grid">
-            <!-- GROK -->
-            <div class="edition-col col-grok">
-              <div class="edition-tag tag-grok">
-                <span>🎨 Grok Edition</span>
-                <span class="pill-badge pill-grok">Original</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep1/panel_${pad}.webp', 'Issue 1 Panel ${p.panelId} — Grok Edition')">
-                <img src="./assets/ep1/panel_${pad}.webp" loading="lazy" alt="Issue 1 Panel ${p.panelId} Grok">
-              </div>
+          <div style="font-size:12px; color:#888;">${p.camera?.shotType || ''}</div>
+        </div>
+        <div class="panel-action">
+          <strong>Action:</strong> ${p.action}
+          ${p.caption ? `<div class="panel-caption-text">📜 "${p.caption}"</div>` : ''}
+          ${hasDialogue ? `
+            <div style="margin-top:10px; display:flex; flex-direction:column; gap:6px;">
+              ${p.dialogue.map(d => `
+                <div style="font-size:12px; background:#151722; padding:6px 12px; border-radius:4px; border-left:3px solid var(--gold);">
+                  <strong style="color:var(--gold); margin-right:8px;">${d.speaker}:</strong>
+                  <span style="color:#e2e2e8; font-style:italic;">"${d.text}"</span>
+                </div>
+              `).join('')}
             </div>
-            <!-- META AI -->
-            <div class="edition-col col-meta">
-              <div class="edition-tag tag-meta">
-                <span>🌟 Meta AI Edition</span>
-                <span class="pill-badge pill-meta">2K Frazetta</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep1_meta/panel_${pad}.webp', 'Issue 1 Panel ${p.panelId} — Meta AI Edition')">
-                <img src="./assets/ep1_meta/panel_${pad}.webp" loading="lazy" alt="Issue 1 Panel ${p.panelId} Meta AI">
-              </div>
+          ` : ''}
+        </div>
+        <div class="split-grid">
+          <!-- GROK -->
+          <div class="edition-col col-grok">
+            <div class="edition-tag tag-grok">
+              <span>🎨 Grok Edition</span>
+            </div>
+            <div class="image-wrap" onclick="openLightbox('./assets/ep1/panel_${pad}.webp', 'Panel ${p.panelId} — Grok Edition')">
+              <img src="./assets/ep1/panel_${pad}.webp" loading="lazy" alt="Issue 1 Panel ${p.panelId} Grok">
             </div>
           </div>
-        </article>
-        `;
-      }).join('')}
-    </section>
-
-    <!-- ISSUE 2 -->
-    <section class="issue-section" id="sec-issue-2">
-      ${ep2.map(p => {
-        const pad = String(p.panelId).padStart(2, '0');
-        const hasDialogue = p.dialogue && p.dialogue.length > 0;
-        return `
-        <article class="panel-row" id="panel-ep2-${p.panelId}">
-          <div class="panel-header-bar">
-            <div class="panel-title">
-              <span class="panel-number">PANEL ${p.panelId} / 20</span>
-              <span>${p.beat?.name || 'Scene ' + p.panelId}</span>
+          <!-- META AI -->
+          <div class="edition-col col-meta">
+            <div class="edition-tag tag-meta">
+              <span>🌟 Meta AI Edition</span>
             </div>
-            <div style="font-size:12px; color:#888;">${p.camera?.shotType || ''}</div>
-          </div>
-          <div class="panel-action">
-            <strong>Action:</strong> ${p.action}
-            ${p.caption ? `<div class="panel-caption-text">📜 "${p.caption}"</div>` : ''}
-            ${hasDialogue ? `
-              <div class="dialogue-box">
-                ${p.dialogue.map(d => `
-                  <div class="dia-line">
-                    <span class="dia-speaker">${d.speaker}:</span>
-                    <span class="dia-text">"${d.text}"</span>
-                  </div>
-                `).join('')}
-              </div>
-            ` : ''}
-          </div>
-          <!-- AUDIO PLAYER BAR -->
-          <div class="panel-audio-bar">
-            <div class="audio-info">
-              <span>🎙️ <strong>Master Audio & Voice Track:</strong> ${hasDialogue ? p.dialogue.map(d => d.speaker).join(' & ') : 'Narration'} + Dynamic SFX & Ambient Score</span>
-            </div>
-            <div class="audio-player-widget">
-              <audio controls preload="none" src="./assets/audio/ep2/p${pad}_mixed.mp3"></audio>
+            <div class="image-wrap" onclick="openLightbox('./assets/ep1_meta/panel_${pad}.webp', 'Panel ${p.panelId} — Meta AI Edition')">
+              <img src="./assets/ep1_meta/panel_${pad}.webp" loading="lazy" alt="Issue 1 Panel ${p.panelId} Meta AI">
             </div>
           </div>
-          <div class="split-grid">
-            <!-- GROK -->
-            <div class="edition-col col-grok">
-              <div class="edition-tag tag-grok">
-                <span>🎨 Grok Edition</span>
-                <span class="pill-badge pill-grok">Original</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep2/panel_${pad}.webp', 'Issue 2 Panel ${p.panelId} — Grok Edition')">
-                <img src="./assets/ep2/panel_${pad}.webp" loading="lazy" alt="Issue 2 Panel ${p.panelId} Grok">
-              </div>
-            </div>
-            <!-- META AI -->
-            <div class="edition-col col-meta">
-              <div class="edition-tag tag-meta">
-                <span>🌟 Meta AI Edition</span>
-                <span class="pill-badge pill-meta">2K Frazetta</span>
-              </div>
-              <div class="image-wrap" onclick="openLightbox('./assets/ep2_meta/panel_${pad}.webp', 'Issue 2 Panel ${p.panelId} — Meta AI Edition')">
-                <img src="./assets/ep2_meta/panel_${pad}.webp" loading="lazy" alt="Issue 2 Panel ${p.panelId} Meta AI">
-              </div>
-            </div>
-          </div>
-        </article>
-        `;
-      }).join('')}
-    </section>
+        </div>
+      </article>
+      `;
+    }).join('')}
   </main>
 
   <!-- LIGHTBOX -->
   <div id="lightbox" onclick="closeLightbox()">
     <span id="lightbox-close">&times;</span>
-    <img id="lightbox-img" src="" alt="Zoomed Panel">
+    <img id="lightbox-img" src="" alt="Zoomed View">
     <div id="lightbox-caption"></div>
   </div>
 
   <script>
-    function switchEpisode(epNum) {
-      document.getElementById('sec-issue-1').classList.toggle('active', epNum === 1);
-      document.getElementById('sec-issue-2').classList.toggle('active', epNum === 2);
-      document.getElementById('btn-ep1').classList.toggle('active', epNum === 1);
-      document.getElementById('btn-ep2').classList.toggle('active', epNum === 2);
-      window.scrollTo({ top: document.querySelector('.comparison-container').offsetTop - 30, behavior: 'smooth' });
-    }
-
     function switchVideoEdition(edition) {
       const player = document.getElementById('dual-video-player');
       const label = document.getElementById('video-edition-label');
@@ -672,12 +443,14 @@ const html = `<!DOCTYPE html>
       const isPaused = player.paused;
 
       if (edition === 'meta') {
-        player.src = './episode_02_meta_motion_comic.mp4';
+        player.src = './episode_01_meta_motion_comic.mp4';
+        player.poster = './assets/ep1_meta/panel_01.webp';
         label.innerText = 'Meta AI Edition (2K Frank Frazetta Artwork)';
         btnMeta.classList.add('active');
         btnGrok.classList.remove('active');
       } else {
-        player.src = './episode_02_motion_comic.mp4';
+        player.src = './episode_01_motion_comic.mp4';
+        player.poster = './assets/ep1/panel_01.webp';
         label.innerText = 'Grok Edition (Original Motion Comic)';
         btnGrok.classList.add('active');
         btnMeta.classList.remove('active');
@@ -692,9 +465,11 @@ const html = `<!DOCTYPE html>
       document.getElementById('lightbox-caption').innerText = caption;
       document.getElementById('lightbox').classList.add('active');
     }
+
     function closeLightbox() {
       document.getElementById('lightbox').classList.remove('active');
     }
+
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') closeLightbox();
     });
@@ -704,4 +479,4 @@ const html = `<!DOCTYPE html>
 `;
 
 fs.writeFileSync(path.join(rootDir, 'docs', 'compare_grok_meta.html'), html, 'utf8');
-console.log('✅ Generated unified docs/compare_grok_meta.html with dual motion comic video and audio successfully!');
+console.log('✅ Generated dedicated Episode 1 docs/compare_grok_meta.html with Grok & Meta AI videos successfully!');

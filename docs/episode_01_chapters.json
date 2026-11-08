@@ -1,0 +1,122 @@
+[
+  {
+    "panelId": 1,
+    "title": "The Windswept Ruins",
+    "timestamp": 0,
+    "formattedTime": "0:00"
+  },
+  {
+    "panelId": 2,
+    "title": "Eyes in the Dust",
+    "timestamp": 11.27,
+    "formattedTime": "0:11"
+  },
+  {
+    "panelId": 3,
+    "title": "The Crypt of the Serpent",
+    "timestamp": 18.36,
+    "formattedTime": "0:18"
+  },
+  {
+    "panelId": 4,
+    "title": "Hall of Serpent Kings",
+    "timestamp": 26.15,
+    "formattedTime": "0:26"
+  },
+  {
+    "panelId": 5,
+    "title": "Blades of the Cult",
+    "timestamp": 32.55,
+    "formattedTime": "0:32"
+  },
+  {
+    "panelId": 6,
+    "title": "The Iron Cleave",
+    "timestamp": 41.01,
+    "formattedTime": "0:41"
+  },
+  {
+    "panelId": 7,
+    "title": "The Cavern of the Lotus",
+    "timestamp": 49.81,
+    "formattedTime": "0:49"
+  },
+  {
+    "panelId": 8,
+    "title": "The Captive Maiden",
+    "timestamp": 59.21,
+    "formattedTime": "0:59"
+  },
+  {
+    "panelId": 9,
+    "title": "The Altar of Sarkath",
+    "timestamp": 70.18,
+    "formattedTime": "1:10"
+  },
+  {
+    "panelId": 10,
+    "title": "The Barbarian Charge",
+    "timestamp": 80.98,
+    "formattedTime": "1:20"
+  },
+  {
+    "panelId": 11,
+    "title": "Awakening of the Shadow",
+    "timestamp": 92.08,
+    "formattedTime": "1:32"
+  },
+  {
+    "panelId": 12,
+    "title": "Wrath of the Titan",
+    "timestamp": 97.67999999999999,
+    "formattedTime": "1:37"
+  },
+  {
+    "panelId": 13,
+    "title": "Poetic Justice",
+    "timestamp": 105.13999999999999,
+    "formattedTime": "1:45"
+  },
+  {
+    "panelId": 14,
+    "title": "Laughing at Doom",
+    "timestamp": 112.93999999999998,
+    "formattedTime": "1:52"
+  },
+  {
+    "panelId": 15,
+    "title": "Venom and Stone",
+    "timestamp": 127.83999999999999,
+    "formattedTime": "2:07"
+  },
+  {
+    "panelId": 16,
+    "title": "The Fatal Leap",
+    "timestamp": 134.14,
+    "formattedTime": "2:14"
+  },
+  {
+    "panelId": 17,
+    "title": "Death Agony of the Beast",
+    "timestamp": 141.23999999999998,
+    "formattedTime": "2:21"
+  },
+  {
+    "panelId": 18,
+    "title": "Severing the Chains",
+    "timestamp": 148.18999999999997,
+    "formattedTime": "2:28"
+  },
+  {
+    "panelId": 19,
+    "title": "Escape into the Blinding Light",
+    "timestamp": 161.68999999999997,
+    "formattedTime": "2:41"
+  },
+  {
+    "panelId": 20,
+    "title": "The Crimson Dawn",
+    "timestamp": 167.05999999999997,
+    "formattedTime": "2:47"
+  }
+]
