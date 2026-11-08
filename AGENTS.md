@@ -77,16 +77,20 @@ When a panel specifies $X$ items or enemies (e.g., 3 cultists, 4 torches, 2 war 
 
 ---
 
-## 🔍 Protocol 5: Visual Code Review (6-Point Checklist)
+## 🔍 Protocol 5: Visual Director Continuity & QA Gate (8-Point Checklist)
 
-| Dimension | Inspection Check |
-| :--- | :--- |
-| **1. Conan Likeness** | Compare against `00_Reference/sheets/char_conan_model_sheet.webp`. Square jaw, blue wolfish eyes, shaggy raven hair. |
-| **2. Broadsword Consistency** | 42-inch straight double-edged blade with central fuller, carved iron crossguard, wire hilt. |
-| **3. Anatomical Sanity** | 5 fingers per hand, powerful muscular proportions, correct blade grip. |
-| **4. Cardinality & Count** | Verify enemy/prop counts match the geometric formation. |
-| **5. Graphic Novel Linework** | High-contrast black ink brushwork, cross-hatching, rich cel digital colors. Zero blurry watercolor or CGI drift. |
-| **6. Narrative & Caption Fit** | Framing leaves composition room for narrative caption boxes and dialogue bubbles. |
+Every generated panel MUST pass the following 8-point inspection before promotion to `selected/` or inclusion in master video renders:
+
+| Dimension | Inspection Check | Failure Triggers |
+| :--- | :--- | :--- |
+| **1. Facial Likeness & Human Sanity** | Compare against model sheet. Chiseled masculine jaw, dark stubble scruff, intense wolfish eyes, natural wavy raven hair. | **Hard Reject:** Ape-brow / Neanderthal ridge, squinting piggish eyes, crooked jagged fringe bangs, distorted facial asymmetry under strain. |
+| **2. Wardrobe & Clothing Continuity** | **The Mantle/Cape Rule:** Verify all layer-by-layer attire matches preceding & succeeding panels. Korvath MUST wear his heavy shaggy wolf-fur mantle, cross-chest harness with brass buckles, fur-trimmed war kilt, and wrapped boots. | **Hard Reject:** Any item of clothing (mantle, cape, bracers, harness) vanishing or appearing without an explicit on-panel narrative event (e.g. discarding a cloak). |
+| **3. Carried Object & Relic State Machine** | Track every held/carried item panel-by-panel: hand placement, sheathed vs. drawn state, and physical state transitions.<br>• **Broadsword:** Straight 42-inch double-edged blade with central blood fuller, carved rectangular iron crossguard, wire grip, octagonal pommel.<br>• **Pine Torch:** Lit burning torch vs extinguished brand.<br>• **Blood-Ruby of Sarkath:** Fist-sized faceted red gem set in black iron serpent talon claw. | **Hard Reject:** Broadsword warping into a curved scimitar or katana; missing fuller; carried torch disappearing mid-tomb; relic changing size, cut, or setting; object teleporting between hands without an action beat. |
+| **4. Cardinality & Anti-Ghost Actor Guard** | Headcount verification. When $N$ characters are in scene, strictly $N$ bodies must render. | **Hard Reject:** Unwanted background "ghost" clones (e.g. accidental miniature barbarians running behind the hero), extra limbs, or mutant faces in crowds. |
+| **5. Anatomical Sanity & Combat Physics** | 5 fingers per hand, correct blade grip (thumbs toward crossguard), natural muscular limb articulation, coherent action vector. | **Hard Reject:** AI dislocated shoulder, impossible arm twist (e.g. cocked overhead while simultaneously hitting), mangled fingers, fused hands. |
+| **6. Environmental & Damage Continuity** | Blood splatters on blade after a strike; dust/soot on skin after tomb collapse; lighting shifts matching scene progression. | **Hard Reject:** Fresh pristine clean blade right after cleaving a foe; missing damage or battle-wear established in prior panel. |
+| **7. Graphic Novel Linework & Cel Aesthetic** | 1970s Frank Frazetta / John Buscema Bronze Age aesthetic. High-contrast black ink brushwork, fine cross-hatching, rich cel digital colors, dramatic chiaroscuro. | **Hard Reject:** Blurry watercolor, modern 3D CGI plastic skin, generic airbrushed digital art, flat unshaded vector art. |
+| **8. Caption & Speech Bubble Legibility** | Yellow vintage caption box in top corner with black border; authentic white speech balloons with pointer pointing directly to the speaker's mouth. | **Hard Reject:** Misspelled words, garbled AI gibberish text, speech pointer pointing at wrong character or empty space, text overflowing box borders. |
 
 ---
 
