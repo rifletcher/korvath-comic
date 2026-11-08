@@ -4,7 +4,7 @@ const crypto = require('crypto');
 const { getMetaTab, CDPClient } = require('./cdp_helper');
 const { sanitizePromptForMetaAI } = require('./meta_engine');
 
-const PRIMED_THREAD_URL = 'https://www.meta.ai/prompt/b329915b-16ff-4553-9963-5de47475cbd2';
+const PRIMED_THREAD_URL = process.env.META_THREAD_URL || 'https://www.meta.ai/prompt/69afed44-341b-470a-9887-663f3fd8dd17';
 
 function getAllExistingHashes(rootDir) {
   const hashes = new Set();
@@ -59,22 +59,23 @@ async function renderDirectorPanel(episodeNum, panelId, options = {}) {
   try {
     // 0. Ensure we are in the continuous primed Frazetta thread (Protocol 3 Single-Thread Rule)
     const currentUrl = await client.evaluate('window.location.href');
-    if (!currentUrl.includes('b329915b-16ff-4553-9963-5de47475cbd2')) {
-      console.log('🔄 Navigating to primed Frazetta thread...');
+    if (!currentUrl.includes(PRIMED_THREAD_URL.split('/').pop())) {
+      console.log(`🔄 Navigating to primed Frazetta thread (${PRIMED_THREAD_URL})...`);
       await client.send('Page.navigate', { url: PRIMED_THREAD_URL });
       await new Promise(r => setTimeout(r, 3500));
     }
 
-    // 1. Snapshot all existing image URLs before dispatching
-    const initialUrls = await client.evaluate(`
+    // 1. Snapshot all existing image URLs and alt timestamps before dispatching
+    const preFlightData = await client.evaluate(`
       (() => {
         const imgs = Array.from(document.querySelectorAll('img'))
-          .filter(i => i.src.includes('scontent') && i.src.includes('.webp'))
-          .map(i => i.src);
-        return Array.from(new Set(imgs));
+          .filter(i => i.src.includes('scontent') && i.src.includes('.webp'));
+        const alts = imgs.map(i => i.alt).filter(Boolean);
+        const urls = imgs.map(i => i.src);
+        return { alts, urls };
       })()
-    `) || [];
-    console.log(`📸 Pre-flight snapshot: ${initialUrls.length} existing images registered in thread.`);
+    `) || { alts: [], urls: [] };
+    console.log(`📸 Pre-flight snapshot: ${preFlightData.urls.length} existing images registered in thread.`);
 
     // 2. Focus composer
     const focused = await client.evaluate(`
@@ -132,6 +133,9 @@ async function renderDirectorPanel(episodeNum, panelId, options = {}) {
     let approvedBase64 = null;
     let attempts = 0;
 
+    const preUrlsJson = JSON.stringify(preFlightData.urls);
+    const preAltsJson = JSON.stringify(preFlightData.alts);
+
     while (Date.now() - startTime < 90000) {
       await new Promise(r => setTimeout(r, 2500));
       attempts++;
@@ -142,27 +146,27 @@ async function renderDirectorPanel(episodeNum, panelId, options = {}) {
         continue;
       }
 
-      const currentImgs = await client.evaluate(`
+      const candidate = await client.evaluate(`
         (() => {
+          const preUrls = ${preUrlsJson};
+          const preAlts = ${preAltsJson};
           const imgs = Array.from(document.querySelectorAll('img'))
-            .filter(i => i.src.includes('scontent') && i.src.includes('.webp') && i.naturalWidth >= 1000)
-            .map(i => i.src);
-          return Array.from(new Set(imgs));
+            .filter(i => i.src.includes('scontent') && i.src.includes('.webp') && i.naturalWidth >= 1000);
+          const newImgs = imgs.filter(i => !preUrls.includes(i.src) && (!i.alt || !preAlts.includes(i.alt)));
+          if (newImgs.length > 0) {
+            const latest = newImgs[newImgs.length - 1];
+            return { url: latest.src, alt: latest.alt };
+          }
+          return null;
         })()
-      `) || [];
+      `);
 
-      // Find candidates that were NOT in initial snapshot
-      const candidates = currentImgs.filter(url => !initialUrls.includes(url));
-
-      if (candidates.length > 0) {
-        // Take the latest candidate
-        const candidateUrl = candidates[candidates.length - 1];
-
+      if (candidate && candidate.url) {
         // Fetch candidate as base64
         const base64 = await client.evaluate(`
           (async () => {
             try {
-              const res = await fetch("${candidateUrl}");
+              const res = await fetch("${candidate.url}");
               const blob = await res.blob();
               return new Promise((resolve) => {
                 const reader = new FileReader();
@@ -184,7 +188,7 @@ async function renderDirectorPanel(episodeNum, panelId, options = {}) {
           }
 
           approvedBase64 = base64;
-          console.log(`\n✨ Candidate passed hash uniqueness check! (${hash.slice(0, 8)})`);
+          console.log(`\n✨ Candidate passed hash uniqueness check! (${hash.slice(0, 8)}) [${candidate.alt || 'alt'}]`);
           break;
         }
       }

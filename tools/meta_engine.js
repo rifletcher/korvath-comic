@@ -18,6 +18,9 @@ const EUPHEMISMS = [
   { match: /\bstab(?:bed|bing)?\s+through\s+the\s+heart\b/gi, replace: "drive heavy iron blade through breastplate in close combat" },
 
   // Celebrity name & Korvath ape-look prevention (Meta AI safeguards)
+  { match: /\(strictly NO jagged bangs, NO Neanderthal ape brow, strictly normal human facial anatomy\)/gi, replace: "handsome chiseled facial features, normal human facial anatomy" },
+  { match: /strictly NO jagged bangs/gi, replace: "natural wavy hair" },
+  { match: /NO Neanderthal ape brow/gi, replace: "noble warrior gaze" },
   { match: /facial blend of Henry Cavill and Jason Momoa/gi, replace: "handsome rugged weathered barbarian warrior with defined masculine jawline, dark scruff stubble, intense dark wolfish gaze" },
   { match: /Henry Cavill/gi, replace: "handsome rugged jawline" },
   { match: /Jason Momoa/gi, replace: "wild masculine warrior features" },
@@ -30,6 +33,13 @@ const EUPHEMISMS = [
   { match: /Ana de Armas/gi, replace: "striking feline gaze" },
   { match: /Christopher Judge/gi, replace: "deep resonant warrior" },
   { match: /Charles Dance/gi, replace: "haughty aristocratic nobleman" },
+
+  // Harem / concubine / suggestive terms (Meta AI NSFW filter)
+  { match: /\bconcubine\b/gi, replace: "palace handmaiden" },
+  { match: /\bconcubines\b/gi, replace: "palace handmaidens" },
+  { match: /\bharem silks\b/gi, replace: "flowing royal silks" },
+  { match: /\bharem\b/gi, replace: "palace garden" },
+  { match: /\bcourtesans?\b/gi, replace: "palace handmaidens" },
 
   // Revealing / suggestive costume substitutions (Meta AI NSFW filter)
   { match: /revealing hammered bronze scale bikini top, matching low-slung chain bikini bottoms, sheer gossamer crimson silk loincloth sash/gi, replace: "hammered bronze warrior corslet, crimson silk sash, leather belt, ornate desert rogue armor" },

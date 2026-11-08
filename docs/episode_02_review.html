@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Korvath Episode 2: The Blood-Thieves of Valkash — Visual Director Review Deck</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #070709;
+      --card: #101118;
+      --border: #222533;
+      --gold: #fca311;
+      --crimson: #e63946;
+      --meta-blue: #00b4d8;
+      --emerald: #2ec4b6;
+      --text: #eae2d6;
+      --muted: #8b8f9e;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Montserrat', sans-serif;
+      padding-bottom: 100px;
+      line-height: 1.6;
+    }
+    header {
+      background: #111218;
+      border-bottom: 2px solid var(--border);
+      padding: 24px 32px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.9);
+    }
+    .series-sub {
+      font-family: 'Cinzel', serif;
+      font-size: 13px;
+      letter-spacing: 4px;
+      color: var(--crimson);
+      text-transform: uppercase;
+      font-weight: 900;
+    }
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 28px;
+      letter-spacing: 2px;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin: 6px 0 12px;
+      text-shadow: 0 0 16px rgba(252, 163, 17, 0.4);
+    }
+    .header-nav {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+    .nav-btn {
+      padding: 8px 18px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-ep1 {
+      background: #161822;
+      color: var(--muted);
+      border: 1px solid var(--border);
+    }
+    .btn-ep1:hover {
+      color: #fff;
+      border-color: #444;
+    }
+    .btn-ep2 {
+      background: rgba(252, 163, 17, 0.15);
+      color: var(--gold);
+      border: 1px solid var(--gold);
+    }
+
+    .status-banner {
+      max-width: 1200px;
+      margin: 28px auto 0;
+      padding: 20px 24px;
+      background: #12141d;
+      border: 1px solid #282d40;
+      border-left: 5px solid var(--emerald);
+      border-radius: 8px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+    }
+    .banner-title {
+      font-family: 'Cinzel', serif;
+      font-size: 18px;
+      color: var(--emerald);
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    .banner-desc {
+      font-size: 14px;
+      color: #c0c4d4;
+    }
+    .gate-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+    .gate-item {
+      background: #0b0c10;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-size: 12px;
+      border: 1px solid #1a1e2c;
+      color: #aaa;
+    }
+    .gate-item strong {
+      color: #fff;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .gallery-container {
+      max-width: 1200px;
+      margin: 40px auto 0;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+    .panel-card {
+      background: var(--card);
+      border: 2px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.8);
+      transition: border-color 0.25s ease;
+    }
+    .panel-card:hover {
+      border-color: #3d425c;
+    }
+    .panel-header {
+      background: #161824;
+      padding: 14px 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #202336;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .panel-title-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .panel-badge {
+      background: var(--crimson);
+      color: #fff;
+      font-family: 'Cinzel', serif;
+      font-size: 12px;
+      font-weight: 900;
+      padding: 4px 10px;
+      border-radius: 4px;
+      letter-spacing: 1px;
+    }
+    .beat-act {
+      font-size: 12px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .panel-heading {
+      font-family: 'Cinzel', serif;
+      font-size: 18px;
+      color: var(--gold);
+      letter-spacing: 1px;
+    }
+    .panel-chars {
+      font-size: 12px;
+      color: #7b8196;
+      background: #0c0d12;
+      padding: 4px 10px;
+      border-radius: 4px;
+      border: 1px solid #1c1e2b;
+    }
+
+    .panel-img-wrap {
+      position: relative;
+      cursor: zoom-in;
+      background: #000;
+      overflow: hidden;
+    }
+    .panel-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .panel-img:hover {
+      transform: scale(1.015);
+    }
+    .zoom-hint {
+      position: absolute;
+      bottom: 12px;
+      right: 14px;
+      background: rgba(0,0,0,0.75);
+      color: #fff;
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 4px;
+      backdrop-filter: blur(4px);
+      pointer-events: none;
+    }
+
+    .panel-body {
+      padding: 20px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      background: #0e0f15;
+    }
+    .caption-box {
+      background: #19140a;
+      border-left: 4px solid var(--gold);
+      padding: 10px 16px;
+      border-radius: 4px;
+    }
+    .caption-label {
+      font-size: 11px;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: bold;
+      margin-bottom: 2px;
+    }
+    .caption-text {
+      font-size: 15px;
+      color: #f0e6d6;
+      font-style: italic;
+    }
+    .dialogue-box {
+      background: #141724;
+      border-left: 4px solid var(--meta-blue);
+      padding: 10px 16px;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .speech-quote {
+      font-size: 14px;
+      color: #d8e2fd;
+    }
+    .speaker {
+      color: var(--meta-blue);
+      font-weight: bold;
+    }
+    .action-desc {
+      font-size: 13px;
+      color: #9297a8;
+      line-height: 1.5;
+    }
+
+    /* LIGHTBOX */
+    #lightbox {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      background: rgba(0, 0, 0, 0.95);
+      z-index: 99999;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    #lightbox.active { display: flex; }
+    #lightbox-img {
+      max-width: 95vw;
+      max-height: 92vh;
+      object-fit: contain;
+      border: 2px solid #333;
+      box-shadow: 0 0 60px rgba(0,0,0,0.9);
+    }
+    #lightbox-caption {
+      position: absolute;
+      bottom: 20px;
+      background: rgba(0,0,0,0.85);
+      color: #fff;
+      padding: 8px 24px;
+      border-radius: 6px;
+      font-family: 'Cinzel', serif;
+      font-size: 14px;
+    }
+    #lightbox-close {
+      position: absolute;
+      top: 20px; right: 30px;
+      color: #fff;
+      font-size: 38px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="series-sub">Conan the Barbarian Studio &bull; Visual Director Review Deck</div>
+    <h1>Episode 2: The Blood-Thieves of Valkash</h1>
+    <div class="header-nav">
+      <a href="./index.html" class="nav-btn btn-ep1">🎬 Episode 1 (Master Video)</a>
+      <a href="#panel-01" class="nav-btn btn-ep2">🖼️ Episode 2 (20 Visual Panels Ready)</a>
+      <a href="./compare_grok_meta.html" class="nav-btn btn-ep1">⚖️ Grok vs Meta AI Split View</a>
+    </div>
+  </header>
+
+  <div class="status-banner">
+    <div class="banner-title">
+      <span>🛡️ 8-Point Visual Director Continuity Gate &bull; 100% Complete</span>
+    </div>
+    <div class="banner-desc">
+      All 20 panels for Episode 2 have been generated via Meta AI in 1920&times;1280 2K masterwork Frazetta/Buscema graphic novel style. 
+      <strong>Audio voice acting and video animation are intentionally on hold</strong> pending your visual review and sign-off.
+    </div>
+
+    <div class="gate-grid">
+      <div class="gate-item">
+        <strong>1. Wardrobe & The Mantle Rule</strong>
+        Korvath wears his canonical ragged wolf-fur mantle, cross-chest harness & war kilt in every scene.
+      </div>
+      <div class="gate-item">
+        <strong>2. Facial Likeness & Human Sanity</strong>
+        Chiseled jaw, dark scruff stubble, intense wolfish eyes, natural wavy dark hair (NO ape-brow, NO bangs).
+      </div>
+      <div class="gate-item">
+        <strong>3. Carried Object Permanence</strong>
+        Straight 42" two-handed broadsword with central fuller; Blood-Ruby in black iron serpent talon claw.
+      </div>
+      <div class="gate-item">
+        <strong>4. Lettering & Graphic Novel Art</strong>
+        Clean vintage yellow caption boxes, authentic speech balloons, rich chiaroscuro cel shading.
+      </div>
+    </div>
+  </div>
+
+  <main class="gallery-container">
+    
+      <article class="panel-card" id="panel-01">
+        <div class="panel-header">
+          <div class="panel-title-group">
+            <span class="panel-badge">Panel 01</span>
+            <span class="beat-act">Act I: City of Shadows</span>
+            <h2 class="panel-heading">Gates of Valkash</h2>
+          </div>
+          <div class="panel-chars">korvath, natari</div>
+        </div>
+
+        <div class="panel-img-wrap" onclick="openLightbox('./assets/ep2_meta/panel_01.webp', 'Panel 01: Gates of Valkash')">
+          <img src="./assets/ep2_meta/panel_01.webp" alt="Panel 01: Gates of Valkash" class="panel-img" loading="lazy" />
+          <div class="zoom-hint">🔍 Click to inspect (Full 2K)</div>
+        </div>
+
+        <div class="panel-body">
+          <div class="caption-box">
+            <div class="caption-label">📜 Narrative Caption</div>
+            <div class="caption-text">"Beyond the red sands of Sarkesh lay Valkash—city of thieves, poisoned wine, and men whose smiles were sharper than their daggers."</div>
+          </div>
+          
+          <div class="action-desc"><strong>Action:</strong> Wide panoramic establishing shot. Korvath and Natari approach the colossal archway gates of Valkash, the City of Shadows. Torches flicker along high crenelated walls, while ancient minarets and domed palaces rise into a bruised purple twilight sky. Korvath's massive two-handed straight iron broadsword is strapped in a weathered leather sheath vertically across his broad muscular back, featuring a simple straight dark wire-wrapped handle, plain rectangular iron crossguard, and unadorned solid iron octagonal pommel visible over his shoulder. Strictly NO jewels or gems on sword, NO curved handle, NO bizarre loops.</div>
+        </div>
+      </article>
+    
+      <article class="panel-card" id="panel-02">
+        <div class="panel-header">
+          <div class="panel-title-group">
+            <span class="panel-badge">Panel 02</span>
+            <span class="beat-act">Act I: City of Shadows</span>
+            <h2 class="panel-heading">The Midnight Bazaar</h2>
+          </div>
+          <div class="panel-chars">korvath, natari</div>
+        </div>
+
+        <div class="panel-img-wrap" onclick="openLightbox('./assets/ep2_meta/panel_02.webp', 'Panel 02: The Midnight Bazaar')">
+          <img src="./assets/ep2_meta/panel_02.webp" alt="Panel 02: The Midnight Bazaar" class="panel-img" loading="lazy" />
+          <div class="zoom-hint">🔍 Click to inspect (Full 2K)</div>
+        </div>
+
+        <div class="panel-body">
+          <div class="caption-box">
+            <div class="caption-label">📜 Narrative Caption</div>
+            <div class="caption-text">"Every shadow in Valkash had eyes. And every eye was hungry for northern blood."</div>
+          </div>
+          <div class="dialogue-box">
+      <div class="speech-quote">
+        <span class="speaker">Natari:</span> "Keep your hand on your hilt, Korvath. A purse in Valkash buys you a slit throat before dawn."
+      </div>
+    </div>
+          <div class="action-desc"><strong>Action:</strong> Crowded medium tracking shot. Korvath, towering broadsword over shoulder, strides through the bustling midnight bazaar beside Natari in her revealing hammered bronze scale bikini and gossamer silk sash, as hooded cutthroats and beggars eye the glowing pouch containing the Blood-Ruby.</div>
+        </div>
+      </article>
+    
+      <article class="panel-card" id="panel-03">
+        <div class="panel-header">
+          <div class="panel-title-group">
+            <span class="panel-badge">Panel 03</span>
+            <span class="beat-act">Act I: City of Shadows</span>
+            <h2 class="panel-heading">The Black Lotus Tavern</h2>
+          </div>
+          <div class="panel-chars">korvath, natari</div>
+        </div>
+
+        <div class="panel-img-wrap" onclick="openLightbox('./assets/ep2_meta/panel_03.webp', 'Panel 03: The Black Lotus Tavern')">
+          <img src="./assets/ep2_meta/panel_03.webp" alt="Panel 03: The Black Lotus Tavern" class="panel-img" loading="lazy" />
+          <div class="zoom-hint">🔍 Click to inspect (Full 2K)</div>
+        </div>
+
+        <div class="panel-body">
+          <div class="caption-box">
+            <div class="caption-label">📜 Narrative Caption</div>
+            <div class="caption-text">"The ale tasted of ditch-water, but the danger smelled fresh."</div>
+          </div>
+          <div class="dialogue-box">
+      <div class="speech-quote">
+        <span class="speaker">Korvath:</span> "Let them whisper. Iron speaks louder than gossip."
+      </div>
+    </div>
+          <div class="action-desc"><strong>Action:</strong> Interior tavern scene. Korvath sits at a heavy scarred oak table, slamming down an iron flagon of ale, muscles gleaming in warm firelight. Beside him, Natari lounges with feline grace on a wooden bench, smoldering eyes watching three hooded assassins whispering in the rear alcove. Resting flat on the heavy wooden table directly in front of Korvath, positioned right before his hands, lies his massive two-handed straight iron broadsword, featuring a long straight double-edged steel blade with central fuller, simple rectangular carved iron crossguard, straight dark wire-wrapped two-handed grip, and unadorned solid iron octagonal pommel. Strictly NO curved scimitar blade, NO oriental saber, NO curved handle, NO jewels or gems on the sword.</div>
+        </div>
+      </article>
+    
+      <article class="panel-card" id="panel-04">
+        <div class="panel-header">
+          <div class="panel-title-group">
+            <span class="panel-badge">Panel 04</span>
+            <span class="beat-act">Act I: City of Shadows</span>
+            <h2 class="panel-heading">The Crooked Broker</h2>
+          </div>
+          <div class="panel-chars">korvath</div>
+        </div>
+
+        <div class="panel-img-wrap" onclick="openLightbox('./assets/ep2_meta/panel_04.webp', 'Panel 04: The Crooked Broker')">
+          <img src="./assets/ep2_meta/panel_04.webp" alt="Panel 04: The Crooked Broker" class="panel-img" loading="lazy" />
+          <div class="zoom-hint">🔍 Click to inspect (Full 2K)</div>
+        </div>
+
+        <div class="panel-body">
+          <div class="caption-box">
+            <div class="caption-label">📜 Narrative Caption</div>
+            <div class="caption-text">"Civilized merchants understand contracts. Korvath understood only fair trade and broken bones."</div>
+          </div>
+          <div class="dialogue-box">
+      <div class="speech-quote">
+        <span class="speaker">Korvath:</span> "Offer me copper for blood again, dog, and I will feed you your own tongue."
+      </div>
+    </div>
+          <div class="action-desc"><strong>Action:</strong> Close dynamic confrontation. Korvath's scarred, massive hand seizes the cloaked broker by the collar, lifting him clean off his boots over the table, while the broker's eyes bulge in terror as Natari draws a concealed dagger.</div>
+        </div>
+      </article>
+    
+      <article class="panel-card" id="panel-05">
+        <div class="panel-header">
+          <div class="panel-title-group">
+            <span class="panel-badge">Panel 05</span>
+            <span class="beat-act">Act I: City of Shadows</span>
+            <h2 class="panel-heading">Blades in the Smoke</h2>
+          </div>
+          <div class="panel-chars">spider_assassins, korvath</div>
+        </div>
+
+        <div class="panel-img-wrap" onclick="openLightbox('./assets/ep2_meta/panel_05.webp', 'Panel 05: Blades in the Smoke')">
+          <img src="./assets/ep2_meta/panel_05.webp" alt="Panel 05: Blades in the Smoke" class="panel-img" loading="lazy" />
+          <div class="zoom-hint">🔍 Click to inspect (Full 2K)</div>
+        </div>
+
+        <div class="panel-body">
+          <div class="caption-box">
+            <div class="caption-label">📜 Narrative Caption</div>
+            <div class="caption-text">"The trap sprang not with a shout, but with the hiss of oiled steel."</div>
+          </div>
+          <div class="dialogue-box">
+      <div class="speech-quote">
+        <span class="speaker">Spider Assassin:</span> "Lord Malakor claims the jewel and your hides, northman!"
+      </div>
+    </div>
+          <div class="action-desc"><strong>Action:</strong> Three agile shadow-assassins in black leather and web-spun masks leap from the tavern shadows, curved poisoned kris blades gleaming, overturning tables as tankards shatter across the stone floor, while Korvath in the foreground turns with cold savage fury, square-cut raven-black mane and clean-shaven chiseled jaw.</div>
+        </div>
+      </article>
+    
+      <article class="panel-card" id="panel-06">
+        <div class="panel-header">
+          <div class="panel-title-group">
+            <span class="panel-badge">Panel 06</span>
+            <span class="beat-act">Act I: City of Shadows</span>
+            <h2 class="panel-heading">Savage Tavern Cleave</h2>
+          </div>
+          <div class="panel-chars">korvath, natari</div>
+        </div>
+
+        <div class="panel-img-wrap" onclick="openLightbox('./assets/ep2_meta/panel_06.webp', 'Panel 06: Savage Tavern Cleave')">
+          <img src="./assets/ep2_meta/panel_06.webp" alt="Panel 06: Savage Tavern Cleave" class="panel-img" loading="lazy" />
+          <div class="zoom-hint">🔍 Click to inspect (Full 2K)</div>
+        </div>
+
+        <div class="panel-body">
+          <div class="caption-box">
+            <div class="caption-label">📜 Narrative Caption</div>
+            <div class="caption-text">"When the red mist took Korvath, taverns became slaughterhouses."</div>
+          </div>
+          
+          <div class="action-desc"><strong>Action:</strong> Full heroic comic book action freeze-frame. Korvath swings his massive two-handed iron broadsword in a sweeping horizontal arc, shattering the lead assassin's heavy iron shield into flying splintered debris across the tavern, while Natari hurls an ornate throwing dagger with feline precision to strike down a second cloaked attacker's weapon.</div>
+        </div>
+      </article>
+    
+      <article class="panel-card" id="panel-07">
+        <div class="panel-header">
+          <div class="panel-title-group">
+            <span class="panel-badge">Panel 07</span>
+            <span class="beat-act">Act II: The Webbed Vault</span>
+            <h2 class="panel-heading">Rooftops of Valkash</h2>
+          </div>
+          <div class="panel-chars">korvath, natari</div>
+        </div>
+
+        <div class="panel-img-wrap" onclick="openLightbox('./assets/ep2_meta/panel_07.webp', 'Panel 07: Rooftops of Valkash')">
+          <img src="./assets/ep2_meta/panel_07.webp" alt="Panel 07: Rooftops of Valkash" class="panel-img" loading="lazy" />
+          <div class="zoom-hint">🔍 Click to inspect (Full 2K)</div>
+        </div>
+
+        <div class="panel-body">
+          <div class="caption-box">
+            <div class="caption-label">📜 Narrative Caption</div>
+            <div class="caption-text">"Above the filth of the streets ran the highway of thieves."</div>
+          </div>
+          <div class="dialogue-box">
+      <div class="speech-quote">
+        <span class="speaker">Natari:</span> "Malakor's pleasure gardens are ahead! If the jewel is anywhere, it is in his private vault!"
+      </div>
+    </div>
+          <div class="action-desc"><strong>Action:</strong> Dynamic high rooftop action shot. Korvath and Natari leap across a wide alleyway between terracotta tiled roofs under a stark crescent moon, the sprawling moonlit towers of Lord Malakor's palace looming in the near background.</div>
+        </div>
+      </article>
+    
+      <article class="panel-card" id="panel-08">
+        <div class="panel-header">
+          <div class="panel-title-group">
+            <span class="panel-badge">Panel 08</span>
+            <span class="beat-act">Act II: The Webbed Vault</span>
+            <h2 class="panel-heading">The Harem Terrace</h2>
+          </div>
+          <div class="panel-chars">temple_maidens, korvath</div>
+        </div>
+
+        <div class="panel-img-wrap" onclick="openLightbox('./assets/ep2_meta/panel_08.webp', 'Panel 08: The Harem Terrace')">
+          <img src="./assets/ep2_meta/panel_08.webp" alt="Panel 08: The Harem Terrace" class="panel-img" loading="lazy" />
+          <div class="zoom-hint">🔍 Click to inspect (Full 2K)</div>
+        </div>
+
+        <div class="panel-body">
+          <div class="caption-box">
+            <div class="caption-label">📜 Narrative Caption</div>
+            <div class="caption-text">"Silk and perfume could not mask the stench of spider venom that hung in the palace air."</div>
+          </div>
+          
+          <div class="action-desc"><strong>Action:</strong> Opulent palace terrace view. Surrounded by carved alabaster colonnades and a steaming rosewater fountain, two distinct palace courtesans recline on velvet cushions in shocked awe as Korvath and Natari drop silently onto the marble tiles: one fair-skinned concubine with braided golden blonde hair draped in sheer emerald-green silks and silver bangles, and one striking dark-skinned maiden with sculpted obsidian curls draped in translucent saffron-gold harem silks and hammered brass armlets. Both look completely distinct from Natari; strictly NO scale armor or bronze bikinis on the courtesans.</div>
+        </div>
+      </article>
+    
+      <article class="panel-card" id="panel-09">
+        <div class="panel-header">
+          <div class="panel-title-group">
+            <span class="panel-badge">Panel 09</span>
+            <span class="beat-act">Act II: The Webbed Vault</span>
+            <h2 class="panel-heading">The Merchant's Vault</h2>
+          </div>
+          <div class="panel-chars">korvath, natari</div>
+        </div>
+
+        <div class="panel-img-wrap" onclick="openLightbox('./assets/ep2_meta/panel_09.webp', 'Panel 09: The Merchant's Vault')">
+          <img src="./assets/ep2_meta/panel_09.webp" alt="Panel 09: The Merchant's Vault" class="panel-img" loading="lazy" />
+          <div class="zoom-hint">🔍 Click to inspect (Full 2K)</div>
+        </div>
+
+        <div class="panel-body">
+          <div class="caption-box">
+            <div class="caption-label">📜 Narrative Caption</div>
+            <div class="caption-text">"The wealth of fifty plundered caravans, guarded only by silence."</div>
+          </div>
+          <div class="dialogue-box">
+      <div class="speech-quote">
+        <span class="speaker">Korvath:</span> "Too quiet. A spider never leaves its larder unguarded."
+      </div>
+    </div>
+          <div class="action-desc"><strong>Action:</strong> Korvath kicks open a massive iron vault door with a splintering crash, revealing a treasure vault overflowing with open iron chests of sparkling gold coins, jeweled chalices, and thick hanging cobwebs.</div>
+        </div>
+      </article>
+    
+      <article class="panel-card" id="panel-10">
+        <div class="panel-header">
+          <div class="panel-title-group">
+            <span class="panel-badge">Panel 10</span>
+            <span class="beat-act">Act II: The Webbed Vault</span>
+            <h2 class="panel-heading">Caught in the Web</h2>
+          </div>
+          <div class="panel-chars">korvath, natari</div>
+        </div>
+
+        <div class="panel-img-wrap" onclick="openLightbox('./assets/ep2_meta/panel_10.webp', 'Panel 10: Caught in the Web')">
+          <img src="./assets/ep2_meta/panel_10.webp" alt="Panel 10: Caught in the Web" class="panel-img" loading="lazy" />
+          <div class="zoom-hint">🔍 Click to inspect (Full 2K)</div>
+        </div>
+
+        <div class="panel-body">
+          <div class="caption-box">
+            <div class="caption-label">📜 Narrative Caption</div>
+            <div class="caption-text">"The iron door was the jaws of the trap. The web was its teeth."</div>
+          </div>
+          <div class="dialogue-box">
+      <div class="speech-quote">
+        <span class="speaker">Natari:</span> "Korvath, it's a trap! The webs... they burn like acid!"
+      </div>
+    </div>
+          <div class="action-desc"><strong>Action:</strong> Sudden trap action. Heavy iron grates crash down behind them as massive thick, fibrous spiderwebs drop from the darkness above, sticking to Korvath's broad shoulders and trapping Natari against the gold chests.</div>
+        </div>
+      </article>
+    
+      <article class="panel-card" id="panel-11">
+        <div class="panel-header">
+          <div class="panel-title-group">
+            <span class="panel-badge">Panel 11</span>
+            <span class="beat-act">Act II: The Webbed Vault</span>
+            <h2 class="panel-heading">The Brood Queen Descends</h2>
+          </div>
+          <div class="panel-chars">demon_spider</div>
+        </div>
+
+        <div class="panel-img-wrap" onclick="openLightbox('./assets/ep2_meta/panel_11.webp', 'Panel 11: The Brood Queen Descends')">
+          <img src="./assets/ep2_meta/panel_11.webp" alt="Panel 11: The Brood Queen Descends" class="panel-img" loading="lazy" />
+          <div class="zoom-hint">🔍 Click to inspect (Full 2K)</div>
+        </div>
+
+        <div class="panel-body">
+          <div class="caption-box">
+            <div class="caption-label">📜 Narrative Caption</div>
+            <div class="caption-text">"Spawned in the forgotten pits beneath Valkash—Zor-Malkor, the living god of shadows."</div>
+          </div>
+          <div class="dialogue-box">
+      <div class="speech-quote">
+        <span class="speaker">Natari:</span> "Look out, Korvath! Above us!"
+      </div>
+    
+      <div class="speech-quote">
+        <span class="speaker">Korvath:</span> "Get behind me, girl!"
+      </div>
+    </div>
+          <div class="action-desc"><strong>Action:</strong> Colossal creature reveal. An enormous, monstrous spider demon with razor-jointed barbed legs and glistening black carapace descends from the vaulted ceiling, its central cluster of multifaceted ruby eyes burning with demonic hunger as pale venom drips from huge fangs.</div>
+        </div>
+      </article>
+    
+      <article class="panel-card" id="panel-12">
+        <div class="panel-header">
+          <div class="panel-title-group">
+            <span class="panel-badge">Panel 12</span>
+            <span class="beat-act">Act II: The Webbed Vault</span>
+            <h2 class="panel-heading">The Merchant's Gloat</h2>
+          </div>
+          <div class="panel-chars">merchant_lord, korvath</div>
+        </div>
+
+        <div class="panel-img-wrap" onclick="openLightbox('./assets/ep2_meta/panel_12.webp', 'Panel 12: The Merchant's Gloat')">
+          <img src="./assets/ep2_meta/panel_12.webp" alt="Panel 12: The Merchant's Gloat" class="panel-img" loading="lazy" />
+          <div class="zoom-hint">🔍 Click to inspect (Full 2K)</div>
+        </div>
+
+        <div class="panel-body">
+          <div class="caption-box">
+            <div class="caption-label">📜 Narrative Caption</div>
+            <div class="caption-text">"Civilized lords pay assassins with gold. Malakor paid his with living flesh."</div>
+          </div>
+          <div class="dialogue-box">
+      <div class="speech-quote">
+        <span class="speaker">Lord Malakor:</span> "The ruby belongs to me, savage! Feed on them, my beauty!"
+      </div>
+    </div>
+          <div class="action-desc"><strong>Action:</strong> Lord Malakor, fat merchant prince draped in emerald silk and gold chains, sneers in cruel triumph through the iron bars above, holding high the glowing Blood-Ruby of Sarkath as the spider looms over Korvath.</div>
+        </div>
+      </article>
+    
+      <article class="panel-card" id="panel-13">
+        <div class="panel-header">
+          <div class="panel-title-group">
+            <span class="panel-badge">Panel 13</span>
+            <span class="beat-act">Act II: The Webbed Vault</span>
+            <h2 class="panel-heading">Venom and Fire</h2>
+          </div>
+          <div class="panel-chars">korvath, demon_spider</div>
+        </div>
+
+        <div class="panel-img-wrap" onclick="openLightbox('./assets/ep2_meta/panel_13.webp', 'Panel 13: Venom and Fire')">
+          <img src="./assets/ep2_meta/panel_13.webp" alt="Panel 13: Venom and Fire" class="panel-img" loading="lazy" />
+          <div class="zoom-hint">🔍 Click to inspect (Full 2K)</div>
+        </div>
+
+        <div class="panel-body">
+          <div class="caption-box">
+            <div class="caption-label">📜 Narrative Caption</div>
+            <div class="caption-text">"Iron, flame, and unyielding will—the barbarian answered horror with fury."</div>
+          </div>
+          <div class="dialogue-box">
+      <div class="speech-quote">
+        <span class="speaker">Korvath:</span> "TASTE CROM'S FIRE, BEAST!"
+      </div>
+    </div>
+          <div class="action-desc"><strong>Action:</strong> Violent combat clash. The spider demon's jagged barbed leg strikes downward, shattering an iron chest, while Korvath sweeps a roaring brass oil torch against the tangled webs, igniting a wall of blazing orange fire to shield Natari.</div>
+        </div>
+      </article>
+    
+      <article class="panel-card" id="panel-14">
+        <div class="panel-header">
+          <div class="panel-title-group">
+            <span class="panel-badge">Panel 14</span>
+            <span class="beat-act">Act III: The Sunder & Escape</span>
+            <h2 class="panel-heading">The Flaming Cleave</h2>
+          </div>
+          <div class="panel-chars">korvath, demon_spider</div>
+        </div>
+
+        <div class="panel-img-wrap" onclick="openLightbox('./assets/ep2_meta/panel_14.webp', 'Panel 14: The Flaming Cleave')">
+          <img src="./assets/ep2_meta/panel_14.webp" alt="Panel 14: The Flaming Cleave" class="panel-img" loading="lazy" />
+          <div class="zoom-hint">🔍 Click to inspect (Full 2K)</div>
+        </div>
+
+        <div class="panel-body">
+          <div class="caption-box">
+            <div class="caption-label">📜 Narrative Caption</div>
+            <div class="caption-text">"The iron gods give no gifts. A man carves his own way with steel."</div>
+          </div>
+          <div class="dialogue-box">
+      <div class="speech-quote">
+        <span class="speaker">Korvath:</span> "Die, vermin! Back to the pit that spat you!"
+      </div>
+    </div>
+          <div class="action-desc"><strong>Action:</strong> Peak action shot. Korvath swings his massive two-handed broadsword—its steel blade roaring with yellow fire—cleaving clean through two of the demon spider's armored jointed legs with a massive spray of hissing black ichor as the monster shrieks.</div>
+        </div>
+      </article>
+    
+      <article class="panel-card" id="panel-15">
+        <div class="panel-header">
+          <div class="panel-title-group">
+            <span class="panel-badge">Panel 15</span>
+            <span class="beat-act">Act III: The Sunder & Escape</span>
+            <h2 class="panel-heading">Natari's Retribution</h2>
+          </div>
+          <div class="panel-chars">natari, merchant_lord</div>
+        </div>
+
+        <div class="panel-img-wrap" onclick="openLightbox('./assets/ep2_meta/panel_15.webp', 'Panel 15: Natari's Retribution')">
+          <img src="./assets/ep2_meta/panel_15.webp" alt="Panel 15: Natari's Retribution" class="panel-img" loading="lazy" />
+          <div class="zoom-hint">🔍 Click to inspect (Full 2K)</div>
+        </div>
+
+        <div class="panel-body">
+          <div class="caption-box">
+            <div class="caption-label">📜 Narrative Caption</div>
+            <div class="caption-text">"A desert rogue never forgets a debt. Especially one written in blood."</div>
+          </div>
+          <div class="dialogue-box">
+      <div class="speech-quote">
+        <span class="speaker">Natari:</span> "The ruby was never yours, merchant dog! Korvath, the vault is collapsing—MOVE!"
+      </div>
+    </div>
+          <div class="action-desc"><strong>Action:</strong> Heroic action shot. Natari, bronze scale bikini gleaming, leaps onto the upper iron balcony railing and drives her ornate dagger straight through Lord Malakor's heart, tearing the glowing Blood-Ruby of Sarkath from his limp dying fingers.</div>
+        </div>
+      </article>
+    
+      <article class="panel-card" id="panel-16">
+        <div class="panel-header">
+          <div class="panel-title-group">
+            <span class="panel-badge">Panel 16</span>
+            <span class="beat-act">Act III: The Sunder & Escape</span>
+            <h2 class="panel-heading">The Abyssal Skull-Strike</h2>
+          </div>
+          <div class="panel-chars">korvath, demon_spider</div>
+        </div>
+
+        <div class="panel-img-wrap" onclick="openLightbox('./assets/ep2_meta/panel_16.webp', 'Panel 16: The Abyssal Skull-Strike')">
+          <img src="./assets/ep2_meta/panel_16.webp" alt="Panel 16: The Abyssal Skull-Strike" class="panel-img" loading="lazy" />
+          <div class="zoom-hint">🔍 Click to inspect (Full 2K)</div>
+        </div>
+
+        <div class="panel-body">
+          <div class="caption-box">
+            <div class="caption-label">📜 Narrative Caption</div>
+            <div class="caption-text">"Even gods of the dark bleed when iron meets skull."</div>
+          </div>
+          
+          <div class="action-desc"><strong>Action:</strong> Peak climax midair leap. Korvath leaps from a mountain of gold coins into midair, both scarred hands gripping his heavy broadsword overhead, plunging the massive iron blade straight down into the spider demon's armored skull between its burning cluster of ruby eyes amidst an explosion of hissing dark demonic ichor.</div>
+        </div>
+      </article>
+    
+      <article class="panel-card" id="panel-17">
+        <div class="panel-header">
+          <div class="panel-title-group">
+            <span class="panel-badge">Panel 17</span>
+            <span class="beat-act">Act III: The Sunder & Escape</span>
+            <h2 class="panel-heading">Collapse of the Palace Vault</h2>
+          </div>
+          <div class="panel-chars">demon_spider</div>
+        </div>
+
+        <div class="panel-img-wrap" onclick="openLightbox('./assets/ep2_meta/panel_17.webp', 'Panel 17: Collapse of the Palace Vault')">
+          <img src="./assets/ep2_meta/panel_17.webp" alt="Panel 17: Collapse of the Palace Vault" class="panel-img" loading="lazy" />
+          <div class="zoom-hint">🔍 Click to inspect (Full 2K)</div>
+        </div>
+
+        <div class="panel-body">
+          <div class="caption-box">
+            <div class="caption-label">📜 Narrative Caption</div>
+            <div class="caption-text">"The pride of Valkash crumbled into dust and broken bone."</div>
+          </div>
+          
+          <div class="action-desc"><strong>Action:</strong> Wide cataclysmic destruction. The dying spider monstrosity crashes through the palace's outer marble colonnade, tearing down pillars and balustrades as stone blocks and chests of gold cascade into the courtyard below.</div>
+        </div>
+      </article>
+    
+      <article class="panel-card" id="panel-18">
+        <div class="panel-header">
+          <div class="panel-title-group">
+            <span class="panel-badge">Panel 18</span>
+            <span class="beat-act">Act III: The Sunder & Escape</span>
+            <h2 class="panel-heading">The Leaping Escape</h2>
+          </div>
+          <div class="panel-chars">korvath, natari</div>
+        </div>
+
+        <div class="panel-img-wrap" onclick="openLightbox('./assets/ep2_meta/panel_18.webp', 'Panel 18: The Leaping Escape')">
+          <img src="./assets/ep2_meta/panel_18.webp" alt="Panel 18: The Leaping Escape" class="panel-img" loading="lazy" />
+          <div class="zoom-hint">🔍 Click to inspect (Full 2K)</div>
+        </div>
+
+        <div class="panel-body">
+          <div class="caption-box">
+            <div class="caption-label">📜 Narrative Caption</div>
+            <div class="caption-text">"A leap into the dark—trusting only strength and fortune."</div>
+          </div>
+          <div class="dialogue-box">
+      <div class="speech-quote">
+        <span class="speaker">Korvath:</span> "Hold tight, girl! Jump!"
+      </div>
+    
+      <div class="speech-quote">
+        <span class="speaker">Natari:</span> "I have the ruby! Jump!"
+      </div>
+    </div>
+          <div class="action-desc"><strong>Action:</strong> High dynamic action leap. Amid tumbling marble debris, Korvath swings Natari into his arm and leaps from the shattered second-story palace balustrade into the midnight air toward an open merchant wagon in the cobblestone alley below.</div>
+        </div>
+      </article>
+    
+      <article class="panel-card" id="panel-19">
+        <div class="panel-header">
+          <div class="panel-title-group">
+            <span class="panel-badge">Panel 19</span>
+            <span class="beat-act">Act III: The Sunder & Escape</span>
+            <h2 class="panel-heading">Breaching the Southern Gate</h2>
+          </div>
+          <div class="panel-chars">korvath, natari</div>
+        </div>
+
+        <div class="panel-img-wrap" onclick="openLightbox('./assets/ep2_meta/panel_19.webp', 'Panel 19: Breaching the Southern Gate')">
+          <img src="./assets/ep2_meta/panel_19.webp" alt="Panel 19: Breaching the Southern Gate" class="panel-img" loading="lazy" />
+          <div class="zoom-hint">🔍 Click to inspect (Full 2K)</div>
+        </div>
+
+        <div class="panel-body">
+          <div class="caption-box">
+            <div class="caption-label">📜 Narrative Caption</div>
+            <div class="caption-text">"Behind them lay a burning palace, a dead merchant, and the wrath of an entire city."</div>
+          </div>
+          
+          <div class="action-desc"><strong>Action:</strong> Dynamic galloping action shot. Korvath and Natari, riding hard on two black desert stallions, charge straight through the splintered southern wooden gate of Valkash, broadsword swinging to scatter the panicked city guards into the night.</div>
+        </div>
+      </article>
+    
+      <article class="panel-card" id="panel-20">
+        <div class="panel-header">
+          <div class="panel-title-group">
+            <span class="panel-badge">Panel 20</span>
+            <span class="beat-act">Act III: The Sunder & Escape</span>
+            <h2 class="panel-heading">Riders of the Midnight Dunes</h2>
+          </div>
+          <div class="panel-chars">korvath, natari</div>
+        </div>
+
+        <div class="panel-img-wrap" onclick="openLightbox('./assets/ep2_meta/panel_20.webp', 'Panel 20: Riders of the Midnight Dunes')">
+          <img src="./assets/ep2_meta/panel_20.webp" alt="Panel 20: Riders of the Midnight Dunes" class="panel-img" loading="lazy" />
+          <div class="zoom-hint">🔍 Click to inspect (Full 2K)</div>
+        </div>
+
+        <div class="panel-body">
+          <div class="caption-box">
+            <div class="caption-label">📜 Narrative Caption</div>
+            <div class="caption-text">"The road was long, and the world was wide. But wherever men built thrones of gold and deceit, the barbarian would come to break them."</div>
+          </div>
+          
+          <div class="action-desc"><strong>Action:</strong> Epic panoramic hero shot. Korvath and Natari rein in their desert horses atop a towering windswept sand dune beneath a magnificent canopy of brilliant desert stars. Korvath rests his blood-notched broadsword on his shoulder, while Natari, stunning in her hammered bronze scale bikini, holds aloft the pulsing Blood-Ruby of Sarkath, both gazing into the boundless wild unknown.</div>
+        </div>
+      </article>
+    
+  </main>
+
+  <div id="lightbox" onclick="closeLightbox()">
+    <span id="lightbox-close">&times;</span>
+    <img id="lightbox-img" src="" alt="Zoomed view" />
+    <div id="lightbox-caption"></div>
+  </div>
+
+  <script>
+    function openLightbox(src, caption) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox-caption').innerText = caption;
+      document.getElementById('lightbox').classList.add('active');
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+    }
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
+</body>
+</html>

@@ -60,7 +60,7 @@ function auditEpisode(epNum) {
     }
 
     // 4. Carried Relic Consistency (Blood-Ruby)
-    if (/ruby|gem|stone|sarkath/i.test(prompt) && /blood-ruby|red gem/i.test(prompt)) {
+    if (/\bthe blood-ruby\b/i.test(prompt)) {
       const hasClawSetting = /talon|claw|serpent talon/i.test(prompt);
       if (!hasClawSetting) {
         issues.push('⚠️ RELIC: Blood-Ruby mentioned without specifying serpent talon claw setting');
