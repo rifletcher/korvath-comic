@@ -18,12 +18,12 @@
 
 ### 1. `korvath` — The Iron-Born Barbarian
 * **Role:** Protagonist, barbarian mercenary, slayer, wanderer.
-* **Celebrity Blend DNA:** **Henry Cavill + Jason Momoa** (chiseled square jaw with subtle cleft, fierce smoldering steely blue-grey wolfish eyes, scarred weather-beaten bronze skin, heavy brooding dark brow, untamed savage warrior poise).
+* **Visual Anchor DNA:** Handsome rugged weathered masculine warrior with defined chiseled jaw and dark scruff/stubble, intense dark wolfish eyes, windswept natural wavy raven-black hair flowing naturally to the shoulders (strictly NO jagged bangs, NO Neanderthal or monkey brow ridge).
 * **3 Signature Props:**
-  1. Distinctive square-cut mane of thick coarse raven-black hair with jagged front bangs; hair length strictly shoulder-length stopping at the collarbone (strictly NOT waist length, NOT past shoulders, NOT tied in a ponytail, NOT short cropped).
-  2. Heavy scarred bronze muscular torso, wide weathered leather chest harness with tarnished brass studs, wolf-fur trimmed loincloth, and thick leather combat sandals with criss-crossed calf wraps.
+  1. Heavy ragged shaggy wolf-fur/bear-fur mantle draped across broad muscular shoulders and back.
+  2. Weathered leather cross-chest harness with brass buckles, fur-trimmed leather war kilt with bone trophies and pouch belt, leather wrist bracers, and fur-topped combat boots with criss-crossed calf wraps.
   3. Faint pale battle scar diagonally across left collarbone down to chest.
-* **Color Palette:** Weathered brown leather, iron grey, wolf pelt ochre, bronze skin.
+* **Color Palette:** Weathered brown leather, iron grey, wolf pelt ochre, scarred bronze skin.
 * **🎙️ Canonical Voice DNA:**
   * **Vocal Actor Persona:** Arnold Schwarzenegger + Christopher Judge (Kratos).
   * **Timbre & Resonance:** Subterranean chest-thumping bass rumble, brutal barbarian authority, explosive savage battle roars.
@@ -123,4 +123,21 @@
   * **Benchmark Audition A (Whispered Ambush):** *"The shadow guild sends its regards, barbarian. Sleep now in the venom..."*
   * **Benchmark Audition B (Death Hiss):** *"The brood queen... will feast upon your entrails...!"*
   * **Canonical Audio Samples:** [`docs/audio/assassin_whisper.mp3`](file:///c:/research/c-book-generator/conan/docs/audio/assassin_whisper.mp3) & [`docs/audio/assassin_death.mp3`](file:///c:/research/c-book-generator/conan/docs/audio/assassin_death.mp3)
+
+---
+
+## 💎 Canonical Relics & Artifacts (Asset Register)
+
+### 1. `blood_ruby` — The Blood-Ruby of Sarkath
+* **Type:** Ancient sorcerous relic, prime story MacGuffin.
+* **Visual Anchor DNA:** Massive fist-sized, rough-faceted dark scarlet crimson gemstone glowing with an intense smoldering inner red ember and wisps of crimson light.
+* **Physical Mounting:** Gripped securely within a heavy, coiled, tarnished black iron serpent-talon claw setting, suspended from a thick braided copper neck chain.
+* **Non-Negotiable Continuity Constraints:**
+  1. **Strictly Fist-Sized:** Must always appear as a heavy, imposing fist-sized rough-cut gemstone held in the palm or lifted high by the braided copper chain.
+  2. **Strictly NOT a Small Teardrop Pendant:** Zero dainty modern jewelry, zero multiple hanging ruby drops, zero teardrop bead necklaces.
+  3. **Tarnished Iron Claw Setting:** Must always be clasped in the distinctive black iron serpent talon setting.
+  4. **Completely Detached from Weapons:** Must never appear embedded in Korvath's broadsword, crossguard, or pommel.
+* **Canonical Sequential Appearances:**
+  * **Panel 18:** Clutched in Korvath's scarred hand as he sunders Natari's chains with his broadsword.
+  * **Panel 20:** Held aloft by Natari upon the sandstone desert crest at sunrise.
 

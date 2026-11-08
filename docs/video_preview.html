@@ -170,6 +170,16 @@
     <div class="sub">Episode 2: The Blood-Thieves of Valkash — Full Motion Comic Movie</div>
   </header>
 
+  <!-- STUDIO EDITION SWITCHER -->
+  <div style="max-width: 1100px; width: 100%; margin-bottom: 18px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+    <button id="btn-edition-grok" onclick="switchEdition('grok')" style="flex: 1; min-width: 280px; padding: 14px 22px; font-family: inherit; font-size: 13px; font-weight: bold; letter-spacing: 1.5px; text-transform: uppercase; border-radius: 6px; cursor: pointer; border: 2px solid #fca311; background: #241910; color: #fca311; box-shadow: 0 0 16px rgba(252, 163, 17, 0.35); transition: all 0.2s;">
+      🎨 Grok Edition (Original Motion Comic)
+    </button>
+    <button id="btn-edition-meta" onclick="switchEdition('meta')" style="flex: 1; min-width: 280px; padding: 14px 22px; font-family: inherit; font-size: 13px; font-weight: bold; letter-spacing: 1.5px; text-transform: uppercase; border-radius: 6px; cursor: pointer; border: 2px solid #2a3550; background: #111420; color: #7f95c2; transition: all 0.2s;">
+      🌟 Meta AI Edition (2K Frank Frazetta Artwork)
+    </button>
+  </div>
+
   <main class="player-container">
     <video id="player" controls playsinline poster="./assets/ep2/panel_01.webp">
       <source src="./episode_02_motion_comic.mp4" type="video/mp4">
@@ -558,7 +568,8 @@
   </section>
 
   <div class="back-nav">
-    <a href="./index.html#issue-2" class="back-btn">← Back to Graphic Novel Web Reader</a>
+    <a href="./index.html" class="back-btn">← Back to Graphic Novel Web Reader</a>
+    <a href="./compare_grok_meta.html" class="back-btn" style="border-color:#00b4d8;color:#00b4d8;margin-left:12px;">⚖️ Studio Comparison Deck (Grok vs Meta AI)</a>
   </div>
 
   <script>
@@ -599,6 +610,45 @@
         document.getElementById('video-badge').textContent = badgeText;
       }
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function switchEdition(edition) {
+      const player = document.getElementById('player');
+      const badge = document.getElementById('video-badge');
+      const btnGrok = document.getElementById('btn-edition-grok');
+      const btnMeta = document.getElementById('btn-edition-meta');
+
+      if (edition === 'meta') {
+        player.src = './episode_02_meta_motion_comic.mp4';
+        player.poster = './assets/ep2_meta/panel_01.webp';
+        badge.textContent = '🌟 META AI 2K FRAZETTA EDITION';
+        badge.style.borderColor = '#0084ff';
+        badge.style.color = '#00b4d8';
+        btnMeta.style.border = '2px solid #0084ff';
+        btnMeta.style.background = '#0d1b2a';
+        btnMeta.style.color = '#90e0ef';
+        btnMeta.style.boxShadow = '0 0 18px rgba(0, 180, 216, 0.4)';
+        btnGrok.style.border = '2px solid #333';
+        btnGrok.style.background = '#15161d';
+        btnGrok.style.color = '#888';
+        btnGrok.style.boxShadow = 'none';
+      } else {
+        player.src = './episode_02_motion_comic.mp4';
+        player.poster = './assets/ep2/panel_01.webp';
+        badge.textContent = 'FULL 20-PANEL CINEMATIC MOVIE (GROK)';
+        badge.style.borderColor = 'var(--blood-gold)';
+        badge.style.color = 'var(--blood-gold)';
+        btnGrok.style.border = '2px solid #fca311';
+        btnGrok.style.background = '#241910';
+        btnGrok.style.color = '#fca311';
+        btnGrok.style.boxShadow = '0 0 16px rgba(252, 163, 17, 0.35)';
+        btnMeta.style.border = '2px solid #2a3550';
+        btnMeta.style.background = '#111420';
+        btnMeta.style.color = '#7f95c2';
+        btnMeta.style.boxShadow = 'none';
+      }
+      player.load();
+      player.play();
     }
   </script>
 </body>

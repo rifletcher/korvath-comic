@@ -6,7 +6,9 @@ node_modules/
 Thumbs.db
 
 02_Assets/full_movie_build/
+02_Assets/full_movie_meta_build/
 02_Assets/video_test/
 02_Assets/audio_test/
 02_Assets/elevenlabs_test/
 02_Assets/youtube_releases/
+.chrome_profile/

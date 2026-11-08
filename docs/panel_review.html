@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Korvath Chapter 1 — Director Panel Review</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #070709;
+      --card: #101118;
+      --border: #2a2015;
+      --gold: #fca311;
+      --crimson: #e63946;
+      --text: #eae2d6;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Cinzel', Georgia, serif;
+      padding: 30px 20px 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    h1 {
+      font-size: 32px;
+      letter-spacing: 3px;
+      color: var(--gold);
+      text-transform: uppercase;
+      text-shadow: 0 0 16px rgba(252, 163, 17, 0.4);
+    }
+    .sub {
+      color: var(--crimson);
+      font-size: 14px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+    .gallery {
+      max-width: 1200px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+    }
+    .panel-box {
+      background: var(--card);
+      border: 2px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.8);
+    }
+    .panel-header {
+      background: #181924;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #28293a;
+    }
+    .panel-title {
+      font-size: 16px;
+      font-weight: bold;
+      color: var(--gold);
+      letter-spacing: 1px;
+    }
+    .badge {
+      background: #2a1a14;
+      color: var(--gold);
+      border: 1px solid var(--gold);
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+    .panel-img-wrap {
+      width: 100%;
+      background: #000;
+      display: flex;
+      justify-content: center;
+    }
+    .panel-img-wrap img {
+      width: 100%;
+      max-height: 80vh;
+      object-fit: contain;
+      display: block;
+    }
+    .panel-meta {
+      padding: 16px 22px;
+      background: #11121a;
+      border-top: 1px solid #20212f;
+      font-family: Georgia, serif;
+      font-size: 13px;
+      line-height: 1.6;
+      color: #bbb;
+    }
+    .panel-meta strong {
+      color: var(--gold);
+      font-family: 'Cinzel', serif;
+    }
+    .nav-links {
+      margin-top: 30px;
+      display: flex;
+      gap: 16px;
+    }
+    .nav-btn {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 13px;
+      letter-spacing: 1px;
+      border: 1px solid #333;
+      padding: 10px 20px;
+      border-radius: 4px;
+      transition: all 0.2s;
+    }
+    .nav-btn:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Korvath the Barbarian</h1>
+    <div class="sub">Chapter 1: The Slumbering Serpent of Sarkesh — Director Review Deck</div>
+  </header>
+
+  <main class="gallery">
+    <!-- PANEL 1 -->
+    <article class="panel-box">
+      <div class="panel-header">
+        <span class="panel-title">⚔️ PANEL 1: THE COLD DAWN WINDS</span>
+        <span class="badge">CANONICAL ANCHOR MASTERPIECE</span>
+      </div>
+      <div class="panel-img-wrap">
+        <img src="./assets/ep1_meta/panel_01.webp" alt="Panel 1: The Cold Dawn Winds">
+      </div>
+      <div class="panel-meta">
+        <p><strong>Script Action:</strong> The barbarian warrior stands solitary upon a rocky mountain precipice overlooking mist-shrouded ruins and an ancient cliff fortress, heavy wolf-fur mantle draped over broad scarred bronze shoulders, leather harness crossing chest, straight steel broadsword in hand.</p>
+        <p style="margin-top:6px;"><strong>Captions:</strong> <em>"THE COLD DAWN WINDS HOWL THROUGH THE RUINS... HE WALKS ALONE -- SWORD IN HAND. NO MASTER. NO GOD. ONLY THE BLADE."</em> / <em>"THE BARBARIAN. LONE SWORD. LONE SURVIVOR."</em></p>
+      </div>
+    </article>
+
+    <!-- PANEL 2 -->
+    <article class="panel-box">
+      <div class="panel-header">
+        <span class="panel-title">⚔️ PANEL 2: EYES IN THE DUST</span>
+        <span class="badge" style="border-color:#2a9d8f; color:#2a9d8f; background:#0e2220;">DIRECTOR APPROVED</span>
+      </div>
+      <div class="panel-img-wrap">
+        <img src="./assets/ep1_meta/panel_02.webp" alt="Panel 2: Eyes in the Dust">
+      </div>
+      <div class="panel-meta">
+        <p><strong>Script Action:</strong> Korvath kneels upon one knee in the wind-whipped mountain sand and gravel ruins, inspecting freshly disturbed footprints near an ancient carved stone skull, scarred weathered fingers resting securely on the wire-bound hilt of his massive broadsword.</p>
+        <p style="margin-top:6px;"><strong>Caption:</strong> <em>"He smelled the bitter smoke of grey lotus on the mountain wind—and the cold oil of drawn blades."</em></p>
+      </div>
+    </article>
+
+    <!-- PANEL 3 -->
+    <article class="panel-box">
+      <div class="panel-header">
+        <span class="panel-title">⚔️ PANEL 3: THE CRYPT OF THE SERPENT</span>
+        <span class="badge" style="border-color:#00b4d8; color:#00b4d8; background:#0c1a24;">NEW DIRECTOR RENDER</span>
+      </div>
+      <div class="panel-img-wrap">
+        <img src="./assets/ep1_meta/panel_03.webp" alt="Panel 3: The Crypt of the Serpent">
+      </div>
+      <div class="panel-meta">
+        <p><strong>Script Action:</strong> Korvath heaves aside an ancient shattered granite door slab carved with writhing serpent reliefs, descending down steep stone stairs into the shadowed crypt, holding high a blazing pine pitch torch.</p>
+        <p style="margin-top:6px;"><strong>Caption:</strong> <em>"Into the bowels of forgotten Sarkesh he strode, where gods older than mankind slept in stagnant gloom."</em></p>
+      </div>
+    </article>
+  </main>
+
+  <div class="nav-links">
+    <a href="./index.html#issue-1" class="nav-btn">← Back to Graphic Novel Web Reader</a>
+  </div>
+</body>
+</html>
+

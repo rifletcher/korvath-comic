@@ -163,9 +163,10 @@
     <h1>Korvath the Barbarian</h1>
     <div class="series-sub">The High Savage Chronicles</div>
     <div class="issue-selector">
-      <button class="issue-btn" onclick="showIssue(1)" id="btn-issue-1">Issue #1: The Slumbering Serpent</button>
-      <button class="issue-btn active" onclick="showIssue(2)" id="btn-issue-2">Issue #2: The Blood-Thieves of Valkash</button>
-      <a href="./video_preview.html" class="issue-btn" style="background:#2d1115;border-color:var(--crimson);color:#ffd166;text-decoration:none;">🎬 Watch Motion Comic Teaser</a>
+      <button class="issue-btn active" onclick="showIssue(1)" id="btn-issue-1">⚔️ Issue #1: The Slumbering Serpent</button>
+      <button class="issue-btn" onclick="showIssue(2)" id="btn-issue-2">🗡️ Issue #2: The Blood-Thieves of Valkash</button>
+      <a href="./compare_grok_meta.html" class="issue-btn" style="background:#0c1a24;border-color:#00b4d8;color:#00b4d8;text-decoration:none;">⚖️ Studio Compare & Videos (Grok vs Meta AI)</a>
+      <a href="./video_preview.html" class="issue-btn" style="background:#2d1115;border-color:var(--crimson);color:#ffd166;text-decoration:none;">🎬 Motion Comic Video Theater</a>
     </div>
   </header>
 
@@ -175,6 +176,14 @@
       <div class="issue-header-banner">
         <h2>Issue #1: The Slumbering Serpent of Sarkesh</h2>
         <p>From the frozen crags of the northern wastes strode Korvath—lone wolf, reaver, breaker of chains. In the sun-blasted ruins of Sarkesh, he confronts serpent cultists and ancient horror.</p>
+        <div style="margin-top: 14px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+          <button id="reader-ep1-btn-grok" onclick="switchReaderEditionEp1('grok')" style="padding: 8px 18px; font-family: inherit; font-size: 11px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; border-radius: 4px; cursor: pointer; border: 1px solid #fca311; background: #241910; color: #fca311; box-shadow: 0 0 10px rgba(252, 163, 17, 0.3);">
+            🎨 Grok Edition
+          </button>
+          <button id="reader-ep1-btn-meta" onclick="switchReaderEditionEp1('meta')" style="padding: 8px 18px; font-family: inherit; font-size: 11px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; border-radius: 4px; cursor: pointer; border: 1px solid #334; background: #111420; color: #8fa0c0;">
+            🌟 Meta AI Edition (2K Frazetta)
+          </button>
+        </div>
       </div>
       
       <div class="panel-card" id="panel-ep1-1">
@@ -463,6 +472,14 @@
       <div class="issue-header-banner">
         <h2>Issue #2: The Blood-Thieves of Valkash</h2>
         <p>Deep within the thieves' city of Valkash, Korvath and Natari track the treacherous merchant prince Malakor into subterranean vaults where webs drip with demon poison.</p>
+        <div style="margin-top: 14px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+          <button id="reader-btn-grok" onclick="switchReaderEdition('grok')" style="padding: 8px 18px; font-family: inherit; font-size: 11px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; border-radius: 4px; cursor: pointer; border: 1px solid #fca311; background: #241910; color: #fca311; box-shadow: 0 0 10px rgba(252, 163, 17, 0.3);">
+            🎨 Grok Edition
+          </button>
+          <button id="reader-btn-meta" onclick="switchReaderEdition('meta')" style="padding: 8px 18px; font-family: inherit; font-size: 11px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; border-radius: 4px; cursor: pointer; border: 1px solid #334; background: #111420; color: #8fa0c0;">
+            🌟 Meta AI Edition (2K Frazetta)
+          </button>
+        </div>
       </div>
       
       <div class="panel-card" id="panel-ep2-1">
@@ -749,25 +766,83 @@
 
   <script>
     function showIssue(num) {
-      document.querySelectorAll('.issue-container').forEach(el => el.classList.remove('active'));
-      document.querySelectorAll('.issue-btn').forEach(el => el.classList.remove('active'));
-
-      const targetIssue = document.getElementById('issue-' + num);
-      const targetBtn = document.getElementById('btn-issue-' + num);
-
-      if (targetIssue) targetIssue.classList.add('active');
-      if (targetBtn) targetBtn.classList.add('active');
-
-      window.history.replaceState(null, null, '#issue-' + num);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      const iss1 = document.getElementById('issue-1');
+      const iss2 = document.getElementById('issue-2');
+      const b1 = document.getElementById('btn-issue-1');
+      const b2 = document.getElementById('btn-issue-2');
+      if (iss1) iss1.classList.toggle('active', num === 1);
+      if (iss2) iss2.classList.toggle('active', num === 2);
+      if (b1) b1.classList.toggle('active', num === 1);
+      if (b2) b2.classList.toggle('active', num === 2);
+      history.replaceState(null, '', '#issue-' + num);
     }
 
-    // Check hash on load
-    if (window.location.hash === '#issue-1') {
-      showIssue(1);
-    } else {
-      showIssue(2);
+    function switchReaderEditionEp1(edition) {
+      const isMeta = edition === 'meta';
+      document.querySelectorAll('#issue-1 .panel-img').forEach(img => {
+        if (isMeta) {
+          img.src = img.src.replace('/assets/ep1/', '/assets/ep1_meta/');
+        } else {
+          img.src = img.src.replace('/assets/ep1_meta/', '/assets/ep1/');
+        }
+      });
+      const btnGrok = document.getElementById('reader-ep1-btn-grok');
+      const btnMeta = document.getElementById('reader-ep1-btn-meta');
+      if (isMeta) {
+        btnMeta.style.border = '1px solid #0084ff';
+        btnMeta.style.background = '#0d1b2a';
+        btnMeta.style.color = '#90e0ef';
+        btnMeta.style.boxShadow = '0 0 12px rgba(0, 180, 216, 0.4)';
+        btnGrok.style.border = '1px solid #333';
+        btnGrok.style.background = '#15161d';
+        btnGrok.style.color = '#777';
+        btnGrok.style.boxShadow = 'none';
+      } else {
+        btnGrok.style.border = '1px solid #fca311';
+        btnGrok.style.background = '#241910';
+        btnGrok.style.color = '#fca311';
+        btnGrok.style.boxShadow = '0 0 10px rgba(252, 163, 17, 0.3)';
+        btnMeta.style.border = '1px solid #334';
+        btnMeta.style.background = '#111420';
+        btnMeta.style.color = '#8fa0c0';
+        btnMeta.style.boxShadow = 'none';
+      }
     }
+
+    function switchReaderEdition(edition) {
+      const isMeta = edition === 'meta';
+      document.querySelectorAll('#issue-2 .panel-img').forEach(img => {
+        if (isMeta) {
+          img.src = img.src.replace('/assets/ep2/', '/assets/ep2_meta/');
+        } else {
+          img.src = img.src.replace('/assets/ep2_meta/', '/assets/ep2/');
+        }
+      });
+      const btnGrok = document.getElementById('reader-btn-grok');
+      const btnMeta = document.getElementById('reader-btn-meta');
+      if (isMeta) {
+        btnMeta.style.border = '1px solid #0084ff';
+        btnMeta.style.background = '#0d1b2a';
+        btnMeta.style.color = '#90e0ef';
+        btnMeta.style.boxShadow = '0 0 12px rgba(0, 180, 216, 0.4)';
+        btnGrok.style.border = '1px solid #333';
+        btnGrok.style.background = '#15161d';
+        btnGrok.style.color = '#777';
+        btnGrok.style.boxShadow = 'none';
+      } else {
+        btnGrok.style.border = '1px solid #fca311';
+        btnGrok.style.background = '#241910';
+        btnGrok.style.color = '#fca311';
+        btnGrok.style.boxShadow = '0 0 10px rgba(252, 163, 17, 0.3)';
+        btnMeta.style.border = '1px solid #334';
+        btnMeta.style.background = '#111420';
+        btnMeta.style.color = '#8fa0c0';
+        btnMeta.style.boxShadow = 'none';
+      }
+    }
+
+    // Check hash on load - default to Issue 1
+    showIssue(1);
   </script>
 </body>
 </html>
