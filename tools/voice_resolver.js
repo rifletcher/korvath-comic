@@ -61,3 +61,4 @@ function checkPolarity(charKey, text, panelId) {
 }
 
 module.exports = { getVoiceRegistry, resolveSpeaker, checkPolarity };
+
