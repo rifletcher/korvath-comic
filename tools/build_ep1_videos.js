@@ -108,17 +108,17 @@ function getVideoFilter(imgPath, panelDuration, panelId) {
   const { w, h, ar } = getImageDimensions(imgPath);
   const totalFrames = Math.ceil(panelDuration * 30);
 
-  // 1. Vertical Portrait Panel (e.g. 1280x1920, 1344x1792): Smooth Vertical Tilt (top to bottom)
+  // 1. Vertical Portrait Panel (e.g. 1280x1920, 1344x1792): Smooth Vertical Tilt (top to bottom) at strict 30 fps
   if (ar < 1.0) {
-    return `scale=1280:-1,crop=1280:720:0:'(ih-720)*(0.5*(1-cos(PI*t/${panelDuration.toFixed(2)})))',format=yuv420p`;
+    return `scale=1280:-1,crop=1280:720:0:'(ih-720)*(0.5*(1-cos(PI*t/${panelDuration.toFixed(2)})))',fps=30,format=yuv420p`;
   }
 
-  // 2. Ultra-Wide Panoramic Panel (e.g. 2352x1008, ar >= 1.8): Smooth Horizontal Pan
+  // 2. Ultra-Wide Panoramic Panel (e.g. 2352x1008, ar >= 1.8): Smooth Horizontal Pan at strict 30 fps
   if (ar >= 1.8) {
-    return `scale=-1:720,crop=1280:720:'(iw-1280)*(0.5*(1-cos(PI*t/${panelDuration.toFixed(2)})))':0,format=yuv420p`;
+    return `scale=-1:720,crop=1280:720:'(iw-1280)*(0.5*(1-cos(PI*t/${panelDuration.toFixed(2)})))':0,fps=30,format=yuv420p`;
   }
 
-  // 3. Standard Landscape: Subtle Ken Burns push
+  // 3. Standard Landscape: Subtle Ken Burns push at strict 30 fps
   const holdFrames = 36;
   const zoomExpr = `if(lte(on,${holdFrames}),1.0,min(1.0+(on-${holdFrames})*0.00012,1.04))`;
   const yExpr = "0";
@@ -263,39 +263,62 @@ async function buildEpisode1() {
     });
     cumulativeTime += panelDuration;
 
-    // Render Grok Video Segment with Dynamic Aspect Ratio Handling
+    // Render Grok Video Segment with Dynamic Aspect Ratio Handling at strict 30 fps
     const grokSeg = path.join(segGrokDir, `p${padId}_grok_seg.mp4`);
     if (!fs.existsSync(grokSeg) || fs.statSync(grokSeg).size < 10000) {
       const filter = getVideoFilter(grokImg, panelDuration, p.panelId);
-      const cmd = `"${FFMPEG_PATH}" -y -loop 1 -i "${grokImg}" -i "${panelMixedAudio}" -filter_complex "[0:v]${filter}[v]" -map "[v]" -map 1:a -c:v libx264 -preset fast -crf 19 -c:a aac -b:a 192k -shortest -t ${panelDuration.toFixed(2)} "${grokSeg}"`;
+      const cmd = `"${FFMPEG_PATH}" -y -loop 1 -r 30 -i "${grokImg}" -i "${panelMixedAudio}" -filter_complex "[0:v]${filter}[v]" -map "[v]" -map 1:a -r 30 -c:v libx264 -preset fast -crf 19 -c:a aac -b:a 192k -ar 44100 -shortest -t ${panelDuration.toFixed(2)} "${grokSeg}"`;
       execSync(cmd, { stdio: 'ignore' });
     }
     grokSegments.push(grokSeg);
 
-    // Render Meta AI Video Segment with Dynamic Aspect Ratio Handling
+    // Render Meta AI Video Segment with Dynamic Aspect Ratio Handling at strict 30 fps
     const metaSeg = path.join(segMetaDir, `p${padId}_meta_seg.mp4`);
     if (!fs.existsSync(metaSeg) || fs.statSync(metaSeg).size < 10000) {
       const filter = getVideoFilter(metaImg, panelDuration, p.panelId);
-      const cmd = `"${FFMPEG_PATH}" -y -loop 1 -i "${metaImg}" -i "${panelMixedAudio}" -filter_complex "[0:v]${filter}[v]" -map "[v]" -map 1:a -c:v libx264 -preset fast -crf 19 -c:a aac -b:a 192k -shortest -t ${panelDuration.toFixed(2)} "${metaSeg}"`;
+      const cmd = `"${FFMPEG_PATH}" -y -loop 1 -r 30 -i "${metaImg}" -i "${panelMixedAudio}" -filter_complex "[0:v]${filter}[v]" -map "[v]" -map 1:a -r 30 -c:v libx264 -preset fast -crf 19 -c:a aac -b:a 192k -ar 44100 -shortest -t ${panelDuration.toFixed(2)} "${metaSeg}"`;
       execSync(cmd, { stdio: 'ignore' });
     }
     metaSegments.push(metaSeg);
-    console.log(`   🎥 Both segments rendered (Grok & Meta AI)`);
+    console.log(`   🎥 Both segments rendered (Grok & Meta AI) at strict 30 fps`);
   }
 
-  // Concatenate Grok Episode 1 Movie
-  const grokConcatList = path.join(workDir, 'grok_concat.txt');
-  fs.writeFileSync(grokConcatList, grokSegments.map(s => `file '${s.replace(/\\/g, '/')}'`).join('\n'), 'utf8');
-  const grokOutMovie = path.join(docsDir, 'episode_01_motion_comic.mp4');
-  console.log(`\n🎬 Assembling Grok Episode 1 Master Movie -> ${grokOutMovie}`);
-  execSync(`"${FFMPEG_PATH}" -y -f concat -safe 0 -i "${grokConcatList}" -c copy "${grokOutMovie}"`, { stdio: 'ignore' });
+  // Helper function to safely concatenate segments using MPEG-TS to prevent timestamp drift
+  function concatSegments(segments, outMovie, label) {
+    console.log(`\n🎬 Assembling ${label} Master Movie -> ${outMovie}`);
+    const tsFiles = [];
+    const tsList = [];
+    for (let i = 0; i < segments.length; i++) {
+      const seg = segments[i];
+      const tsSeg = seg.replace(/\.mp4$/, '.ts');
+      execSync(`"${FFMPEG_PATH}" -y -i "${seg}" -c copy -bsf:v h264_mp4toannexb -f mpegts "${tsSeg}"`, { stdio: 'ignore' });
+      tsFiles.push(tsSeg);
+      tsList.push(`file '${tsSeg.replace(/\\/g, '/')}'`);
+    }
 
-  // Concatenate Meta AI Episode 1 Movie
-  const metaConcatList = path.join(workDir, 'meta_concat.txt');
-  fs.writeFileSync(metaConcatList, metaSegments.map(s => `file '${s.replace(/\\/g, '/')}'`).join('\n'), 'utf8');
+    const concatList = path.join(workDir, `${label.toLowerCase().replace(/[^a-z0-9]/g, '_')}_concat.txt`);
+    fs.writeFileSync(concatList, tsList.join('\n'), 'utf8');
+
+    execSync(`"${FFMPEG_PATH}" -y -f concat -safe 0 -i "${concatList}" -c:v libx264 -preset fast -crf 19 -c:a aac -b:a 192k -ar 44100 "${outMovie}"`, { stdio: 'ignore' });
+
+    // Clean up temporary ts files
+    tsFiles.forEach(f => {
+      try { fs.unlinkSync(f); } catch (e) {}
+    });
+  }
+
+  const grokOutMovie = path.join(docsDir, 'episode_01_motion_comic.mp4');
+  concatSegments(grokSegments, grokOutMovie, 'Grok');
+
   const metaOutMovie = path.join(docsDir, 'episode_01_meta_motion_comic.mp4');
-  console.log(`🎬 Assembling Meta AI Episode 1 Master Movie -> ${metaOutMovie}`);
-  execSync(`"${FFMPEG_PATH}" -y -f concat -safe 0 -i "${metaConcatList}" -c copy "${metaOutMovie}"`, { stdio: 'ignore' });
+  concatSegments(metaSegments, metaOutMovie, 'Meta AI');
+
+  // Also update youtube release folder
+  const ytMaster = path.join(rootDir, '02_Assets', 'youtube_releases', 'episode_01_meta', 'Korvath_Episode_01_Meta_Frazetta_Master.mp4');
+  if (fs.existsSync(path.dirname(ytMaster))) {
+    fs.copyFileSync(metaOutMovie, ytMaster);
+    console.log(`   📦 Synced to YouTube Release: ${ytMaster}`);
+  }
 
   // Save Chapters JSON
   fs.writeFileSync(path.join(docsDir, 'episode_01_chapters.json'), JSON.stringify(chapterList, null, 2), 'utf8');

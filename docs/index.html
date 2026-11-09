@@ -283,11 +283,11 @@
     <h1>Issue #1: The Slumbering Serpent</h1>
 
     <div class="controls">
-      <button class="toggle-btn btn-grok active" id="btn-grok" onclick="switchGlobalEdition('grok')">
-        🎨 Grok Edition (Original)
+      <button class="toggle-btn btn-meta active" id="btn-meta" onclick="switchGlobalEdition('meta')">
+        🌟 Meta AI Edition (2K Frazetta Master)
       </button>
-      <button class="toggle-btn btn-meta" id="btn-meta" onclick="switchGlobalEdition('meta')">
-        🌟 Meta AI Edition (2K Frazetta)
+      <button class="toggle-btn btn-grok" id="btn-grok" onclick="switchGlobalEdition('grok')">
+        🎨 Grok Edition (Original)
       </button>
       <a href="./compare_grok_meta.html" class="toggle-btn" style="background:#141724; border:2px solid #334; color:#bbb; text-decoration:none;">
         ⚖️ Side-by-Side Split View
@@ -303,10 +303,10 @@
     <div class="video-card">
       <div class="video-header-bar">
         <div class="video-title">🎬 Episode 1 Motion Comic Movie (Full 20-Panel Cinematic Score)</div>
-        <span class="video-edition-tag tag-grok" id="video-tag">🎨 Grok Edition</span>
+        <span class="video-edition-tag tag-meta" id="video-tag">🌟 Meta AI (2K Frazetta Master)</span>
       </div>
-      <video id="player" controls playsinline poster="./assets/ep1/panel_01.webp">
-        <source id="video-src" src="./episode_01_motion_comic.mp4" type="video/mp4">
+      <video id="player" controls playsinline poster="./assets/ep1_meta/panel_01.webp">
+        <source id="video-src" src="./episode_01_meta_motion_comic.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
       <div class="video-footer-bar">
@@ -335,7 +335,7 @@
   </div>
 
   <script>
-    let currentEdition = 'grok';
+    let currentEdition = 'meta';
 
     // Episode 1 Panels Data
     const panels = [
