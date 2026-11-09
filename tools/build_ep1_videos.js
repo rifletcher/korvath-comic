@@ -92,34 +92,57 @@ function callElevenLabs(voiceId, text, voiceSettings, outFile) {
   });
 }
 
-async function synthesizeClip(speaker, text, rawFile, fxFile) {
+const { resolveSpeaker } = require('./voice_resolver');
+
+function getImageDimensions(imgPath) {
+  try {
+    const out = execSync(`ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=s=x:p=0 "${imgPath}"`).toString().trim();
+    const [w, h] = out.split('x').map(Number);
+    return { w, h, ar: w / h };
+  } catch (e) {
+    return { w: 1920, h: 1280, ar: 1.5 };
+  }
+}
+
+function getVideoFilter(imgPath, panelDuration, panelId) {
+  const { w, h, ar } = getImageDimensions(imgPath);
+  const totalFrames = Math.ceil(panelDuration * 30);
+
+  // 1. Vertical Portrait Panel (e.g. 1280x1920, 1344x1792): Smooth Vertical Tilt (top to bottom)
+  if (ar < 1.0) {
+    return `scale=1280:-1,crop=1280:720:0:'(ih-720)*(0.5*(1-cos(PI*t/${panelDuration.toFixed(2)})))',format=yuv420p`;
+  }
+
+  // 2. Ultra-Wide Panoramic Panel (e.g. 2352x1008, ar >= 1.8): Smooth Horizontal Pan
+  if (ar >= 1.8) {
+    return `scale=-1:720,crop=1280:720:'(iw-1280)*(0.5*(1-cos(PI*t/${panelDuration.toFixed(2)})))':0,format=yuv420p`;
+  }
+
+  // 3. Standard Landscape: Subtle Ken Burns push
+  const holdFrames = 36;
+  const zoomExpr = `if(lte(on,${holdFrames}),1.0,min(1.0+(on-${holdFrames})*0.00012,1.04))`;
+  const yExpr = "0";
+  const xExpr = panelId % 2 === 0 ? `iw/2-(iw/zoom/2)+((on/${totalFrames})-0.5)*25` : `iw/2-(iw/zoom/2)-((on/${totalFrames})-0.5)*25`;
+  return `scale=1536:864,zoompan=z='${zoomExpr}':x='${xExpr}':y='${yExpr}':d=${totalFrames}:s=1280x720:fps=30,format=yuv420p`;
+}
+
+async function synthesizeClip(speaker, text, rawFile, fxFile, panelId = 0) {
   if (fs.existsSync(fxFile) && fs.statSync(fxFile).size > 1000) {
     return fxFile;
   }
 
-  const s = (speaker || '').toLowerCase().trim();
-  let vConfig = ELEVEN_VOICES.narrator;
-  let fxFilter = 'volume=1.25';
+  // Resolve speaker strictly through Voice Registry
+  const charCfg = resolveSpeaker(speaker, text, panelId);
+  const voiceId = charCfg.voiceId;
+  const fxFilter = charCfg.dspChain || 'volume=1.25';
 
-  if (s === 'korvath') {
-    vConfig = ELEVEN_VOICES.korvath;
-    // Subterranean Kratos Mastering Chain: -12% pitch + 8dB sub-bass @ 95Hz
-    fxFilter = 'asetrate=44100*0.88,aresample=44100,equalizer=f=95:width_type=h:width=60:g=8,volume=1.45';
-  } else if (s === 'natari') {
-    vConfig = ELEVEN_VOICES.natari;
-    fxFilter = 'volume=1.30';
-  } else if (s.includes('kheshat') || s.includes('priest')) {
-    vConfig = ELEVEN_VOICES.kheshat;
-    fxFilter = 'asetrate=44100*0.94,aresample=44100,equalizer=f=120:width_type=h:width=50:g=4,volume=1.35';
-  }
-
-  if (elevenApiKey && vConfig) {
+  if (elevenApiKey && voiceId) {
     try {
-      console.log(`   🎙️ ElevenLabs [${speaker}]: "${text.slice(0, 35)}..."`);
-      await callElevenLabs(vConfig.id, text, {
-        stability: vConfig.defaultStability,
+      console.log(`   🎙️ ElevenLabs [${charCfg.name} / ${speaker}]: "${text.slice(0, 35)}..."`);
+      await callElevenLabs(voiceId, text, {
+        stability: charCfg.defaultStability || 0.25,
         similarity_boost: 0.85,
-        style: vConfig.defaultStyle,
+        style: charCfg.defaultStyle || 0.75,
         use_speaker_boost: true
       }, rawFile);
 
@@ -131,10 +154,7 @@ async function synthesizeClip(speaker, text, rawFile, fxFile) {
   }
 
   // Edge TTS fallback
-  const edgeTtsVoice = s === 'korvath' ? 'en-US-ChristopherNeural' :
-                       s === 'natari' ? 'en-US-AvaNeural' :
-                       s.includes('priest') ? 'en-GB-ThomasNeural' : 'en-US-AndrewMultilingualNeural';
-
+  const edgeTtsVoice = charCfg.edgeFallback || 'en-US-AndrewMultilingualNeural';
   const tts = new MsEdgeTTS();
   await tts.setMetadata(edgeTtsVoice, OUTPUT_FORMAT.AUDIO_24KHZ_48KBITRATE_MONO_MP3);
   await tts.toFile(rawFile, text);
@@ -197,7 +217,7 @@ async function buildEpisode1() {
           const dia = p.dialogue[d];
           const rawDia = path.join(audioDir, `p${padId}_dia_${d}_${dia.speaker}_raw.mp3`);
           const fxDia = path.join(audioDir, `p${padId}_dia_${d}_${dia.speaker}_fx.mp3`);
-          await synthesizeClip(dia.speaker, dia.text, rawDia, fxDia);
+          await synthesizeClip(dia.speaker, dia.text, rawDia, fxDia, p.panelId);
           clips.push({
             file: fxDia,
             duration: getAudioDuration(fxDia),
@@ -243,29 +263,19 @@ async function buildEpisode1() {
     });
     cumulativeTime += panelDuration;
 
-    // Render Grok Video Segment
+    // Render Grok Video Segment with Dynamic Aspect Ratio Handling
     const grokSeg = path.join(segGrokDir, `p${padId}_grok_seg.mp4`);
     if (!fs.existsSync(grokSeg) || fs.statSync(grokSeg).size < 10000) {
-      const totalFrames = Math.ceil(panelDuration * 30);
-      const holdFrames = 36;
-      const zoomExpr = `if(lte(on,${holdFrames}),1.0,min(1.0+(on-${holdFrames})*0.00012,1.04))`;
-      const yExpr = "0";
-      const xExpr = p.panelId % 2 === 0 ? `iw/2-(iw/zoom/2)+((on/${totalFrames})-0.5)*25` : `iw/2-(iw/zoom/2)-((on/${totalFrames})-0.5)*25`;
-      const filter = `scale=1536:864,zoompan=z='${zoomExpr}':x='${xExpr}':y='${yExpr}':d=${totalFrames}:s=1280x720:fps=30,format=yuv420p`;
+      const filter = getVideoFilter(grokImg, panelDuration, p.panelId);
       const cmd = `"${FFMPEG_PATH}" -y -loop 1 -i "${grokImg}" -i "${panelMixedAudio}" -filter_complex "[0:v]${filter}[v]" -map "[v]" -map 1:a -c:v libx264 -preset fast -crf 19 -c:a aac -b:a 192k -shortest -t ${panelDuration.toFixed(2)} "${grokSeg}"`;
       execSync(cmd, { stdio: 'ignore' });
     }
     grokSegments.push(grokSeg);
 
-    // Render Meta AI Video Segment
+    // Render Meta AI Video Segment with Dynamic Aspect Ratio Handling
     const metaSeg = path.join(segMetaDir, `p${padId}_meta_seg.mp4`);
     if (!fs.existsSync(metaSeg) || fs.statSync(metaSeg).size < 10000) {
-      const totalFrames = Math.ceil(panelDuration * 30);
-      const holdFrames = 36;
-      const zoomExpr = `if(lte(on,${holdFrames}),1.0,min(1.0+(on-${holdFrames})*0.00012,1.04))`;
-      const yExpr = "0";
-      const xExpr = p.panelId % 2 === 0 ? `iw/2-(iw/zoom/2)+((on/${totalFrames})-0.5)*25` : `iw/2-(iw/zoom/2)-((on/${totalFrames})-0.5)*25`;
-      const filter = `scale=1536:864,zoompan=z='${zoomExpr}':x='${xExpr}':y='${yExpr}':d=${totalFrames}:s=1280x720:fps=30,format=yuv420p`;
+      const filter = getVideoFilter(metaImg, panelDuration, p.panelId);
       const cmd = `"${FFMPEG_PATH}" -y -loop 1 -i "${metaImg}" -i "${panelMixedAudio}" -filter_complex "[0:v]${filter}[v]" -map "[v]" -map 1:a -c:v libx264 -preset fast -crf 19 -c:a aac -b:a 192k -shortest -t ${panelDuration.toFixed(2)} "${metaSeg}"`;
       execSync(cmd, { stdio: 'ignore' });
     }

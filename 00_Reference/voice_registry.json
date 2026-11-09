@@ -1,0 +1,84 @@
+{
+  "characters": {
+    "narrator": {
+      "name": "The Chronicler (Narrator)",
+      "engine": "elevenlabs",
+      "voiceId": "nPczCjzI2devNBz1zQrb",
+      "actorName": "Brian",
+      "persona": "Deep resonant pulp fantasy chronicler, Robert E. Howard cadence",
+      "defaultStability": 0.30,
+      "defaultStyle": 0.65,
+      "dspChain": "volume=1.25",
+      "edgeFallback": "en-US-AndrewMultilingualNeural"
+    },
+    "korvath": {
+      "name": "Korvath the Barbarian",
+      "engine": "elevenlabs",
+      "voiceId": "fX7UqA143pM34zT6bVzF",
+      "actorName": "Chris (Kratos/Conan)",
+      "persona": "Guttural, gravelly, menacing, unyielding northern warrior",
+      "defaultStability": 0.22,
+      "defaultStyle": 0.85,
+      "dspChain": "asetrate=44100*0.88,aresample=44100,equalizer=f=95:width_type=h:width=60:g=8,volume=1.45",
+      "edgeFallback": "en-US-ChristopherNeural"
+    },
+    "natari": {
+      "name": "Natari of Sarkesh",
+      "engine": "elevenlabs",
+      "voiceId": "EXAVITQu4vr4xnSDxMaL",
+      "actorName": "Sarah",
+      "persona": "Sensual, cunning street-thief with high emotional range for screams/danger",
+      "defaultStability": 0.25,
+      "defaultStyle": 0.80,
+      "dspChain": "volume=1.30",
+      "edgeFallback": "en-US-AvaNeural"
+    },
+    "cultist": {
+      "name": "Sarkeshian Cultist",
+      "aliases": [
+        "sarkeshian cultist",
+        "cultist",
+        "spider assassin",
+        "assassin",
+        "cutthroat",
+        "thief"
+      ],
+      "engine": "elevenlabs",
+      "voiceId": "JBFqnCBsd6RMkjVDRZzb",
+      "actorName": "George",
+      "persona": "Raspy, sinister fanatic villain with hollow mask resonance",
+      "defaultStability": 0.20,
+      "defaultStyle": 0.85,
+      "dspChain": "equalizer=f=1200:width_type=h:width=400:g=4,equalizer=f=3000:width_type=h:width=800:g=3,aecho=0.8:0.7:20:0.3,volume=1.35",
+      "edgeFallback": "en-GB-ThomasNeural"
+    },
+    "malakor": {
+      "name": "Lord Malakor (Merchant Prince)",
+      "aliases": [
+        "lord malakor",
+        "malakor",
+        "merchant lord",
+        "crooked broker"
+      ],
+      "engine": "elevenlabs",
+      "voiceId": "IKne3meq5aSn9XLyUdCD",
+      "actorName": "Charlie",
+      "persona": "Haughty, cruel, aristocratic decadent merchant lord",
+      "defaultStability": 0.30,
+      "defaultStyle": 0.70,
+      "dspChain": "equalizer=f=2500:width_type=h:width=500:g=2,volume=1.30",
+      "edgeFallback": "en-US-EricNeural"
+    }
+  },
+  "guards": {
+    "strictCastingRequired": true,
+    "allowSilentFallback": false,
+    "antiBarbarianPolarityGuard": true,
+    "disallowedWordsForHero": [
+      "dog of the north",
+      "barbarian scum",
+      "filthy northman",
+      "die, dog"
+    ]
+  }
+}

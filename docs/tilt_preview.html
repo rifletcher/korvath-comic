@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel 15 — Vertical Tilt Camera Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #070709;
+      --card: #11121a;
+      --gold: #fca311;
+      --crimson: #e63946;
+      --text: #eae2d6;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Montserrat', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px 80px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .sub {
+      color: var(--crimson);
+      font-family: 'Cinzel', serif;
+      font-size: 13px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-weight: 900;
+    }
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 28px;
+      color: var(--gold);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-top: 6px;
+    }
+    .player-card {
+      max-width: 960px;
+      width: 100%;
+      background: var(--card);
+      border: 2px solid #222533;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 16px 50px rgba(0,0,0,0.9);
+    }
+    video {
+      width: 100%;
+      display: block;
+      background: #000;
+    }
+    .info {
+      padding: 20px 24px;
+      background: #0d0e14;
+      border-top: 1px solid #1f2230;
+      font-size: 14px;
+      color: #b0b4c6;
+      line-height: 1.6;
+    }
+    .info strong {
+      color: var(--gold);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="sub">Aspect Ratio Motion Test</div>
+    <h1>Panel 15: Cinematic Vertical Tilt</h1>
+  </header>
+
+  <div class="player-card">
+    <video controls autoplay loop playsinline>
+      <source src="./panel_15_vertical_pan.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="info">
+      <strong>Camera Motion:</strong> 16:9 viewport smoothly tracking from the top caption and looming venomous serpent down to Korvath crouched with his sparking broadsword on the stone floor.<br>
+      <strong>Proportions:</strong> 100% natural, undistorted human and creature anatomy.
+    </div>
+  </div>
+</body>
+</html>
+

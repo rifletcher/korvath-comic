@@ -115,4 +115,26 @@ Every synthesized dialogue track must be audited by the **Sound QA Verifier** be
 | **4. Performance Strain & Tags** | High-emotion dialogue must leverage generative breath/strain cues (`[gasps]`, `[growls]`, voice cracking) with low stability ($0.18-0.28$) rather than flat reading. |
 | **5. Signal Headroom & Balance** | Dialogue must punch above action SFX (vault slams, sword cleaves) with dynamic compression without digital clipping ($<0\text{ dBFS}$). |
 
+---
+
+## 📐 Protocol 8: Aspect Ratio Preservation & Motion Comic Camera Staging
+
+**Hard Rule:** Never scale or force a non-16:9 image into a 16:9 frame (`scale=W:H`) without aspect ratio preservation.
+1. **Vertical / Portrait Panels ($AR < 1.0$, e.g. 1280×1920, 1344×1792):**
+   * Must use the **Cinematic Vertical Tilt**: Scale width to 1280 (`scale=1280:-1`), crop a 1280×720 viewport, and smoothly tilt/pan along the vertical axis from $y=0$ to $y=H-720$ with a cosine ease curve across the narration duration.
+   * Proportions remain strictly $1:1$ with zero distortion or squishing.
+2. **Ultra-Wide Panoramic Panels ($AR \ge 1.8$, e.g. 2352×1008):**
+   * Must use the **Horizontal Panoramic Sweep**: Scale height to 720 (`scale=-1:720`), crop a 1280×720 viewport, and pan horizontally across the width ($x=0$ to $x=W-1280$).
+3. **Standard Landscape Panels ($1.2 \le AR < 1.8$):**
+   * Subtle Ken Burns push/pull zoom ($1.00 \rightarrow 1.04$).
+
+---
+
+## 🎭 Protocol 9: Fail-Closed Voice Casting & Character Polarity Guard
+
+**Hard Rule:** Zero silent fallbacks to default voices in the audio pipeline.
+1. **Strict Casting Resolution:** Every `dialogue[].speaker` MUST resolve to an explicit entry in `00_Reference/voice_registry.json`. If an unknown speaker is encountered, the build script MUST throw a fatal error and halt.
+2. **Character Polarity Guard:** Antagonist dialogue containing anti-barbarian slurs (`"dog of the north"`, `"barbarian scum"`, `"filthy northman"`) can NEVER be assigned Korvath's voice ID or the Narrator's voice ID. Antagonists must strictly use the raspy cultist/assassin profile (George) or decadent nobleman profile (Charlie).
+3. **Token Conservation:** All synthesized `.mp3` clips must be permanently cached to disk (`02_Assets/.../audio/`). Re-building videos or re-mixing audio must reuse local files with zero ElevenLabs API token consumption.
+
 

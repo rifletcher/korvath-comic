@@ -25,6 +25,38 @@ function getAudioDuration(audioFile) {
   }
 }
 
+function getImageDimensions(imgPath) {
+  try {
+    const out = execSync(`ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=s=x:p=0 "${imgPath}"`).toString().trim();
+    const [w, h] = out.split('x').map(Number);
+    return { w, h, ar: w / h };
+  } catch (e) {
+    return { w: 1920, h: 1280, ar: 1.5 };
+  }
+}
+
+function getVideoFilter(imgPath, panelDuration, panelId) {
+  const { w, h, ar } = getImageDimensions(imgPath);
+  const totalFrames = Math.ceil(panelDuration * 30);
+
+  // 1. Vertical Portrait Panel (e.g. 1280x1920): Smooth Vertical Tilt (top to bottom)
+  if (ar < 1.0) {
+    return `scale=1280:-1,crop=1280:720:0:'(ih-720)*(0.5*(1-cos(PI*t/${panelDuration.toFixed(2)})))',format=yuv420p`;
+  }
+
+  // 2. Ultra-Wide Panoramic Panel (e.g. 2240x1120, ar >= 1.8): Smooth Horizontal Pan
+  if (ar >= 1.8) {
+    return `scale=-1:720,crop=1280:720:'(iw-1280)*(0.5*(1-cos(PI*t/${panelDuration.toFixed(2)})))':0,format=yuv420p`;
+  }
+
+  // 3. Standard Landscape: Subtle Ken Burns push
+  const holdFrames = 36;
+  const zoomExpr = `if(lte(on,${holdFrames}),1.0,min(1.0+(on-${holdFrames})*0.00012,1.04))`;
+  const yExpr = "0";
+  const xExpr = panelId % 2 === 0 ? `iw/2-(iw/zoom/2)+((on/${totalFrames})-0.5)*30` : `iw/2-(iw/zoom/2)-((on/${totalFrames})-0.5)*30`;
+  return `scale=1536:864,zoompan=z='${zoomExpr}':x='${xExpr}':y='${yExpr}':d=${totalFrames}:s=1280x720:fps=30,format=yuv420p`;
+}
+
 async function buildMetaEpisodeVideo() {
   const ep2 = JSON.parse(fs.readFileSync(ep2Path, 'utf8'));
 
@@ -66,17 +98,7 @@ async function buildMetaEpisodeVideo() {
     const totalFrames = Math.ceil(totalDuration * 30);
     const holdFrames = 36; // 1.2s static hold
 
-    const zoomExpr = `if(lte(on,${holdFrames}),1.0,min(1.0+(on-${holdFrames})*0.00012,1.04))`;
-    const yExpr = "0";
-
-    let xExpr = "iw/2-(iw/zoom/2)";
-    if (p.panelId % 2 === 0) {
-      xExpr = `iw/2-(iw/zoom/2)+((on/${totalFrames})-0.5)*30`;
-    } else {
-      xExpr = `iw/2-(iw/zoom/2)-((on/${totalFrames})-0.5)*30`;
-    }
-
-    const videoFilter = `scale=1536:864,zoompan=z='${zoomExpr}':x='${xExpr}':y='${yExpr}':d=${totalFrames}:s=1280x720:fps=30,format=yuv420p`;
+    const videoFilter = getVideoFilter(imageFile, totalDuration, p.panelId);
     const renderSegCmd = `"${FFMPEG_PATH}" -y -loop 1 -i "${imageFile}" -i "${panelMixedAudio}" -filter_complex "[0:v]${videoFilter}[v]" -map "[v]" -map 1:a -c:v libx264 -preset fast -crf 19 -c:a aac -b:a 192k -shortest -t ${totalDuration.toFixed(2)} "${segFile}"`;
 
     execSync(renderSegCmd, { stdio: 'ignore' });
