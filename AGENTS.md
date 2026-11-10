@@ -2,6 +2,15 @@
 
 These rules govern the autonomous execution, writers' room saga creation, dual consistency (Conan + weapons/objects), Meta AI guardrail bypass, and visual code reviews for the **Conan Graphic Novel Studio** workspace.
 
+## 🧩 Mandatory Workspace Quality Skills (`.agents/skills/`)
+
+Before executing any stage or promoting an episode past a Studio Quality Gate, you **MUST** read and execute the corresponding workspace skill:
+- **Stage 0 (Onboarding):** [`comic-character-onboarding`](file:///c:/research/c-book-generator/conan/.agents/skills/comic-character-onboarding/SKILL.md) — Quad-pillar entity onboarding & anti-bleed prompt isolation.
+- **Stage 1 / Gate A (`SCRIPT_GATE`):** [`comic-writers-room-and-prompts`](file:///c:/research/c-book-generator/conan/.agents/skills/comic-writers-room-and-prompts/SKILL.md) — Configurable $N$-panel scripting, Llama Guard euphemisms, weapon invariants, and [`verify_storyboard_prompts.js`](file:///c:/research/c-book-generator/conan/.agents/skills/comic-writers-room-and-prompts/scripts/verify_storyboard_prompts.js).
+- **Stage 2 / Gate B (`VISUAL_QA_GATE`):** [`comic-visual-qa-director`](file:///c:/research/c-book-generator/conan/.agents/skills/comic-visual-qa-director/SKILL.md) — 8-point visual inspection rubric, hand/weapon invariants, and speech bubble pointer direction verification.
+- **Stage 3 / Gate C (`AUDIO_QA_GATE`):** [`comic-voice-and-acoustic-qa`](file:///c:/research/c-book-generator/conan/.agents/skills/comic-voice-and-acoustic-qa/SKILL.md) — Fail-closed voice registry casting, visual-speaker alignment (Panel 5 rule), Subterranean Kratos DSP chains, and [`verify_voice_casting.js`](file:///c:/research/c-book-generator/conan/.agents/skills/comic-voice-and-acoustic-qa/scripts/verify_voice_casting.js).
+- **Stage 4 / Gate D (`FINAL_CUT_GATE`):** [`comic-motion-video-assembly`](file:///c:/research/c-book-generator/conan/.agents/skills/comic-motion-video-assembly/SKILL.md) — Aspect ratio preservation (vertical tilts, panoramic sweeps, Ken Burns), zero-drift MPEG-TS concat, and `ffprobe` sync verification.
+
 ---
 
 ## 🎯 Protocol 1: Quad-Pillar Entity Onboarding (Visual Look, Weapons, & Dual-Emotion Voice DNA)

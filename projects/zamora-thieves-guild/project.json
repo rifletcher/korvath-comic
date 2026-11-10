@@ -1,0 +1,21 @@
+{
+  "id": "zamora-thieves-guild",
+  "title": "Tales of Zamora: The Crimson Veil",
+  "subtitle": "Heists in the City of Spiders",
+  "genre": "Dark Sword & Sorcery Stealth Anthology",
+  "artStyleAnchor": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta and Barry Windsor-Smith illustration style, heavy ink cross-hatching, nocturnal indigo and amber torchlight",
+  "defaultImageEngine": "meta-ai-cdp",
+  "defaultVoiceEngine": "elevenlabs",
+  "targetEpisodeCount": 4,
+  "defaultPanelsPerEpisode": 10,
+  "createdAt": "2026-11-10T10:00:00Z",
+  "updatedAt": "2026-11-10T10:42:35.102Z",
+  "coverImage": "docs/assets/ep2_meta/panel_04.webp",
+  "invariants": [
+    "Twin Curved Daggers Only: Natari wields twin Zamorian kris daggers",
+    "Nocturnal Palette: Deep sapphire shadows and brazier gold"
+  ],
+  "episodes": [
+    "ep01"
+  ]
+}

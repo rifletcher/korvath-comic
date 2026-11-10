@@ -1,0 +1,479 @@
+{
+  "projectId": "kull-iron-reaver",
+  "episodeId": "ep01",
+  "episodeNumber": 1,
+  "title": "Issue #1: The Serpent in the Throne Room",
+  "theme": "valusia_throne_usurper",
+  "targetPanelCount": 12,
+  "currentStage": "SCRIPT_GATE",
+  "overallProgress": 18,
+  "assignedWorkerTab": null,
+  "updatedAt": "2026-11-10T10:50:11Z",
+  "outputs": {
+    "masterVideoPath": null,
+    "durationSeconds": null,
+    "resolution": "Awaiting Gate A Script Approval"
+  },
+  "stages": [
+    {
+      "id": "SCRIPT_GENERATION",
+      "name": "1. Writers Room Script",
+      "status": "COMPLETED",
+      "progress": 100
+    },
+    {
+      "id": "PROMPT_EXPANSION",
+      "name": "2. Latent Anchor \u0026 Guardrails",
+      "status": "LOCKED_BY_GATE",
+      "progress": 0
+    },
+    {
+      "id": "VISUAL_RENDERING",
+      "name": "3. Meta AI 2K Panel Rendering",
+      "status": "LOCKED_BY_GATE",
+      "progress": 0
+    },
+    {
+      "id": "VOICE_SYNTHESIS",
+      "name": "4. Multi-Actor Voice \u0026 DSP",
+      "status": "LOCKED_BY_GATE",
+      "progress": 0
+    },
+    {
+      "id": "VIDEO_ASSEMBLY",
+      "name": "5. Motion Comic Camera \u0026 Concat",
+      "status": "LOCKED_BY_GATE",
+      "progress": 0
+    },
+    {
+      "id": "READY_FOR_RELEASE",
+      "name": "6. Master Release Bundle",
+      "status": "LOCKED_BY_GATE",
+      "progress": 0
+    }
+  ],
+  "gates": [
+    {
+      "id": "SCRIPT_GATE",
+      "name": "Gate A: Storyboard \u0026 Dialogue Lock",
+      "afterStage": "SCRIPT_GENERATION",
+      "status": "AWAITING_APPROVAL",
+      "approvedAt": null,
+      "notes": "7-Agent Writers Room completed 12-beat outline. Ready for Director sign-off."
+    },
+    {
+      "id": "VISUAL_QA_GATE",
+      "name": "Gate B: 8-Point Director Visual Continuity Gate",
+      "afterStage": "VISUAL_RENDERING",
+      "status": "LOCKED",
+      "approvedAt": null,
+      "notes": "Locked."
+    },
+    {
+      "id": "AUDIO_QA_GATE",
+      "name": "Gate C: 5-Point Acoustic \u0026 Polarity Gate",
+      "afterStage": "VOICE_SYNTHESIS",
+      "status": "LOCKED",
+      "approvedAt": null,
+      "notes": "Locked."
+    }
+  ],
+  "panels": [
+    {
+      "panelId": 1,
+      "name": "Valusia Beat #1",
+      "act": "Act I",
+      "summary": "Scene beat 1: The Serpent in the Throne Room.",
+      "caption": "By this axe I rule!",
+      "dialogue": [],
+      "characters": [
+        "kull"
+      ],
+      "objects": [
+        "broadaxe"
+      ],
+      "shotType": "Heroic Low-Angle Shot",
+      "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, John Buscema Savage Sword style, Beat 1",
+      "imageStatus": "PENDING",
+      "imagePath": "",
+      "webPreviewUrl": "",
+      "sizeKB": 0,
+      "hash": "",
+      "audioStatus": "LOCKED_BY_GATE",
+      "audioPath": "",
+      "qaChecklist": {
+        "facialLikeness": false,
+        "wardrobeContinuity": false,
+        "singleSwordInvariant": false,
+        "cardinalityGuard": false,
+        "handAnatomyGuard": false,
+        "environmentalContinuity": false,
+        "frazettaInkStyle": false,
+        "captionSpeechLegibility": false
+      }
+    },
+    {
+      "panelId": 2,
+      "name": "Valusia Beat #2",
+      "act": "Act I",
+      "summary": "Scene beat 2: The Serpent in the Throne Room.",
+      "caption": "By this axe I rule!",
+      "dialogue": [],
+      "characters": [
+        "kull"
+      ],
+      "objects": [
+        "broadaxe"
+      ],
+      "shotType": "Heroic Low-Angle Shot",
+      "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, John Buscema Savage Sword style, Beat 2",
+      "imageStatus": "PENDING",
+      "imagePath": "",
+      "webPreviewUrl": "",
+      "sizeKB": 0,
+      "hash": "",
+      "audioStatus": "LOCKED_BY_GATE",
+      "audioPath": "",
+      "qaChecklist": {
+        "facialLikeness": false,
+        "wardrobeContinuity": false,
+        "singleSwordInvariant": false,
+        "cardinalityGuard": false,
+        "handAnatomyGuard": false,
+        "environmentalContinuity": false,
+        "frazettaInkStyle": false,
+        "captionSpeechLegibility": false
+      }
+    },
+    {
+      "panelId": 3,
+      "name": "Valusia Beat #3",
+      "act": "Act I",
+      "summary": "Scene beat 3: The Serpent in the Throne Room.",
+      "caption": "By this axe I rule!",
+      "dialogue": [],
+      "characters": [
+        "kull"
+      ],
+      "objects": [
+        "broadaxe"
+      ],
+      "shotType": "Heroic Low-Angle Shot",
+      "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, John Buscema Savage Sword style, Beat 3",
+      "imageStatus": "PENDING",
+      "imagePath": "",
+      "webPreviewUrl": "",
+      "sizeKB": 0,
+      "hash": "",
+      "audioStatus": "LOCKED_BY_GATE",
+      "audioPath": "",
+      "qaChecklist": {
+        "facialLikeness": false,
+        "wardrobeContinuity": false,
+        "singleSwordInvariant": false,
+        "cardinalityGuard": false,
+        "handAnatomyGuard": false,
+        "environmentalContinuity": false,
+        "frazettaInkStyle": false,
+        "captionSpeechLegibility": false
+      }
+    },
+    {
+      "panelId": 4,
+      "name": "Valusia Beat #4",
+      "act": "Act I",
+      "summary": "Scene beat 4: The Serpent in the Throne Room.",
+      "caption": "By this axe I rule!",
+      "dialogue": [],
+      "characters": [
+        "kull"
+      ],
+      "objects": [
+        "broadaxe"
+      ],
+      "shotType": "Heroic Low-Angle Shot",
+      "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, John Buscema Savage Sword style, Beat 4",
+      "imageStatus": "PENDING",
+      "imagePath": "",
+      "webPreviewUrl": "",
+      "sizeKB": 0,
+      "hash": "",
+      "audioStatus": "LOCKED_BY_GATE",
+      "audioPath": "",
+      "qaChecklist": {
+        "facialLikeness": false,
+        "wardrobeContinuity": false,
+        "singleSwordInvariant": false,
+        "cardinalityGuard": false,
+        "handAnatomyGuard": false,
+        "environmentalContinuity": false,
+        "frazettaInkStyle": false,
+        "captionSpeechLegibility": false
+      }
+    },
+    {
+      "panelId": 5,
+      "name": "Valusia Beat #5",
+      "act": "Act II",
+      "summary": "Scene beat 5: The Serpent in the Throne Room.",
+      "caption": "By this axe I rule!",
+      "dialogue": [],
+      "characters": [
+        "kull"
+      ],
+      "objects": [
+        "broadaxe"
+      ],
+      "shotType": "Heroic Low-Angle Shot",
+      "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, John Buscema Savage Sword style, Beat 5",
+      "imageStatus": "PENDING",
+      "imagePath": "",
+      "webPreviewUrl": "",
+      "sizeKB": 0,
+      "hash": "",
+      "audioStatus": "LOCKED_BY_GATE",
+      "audioPath": "",
+      "qaChecklist": {
+        "facialLikeness": false,
+        "wardrobeContinuity": false,
+        "singleSwordInvariant": false,
+        "cardinalityGuard": false,
+        "handAnatomyGuard": false,
+        "environmentalContinuity": false,
+        "frazettaInkStyle": false,
+        "captionSpeechLegibility": false
+      }
+    },
+    {
+      "panelId": 6,
+      "name": "Valusia Beat #6",
+      "act": "Act II",
+      "summary": "Scene beat 6: The Serpent in the Throne Room.",
+      "caption": "By this axe I rule!",
+      "dialogue": [],
+      "characters": [
+        "kull"
+      ],
+      "objects": [
+        "broadaxe"
+      ],
+      "shotType": "Heroic Low-Angle Shot",
+      "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, John Buscema Savage Sword style, Beat 6",
+      "imageStatus": "PENDING",
+      "imagePath": "",
+      "webPreviewUrl": "",
+      "sizeKB": 0,
+      "hash": "",
+      "audioStatus": "LOCKED_BY_GATE",
+      "audioPath": "",
+      "qaChecklist": {
+        "facialLikeness": false,
+        "wardrobeContinuity": false,
+        "singleSwordInvariant": false,
+        "cardinalityGuard": false,
+        "handAnatomyGuard": false,
+        "environmentalContinuity": false,
+        "frazettaInkStyle": false,
+        "captionSpeechLegibility": false
+      }
+    },
+    {
+      "panelId": 7,
+      "name": "Valusia Beat #7",
+      "act": "Act II",
+      "summary": "Scene beat 7: The Serpent in the Throne Room.",
+      "caption": "By this axe I rule!",
+      "dialogue": [],
+      "characters": [
+        "kull"
+      ],
+      "objects": [
+        "broadaxe"
+      ],
+      "shotType": "Heroic Low-Angle Shot",
+      "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, John Buscema Savage Sword style, Beat 7",
+      "imageStatus": "PENDING",
+      "imagePath": "",
+      "webPreviewUrl": "",
+      "sizeKB": 0,
+      "hash": "",
+      "audioStatus": "LOCKED_BY_GATE",
+      "audioPath": "",
+      "qaChecklist": {
+        "facialLikeness": false,
+        "wardrobeContinuity": false,
+        "singleSwordInvariant": false,
+        "cardinalityGuard": false,
+        "handAnatomyGuard": false,
+        "environmentalContinuity": false,
+        "frazettaInkStyle": false,
+        "captionSpeechLegibility": false
+      }
+    },
+    {
+      "panelId": 8,
+      "name": "Valusia Beat #8",
+      "act": "Act II",
+      "summary": "Scene beat 8: The Serpent in the Throne Room.",
+      "caption": "By this axe I rule!",
+      "dialogue": [],
+      "characters": [
+        "kull"
+      ],
+      "objects": [
+        "broadaxe"
+      ],
+      "shotType": "Heroic Low-Angle Shot",
+      "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, John Buscema Savage Sword style, Beat 8",
+      "imageStatus": "PENDING",
+      "imagePath": "",
+      "webPreviewUrl": "",
+      "sizeKB": 0,
+      "hash": "",
+      "audioStatus": "LOCKED_BY_GATE",
+      "audioPath": "",
+      "qaChecklist": {
+        "facialLikeness": false,
+        "wardrobeContinuity": false,
+        "singleSwordInvariant": false,
+        "cardinalityGuard": false,
+        "handAnatomyGuard": false,
+        "environmentalContinuity": false,
+        "frazettaInkStyle": false,
+        "captionSpeechLegibility": false
+      }
+    },
+    {
+      "panelId": 9,
+      "name": "Valusia Beat #9",
+      "act": "Act III",
+      "summary": "Scene beat 9: The Serpent in the Throne Room.",
+      "caption": "By this axe I rule!",
+      "dialogue": [],
+      "characters": [
+        "kull"
+      ],
+      "objects": [
+        "broadaxe"
+      ],
+      "shotType": "Heroic Low-Angle Shot",
+      "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, John Buscema Savage Sword style, Beat 9",
+      "imageStatus": "PENDING",
+      "imagePath": "",
+      "webPreviewUrl": "",
+      "sizeKB": 0,
+      "hash": "",
+      "audioStatus": "LOCKED_BY_GATE",
+      "audioPath": "",
+      "qaChecklist": {
+        "facialLikeness": false,
+        "wardrobeContinuity": false,
+        "singleSwordInvariant": false,
+        "cardinalityGuard": false,
+        "handAnatomyGuard": false,
+        "environmentalContinuity": false,
+        "frazettaInkStyle": false,
+        "captionSpeechLegibility": false
+      }
+    },
+    {
+      "panelId": 10,
+      "name": "Valusia Beat #10",
+      "act": "Act III",
+      "summary": "Scene beat 10: The Serpent in the Throne Room.",
+      "caption": "By this axe I rule!",
+      "dialogue": [],
+      "characters": [
+        "kull"
+      ],
+      "objects": [
+        "broadaxe"
+      ],
+      "shotType": "Heroic Low-Angle Shot",
+      "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, John Buscema Savage Sword style, Beat 10",
+      "imageStatus": "PENDING",
+      "imagePath": "",
+      "webPreviewUrl": "",
+      "sizeKB": 0,
+      "hash": "",
+      "audioStatus": "LOCKED_BY_GATE",
+      "audioPath": "",
+      "qaChecklist": {
+        "facialLikeness": false,
+        "wardrobeContinuity": false,
+        "singleSwordInvariant": false,
+        "cardinalityGuard": false,
+        "handAnatomyGuard": false,
+        "environmentalContinuity": false,
+        "frazettaInkStyle": false,
+        "captionSpeechLegibility": false
+      }
+    },
+    {
+      "panelId": 11,
+      "name": "Valusia Beat #11",
+      "act": "Act III",
+      "summary": "Scene beat 11: The Serpent in the Throne Room.",
+      "caption": "By this axe I rule!",
+      "dialogue": [],
+      "characters": [
+        "kull"
+      ],
+      "objects": [
+        "broadaxe"
+      ],
+      "shotType": "Heroic Low-Angle Shot",
+      "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, John Buscema Savage Sword style, Beat 11",
+      "imageStatus": "PENDING",
+      "imagePath": "",
+      "webPreviewUrl": "",
+      "sizeKB": 0,
+      "hash": "",
+      "audioStatus": "LOCKED_BY_GATE",
+      "audioPath": "",
+      "qaChecklist": {
+        "facialLikeness": false,
+        "wardrobeContinuity": false,
+        "singleSwordInvariant": false,
+        "cardinalityGuard": false,
+        "handAnatomyGuard": false,
+        "environmentalContinuity": false,
+        "frazettaInkStyle": false,
+        "captionSpeechLegibility": false
+      }
+    },
+    {
+      "panelId": 12,
+      "name": "Valusia Beat #12",
+      "act": "Act III",
+      "summary": "Scene beat 12: The Serpent in the Throne Room.",
+      "caption": "By this axe I rule!",
+      "dialogue": [],
+      "characters": [
+        "kull"
+      ],
+      "objects": [
+        "broadaxe"
+      ],
+      "shotType": "Heroic Low-Angle Shot",
+      "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, John Buscema Savage Sword style, Beat 12",
+      "imageStatus": "PENDING",
+      "imagePath": "",
+      "webPreviewUrl": "",
+      "sizeKB": 0,
+      "hash": "",
+      "audioStatus": "LOCKED_BY_GATE",
+      "audioPath": "",
+      "qaChecklist": {
+        "facialLikeness": false,
+        "wardrobeContinuity": false,
+        "singleSwordInvariant": false,
+        "cardinalityGuard": false,
+        "handAnatomyGuard": false,
+        "environmentalContinuity": false,
+        "frazettaInkStyle": false,
+        "captionSpeechLegibility": false
+      }
+    }
+  ]
+}

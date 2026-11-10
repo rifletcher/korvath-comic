@@ -1,0 +1,414 @@
+{
+  "projectId": "zamora-thieves-guild",
+  "episodeId": "ep01",
+  "episodeNumber": 1,
+  "title": "Issue #1: The Tower of the Astrologer",
+  "theme": "zamora_rooftop_heist",
+  "targetPanelCount": 10,
+  "currentStage": "VISUAL_RENDERING",
+  "overallProgress": 38,
+  "assignedWorkerTab": "meta-tab-slot-2",
+  "updatedAt": "2026-11-10T10:42:35.103Z",
+  "outputs": {
+    "masterVideoPath": null,
+    "webReviewPath": null,
+    "durationSeconds": null,
+    "resolution": "Rendering in Worker Slot #2"
+  },
+  "stages": [
+    {
+      "id": "SCRIPT_GENERATION",
+      "name": "1. Writers Room Script",
+      "status": "COMPLETED",
+      "progress": 100
+    },
+    {
+      "id": "PROMPT_EXPANSION",
+      "name": "2. Latent Anchor & Guardrails",
+      "status": "COMPLETED",
+      "progress": 100
+    },
+    {
+      "id": "VISUAL_RENDERING",
+      "name": "3. Meta AI 2K Panel Rendering",
+      "status": "IN_PROGRESS",
+      "progress": 40
+    },
+    {
+      "id": "VOICE_SYNTHESIS",
+      "name": "4. Multi-Actor Voice & DSP",
+      "status": "LOCKED_BY_GATE",
+      "progress": 0
+    },
+    {
+      "id": "VIDEO_ASSEMBLY",
+      "name": "5. Motion Comic Camera & Concat",
+      "status": "LOCKED_BY_GATE",
+      "progress": 0
+    },
+    {
+      "id": "READY_FOR_RELEASE",
+      "name": "6. Master Release Bundle",
+      "status": "LOCKED_BY_GATE",
+      "progress": 0
+    }
+  ],
+  "gates": [
+    {
+      "id": "SCRIPT_GATE",
+      "name": "Gate A: Storyboard & Dialogue Lock",
+      "afterStage": "SCRIPT_GENERATION",
+      "status": "APPROVED",
+      "approvedAt": "2026-11-10T10:15:00Z",
+      "notes": "Approved for parallel render."
+    },
+    {
+      "id": "VISUAL_QA_GATE",
+      "name": "Gate B: 8-Point Director Visual Continuity Gate",
+      "afterStage": "VISUAL_RENDERING",
+      "status": "PENDING",
+      "approvedAt": null,
+      "notes": "Waiting for remaining 6 panels."
+    },
+    {
+      "id": "AUDIO_QA_GATE",
+      "name": "Gate C: 5-Point Acoustic & Polarity Gate",
+      "afterStage": "VOICE_SYNTHESIS",
+      "status": "LOCKED",
+      "approvedAt": null,
+      "notes": "Locked."
+    }
+  ],
+  "panels": [
+    {
+      "panelId": 1,
+      "name": "Rooftops of Zamora",
+      "act": "Act I",
+      "summary": "Beat 1 of the Zamorian tower heist.",
+      "caption": "In Zamora, locks are merely polite suggestions to those born in the alleys.",
+      "dialogue": [],
+      "characters": [
+        "natari"
+      ],
+      "objects": [
+        "daggers"
+      ],
+      "shotType": "Nocturnal Rooftop Tracking Shot",
+      "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta style, Beat 1",
+      "imageStatus": "RENDERED",
+      "imagePath": "",
+      "webPreviewUrl": "",
+      "sizeKB": 940,
+      "hash": "zam01a9f",
+      "audioStatus": "LOCKED_BY_GATE",
+      "audioPath": "",
+      "qaChecklist": {
+        "facialLikeness": true,
+        "wardrobeContinuity": true,
+        "singleSwordInvariant": true,
+        "cardinalityGuard": true,
+        "handAnatomyGuard": true,
+        "environmentalContinuity": true,
+        "frazettaInkStyle": true,
+        "captionSpeechLegibility": true
+      }
+    },
+    {
+      "panelId": 2,
+      "name": "The Tower of the Astrologer",
+      "act": "Act I",
+      "summary": "Beat 2 of the Zamorian tower heist.",
+      "caption": "In Zamora, locks are merely polite suggestions to those born in the alleys.",
+      "dialogue": [],
+      "characters": [
+        "natari"
+      ],
+      "objects": [
+        "daggers"
+      ],
+      "shotType": "Nocturnal Rooftop Tracking Shot",
+      "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta style, Beat 2",
+      "imageStatus": "RENDERED",
+      "imagePath": "",
+      "webPreviewUrl": "",
+      "sizeKB": 940,
+      "hash": "zam02a9f",
+      "audioStatus": "LOCKED_BY_GATE",
+      "audioPath": "",
+      "qaChecklist": {
+        "facialLikeness": true,
+        "wardrobeContinuity": true,
+        "singleSwordInvariant": true,
+        "cardinalityGuard": true,
+        "handAnatomyGuard": true,
+        "environmentalContinuity": true,
+        "frazettaInkStyle": true,
+        "captionSpeechLegibility": true
+      }
+    },
+    {
+      "panelId": 3,
+      "name": "Silken Rope Descent",
+      "act": "Act I",
+      "summary": "Beat 3 of the Zamorian tower heist.",
+      "caption": "In Zamora, locks are merely polite suggestions to those born in the alleys.",
+      "dialogue": [],
+      "characters": [
+        "natari"
+      ],
+      "objects": [
+        "daggers"
+      ],
+      "shotType": "Nocturnal Rooftop Tracking Shot",
+      "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta style, Beat 3",
+      "imageStatus": "RENDERED",
+      "imagePath": "",
+      "webPreviewUrl": "",
+      "sizeKB": 940,
+      "hash": "zam03a9f",
+      "audioStatus": "LOCKED_BY_GATE",
+      "audioPath": "",
+      "qaChecklist": {
+        "facialLikeness": true,
+        "wardrobeContinuity": true,
+        "singleSwordInvariant": true,
+        "cardinalityGuard": true,
+        "handAnatomyGuard": true,
+        "environmentalContinuity": true,
+        "frazettaInkStyle": true,
+        "captionSpeechLegibility": true
+      }
+    },
+    {
+      "panelId": 4,
+      "name": "Hall of Whispers",
+      "act": "Act II",
+      "summary": "Beat 4 of the Zamorian tower heist.",
+      "caption": "In Zamora, locks are merely polite suggestions to those born in the alleys.",
+      "dialogue": [],
+      "characters": [
+        "natari"
+      ],
+      "objects": [
+        "daggers"
+      ],
+      "shotType": "Nocturnal Rooftop Tracking Shot",
+      "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta style, Beat 4",
+      "imageStatus": "RENDERED",
+      "imagePath": "",
+      "webPreviewUrl": "",
+      "sizeKB": 940,
+      "hash": "zam04a9f",
+      "audioStatus": "LOCKED_BY_GATE",
+      "audioPath": "",
+      "qaChecklist": {
+        "facialLikeness": true,
+        "wardrobeContinuity": true,
+        "singleSwordInvariant": true,
+        "cardinalityGuard": true,
+        "handAnatomyGuard": true,
+        "environmentalContinuity": true,
+        "frazettaInkStyle": true,
+        "captionSpeechLegibility": true
+      }
+    },
+    {
+      "panelId": 5,
+      "name": "The Brass Lock",
+      "act": "Act II",
+      "summary": "Beat 5 of the Zamorian tower heist.",
+      "caption": "In Zamora, locks are merely polite suggestions to those born in the alleys.",
+      "dialogue": [],
+      "characters": [
+        "natari"
+      ],
+      "objects": [
+        "daggers"
+      ],
+      "shotType": "Nocturnal Rooftop Tracking Shot",
+      "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta style, Beat 5",
+      "imageStatus": "QUEUED",
+      "imagePath": "",
+      "webPreviewUrl": "",
+      "sizeKB": 0,
+      "hash": "",
+      "audioStatus": "LOCKED_BY_GATE",
+      "audioPath": "",
+      "qaChecklist": {
+        "facialLikeness": false,
+        "wardrobeContinuity": false,
+        "singleSwordInvariant": false,
+        "cardinalityGuard": false,
+        "handAnatomyGuard": false,
+        "environmentalContinuity": false,
+        "frazettaInkStyle": false,
+        "captionSpeechLegibility": false
+      }
+    },
+    {
+      "panelId": 6,
+      "name": "Eyes of the Gargoyle",
+      "act": "Act II",
+      "summary": "Beat 6 of the Zamorian tower heist.",
+      "caption": "In Zamora, locks are merely polite suggestions to those born in the alleys.",
+      "dialogue": [],
+      "characters": [
+        "natari"
+      ],
+      "objects": [
+        "daggers"
+      ],
+      "shotType": "Nocturnal Rooftop Tracking Shot",
+      "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta style, Beat 6",
+      "imageStatus": "QUEUED",
+      "imagePath": "",
+      "webPreviewUrl": "",
+      "sizeKB": 0,
+      "hash": "",
+      "audioStatus": "LOCKED_BY_GATE",
+      "audioPath": "",
+      "qaChecklist": {
+        "facialLikeness": false,
+        "wardrobeContinuity": false,
+        "singleSwordInvariant": false,
+        "cardinalityGuard": false,
+        "handAnatomyGuard": false,
+        "environmentalContinuity": false,
+        "frazettaInkStyle": false,
+        "captionSpeechLegibility": false
+      }
+    },
+    {
+      "panelId": 7,
+      "name": "Crossbow Ambush",
+      "act": "Act II",
+      "summary": "Beat 7 of the Zamorian tower heist.",
+      "caption": "In Zamora, locks are merely polite suggestions to those born in the alleys.",
+      "dialogue": [],
+      "characters": [
+        "natari"
+      ],
+      "objects": [
+        "daggers"
+      ],
+      "shotType": "Nocturnal Rooftop Tracking Shot",
+      "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta style, Beat 7",
+      "imageStatus": "QUEUED",
+      "imagePath": "",
+      "webPreviewUrl": "",
+      "sizeKB": 0,
+      "hash": "",
+      "audioStatus": "LOCKED_BY_GATE",
+      "audioPath": "",
+      "qaChecklist": {
+        "facialLikeness": false,
+        "wardrobeContinuity": false,
+        "singleSwordInvariant": false,
+        "cardinalityGuard": false,
+        "handAnatomyGuard": false,
+        "environmentalContinuity": false,
+        "frazettaInkStyle": false,
+        "captionSpeechLegibility": false
+      }
+    },
+    {
+      "panelId": 8,
+      "name": "Dagger in the Dark",
+      "act": "Act III",
+      "summary": "Beat 8 of the Zamorian tower heist.",
+      "caption": "In Zamora, locks are merely polite suggestions to those born in the alleys.",
+      "dialogue": [],
+      "characters": [
+        "natari"
+      ],
+      "objects": [
+        "daggers"
+      ],
+      "shotType": "Nocturnal Rooftop Tracking Shot",
+      "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta style, Beat 8",
+      "imageStatus": "QUEUED",
+      "imagePath": "",
+      "webPreviewUrl": "",
+      "sizeKB": 0,
+      "hash": "",
+      "audioStatus": "LOCKED_BY_GATE",
+      "audioPath": "",
+      "qaChecklist": {
+        "facialLikeness": false,
+        "wardrobeContinuity": false,
+        "singleSwordInvariant": false,
+        "cardinalityGuard": false,
+        "handAnatomyGuard": false,
+        "environmentalContinuity": false,
+        "frazettaInkStyle": false,
+        "captionSpeechLegibility": false
+      }
+    },
+    {
+      "panelId": 9,
+      "name": "Leap Across the Canal",
+      "act": "Act III",
+      "summary": "Beat 9 of the Zamorian tower heist.",
+      "caption": "In Zamora, locks are merely polite suggestions to those born in the alleys.",
+      "dialogue": [],
+      "characters": [
+        "natari"
+      ],
+      "objects": [
+        "daggers"
+      ],
+      "shotType": "Nocturnal Rooftop Tracking Shot",
+      "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta style, Beat 9",
+      "imageStatus": "QUEUED",
+      "imagePath": "",
+      "webPreviewUrl": "",
+      "sizeKB": 0,
+      "hash": "",
+      "audioStatus": "LOCKED_BY_GATE",
+      "audioPath": "",
+      "qaChecklist": {
+        "facialLikeness": false,
+        "wardrobeContinuity": false,
+        "singleSwordInvariant": false,
+        "cardinalityGuard": false,
+        "handAnatomyGuard": false,
+        "environmentalContinuity": false,
+        "frazettaInkStyle": false,
+        "captionSpeechLegibility": false
+      }
+    },
+    {
+      "panelId": 10,
+      "name": "Dawn Coin Count",
+      "act": "Act III",
+      "summary": "Beat 10 of the Zamorian tower heist.",
+      "caption": "In Zamora, locks are merely polite suggestions to those born in the alleys.",
+      "dialogue": [],
+      "characters": [
+        "natari"
+      ],
+      "objects": [
+        "daggers"
+      ],
+      "shotType": "Nocturnal Rooftop Tracking Shot",
+      "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta style, Beat 10",
+      "imageStatus": "QUEUED",
+      "imagePath": "",
+      "webPreviewUrl": "",
+      "sizeKB": 0,
+      "hash": "",
+      "audioStatus": "LOCKED_BY_GATE",
+      "audioPath": "",
+      "qaChecklist": {
+        "facialLikeness": false,
+        "wardrobeContinuity": false,
+        "singleSwordInvariant": false,
+        "cardinalityGuard": false,
+        "handAnatomyGuard": false,
+        "environmentalContinuity": false,
+        "frazettaInkStyle": false,
+        "captionSpeechLegibility": false
+      }
+    }
+  ]
+}

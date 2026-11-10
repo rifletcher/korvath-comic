@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conan Multi-Comic Studio — Go + Wails Pipeline Orchestrator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #08090d;
+      --bg-panel: #10121a;
+      --bg-card: #151824;
+      --bg-hover: #1b2030;
+      --border: #252a3d;
+      --gold: #fca311;
+      --gold-dim: rgba(252, 163, 17, 0.16);
+      --crimson: #e63946;
+      --emerald: #10b981;
+      --cyan: #06b6d4;
+      --amber: #f59e0b;
+      --purple: #8b5cf6;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', -apple-system, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    /* TOP BAR */
+    header {
+      background: linear-gradient(180deg, #131622 0%, #0d0f17 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .brand-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #fca311, #b91c1c);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      box-shadow: 0 0 18px rgba(252, 163, 17, 0.35);
+    }
+    .brand-title {
+      font-family: 'Cinzel', serif;
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      color: var(--gold);
+      text-transform: uppercase;
+    }
+    .brand-sub {
+      font-size: 11px;
+      color: var(--text-muted);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .telemetry-pills {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .pill {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 7px 13px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--emerald);
+      box-shadow: 0 0 8px var(--emerald);
+    }
+    .dot.offline { background: var(--crimson); box-shadow: 0 0 8px var(--crimson); }
+    .dot.warn { background: var(--amber); box-shadow: 0 0 8px var(--amber); }
+
+    /* MAIN LAYOUT */
+    .workspace-grid {
+      display: grid;
+      grid-template-columns: 1fr 370px;
+      gap: 20px;
+      padding: 20px 24px;
+      flex: 1;
+    }
+    @media (max-width: 1180px) {
+      .workspace-grid { grid-template-columns: 1fr; }
+    }
+
+    /* SECTION HEADERS */
+    .section-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .section-title {
+      font-family: 'Cinzel', serif;
+      font-size: 16px;
+      letter-spacing: 1.2px;
+      color: var(--gold);
+      text-transform: uppercase;
+    }
+
+    /* PROJECT & EPISODE CARDS */
+    .project-block {
+      background: var(--bg-panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      margin-bottom: 22px;
+      overflow: hidden;
+    }
+    .project-header {
+      padding: 16px 20px;
+      background: rgba(255,255,255,0.02);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .project-name {
+      font-family: 'Cinzel', serif;
+      font-size: 18px;
+      font-weight: 800;
+      color: #fff;
+    }
+    .project-genre {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 4px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .config-chip {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: rgba(6, 182, 212, 0.14);
+      border: 1px solid rgba(6, 182, 212, 0.35);
+      color: #67e8f9;
+      font-weight: 600;
+    }
+    .invariants-row {
+      padding: 10px 20px;
+      background: rgba(252, 163, 17, 0.04);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .inv-tag {
+      font-size: 11px;
+      background: rgba(252, 163, 17, 0.1);
+      border: 1px solid rgba(252, 163, 17, 0.3);
+      color: #fcd34d;
+      padding: 3px 9px;
+      border-radius: 4px;
+    }
+
+    .episodes-list {
+      padding: 16px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .ep-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px 18px;
+      transition: border-color 0.2s;
+    }
+    .ep-card:hover {
+      border-color: #3b4262;
+    }
+    .ep-card.gate-waiting {
+      border-left: 4px solid var(--amber);
+    }
+    .ep-card.stage-ready {
+      border-left: 4px solid var(--emerald);
+    }
+    .ep-card.stage-running {
+      border-left: 4px solid var(--cyan);
+    }
+
+    .ep-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+    .ep-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .ep-meta {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 5px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .badge {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+    .badge-ready { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.4); }
+    .badge-gate { background: rgba(245, 158, 11, 0.18); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.45); }
+    .badge-running { background: rgba(6, 182, 212, 0.16); color: #22d3ee; border: 1px solid rgba(6, 182, 212, 0.4); }
+    .badge-locked { background: rgba(148, 163, 184, 0.12); color: #94a3b8; border: 1px solid rgba(148, 163, 184, 0.25); }
+    .badge-rejected { background: rgba(230, 57, 70, 0.2); color: #f87171; border: 1px solid rgba(230, 57, 70, 0.5); }
+
+    /* PIPELINE STEPPER & GATES */
+    .pipeline-track {
+      display: grid;
+      grid-template-columns: repeat(9, 1fr);
+      gap: 6px;
+      margin: 14px 0;
+    }
+    @media (max-width: 900px) {
+      .pipeline-track { grid-template-columns: repeat(3, 1fr); }
+    }
+    .step-node {
+      background: #0d0f17;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 8px 8px;
+      font-size: 11px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 4px;
+    }
+    .step-node.is-gate {
+      background: #171310;
+      border-style: dashed;
+    }
+    .step-node.completed, .step-node.approved {
+      border-color: rgba(16, 185, 129, 0.5);
+      background: rgba(16, 185, 129, 0.07);
+    }
+    .step-node.in_progress, .step-node.queued {
+      border-color: var(--cyan);
+      background: rgba(6, 182, 212, 0.1);
+    }
+    .step-node.awaiting_approval {
+      border-color: var(--amber);
+      background: rgba(245, 158, 11, 0.15);
+      box-shadow: 0 0 12px rgba(245, 158, 11, 0.2);
+    }
+    .step-node.rejected {
+      border-color: var(--crimson);
+      background: rgba(230, 57, 70, 0.15);
+    }
+    .step-label {
+      font-weight: 600;
+      color: #e2e8f0;
+      line-height: 1.25;
+    }
+    .step-status {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+
+    /* BUTTONS */
+    .btn-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+    button, .btn-link {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: #1e2233;
+      color: #fff;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s;
+    }
+    button:hover, .btn-link:hover {
+      background: #282e45;
+      border-color: #4b5578;
+    }
+    .btn-gold {
+      background: linear-gradient(135deg, #fca311, #d97706);
+      color: #000;
+      border-color: #fca311;
+      font-weight: 700;
+    }
+    .btn-gold:hover {
+      background: #fbbf24;
+      color: #000;
+    }
+    .btn-approve {
+      background: rgba(16, 185, 129, 0.2);
+      border-color: var(--emerald);
+      color: #34d399;
+    }
+    .btn-approve:hover {
+      background: var(--emerald);
+      color: #000;
+    }
+    .btn-danger {
+      background: rgba(230, 57, 70, 0.18);
+      border-color: var(--crimson);
+      color: #f87171;
+    }
+
+    /* RIGHT SIDEBAR: WORKER POOL & LIVE STREAM */
+    .sidebar-panel {
+      background: var(--bg-panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      height: fit-content;
+      position: sticky;
+      top: 84px;
+    }
+    .pool-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .stat-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 10px 12px;
+    }
+    .stat-val {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--gold);
+    }
+    .stat-lbl {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+    .event-log {
+      background: #07080c;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 10px;
+      height: 380px;
+      overflow-y: auto;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .ev-item {
+      border-left: 2px solid var(--border);
+      padding-left: 8px;
+      line-height: 1.4;
+    }
+    .ev-item.gate_update { border-color: var(--emerald); color: #6ee7b7; }
+    .ev-item.panel_progress { border-color: var(--cyan); color: #67e8f9; }
+    .ev-item.error { border-color: var(--crimson); color: #fca5a5; }
+    .ev-time { color: #64748b; font-size: 10px; }
+
+    /* MODALS */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(4, 5, 8, 0.88);
+      backdrop-filter: blur(6px);
+      z-index: 200;
+      display: none;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 28px;
+      overflow-y: auto;
+    }
+    .modal-backdrop.open { display: flex; }
+    .modal-sheet {
+      background: var(--bg-panel);
+      border: 1px solid #353c56;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 1360px;
+      overflow: hidden;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.9);
+    }
+    .modal-sheet.compact {
+      max-width: 580px;
+      margin-top: 60px;
+    }
+    .modal-header {
+      padding: 18px 24px;
+      background: #141724;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .modal-body {
+      padding: 24px;
+    }
+    .form-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .form-row-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+    .form-group input, .form-group textarea {
+      width: 100%;
+      background: #0a0c12;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      padding: 9px 12px;
+    }
+    .gates-control-bar {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+    @media (max-width: 900px) {
+      .gates-control-bar { grid-template-columns: 1fr; }
+    }
+    .gate-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px;
+    }
+    .panel-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      gap: 18px;
+    }
+    .panel-inspector-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .panel-img-box {
+      width: 100%;
+      height: 250px;
+      background: #050608;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+    .panel-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .panel-details {
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+    }
+    .qa-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    .qa-chip {
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 3px;
+      background: rgba(16, 185, 129, 0.14);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.35);
+    }
+    textarea.prompt-box {
+      width: 100%;
+      background: #0a0c12;
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      color: #cbd5e1;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      padding: 8px;
+      resize: vertical;
+      min-height: 62px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <div class="brand-icon">⚔️</div>
+      <div>
+        <div class="brand-title">Conan Studio — Multi-Comic Pipeline Engine</div>
+        <div class="brand-sub">Go Goroutine Worker Pools • Wails Desktop Bridge • Configurable Series & Panel Counts</div>
+      </div>
+    </div>
+
+    <div class="telemetry-pills">
+      <button class="btn-gold" onclick="openNewSeriesModal()">+ New Comic Series</button>
+      <div class="pill">
+        <span class="dot" id="cdp-dot"></span>
+        <span id="cdp-label">CDP Port 9222: Checking...</span>
+      </div>
+      <div class="pill">
+        <span>🧵 Active Jobs: <strong id="active-jobs-count">0</strong></span>
+      </div>
+      <div class="pill">
+        <span>🗂️ Isolated Tabs: <strong id="active-tabs-count">1 / 3</strong></span>
+      </div>
+    </div>
+  </header>
+
+  <main class="workspace-grid">
+    <!-- LEFT: MULTI-COMIC PROJECTS & EPISODE PIPELINES -->
+    <section>
+      <div class="section-bar">
+        <div class="section-title">📚 Active Comic Series & Rendering Pipelines</div>
+        <div style="display:flex; gap:10px;">
+          <button onclick="openNewSeriesModal()">+ Create New Series</button>
+          <button onclick="refreshAll()">🔄 Sync State</button>
+        </div>
+      </div>
+      <div id="projects-container"></div>
+    </section>
+
+    <!-- RIGHT: GOROUTINE WORKER POOL & LIVE STREAM -->
+    <aside class="sidebar-panel">
+      <div class="section-title">⚙️ Go Worker Pool Telemetry</div>
+      <div class="pool-grid">
+        <div class="stat-box">
+          <div class="stat-val" id="stat-max-comics">3</div>
+          <div class="stat-lbl">Max Parallel Comics</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-val" id="stat-cdp-tabs">1</div>
+          <div class="stat-lbl">Open Meta AI Tabs</div>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-size:12px; font-weight:600; margin-bottom:8px; color:var(--text-muted);">
+          📡 Real-Time Pipeline & Gate Event Bus
+        </div>
+        <div class="event-log" id="event-log"></div>
+      </div>
+    </aside>
+  </main>
+
+  <!-- MODAL 1: DIRECTOR GATE & PANEL INSPECTOR -->
+  <div class="modal-backdrop" id="inspector-modal">
+    <div class="modal-sheet">
+      <div class="modal-header">
+        <div>
+          <div class="brand-title" id="modal-ep-title">Episode Inspector</div>
+          <div class="brand-sub" id="modal-ep-sub">Stage & Gate Control</div>
+        </div>
+        <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+          <div style="display:flex; align-items:center; gap:6px; background:#0b0d14; padding:6px 10px; border-radius:6px; border:1px solid var(--border);">
+            <span style="font-size:12px; color:var(--text-muted);">🤖 Model:</span>
+            <select id="modal-engine-select" style="background:#151824; color:var(--gold); border:1px solid var(--gold); border-radius:4px; padding:4px 8px; font-weight:700; font-size:12px;">
+              <option value="meta-ai-cdp">Meta AI (CDP Tab)</option>
+              <option value="grok-imagine-image-2-0">Grok Imagine 2.0 (Uncensored API)</option>
+              <option value="grok-cdp">Grok Web (CDP Tab)</option>
+              <option value="flux-2-pro">FLUX-2 Pro (Uncensored API)</option>
+              <option value="recraft-v4">Recraft v4 (Ink & Typography)</option>
+              <option value="lustify-v8">Lustify v8 (Pulp Pin-Up)</option>
+              <option value="gemini-imagen">Gemini Imagen 3</option>
+            </select>
+            <span style="font-size:12px; color:var(--text-muted); margin-left:6px;">Panels:</span>
+            <input type="number" id="modal-panel-count-input" min="1" max="100" style="width:64px; background:#151824; color:#fff; border:1px solid var(--gold); border-radius:4px; padding:4px 8px; font-weight:700;" />
+            <button class="btn-gold" onclick="saveModalEpisodePanelCount()">Apply Config</button>
+          </div>
+          <button onclick="closeInspector()">✕ Close Inspector</button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="gates-control-bar" id="modal-gates-bar"></div>
+        <div class="section-bar">
+          <div class="section-title" id="modal-panels-header">🖼️ Sequential Panels & 8-Point Continuity Checklist</div>
+        </div>
+        <div class="panel-grid" id="modal-panels-grid"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 2: CREATE / CONFIGURE COMIC SERIES (EPISODES & DEFAULT PANELS) -->
+  <div class="modal-backdrop" id="series-modal">
+    <div class="modal-sheet compact">
+      <div class="modal-header">
+        <div>
+          <div class="brand-title" id="series-modal-title">Configure Comic Series</div>
+          <div class="brand-sub">Set Episodes per Series & Default Panels per Episode</div>
+        </div>
+        <button onclick="closeSeriesModal()">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-grid">
+          <input type="hidden" id="series-edit-id" value="" />
+          <div class="form-group" id="series-title-group">
+            <label>Comic Series Title</label>
+            <input type="text" id="series-title" placeholder="e.g. Red Sonja: Scourge of the Steppes" />
+          </div>
+          <div class="form-row-2" id="series-meta-group">
+            <div class="form-group" id="series-subtitle-group">
+              <label>Subtitle</label>
+              <input type="text" id="series-subtitle" placeholder="Chronicles of Hyrkania" />
+            </div>
+            <div class="form-group">
+              <label>🎭 Genre / Tone</label>
+              <input type="text" id="series-genre" value="1970s Sword-and-Sorcery Graphic Novel" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>🎨 Art Style & Tone Prompt Prefix (artStyleAnchor)</label>
+            <textarea class="prompt-box" id="series-art-style" style="min-height:68px;" placeholder="e.g. classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta and John Buscema illustration style..."></textarea>
+          </div>
+          <div class="form-group">
+            <label>🤖 Default Image Generation Model (Swappable per Comic / Episode)</label>
+            <select id="series-image-engine" style="background:#0d0f17; border:1px solid var(--border); color:var(--text); padding:9px 12px; border-radius:6px; font-size:13px;">
+              <option value="meta-ai-cdp">Meta AI via Isolated Chrome CDP Tab (meta-ai-cdp)</option>
+              <option value="grok-imagine-image-2-0">xAI Grok Imagine 2.0 — Uncensored Direct API (grok-imagine-image-2-0)</option>
+              <option value="grok-cdp">xAI Grok Web via Chrome CDP Tab (grok-cdp)</option>
+              <option value="flux-2-pro">FLUX-2 Pro — Uncensored High-Fidelity API (flux-2-pro)</option>
+              <option value="recraft-v4">Recraft v4 — Crisp Graphic Novel Ink & Lettering (recraft-v4)</option>
+              <option value="lustify-v8">Lustify v8 — Uncensored Pulp Fantasy Pin-Up (lustify-v8)</option>
+              <option value="gemini-imagen">Google Gemini Imagen 3 (gemini-imagen)</option>
+            </select>
+          </div>
+          <div class="form-row-2">
+            <div class="form-group">
+              <label>📚 Episodes in Series (Target Count)</label>
+              <input type="number" id="series-ep-count" min="1" max="100" value="6" />
+            </div>
+            <div class="form-group">
+              <label>🖼️ Default Panels per Episode</label>
+              <input type="number" id="series-panel-count" min="1" max="100" value="20" />
+            </div>
+          </div>
+          <div class="form-group" style="display:flex; align-items:center; gap:8px;">
+            <input type="checkbox" id="series-scaffold-all" style="width:16px; height:16px;" />
+            <label for="series-scaffold-all" style="margin:0; cursor:pointer; color:#e2e8f0;">
+              Immediately scaffold all planned Episode slots with default panel count
+            </label>
+          </div>
+          <div style="display:flex; justify-content:flex-end; gap:10px; margin-top:8px;">
+            <button onclick="closeSeriesModal()">Cancel</button>
+            <button class="btn-gold" onclick="submitSeriesModal()">💾 Save Series Configuration</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 3: CREATE NEW EPISODE WITH CUSTOM PANEL COUNT -->
+  <div class="modal-backdrop" id="new-ep-modal">
+    <div class="modal-sheet compact">
+      <div class="modal-header">
+        <div>
+          <div class="brand-title" id="new-ep-modal-header">Create New Episode</div>
+          <div class="brand-sub">Configure Episode Title, Lore Theme & Exact Panel Count</div>
+        </div>
+        <button onclick="closeNewEpModal()">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-grid">
+          <input type="hidden" id="new-ep-project-id" />
+          <div class="form-group">
+            <label>Episode Title</label>
+            <input type="text" id="new-ep-title" placeholder="Issue #3: The Citadel of Brass" />
+          </div>
+          <div class="form-row-2">
+            <div class="form-group">
+              <label>Writers Room Lore Theme</label>
+              <input type="text" id="new-ep-theme" placeholder="brass_citadel_siege" />
+            </div>
+            <div class="form-group">
+              <label>🖼️ Number of Panels in Episode</label>
+              <input type="number" id="new-ep-panels" min="1" max="100" value="20" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>🤖 Image Generation Model for This Episode</label>
+            <select id="new-ep-engine" style="background:#0d0f17; border:1px solid var(--border); color:var(--text); padding:9px 12px; border-radius:6px; font-size:13px;">
+              <option value="meta-ai-cdp">Meta AI via Isolated Chrome CDP Tab (meta-ai-cdp)</option>
+              <option value="grok-imagine-image-2-0">xAI Grok Imagine 2.0 — Uncensored Direct API (grok-imagine-image-2-0)</option>
+              <option value="grok-cdp">xAI Grok Web via Chrome CDP Tab (grok-cdp)</option>
+              <option value="flux-2-pro">FLUX-2 Pro — Uncensored High-Fidelity API (flux-2-pro)</option>
+              <option value="recraft-v4">Recraft v4 — Crisp Graphic Novel Ink & Lettering (recraft-v4)</option>
+              <option value="lustify-v8">Lustify v8 — Uncensored Pulp Fantasy Pin-Up (lustify-v8)</option>
+              <option value="gemini-imagen">Google Gemini Imagen 3 (gemini-imagen)</option>
+            </select>
+          </div>
+          <div style="display:flex; justify-content:flex-end; gap:10px; margin-top:8px;">
+            <button onclick="closeNewEpModal()">Cancel</button>
+            <button class="btn-gold" onclick="submitNewEpModal()">⚡ Create Episode</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Unified Bridge supporting both Wails Native IPC (window.go.main.App) and HTTP/SSE
+    const StudioBridge = {
+      isWails: () => Boolean(window.go && window.go.main && window.go.main.App),
+
+      async getProjects() {
+        if (this.isWails()) return window.go.main.App.GetProjects();
+        const r = await fetch('/api/projects');
+        return r.json();
+      },
+
+      async getPoolStatus() {
+        if (this.isWails()) return window.go.main.App.GetPoolStatus();
+        const r = await fetch('/api/pool');
+        return r.json();
+      },
+
+      async getEpisode(projectId, episodeId) {
+        if (this.isWails()) return window.go.main.App.GetEpisode(projectId, episodeId);
+        const r = await fetch(`/api/episode?project=${encodeURIComponent(projectId)}&episode=${encodeURIComponent(episodeId)}`);
+        return r.json();
+      },
+
+      async approveGate(projectId, episodeId, gateId, notes) {
+        if (this.isWails()) return window.go.main.App.ApproveGate(projectId, episodeId, gateId, notes);
+        const r = await fetch('/api/gate/approve', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ projectId, episodeId, gateId, notes })
+        });
+        return r.json();
+      },
+
+      async rejectGate(projectId, episodeId, gateId, reason, panelIds) {
+        if (this.isWails()) return window.go.main.App.RejectGate(projectId, episodeId, gateId, reason, panelIds);
+        const r = await fetch('/api/gate/reject', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ projectId, episodeId, gateId, reason, panelIds })
+        });
+        return r.json();
+      },
+
+      async regeneratePanel(projectId, episodeId, panelId, promptOverride) {
+        if (this.isWails()) return window.go.main.App.RegeneratePanel(projectId, episodeId, panelId, promptOverride);
+        const r = await fetch('/api/panel/regenerate', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ projectId, episodeId, panelId, promptOverride })
+        });
+        return r.json();
+      },
+
+      async createEpisode(projectId, title, theme, imageEngine, panelCount) {
+        if (this.isWails()) return window.go.main.App.CreateEpisode(projectId, title, theme, imageEngine || '', Number(panelCount));
+        const r = await fetch('/api/episode/create', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ projectId, title, theme, imageEngine: imageEngine || '', panelCount: Number(panelCount) })
+        });
+        return r.json();
+      },
+
+      async createProject(payload) {
+        if (this.isWails()) {
+          return window.go.main.App.CreateProject(
+            payload.title, payload.subtitle, payload.genre, payload.artStyleAnchor || '', payload.defaultImageEngine || 'meta-ai-cdp',
+            Number(payload.targetEpisodeCount), Number(payload.defaultPanelsPerEpisode), Boolean(payload.scaffoldAllEpisodes)
+          );
+        }
+        const r = await fetch('/api/project/create', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        return r.json();
+      },
+
+      async updateProjectConfig(projectId, genre, artStyleAnchor, defaultImageEngine, targetEpisodeCount, defaultPanelsPerEpisode, scaffoldMissingEpisodes) {
+        if (this.isWails()) {
+          return window.go.main.App.UpdateProjectConfig(
+            projectId, genre || '', artStyleAnchor || '', defaultImageEngine || '', Number(targetEpisodeCount), Number(defaultPanelsPerEpisode), Boolean(scaffoldMissingEpisodes)
+          );
+        }
+        const r = await fetch('/api/project/config', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            projectId,
+            genre: genre || '',
+            artStyleAnchor: artStyleAnchor || '',
+            defaultImageEngine: defaultImageEngine || '',
+            targetEpisodeCount: Number(targetEpisodeCount),
+            defaultPanelsPerEpisode: Number(defaultPanelsPerEpisode),
+            scaffoldMissingEpisodes: Boolean(scaffoldMissingEpisodes)
+          })
+        });
+        return r.json();
+      },
+
+      async updateEpisodeConfig(projectId, episodeId, targetPanelCount, title, imageEngine) {
+        if (this.isWails()) {
+          return window.go.main.App.UpdateEpisodeConfig(projectId, episodeId, Number(targetPanelCount), title || '', imageEngine || '');
+        }
+        const r = await fetch('/api/episode/config', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            projectId,
+            episodeId,
+            targetPanelCount: Number(targetPanelCount),
+            title: title || '',
+            imageEngine: imageEngine || ''
+          })
+        });
+        return r.json();
+      }
+    };
+
+    let activeModalTarget = null;
+    let cachedProjectsMap = {};
+
+    function badgeClassForStatus(st) {
+      if (!st) return 'badge-locked';
+      const s = st.toUpperCase();
+      if (s === 'COMPLETED' || s === 'APPROVED' || s === 'READY_FOR_RELEASE' || s === 'VERIFIED') return 'badge-ready';
+      if (s === 'AWAITING_APPROVAL' || s.includes('GATE')) return 'badge-gate';
+      if (s === 'IN_PROGRESS' || s === 'RENDERING' || s === 'QUEUED') return 'badge-running';
+      if (s === 'REJECTED' || s === 'ERROR') return 'badge-rejected';
+      return 'badge-locked';
+    }
+
+    function buildOrderedTrack(ep) {
+      const items = [];
+      const gateMap = {};
+      (ep.gates || []).forEach(g => { gateMap[g.afterStage] = g; });
+
+      (ep.stages || []).forEach(st => {
+        items.push({ kind: 'stage', data: st });
+        if (gateMap[st.id]) {
+          items.push({ kind: 'gate', data: gateMap[st.id] });
+        }
+      });
+      return items;
+    }
+
+    async function renderProjects() {
+      const list = await StudioBridge.getProjects();
+      const container = document.getElementById('projects-container');
+      container.innerHTML = '';
+      cachedProjectsMap = {};
+
+      list.forEach(({ project, episodes }) => {
+        cachedProjectsMap[project.id] = { project, episodes: episodes || [] };
+        const block = document.createElement('div');
+        block.className = 'project-block';
+
+        const invHtml = (project.invariants || [])
+          .map(inv => `<span class="inv-tag">🛡️ ${inv}</span>`)
+          .join('');
+
+        const createdCount = (episodes || []).length;
+        const targetEpCount = project.targetEpisodeCount || createdCount || 6;
+        const defaultPanels = project.defaultPanelsPerEpisode || 20;
+
+        const epsHtml = (episodes || []).map(ep => {
+          const track = buildOrderedTrack(ep);
+          const trackHtml = track.map(node => {
+            const st = (node.data.status || '').toLowerCase();
+            const isGate = node.kind === 'gate';
+            return `
+              <div class="step-node ${isGate ? 'is-gate' : ''} ${st}">
+                <div class="step-label">${isGate ? '🛑 ' : ''}${node.data.name}</div>
+                <div class="step-status">${node.data.status}</div>
+              </div>
+            `;
+          }).join('');
+
+          const waitingGate = (ep.gates || []).find(g => g.status === 'AWAITING_APPROVAL');
+          const cardClass = waitingGate ? 'gate-waiting' : (ep.currentStage === 'READY_FOR_RELEASE' ? 'stage-ready' : 'stage-running');
+          const panelTotal = ep.targetPanelCount || (ep.panels || []).length || defaultPanels;
+          const verifiedCount = (ep.panels || []).filter(p => p.imageStatus === 'VERIFIED' || p.imageStatus === 'RENDERED').length;
+
+          let quickActions = `
+            <button class="btn-gold" onclick="openInspector('${project.id}', '${ep.episodeId}')">
+              🔍 Inspect Gates & Panels (${verifiedCount}/${panelTotal} Panels)
+            </button>
+            <button onclick="promptResizeEpisodePanels('${project.id}', '${ep.episodeId}', ${panelTotal}, '${ep.title.replace(/'/g, "\\'")}')">
+              ⚙️ Set Panel Count (${panelTotal})
+            </button>
+          `;
+
+          if (waitingGate) {
+            quickActions += `
+              <button class="btn-approve" onclick="quickApproveGate('${project.id}', '${ep.episodeId}', '${waitingGate.id}')">
+                ✅ Approve ${waitingGate.id}
+              </button>
+            `;
+          }
+
+          if (ep.outputs && ep.outputs.masterVideoPath) {
+            const vidUrl = '/workspace-' + ep.outputs.masterVideoPath.replace(/^docs\//, 'docs/');
+            quickActions += `
+              <a class="btn-link" href="${vidUrl}" target="_blank">🎬 Watch Master MP4</a>
+            `;
+          }
+          if (ep.outputs && ep.outputs.webReviewPath) {
+            const revUrl = '/workspace-' + ep.outputs.webReviewPath.replace(/^docs\//, 'docs/');
+            quickActions += `
+              <a class="btn-link" href="${revUrl}" target="_blank">🖼️ Open Full Web Gallery</a>
+            `;
+          }
+
+          const epEngine = ep.imageEngine || project.defaultImageEngine || 'meta-ai-cdp';
+          return `
+            <div class="ep-card ${cardClass}">
+              <div class="ep-top">
+                <div>
+                  <div class="ep-title">
+                    <span>${ep.title}</span>
+                    <span class="badge ${badgeClassForStatus(ep.currentStage)}">${ep.currentStage}</span>
+                    <span class="config-chip">🖼️ ${panelTotal} Panels</span>
+                    <span class="config-chip">🤖 ${epEngine}</span>
+                  </div>
+                  <div class="ep-meta">
+                    Episode ${ep.episodeNumber} of ${targetEpCount} (${ep.episodeId}) • Progress: ${ep.overallProgress}% • Worker: ${ep.assignedWorkerTab || epEngine}
+                  </div>
+                </div>
+                <div style="font-size:12px; color:var(--text-muted); max-width:420px; text-align:right;">
+                  ${waitingGate ? `<strong style="color:#fbbf24;">⚠️ Paused at ${waitingGate.name}:</strong> ${waitingGate.notes}` : (ep.outputs?.resolution || '')}
+                </div>
+              </div>
+              <div class="pipeline-track">${trackHtml}</div>
+              <div class="btn-row">${quickActions}</div>
+            </div>
+          `;
+        }).join('');
+
+        const seriesEngine = project.defaultImageEngine || 'meta-ai-cdp';
+        block.innerHTML = `
+          <div class="project-header">
+            <div>
+              <div class="project-name">${project.title} — <span style="color:var(--gold); font-weight:600;">${project.subtitle}</span></div>
+              <div class="project-genre">
+                <span>${project.genre}</span>
+                <span class="config-chip">📚 Series Arc: ${createdCount} / ${targetEpCount} Episodes</span>
+                <span class="config-chip">🖼️ Default: ${defaultPanels} Panels / Ep</span>
+                <span class="config-chip">🤖 Model: ${seriesEngine}</span>
+              </div>
+            </div>
+            <div style="display:flex; gap:8px; flex-wrap:wrap;">
+              <button onclick="openEditSeriesModal('${project.id}')">⚙️ Configure Series (${targetEpCount} Eps / ${defaultPanels} Panels)</button>
+              <button class="btn-gold" onclick="openNewEpModal('${project.id}')">+ New Episode</button>
+            </div>
+          </div>
+          <div class="invariants-row">${invHtml}</div>
+          <div class="episodes-list">${epsHtml}</div>
+        `;
+        container.appendChild(block);
+      });
+    }
+
+    async function renderPoolStatus() {
+      const pool = await StudioBridge.getPoolStatus();
+      const dot = document.getElementById('cdp-dot');
+      const lbl = document.getElementById('cdp-label');
+      dot.className = 'dot ' + (pool.cdpOnline ? '' : 'offline');
+      lbl.textContent = pool.cdpOnline ? `CDP Port 9222: ONLINE (${pool.activeCdpTabs} Tabs)` : 'CDP Port 9222: OFFLINE';
+
+      document.getElementById('active-jobs-count').textContent = pool.activeComicJobs;
+      document.getElementById('active-tabs-count').textContent = `${pool.activeCdpTabs} / ${pool.maxCdpTabs}`;
+      document.getElementById('stat-max-comics').textContent = pool.maxConcurrentComics;
+      document.getElementById('stat-cdp-tabs').textContent = pool.activeCdpTabs;
+
+      const logEl = document.getElementById('event-log');
+      logEl.innerHTML = (pool.recentEvents || []).map(ev => `
+        <div class="ev-item ${ev.type || ''}">
+          <div class="ev-time">${(ev.timestamp || '').slice(11, 19)} [${ev.projectId || 'system'}${ev.episodeId ? '/' + ev.episodeId : ''}]</div>
+          <div>${ev.message}</div>
+        </div>
+      `).join('');
+    }
+
+    // SERIES CONFIGURATION MODAL
+    function openNewSeriesModal() {
+      document.getElementById('series-edit-id').value = '';
+      document.getElementById('series-modal-title').textContent = 'Create New Comic Series';
+      document.getElementById('series-title-group').style.display = 'block';
+      document.getElementById('series-subtitle-group').style.display = 'flex';
+      document.getElementById('series-title').value = '';
+      document.getElementById('series-subtitle').value = '';
+      document.getElementById('series-genre').value = '1970s Sword-and-Sorcery Graphic Novel';
+      document.getElementById('series-art-style').value = 'classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta and John Buscema illustration style, dramatic heavy black ink brushwork, rich cel-shaded digital colors, theatrical chiaroscuro lighting';
+      document.getElementById('series-image-engine').value = 'meta-ai-cdp';
+      document.getElementById('series-ep-count').value = 6;
+      document.getElementById('series-panel-count').value = 20;
+      document.getElementById('series-scaffold-all').checked = false;
+      document.getElementById('series-modal').classList.add('open');
+    }
+
+    function openEditSeriesModal(projectId) {
+      const entry = cachedProjectsMap[projectId];
+      if (!entry) return;
+      const proj = entry.project;
+      document.getElementById('series-edit-id').value = projectId;
+      document.getElementById('series-modal-title').textContent = `Configure Series: ${proj.title}`;
+      document.getElementById('series-title-group').style.display = 'none';
+      document.getElementById('series-subtitle-group').style.display = 'none';
+      document.getElementById('series-genre').value = proj.genre || '';
+      document.getElementById('series-art-style').value = proj.artStyleAnchor || '';
+      document.getElementById('series-image-engine').value = proj.defaultImageEngine || 'meta-ai-cdp';
+      document.getElementById('series-ep-count').value = proj.targetEpisodeCount || 6;
+      document.getElementById('series-panel-count').value = proj.defaultPanelsPerEpisode || 20;
+      document.getElementById('series-scaffold-all').checked = false;
+      document.getElementById('series-modal').classList.add('open');
+    }
+
+    function closeSeriesModal() {
+      document.getElementById('series-modal').classList.remove('open');
+    }
+
+    async function submitSeriesModal() {
+      const editId = document.getElementById('series-edit-id').value;
+      const genre = document.getElementById('series-genre').value.trim();
+      const artStyleAnchor = document.getElementById('series-art-style').value.trim();
+      const defaultImageEngine = document.getElementById('series-image-engine').value;
+      const epCount = Number(document.getElementById('series-ep-count').value) || 6;
+      const panelCount = Number(document.getElementById('series-panel-count').value) || 20;
+      const scaffoldAll = document.getElementById('series-scaffold-all').checked;
+
+      if (editId) {
+        await StudioBridge.updateProjectConfig(editId, genre, artStyleAnchor, defaultImageEngine, epCount, panelCount, scaffoldAll);
+      } else {
+        const title = document.getElementById('series-title').value.trim();
+        if (!title) {
+          alert('Please enter a Comic Series Title.');
+          return;
+        }
+        await StudioBridge.createProject({
+          title,
+          subtitle: document.getElementById('series-subtitle').value.trim() || 'Graphic Novel Saga',
+          genre: genre || 'Graphic Novel',
+          artStyleAnchor,
+          defaultImageEngine,
+          targetEpisodeCount: epCount,
+          defaultPanelsPerEpisode: panelCount,
+          scaffoldAllEpisodes: scaffoldAll
+        });
+      }
+      closeSeriesModal();
+      await refreshAll();
+    }
+
+    // NEW EPISODE MODAL
+    function openNewEpModal(projectId) {
+      const entry = cachedProjectsMap[projectId];
+      const nextNum = entry ? entry.episodes.length + 1 : 1;
+      const defPanels = entry && entry.project.defaultPanelsPerEpisode ? entry.project.defaultPanelsPerEpisode : 20;
+      const defEngine = entry && entry.project.defaultImageEngine ? entry.project.defaultImageEngine : 'meta-ai-cdp';
+      document.getElementById('new-ep-project-id').value = projectId;
+      document.getElementById('new-ep-modal-header').textContent = `New Episode — ${entry ? entry.project.title : projectId}`;
+      document.getElementById('new-ep-title').value = `Issue #${nextNum}: Chapter ${nextNum}`;
+      document.getElementById('new-ep-theme').value = `episode_${String(nextNum).padStart(2, '0')}_arc`;
+      document.getElementById('new-ep-panels').value = defPanels;
+      document.getElementById('new-ep-engine').value = defEngine;
+      document.getElementById('new-ep-modal').classList.add('open');
+    }
+
+    function closeNewEpModal() {
+      document.getElementById('new-ep-modal').classList.remove('open');
+    }
+
+    async function submitNewEpModal() {
+      const projectId = document.getElementById('new-ep-project-id').value;
+      const title = document.getElementById('new-ep-title').value.trim() || 'New Issue';
+      const theme = document.getElementById('new-ep-theme').value.trim() || 'custom_arc';
+      const panelCount = Number(document.getElementById('new-ep-panels').value) || 20;
+      const imageEngine = document.getElementById('new-ep-engine').value || '';
+      await StudioBridge.createEpisode(projectId, title, theme, imageEngine, panelCount);
+      closeNewEpModal();
+      await refreshAll();
+    }
+
+    async function promptResizeEpisodePanels(projectId, episodeId, currentCount, currentTitle) {
+      const val = prompt(`Configure number of panels in "${currentTitle}" (${projectId}/${episodeId}):`, String(currentCount));
+      if (!val) return;
+      const num = parseInt(val, 10);
+      if (isNaN(num) || num < 1 || num > 100) {
+        alert('Please enter a valid panel count between 1 and 100.');
+        return;
+      }
+      await StudioBridge.updateEpisodeConfig(projectId, episodeId, num, '', '');
+      await refreshAll();
+    }
+
+    async function saveModalEpisodePanelCount() {
+      if (!activeModalTarget) return;
+      const num = parseInt(document.getElementById('modal-panel-count-input').value, 10);
+      const engine = document.getElementById('modal-engine-select').value;
+      if (isNaN(num) || num < 1 || num > 100) return;
+      await StudioBridge.updateEpisodeConfig(activeModalTarget.projectId, activeModalTarget.episodeId, num, '', engine);
+      await openInspector(activeModalTarget.projectId, activeModalTarget.episodeId);
+      await refreshAll();
+    }
+
+    async function quickApproveGate(projectId, episodeId, gateId) {
+      const notes = prompt(`Approve ${gateId} for ${projectId}/${episodeId}?\nOptional Director notes:`, 'Approved by Director via Studio UI.');
+      if (notes === null) return;
+      await StudioBridge.approveGate(projectId, episodeId, gateId, notes);
+      await refreshAll();
+      if (activeModalTarget && activeModalTarget.projectId === projectId && activeModalTarget.episodeId === episodeId) {
+        await openInspector(projectId, episodeId);
+      }
+    }
+
+    async function quickRejectGate(projectId, episodeId, gateId) {
+      const reason = prompt(`Reject ${gateId} for ${projectId}/${episodeId}?\nEnter rejection reason (downstream voice/video will remain locked):`, 'Visual continuity check failed on selected panels.');
+      if (!reason) return;
+      await StudioBridge.rejectGate(projectId, episodeId, gateId, reason, []);
+      await refreshAll();
+      if (activeModalTarget && activeModalTarget.projectId === projectId && activeModalTarget.episodeId === episodeId) {
+        await openInspector(projectId, episodeId);
+      }
+    }
+
+    async function openInspector(projectId, episodeId) {
+      activeModalTarget = { projectId, episodeId };
+      const ep = await StudioBridge.getEpisode(projectId, episodeId);
+      const projEntry = cachedProjectsMap[projectId];
+      const activeEngine = ep.imageEngine || (projEntry && projEntry.project.defaultImageEngine) || 'meta-ai-cdp';
+      const panelTotal = ep.targetPanelCount || (ep.panels || []).length;
+      document.getElementById('modal-ep-title').textContent = `${ep.title} (${projectId}/${episodeId})`;
+      document.getElementById('modal-ep-sub').textContent = `Current Stage: ${ep.currentStage} • Model: ${activeEngine} • Configured Panels: ${panelTotal} • Worker: ${ep.assignedWorkerTab || 'Auto-Allocate'}`;
+      document.getElementById('modal-engine-select').value = activeEngine;
+      document.getElementById('modal-panel-count-input').value = panelTotal;
+      document.getElementById('modal-panels-header').textContent = `🖼️ Sequential Panels (${(ep.panels || []).length} / ${panelTotal}) & 8-Point Continuity Checklist`;
+
+      const gatesBar = document.getElementById('modal-gates-bar');
+      gatesBar.innerHTML = (ep.gates || []).map(g => `
+        <div class="gate-card">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+            <strong style="font-size:13px; color:var(--gold);">${g.name}</strong>
+            <span class="badge ${badgeClassForStatus(g.status)}">${g.status}</span>
+          </div>
+          <div style="font-size:12px; color:var(--text-muted); margin-bottom:12px; min-height:34px;">
+            ${g.notes || 'No notes.'}
+          </div>
+          <div style="display:flex; gap:8px;">
+            <button class="btn-approve" onclick="quickApproveGate('${projectId}', '${episodeId}', '${g.id}')">✅ Approve Gate</button>
+            <button class="btn-danger" onclick="quickRejectGate('${projectId}', '${episodeId}', '${g.id}')">🛑 Hold / Reject</button>
+          </div>
+        </div>
+      `).join('');
+
+      const panelsGrid = document.getElementById('modal-panels-grid');
+      panelsGrid.innerHTML = (ep.panels || []).map(p => {
+        const imgSrc = p.webPreviewUrl ? `/workspace-docs/${p.webPreviewUrl}?t=${p.hash || Date.now()}` : '';
+        const imgHtml = imgSrc
+          ? `<img src="${imgSrc}" alt="Panel ${p.panelId}" loading="lazy" />`
+          : `<div style="color:var(--text-muted); font-size:12px;">[Panel #${p.panelId} — ${p.imageStatus}]</div>`;
+
+        return `
+          <div class="panel-inspector-card">
+            <div class="panel-img-box">${imgHtml}</div>
+            <div class="panel-details">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <strong style="font-size:14px;">Panel #${String(p.panelId).padStart(2, '0')} / ${panelTotal}: ${p.name}</strong>
+                <span class="badge ${badgeClassForStatus(p.imageStatus)}">${p.imageStatus}</span>
+              </div>
+              <div style="font-size:11px; color:var(--text-muted); font-family:'JetBrains Mono',monospace;">
+                Hash: ${p.hash || 'N/A'} • Size: ${p.sizeKB || 0} KB • Audio: ${p.audioStatus}
+              </div>
+              <div class="qa-chips">
+                <span class="qa-chip">✓ Face DNA</span>
+                <span class="qa-chip">✓ Wardrobe</span>
+                <span class="qa-chip">✓ 1-Sword Rule</span>
+                <span class="qa-chip">✓ 5-Finger Hand</span>
+                <span class="qa-chip">✓ Frazetta Ink</span>
+              </div>
+              <textarea class="prompt-box" id="prompt-${projectId}-${episodeId}-${p.panelId}">${p.prompt || ''}</textarea>
+              <div style="display:flex; justify-content:space-between; gap:8px; margin-top:4px;">
+                <button class="btn-gold" style="flex:1; justify-content:center;" onclick="triggerPanelRegen('${projectId}', '${episodeId}', ${p.panelId})">
+                  ⚡ Regenerate Panel #${p.panelId} (${activeEngine})
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      document.getElementById('inspector-modal').classList.add('open');
+    }
+
+    function closeInspector() {
+      document.getElementById('inspector-modal').classList.remove('open');
+      activeModalTarget = null;
+    }
+
+    async function triggerPanelRegen(projectId, episodeId, panelId) {
+      const promptEl = document.getElementById(`prompt-${projectId}-${episodeId}-${panelId}`);
+      const promptText = promptEl ? promptEl.value : '';
+      const res = await StudioBridge.regeneratePanel(projectId, episodeId, panelId, promptText);
+      if (res && res.error) {
+        alert('Gate Guard Blocked Render: ' + res.error);
+        return;
+      }
+      await renderPoolStatus();
+      await openInspector(projectId, episodeId);
+    }
+
+    async function refreshAll() {
+      await Promise.all([renderProjects(), renderPoolStatus()]);
+    }
+
+    function initEventStream() {
+      if (window.runtime && window.runtime.EventsOn) {
+        window.runtime.EventsOn('pipeline:event', () => {
+          refreshAll();
+        });
+      } else {
+        const es = new EventSource('/api/events');
+        es.onmessage = () => {
+          refreshAll();
+        };
+      }
+    }
+
+    refreshAll();
+    initEventStream();
+  </script>
+</body>
+</html>

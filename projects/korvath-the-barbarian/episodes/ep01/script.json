@@ -1,0 +1,590 @@
+[
+  {
+    "panelId": 1,
+    "beat": {
+      "beat": 1,
+      "act": "Act I: The Infiltration",
+      "name": "The Windswept Ruins",
+      "summary": "Korvath treks across the crimson-baked dunes of Sarkesh, approaching a monolithic black pyramid half-buried in sand beneath a bleeding blood-orange sunset."
+    },
+    "action": "A solitary, massive barbarian warrior treks through towering scarlet desert dunes toward a monolithic, crumbling black basalt pyramid half-buried in shifting sand under a violent blood-orange dusk.",
+    "caption": "Before the first iron towers rose, and before the empires of dust forgot their makers, there walked an older breed of men—forged in blood, bound by no king's law.",
+    "dialogue": [],
+    "characters": [
+      "korvath"
+    ],
+    "objects": [
+      "broadsword"
+    ],
+    "focalSubject": "environment",
+    "camera": {
+      "shotType": "Ultra-Wide Panoramic Establishing Shot",
+      "angle": "Low Horizon-Level View",
+      "lighting": "Blood-orange setting sun casting long razor shadows across crimson dunes"
+    },
+    "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta and John Buscema illustration style, dramatic heavy black ink brushwork, crisp fine cross-hatching, rich cel-shaded digital colors, theatrical chiaroscuro lighting, dark pulp fantasy aesthetic, masterwork sequential art, Ultra-Wide Panoramic Establishing Shot, Low Horizon-Level View, Blood-orange setting sun casting long razor shadows across crimson dunes, A solitary, massive barbarian warrior treks through towering scarlet desert dunes toward a monolithic, crumbling black basalt pyramid half-buried in shifting sand under a violent blood-orange dusk., korvath, towering 6'4 heroic barbarian warrior, handsome rugged weathered facial features with masculine jawline and dark scruff stubble, intense dark wolfish eyes, natural windswept wavy shoulder-length raven-black hair (strictly NO jagged bangs, NO Neanderthal ape brow, strictly normal human facial anatomy), powerful muscular bronze torso, heavy ragged shaggy wolf-fur mantle draped across broad muscular shoulders and back, weathered leather cross-chest harness with brass buckles, fur-trimmed leather war kilt, heavy fur-topped leather combat boots with calf wraps, massive 42-inch two-handed barbarian iron broadsword, heavy straight double-edged steel blade with central fuller, rectangular solid iron crossguard, straight dark wire-wrapped grip, plain solid octagonal iron pommel stone, massive 42-inch two-handed barbarian iron broadsword, heavy double-edged straight blade with central blood fuller, rectangular carved iron crossguard, wire-wrapped dark leather hilt, octagonal iron pommel stone, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"Before the first iron towers rose, and before the empires of dust forgot their makers, there walked an older breed of men—forged in blood, bound by no king's law.\"",
+    "avoidTokens": "photorealistic, 3d render, blurry, modern anime, cutesy cartoon, clean digital CGI, soft pastel airbrushing, deformed hands, extra limbs, modern clothing, missing fingers, low resolution, flat lighting, neanderthal, ape face, monkey brow",
+    "status": "pending_render"
+  },
+  {
+    "panelId": 2,
+    "beat": {
+      "beat": 2,
+      "act": "Act I: The Infiltration",
+      "name": "Eyes in the Dust",
+      "summary": "Korvath kneels beside fresh sand tracks, hand resting on the hilt of his heavy broadsword, senses alert to the scent of burnt lotus and cold steel."
+    },
+    "action": "Korvath kneels upon one knee in the wind-whipped sand, inspecting freshly disturbed footprints near a dry animal skull, scarred weathered fingers resting securely on the wire-bound hilt of his massive broadsword.",
+    "caption": "He smelled the bitter smoke of grey lotus on the desert wind—and the cold oil of drawn blades.",
+    "dialogue": [],
+    "characters": [
+      "korvath"
+    ],
+    "objects": [
+      "broadsword"
+    ],
+    "focalSubject": "korvath",
+    "camera": {
+      "shotType": "Medium Kneeling Hero Shot",
+      "angle": "Three-Quarter Low Ground Perspective",
+      "lighting": "Harsh rim-lighting on muscular shoulders, dusty golden desert haze"
+    },
+    "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta and John Buscema illustration style, dramatic heavy black ink brushwork, crisp fine cross-hatching, rich cel-shaded digital colors, theatrical chiaroscuro lighting, dark pulp fantasy aesthetic, masterwork sequential art, Medium Kneeling Hero Shot, Three-Quarter Low Ground Perspective, Harsh rim-lighting on muscular shoulders, dusty golden desert haze, Korvath kneels upon one knee in the wind-whipped sand, inspecting freshly disturbed footprints near a dry animal skull, scarred weathered fingers resting securely on the wire-bound hilt of his massive broadsword., korvath, towering 6'4 heroic barbarian warrior, handsome rugged weathered facial features with masculine jawline and dark scruff stubble, intense dark wolfish eyes, natural windswept wavy shoulder-length raven-black hair (strictly NO jagged bangs, NO Neanderthal ape brow, strictly normal human facial anatomy), powerful muscular bronze torso, heavy ragged shaggy wolf-fur mantle draped across broad muscular shoulders and back, weathered leather cross-chest harness with brass buckles, fur-trimmed leather war kilt, heavy fur-topped leather combat boots with calf wraps, massive 42-inch two-handed barbarian iron broadsword, heavy straight double-edged steel blade with central fuller, rectangular solid iron crossguard, straight dark wire-wrapped grip, plain solid octagonal iron pommel stone, massive 42-inch two-handed barbarian iron broadsword, heavy double-edged straight blade with central blood fuller, rectangular carved iron crossguard, wire-wrapped dark leather hilt, octagonal iron pommel stone, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"He smelled the bitter smoke of grey lotus on the desert wind—and the cold oil of drawn blades.\"",
+    "avoidTokens": "photorealistic, 3d render, blurry, modern anime, cutesy cartoon, clean digital CGI, soft pastel airbrushing, deformed hands, extra limbs, modern clothing, missing fingers, low resolution, flat lighting, neanderthal, ape face, monkey brow",
+    "status": "approved"
+  },
+  {
+    "panelId": 3,
+    "beat": {
+      "beat": 3,
+      "act": "Act I: The Infiltration",
+      "name": "The Crypt of the Serpent",
+      "summary": "Korvath heaves aside an ancient shattered granite door slab carved with writhing serpent reliefs, entering the cool, pitch-black subterranean colonnade holding high a blazing torch."
+    },
+    "action": "Korvath heaves aside an ancient shattered granite door slab carved with writhing serpent reliefs, descending down steep stone stairs into the shadowed crypt, holding high a blazing pine pitch torch.",
+    "caption": "Into the bowels of forgotten Sarkesh he strode, where gods older than mankind slept in stagnant gloom.",
+    "dialogue": [],
+    "characters": [
+      "korvath"
+    ],
+    "objects": [
+      "broadsword",
+      "pine_torch"
+    ],
+    "focalSubject": "korvath",
+    "camera": {
+      "shotType": "Low-Angle Entrance Shot",
+      "angle": "Dramatic upward tilt looking into the crypt portal",
+      "lighting": "Harsh flickering orange torchlight carving deep chiaroscuro ink shadows against black basalt"
+    },
+    "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta and John Buscema illustration style, dramatic heavy black ink brushwork, crisp fine cross-hatching, rich cel-shaded digital colors, theatrical chiaroscuro lighting, dark pulp fantasy aesthetic, masterwork sequential art, Low-Angle Entrance Shot, Dramatic upward tilt looking into the crypt portal, Harsh flickering orange torchlight carving deep chiaroscuro ink shadows against black basalt, Korvath heaves aside an ancient shattered granite door slab carved with writhing serpent reliefs, descending down steep stone stairs into the shadowed crypt, holding high a blazing pine pitch torch., korvath, towering 6'4 heroic barbarian warrior, handsome rugged weathered facial features with masculine jawline and dark scruff stubble, intense dark wolfish eyes, natural windswept wavy shoulder-length raven-black hair (strictly NO jagged bangs, NO Neanderthal ape brow, strictly normal human facial anatomy), powerful muscular bronze torso, heavy ragged shaggy wolf-fur mantle draped across broad muscular shoulders and back, weathered leather cross-chest harness with brass buckles, fur-trimmed leather war kilt, heavy fur-topped leather combat boots with calf wraps, massive 42-inch two-handed barbarian iron broadsword, heavy straight double-edged steel blade with central fuller, rectangular solid iron crossguard, straight dark wire-wrapped grip, plain solid octagonal iron pommel stone, massive 42-inch two-handed barbarian iron broadsword, heavy double-edged straight blade with central blood fuller, subtle combat notches, rectangular carved iron crossguard, wire-wrapped dark leather hilt, octagonal iron pommel stone, heavy wooden pine branch torch bound with oiled hemp pitch, roaring bright orange flame casting leaping yellow embers and thick black smoke, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"Into the bowels of forgotten Sarkesh he strode, where gods older than mankind slept in stagnant gloom.\"",
+    "avoidTokens": "photorealistic, 3d render, blurry, modern anime, cutesy cartoon, clean digital CGI, soft pastel airbrushing, deformed hands, extra limbs, modern clothing, missing fingers, low resolution, flat lighting",
+    "status": "pending_render"
+  },
+  {
+    "panelId": 4,
+    "beat": {
+      "beat": 4,
+      "act": "Act I: The Infiltration",
+      "name": "Hall of Serpent Kings",
+      "summary": "Korvath stalks silently through a colossal subterranean gallery lined with towering mummified statues of serpent-headed pharaohs draped in cobwebs."
+    },
+    "action": "Korvath stalks cautiously down a grand subterranean hall between colossal stone pillars carved like giant rearing cobras, dust and ancient web filaments floating in the orange torch flare.",
+    "caption": "The air tasted of tomb-rot and dried venom. A thousand dead eyes watched from the stone.",
+    "dialogue": [],
+    "characters": [
+      "korvath"
+    ],
+    "objects": [
+      "broadsword",
+      "pine_torch"
+    ],
+    "focalSubject": "korvath",
+    "camera": {
+      "shotType": "Long Corridor Tracking Shot",
+      "angle": "Deep vanishing-point perspective",
+      "lighting": "Flickering amber torchlight against cavernous velvet blackness"
+    },
+    "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta and John Buscema illustration style, dramatic heavy black ink brushwork, crisp fine cross-hatching, rich cel-shaded digital colors, theatrical chiaroscuro lighting, dark pulp fantasy aesthetic, masterwork sequential art, Long Corridor Tracking Shot, Deep vanishing-point perspective, Flickering amber torchlight against cavernous velvet blackness, Korvath stalks cautiously down a grand subterranean hall between colossal stone pillars carved like giant rearing cobras, dust and ancient web filaments floating in the orange torch flare., korvath, towering 6'4 heroic barbarian warrior, handsome rugged weathered facial features with masculine jawline and dark scruff stubble, intense dark wolfish eyes, natural windswept wavy shoulder-length raven-black hair (strictly NO jagged bangs, NO Neanderthal ape brow, strictly normal human facial anatomy), powerful muscular bronze torso, heavy ragged shaggy wolf-fur mantle draped across broad muscular shoulders and back, weathered leather cross-chest harness with brass buckles, fur-trimmed leather war kilt, heavy fur-topped leather combat boots with calf wraps, massive 42-inch two-handed barbarian iron broadsword, heavy straight double-edged steel blade with central fuller, rectangular solid iron crossguard, straight dark wire-wrapped grip, plain solid octagonal iron pommel stone, massive 42-inch two-handed barbarian iron broadsword, heavy straight double-edged steel blade with central fuller, rectangular solid iron crossguard, straight dark wire-wrapped grip, plain solid octagonal iron pommel stone, heavy wooden pine branch torch bound with oiled hemp pitch, roaring bright orange flame casting leaping yellow embers and thick black smoke, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"The air tasted of tomb-rot and dried venom. A thousand dead eyes watched from the stone.\"",
+    "avoidTokens": "photorealistic, 3d render, blurry, modern anime, cutesy cartoon, clean digital CGI, soft pastel airbrushing, deformed hands, extra limbs, modern clothing, missing fingers, low resolution, flat lighting",
+    "status": "pending_render"
+  },
+  {
+    "panelId": 5,
+    "beat": {
+      "beat": 5,
+      "act": "Act I: The Infiltration",
+      "name": "Blades of the Cult",
+      "summary": "Three hooded Sarkeshian cultists leap from behind towering granite pillars with curved scimitars, bronze masks gleaming in torchlight."
+    },
+    "action": "Three masked Sarkeshian cultists in flowing crimson robes and gilded bronze cobra masks drop from carved temple pillars, curved steel scimitars raised in ambush.",
+    "caption": "They sprang like shadows from the tomb pillars—silent as striking adders.",
+    "dialogue": [
+      {
+        "speaker": "Sarkeshian Cultist",
+        "text": "Die, dog of the north! Sarkath claims your flesh!"
+      }
+    ],
+    "characters": [
+      "korvath",
+      "cultist_trio"
+    ],
+    "objects": [
+      "scimitars"
+    ],
+    "focalSubject": "cultist_trio",
+    "camera": {
+      "shotType": "Dynamic Three-Shot Composition",
+      "angle": "High Dutch Angle (Tension & Surprise)",
+      "lighting": "Gleaming bronze reflections on cobra masks, deep shadow pockets between granite columns"
+    },
+    "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta and John Buscema illustration style, dramatic heavy black ink brushwork, crisp fine cross-hatching, rich cel-shaded digital colors, theatrical chiaroscuro lighting, dark pulp fantasy aesthetic, masterwork sequential art, Dynamic Confrontation Ambush Composition, High Dutch Angle (Tension & Surprise), Gleaming bronze reflections on cobra masks, deep shadow pockets between granite columns, Three masked Sarkeshian cultists in flowing crimson robes and gilded bronze cobra masks drop from carved temple pillars with curved steel scimitars raised in ambush, while Korvath turns swiftly to face them, broadsword raised and torch flaring., korvath, towering 6'4 heroic barbarian warrior, handsome rugged weathered facial features with masculine jawline and dark scruff stubble, intense dark wolfish eyes, natural windswept wavy shoulder-length raven-black hair (strictly NO jagged bangs, NO Neanderthal ape brow, strictly normal human facial anatomy), powerful muscular bronze torso, heavy ragged shaggy wolf-fur mantle draped across broad muscular shoulders and back, weathered leather cross-chest harness with brass buckles, fur-trimmed leather war kilt, heavy fur-topped leather combat boots with calf wraps, massive 42-inch two-handed barbarian iron broadsword, heavy straight double-edged steel blade with central fuller, rectangular solid iron crossguard, straight dark wire-wrapped grip, plain solid octagonal iron pommel stone, massive 42-inch two-handed barbarian iron broadsword, heavy straight double-edged steel blade with central fuller, rectangular solid iron crossguard, straight dark wire-wrapped grip, plain solid octagonal iron pommel stone, symmetrical combat formation of three athletic Sarkeshian temple guards in flowing crimson linen and gilded bronze cobra masks with slit eyes, wielding curved steel scimitars and bronze arm bands, curved damascus steel scimitars with brass serpent hilt guards and bone grips, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"They sprang like shadows from the tomb pillars—silent as striking adders.\", Include an authentic white comic book speech balloon with black ink outline and directional pointer pointing toward Sarkeshian Cultist with the text: \"Die, dog of the north! Sarkath claims your flesh!\"",
+    "avoidTokens": "photorealistic, 3d render, blurry, modern anime, cutesy cartoon, clean digital CGI, soft pastel airbrushing, deformed hands, extra limbs, modern clothing, missing fingers, low resolution, flat lighting",
+    "status": "pending_render"
+  },
+  {
+    "panelId": 6,
+    "beat": {
+      "beat": 6,
+      "act": "Act I: The Infiltration",
+      "name": "The Iron Cleave",
+      "summary": "With pantherish speed, Korvath ducks beneath a scimitar sweep and swings his massive broadsword, cleaving through the lead cultist in a spray of blood."
+    },
+    "action": "With explosive pantherish speed, Korvath ducks beneath a curved scimitar and swings his massive two-handed broadsword in a brutal horizontal cleave, cleaving through the central cultist's torso with a spray of crimson blood as the shattered bronze cobra mask flies across the flagstones, the other cultists recoiling in terror.",
+    "caption": "Civilized men debate right and wrong. The Northman answered with four feet of tempered steel.",
+    "dialogue": [
+      {
+        "speaker": "Korvath",
+        "text": "Tell Sarkath his rent is due."
+      }
+    ],
+    "characters": [
+      "korvath"
+    ],
+    "objects": [
+      "broadsword"
+    ],
+    "focalSubject": "korvath",
+    "camera": {
+      "shotType": "Dynamic Action Freeze-Frame",
+      "angle": "Low-Angle Diagonal Tracking Perspective",
+      "lighting": "Stark theatrical spotlighting, high-contrast ink cross-hatching, flying bronze splinters and blood droplets"
+    },
+    "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta and John Buscema illustration style, dramatic heavy black ink brushwork, crisp fine cross-hatching, rich cel-shaded digital colors, theatrical chiaroscuro lighting, dark pulp fantasy aesthetic, masterwork sequential art, Dynamic Action Freeze-Frame, Low-Angle Diagonal Tracking Perspective, Stark theatrical spotlighting, high-contrast ink cross-hatching, flying bronze splinters and blood droplets, With explosive pantherish speed, Korvath ducks beneath a curved scimitar and swings his massive two-handed broadsword in a brutal horizontal cleave, cleaving through the central cultist's torso with a spray of crimson blood as the shattered bronze cobra mask flies across the flagstones, the other cultists recoiling in terror., korvath, towering 6'4 heroic barbarian warrior, handsome rugged weathered facial features with masculine jawline and dark scruff stubble, intense dark wolfish eyes, natural windswept wavy shoulder-length raven-black hair (strictly NO jagged bangs, NO Neanderthal ape brow, strictly normal human facial anatomy), powerful muscular bronze torso, heavy ragged shaggy wolf-fur mantle draped across broad muscular shoulders and back, weathered leather cross-chest harness with brass buckles, fur-trimmed leather war kilt, heavy fur-topped leather combat boots with calf wraps, massive 42-inch two-handed barbarian iron broadsword, heavy straight double-edged steel blade with central fuller, rectangular solid iron crossguard, straight dark wire-wrapped grip, plain solid octagonal iron pommel stone, massive 42-inch two-handed barbarian iron broadsword, heavy double-edged straight blade with central blood fuller, subtle combat notches, rectangular carved iron crossguard, wire-wrapped dark leather hilt, octagonal iron pommel stone, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"Civilized men debate right and wrong. The Northman answered with four feet of tempered steel.\", Include an authentic white comic book speech balloon with black ink outline and directional pointer pointing toward Korvath with the text: \"Tell Sarkath his rent is due.\"",
+    "avoidTokens": "photorealistic, 3d render, blurry, modern anime, cutesy cartoon, clean digital CGI, soft pastel airbrushing, deformed hands, extra limbs, modern clothing, missing fingers, low resolution, flat lighting",
+    "status": "pending_render"
+  },
+  {
+    "panelId": 7,
+    "beat": {
+      "beat": 7,
+      "act": "Act II: The Temple of Sarkath",
+      "name": "The Cavern of the Lotus",
+      "summary": "Korvath slips onto the high colonnade of the inner sanctuary, looking down upon smoking bronze braziers, silk cushions, and exotic maidens in revealing hammered bronze scale bikinis."
+    },
+    "action": "Wide view of the opulent temple cavern bathed in hazy green light and swirling lotus smoke. On plush silk cushions lounge two gorgeous exotic maidens in revealing hammered bronze scale bikinis and jeweled arm torcs, while smoking bronze serpent braziers exhale swirling grey incense into the vaulted gloom.",
+    "caption": "Behind the charnel-house lay decadence. Scented lotus, velvet pillows, and the captive flowers of conquered desert tribes.",
+    "dialogue": [],
+    "characters": [
+      "temple_maidens"
+    ],
+    "objects": [],
+    "focalSubject": "temple_maidens",
+    "camera": {
+      "shotType": "Wide Cavern High-Angle View",
+      "angle": "Down-tilt looking over temple dais",
+      "lighting": "Warm flickering brazier fire mixed with eerie green luminescence, heavy incense haze"
+    },
+    "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta and John Buscema illustration style, dramatic heavy black ink brushwork, crisp fine cross-hatching, rich cel-shaded digital colors, theatrical chiaroscuro lighting, dark pulp fantasy aesthetic, masterwork sequential art, Wide Cavern High-Angle View, Down-tilt looking over temple dais, Warm flickering brazier fire mixed with eerie green luminescence, heavy incense haze, Wide view of the opulent temple cavern bathed in hazy green light and swirling lotus smoke. On plush silk cushions lounge two gorgeous exotic maidens in revealing hammered bronze scale bikinis and jeweled arm torcs, while smoking bronze serpent braziers exhale swirling grey incense into the vaulted gloom., two gorgeous exotic women with long cascading raven hair and alluring kohl-lined smoldering eyes, revealing hammered bronze scale bikinis, sheer gossamer crimson silk loincloth wraps, coiled gilded snake armbands and jeweled hip chains, lounging gracefully on lavish cushions, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"Behind the charnel-house lay decadence. Scented lotus, velvet pillows, and the captive flowers of conquered desert tribes.\"",
+    "avoidTokens": "photorealistic, 3d render, blurry, modern anime, cutesy cartoon, clean digital CGI, soft pastel airbrushing, deformed hands, extra limbs, modern clothing, missing fingers, low resolution, flat lighting",
+    "status": "pending_render"
+  },
+  {
+    "panelId": 8,
+    "beat": {
+      "beat": 8,
+      "act": "Act II: The Temple of Sarkath",
+      "name": "The Captive Maiden",
+      "summary": "Close dramatic shot of Natari bound by gilded serpent chains near the altar, catching sight of Korvath creeping in the high shadows, her smoldering gaze filled with fierce hope."
+    },
+    "action": "Dramatic medium shot of Natari, breathtaking exotic desert maiden in a revealing hammered bronze scale bikini and jeweled hip chains, bound by delicate gilded serpent chains to a black basalt pillar before the sacrificial dais, her smoldering kohl-lined feline eyes looking upward into the shadows where Korvath crouches ready.",
+    "caption": "She did not weep like the women of the south. Her dark eyes held the fire of a desert panther waiting for blood.",
+    "dialogue": [
+      {
+        "speaker": "Natari",
+        "text": "Strike swiftly, barbarian... or we both feed the abyss."
+      }
+    ],
+    "characters": [
+      "natari"
+    ],
+    "objects": [],
+    "focalSubject": "natari",
+    "camera": {
+      "shotType": "Medium Close Heroine Portrait",
+      "angle": "Low-Angle Dutch Tilt",
+      "lighting": "Gleaming bronze reflections on scale bikini, warm amber rim lighting on sun-kissed shoulders"
+    },
+    "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta and John Buscema illustration style, dramatic heavy black ink brushwork, crisp fine cross-hatching, rich cel-shaded digital colors, theatrical chiaroscuro lighting, dark pulp fantasy aesthetic, masterwork sequential art, Medium Close Heroine Portrait, Low-Angle Dutch Tilt, Gleaming bronze reflections on scale bikini, warm amber rim lighting on sun-kissed shoulders, Dramatic medium shot of Natari, breathtaking exotic desert maiden in a revealing hammered bronze scale bikini and jeweled hip chains, bound by delicate gilded serpent chains to a black basalt pillar before the sacrificial dais, her smoldering kohl-lined feline eyes looking upward into the shadows where Korvath crouches ready., natari, breathtaking exotic desert maiden, facial blend of Salma Hayek and Ana de Armas, high chiseled cheekbones, smoldering kohl-lined feline eyes, luscious lips, long cascading glossy raven hair adorned with bronze beads, revealing hammered bronze scale bikini top, matching low-slung chain bikini bottoms, sheer gossamer crimson silk loincloth sash, coiled gilded serpent armbands and jeweled hip chains, flawless sun-kissed bronze skin, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"She did not weep like the women of the south. Her dark eyes held the fire of a desert panther waiting for blood.\", Include an authentic white comic book speech balloon with black ink outline and directional pointer pointing toward Natari with the text: \"Strike swiftly, barbarian... or we both feed the abyss.\"",
+    "avoidTokens": "photorealistic, 3d render, blurry, modern anime, cutesy cartoon, clean digital CGI, soft pastel airbrushing, deformed hands, extra limbs, modern clothing, missing fingers, low resolution, flat lighting",
+    "status": "pending_render"
+  },
+  {
+    "panelId": 9,
+    "beat": {
+      "beat": 9,
+      "act": "Act II: The Temple of Sarkath",
+      "name": "The Altar of Sarkath",
+      "summary": "High Priest Kheshat atop the dais raises his carved ebony cobra staff, chanting over a massive altar drenched in swirling emerald sorcerous fire."
+    },
+    "action": "At the far end of the grand colonnade, High Priest Kheshat in pleated black silk robes stands before an ancient stone dais bathed in swirling emerald sorcerous fire, holding aloft a carved ebony serpent staff, invoking the dark rites.",
+    "caption": "Upon the dais stood the high priest of the serpent, drunk on dark lotus and foul sorceries.",
+    "dialogue": [
+      {
+        "speaker": "Kheshat",
+        "text": "O Sleeper of the Deep! Taste the virgin blood and rise!"
+      }
+    ],
+    "characters": [
+      "kheshat"
+    ],
+    "objects": [
+      "serpent_staff"
+    ],
+    "focalSubject": "kheshat",
+    "camera": {
+      "shotType": "Wide Ritual Colonnade View",
+      "angle": "Elevated Altar Perspective",
+      "lighting": "Sickly emerald sorcerous glow emanating from stone brazier, deep void darkness above"
+    },
+    "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta and John Buscema illustration style, dramatic heavy black ink brushwork, crisp fine cross-hatching, rich cel-shaded digital colors, theatrical chiaroscuro lighting, dark pulp fantasy aesthetic, masterwork sequential art, Wide Ritual Colonnade View, Elevated Altar Perspective, Sickly emerald sorcerous glow emanating from stone brazier, deep void darkness above, At the far end of the grand colonnade, High Priest Kheshat in pleated black silk robes stands before an ancient stone dais bathed in swirling emerald sorcerous fire, holding aloft a carved ebony serpent staff, invoking the dark rites., kheshat, gaunt sinister Sarkeshian high priest, facial blend of Christopher Lee and F. Murray Abraham, hollow cheekbones, burning feverish green eyes, trailing obsidian black silk robes with embroidered green serpent coils, ornate gilded cobra headdress crowning shaved head, long emaciated hands with blackened nails, six-foot polished ebony wood staff carved into coiling cobra, flared serpent hood with glowing emerald gemstone eyes and ivory fangs, tarnished bronze wire wrap, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"Upon the dais stood the high priest of the serpent, drunk on dark lotus and foul sorceries.\", Include an authentic white comic book speech balloon with black ink outline and directional pointer pointing toward Kheshat with the text: \"O Sleeper of the Deep! Taste the virgin blood and rise!\"",
+    "avoidTokens": "photorealistic, 3d render, blurry, modern anime, cutesy cartoon, clean digital CGI, soft pastel airbrushing, deformed hands, extra limbs, modern clothing, missing fingers, low resolution, flat lighting",
+    "status": "pending_render"
+  },
+  {
+    "panelId": 10,
+    "beat": {
+      "beat": 10,
+      "act": "Act II: The Temple of Sarkath",
+      "name": "The Barbarian Charge",
+      "summary": "Korvath leaps down from the colonnade, broadsword roaring through the air, hurling his flaming torch into the sacrificial altar in a shower of sparks."
+    },
+    "action": "Korvath drops from the high balcony into the center of the sanctuary with earth-shaking impact, broadsword raised in two-handed grip, hurling his blazing torch directly into the altar brazier as sparks explode and temple guards scramble in panic.",
+    "caption": "He did not parley. He did not boast. A barbarian strikes while civilized men are still clearing their throats.",
+    "dialogue": [
+      {
+        "speaker": "Korvath",
+        "text": "The only god you answer to today is cold iron!"
+      }
+    ],
+    "characters": [
+      "korvath"
+    ],
+    "objects": [
+      "broadsword",
+      "pine_torch"
+    ],
+    "focalSubject": "korvath",
+    "camera": {
+      "shotType": "Dynamic Low-Angle Impact Shot",
+      "angle": "Dynamic Upward Diagonal Tilt",
+      "lighting": "Explosion of bright orange fire and flying sparks clashing against emerald sorcerous haze"
+    },
+    "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta and John Buscema illustration style, dramatic heavy black ink brushwork, crisp fine cross-hatching, rich cel-shaded digital colors, theatrical chiaroscuro lighting, dark pulp fantasy aesthetic, masterwork sequential art, Dynamic Low-Angle Impact Shot, Dynamic Upward Diagonal Tilt, Explosion of bright orange fire and flying sparks clashing against emerald sorcerous haze, Korvath drops from the high balcony into the center of the sanctuary with earth-shaking impact, broadsword raised in two-handed grip, hurling his blazing torch directly into the altar brazier as sparks explode and temple guards scramble in panic., korvath, towering 6'4 heroic barbarian warrior, handsome rugged weathered facial features with masculine jawline and dark scruff stubble, intense dark wolfish eyes, natural windswept wavy shoulder-length raven-black hair (strictly NO jagged bangs, NO Neanderthal ape brow, strictly normal human facial anatomy), powerful muscular bronze torso, heavy ragged shaggy wolf-fur mantle draped across broad muscular shoulders and back, weathered leather cross-chest harness with brass buckles, fur-trimmed leather war kilt, heavy fur-topped leather combat boots with calf wraps, massive 42-inch two-handed barbarian iron broadsword, heavy straight double-edged steel blade with central fuller, rectangular solid iron crossguard, straight dark wire-wrapped grip, plain solid octagonal iron pommel stone, massive 42-inch two-handed barbarian iron broadsword, heavy double-edged straight blade with central blood fuller, subtle combat notches, rectangular carved iron crossguard, wire-wrapped dark leather hilt, octagonal iron pommel stone, heavy wooden pine branch torch bound with oiled hemp pitch, roaring bright orange flame casting leaping yellow embers and thick black smoke, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"He did not parley. He did not boast. A barbarian strikes while civilized men are still clearing their throats.\", Include an authentic white comic book speech balloon with black ink outline and directional pointer pointing toward Korvath with the text: \"The only god you answer to today is cold iron!\"",
+    "avoidTokens": "photorealistic, 3d render, blurry, modern anime, cutesy cartoon, clean digital CGI, soft pastel airbrushing, deformed hands, extra limbs, modern clothing, missing fingers, low resolution, flat lighting",
+    "status": "pending_render"
+  },
+  {
+    "panelId": 11,
+    "beat": {
+      "beat": 11,
+      "act": "Act II: The Temple of Sarkath",
+      "name": "Awakening of the Shadow",
+      "summary": "From a deep abyss behind the altar, an enormous prehistoric serpentine monstrosity with emerald-scaled coils and glowing crimson eyes rises, casting a colossal shadow."
+    },
+    "action": "An immense primordial serpent beast emerges from a subterranean trench behind the altar, emerald iridescent scales catching the mystic fire, unhinging jaws lined with dagger-like fangs as it hisses with earth-shaking venom.",
+    "caption": "Not a beast of nature, but a nightmare spawned before the stars grew cold.",
+    "dialogue": [],
+    "characters": [],
+    "objects": [
+      "serpent_beast"
+    ],
+    "focalSubject": "serpent_beast",
+    "camera": {
+      "shotType": "Colossal Creature Reveal Shot",
+      "angle": "Extreme Low Ground-Level Worm's Eye View",
+      "lighting": "Iridescent scales shimmering with sickly green luminescence, twin ruby eye glows"
+    },
+    "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta and John Buscema illustration style, dramatic heavy black ink brushwork, crisp fine cross-hatching, rich cel-shaded digital colors, theatrical chiaroscuro lighting, dark pulp fantasy aesthetic, masterwork sequential art, Colossal Creature Reveal Shot, Extreme Low Ground-Level Worm's Eye View, Iridescent scales shimmering with sickly green luminescence, twin ruby eye glows, An immense primordial serpent beast emerges from a subterranean trench behind the altar, emerald iridescent scales catching the mystic fire, unhinging jaws lined with dagger-like fangs as it hisses with earth-shaking venom., colossal subterranean serpent titan, armored iridescent emerald and jade scales, horned skull with bone crest, unhinged maw with translucent dagger fangs dripping pale venom mist, glowing crimson eyes, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"Not a beast of nature, but a nightmare spawned before the stars grew cold.\"",
+    "avoidTokens": "photorealistic, 3d render, blurry, modern anime, cutesy cartoon, clean digital CGI, soft pastel airbrushing, deformed hands, extra limbs, modern clothing, missing fingers, low resolution, flat lighting",
+    "status": "pending_render"
+  },
+  {
+    "panelId": 12,
+    "beat": {
+      "beat": 12,
+      "act": "Act II: The Temple of Sarkath",
+      "name": "Wrath of the Titan",
+      "summary": "The colossal serpent lashes its massive tail, shattering ancient granite temple columns and sending stone blocks crashing down as maidens scramble for cover."
+    },
+    "action": "The colossal serpent thrashes violently, thick armored coils smashing through a massive stone pillar which splinters into falling granite boulders. In the foreground, Natari and the maidens in their bronze scale bikinis dive for cover behind the heavy throne dais.",
+    "caption": "The temple groaned under the wrath of an elder age. The foundations of Sarkesh began to crumble.",
+    "dialogue": [],
+    "characters": [
+      "natari"
+    ],
+    "objects": [
+      "serpent_beast"
+    ],
+    "focalSubject": "serpent_beast",
+    "camera": {
+      "shotType": "Wide Cataclysmic Destruction Shot",
+      "angle": "Dutch Angle Ground Level",
+      "lighting": "Falling debris, billowing dust clouds lit by flickering brazier coals and green mystic flame"
+    },
+    "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta and John Buscema illustration style, dramatic heavy black ink brushwork, crisp fine cross-hatching, rich cel-shaded digital colors, theatrical chiaroscuro lighting, dark pulp fantasy aesthetic, masterwork sequential art, Wide Cataclysmic Destruction Shot, Dutch Angle Ground Level, Falling debris, billowing dust clouds lit by flickering brazier coals and green mystic flame, The colossal serpent thrashes violently, thick armored coils smashing through a massive stone pillar which splinters into falling granite boulders. In the foreground, Natari and the maidens in their bronze scale bikinis dive for cover behind the heavy throne dais., natari, breathtaking exotic desert maiden, facial blend of Salma Hayek and Ana de Armas, high chiseled cheekbones, smoldering kohl-lined feline eyes, luscious lips, long cascading glossy raven hair adorned with bronze beads, revealing hammered bronze scale bikini top, matching low-slung chain bikini bottoms, sheer gossamer crimson silk loincloth sash, coiled gilded serpent armbands and jeweled hip chains, flawless sun-kissed bronze skin, colossal subterranean serpent titan, armored iridescent emerald and jade scales, horned skull with bone crest, unhinged maw with translucent dagger fangs dripping pale venom mist, glowing crimson eyes, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"The temple groaned under the wrath of an elder age. The foundations of Sarkesh began to crumble.\"",
+    "avoidTokens": "photorealistic, 3d render, blurry, modern anime, cutesy cartoon, clean digital CGI, soft pastel airbrushing, deformed hands, extra limbs, modern clothing, missing fingers, low resolution, flat lighting",
+    "status": "pending_render"
+  },
+  {
+    "panelId": 13,
+    "beat": {
+      "beat": 13,
+      "act": "Act II: The Temple of Sarkath",
+      "name": "Poetic Justice",
+      "summary": "High Priest Kheshat frantically holds up his serpent staff to command the beast, but the titan serpent strikes downward, snapping Kheshat in its massive venomous maw."
+    },
+    "action": "High Priest Kheshat screams in horror as the titan serpent's gargantuan horned maw snaps shut around him, splintering his ebony staff and black silk robes mid-prayer as dark crimson blood sprays across the altar stones.",
+    "caption": "The gods of darkness have no love for their priests—only hunger.",
+    "dialogue": [
+      {
+        "speaker": "Kheshat",
+        "text": "No! I am your voice! I am your—AARRGH!"
+      }
+    ],
+    "characters": [
+      "kheshat"
+    ],
+    "objects": [
+      "serpent_staff",
+      "serpent_beast"
+    ],
+    "focalSubject": "serpent_beast",
+    "camera": {
+      "shotType": "Dramatic Lethal Strike Shot",
+      "angle": "Mid-Level Tracking Angle",
+      "lighting": "Harsh chiaroscuro silhouette, bloody impact highlighted by flickering green flame"
+    },
+    "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta and John Buscema illustration style, dramatic heavy black ink brushwork, crisp fine cross-hatching, rich cel-shaded digital colors, theatrical chiaroscuro lighting, dark pulp fantasy aesthetic, masterwork sequential art, Dramatic Lethal Strike Shot, Mid-Level Tracking Angle, Harsh chiaroscuro silhouette, bloody impact highlighted by flickering green flame, High Priest Kheshat screams in horror as the titan serpent's gargantuan horned maw snaps shut around him, splintering his ebony staff and black silk robes mid-prayer as dark crimson blood sprays across the altar stones., kheshat, gaunt sinister Sarkeshian high priest, facial blend of Christopher Lee and F. Murray Abraham, hollow cheekbones, burning feverish green eyes, trailing obsidian black silk robes with embroidered green serpent coils, ornate gilded cobra headdress crowning shaved head, long emaciated hands with blackened nails, six-foot polished ebony wood staff carved into coiling cobra, flared serpent hood with glowing emerald gemstone eyes and ivory fangs, tarnished bronze wire wrap, colossal subterranean serpent titan, armored iridescent emerald and jade scales, horned skull with bone crest, unhinged maw with translucent dagger fangs dripping pale venom mist, glowing crimson eyes, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"The gods of darkness have no love for their priests—only hunger.\", Include an authentic white comic book speech balloon with black ink outline and directional pointer pointing toward Kheshat with the text: \"No! I am your voice! I am your—AARRGH!\"",
+    "avoidTokens": "photorealistic, 3d render, blurry, modern anime, cutesy cartoon, clean digital CGI, soft pastel airbrushing, deformed hands, extra limbs, modern clothing, missing fingers, low resolution, flat lighting",
+    "status": "pending_render"
+  },
+  {
+    "panelId": 14,
+    "beat": {
+      "beat": 14,
+      "act": "Act III: The Climax & Collapse",
+      "name": "Laughing at Doom",
+      "summary": "While civilized men would fall to their knees in paralyzed terror, Korvath bares his teeth in a savage warrior grin, tightening his grip on his notched blade."
+    },
+    "action": "Korvath stands firm amid the green sorcerous glare and crashing debris, broad scarred muscles tensed, smoldering blue wolfish eyes wide with battle-fury, lips pulled back in a fierce, fearless warrior grin.",
+    "caption": "Men bred in cities trembled before the dark gods. But a barbarian from the northern crags knew only that anything that breathes can die.",
+    "dialogue": [
+      {
+        "speaker": "Korvath",
+        "text": "Hiss all you want, worm! The Iron Gods do not care, and neither do I!"
+      }
+    ],
+    "characters": [
+      "korvath"
+    ],
+    "objects": [
+      "broadsword"
+    ],
+    "focalSubject": "korvath",
+    "camera": {
+      "shotType": "Tight Chiaroscuro Hero Portrait",
+      "angle": "Straight-on Intimate Confrontation Angle",
+      "lighting": "Split lighting: half face illuminated by green eldritch flame, half swallowed in pure black ink"
+    },
+    "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta and John Buscema illustration style, dramatic heavy black ink brushwork, crisp fine cross-hatching, rich cel-shaded digital colors, theatrical chiaroscuro lighting, dark pulp fantasy aesthetic, masterwork sequential art, Tight Chiaroscuro Hero Portrait, Straight-on Intimate Confrontation Angle, Split lighting: half face illuminated by green eldritch flame, half swallowed in pure black ink, Korvath stands firm amid the green sorcerous glare and crashing debris, broad scarred muscles tensed, smoldering blue wolfish eyes wide with battle-fury, lips pulled back in a fierce, fearless warrior grin., korvath, towering 6'4 heroic barbarian warrior, handsome rugged weathered facial features with masculine jawline and dark scruff stubble, intense dark wolfish eyes, natural windswept wavy shoulder-length raven-black hair (strictly NO jagged bangs, NO Neanderthal ape brow, strictly normal human facial anatomy), powerful muscular bronze torso, heavy ragged shaggy wolf-fur mantle draped across broad muscular shoulders and back, weathered leather cross-chest harness with brass buckles, fur-trimmed leather war kilt, heavy fur-topped leather combat boots with calf wraps, massive 42-inch two-handed barbarian iron broadsword, heavy straight double-edged steel blade with central fuller, rectangular solid iron crossguard, straight dark wire-wrapped grip, plain solid octagonal iron pommel stone, massive 42-inch two-handed barbarian iron broadsword, heavy straight double-edged steel blade with central fuller, rectangular solid iron crossguard, straight dark wire-wrapped grip, plain solid octagonal iron pommel stone, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"Men bred in cities trembled before the dark gods. But a barbarian from the northern crags knew only that anything that breathes can die.\", Include an authentic white comic book speech balloon with black ink outline and directional pointer pointing toward Korvath with the text: \"Hiss all you want, worm! The Iron Gods do not care, and neither do I!\"",
+    "avoidTokens": "photorealistic, 3d render, blurry, modern anime, cutesy cartoon, clean digital CGI, soft pastel airbrushing, deformed hands, extra limbs, modern clothing, missing fingers, low resolution, flat lighting",
+    "status": "pending_render"
+  },
+  {
+    "panelId": 15,
+    "beat": {
+      "beat": 15,
+      "act": "Act III: The Climax & Collapse",
+      "name": "Venom and Stone",
+      "summary": "The serpent strikes downward with open jaws dripping pale venom; Korvath dives in a lightning roll, the fangs shattering the stone floor inches from his boots."
+    },
+    "action": "The monstrous serpent lunges downward with dagger fangs bared, acidic venom hissing as it corrodes the flagstones, while Korvath executes an athletic combat roll across the shattered floor, broadsword trailing sparks across the stone.",
+    "caption": "Fast as a striking viper—faster still was the barbarian's wolfish instinct.",
+    "dialogue": [],
+    "characters": [
+      "korvath"
+    ],
+    "objects": [
+      "broadsword",
+      "serpent_beast"
+    ],
+    "focalSubject": "korvath",
+    "camera": {
+      "shotType": "Dynamic Low-Angle Action Evasion",
+      "angle": "Floor-Level Tracking Angle",
+      "lighting": "Sizzling venom clouds illuminated by sorcerous glow, heavy shadows under serpent belly"
+    },
+    "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta and John Buscema illustration style, dramatic heavy black ink brushwork, crisp fine cross-hatching, rich cel-shaded digital colors, theatrical chiaroscuro lighting, dark pulp fantasy aesthetic, masterwork sequential art, Dynamic Low-Angle Action Evasion, Floor-Level Tracking Angle, Sizzling venom clouds illuminated by sorcerous glow, heavy shadows under serpent belly, The monstrous serpent lunges downward with dagger fangs bared, acidic venom hissing as it corrodes the flagstones, while Korvath executes an athletic combat roll across the shattered floor, his heavy fur mantle trailing dynamically behind him, broadsword trailing sparks across the stone., korvath, towering 6'4 heroic barbarian warrior, handsome rugged weathered facial features with masculine jawline and dark scruff stubble, intense dark wolfish eyes, natural windswept wavy shoulder-length raven-black hair (strictly NO jagged bangs, NO Neanderthal ape brow, strictly normal human facial anatomy), powerful muscular bronze torso, heavy ragged shaggy wolf-fur mantle draped across broad muscular shoulders and back, weathered leather cross-chest harness with brass buckles, fur-trimmed leather war kilt, heavy fur-topped leather combat boots with calf wraps, massive 42-inch two-handed barbarian iron broadsword, heavy straight double-edged steel blade with central fuller, rectangular solid iron crossguard, straight dark wire-wrapped grip, plain solid octagonal iron pommel stone, massive 42-inch two-handed barbarian iron broadsword, heavy straight double-edged steel blade with central fuller, rectangular solid iron crossguard, straight dark wire-wrapped grip, plain solid octagonal iron pommel stone, colossal subterranean serpent titan, armored iridescent emerald and jade scales, horned skull with bone crest, unhinged maw with translucent dagger fangs dripping pale venom mist, glowing crimson eyes, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"Fast as a striking viper—faster still was the barbarian's wolfish instinct.\"",
+    "avoidTokens": "photorealistic, 3d render, blurry, modern anime, cutesy cartoon, clean digital CGI, soft pastel airbrushing, deformed hands, extra limbs, modern clothing, missing fingers, low resolution, flat lighting",
+    "status": "pending_render"
+  },
+  {
+    "panelId": 16,
+    "beat": {
+      "beat": 16,
+      "act": "Act III: The Climax & Collapse",
+      "name": "The Fatal Leap",
+      "summary": "Korvath leaps from an altar column into midair, driving his broadsword downward between the monster's armored skull plates."
+    },
+    "action": "Korvath leaps through the air from a shattered pillar, both hands gripping his broadsword overhead, driving the heavy broadsword downward with ferocious two-handed force deep between the serpent's armored skull plates, a violent eruption of dark venomous blood and emerald sorcerous sparks bursting from the fatal wound as the monster thrashes.",
+    "caption": "A leap that defied human limits—steel meeting ancient scale with the crash of thunder.",
+    "dialogue": [],
+    "characters": [
+      "korvath"
+    ],
+    "objects": [
+      "broadsword",
+      "serpent_beast"
+    ],
+    "focalSubject": "korvath",
+    "camera": {
+      "shotType": "Peak Climax Midair Action Shot",
+      "angle": "Dramatic Dynamic Dutch Angle",
+      "lighting": "Blinding flash of impact spark, silhouetted muscular barbarian form against dark serpent bulk"
+    },
+    "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta and John Buscema illustration style, dramatic heavy black ink brushwork, crisp fine cross-hatching, rich cel-shaded digital colors, theatrical chiaroscuro lighting, dark pulp fantasy aesthetic, masterwork sequential art, Peak Climax Midair Action Shot, Dramatic Dynamic Low Angle, Blinding flash of impact spark, silhouetted muscular barbarian form against dark serpent bulk, Korvath leaps through the air from a shattered pillar in a dynamic forward dive, both hands gripping the wire-wrapped hilt of his heavy straight iron broadsword, driving the massive broadsword downward with ferocious two-handed force deep into the armored crest of the colossal serpent titan, exploding burst of emerald sorcerous sparks and mystic smoke bursting from the decisive blow as the monster thrashes in agony., korvath, towering 6'4 heroic barbarian warrior, handsome rugged weathered facial features with masculine jawline and dark scruff stubble, intense dark wolfish eyes, natural windswept wavy shoulder-length raven-black hair (strictly NO jagged bangs, NO Neanderthal ape brow, strictly normal human facial anatomy), powerful muscular bronze torso, heavy ragged shaggy wolf-fur mantle draped across broad muscular shoulders and back, weathered leather cross-chest harness with brass buckles, fur-trimmed leather war kilt, heavy fur-topped leather combat boots with calf wraps, massive 42-inch two-handed barbarian iron broadsword, heavy straight double-edged steel blade with central fuller, rectangular solid iron crossguard, straight dark wire-wrapped grip, plain solid octagonal iron pommel stone, massive 42-inch two-handed barbarian iron broadsword, heavy straight double-edged steel blade with central fuller, rectangular solid iron crossguard, straight dark wire-wrapped grip, plain solid octagonal iron pommel stone, colossal subterranean serpent titan, armored iridescent emerald and jade scales, horned skull with bone crest, unhinged maw with translucent dagger fangs dripping pale venom mist, glowing crimson eyes, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"A leap that defied human limits—steel meeting ancient scale with the crash of thunder.\"",
+    "avoidTokens": "photorealistic, 3d render, blurry, modern anime, cutesy cartoon, clean digital CGI, soft pastel airbrushing, deformed hands, extra limbs, modern clothing, missing fingers, low resolution, flat lighting",
+    "status": "pending_render"
+  },
+  {
+    "panelId": 17,
+    "beat": {
+      "beat": 17,
+      "act": "Act III: The Climax & Collapse",
+      "name": "Death Agony of the Beast",
+      "summary": "The colossal serpent thrashes in its death throes, crashing down upon the altar dais as the subterranean temple roof gives way in a roar of tumbling stone."
+    },
+    "action": "The dying serpent titan convulses violently, black venom and blood pouring over the altar steps, as its heavy thrashing coils pull down the cavern ceiling in an avalanche of shattered stone and billowing dust clouds.",
+    "caption": "The serpent died as it lived—in a tempest of fury and black ichor that brought down the roof of the world.",
+    "dialogue": [],
+    "characters": [],
+    "objects": [
+      "serpent_beast"
+    ],
+    "focalSubject": "serpent_beast",
+    "camera": {
+      "shotType": "Full Catastrophe Wide Shot",
+      "angle": "High Dutch Angle",
+      "lighting": "Thick dust obscuring dying green flame, dramatic shafts of sunlight piercing cracked ceiling"
+    },
+    "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta and John Buscema illustration style, dramatic heavy black ink brushwork, crisp fine cross-hatching, rich cel-shaded digital colors, theatrical chiaroscuro lighting, dark pulp fantasy aesthetic, masterwork sequential art, Full Catastrophe Wide Shot, High Dutch Angle, Thick dust obscuring dying green flame, dramatic shafts of sunlight piercing cracked ceiling, The dying serpent titan convulses violently, black venom and blood pouring over the altar steps, as its heavy thrashing coils pull down the cavern ceiling in an avalanche of shattered stone and billowing dust clouds., colossal subterranean serpent titan, armored iridescent emerald and jade scales, horned skull with bone crest, unhinged maw with translucent dagger fangs dripping pale venom mist, glowing crimson eyes, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"The serpent died as it lived—in a tempest of fury and black ichor that brought down the roof of the world.\"",
+    "avoidTokens": "photorealistic, 3d render, blurry, modern anime, cutesy cartoon, clean digital CGI, soft pastel airbrushing, deformed hands, extra limbs, modern clothing, missing fingers, low resolution, flat lighting",
+    "status": "pending_render"
+  },
+  {
+    "panelId": 18,
+    "beat": {
+      "beat": 18,
+      "act": "Act III: The Climax & Collapse",
+      "name": "Severing the Chains",
+      "summary": "Amid falling rubble, Korvath slices Natari's chains with a swift broadsword stroke and snatches the glowing Blood-Ruby of Sarkath from the altar."
+    },
+    "action": "Amid falling stone boulders and billowing smoke, Korvath uses his notched broadsword to cleave the bronze chains binding Natari, pulling the beautiful bronze-bikini-clad maiden to her feet while clutching the glowing fist-sized Blood-Ruby of Sarkath in his scarred hand.",
+    "caption": "Gold, jewels, and a woman with fire in her veins—the only currency a barbarian respects.",
+    "dialogue": [
+      {
+        "speaker": "Korvath",
+        "text": "Up, girl! Unless you fancy being buried with dead snakes!"
+      },
+      {
+        "speaker": "Natari",
+        "text": "Lead on, northern wolf!"
+      }
+    ],
+    "characters": [
+      "korvath",
+      "natari"
+    ],
+    "objects": [
+      "broadsword",
+      "blood_ruby"
+    ],
+    "focalSubject": "korvath",
+    "camera": {
+      "shotType": "Medium Dynamic Hero Duo Shot",
+      "angle": "Low-Angle Tracking View",
+      "lighting": "Flickering amber fire and ruby glow lighting their muscular, bronze-clad bodies"
+    },
+    "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta and John Buscema illustration style, dramatic heavy black ink brushwork, crisp fine cross-hatching, rich cel-shaded digital colors, theatrical chiaroscuro lighting, dark pulp fantasy aesthetic, masterwork sequential art, Medium Dynamic Hero Duo Shot, Low-Angle Tracking View, Flickering amber fire and ruby glow lighting their muscular, bronze-clad bodies, Amid falling stone boulders and billowing smoke, Korvath uses his notched broadsword to cleave the bronze chains binding Natari, pulling the beautiful bronze-bikini-clad maiden to her feet while clutching the glowing fist-sized Blood-Ruby of Sarkath in his scarred hand., korvath, towering 6'4 heroic barbarian warrior, handsome rugged weathered facial features with masculine jawline and dark scruff stubble, intense dark wolfish eyes, natural windswept wavy shoulder-length raven-black hair (strictly NO jagged bangs, NO Neanderthal ape brow, strictly normal human facial anatomy), powerful muscular bronze torso, heavy ragged shaggy wolf-fur mantle draped across broad muscular shoulders and back, weathered leather cross-chest harness with brass buckles, fur-trimmed leather war kilt, heavy fur-topped leather combat boots with calf wraps, massive 42-inch two-handed barbarian iron broadsword, heavy straight double-edged steel blade with central fuller, rectangular solid iron crossguard, straight dark wire-wrapped grip, plain solid octagonal iron pommel stone, natari, breathtaking exotic desert maiden, facial blend of Salma Hayek and Ana de Armas, high chiseled cheekbones, smoldering kohl-lined feline eyes, luscious lips, long cascading glossy raven hair adorned with bronze beads, revealing hammered bronze scale bikini top, matching low-slung chain bikini bottoms, sheer gossamer crimson silk loincloth sash, coiled gilded serpent armbands and jeweled hip chains, flawless sun-kissed bronze skin, massive 42-inch two-handed barbarian iron broadsword, heavy double-edged straight blade with central blood fuller, subtle combat notches, rectangular carved iron crossguard, wire-wrapped dark leather hilt, octagonal iron pommel stone, fist-sized rough-faceted dark scarlet blood-ruby glowing with internal red ember, mounted in tarnished black iron serpent-talon setting on braided copper torc, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"Gold, jewels, and a woman with fire in her veins—the only currency a barbarian respects.\", Include an authentic white comic book speech balloon with black ink outline and directional pointer pointing toward Korvath with the text: \"Up, girl! Unless you fancy being buried with dead snakes!\", Include an authentic white comic book speech balloon with black ink outline and directional pointer pointing toward Natari with the text: \"Lead on, northern wolf!\"",
+    "avoidTokens": "photorealistic, 3d render, blurry, modern anime, cutesy cartoon, clean digital CGI, soft pastel airbrushing, deformed hands, extra limbs, modern clothing, missing fingers, low resolution, flat lighting",
+    "status": "pending_render"
+  },
+  {
+    "panelId": 19,
+    "beat": {
+      "beat": 19,
+      "act": "Act III: The Climax & Collapse",
+      "name": "Escape into the Blinding Light",
+      "summary": "Korvath and Natari leap through the crumbling pyramid entrance into the blazing desert sun just as the ancient portal collapses in an explosion of sand and dust."
+    },
+    "action": "Korvath and Natari burst through the shattering stone entrance arch of the black pyramid into the blinding white-hot desert sunshine as the entire monolithic portal collapses behind them in a massive roaring eruption of sand and granite debris.",
+    "caption": "Behind them, a thousand years of serpent worship crashed into dust.",
+    "dialogue": [],
+    "characters": [
+      "korvath",
+      "natari"
+    ],
+    "objects": [
+      "broadsword"
+    ],
+    "focalSubject": "korvath",
+    "camera": {
+      "shotType": "Exterior Action Breakthrough Shot",
+      "angle": "Dynamic Ground-Level Tracking Angle",
+      "lighting": "Blinding white desert sunlight clashing against billowing black smoke plumes erupting from the tomb"
+    },
+    "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta and John Buscema illustration style, dramatic heavy black ink brushwork, crisp fine cross-hatching, rich cel-shaded digital colors, theatrical chiaroscuro lighting, dark pulp fantasy aesthetic, masterwork sequential art, Exterior Action Breakthrough Shot, Dynamic Ground-Level Tracking Angle, Blinding white desert sunlight clashing against billowing black smoke plumes erupting from the tomb, Korvath and Natari burst side-by-side through the shattering stone entrance arch of the black pyramid into the blinding white-hot desert sunshine as the entire monolithic portal collapses behind them in a massive roaring eruption of sand and granite debris, strictly two people in the entire scene, absolutely no other background characters or extra figures., korvath, towering 6'4 heroic barbarian warrior, handsome rugged weathered facial features with masculine jawline and dark scruff stubble, intense dark wolfish eyes, natural windswept wavy shoulder-length raven-black hair (strictly NO jagged bangs, NO Neanderthal ape brow, strictly normal human facial anatomy), powerful muscular bronze torso, heavy ragged shaggy wolf-fur mantle draped across broad muscular shoulders and back, weathered leather cross-chest harness with brass buckles, fur-trimmed leather war kilt, heavy fur-topped leather combat boots with calf wraps, massive 42-inch two-handed barbarian iron broadsword, heavy straight double-edged steel blade with central fuller, rectangular solid iron crossguard, straight dark wire-wrapped grip, plain solid octagonal iron pommel stone, natari, breathtaking exotic desert maiden, facial blend of Salma Hayek and Ana de Armas, high chiseled cheekbones, smoldering kohl-lined feline eyes, luscious lips, long cascading glossy raven hair adorned with bronze beads, revealing hammered bronze scale bikini top, matching low-slung chain bikini bottoms, sheer gossamer crimson silk loincloth sash, coiled gilded serpent armbands and jeweled hip chains, flawless sun-kissed bronze skin, massive 42-inch two-handed barbarian iron broadsword, heavy straight double-edged steel blade with central fuller, rectangular solid iron crossguard, straight dark wire-wrapped grip, plain solid octagonal iron pommel stone, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"Behind them, a thousand years of serpent worship crashed into dust.\"",
+    "avoidTokens": "photorealistic, 3d render, blurry, modern anime, cutesy cartoon, clean digital CGI, soft pastel airbrushing, deformed hands, extra limbs, modern clothing, missing fingers, low resolution, flat lighting",
+    "status": "pending_render"
+  },
+  {
+    "panelId": 20,
+    "beat": {
+      "beat": 20,
+      "act": "Act III: The Climax & Collapse",
+      "name": "The Crimson Dawn",
+      "summary": "Korvath stands triumphant atop a high desert dune, broadsword resting over his scarred shoulder, ruby amulet in hand, with the stunning Natari beside him gazing across the wild horizon."
+    },
+    "action": "Epic panoramic hero shot. Korvath stands upon the crest of a crimson sand dune, broadsword rested across his scarred bronze shoulders, wolf-fur loincloth windswept. At his side stands Natari, breathtaking desert maiden in her revealing hammered bronze scale bikini and crimson silk sash, gazing out over the vast untamed desert toward distant purple mountain peaks under a glorious golden sunrise.",
+    "caption": "From the frozen crags of the northern wastes strode Korvath—lone wolf, reaver, breaker of chains. With cold steel and an unbending will, he carved his legend across the burning sands of a dying world.",
+    "dialogue": [],
+    "characters": [
+      "korvath",
+      "natari"
+    ],
+    "objects": [
+      "broadsword",
+      "blood_ruby"
+    ],
+    "focalSubject": "korvath",
+    "camera": {
+      "shotType": "Epic Panoramic Sunset/Sunrise Hero Shot",
+      "angle": "Low Heroic Upward Perspective",
+      "lighting": "Warm golden dawn sunlight washing over their bronze sun-kissed skin and glittering scale armor, long dramatic shadows across the red dunes"
+    },
+    "prompt": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta and John Buscema illustration style, dramatic heavy black ink brushwork, crisp fine cross-hatching, rich cel-shaded digital colors, theatrical chiaroscuro lighting, dark pulp fantasy aesthetic, masterwork sequential art, Full-Body Epic Panoramic Sunrise Hero Shot, Low Heroic Upward Perspective, Warm golden dawn sunlight washing over their bronze skin and armor, long dramatic shadows across the red dunes, Full-figure heroic view, Korvath stands firmly upright upon a flat sandstone rock ridge atop the crimson dunes, both powerful muscular legs and heavy fur-topped leather combat boots completely visible and firmly planted on solid rock, massive two-handed straight iron broadsword rested across his scarred bronze shoulders with plain rectangular carved iron crossguard, wire-wrapped grip, unadorned solid iron octagonal pommel. At his side stands Natari, breathtaking desert maiden standing tall in full-figure view in ornate hammered bronze warrior corslet and crimson silk sash, holding aloft the canonical Blood-Ruby of Sarkath: massive fist-sized rough-faceted dark scarlet crimson gemstone glowing with smoldering internal red embers, gripped firmly inside a coiled tarnished black iron serpent-talon claw setting on a heavy braided copper neck chain, exactly matching Panel 18 (strictly a massive fist-sized rough-cut stone gripped in a black iron serpent claw, strictly NOT a small teardrop bead, strictly NO multi-drop pendants), both gazing out over the vast desert under a glorious sunrise (strictly full bodies visible, full legs and boots firmly on rock, zero sunken limbs, zero buried in sand)., korvath, towering 6'4 heroic barbarian warrior, handsome rugged weathered facial features with masculine jawline and dark scruff stubble, intense dark wolfish eyes, natural windswept wavy shoulder-length raven-black hair (strictly NO jagged bangs, NO Neanderthal ape brow, strictly normal human facial anatomy), powerful muscular bronze torso, heavy ragged shaggy wolf-fur mantle draped across broad muscular shoulders and back, weathered leather cross-chest harness with brass buckles, fur-trimmed leather war kilt, heavy fur-topped leather combat boots with calf wraps, massive 42-inch two-handed barbarian iron broadsword, heavy straight double-edged steel blade with central fuller, rectangular solid iron crossguard, straight dark wire-wrapped grip, plain solid octagonal iron pommel stone, natari, breathtaking exotic desert maiden with high chiseled cheekbones, smoldering feline eyes, dark cascading hair, hammered bronze warrior corslet, crimson silk sash, coiled snake armbands, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"From the frozen crags of the northern wastes strode Korvath—lone wolf, reaver, breaker of chains. With cold steel and an unbending will, he carved his legend across the burning sands of a dying world.\"",
+    "avoidTokens": "photorealistic, 3d render, blurry, modern anime, cutesy cartoon, clean digital CGI, soft pastel airbrushing, deformed hands, extra limbs, modern clothing, missing fingers, low resolution, flat lighting",
+    "status": "pending_render"
+  }
+]

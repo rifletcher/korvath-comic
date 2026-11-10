@@ -47,3 +47,4 @@ Object.entries(verified).forEach(([id, srcFile]) => {
   fs.copyFileSync(path.join(tmp, srcFile), path.join(docs, targetFile));
   console.log(`✅ Correctly mapped Panel ${pad} from ${srcFile}`);
 });
+

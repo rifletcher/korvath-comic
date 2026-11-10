@@ -46,3 +46,4 @@ if (allValid) {
 } else {
   console.error(`\n💥 ISSUES DETECTED!`);
 }
+

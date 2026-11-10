@@ -24,7 +24,11 @@
     "build:reader": "node tools/build_reader.js",
     "open:reader": "start 02_Assets/web_reader.html",
     "export:vercel": "node tools/export_for_vercel.js",
-    "build:vercel": "node tools/export_for_vercel.js"
+    "build:vercel": "node tools/export_for_vercel.js",
+    "studio:init": "node tools/init_multi_comic_workspace.js",
+    "studio:start": "conan-studio.exe --port 8484",
+    "studio:window": "conan-studio.exe --port 8484 --window",
+    "worker:cdp": "node tools/workers/comic_cli_worker.js --action cdp-status"
   },
   "keywords": [
     "korvath",

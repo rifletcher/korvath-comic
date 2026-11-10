@@ -1,0 +1,21 @@
+{
+  "id": "kull-iron-reaver",
+  "title": "Valusia: Crown of Iron",
+  "subtitle": "Before the Oceans Drank Atlantis",
+  "genre": "Pre-Cataclysmic Heroic Fantasy",
+  "artStyleAnchor": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, John Buscema Savage Sword style, heavy chiaroscuro ink",
+  "defaultImageEngine": "grok-imagine-image-2-0",
+  "defaultVoiceEngine": "elevenlabs",
+  "targetEpisodeCount": 8,
+  "defaultPanelsPerEpisode": 12,
+  "createdAt": "2026-11-10T11:00:00Z",
+  "updatedAt": "2026-11-10T10:42:35.105Z",
+  "coverImage": "docs/assets/ep1_meta/panel_10.webp",
+  "invariants": [
+    "Atlantean Broadaxe: Double-bitted notched bronze battle-axe",
+    "Tiger-skin Baldric: Striped pelt across chest"
+  ],
+  "episodes": [
+    "ep01"
+  ]
+}

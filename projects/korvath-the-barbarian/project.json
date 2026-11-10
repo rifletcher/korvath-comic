@@ -1,0 +1,24 @@
+{
+  "id": "korvath-the-barbarian",
+  "title": "Korvath the Barbarian",
+  "subtitle": "Chronicles of the Hyborian Sword",
+  "genre": "1970s Sword-and-Sorcery Pulp Graphic Novel",
+  "artStyleAnchor": "classic vintage 1970s sword-and-sorcery graphic novel comic book panel, Frank Frazetta and John Buscema illustration style, dramatic heavy black ink brushwork, crisp fine cross-hatching, rich cel-shaded digital colors, theatrical chiaroscuro lighting, dark pulp fantasy aesthetic, masterwork sequential art",
+  "defaultImageEngine": "meta-ai-cdp",
+  "defaultVoiceEngine": "elevenlabs",
+  "targetEpisodeCount": 6,
+  "defaultPanelsPerEpisode": 20,
+  "createdAt": "2026-11-01T10:00:00Z",
+  "updatedAt": "2026-11-10T10:42:34.301Z",
+  "coverImage": "docs/assets/ep1_meta/panel_01.webp",
+  "invariants": [
+    "Single Sword Invariant: Korvath carries strictly ONE 42-inch straight iron broadsword",
+    "Natari Weapons: Twin curved Zamorian daggers only (strictly NO broadsword)",
+    "Anti-Claw Hand Anatomy: 5-fingered human hands on all characters holding relics",
+    "Fail-Closed Voice Polarity: Antagonist slurs never assigned to hero or narrator"
+  ],
+  "episodes": [
+    "ep01",
+    "ep02"
+  ]
+}

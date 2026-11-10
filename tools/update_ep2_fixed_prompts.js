@@ -64,3 +64,4 @@ for (let i = 0; i < ep.length; i++) {
 
 fs.writeFileSync(epFile, JSON.stringify(ep, null, 2), 'utf8');
 console.log(`\n🎉 Successfully updated ${updatedCount} panels in ${epFile}!`);
+

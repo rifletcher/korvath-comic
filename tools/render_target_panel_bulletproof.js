@@ -206,3 +206,4 @@ if (require.main === module) {
 }
 
 module.exports = { renderPanel };
+
