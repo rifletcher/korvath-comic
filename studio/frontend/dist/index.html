@@ -280,6 +280,63 @@
       flex-direction: column;
       justify-content: space-between;
       gap: 4px;
+      cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+    }
+    .step-node:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
+      border-color: var(--gold) !important;
+    }
+    .step-hint {
+      font-size: 9px;
+      color: var(--gold);
+      opacity: 0.85;
+      margin-top: 2px;
+    }
+    .stage-tab-btn {
+      padding: 8px 14px;
+      font-size: 12px;
+      border-radius: 6px;
+      background: #141824;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      cursor: pointer;
+    }
+    .stage-tab-btn.active {
+      background: linear-gradient(135deg, rgba(252,163,17,0.22), rgba(217,119,6,0.12));
+      border-color: var(--gold);
+      color: var(--gold);
+      font-weight: 700;
+    }
+    .script-card {
+      background: #12151f;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-bottom: 12px;
+    }
+    .caption-preview {
+      background: #fef08a;
+      color: #111827;
+      border: 2px solid #000;
+      padding: 8px 12px;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 12px;
+      margin: 8px 0;
+      box-shadow: 2px 2px 0 #000;
+    }
+    .dialogue-bubble-preview {
+      background: #f8fafc;
+      color: #0f172a;
+      border: 2px solid #0f172a;
+      padding: 7px 12px;
+      border-radius: 14px;
+      font-size: 12px;
+      font-weight: 600;
+      display: inline-block;
+      margin: 4px 6px 4px 0;
     }
     .step-node.is-gate {
       background: #171310;
@@ -663,10 +720,14 @@
         </div>
       </div>
       <div class="modal-body">
+        <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid var(--border);" id="modal-stage-tabs"></div>
         <div class="gates-control-bar" id="modal-gates-bar"></div>
-        <div class="section-bar">
-          <div class="section-title" id="modal-panels-header">🖼️ Sequential Panels & 8-Point Continuity Checklist</div>
+        <div id="modal-stage-feedback" style="margin-bottom:16px;"></div>
+        <div class="section-bar" style="display:flex; justify-content:space-between; align-items:center;">
+          <div class="section-title" id="modal-panels-header">🖼️ Stage Artifact & Deliverable Viewer</div>
+          <div id="modal-stage-actions"></div>
         </div>
+        <div id="modal-artifact-view"></div>
         <div class="panel-grid" id="modal-panels-grid"></div>
       </div>
     </div>
@@ -723,6 +784,14 @@
             <div class="form-group">
               <label>🖼️ Default Panels per Episode</label>
               <input type="number" id="series-panel-count" min="1" max="100" value="20" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>🛡️ Series Continuity Invariants & Rules (Enforced at Gates A & B)</label>
+            <div id="series-invariants-list" style="display:flex; flex-direction:column; gap:6px; max-height:150px; overflow-y:auto; padding:8px; background:#0b0d14; border:1px solid var(--border); border-radius:6px;"></div>
+            <div style="display:flex; gap:8px; margin-top:6px;">
+              <input type="text" id="series-new-invariant" placeholder="e.g. Single Sword Invariant: Hero carries strictly ONE broadsword" style="flex:1;" onkeydown="if(event.key==='Enter'){event.preventDefault();addModalInvariant();}" />
+              <button type="button" class="btn-gold" onclick="addModalInvariant()">+ Add Rule</button>
             </div>
           </div>
           <div class="form-group" style="display:flex; align-items:center; gap:8px;">
@@ -855,7 +924,7 @@
         if (this.isWails()) {
           return window.go.main.App.CreateProject(
             payload.title, payload.subtitle, payload.genre, payload.artStyleAnchor || '', payload.defaultImageEngine || 'meta-ai-cdp',
-            Number(payload.targetEpisodeCount), Number(payload.defaultPanelsPerEpisode), Boolean(payload.scaffoldAllEpisodes)
+            Number(payload.targetEpisodeCount), Number(payload.defaultPanelsPerEpisode), payload.invariants || [], Boolean(payload.scaffoldAllEpisodes)
           );
         }
         const r = await fetch('/api/project/create', {
@@ -866,10 +935,10 @@
         return r.json();
       },
 
-      async updateProjectConfig(projectId, genre, artStyleAnchor, defaultImageEngine, targetEpisodeCount, defaultPanelsPerEpisode, scaffoldMissingEpisodes) {
+      async updateProjectConfig(projectId, genre, artStyleAnchor, defaultImageEngine, targetEpisodeCount, defaultPanelsPerEpisode, invariants, scaffoldMissingEpisodes) {
         if (this.isWails()) {
           return window.go.main.App.UpdateProjectConfig(
-            projectId, genre || '', artStyleAnchor || '', defaultImageEngine || '', Number(targetEpisodeCount), Number(defaultPanelsPerEpisode), Boolean(scaffoldMissingEpisodes)
+            projectId, genre || '', artStyleAnchor || '', defaultImageEngine || '', Number(targetEpisodeCount), Number(defaultPanelsPerEpisode), invariants || [], Boolean(scaffoldMissingEpisodes)
           );
         }
         const r = await fetch('/api/project/config', {
@@ -882,6 +951,7 @@
             defaultImageEngine: defaultImageEngine || '',
             targetEpisodeCount: Number(targetEpisodeCount),
             defaultPanelsPerEpisode: Number(defaultPanelsPerEpisode),
+            invariants: invariants || [],
             scaffoldMissingEpisodes: Boolean(scaffoldMissingEpisodes)
           })
         });
@@ -959,9 +1029,10 @@
             const st = (node.data.status || '').toLowerCase();
             const isGate = node.kind === 'gate';
             return `
-              <div class="step-node ${isGate ? 'is-gate' : ''} ${st}">
+              <div class="step-node ${isGate ? 'is-gate' : ''} ${st}" onclick="openInspector('${project.id}', '${ep.episodeId}', '${node.data.id}')" title="Click to inspect ${node.data.name} artifact & feedback">
                 <div class="step-label">${isGate ? '🛑 ' : ''}${node.data.name}</div>
                 <div class="step-status">${node.data.status}</div>
+                <div class="step-hint">🔍 View Artifact</div>
               </div>
             `;
           }).join('');
@@ -1043,7 +1114,12 @@
               <button class="btn-gold" onclick="openNewEpModal('${project.id}')">+ New Episode</button>
             </div>
           </div>
-          <div class="invariants-row">${invHtml}</div>
+          <div class="invariants-row">
+            ${invHtml}
+            <button onclick="openEditSeriesModal('${project.id}', true)" style="font-size:11px; padding:3px 10px; border:1px dashed var(--gold); background:rgba(212,175,55,0.08); color:var(--gold); border-radius:4px; cursor:pointer;">
+              + Add / Edit Invariants
+            </button>
+          </div>
           <div class="episodes-list">${epsHtml}</div>
         `;
         container.appendChild(block);
@@ -1071,7 +1147,49 @@
       `).join('');
     }
 
-    // SERIES CONFIGURATION MODAL
+    // SERIES CONFIGURATION MODAL & INVARIANTS EDITOR
+    let modalInvariants = [];
+
+    function renderModalInvariants() {
+      const container = document.getElementById('series-invariants-list');
+      if (!container) return;
+      if (modalInvariants.length === 0) {
+        container.innerHTML = `<div style="font-size:12px; color:var(--text-muted); padding:4px;">No custom invariants added yet. Use "+ Add Rule" below.</div>`;
+        return;
+      }
+      container.innerHTML = modalInvariants.map((rule, idx) => `
+        <div style="display:flex; align-items:center; gap:8px; background:#141824; border:1px solid rgba(212,175,55,0.28); border-radius:5px; padding:5px 8px;">
+          <span style="font-size:12px; color:var(--gold);">🛡️</span>
+          <input type="text" value="${rule.replace(/"/g, '&quot;')}" onchange="updateModalInvariant(${idx}, this.value)" style="flex:1; background:transparent; border:none; color:#f8fafc; font-size:12px; padding:2px 4px;" />
+          <button type="button" onclick="removeModalInvariant(${idx})" style="padding:2px 7px; font-size:11px; background:#2a1215; border-color:#7f1d1d; color:#fca5a5;" title="Remove Invariant">✕</button>
+        </div>
+      `).join('');
+    }
+
+    function addModalInvariant() {
+      const input = document.getElementById('series-new-invariant');
+      const val = (input.value || '').trim();
+      if (!val) return;
+      modalInvariants.push(val);
+      input.value = '';
+      renderModalInvariants();
+    }
+
+    function updateModalInvariant(idx, newVal) {
+      const v = (newVal || '').trim();
+      if (v) {
+        modalInvariants[idx] = v;
+      } else {
+        modalInvariants.splice(idx, 1);
+        renderModalInvariants();
+      }
+    }
+
+    function removeModalInvariant(idx) {
+      modalInvariants.splice(idx, 1);
+      renderModalInvariants();
+    }
+
     function openNewSeriesModal() {
       document.getElementById('series-edit-id').value = '';
       document.getElementById('series-modal-title').textContent = 'Create New Comic Series';
@@ -1085,10 +1203,17 @@
       document.getElementById('series-ep-count').value = 6;
       document.getElementById('series-panel-count').value = 20;
       document.getElementById('series-scaffold-all').checked = false;
+      modalInvariants = [
+        'Single Weapon Invariant: Hero carries strictly their canonical weapon',
+        'Anti-Claw Hand Anatomy: 5-fingered human hands on all characters holding relics',
+        'Fail-Closed Voice Polarity: Antagonist slurs never assigned to hero or narrator'
+      ];
+      renderModalInvariants();
+      document.getElementById('series-new-invariant').value = '';
       document.getElementById('series-modal').classList.add('open');
     }
 
-    function openEditSeriesModal(projectId) {
+    function openEditSeriesModal(projectId, focusInvariant = false) {
       const entry = cachedProjectsMap[projectId];
       if (!entry) return;
       const proj = entry.project;
@@ -1102,7 +1227,13 @@
       document.getElementById('series-ep-count').value = proj.targetEpisodeCount || 6;
       document.getElementById('series-panel-count').value = proj.defaultPanelsPerEpisode || 20;
       document.getElementById('series-scaffold-all').checked = false;
+      modalInvariants = Array.isArray(proj.invariants) ? [...proj.invariants] : [];
+      renderModalInvariants();
+      document.getElementById('series-new-invariant').value = '';
       document.getElementById('series-modal').classList.add('open');
+      if (focusInvariant) {
+        setTimeout(() => document.getElementById('series-new-invariant').focus(), 80);
+      }
     }
 
     function closeSeriesModal() {
@@ -1110,6 +1241,13 @@
     }
 
     async function submitSeriesModal() {
+      // Also capture any text typed in the new invariant input box if the user didn't click "+ Add Rule" first
+      const pendingInv = (document.getElementById('series-new-invariant').value || '').trim();
+      if (pendingInv) {
+        modalInvariants.push(pendingInv);
+        document.getElementById('series-new-invariant').value = '';
+      }
+
       const editId = document.getElementById('series-edit-id').value;
       const genre = document.getElementById('series-genre').value.trim();
       const artStyleAnchor = document.getElementById('series-art-style').value.trim();
@@ -1119,7 +1257,7 @@
       const scaffoldAll = document.getElementById('series-scaffold-all').checked;
 
       if (editId) {
-        await StudioBridge.updateProjectConfig(editId, genre, artStyleAnchor, defaultImageEngine, epCount, panelCount, scaffoldAll);
+        await StudioBridge.updateProjectConfig(editId, genre, artStyleAnchor, defaultImageEngine, epCount, panelCount, modalInvariants, scaffoldAll);
       } else {
         const title = document.getElementById('series-title').value.trim();
         if (!title) {
@@ -1134,6 +1272,7 @@
           defaultImageEngine,
           targetEpisodeCount: epCount,
           defaultPanelsPerEpisode: panelCount,
+          invariants: modalInvariants,
           scaffoldAllEpisodes: scaffoldAll
         });
       }
@@ -1213,9 +1352,31 @@
       }
     }
 
-    async function openInspector(projectId, episodeId) {
+    let activeStageTab = 'VISUAL';
+    let cachedInspectorEp = null;
+    let showRawScriptJson = false;
+
+    function normalizeStageTabKey(stageOrGateId) {
+      if (!stageOrGateId) return 'VISUAL';
+      const s = stageOrGateId.toUpperCase();
+      if (s === 'SCRIPT_GENERATION' || s === 'SCRIPT_GATE') return 'SCRIPT';
+      if (s === 'PROMPT_EXPANSION') return 'PROMPTS';
+      if (s === 'VISUAL_RENDERING' || s === 'VISUAL_QA_GATE') return 'VISUAL';
+      if (s === 'VOICE_SYNTHESIS' || s === 'AUDIO_QA_GATE') return 'VOICE';
+      if (s === 'VIDEO_ASSEMBLY' || s === 'READY_FOR_RELEASE') return 'VIDEO';
+      return 'VISUAL';
+    }
+
+    async function openInspector(projectId, episodeId, stageOrGateId) {
+      if (stageOrGateId) {
+        activeStageTab = normalizeStageTabKey(stageOrGateId);
+      } else if (!activeModalTarget || activeModalTarget.projectId !== projectId || activeModalTarget.episodeId !== episodeId) {
+        activeStageTab = 'SCRIPT';
+      }
       activeModalTarget = { projectId, episodeId };
       const ep = await StudioBridge.getEpisode(projectId, episodeId);
+      cachedInspectorEp = ep;
+
       const projEntry = cachedProjectsMap[projectId];
       const activeEngine = ep.imageEngine || (projEntry && projEntry.project.defaultImageEngine) || 'meta-ai-cdp';
       const panelTotal = ep.targetPanelCount || (ep.panels || []).length;
@@ -1223,7 +1384,6 @@
       document.getElementById('modal-ep-sub').textContent = `Current Stage: ${ep.currentStage} • Model: ${activeEngine} • Configured Panels: ${panelTotal} • Worker: ${ep.assignedWorkerTab || 'Auto-Allocate'}`;
       document.getElementById('modal-engine-select').value = activeEngine;
       document.getElementById('modal-panel-count-input').value = panelTotal;
-      document.getElementById('modal-panels-header').textContent = `🖼️ Sequential Panels (${(ep.panels || []).length} / ${panelTotal}) & 8-Point Continuity Checklist`;
 
       const gatesBar = document.getElementById('modal-gates-bar');
       gatesBar.innerHTML = (ep.gates || []).map(g => `
@@ -1242,43 +1402,270 @@
         </div>
       `).join('');
 
-      const panelsGrid = document.getElementById('modal-panels-grid');
-      panelsGrid.innerHTML = (ep.panels || []).map(p => {
-        const imgSrc = p.webPreviewUrl ? `/workspace-docs/${p.webPreviewUrl}?t=${p.hash || Date.now()}` : '';
-        const imgHtml = imgSrc
-          ? `<img src="${imgSrc}" alt="Panel ${p.panelId}" loading="lazy" />`
-          : `<div style="color:var(--text-muted); font-size:12px;">[Panel #${p.panelId} — ${p.imageStatus}]</div>`;
+      await renderInspectorStageView();
+      document.getElementById('inspector-modal').classList.add('open');
+    }
 
-        return `
-          <div class="panel-inspector-card">
-            <div class="panel-img-box">${imgHtml}</div>
-            <div class="panel-details">
-              <div style="display:flex; justify-content:space-between; align-items:center;">
-                <strong style="font-size:14px;">Panel #${String(p.panelId).padStart(2, '0')} / ${panelTotal}: ${p.name}</strong>
-                <span class="badge ${badgeClassForStatus(p.imageStatus)}">${p.imageStatus}</span>
+    function switchInspectorTab(tabKey) {
+      activeStageTab = tabKey;
+      renderInspectorStageView();
+    }
+
+    function toggleRawScriptJsonView() {
+      showRawScriptJson = !showRawScriptJson;
+      renderInspectorStageView();
+    }
+
+    async function renderInspectorStageView() {
+      if (!cachedInspectorEp || !activeModalTarget) return;
+      const { projectId, episodeId } = activeModalTarget;
+      const ep = cachedInspectorEp;
+      const projEntry = cachedProjectsMap[projectId];
+      const project = projEntry ? projEntry.project : {};
+      const activeEngine = ep.imageEngine || project.defaultImageEngine || 'meta-ai-cdp';
+      const panelTotal = ep.targetPanelCount || (ep.panels || []).length;
+
+      const tabs = [
+        { key: 'SCRIPT', label: '📜 1. Writers Room Script & Gate A', stageId: 'SCRIPT_GATE' },
+        { key: 'PROMPTS', label: '🎨 2. Latent Anchors & Prompts', stageId: 'PROMPT_EXPANSION' },
+        { key: 'VISUAL', label: '🖼️ 3. 2K Panel Renders & Gate B', stageId: 'VISUAL_QA_GATE' },
+        { key: 'VOICE', label: '🎙️ 4. Voice Casting, DSP & Gate C', stageId: 'AUDIO_QA_GATE' },
+        { key: 'VIDEO', label: '🎬 5. Motion Comic Video & Release', stageId: 'VIDEO_ASSEMBLY' }
+      ];
+
+      document.getElementById('modal-stage-tabs').innerHTML = tabs.map(t => `
+        <button class="stage-tab-btn ${activeStageTab === t.key ? 'active' : ''}" onclick="switchInspectorTab('${t.key}')">
+          ${t.label}
+        </button>
+      `).join('');
+
+      const activeTabObj = tabs.find(t => t.key === activeStageTab) || tabs[0];
+      const feedbackEl = document.getElementById('modal-stage-feedback');
+      const headerEl = document.getElementById('modal-panels-header');
+      const actionsEl = document.getElementById('modal-stage-actions');
+      const artifactEl = document.getElementById('modal-artifact-view');
+      const panelsGrid = document.getElementById('modal-panels-grid');
+
+      actionsEl.innerHTML = '';
+      artifactEl.innerHTML = '';
+      panelsGrid.innerHTML = '';
+
+      // Fetch live Skill / Gate audit feedback from backend
+      try {
+        const auditRes = await fetch(`/api/stage/audit?project=${encodeURIComponent(projectId)}&episode=${encodeURIComponent(episodeId)}&stage=${encodeURIComponent(activeTabObj.stageId)}`);
+        const auditData = await auditRes.json();
+        const passColor = auditData.passed ? '#10b981' : '#f43f5e';
+        feedbackEl.innerHTML = `
+          <div style="background:#0b0d14; border:1px solid ${passColor}; border-radius:8px; padding:12px 16px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+              <strong style="font-size:12px; color:${passColor};">
+                ${auditData.passed ? '✅ SKILL AUDIT & GATE FEEDBACK: PASSED' : '⚠️ SKILL AUDIT & GATE FEEDBACK: ATTENTION REQUIRED'}
+              </strong>
+              <span style="font-size:11px; color:var(--text-muted); font-family:'JetBrains Mono',monospace;">Active Skill: ${auditData.skillPath || ''}</span>
+            </div>
+            <pre style="margin:0; font-family:'JetBrains Mono',monospace; font-size:11px; color:#cbd5e1; white-space:pre-wrap; max-height:140px; overflow-y:auto;">${(auditData.output || '').replace(/</g, '&lt;')}</pre>
+          </div>
+        `;
+      } catch (e) {
+        feedbackEl.innerHTML = '';
+      }
+
+      // Render Stage-Specific Artifact View
+      if (activeStageTab === 'SCRIPT') {
+        headerEl.textContent = `📜 Writers' Room Comic Script & Storyboard (${(ep.panels || []).length} / ${panelTotal} Beats)`;
+        actionsEl.innerHTML = `
+          <button onclick="toggleRawScriptJsonView()">
+            ${showRawScriptJson ? '📖 View Formatted Script' : '{ } View Raw Storyboard JSON'}
+          </button>
+          <a class="btn-link" href="/workspace-projects/${projectId}/episodes/${episodeId}/manifest.json" target="_blank">⬇️ Open manifest.json</a>
+        `;
+
+        if (showRawScriptJson) {
+          artifactEl.innerHTML = `
+            <pre style="background:#090b10; border:1px solid var(--border); border-radius:8px; padding:16px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#38bdf8; overflow-x:auto; max-height:600px;">${JSON.stringify(ep.panels || [], null, 2).replace(/</g, '&lt;')}</pre>
+          `;
+        } else {
+          artifactEl.innerHTML = (ep.panels || []).map(p => {
+            const dlgHtml = (p.dialogue || []).length > 0
+              ? (p.dialogue || []).map(d => `<div class="dialogue-bubble-preview">💬 <strong>${d.speaker}:</strong> "${d.text}"</div>`).join('')
+              : `<span style="font-size:11px; color:var(--text-muted);">No spoken dialogue (Silent visual / caption beat)</span>`;
+
+            return `
+              <div class="script-card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+                  <div>
+                    <span class="badge badge-running" style="margin-right:8px;">PANEL #${String(p.panelId).padStart(2, '0')}</span>
+                    <strong style="font-size:15px; color:#fff;">${p.name}</strong>
+                    <span style="font-size:12px; color:var(--gold); margin-left:10px;">[${p.act || 'Act'}]</span>
+                  </div>
+                  <span style="font-size:11px; color:var(--text-muted); font-family:'JetBrains Mono',monospace;">🎥 ${p.shotType || 'Cinematic Shot'}</span>
+                </div>
+                <div style="font-size:13px; color:#cbd5e1; margin-bottom:8px; line-height:1.5;">
+                  <strong>Action Beat:</strong> ${p.summary || 'No summary specified.'}
+                </div>
+                ${p.caption ? `<div class="caption-preview">📜 CAPTION BOX: "${p.caption}"</div>` : ''}
+                <div style="margin-top:6px;">${dlgHtml}</div>
+                <div style="display:flex; gap:12px; margin-top:8px; font-size:11px; color:var(--text-muted);">
+                  <span>👤 Characters: <strong>${(p.characters || []).join(', ') || 'None'}</strong></span>
+                  <span>⚔️ Objects/Props: <strong>${(p.objects || []).join(', ') || 'None'}</strong></span>
+                </div>
               </div>
-              <div style="font-size:11px; color:var(--text-muted); font-family:'JetBrains Mono',monospace;">
-                Hash: ${p.hash || 'N/A'} • Size: ${p.sizeKB || 0} KB • Audio: ${p.audioStatus}
+            `;
+          }).join('');
+        }
+      } else if (activeStageTab === 'PROMPTS') {
+        headerEl.textContent = `🎨 Latent Style Anchor, Turnaround Sheets & Expanded Image Prompts (${activeEngine})`;
+        artifactEl.innerHTML = `
+          <div class="script-card" style="margin-bottom:16px; border-color:var(--gold);">
+            <div style="font-size:12px; color:var(--gold); font-weight:700; margin-bottom:6px;">🎨 CONFIGURED SERIES ART STYLE ANCHOR (Prepended to all prompts)</div>
+            <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#e2e8f0; background:#090b10; padding:10px; border-radius:6px; margin-bottom:12px;">
+              ${project.artStyleAnchor || 'Default Graphic Novel Style'}
+            </div>
+            <div style="font-size:12px; color:var(--gold); font-weight:700; margin-bottom:8px;">🧍 LOCKED CHARACTER & WEAPON TURNAROUND MODEL SHEETS (00_Reference/sheets/)</div>
+            <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(220px, 1fr)); gap:12px;">
+              <div style="background:#090b10; padding:8px; border-radius:6px; border:1px solid var(--border); text-align:center;">
+                <img src="/workspace-ref/sheets/korvath_model_sheet.webp" style="width:100%; height:130px; object-fit:cover; border-radius:4px;" onerror="this.style.display='none'" />
+                <div style="font-size:11px; font-weight:600; margin-top:4px;">Korvath Turnaround Sheet</div>
               </div>
-              <div class="qa-chips">
-                <span class="qa-chip">✓ Face DNA</span>
-                <span class="qa-chip">✓ Wardrobe</span>
-                <span class="qa-chip">✓ 1-Sword Rule</span>
-                <span class="qa-chip">✓ 5-Finger Hand</span>
-                <span class="qa-chip">✓ Frazetta Ink</span>
+              <div style="background:#090b10; padding:8px; border-radius:6px; border:1px solid var(--border); text-align:center;">
+                <img src="/workspace-ref/sheets/natari_model_sheet.webp" style="width:100%; height:130px; object-fit:cover; border-radius:4px;" onerror="this.style.display='none'" />
+                <div style="font-size:11px; font-weight:600; margin-top:4px;">Natari Turnaround Sheet</div>
               </div>
-              <textarea class="prompt-box" id="prompt-${projectId}-${episodeId}-${p.panelId}">${p.prompt || ''}</textarea>
-              <div style="display:flex; justify-content:space-between; gap:8px; margin-top:4px;">
-                <button class="btn-gold" style="flex:1; justify-content:center;" onclick="triggerPanelRegen('${projectId}', '${episodeId}', ${p.panelId})">
-                  ⚡ Regenerate Panel #${p.panelId} (${activeEngine})
-                </button>
+              <div style="background:#090b10; padding:8px; border-radius:6px; border:1px solid var(--border); text-align:center;">
+                <img src="/workspace-ref/sheets/broadsword_model_sheet.webp" style="width:100%; height:130px; object-fit:cover; border-radius:4px;" onerror="this.style.display='none'" />
+                <div style="font-size:11px; font-weight:600; margin-top:4px;">42-Inch Iron Broadsword Sheet</div>
               </div>
             </div>
           </div>
+          ${(ep.panels || []).map(p => `
+            <div class="script-card">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+                <strong style="font-size:13px; color:var(--gold);">Panel #${String(p.panelId).padStart(2, '0')}: ${p.name} — Full Expanded Prompt</strong>
+                <span class="badge ${badgeClassForStatus(p.imageStatus)}">${p.imageStatus}</span>
+              </div>
+              <textarea class="prompt-box" id="prompt-${projectId}-${episodeId}-${p.panelId}" style="width:100%; min-height:84px;">${p.prompt || ''}</textarea>
+              <div style="display:flex; justify-content:flex-end; margin-top:6px;">
+                <button class="btn-gold" onclick="triggerPanelRegen('${projectId}', '${episodeId}', ${p.panelId})">
+                  ⚡ Dispatch Prompt to ${activeEngine} (Panel #${p.panelId})
+                </button>
+              </div>
+            </div>
+          `).join('')}
         `;
-      }).join('');
+      } else if (activeStageTab === 'VISUAL') {
+        headerEl.textContent = `🖼️ Rendered 2K Panels (${(ep.panels || []).length} / ${panelTotal}) & 8-Point Visual Continuity Gate`;
+        panelsGrid.innerHTML = (ep.panels || []).map(p => {
+          const imgSrc = p.webPreviewUrl ? `/workspace-docs/${p.webPreviewUrl}?t=${p.hash || Date.now()}` : '';
+          const imgHtml = imgSrc
+            ? `<img src="${imgSrc}" alt="Panel ${p.panelId}" loading="lazy" />`
+            : `<div style="color:var(--text-muted); font-size:12px;">[Panel #${p.panelId} — ${p.imageStatus}]</div>`;
 
-      document.getElementById('inspector-modal').classList.add('open');
+          return `
+            <div class="panel-inspector-card">
+              <div class="panel-img-box">${imgHtml}</div>
+              <div class="panel-details">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <strong style="font-size:14px;">Panel #${String(p.panelId).padStart(2, '0')} / ${panelTotal}: ${p.name}</strong>
+                  <span class="badge ${badgeClassForStatus(p.imageStatus)}">${p.imageStatus}</span>
+                </div>
+                <div style="font-size:11px; color:var(--text-muted); font-family:'JetBrains Mono',monospace;">
+                  Hash: ${p.hash || 'N/A'} • Size: ${p.sizeKB || 0} KB • Audio: ${p.audioStatus}
+                </div>
+                <div class="qa-chips">
+                  <span class="qa-chip">✓ Face DNA</span>
+                  <span class="qa-chip">✓ Wardrobe</span>
+                  <span class="qa-chip">✓ 1-Sword Rule</span>
+                  <span class="qa-chip">✓ 5-Finger Hand</span>
+                  <span class="qa-chip">✓ Style Anchor</span>
+                </div>
+                <textarea class="prompt-box" id="prompt-${projectId}-${episodeId}-${p.panelId}">${p.prompt || ''}</textarea>
+                <div style="display:flex; justify-content:space-between; gap:8px; margin-top:4px;">
+                  <button class="btn-gold" style="flex:1; justify-content:center;" onclick="triggerPanelRegen('${projectId}', '${episodeId}', ${p.panelId})">
+                    ⚡ Regenerate Panel #${p.panelId} (${activeEngine})
+                  </button>
+                </div>
+              </div>
+            </div>
+          `;
+        }).join('');
+      } else if (activeStageTab === 'VOICE') {
+        headerEl.textContent = `🎙️ Multi-Actor Voice Synthesis, Subterranean Kratos DSP & Panel Audio Mixes`;
+        actionsEl.innerHTML = `<a class="btn-link" href="/workspace-ref/voice_registry.json" target="_blank">📋 View 00_Reference/voice_registry.json</a>`;
+        artifactEl.innerHTML = (ep.panels || []).map(p => {
+          const audioUrl = p.audioPath
+            ? '/' + p.audioPath.replace(/^02_Assets\//, 'workspace-assets/').replace(/^docs\//, 'workspace-docs/')
+            : '';
+          const imgSrc = p.webPreviewUrl ? `/workspace-docs/${p.webPreviewUrl}?t=${p.hash || Date.now()}` : '';
+          const dlgHtml = (p.dialogue || []).length > 0
+            ? (p.dialogue || []).map(d => `<div class="dialogue-bubble-preview">🗣️ <strong>${d.speaker}:</strong> "${d.text}"</div>`).join('')
+            : `<span style="font-size:11px; color:var(--text-muted);">Narrator Caption Only (No character dialogue bubble)</span>`;
+
+          return `
+            <div class="script-card" style="display:grid; grid-template-columns: 160px 1fr; gap:14px; align-items:center;">
+              <div style="background:#090b10; border-radius:6px; overflow:hidden; border:1px solid var(--border); height:100px; display:flex; align-items:center; justify-content:center;">
+                ${imgSrc ? `<img src="${imgSrc}" style="width:100%; height:100%; object-fit:cover;" />` : `<span style="font-size:11px; color:var(--text-muted);">Panel #${p.panelId}</span>`}
+              </div>
+              <div>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+                  <strong style="font-size:14px; color:#fff;">Panel #${String(p.panelId).padStart(2, '0')}: ${p.name}</strong>
+                  <span class="badge ${badgeClassForStatus(p.audioStatus)}">Audio: ${p.audioStatus}</span>
+                </div>
+                ${p.caption ? `<div style="font-size:12px; color:#fef08a; margin-bottom:6px;">🎙️ <strong>Narrator (Brian):</strong> "${p.caption}"</div>` : ''}
+                <div style="margin-bottom:8px;">${dlgHtml}</div>
+                ${audioUrl ? `
+                  <div style="display:flex; align-items:center; gap:10px;">
+                    <audio controls preload="none" src="${audioUrl}?t=${Date.now()}" style="height:32px; flex:1;"></audio>
+                    <span style="font-size:11px; font-family:'JetBrains Mono',monospace; color:var(--text-muted);">${p.audioPath}</span>
+                  </div>
+                ` : `<div style="font-size:12px; color:#fbbf24;">🔒 Audio synthesis locked until Gate B (8-Point Visual QA Gate) is approved.</div>`}
+              </div>
+            </div>
+          `;
+        }).join('');
+      } else if (activeStageTab === 'VIDEO') {
+        headerEl.textContent = `🎬 Motion Comic Camera Staging, MPEG-TS Segments & Master MP4 Release`;
+        const masterVidUrl = ep.outputs && ep.outputs.masterVideoPath
+          ? '/' + ep.outputs.masterVideoPath.replace(/^docs\//, 'workspace-docs/').replace(/^02_Assets\//, 'workspace-assets/')
+          : '';
+        const grokVidUrl = ep.outputs && ep.outputs.grokVideoPath
+          ? '/' + ep.outputs.grokVideoPath.replace(/^docs\//, 'workspace-docs/').replace(/^02_Assets\//, 'workspace-assets/')
+          : '';
+
+        artifactEl.innerHTML = `
+          <div class="script-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+              <div>
+                <strong style="font-size:16px; color:var(--gold);">🎬 Master Motion Comic Release Deliverables</strong>
+                <div style="font-size:12px; color:var(--text-muted); margin-top:2px;">
+                  Resolution: ${ep.outputs?.resolution || '1280x720 @ 30fps'} • Duration: ${ep.outputs?.durationSeconds ? ep.outputs.durationSeconds + 's' : 'Pending Render'}
+                </div>
+              </div>
+              <div style="display:flex; gap:8px;">
+                ${ep.outputs?.webReaderPath ? `<a class="btn-link" href="/workspace-docs/index.html" target="_blank">📖 Open Comic Web Reader</a>` : ''}
+                ${ep.outputs?.webReviewPath ? `<a class="btn-link" href="/workspace-${ep.outputs.webReviewPath}" target="_blank">🖼️ Open Full QA Gallery</a>` : ''}
+              </div>
+            </div>
+            ${masterVidUrl ? `
+              <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); gap:16px;">
+                <div style="background:#090b10; padding:12px; border-radius:8px; border:1px solid var(--border);">
+                  <div style="font-size:13px; font-weight:700; color:#fff; margin-bottom:8px;">⚔️ Master Meta AI 2K Motion Comic (${ep.outputs.masterVideoPath})</div>
+                  <video controls preload="metadata" src="${masterVidUrl}?t=${Date.now()}" style="width:100%; border-radius:6px; background:#000;"></video>
+                </div>
+                ${grokVidUrl ? `
+                  <div style="background:#090b10; padding:12px; border-radius:8px; border:1px solid var(--border);">
+                    <div style="font-size:13px; font-weight:700; color:#fff; margin-bottom:8px;">🚀 Alternate Grok Motion Comic (${ep.outputs.grokVideoPath})</div>
+                    <video controls preload="metadata" src="${grokVidUrl}?t=${Date.now()}" style="width:100%; border-radius:6px; background:#000;"></video>
+                  </div>
+                ` : ''}
+              </div>
+            ` : `
+              <div style="padding:24px; text-align:center; color:#fbbf24; background:#090b10; border-radius:8px; border:1px dashed var(--amber);">
+                🔒 Master Motion Comic MP4 assembly is currently locked behind upstream Quality Gates (${ep.currentStage}).
+              </div>
+            `}
+          </div>
+        `;
+      }
     }
 
     function closeInspector() {

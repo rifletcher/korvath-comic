@@ -207,7 +207,7 @@ func slugify(s string) string {
 	return strings.Trim(slug, "-")
 }
 
-func (s *Store) CreateProject(title, subtitle, genre, artStyleAnchor, defaultImageEngine string, targetEpisodeCount, defaultPanelsPerEpisode int, scaffoldAllEpisodes bool) (*models.ProjectWithEpisodes, error) {
+func (s *Store) CreateProject(title, subtitle, genre, artStyleAnchor, defaultImageEngine string, targetEpisodeCount, defaultPanelsPerEpisode int, invariants []string, scaffoldAllEpisodes bool) (*models.ProjectWithEpisodes, error) {
 	s.mu.Lock()
 	defer s.mu.Unlock()
 
@@ -247,6 +247,14 @@ func (s *Store) CreateProject(title, subtitle, genre, artStyleAnchor, defaultIma
 		epIDs = append(epIDs, fmt.Sprintf("ep%02d", i))
 	}
 
+	if len(invariants) == 0 {
+		invariants = []string{
+			"Single Weapon Invariant: Hero carries strictly their canonical weapon",
+			"Anti-Claw Hand Anatomy: 5-fingered human hands on all characters holding relics",
+			"Fail-Closed Voice Polarity: Antagonist slurs never assigned to hero or narrator",
+		}
+	}
+
 	proj := models.Project{
 		ID:                      projID,
 		Title:                   title,
@@ -260,12 +268,8 @@ func (s *Store) CreateProject(title, subtitle, genre, artStyleAnchor, defaultIma
 		CreatedAt:               now,
 		UpdatedAt:               now,
 		CoverImage:              "docs/assets/ep1_meta/panel_01.webp",
-		Invariants: []string{
-			fmt.Sprintf("Series Arc: %d Planned Episodes", targetEpisodeCount),
-			fmt.Sprintf("Default Format: %d Panels per Episode", defaultPanelsPerEpisode),
-			"8-Point Director Visual Continuity Gate Active",
-		},
-		Episodes: epIDs,
+		Invariants:              invariants,
+		Episodes:                epIDs,
 	}
 
 	projBytes, _ := json.MarshalIndent(proj, "", "  ")
@@ -289,7 +293,7 @@ func (s *Store) CreateProject(title, subtitle, genre, artStyleAnchor, defaultIma
 	}, nil
 }
 
-func (s *Store) UpdateProjectConfig(projectID, genre, artStyleAnchor, defaultImageEngine string, targetEpisodeCount, defaultPanelsPerEpisode int, scaffoldMissingEpisodes bool) (*models.Project, error) {
+func (s *Store) UpdateProjectConfig(projectID, genre, artStyleAnchor, defaultImageEngine string, targetEpisodeCount, defaultPanelsPerEpisode int, invariants []string, scaffoldMissingEpisodes bool) (*models.Project, error) {
 	s.mu.Lock()
 	defer s.mu.Unlock()
 
@@ -317,6 +321,9 @@ func (s *Store) UpdateProjectConfig(projectID, genre, artStyleAnchor, defaultIma
 	}
 	if defaultPanelsPerEpisode > 0 {
 		proj.DefaultPanelsPerEpisode = defaultPanelsPerEpisode
+	}
+	if invariants != nil {
+		proj.Invariants = invariants
 	}
 
 	if scaffoldMissingEpisodes && proj.TargetEpisodeCount > len(proj.Episodes) {

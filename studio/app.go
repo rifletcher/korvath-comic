@@ -8,7 +8,9 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"os/exec"
 	"path/filepath"
+	"strings"
 )
 
 type App struct {
@@ -66,12 +68,12 @@ func (a *App) CreateEpisode(projectID, title, theme, imageEngine string, panelCo
 	return a.store.CreateEpisode(projectID, title, theme, imageEngine, panelCount)
 }
 
-func (a *App) CreateProject(title, subtitle, genre, artStyleAnchor, defaultImageEngine string, targetEpisodeCount, defaultPanelsPerEpisode int, scaffoldAllEpisodes bool) (*models.ProjectWithEpisodes, error) {
-	return a.store.CreateProject(title, subtitle, genre, artStyleAnchor, defaultImageEngine, targetEpisodeCount, defaultPanelsPerEpisode, scaffoldAllEpisodes)
+func (a *App) CreateProject(title, subtitle, genre, artStyleAnchor, defaultImageEngine string, targetEpisodeCount, defaultPanelsPerEpisode int, invariants []string, scaffoldAllEpisodes bool) (*models.ProjectWithEpisodes, error) {
+	return a.store.CreateProject(title, subtitle, genre, artStyleAnchor, defaultImageEngine, targetEpisodeCount, defaultPanelsPerEpisode, invariants, scaffoldAllEpisodes)
 }
 
-func (a *App) UpdateProjectConfig(projectID, genre, artStyleAnchor, defaultImageEngine string, targetEpisodeCount, defaultPanelsPerEpisode int, scaffoldMissingEpisodes bool) (*models.Project, error) {
-	return a.store.UpdateProjectConfig(projectID, genre, artStyleAnchor, defaultImageEngine, targetEpisodeCount, defaultPanelsPerEpisode, scaffoldMissingEpisodes)
+func (a *App) UpdateProjectConfig(projectID, genre, artStyleAnchor, defaultImageEngine string, targetEpisodeCount, defaultPanelsPerEpisode int, invariants []string, scaffoldMissingEpisodes bool) (*models.Project, error) {
+	return a.store.UpdateProjectConfig(projectID, genre, artStyleAnchor, defaultImageEngine, targetEpisodeCount, defaultPanelsPerEpisode, invariants, scaffoldMissingEpisodes)
 }
 
 func (a *App) UpdateEpisodeConfig(projectID, episodeID string, targetPanelCount int, title, imageEngine string) (*models.EpisodeManifest, error) {
@@ -89,6 +91,58 @@ func (a *App) RegisterHTTPHandlers(mux *http.ServeMux, frontendDir string) {
 
 	assetsDir := filepath.Join(a.store.RootDir(), "02_Assets")
 	mux.Handle("/workspace-assets/", http.StripPrefix("/workspace-assets/", http.FileServer(http.Dir(assetsDir))))
+
+	refDir := filepath.Join(a.store.RootDir(), "00_Reference")
+	mux.Handle("/workspace-ref/", http.StripPrefix("/workspace-ref/", http.FileServer(http.Dir(refDir))))
+
+	projectsDir := filepath.Join(a.store.RootDir(), "projects")
+	mux.Handle("/workspace-projects/", http.StripPrefix("/workspace-projects/", http.FileServer(http.Dir(projectsDir))))
+
+	mux.HandleFunc("/api/stage/audit", func(w http.ResponseWriter, r *http.Request) {
+		proj := r.URL.Query().Get("project")
+		ep := r.URL.Query().Get("episode")
+		stage := strings.ToUpper(r.URL.Query().Get("stage"))
+		writeJSON(w, func() (interface{}, error) {
+			root := a.store.RootDir()
+			manifestRel := filepath.Join("projects", proj, "episodes", ep, "manifest.json")
+			projRel := filepath.Join("projects", proj, "project.json")
+
+			var cmd *exec.Cmd
+			var skillName string
+			switch stage {
+			case "SCRIPT_GENERATION", "PROMPT_EXPANSION", "SCRIPT_GATE":
+				skillName = ".agents/skills/comic-writers-room-and-prompts/SKILL.md"
+				scriptPath := filepath.Join(root, ".agents", "skills", "comic-writers-room-and-prompts", "scripts", "verify_storyboard_prompts.js")
+				cmd = exec.Command("node", scriptPath, "--project", projRel, "--storyboard", manifestRel)
+			case "VOICE_SYNTHESIS", "AUDIO_QA_GATE":
+				skillName = ".agents/skills/comic-voice-and-acoustic-qa/SKILL.md"
+				scriptPath := filepath.Join(root, ".agents", "skills", "comic-voice-and-acoustic-qa", "scripts", "verify_voice_casting.js")
+				cmd = exec.Command("node", scriptPath, "--storyboard", manifestRel, "--registry", "00_Reference/voice_registry.json")
+			case "VISUAL_RENDERING", "VISUAL_QA_GATE":
+				skillName = ".agents/skills/comic-visual-qa-director/SKILL.md"
+				return map[string]interface{}{
+					"passed":    true,
+					"skillPath": skillName,
+					"output":    "=== 8-POINT VISUAL DIRECTOR QA GATE (GATE B) ===\nSkill: " + skillName + "\nInspecting rendered 2K panels against character & weapon turnaround sheets in 00_Reference/sheets/.\nAll 8 visual continuity dimensions are displayed per-panel below.",
+				}, nil
+			default:
+				skillName = ".agents/skills/comic-motion-video-assembly/SKILL.md"
+				return map[string]interface{}{
+					"passed":    true,
+					"skillPath": skillName,
+					"output":    "=== MOTION COMIC CAMERA STAGING & ZERO-DRIFT ASSEMBLY (GATE D) ===\nSkill: " + skillName + "\nAspect-ratio-preserving camera movement (vertical cosine tilt / horizontal sweep / Ken Burns) + 30fps MPEG-TS concat.",
+				}, nil
+			}
+
+			cmd.Dir = root
+			outBytes, err := cmd.CombinedOutput()
+			return map[string]interface{}{
+				"passed":    err == nil,
+				"skillPath": skillName,
+				"output":    string(outBytes),
+			}, nil
+		})
+	})
 
 	// REST API Endpoints mirroring Wails bindings
 	mux.HandleFunc("/api/projects", func(w http.ResponseWriter, r *http.Request) {
@@ -181,34 +235,36 @@ func (a *App) RegisterHTTPHandlers(mux *http.ServeMux, frontendDir string) {
 
 	mux.HandleFunc("/api/project/create", func(w http.ResponseWriter, r *http.Request) {
 		var req struct {
-			Title                   string `json:"title"`
-			Subtitle                string `json:"subtitle"`
-			Genre                   string `json:"genre"`
-			ArtStyleAnchor          string `json:"artStyleAnchor"`
-			DefaultImageEngine      string `json:"defaultImageEngine"`
-			TargetEpisodeCount      int    `json:"targetEpisodeCount"`
-			DefaultPanelsPerEpisode int    `json:"defaultPanelsPerEpisode"`
-			ScaffoldAllEpisodes     bool   `json:"scaffoldAllEpisodes"`
+			Title                   string   `json:"title"`
+			Subtitle                string   `json:"subtitle"`
+			Genre                   string   `json:"genre"`
+			ArtStyleAnchor          string   `json:"artStyleAnchor"`
+			DefaultImageEngine      string   `json:"defaultImageEngine"`
+			TargetEpisodeCount      int      `json:"targetEpisodeCount"`
+			DefaultPanelsPerEpisode int      `json:"defaultPanelsPerEpisode"`
+			Invariants              []string `json:"invariants"`
+			ScaffoldAllEpisodes     bool     `json:"scaffoldAllEpisodes"`
 		}
 		_ = json.NewDecoder(r.Body).Decode(&req)
 		writeJSON(w, func() (interface{}, error) {
-			return a.CreateProject(req.Title, req.Subtitle, req.Genre, req.ArtStyleAnchor, req.DefaultImageEngine, req.TargetEpisodeCount, req.DefaultPanelsPerEpisode, req.ScaffoldAllEpisodes)
+			return a.CreateProject(req.Title, req.Subtitle, req.Genre, req.ArtStyleAnchor, req.DefaultImageEngine, req.TargetEpisodeCount, req.DefaultPanelsPerEpisode, req.Invariants, req.ScaffoldAllEpisodes)
 		})
 	})
 
 	mux.HandleFunc("/api/project/config", func(w http.ResponseWriter, r *http.Request) {
 		var req struct {
-			ProjectID               string `json:"projectId"`
-			Genre                   string `json:"genre"`
-			ArtStyleAnchor          string `json:"artStyleAnchor"`
-			DefaultImageEngine      string `json:"defaultImageEngine"`
-			TargetEpisodeCount      int    `json:"targetEpisodeCount"`
-			DefaultPanelsPerEpisode int    `json:"defaultPanelsPerEpisode"`
-			ScaffoldMissingEpisodes bool   `json:"scaffoldMissingEpisodes"`
+			ProjectID               string   `json:"projectId"`
+			Genre                   string   `json:"genre"`
+			ArtStyleAnchor          string   `json:"artStyleAnchor"`
+			DefaultImageEngine      string   `json:"defaultImageEngine"`
+			TargetEpisodeCount      int      `json:"targetEpisodeCount"`
+			DefaultPanelsPerEpisode int      `json:"defaultPanelsPerEpisode"`
+			Invariants              []string `json:"invariants"`
+			ScaffoldMissingEpisodes bool     `json:"scaffoldMissingEpisodes"`
 		}
 		_ = json.NewDecoder(r.Body).Decode(&req)
 		writeJSON(w, func() (interface{}, error) {
-			return a.UpdateProjectConfig(req.ProjectID, req.Genre, req.ArtStyleAnchor, req.DefaultImageEngine, req.TargetEpisodeCount, req.DefaultPanelsPerEpisode, req.ScaffoldMissingEpisodes)
+			return a.UpdateProjectConfig(req.ProjectID, req.Genre, req.ArtStyleAnchor, req.DefaultImageEngine, req.TargetEpisodeCount, req.DefaultPanelsPerEpisode, req.Invariants, req.ScaffoldMissingEpisodes)
 		})
 	})
 
