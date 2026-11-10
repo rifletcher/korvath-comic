@@ -14,8 +14,8 @@
     "korvath": {
       "name": "Korvath the Barbarian",
       "engine": "elevenlabs",
-      "voiceId": "fX7UqA143pM34zT6bVzF",
-      "actorName": "Chris (Kratos/Conan)",
+      "voiceId": "nPczCjzI2devNBz1zQrb",
+      "actorName": "Brian (Subterranean Kratos)",
       "persona": "Guttural, gravelly, menacing, unyielding northern warrior",
       "defaultStability": 0.22,
       "defaultStyle": 0.85,
