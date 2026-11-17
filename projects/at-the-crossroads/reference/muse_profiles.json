@@ -1,0 +1,24 @@
+{
+  "_about": "Used only when a panel renders on Muse (fal). The Kid and the Devil change look by track, so their sheet is picked per episode.",
+  "characters": {
+    "kid": {
+      "aliases": ["the kid", "boy", "young man", "preacher"],
+      "sheet": "the_kid_early_years.webp",
+      "sheetsByEpisode": {
+        "ep01": "the_kid_childhood.webp",
+        "ep06": "the_kid_superstar.webp", "ep07": "the_kid_superstar.webp", "ep08": "the_kid_superstar.webp",
+        "ep09": "the_kid_preacher.webp", "ep10": "the_kid_preacher.webp"
+      }
+    },
+    "devil": {
+      "aliases": ["shadow", "the devil"],
+      "sheet": "the_devil_shadow.webp",
+      "sheetsByEpisode": { "ep09": "the_devil_rider.webp" }
+    },
+    "bluesman": { "aliases": ["old bluesman", "the bluesman"], "sheet": "the_devil_bluesman.webp" },
+    "rider": { "aliases": ["the rider"], "sheet": "the_devil_rider.webp" },
+    "mother": { "aliases": ["his mother", "mama"], "sheet": "the_mother.webp" },
+    "label_man": { "aliases": ["label man", "record executive"], "sheet": "the_label_man.webp" },
+    "old_timer": { "aliases": ["old timer", "old-timer"], "sheet": "the_old_timer.webp" }
+  }
+}

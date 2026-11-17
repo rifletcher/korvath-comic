@@ -1,0 +1,16 @@
+{
+  "speaker": "Narrator",
+  "character": "narrator",
+  "actorName": "Brian",
+  "voiceId": "nPczCjzI2devNBz1zQrb",
+  "edgeVoice": "",
+  "engineUsed": "ElevenLabs",
+  "elevenLabsError": "",
+  "textToSpeak": "The mountain came down to bury its thousand-year-old sins.",
+  "stability": 0.3,
+  "style": 0.65,
+  "dspChain": "volume=1.25",
+  "reusedTake": false,
+  "creditsUsed": 58,
+  "synthesizedAt": "2026-11-16T07:18:22.978Z"
+}

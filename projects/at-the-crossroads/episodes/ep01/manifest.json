@@ -1,0 +1,330 @@
+{
+  "projectId": "at-the-crossroads",
+  "episodeId": "ep01",
+  "episodeNumber": 1,
+  "title": "Track 1: Forty Dollars and a Six-String",
+  "theme": "Forty Dollars and a Six-String",
+  "targetPanelCount": 10,
+  "currentStage": "VOICE_SYNTHESIS",
+  "overallProgress": 50,
+  "updatedAt": "2026-11-16T19:22:00.815Z",
+  "outputs": {
+    "resolution": "10 imported panels • ready for voices"
+  },
+  "stages": [
+    {
+      "id": "SCRIPT_GENERATION",
+      "name": "1. Writers Room Script",
+      "status": "COMPLETED",
+      "progress": 100
+    },
+    {
+      "id": "PROMPT_EXPANSION",
+      "name": "2. Latent Anchor & Guardrails",
+      "status": "COMPLETED",
+      "progress": 100
+    },
+    {
+      "id": "VISUAL_RENDERING",
+      "name": "3. Meta AI 2K Panel Rendering",
+      "status": "COMPLETED",
+      "progress": 100
+    },
+    {
+      "id": "VOICE_SYNTHESIS",
+      "name": "4. Multi-Actor Voice & DSP",
+      "status": "PENDING",
+      "progress": 0
+    },
+    {
+      "id": "VIDEO_ASSEMBLY",
+      "name": "5. Motion Comic Camera & Concat",
+      "status": "LOCKED_BY_GATE",
+      "progress": 0
+    },
+    {
+      "id": "READY_FOR_RELEASE",
+      "name": "6. Master Release Bundle",
+      "status": "LOCKED_BY_GATE",
+      "progress": 0
+    }
+  ],
+  "gates": [
+    {
+      "id": "SCRIPT_GATE",
+      "name": "Gate A: Storyboard & Dialogue Lock",
+      "afterStage": "SCRIPT_GENERATION",
+      "status": "APPROVED",
+      "approvedAt": "2026-11-16T19:22:00.815Z",
+      "notes": "Imported script from At the Crossroads (Take 2)."
+    },
+    {
+      "id": "VISUAL_QA_GATE",
+      "name": "Gate B: 8-Point Director Visual Continuity Gate",
+      "afterStage": "VISUAL_RENDERING",
+      "status": "APPROVED",
+      "approvedAt": "2026-11-16T19:22:00.815Z",
+      "notes": "Imported panels already approved in the original project."
+    },
+    {
+      "id": "AUDIO_QA_GATE",
+      "name": "Gate C: 5-Point Acoustic & Polarity Gate",
+      "afterStage": "VOICE_SYNTHESIS",
+      "status": "LOCKED",
+      "notes": "Awaiting voice synthesis."
+    }
+  ],
+  "panels": [
+    {
+      "panelId": 1,
+      "name": "",
+      "act": "Track 1",
+      "summary": "Late 1970s West. A dilapidated farmhouse surrounded by dry, cracked dirt fields.",
+      "caption": "He was born dirt-poor in the late-1970s South...",
+      "dialogue": [],
+      "characters": [],
+      "objects": [],
+      "shotType": "Extreme Wide Shot, low angle",
+      "prompt": "Extreme wide shot, low angle. A dilapidated farmhouse surrounded by dry, cracked dirt fields in the late 1970s West. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, muted but high-contrast cinematic lighting, clean cel and gradient shading, no messy watercolor wash, no blur. Include a torn paper caption box at the top with the exact text: \"He was born dirt-poor in the late-1970s South...\". Use a messy handwritten marker font.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep01/panels/panel_01.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep01/panels/panel_01.webp",
+      "sizeKB": 1173.1,
+      "hash": "2fccbb51",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_01_Forty_Dollars_and_a_Six_String/selected/track_01_panel_01.webp",
+      "originalCaption": "He was born dirt-poor in the late-1970s South..."
+    },
+    {
+      "panelId": 2,
+      "name": "A young boy eats a meager plate",
+      "act": "Track 1",
+      "summary": "A young boy eats a meager plate of beans. His father slumps in a chair nearby, rubbing his broken back.",
+      "caption": "...a farmer's kid with hand-me-downs and beans on the table and a father who broke his back keeping them fed.",
+      "dialogue": [],
+      "characters": [
+        "kid",
+        "father"
+      ],
+      "objects": [],
+      "shotType": "Medium Shot, interior",
+      "prompt": "Medium shot, interior. Exactly two people in a poor rustic farmhouse kitchen: a single lean, dirt-smudged 8-year-old boy with messy tousled brown hair, wearing oversized faded hand-me-down denim overalls and a worn beige shirt, eating a meager bowl of beans with an old spoon at a rough wooden table. Beside him sits his exhausted father in dirty overalls slumping in a chair and rubbing his broken, aching back. No instruments. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, muted but high-contrast cinematic lighting, clean cel and gradient shading, no messy watercolor wash, no blur. Include a torn paper caption box at the top with the exact text: \"...a farmer's kid with hand-me-downs and beans on the table and a father who broke his back keeping them fed.\". Use a messy handwritten marker font.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep01/panels/panel_02.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep01/panels/panel_02.webp",
+      "sizeKB": 869.6,
+      "hash": "90b5345d",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_01_Forty_Dollars_and_a_Six_String/selected/track_01_panel_02.webp",
+      "originalCaption": "...a farmer's kid with hand-me-downs and beans on the table and a father who broke his back keeping them fed."
+    },
+    {
+      "panelId": 3,
+      "name": "The Kid holds a cheap pawn-shop guitar,",
+      "act": "Track 1",
+      "summary": "The Kid holds a cheap pawn-shop guitar, fingers pressing hard on the strings. An old radio is nearby.",
+      "caption": "By twelve he had a pawn-shop guitar and taught himself off the radio.",
+      "dialogue": [],
+      "characters": [
+        "kid"
+      ],
+      "objects": [],
+      "shotType": "Close-up on hands and guitar",
+      "prompt": "A scruffy 12-year-old boy, lean and dirt-smudged, messy brown hair, wearing oversized faded hand-me-down denim overalls and a worn cotton shirt, intense focused expression, holding a beat-up pawn-shop acoustic guitar. Close-up on a 12-year-old boy's calloused hands pressing chords on a cheap, beat-up acoustic guitar. An old crackling AM radio is in the blurred background. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, muted but high-contrast cinematic lighting, clean cel and gradient shading, no messy watercolor wash, no blur. Include a torn paper caption box at the top with the exact text: \"By twelve he had a pawn-shop guitar and taught himself off the radio.\". Use a messy handwritten marker font.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep01/panels/panel_03.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep01/panels/panel_03.webp",
+      "sizeKB": 780.8,
+      "hash": "8827e546",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_01_Forty_Dollars_and_a_Six_String/selected/track_01_panel_03.webp",
+      "originalCaption": "By twelve he had a pawn-shop guitar and taught himself off the radio."
+    },
+    {
+      "panelId": 4,
+      "name": "The Kid is a teenager now, standing",
+      "act": "Track 1",
+      "summary": "The Kid is a teenager now, standing near a rusted pickup truck. Older farmhands are laughing at him.",
+      "caption": "People laughed when he said he'd get out.",
+      "dialogue": [],
+      "characters": [
+        "kid"
+      ],
+      "objects": [],
+      "shotType": "Eye-level, over-the-shoulder",
+      "prompt": "Eye-level shot. A lean, scruffy 19-year-old young man with tousled dark brown hair, sharp hungry facial features, stubble, wearing a faded denim trucker jacket with rolled sleeves over a plain white t-shirt, beat-up jeans, holding a battered sunburst acoustic guitar with worn lacquer. A scruffy teenager in faded denim standing near a rusted pickup truck. Older farmhands are laughing at him, holding cheap beers. Dry dusty Western setting. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, muted but high-contrast cinematic lighting, clean cel and gradient shading, no messy watercolor wash, no blur. Include a torn paper caption box at the top with the exact text: \"People laughed when he said he'd get out.\". Use a messy handwritten marker font.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep01/panels/panel_04.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep01/panels/panel_04.webp",
+      "sizeKB": 1066.2,
+      "hash": "0fbdccf4",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_01_Forty_Dollars_and_a_Six_String/selected/track_01_panel_04.webp",
+      "originalCaption": "People laughed when he said he'd get out."
+    },
+    {
+      "panelId": 5,
+      "name": "The Kid is glaring, illuminated by a",
+      "act": "Track 1",
+      "summary": "The Kid is glaring, illuminated by a TV screen showing a country star. Resentment burns in his eyes.",
+      "caption": "Big stars on the TV had come from where he came from, ate what he ate, and made it anyway - and that's what sat wrong with him. He'd do anything to be one of them.",
+      "dialogue": [],
+      "characters": [
+        "kid"
+      ],
+      "objects": [],
+      "shotType": "Extreme Close-up on The Kid's eyes",
+      "prompt": "A lean, scruffy 19-year-old young man with tousled dark brown hair, sharp hungry facial features, stubble, wearing a faded denim trucker jacket with rolled sleeves over a plain white t-shirt, beat-up jeans, holding a battered sunburst acoustic guitar with worn lacquer. Extreme Close-up on a young man's eyes, illuminated by the harsh blue-white static glow of an old TV screen. His expression shows fierce, burning, resentful ambition. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, muted but high-contrast cinematic lighting, clean cel and gradient shading, no messy watercolor wash, no blur. Include a torn paper caption box at the top with the exact text: \"Big stars on the TV had come from where he came from, ate what he ate, and made it anyway - and that's what sat wrong with him. He'd do anything to be one of them.\". Use a messy handwritten marker font.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep01/panels/panel_05.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep01/panels/panel_05.webp",
+      "sizeKB": 973.2,
+      "hash": "491b3a77",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_01_Forty_Dollars_and_a_Six_String/selected/track_01_panel_05.webp",
+      "originalCaption": "Big stars on the TV had come from where he came from, ate what he ate, and made it anyway - and that's what sat wrong with him. He'd do anything to be one of them."
+    },
+    {
+      "panelId": 6,
+      "name": "The Kid takes his guitar off the",
+      "act": "Track 1",
+      "summary": "The Kid takes his guitar off the wall hook.",
+      "caption": "He took the guitar off the wall...",
+      "dialogue": [],
+      "characters": [
+        "kid"
+      ],
+      "objects": [],
+      "shotType": "Low angle, interior",
+      "prompt": "A lean, scruffy 19-year-old young man with tousled dark brown hair, sharp hungry facial features, stubble, wearing a faded denim trucker jacket with rolled sleeves over a plain white t-shirt, beat-up jeans, holding a battered sunburst acoustic guitar with worn lacquer. Low angle, interior nighttime. A scruffy young man with a canvas duffel bag reaching up to take an acoustic guitar off a wooden wall hook. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, muted but high-contrast cinematic lighting, clean cel and gradient shading, no messy watercolor wash, no blur. Include a torn paper caption box at the top with the exact text: \"He took the guitar off the wall...\". Use a messy handwritten marker font.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep01/panels/panel_06.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep01/panels/panel_06.webp",
+      "sizeKB": 857.6,
+      "hash": "ea538008",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_01_Forty_Dollars_and_a_Six_String/selected/track_01_panel_06.webp",
+      "originalCaption": "He took the guitar off the wall..."
+    },
+    {
+      "panelId": 7,
+      "name": "His mother stands in the doorway, blocking",
+      "act": "Track 1",
+      "summary": "His mother stands in the doorway, blocking his path. She looks deeply at her son who is holding a duffel bag and guitar.",
+      "caption": "...but his mother caught him at the door...",
+      "dialogue": [],
+      "characters": [
+        "mother"
+      ],
+      "objects": [],
+      "shotType": "Medium Two-Shot",
+      "prompt": "Medium Two-Shot, interior farmhouse doorway at night. A tired, hardworking 50-year-old Southern woman with grey-streaked hair tied back in a bun, deeply lined gentle face marked by grief and labor, wearing a faded floral cotton apron over a simple blue dress, shorter in stature. Facing her in the doorway is her tall, lean, scruffy 19-year-old son, standing visibly a head taller than her and looking down at her with a conflicted expression, with tousled dark brown hair, light stubble, wearing a faded blue denim trucker jacket over a white t-shirt and beat-up jeans, holding a canvas duffel bag. A full-sized dreadnought acoustic guitar is slung vertically across his back with its long, full-scale wooden neck and six-peg headstock rising tall and straight above his shoulder with realistic, correct proportions (no tiny or foreshortened neck). Moody shadows and warm lantern light. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, muted but high-contrast cinematic lighting, clean cel and gradient shading, no messy watercolor wash, no blur. Include a torn paper caption box at the top with the exact text: \"...but his mother caught him at the door...\". Use a messy handwritten marker font.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep01/panels/panel_07.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep01/panels/panel_07.webp",
+      "sizeKB": 672.4,
+      "hash": "4fb96f43",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_01_Forty_Dollars_and_a_Six_String/selected/track_01_panel_07.webp",
+      "originalCaption": "...but his mother caught him at the door..."
+    },
+    {
+      "panelId": 8,
+      "name": "She reaches out, resting a hand on",
+      "act": "Track 1",
+      "summary": "She reaches out, resting a hand on his chest.",
+      "caption": "...and told him wanting it that bad would cost more than he knew.",
+      "dialogue": [],
+      "characters": [],
+      "objects": [],
+      "shotType": "Close-up on the Mother",
+      "prompt": "Close-up Two-Shot, interior farmhouse doorway at night. A tired, hardworking 50-year-old Southern woman with grey-streaked hair tied back in a bun, sorrowful lined face, reaching out and resting her weathered hand flat directly against her 19-year-old son's chest, right over his heart on his denim jacket. The tall, lean 19-year-old son has tousled dark brown hair and stubble, looking down at her with a solemn, conflicted gaze, with an acoustic guitar slung securely across his back behind his shoulder (guitar strap across chest, no guitar blocking chest). Emotional, dramatic lantern lighting in deep shadows. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, muted but high-contrast cinematic lighting, clean cel and gradient shading, no messy watercolor wash, no blur. Include a torn paper caption box at the top with the exact text: \"...and told him wanting it that bad would cost more than he knew.\". Use a messy handwritten marker font.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep01/panels/panel_08.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep01/panels/panel_08.webp",
+      "sizeKB": 749.9,
+      "hash": "8737d3d1",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_01_Forty_Dollars_and_a_Six_String/selected/track_01_panel_08.webp",
+      "originalCaption": "...and told him wanting it that bad would cost more than he knew."
+    },
+    {
+      "panelId": 9,
+      "name": "The Kid leans down and kisses his",
+      "act": "Track 1",
+      "summary": "The Kid leans down and kisses his mother's forehead gently.",
+      "caption": "He kissed her forehead...",
+      "dialogue": [],
+      "characters": [
+        "kid",
+        "mother"
+      ],
+      "objects": [],
+      "shotType": "Profile Shot",
+      "prompt": "Profile shot. A lean, scruffy 19-year-old young man with tousled dark brown hair, sharp hungry facial features, stubble, wearing a faded denim trucker jacket with rolled sleeves over a plain white t-shirt, beat-up jeans, holding a battered sunburst acoustic guitar with worn lacquer. A young scruffy man with a canvas duffel bag kissing his weary mother's forehead in a dark farmhouse doorway. Emotional, cinematic lighting. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, muted but high-contrast cinematic lighting, clean cel and gradient shading, no messy watercolor wash, no blur. Include a torn paper caption box at the top with the exact text: \"He kissed her forehead...\". Use a messy handwritten marker font.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep01/panels/panel_09.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep01/panels/panel_09.webp",
+      "sizeKB": 782.8,
+      "hash": "814affc8",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_01_Forty_Dollars_and_a_Six_String/selected/track_01_panel_09.webp",
+      "originalCaption": "He kissed her forehead..."
+    },
+    {
+      "panelId": 10,
+      "name": "Driving at dawn",
+      "act": "Track 1",
+      "summary": "Driving at dawn. A guitar and jeans with forty dollars sit on the passenger seat.",
+      "caption": "...and rolled past the county line at dawn with forty dollars in his jeans and a six-string on the seat, sensing something was already waiting down the road.",
+      "dialogue": [],
+      "characters": [],
+      "objects": [],
+      "shotType": "Dashboard POV",
+      "prompt": "Dashboard POV looking out the windshield of a beat-up truck at a dusty Western highway at dawn. On the passenger seat sits an acoustic guitar and a pair of folded denim jeans with forty dollars sticking out of the pocket. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, muted but high-contrast cinematic lighting, clean cel and gradient shading, no messy watercolor wash, no blur. Include a torn paper caption box at the top with the exact text: \"...and rolled past the county line at dawn with forty dollars in his jeans and a six-string on the seat, sensing something was already waiting down the road.\". Use a messy handwritten marker font.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep01/panels/panel_10.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep01/panels/panel_10.webp",
+      "sizeKB": 888,
+      "hash": "c84eb0f4",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_01_Forty_Dollars_and_a_Six_String/selected/track_01_panel_10.webp",
+      "originalCaption": "...and rolled past the county line at dawn with forty dollars in his jeans and a six-string on the seat, sensing something was already waiting down the road."
+    }
+  ],
+  "importedFrom": {
+    "source": "At the Crossroads - 2",
+    "track": 1,
+    "importedAt": "2026-11-16T19:22:00.815Z"
+  }
+}

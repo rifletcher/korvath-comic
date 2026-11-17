@@ -1,0 +1,337 @@
+{
+  "projectId": "at-the-crossroads",
+  "episodeId": "ep06",
+  "episodeNumber": 6,
+  "title": "Track 6: Sold My Soul",
+  "theme": "Sold My Soul",
+  "targetPanelCount": 10,
+  "currentStage": "VOICE_SYNTHESIS",
+  "overallProgress": 50,
+  "updatedAt": "2026-11-16T19:22:00.815Z",
+  "outputs": {
+    "resolution": "10 imported panels • ready for voices"
+  },
+  "stages": [
+    {
+      "id": "SCRIPT_GENERATION",
+      "name": "1. Writers Room Script",
+      "status": "COMPLETED",
+      "progress": 100
+    },
+    {
+      "id": "PROMPT_EXPANSION",
+      "name": "2. Latent Anchor & Guardrails",
+      "status": "COMPLETED",
+      "progress": 100
+    },
+    {
+      "id": "VISUAL_RENDERING",
+      "name": "3. Meta AI 2K Panel Rendering",
+      "status": "COMPLETED",
+      "progress": 100
+    },
+    {
+      "id": "VOICE_SYNTHESIS",
+      "name": "4. Multi-Actor Voice & DSP",
+      "status": "PENDING",
+      "progress": 0
+    },
+    {
+      "id": "VIDEO_ASSEMBLY",
+      "name": "5. Motion Comic Camera & Concat",
+      "status": "LOCKED_BY_GATE",
+      "progress": 0
+    },
+    {
+      "id": "READY_FOR_RELEASE",
+      "name": "6. Master Release Bundle",
+      "status": "LOCKED_BY_GATE",
+      "progress": 0
+    }
+  ],
+  "gates": [
+    {
+      "id": "SCRIPT_GATE",
+      "name": "Gate A: Storyboard & Dialogue Lock",
+      "afterStage": "SCRIPT_GENERATION",
+      "status": "APPROVED",
+      "approvedAt": "2026-11-16T19:22:00.815Z",
+      "notes": "Imported script from At the Crossroads (Take 2)."
+    },
+    {
+      "id": "VISUAL_QA_GATE",
+      "name": "Gate B: 8-Point Director Visual Continuity Gate",
+      "afterStage": "VISUAL_RENDERING",
+      "status": "APPROVED",
+      "approvedAt": "2026-11-16T19:22:00.815Z",
+      "notes": "Imported panels already approved in the original project."
+    },
+    {
+      "id": "AUDIO_QA_GATE",
+      "name": "Gate C: 5-Point Acoustic & Polarity Gate",
+      "afterStage": "VOICE_SYNTHESIS",
+      "status": "LOCKED",
+      "notes": "Awaiting voice synthesis."
+    }
+  ],
+  "panels": [
+    {
+      "panelId": 1,
+      "name": "The Kid answers a ringing rotary phone",
+      "act": "Track 6",
+      "summary": "The Kid answers a ringing rotary phone in a cheap motel room the morning after the crossroads pact, his full-size sunburst guitar prominent in the room.",
+      "caption": "The phone rang the very next morning - a big label out of the blue.",
+      "dialogue": [],
+      "characters": [
+        "kid"
+      ],
+      "objects": [],
+      "shotType": "Medium Shot, interior morning",
+      "prompt": "Medium shot, interior morning. In a cheap, sun-bleached roadside motel room with peeling wallpaper and faded curtains, the tall 6-foot-1, broad-shouldered 24-year-old young adult man (athletic adult build, tousled dark brown hair, rough dark stubble, wearing a white t-shirt and beat-up jeans, his faded blue denim trucker jacket draped over a chair) sits on the edge of the unmade motel bed. Morning sunlight cuts through dusty venetian blinds. On the laminate nightstand, a vintage black rotary telephone is loudly ringing with comic sound vibration lines. The young man reaches out his hand to pick up the plastic receiver with a tense, expectant look. Leaning prominently in the room is his full-size standard dreadnought sunburst acoustic guitar (large adult full-size instrument, correctly proportioned and prominent, NOT miniature, NOT small) resting against its open battered case. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, muted but high-contrast cinematic morning lighting, clean cel and gradient shading, no messy watercolor wash, no blur. Include a neatly positioned torn paper caption box fully contained within the upper portion of the frame with generous margin below the top edge (ensure all text is 100% visible, not cut off at the top or borders) with the exact text: \"The phone rang the very next morning - a big label out of the blue.\". Use a messy handwritten marker font.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep06/panels/panel_01.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep06/panels/panel_01.webp",
+      "sizeKB": 735.5,
+      "hash": "c6c6dbbb",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_06_Sold_My_Soul/selected/track_06_panel_01.webp",
+      "originalCaption": "The phone rang the very next morning - a big label out of the blue."
+    },
+    {
+      "panelId": 2,
+      "name": "The Kid sings with effortless power into",
+      "act": "Track 6",
+      "summary": "The Kid sings with effortless power into a microphone in a warm Nashville recording studio.",
+      "caption": "He signed. Cut his first record in a Nashville room...",
+      "dialogue": [],
+      "characters": [
+        "kid"
+      ],
+      "objects": [],
+      "shotType": "Wide Shot, studio",
+      "prompt": "Wide shot, interior of a warm, wood-paneled historic Nashville recording studio. In the center of the recording booth behind acoustic baffles, the tall 6-foot-1, 24-year-old young adult man (handsome sharp features, tousled dark brown hair, dark stubble, wearing his faded blue denim trucker jacket over a white t-shirt and jeans, with his sunburst acoustic guitar strapped across his broad chest) sings passionately and confidently into a vintage chrome studio condenser microphone, wearing studio monitor headphones over one ear. Through the large double-paned soundproof control room window in the background, audio engineers and a record producer in 1970s western shirts sit at a massive vintage mixing console, smiling and nodding in awe. Warm amber studio spotlighting. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, warm cinematic studio lighting, clean cel and gradient shading, no messy watercolor wash, no blur. Include a neatly positioned torn paper caption box fully contained within the upper portion of the frame with generous margin below the top edge (ensure all text is 100% visible, not cut off at the top or borders) with the exact text: \"He signed. Cut his first record in a Nashville room...\". Use a messy handwritten marker font.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep06/panels/panel_02.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep06/panels/panel_02.webp",
+      "sizeKB": 891.4,
+      "hash": "7840cd2d",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_06_Sold_My_Soul/selected/track_06_panel_02.webp",
+      "originalCaption": "He signed. Cut his first record in a Nashville room..."
+    },
+    {
+      "panelId": 3,
+      "name": "The Kid performing electrifyingly on stage, backed",
+      "act": "Track 6",
+      "summary": "The Kid performing electrifyingly on stage, backed by giant music charts showing his single skyrocketing to #1.",
+      "caption": "...and it shot up the charts and wouldn't slow down - the number one he demanded from a bar stage years ago, playing in every town.",
+      "dialogue": [],
+      "characters": [
+        "kid"
+      ],
+      "objects": [],
+      "shotType": "Dynamic stylized composition",
+      "prompt": "Dynamic stylized composition. In the foreground, the rising 25-year-old country-rock singer (tall, lean, charismatic, wearing an embroidered denim shirt, dark hair, handsome features) performs electrifyingly on a brightly lit concert stage, singing into a chrome stand microphone while passionately playing his guitar. Towering behind him in the background is a stylized, bold graphic music chart and billboard display showing his debut single shooting straight to \"#1 ON THE CHARTS\" accompanied by gleaming gold vinyl records and radiating celebratory stage flare lines. Vibrant energetic concert lighting with sharp chiaroscuro contrasts. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, high-contrast dynamic lighting, clean cel and gradient shading, no messy watercolor wash, no blur. Include a neatly positioned torn paper caption box fully contained within the upper portion of the frame with generous margin below the top edge (ensure all text is 100% visible, not cut off at the top or borders) with the exact text: \"...and it shot up the charts and wouldn't slow down - the number one he demanded from a bar stage years ago, playing in every town.\". Use a messy handwritten marker font.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep06/panels/panel_03.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep06/panels/panel_03.webp",
+      "sizeKB": 971.8,
+      "hash": "81ff6c49",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_06_Sold_My_Soul/selected/track_06_panel_03.webp",
+      "originalCaption": "...and it shot up the charts and wouldn't slow down - the number one he demanded from a bar stage years ago, playing in every town."
+    },
+    {
+      "panelId": 4,
+      "name": "The Kid, now a bona fide superstar,",
+      "act": "Track 6",
+      "summary": "The Kid, now a bona fide superstar, commands a sold-out arena of fifty thousand fans.",
+      "caption": "The label sent him out headlining and every arena sold out before the tour began. Fifty thousand a night.",
+      "dialogue": [],
+      "characters": [
+        "kid"
+      ],
+      "objects": [],
+      "shotType": "Extreme Wide Shot, arena",
+      "prompt": "Extreme wide shot, cinematic arena concert. From behind and slightly elevated on a massive illuminated stage, looking out at a colossal packed arena stadium filled with fifty thousand cheering fans holding up glowing lighters and signs. In the center stage spotlight stands the wealthy 27-year-old country-rock superstar (tall 6-foot-1, lean frame, slicked dark hair, dressed in an immaculate embroidered custom black-and-silver satin western suit with pearl-snap buttons and gold rings, holding a polished custom jet-black acoustic guitar high). Giant overhead lighting rigs cast brilliant beams of white, gold, and cyan light across the roaring ocean of people. Spectacular superstar scale. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, epic high-contrast arena lighting, clean cel and gradient shading, no messy watercolor wash, no blur. Include a neatly positioned torn paper caption box fully contained within the upper portion of the frame with generous margin below the top edge (ensure all text is 100% visible, not cut off at the top or borders) with the exact text: \"The label sent him out headlining and every arena sold out before the tour began. Fifty thousand a night.\". Use a messy handwritten marker font.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep06/panels/panel_04.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep06/panels/panel_04.webp",
+      "sizeKB": 1083.2,
+      "hash": "b1824185",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_06_Sold_My_Soul/selected/track_06_panel_04.webp",
+      "originalCaption": "The label sent him out headlining and every arena sold out before the tour began. Fifty thousand a night."
+    },
+    {
+      "panelId": 5,
+      "name": "The Kid in his tailored suit hands",
+      "act": "Track 6",
+      "summary": "The Kid in his tailored suit hands brass keys to his weeping Mother in front of a sprawling Southern mansion.",
+      "caption": "More money in one show than his daddy saw in a year. He bought his mother a mansion...",
+      "dialogue": [],
+      "characters": [
+        "kid",
+        "mother"
+      ],
+      "objects": [],
+      "shotType": "Medium Two-Shot, exterior",
+      "prompt": "Medium two-shot, exterior daytime. In front of a grand, sprawling brick Southern plantation-style mansion with towering white columns and manicured green lawns, the wealthy 27-year-old country-rock superstar (slicked dark hair, sharp cheekbones, wearing an immaculate custom satin western suit with pearl-snap buttons and gold rings on his fingers) stands with a gentle, humble smile, placing a set of gleaming brass house keys into the weathered hands of his weeping Mother. Beside him, the tired, hardworking 50-year-old Southern woman (grey-streaked hair tied back in a bun, deeply lined gentle face marked by a lifetime of labor, wearing a faded floral cotton apron over a simple blue dress) presses her trembling hand to her mouth in overwhelming tears of joy and disbelief. Warm afternoon sunlight. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, warm cinematic sunlight, clean cel and gradient shading, no messy watercolor wash, no blur. Include a neatly positioned torn paper caption box fully contained within the upper portion of the frame with generous margin below the top edge (ensure all text is 100% visible, not cut off at the top or borders) with the exact text: \"More money in one show than his daddy saw in a year. He bought his mother a mansion...\". Use a messy handwritten marker font.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep06/panels/panel_05.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep06/panels/panel_05.webp",
+      "sizeKB": 855.7,
+      "hash": "7c875a8f",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_06_Sold_My_Soul/selected/track_06_panel_05.webp",
+      "originalCaption": "More money in one show than his daddy saw in a year. He bought his mother a mansion..."
+    },
+    {
+      "panelId": 6,
+      "name": "The Kid speeding in a vintage convertible",
+      "act": "Track 6",
+      "summary": "The Kid speeding in a vintage convertible Cadillac down a sunny road, while gold records gleam in his estate.",
+      "caption": "...drove a Cadillac, hung gold records wall to wall.",
+      "dialogue": [],
+      "characters": [
+        "kid"
+      ],
+      "objects": [],
+      "shotType": "Dynamic cinematic three-quarter angle, eye-level to slightly elevated perspective",
+      "prompt": "Dynamic cinematic three-quarter angle, eye-level to slightly elevated perspective. Crucial road and vehicle alignment: The candy-apple red Cadillac convertible is cruising smoothly down a clean, solid, two-lane paved dark asphalt highway with realistic asphalt texture and fine ink hatching (NO abstract speed lines replacing the road, NO distorted ground streaks). The car is realistically aligned and centered within its proper driving lane on the right side of the painted double yellow center divider line, with a crisp white shoulder line, clean curbside asphalt, and realistic tire contact shadows grounding the car firmly onto the pavement. The road perspective has consistent linear vanishing lines curving naturally along the scenic highway. The entire car is completely in-frame with generous margins on all four sides. The 27-year-old country-rock superstar sits naturally inside the cabin behind the steering wheel, dashboard, and clear windshield. In the background hillside overlooking the road, his luxury modern estate features an illuminated glass gallery wall lined with gold and platinum records. Complete rectangular black ink panel frame border enclosing all four sides. Include a neatly positioned torn paper caption box fully contained within the top of the frame: \"...drove a Cadillac, hung gold records wall to wall.\". Use a messy handwritten marker font. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, vibrant cinematic sunlight, clean cel and gradient shading, no messy watercolor wash, no blur.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep06/panels/panel_06.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep06/panels/panel_06.webp",
+      "sizeKB": 1004.4,
+      "hash": "3745c652",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_06_Sold_My_Soul/selected/track_06_panel_06.webp",
+      "originalCaption": "...drove a Cadillac, hung gold records wall to wall."
+    },
+    {
+      "panelId": 7,
+      "name": "Rural farmhands in a dusty feed store",
+      "act": "Track 6",
+      "summary": "Rural farmhands in a dusty feed store stare slack-jawed at a TV showing the Kid on a celebrity talk show.",
+      "caption": "The feed store boys who once asked where he thought he'd go now saw him on every talk show...",
+      "dialogue": [],
+      "characters": [
+        "kid"
+      ],
+      "objects": [],
+      "shotType": "Medium-wide shot, interior with pulled-back framing and generous margins",
+      "prompt": "Medium-wide shot, interior with pulled-back framing and generous margins on all sides. Crucial framing and bottom border: The comic panel is fully enclosed by a continuous solid black ink rectangular frame border on all four sides (top, bottom, left, and right) with white comic margin surrounding the frame. Crucially, the bottom of the scene is NOT cut off—both farmhands' entire torsos, forearms, complete hands holding the cold soda bottles, the overturned wooden crates they sit on, and the dusty wooden plank floor beneath them are 100% visible inside the panel with clear breathing room above the solid black bottom frame line. In the dim, cluttered Southern feed-and-seed store surrounded by burlap seed sacks, farming tools, and shelves, two older weathered farmhands (greasy trucker caps, dusty denim overalls, rough stubble) stare slack-jawed in disbelief at an old color TV set on a high shelf. Broadcast in vibrant color on the TV is their former neighbor—the handsome 27-year-old superstar in his custom embroidered satin suit on a late-night celebrity talk show couch next to the host. Include a neatly positioned torn paper caption box fully contained within the upper portion of the frame with generous margin below the top edge: \"The feed store boys who once asked where he thought he'd go now saw him on every talk show...\". Use a messy handwritten marker font. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, dusty atmospheric lighting contrasted with glowing television cathode light, clean cel and gradient shading, no messy watercolor wash, no blur.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep06/panels/panel_07.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep06/panels/panel_07.webp",
+      "sizeKB": 730.2,
+      "hash": "bc9608ef",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_06_Sold_My_Soul/selected/track_06_panel_07.webp",
+      "originalCaption": "The feed store boys who once asked where he thought he'd go now saw him on every talk show..."
+    },
+    {
+      "panelId": 8,
+      "name": "The Kid strides down a luxury corridor",
+      "act": "Track 6",
+      "summary": "The Kid strides down a luxury corridor with swagger while the once-arrogant Label Man scurries subserviently behind him.",
+      "caption": "...the label man who slammed the door on him now worked for him down the hall.",
+      "dialogue": [],
+      "characters": [
+        "kid",
+        "label_man"
+      ],
+      "objects": [],
+      "shotType": "Over-the-shoulder tracking shot",
+      "prompt": "Over-the-shoulder tracking shot down a luxurious, polished marble and dark mahogany executive corridor of a major record label. Walking forward in the foreground with commanding, confident swagger is the wealthy 27-year-old country-rock superstar (tall 6-foot-1, broad shoulders, slicked dark hair, immaculate custom embroidered black-and-silver satin western suit, hands casually in his trouser pockets). Trotting quickly and subserviently behind him is the slick 45-year-old music executive (greased silver-templed hair, sharp mustache, gold aviator sunglasses, wrinkled tan polyester suit with wide lapels), nervously clutching a thick leather clipboard and pen, sweating and looking eager to please the superstar who now commands the entire company. Recessed golden ceiling lighting reflects on the polished floor. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, sleek high-contrast executive lighting, clean cel and gradient shading, no messy watercolor wash, no blur. Include a neatly positioned torn paper caption box fully contained within the upper portion of the frame with generous margin below the top edge (ensure all text is 100% visible, not cut off at the top or borders) with the exact text: \"...the label man who slammed the door on him now worked for him down the hall.\". Use a messy handwritten marker font.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep06/panels/panel_08.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep06/panels/panel_08.webp",
+      "sizeKB": 787,
+      "hash": "62e27c83",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_06_Sold_My_Soul/selected/track_06_panel_08.webp",
+      "originalCaption": "...the label man who slammed the door on him now worked for him down the hall."
+    },
+    {
+      "panelId": 9,
+      "name": "The Kid stands bathed in spotlights, untouchable",
+      "act": "Track 6",
+      "summary": "The Kid stands bathed in spotlights, untouchable at the peak of stardom.",
+      "caption": "It all came so fast.",
+      "dialogue": [],
+      "characters": [
+        "kid"
+      ],
+      "objects": [],
+      "shotType": "Low Angle, heroic shot",
+      "prompt": "Low angle dynamic heroic shot. On the elevated edge of a colossal arena stage, bathed in blinding overhead spotlights and swirling stage haze, the wealthy 27-year-old country-rock superstar (tall, commanding posture, slicked dark hair, gaunt handsome cheekbones, wearing an immaculate custom satin western suit with shimmering pearl-snap buttons and gold rings on his fingers) stands triumphant. He holds his custom jet-black acoustic guitar aloft in one hand, bathed in radiant golden rim-light, looking like an untouchable musical demigod standing at the absolute zenith of worldly power and fame. Dramatic radial lens flares and crisp ink hatching. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, brilliant high-contrast stage lighting, clean cel and gradient shading, no messy watercolor wash, no blur. Include a neatly positioned torn paper caption box fully contained within the upper portion of the frame with generous margin below the top edge (ensure all text is 100% visible, not cut off at the top or borders) with the exact text: \"It all came so fast.\". Use a messy handwritten marker font.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep06/panels/panel_09.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep06/panels/panel_09.webp",
+      "sizeKB": 737.8,
+      "hash": "90a3b837",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_06_Sold_My_Soul/selected/track_06_panel_09.webp",
+      "originalCaption": "It all came so fast."
+    },
+    {
+      "panelId": 10,
+      "name": "Beneath the bright stage lights, the superstar's",
+      "act": "Track 6",
+      "summary": "Beneath the bright stage lights, the superstar's hollow, haunted eyes reveal the first cracks of creeping dread—he knows the clock is ticking.",
+      "caption": "And the album's closing line is the first crack in the confidence: he knows the deal's terms and he knows the clock exists, and now, standing on top of it all, he's wondering how long it will last.",
+      "dialogue": [],
+      "characters": [
+        "kid",
+        "devil"
+      ],
+      "objects": [],
+      "shotType": "Extreme Close-up on the Kid's eyes and face",
+      "prompt": "Extreme close-up on the face and eyes of the wealthy country-rock superstar. Despite the blinding white and gold arena spotlights washing across his features, the 27-year-old superstar (handsome youthful 27-year-old facial features, smooth skin with sharp gaunt cheekbones, slicked dark hair, NOT elderly, NOT haggard, NOT 60 years old) shows the first terrifying crack in his armor. His hollow, haunted dark eyes are wide with dilated pupils, reflecting a faint, ominous shadow of an ancient clock and cold darkness amidst the bright stage lights. An expression of creeping dread and ticking anxiety fills his face—the terrible realization of the devil's timeline and the unavoidable reckoning ahead. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, psychological horror chiaroscuro lighting, clean cel and gradient shading, no messy watercolor wash, no blur. Include a neatly positioned torn paper caption box fully contained within the upper portion of the frame with generous margin below the top edge (ensure all text is 100% visible, not cut off at the top or borders) with the exact text: \"And the album's closing line is the first crack in the confidence: he knows the deal's terms and he knows the clock exists, and now, standing on top of it all, he's wondering how long it will last.\". Use a messy handwritten marker font.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep06/panels/panel_10.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep06/panels/panel_10.webp",
+      "sizeKB": 726,
+      "hash": "85183a28",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_06_Sold_My_Soul/selected/track_06_panel_10.webp",
+      "originalCaption": "And the album's closing line is the first crack in the confidence: he knows the deal's terms and he knows the clock exists, and now, standing on top of it all, he's wondering how long it will last."
+    }
+  ],
+  "importedFrom": {
+    "source": "At the Crossroads - 2",
+    "track": 6,
+    "importedAt": "2026-11-16T19:22:00.815Z"
+  }
+}

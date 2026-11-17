@@ -1,0 +1,16 @@
+{
+  "speaker": "Narrator",
+  "character": "narrator",
+  "actorName": "Brian",
+  "voiceId": "nPczCjzI2devNBz1zQrb",
+  "edgeVoice": "",
+  "engineUsed": "ElevenLabs",
+  "elevenLabsError": "",
+  "textToSpeak": "Thorgar the Undying chanted the syllables that undo the mortal mind.",
+  "stability": 0.3,
+  "style": 0.65,
+  "dspChain": "volume=1.25",
+  "reusedTake": false,
+  "creditsUsed": 68,
+  "synthesizedAt": "2026-11-16T07:18:16.746Z"
+}

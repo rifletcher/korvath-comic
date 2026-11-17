@@ -1,0 +1,16 @@
+{
+  "speaker": "Korvath",
+  "character": "korvath",
+  "actorName": "Brian (Subterranean Kratos)",
+  "voiceId": "nPczCjzI2devNBz1zQrb",
+  "edgeVoice": "",
+  "engineUsed": "ElevenLabs",
+  "elevenLabsError": "",
+  "textToSpeak": "Back away from the girl, dogs. Or feed my steel.",
+  "stability": 0.22,
+  "style": 0.85,
+  "dspChain": "asetrate=44100*0.88,aresample=44100,equalizer=f=95:width_type=h:width=60:g=8,volume=1.45",
+  "reusedTake": false,
+  "creditsUsed": 48,
+  "synthesizedAt": "2026-11-16T07:18:13.023Z"
+}

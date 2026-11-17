@@ -1,0 +1,16 @@
+{
+  "speaker": "Natari",
+  "character": "natari",
+  "actorName": "Sarah",
+  "voiceId": "EXAVITQu4vr4xnSDxMaL",
+  "edgeVoice": "",
+  "engineUsed": "ElevenLabs",
+  "elevenLabsError": "",
+  "textToSpeak": "Quiet as a viper's breath...",
+  "stability": 0.25,
+  "style": 0.8,
+  "dspChain": "volume=1.30",
+  "reusedTake": false,
+  "creditsUsed": 28,
+  "synthesizedAt": "2026-11-16T07:18:11.552Z"
+}

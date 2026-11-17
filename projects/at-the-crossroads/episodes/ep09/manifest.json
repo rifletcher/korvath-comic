@@ -1,0 +1,334 @@
+{
+  "projectId": "at-the-crossroads",
+  "episodeId": "ep09",
+  "episodeNumber": 9,
+  "title": "Track 9: Can't Hide from the Devil",
+  "theme": "Can't Hide from the Devil",
+  "targetPanelCount": 10,
+  "currentStage": "VOICE_SYNTHESIS",
+  "overallProgress": 50,
+  "updatedAt": "2026-11-16T19:22:00.815Z",
+  "outputs": {
+    "resolution": "10 imported panels • ready for voices"
+  },
+  "stages": [
+    {
+      "id": "SCRIPT_GENERATION",
+      "name": "1. Writers Room Script",
+      "status": "COMPLETED",
+      "progress": 100
+    },
+    {
+      "id": "PROMPT_EXPANSION",
+      "name": "2. Latent Anchor & Guardrails",
+      "status": "COMPLETED",
+      "progress": 100
+    },
+    {
+      "id": "VISUAL_RENDERING",
+      "name": "3. Meta AI 2K Panel Rendering",
+      "status": "COMPLETED",
+      "progress": 100
+    },
+    {
+      "id": "VOICE_SYNTHESIS",
+      "name": "4. Multi-Actor Voice & DSP",
+      "status": "PENDING",
+      "progress": 0
+    },
+    {
+      "id": "VIDEO_ASSEMBLY",
+      "name": "5. Motion Comic Camera & Concat",
+      "status": "LOCKED_BY_GATE",
+      "progress": 0
+    },
+    {
+      "id": "READY_FOR_RELEASE",
+      "name": "6. Master Release Bundle",
+      "status": "LOCKED_BY_GATE",
+      "progress": 0
+    }
+  ],
+  "gates": [
+    {
+      "id": "SCRIPT_GATE",
+      "name": "Gate A: Storyboard & Dialogue Lock",
+      "afterStage": "SCRIPT_GENERATION",
+      "status": "APPROVED",
+      "approvedAt": "2026-11-16T19:22:00.815Z",
+      "notes": "Imported script from At the Crossroads (Take 2)."
+    },
+    {
+      "id": "VISUAL_QA_GATE",
+      "name": "Gate B: 8-Point Director Visual Continuity Gate",
+      "afterStage": "VISUAL_RENDERING",
+      "status": "APPROVED",
+      "approvedAt": "2026-11-16T19:22:00.815Z",
+      "notes": "Imported panels already approved in the original project."
+    },
+    {
+      "id": "AUDIO_QA_GATE",
+      "name": "Gate C: 5-Point Acoustic & Polarity Gate",
+      "afterStage": "VOICE_SYNTHESIS",
+      "status": "LOCKED",
+      "notes": "Awaiting voice synthesis."
+    }
+  ],
+  "panels": [
+    {
+      "panelId": 1,
+      "name": "A vintage candy-apple red Cadillac convertible rolls",
+      "act": "Track 9",
+      "summary": "A vintage candy-apple red Cadillac convertible rolls slowly down the muddy dirt main street of Blackwater, a sleepy, remote Mississippi Delta swamp town draped in heavy Spanish moss.",
+      "caption": "He rolled into Blackwater with nothing but his car and no name.",
+      "dialogue": [],
+      "characters": [],
+      "objects": [],
+      "shotType": "Establishing Wide Shot, early morning fog",
+      "prompt": "Wide cinematic horizontal establishing shot, atmospheric dawn. A vintage candy-apple red Cadillac convertible with classic chrome tailfins, chrome grille, and mud-splashed lower rocker panels rolls slowly down the muddy dirt main road into Blackwater, a remote, sleepy Mississippi Delta swamp town. Behind the chrome steering wheel of the red convertible sits the 29-year-old traveler in a dark western jacket. Ancient cypress and live oak trees draped in thick, hanging Spanish moss loom over weathered wooden general stores, rusted tin roofs, and ramshackle shacks. Pale morning mist clings to the swampy ditches and dirt road. Complete rectangular black ink panel frame border enclosing all four sides with generous margins. Crucial: Include a prominent torn parchment paper caption box placed across the top of the frame with clear margin below the top border (ensure all text is 100% visible, sharp and legible) with the exact text: \"He rolled into Blackwater with nothing but his car and no name.\". Use a messy handwritten marker font. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, misty morning Delta chiaroscuro lighting, clean cel and gradient shading, no messy watercolor wash, no blur.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep09/panels/panel_01.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep09/panels/panel_01.webp",
+      "sizeKB": 880.8,
+      "hash": "8b32f42c",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_09_Cant_Hide_from_the_Devil/selected/track_09_panel_01.webp",
+      "originalCaption": "He rolled into Blackwater with nothing but his car and no name."
+    },
+    {
+      "panelId": 2,
+      "name": "At the top of a small grassy",
+      "act": "Track 9",
+      "summary": "At the top of a small grassy hill in Blackwater, a dilapidated, abandoned wooden rural chapel stands silent beneath an overcast Delta sky. In the foreground, the Kid stands looking up at it, still wearing his expensive tailored country star western suit and boots from his arena tour.",
+      "caption": "The old church on the hill had stood empty for years.",
+      "dialogue": [],
+      "characters": [
+        "kid"
+      ],
+      "objects": [],
+      "shotType": "Dramatic low-angle wide shot, exterior",
+      "prompt": "Wide cinematic horizontal low-angle shot, exterior daytime. On the crest of a lonely overgrown grassy hill in rural Mississippi stands a solitary, abandoned rustic wooden chapel with a modest steeple and weathered grey clapboard siding, its paint peeling from decades of silence. In the foreground, seen from behind at a slight angle, the 29-year-old country music superstar (tall, lean, slicked dark hair, wearing his expensive tailored black country superstar western suit with embroidered yoke, tailored black trousers, and polished black western leather boots, hands in his pockets) stands looking quietly up at the silent, empty country church. Overcast moody Delta sky with drifting grey clouds. Complete rectangular black ink panel frame border enclosing all four sides with generous margins. Crucial: Include a prominent torn parchment paper caption box placed across the top of the frame with clear margin below the top border (ensure all text is 100% visible, sharp and legible) with the exact text: \"The old church on the hill had stood empty for years.\". Use a messy handwritten marker font. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, solemn overcast natural lighting, clean cel and gradient shading, no messy watercolor wash, no blur.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep09/panels/panel_02.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep09/panels/panel_02.webp",
+      "sizeKB": 823.3,
+      "hash": "a0bcf022",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_09_Cant_Hide_from_the_Devil/selected/track_09_panel_02.webp",
+      "originalCaption": "The old church on the hill had stood empty for years."
+    },
+    {
+      "panelId": 3,
+      "name": "Sunbeams pierce the dusty interior of the",
+      "act": "Track 9",
+      "summary": "Sunbeams pierce the dusty interior of the wooden church. The Kid wipes decades of dust and cobwebs off the rustic pulpit and reverently lifts an old, heavy leather-bound Bible.",
+      "caption": "He picked up the Book and answered on his own, unordained...",
+      "dialogue": [],
+      "characters": [
+        "kid"
+      ],
+      "objects": [],
+      "shotType": "Medium Shot, interior rustic chapel",
+      "prompt": "Medium shot interior, warm atmospheric dust motes. Inside the quiet wooden Mississippi country chapel, soft golden sunbeams stream through tall plain-glass windows, illuminating swirling dust. Standing behind the rustic, hand-carved wooden pulpit, the 30-year-old man (lean gaunt features, slicked dark hair, rolled-up sleeves of a simple dark work shirt, hands weathered with calluses) gently wipes a layer of white dust off the polished wood. With reverent, trembling care, his hands lift an ancient, heavy black leather-bound King James Bible with frayed edges and golden lettering. Complete rectangular black ink panel frame border enclosing all four sides with generous margins. Crucial: Include a prominent torn parchment paper caption box placed across the top of the frame with clear margin below the top border (ensure all text is 100% visible, sharp and legible) with the exact text: \"He picked up the Book and answered on his own, unordained...\". Use a messy handwritten marker font. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, warm volumetric sunbeam lighting, clean cel and gradient shading, no messy watercolor wash, no blur.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep09/panels/panel_03.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep09/panels/panel_03.webp",
+      "sizeKB": 597.2,
+      "hash": "116129bb",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_09_Cant_Hide_from_the_Devil/selected/track_09_panel_03.webp",
+      "originalCaption": "He picked up the Book and answered on his own, unordained..."
+    },
+    {
+      "panelId": 4,
+      "name": "In the churchyard cemetery under a torrential",
+      "act": "Track 9",
+      "summary": "In the churchyard cemetery under a torrential Mississippi downpour, the 35-year-old Preacher stands firmly on the solid grass lawn beside a fresh open grave with a rough wooden cross, holding an umbrella over a grieving family while clutching his battered Bible to his chest in fierce prayer.",
+      "caption": "...and preached for five years - fed the poor, prayed for the sick, buried the dead - hoping God was watching every prayer.",
+      "dialogue": [],
+      "characters": [
+        "kid",
+        "mother"
+      ],
+      "objects": [],
+      "shotType": "Dramatic atmospheric medium shot, cemetery in pouring rain",
+      "prompt": "Wide cinematic horizontal shot, stormy exterior churchyard. In the cemetery under a torrential Mississippi Delta downpour, the 35-year-old country preacher (gaunt weathered features, slicked dark hair touched with silver at the temples, rugged trimmed beard, wearing a long black preacher's frock coat, dark trousers, and black leather boots) is standing upright and firmly on the solid green grassy lawn beside a fresh open grave marked with a simple wooden cross. His full standing posture and boots are clearly planted on the solid ground above the grave (NOT inside the grave, NOT sunken in dirt, clearly standing on the cemetery grass). He holds a large black umbrella protectively over a small grieving rural mother and child, while clasping his battered leather-bound Bible tightly against his chest, his eyes closed in fierce, heartfelt prayer against the driving rain. Mud, weeping willows, and solemn devotion. Complete rectangular black ink panel frame border enclosing all four sides with generous margins. Crucial: Include a prominent torn parchment paper caption box placed across the top of the frame with clear margin below the top border (ensure all text is 100% visible, sharp and legible) with the exact text: \"...and preached for five years - fed the poor, prayed for the sick, buried the dead - hoping God was watching every prayer.\". Use a messy handwritten marker font. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, dramatic rain-swept chiaroscuro lighting, clean cel and gradient shading, no messy watercolor wash, no blur.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep09/panels/panel_04.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep09/panels/panel_04.webp",
+      "sizeKB": 791.5,
+      "hash": "ee165550",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_09_Cant_Hide_from_the_Devil/selected/track_09_panel_04.webp",
+      "originalCaption": "...and preached for five years - fed the poor, prayed for the sick, buried the dead - hoping God was watching every prayer."
+    },
+    {
+      "panelId": 5,
+      "name": "The Preacher stands at the rustic wooden",
+      "act": "Track 9",
+      "summary": "The Preacher stands at the rustic wooden pulpit clutching his Bible in solemn contemplation. Behind him in the shadows, an eerie, ghostly spectral manifestation of an 1880s frontier preacher engulfed in silent, transparent crimson flames looms like a haunting memory.",
+      "caption": "In the same town where the 1880s crossroads preacher had hidden and burned, a century later, a second damned preacher stood at the same pulpit hoping the same trick would work. It didn't.",
+      "dialogue": [],
+      "characters": [
+        "kid"
+      ],
+      "objects": [],
+      "shotType": "Atmospheric eye-level shot, gothic interior",
+      "prompt": "Wide cinematic horizontal shot, gothic church interior. At the rustic hand-carved wooden pulpit of the country chapel, the 35-year-old preacher (lean gaunt features, hollow weary eyes filled with solemn realization, dark hair touched with silver, dark modest preacher's suit) stands clutching his worn Bible against the wooden altar. Directly behind him in the shadowy, candlelit alcove looms the haunting, translucent spectral phantom of an 1880s Victorian frontier preacher with Victorian frock coat and hollow burning eyes, silently engulfed in eerie, semi-transparent crimson ghost flames—an ominous supernatural echo of past damnation. Complete rectangular black ink panel frame border enclosing all four sides with generous margins. Crucial: Include a prominent torn parchment paper caption box placed across the top of the frame with clear margin below the top border (ensure all text is 100% visible, sharp and legible) with the exact text: \"In the same town where the 1880s crossroads preacher had hidden and burned, a century later, a second damned preacher stood at the same pulpit hoping the same trick would work. It didn't.\". Use a messy handwritten marker font. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, eerie candlelight and crimson spectral lighting, clean cel and gradient shading, no messy watercolor wash, no blur.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep09/panels/panel_05.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep09/panels/panel_05.webp",
+      "sizeKB": 720.3,
+      "hash": "1f2a8347",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_09_Cant_Hide_from_the_Devil/selected/track_09_panel_05.webp",
+      "originalCaption": "In the same town where the 1880s crossroads preacher had hidden and burned, a century later, a second damned preacher stood at the same pulpit hoping the same trick would work. It didn't."
+    },
+    {
+      "panelId": 6,
+      "name": "Looking up past the rustic silhouette of",
+      "act": "Track 9",
+      "summary": "Looking up past the rustic silhouette of the wooden church steeple into the evening sky, which has turned a violent, supernatural, bruised blood-red and burning crimson.",
+      "caption": "Old folks in that town told tales after dark about the Blackwater Devils Motorcycle Club and the thing that led it - that when the sky turned blood red, somebody was marked for death.",
+      "dialogue": [],
+      "characters": [
+        "rider"
+      ],
+      "objects": [],
+      "shotType": "Low-angle dramatic wide shot, ominous exterior",
+      "prompt": "Dramatic low-angle wide shot looking upward, ominous twilight. The dark silhouette of the rustic wooden country church and its weathered bell tower stands against an apocalyptic, supernatural blood-red evening sky. Swirling clouds of bruised crimson, fiery scarlet, and deep violet stretch across the entire Mississippi Delta firmament. Black Spanish moss hangs like tattered shrouds from ancient cypress silhouettes in the foreground. Complete rectangular black ink panel frame border enclosing all four sides with generous margins. Crucial: Include a prominent torn parchment paper caption box placed across the top of the frame with clear margin below the top border (ensure all text is 100% visible, sharp and legible) with the exact text: \"Old folks in that town told tales after dark about the Blackwater Devils Motorcycle Club and the thing that led it - that when the sky turned blood red, somebody was marked for death.\". Use a messy handwritten marker font. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, intense surreal blood-red and crimson atmospheric glow, clean cel and gradient shading, no messy watercolor wash, no blur.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep09/panels/panel_06.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep09/panels/panel_06.webp",
+      "sizeKB": 780.1,
+      "hash": "972445e0",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_09_Cant_Hide_from_the_Devil/selected/track_09_panel_06.webp",
+      "originalCaption": "Old folks in that town told tales after dark about the Blackwater Devils Motorcycle Club and the thing that led it - that when the sky turned blood red, somebody was marked for death."
+    },
+    {
+      "panelId": 7,
+      "name": "Outside the rural wooden church under the",
+      "act": "Track 9",
+      "summary": "Outside the rural wooden church under the glowing blood-red sky, a silent, menacing row of heavy black vintage Harley-Davidson motorcycles sits parked in a curved line on the gravel, chrome gleaming in the red light.",
+      "caption": "Then one Sunday evening the sky turned blood red. Engines rumbled from way down the road. A dozen black Harleys pulled up to his church and cut their motors dead still.",
+      "dialogue": [],
+      "characters": [],
+      "objects": [],
+      "shotType": "Wide cinematic shot, exterior church grounds at dusk",
+      "prompt": "Wide cinematic horizontal shot, exterior dusk. Outside the rural wooden Mississippi church beneath the apocalyptic, glowing blood-red sky, a single neat crescent line of exactly twelve black vintage Harley-Davidson motorcycles sits parked across the gravel driveway. Exactly twelve motorcycles in total—an exact dozen clearly spaced side by side in a single line (six on the left, six on the right, no duplicate background bikes, no extra motorcycles). Polished chrome exhausts and handlebars gleam eerily in the scarlet twilight. The church's warm yellow window lights glow in contrast to the terrifying red firmament. The powerful motorcycle engines are cut dead silent, with heat waves and faint wisps of exhaust rising into the still night air. Complete rectangular black ink panel frame border enclosing all four sides with generous margins. Crucial: Include a prominent torn parchment paper caption box placed across the top of the frame with clear margin below the top border (ensure all text is 100% visible, sharp and legible) with the exact text: \"Then one Sunday evening the sky turned blood red. Engines rumbled from way down the road. A dozen black Harleys pulled up to his church and cut their motors dead still.\". Use a messy handwritten marker font. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, ominous red twilight with warm chapel window contrast, clean cel and gradient shading, no messy watercolor wash, no blur.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep09/panels/panel_07.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep09/panels/panel_07.webp",
+      "sizeKB": 728.9,
+      "hash": "4a781f71",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_09_Cant_Hide_from_the_Devil/selected/track_09_panel_07.webp",
+      "originalCaption": "Then one Sunday evening the sky turned blood red. Engines rumbled from way down the road. A dozen black Harleys pulled up to his church and cut their motors dead still."
+    },
+    {
+      "panelId": 8,
+      "name": "Framed dramatically in the open wooden double",
+      "act": "Track 9",
+      "summary": "Framed dramatically in the open wooden double doors of the church against the blood-red dusk stands the Rider—an imposing, muscular figure in a weathered black leather motorcycle cut bearing a sinister club rocker patch, with supernatural crimson-gold hellfire glowing inside his chest.",
+      "caption": "The stories were real. The Rider walked to his doorway with the fire in his chest.",
+      "dialogue": [],
+      "characters": [
+        "kid",
+        "rider"
+      ],
+      "objects": [],
+      "shotType": "Medium shot, church entrance doorway",
+      "prompt": "Wide cinematic horizontal shot, church entrance doorway. Framed in the open double wooden doors of the country church against the apocalyptic blood-red dusk stands the terrifying leader of the Blackwater Devils: a tall, muscular, imposing biker in a scuffed black leather cut vest over a dark shirt. Heavy silver skull rings on his hands, heavy steel motorcycle chains at his waist, his face shadowed menacingly beneath a dark retro motorcycle helmet. Through the center of his chest and unzipped leather cut, a literal supernatural crimson-gold hellfire blazes brightly from within his ribcage, glowing like an open furnace and casting dancing fiery orange embers and searing light across the chapel floorboards. Complete rectangular black ink panel frame border enclosing all four sides with generous margins. Crucial: Include a prominent torn parchment paper caption box placed across the top of the frame with clear margin below the top border (ensure all text is 100% visible, sharp and legible) with the exact text: \"The stories were real. The Rider walked to his doorway with the fire in his chest.\". Use a messy handwritten marker font. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, intense fiery chiaroscuro lighting, clean cel and gradient shading, no messy watercolor wash, no blur.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep09/panels/panel_08.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep09/panels/panel_08.webp",
+      "sizeKB": 770.9,
+      "hash": "e84fe3f0",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_09_Cant_Hide_from_the_Devil/selected/track_09_panel_08.webp",
+      "originalCaption": "The stories were real. The Rider walked to his doorway with the fire in his chest."
+    },
+    {
+      "panelId": 9,
+      "name": "Inside the chapel, the 35-year-old Preacher stands",
+      "act": "Track 9",
+      "summary": "Inside the chapel, the 35-year-old Preacher stands tall and unflinching behind the wooden pulpit. His weathered face is calm, weary, and utterly fearless. Clasping his battered Bible firmly against the pulpit, he meets the intruder's gaze without flinching or begging.",
+      "caption": "Our preacher took the 1880s preacher's stance - defiant but knowing, tired and done, ready. He never begged.",
+      "dialogue": [],
+      "characters": [
+        "kid"
+      ],
+      "objects": [],
+      "shotType": "Eye-level interior shot, looking toward the pulpit",
+      "prompt": "Wide cinematic horizontal shot, looking toward the altar. In the center of the quiet country church, the 35-year-old preacher (lean gaunt features, hollow weary eyes filled with calm dignity and stubborn defiance, dark hair touched with silver at the temples, trimmed beard, wearing a modest dark preacher's coat) stands tall and unyielding behind the rustic wooden pulpit. Both hands grip his battered leather-bound Bible firmly against the wood. Reflected in his steady, fearless eyes is the flickering orange glow of approaching hellfire. His expression is tired, knowing, and completely ready—he does not beg, he does not flinch. Complete rectangular black ink panel frame border enclosing all four sides with generous margins. Crucial: Include a prominent torn parchment paper caption box placed across the top of the frame with clear margin below the top border (ensure all text is 100% visible, sharp and legible) with the exact text: \"Our preacher took the 1880s preacher's stance - defiant but knowing, tired and done, ready. He never begged.\". Use a messy handwritten marker font. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, dramatic chiaroscuro firelight glow on wooden interior, clean cel and gradient shading, no messy watercolor wash, no blur.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep09/panels/panel_09.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep09/panels/panel_09.webp",
+      "sizeKB": 612.9,
+      "hash": "eb2cd101",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_09_Cant_Hide_from_the_Devil/selected/track_09_panel_09.webp",
+      "originalCaption": "Our preacher took the 1880s preacher's stance - defiant but knowing, tired and done, ready. He never begged."
+    },
+    {
+      "panelId": 10,
+      "name": "In the center of the wooden chapel",
+      "act": "Track 9",
+      "summary": "In the center of the wooden chapel before the altar, the Preacher stands erect with eyes raised high in ultimate acceptance as roaring supernatural golden-orange and crimson hellfire erupts from the wooden floorboards, spiraling upward and engulfing him in an incandescent column of flames.",
+      "caption": "He raised his eyes and looked the Rider in the face and said his own last words: a deal's a deal in the end and the Devil got my soul. The fire took him where he stood.",
+      "dialogue": [],
+      "characters": [
+        "kid",
+        "devil",
+        "rider"
+      ],
+      "objects": [],
+      "shotType": "Climactic high-angle dramatic action shot",
+      "prompt": "Dramatic wide cinematic horizontal shot, interior chapel looking down the center aisle from the back pews toward the wooden altar. Bathed in a supernatural blinding golden-orange incandescent glow, the 35-year-old preacher stands tall and fearless behind the rustic pulpit with his head and eyes raised high in ultimate acceptance. Swirling golden embers, dancing supernatural orange light rays, and rising heat shimmers illuminate the entire wooden sanctuary and windows in breathtaking, awe-inspiring radiance. Complete rectangular black ink panel frame border enclosing all four sides with generous margins. Crucial: Include a prominent torn parchment paper caption box placed across the top of the frame with clear margin below the top border (ensure all text is 100% visible, sharp and legible) with the exact text: \"He raised his eyes and looked the Rider in the face and said his own last words: a deal's a deal in the end and the Devil got my soul. The fire took him where he stood.\". Use a messy handwritten marker font. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, radiant chiaroscuro supernatural lighting, clean cel and gradient shading, no messy watercolor wash, no blur.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep09/panels/panel_10.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep09/panels/panel_10.webp",
+      "sizeKB": 753.6,
+      "hash": "02b9908d",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_09_Cant_Hide_from_the_Devil/selected/track_09_panel_10.webp",
+      "originalCaption": "He raised his eyes and looked the Rider in the face and said his own last words: a deal's a deal in the end and the Devil got my soul. The fire took him where he stood."
+    }
+  ],
+  "importedFrom": {
+    "source": "At the Crossroads - 2",
+    "track": 9,
+    "importedAt": "2026-11-16T19:22:00.815Z"
+  }
+}

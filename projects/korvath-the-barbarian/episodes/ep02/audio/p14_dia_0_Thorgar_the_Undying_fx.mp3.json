@@ -1,0 +1,16 @@
+{
+  "speaker": "Thorgar the Undying",
+  "character": "thorgar",
+  "actorName": "Charlie (Crypt Sorcerer-King)",
+  "voiceId": "IKne3meq5aSn9XLyUdCD",
+  "edgeVoice": "",
+  "engineUsed": "ElevenLabs",
+  "elevenLabsError": "",
+  "textToSpeak": "Curse your northern blood! The portal opens regardless!",
+  "stability": 0.22,
+  "style": 0.85,
+  "dspChain": "asetrate=44100*0.92,aresample=44100,equalizer=f=110:width_type=h:width=70:g=6,aecho=0.8:0.9:70:0.4,volume=1.40",
+  "reusedTake": false,
+  "creditsUsed": 55,
+  "synthesizedAt": "2026-11-16T13:22:27.595Z"
+}

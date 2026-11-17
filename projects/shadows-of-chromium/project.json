@@ -1,0 +1,18 @@
+{
+  "id": "shadows-of-chromium",
+  "title": "Shadows of Chromium",
+  "subtitle": "A Tale of High Society & Low Morals",
+  "genre": "Dark Art-Deco Noir / Vintage Glamour Graphic Novel",
+  "artStyleAnchor": "classic vintage noir graphic novel comic book panel, dark art-deco glamour style, rich saturated nighttime jewel tones with electric deep blues, purples, and glowing warm golds. Sleek 2D animation / cinematic poster illustration with dramatic chiaroscuro and high-contrast lighting. Distinct features include stark silhouettes of elegantly dressed figures, towering stepped ziggurat skyscrapers and ornate cityscapes at night with beaming searchlights, plush penthouse interiors with massive crystal chandeliers, ornate brass/gold patterns, spiral staircases, and glowing arched geometric windows. Rich hand-drawn ink outlines, subtle film grain, and atmospheric luxury.",
+  "defaultImageEngine": "meta-ai-cdp",
+  "defaultVoiceEngine": "elevenlabs",
+  "targetEpisodeCount": 6,
+  "defaultPanelsPerEpisode": 20,
+  "createdAt": "2026-11-11T19:41:51Z",
+  "updatedAt": "2026-11-11T19:41:51Z",
+  "coverImage": "",
+  "invariants": [],
+  "episodes": [
+    "ep01"
+  ]
+}

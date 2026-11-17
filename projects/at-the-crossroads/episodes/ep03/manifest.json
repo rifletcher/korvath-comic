@@ -1,0 +1,329 @@
+{
+  "projectId": "at-the-crossroads",
+  "episodeId": "ep03",
+  "episodeNumber": 3,
+  "title": "Track 3: Paid My Dues",
+  "theme": "Paid My Dues",
+  "targetPanelCount": 10,
+  "currentStage": "VOICE_SYNTHESIS",
+  "overallProgress": 50,
+  "updatedAt": "2026-11-16T19:22:00.815Z",
+  "outputs": {
+    "resolution": "10 imported panels • ready for voices"
+  },
+  "stages": [
+    {
+      "id": "SCRIPT_GENERATION",
+      "name": "1. Writers Room Script",
+      "status": "COMPLETED",
+      "progress": 100
+    },
+    {
+      "id": "PROMPT_EXPANSION",
+      "name": "2. Latent Anchor & Guardrails",
+      "status": "COMPLETED",
+      "progress": 100
+    },
+    {
+      "id": "VISUAL_RENDERING",
+      "name": "3. Meta AI 2K Panel Rendering",
+      "status": "COMPLETED",
+      "progress": 100
+    },
+    {
+      "id": "VOICE_SYNTHESIS",
+      "name": "4. Multi-Actor Voice & DSP",
+      "status": "PENDING",
+      "progress": 0
+    },
+    {
+      "id": "VIDEO_ASSEMBLY",
+      "name": "5. Motion Comic Camera & Concat",
+      "status": "LOCKED_BY_GATE",
+      "progress": 0
+    },
+    {
+      "id": "READY_FOR_RELEASE",
+      "name": "6. Master Release Bundle",
+      "status": "LOCKED_BY_GATE",
+      "progress": 0
+    }
+  ],
+  "gates": [
+    {
+      "id": "SCRIPT_GATE",
+      "name": "Gate A: Storyboard & Dialogue Lock",
+      "afterStage": "SCRIPT_GENERATION",
+      "status": "APPROVED",
+      "approvedAt": "2026-11-16T19:22:00.815Z",
+      "notes": "Imported script from At the Crossroads (Take 2)."
+    },
+    {
+      "id": "VISUAL_QA_GATE",
+      "name": "Gate B: 8-Point Director Visual Continuity Gate",
+      "afterStage": "VISUAL_RENDERING",
+      "status": "APPROVED",
+      "approvedAt": "2026-11-16T19:22:00.815Z",
+      "notes": "Imported panels already approved in the original project."
+    },
+    {
+      "id": "AUDIO_QA_GATE",
+      "name": "Gate C: 5-Point Acoustic & Polarity Gate",
+      "afterStage": "VOICE_SYNTHESIS",
+      "status": "LOCKED",
+      "notes": "Awaiting voice synthesis."
+    }
+  ],
+  "panels": [
+    {
+      "panelId": 1,
+      "name": "The Kid playing behind chicken wire in",
+      "act": "Track 3",
+      "summary": "The Kid playing behind chicken wire in a rowdy bar, and sleeping curled up in his truck.",
+      "caption": "Five more years on no-name stages, playing for beer and change.",
+      "dialogue": [],
+      "characters": [
+        "kid"
+      ],
+      "objects": [],
+      "shotType": "Split Comic Panel (Diptych)",
+      "prompt": "",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep03/panels/panel_01.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep03/panels/panel_01.webp",
+      "sizeKB": 801.2,
+      "hash": "9c9b40a9",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_03_Paid_My_Dues/selected/track_03_panel_01.webp",
+      "originalCaption": "Five more years on no-name stages, playing for beer and change."
+    },
+    {
+      "panelId": 2,
+      "name": "The Kid sitting on the hood of",
+      "act": "Track 3",
+      "summary": "The Kid sitting on the hood of his truck, exhausted and angry, guitar resting beside him.",
+      "caption": "He was NOT broken and NOT quitting - he was fed up.",
+      "dialogue": [],
+      "characters": [
+        "kid"
+      ],
+      "objects": [],
+      "shotType": "Wide Shot, desert highway at dusk",
+      "prompt": "",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep03/panels/panel_02.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep03/panels/panel_02.webp",
+      "sizeKB": 911.5,
+      "hash": "61780846",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_03_Paid_My_Dues/selected/track_03_panel_02.webp",
+      "originalCaption": "He was NOT broken and NOT quitting - he was fed up."
+    },
+    {
+      "panelId": 3,
+      "name": "A massive illuminated billboard shows a cheesy",
+      "act": "Track 3",
+      "summary": "A massive illuminated billboard shows a cheesy pop-country star selling out a stadium.",
+      "caption": "One night on the radio he heard a hack half his talent selling out venues...",
+      "dialogue": [],
+      "characters": [],
+      "objects": [],
+      "shotType": "Dashboard POV looking through windshield at night",
+      "prompt": "",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep03/panels/panel_03.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep03/panels/panel_03.webp",
+      "sizeKB": 800.6,
+      "hash": "b9f2ea33",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_03_Paid_My_Dues/selected/track_03_panel_03.webp",
+      "originalCaption": "One night on the radio he heard a hack half his talent selling out venues..."
+    },
+    {
+      "panelId": 4,
+      "name": "The Kid's fist slamming down into the",
+      "act": "Track 3",
+      "summary": "The Kid's fist slamming down into the cracked truck dashboard in rage.",
+      "caption": "...and something snapped.",
+      "dialogue": [],
+      "characters": [
+        "kid"
+      ],
+      "objects": [],
+      "shotType": "Extreme Close-up",
+      "prompt": "",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep03/panels/panel_04.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep03/panels/panel_04.webp",
+      "sizeKB": 858.3,
+      "hash": "ee8cff6f",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_03_Paid_My_Dues/selected/track_03_panel_04.webp",
+      "originalCaption": "...and something snapped."
+    },
+    {
+      "panelId": 5,
+      "name": "In the backseat of a black stretch",
+      "act": "Track 3",
+      "summary": "In the backseat of a black stretch limousine, a slick music executive hands a business card to the tall Kid outside a club.",
+      "caption": "A label man caught his set, gave him a card...",
+      "dialogue": [],
+      "characters": [
+        "kid",
+        "label_man"
+      ],
+      "objects": [],
+      "shotType": "Flashback panel with wavy border",
+      "prompt": "",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep03/panels/panel_05.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep03/panels/panel_05.webp",
+      "sizeKB": 746.9,
+      "hash": "5426fd6b",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_03_Paid_My_Dues/selected/track_03_panel_05.webp",
+      "originalCaption": "A label man caught his set, gave him a card..."
+    },
+    {
+      "panelId": 6,
+      "name": "The Kid waiting by a payphone in",
+      "act": "Track 3",
+      "summary": "The Kid waiting by a payphone in the rain, then slamming down the receiver in frustration.",
+      "caption": "...took his call for a week straight and never picked up.",
+      "dialogue": [],
+      "characters": [
+        "kid"
+      ],
+      "objects": [],
+      "shotType": "Split Comic Panel (Diptych)",
+      "prompt": "",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep03/panels/panel_06.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep03/panels/panel_06.webp",
+      "sizeKB": 849.8,
+      "hash": "364983be",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_03_Paid_My_Dues/selected/track_03_panel_06.webp",
+      "originalCaption": "...took his call for a week straight and never picked up."
+    },
+    {
+      "panelId": 7,
+      "name": "The fuel gauge needle resting past empty",
+      "act": "Track 3",
+      "summary": "The fuel gauge needle resting past empty.",
+      "caption": "Driving home broke at dawn...",
+      "dialogue": [],
+      "characters": [],
+      "objects": [],
+      "shotType": "Close-up on truck dashboard at dawn",
+      "prompt": "",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep03/panels/panel_07.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep03/panels/panel_07.webp",
+      "sizeKB": 708.2,
+      "hash": "434235be",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_03_Paid_My_Dues/selected/track_03_panel_07.webp",
+      "originalCaption": "Driving home broke at dawn..."
+    },
+    {
+      "panelId": 8,
+      "name": "The young 24yo Kid's contemplative, tired eyes",
+      "act": "Track 3",
+      "summary": "The young 24yo Kid's contemplative, tired eyes reflected in the rearview mirror at dawn.",
+      "caption": "...the old bluesman's voice from years back came back to him. What did he have to lose?",
+      "dialogue": [],
+      "characters": [
+        "kid"
+      ],
+      "objects": [],
+      "shotType": "Cinematic close-up on rearview mirror",
+      "prompt": "",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep03/panels/panel_08.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep03/panels/panel_08.webp",
+      "sizeKB": 830.8,
+      "hash": "abe05709",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_03_Paid_My_Dues/selected/track_03_panel_08.webp",
+      "originalCaption": "...the old bluesman's voice from years back came back to him. What did he have to lose?"
+    },
+    {
+      "panelId": 9,
+      "name": "The pickup truck whipping around in a",
+      "act": "Track 3",
+      "summary": "The pickup truck whipping around in a violent U-turn in the desert road, kicking up dust.",
+      "caption": "He decided to find the old man again. But he'd brushed him off and never asked where the crossroads was.",
+      "dialogue": [],
+      "characters": [],
+      "objects": [],
+      "shotType": "High angle exterior dynamic shot",
+      "prompt": "",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep03/panels/panel_09.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep03/panels/panel_09.webp",
+      "sizeKB": 1113.8,
+      "hash": "179aacc2",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_03_Paid_My_Dues/selected/track_03_panel_09.webp",
+      "originalCaption": "He decided to find the old man again. But he'd brushed him off and never asked where the crossroads was."
+    },
+    {
+      "panelId": 10,
+      "name": "The Kid seated on the left in",
+      "act": "Track 3",
+      "summary": "The Kid seated on the left in the driver's seat (American LHD), driving fast with fierce determination, hands gripping the wheel. Clean cab interior.",
+      "caption": "He'd have to hunt him down.",
+      "dialogue": [],
+      "characters": [
+        "kid"
+      ],
+      "objects": [],
+      "shotType": "Interior truck cab profile shot from passenger side looking across at driver",
+      "prompt": "",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep03/panels/panel_10.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep03/panels/panel_10.webp",
+      "sizeKB": 798.3,
+      "hash": "7040bfc8",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_03_Paid_My_Dues/selected/track_03_panel_10.webp",
+      "originalCaption": "He'd have to hunt him down."
+    }
+  ],
+  "importedFrom": {
+    "source": "At the Crossroads - 2",
+    "track": 3,
+    "importedAt": "2026-11-16T19:22:00.815Z"
+  }
+}

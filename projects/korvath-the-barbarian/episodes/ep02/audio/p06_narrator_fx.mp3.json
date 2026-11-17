@@ -1,0 +1,16 @@
+{
+  "speaker": "Narrator",
+  "character": "narrator",
+  "actorName": "Brian",
+  "voiceId": "nPczCjzI2devNBz1zQrb",
+  "edgeVoice": "",
+  "engineUsed": "ElevenLabs",
+  "elevenLabsError": "",
+  "textToSpeak": "Temple flagstones turned red in three heartbeats.",
+  "stability": 0.3,
+  "style": 0.65,
+  "dspChain": "volume=1.25",
+  "reusedTake": false,
+  "creditsUsed": 49,
+  "synthesizedAt": "2026-11-16T13:06:24.060Z"
+}

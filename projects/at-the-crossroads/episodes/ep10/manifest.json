@@ -1,0 +1,333 @@
+{
+  "projectId": "at-the-crossroads",
+  "episodeId": "ep10",
+  "episodeNumber": 10,
+  "title": "Track 10: Crossroads and Coffins: Deux",
+  "theme": "Crossroads and Coffins: Deux",
+  "targetPanelCount": 10,
+  "currentStage": "VOICE_SYNTHESIS",
+  "overallProgress": 50,
+  "updatedAt": "2026-11-16T19:22:00.815Z",
+  "outputs": {
+    "resolution": "10 imported panels • ready for voices"
+  },
+  "stages": [
+    {
+      "id": "SCRIPT_GENERATION",
+      "name": "1. Writers Room Script",
+      "status": "COMPLETED",
+      "progress": 100
+    },
+    {
+      "id": "PROMPT_EXPANSION",
+      "name": "2. Latent Anchor & Guardrails",
+      "status": "COMPLETED",
+      "progress": 100
+    },
+    {
+      "id": "VISUAL_RENDERING",
+      "name": "3. Meta AI 2K Panel Rendering",
+      "status": "COMPLETED",
+      "progress": 100
+    },
+    {
+      "id": "VOICE_SYNTHESIS",
+      "name": "4. Multi-Actor Voice & DSP",
+      "status": "PENDING",
+      "progress": 0
+    },
+    {
+      "id": "VIDEO_ASSEMBLY",
+      "name": "5. Motion Comic Camera & Concat",
+      "status": "LOCKED_BY_GATE",
+      "progress": 0
+    },
+    {
+      "id": "READY_FOR_RELEASE",
+      "name": "6. Master Release Bundle",
+      "status": "LOCKED_BY_GATE",
+      "progress": 0
+    }
+  ],
+  "gates": [
+    {
+      "id": "SCRIPT_GATE",
+      "name": "Gate A: Storyboard & Dialogue Lock",
+      "afterStage": "SCRIPT_GENERATION",
+      "status": "APPROVED",
+      "approvedAt": "2026-11-16T19:22:00.815Z",
+      "notes": "Imported script from At the Crossroads (Take 2)."
+    },
+    {
+      "id": "VISUAL_QA_GATE",
+      "name": "Gate B: 8-Point Director Visual Continuity Gate",
+      "afterStage": "VISUAL_RENDERING",
+      "status": "APPROVED",
+      "approvedAt": "2026-11-16T19:22:00.815Z",
+      "notes": "Imported panels already approved in the original project."
+    },
+    {
+      "id": "AUDIO_QA_GATE",
+      "name": "Gate C: 5-Point Acoustic & Polarity Gate",
+      "afterStage": "VOICE_SYNTHESIS",
+      "status": "LOCKED",
+      "notes": "Awaiting voice synthesis."
+    }
+  ],
+  "panels": [
+    {
+      "panelId": 1,
+      "name": "Exterior of a lonely, weather-beaten roadside dive",
+      "act": "Track 10",
+      "summary": "Exterior of a lonely, weather-beaten roadside dive bar off Highway 61 in the Mississippi Delta on a dark rainy night. Neon beer signs glow through the misty downpour.",
+      "caption": "The story is done. Out on Highway 61, thirty years have passed, and the music turned to legend.",
+      "dialogue": [],
+      "characters": [],
+      "objects": [],
+      "shotType": "Wide cinematic horizontal establishing shot, stormy night",
+      "prompt": "Wide cinematic horizontal establishing shot, exterior stormy night. A lonely, weathered wooden roadside dive bar sits beside a dark, rain-soaked asphalt stretch of Highway 61 in the Mississippi Delta. Flickering neon beer signs cast warm amber, red, and blue reflections across deep puddles on the gravel parking lot and the wet hood of an old pickup truck. Moss-draped trees sway in the misty night wind. Rain streaks through the glow of the porch light. Complete rectangular black ink panel frame border enclosing all four sides with generous margins. Crucial: Include a prominent torn parchment paper caption box placed across the top of the frame with clear margin below the top border (ensure all text is 100% visible, sharp and legible) with the exact text: \"The story is done. Out on Highway 61, thirty years have passed, and the music turned to legend.\". Use a messy handwritten marker font. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, neon and rain-swept chiaroscuro atmospheric lighting, clean cel and gradient shading, no messy watercolor wash, no blur.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep10/panels/panel_01.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep10/panels/panel_01.webp",
+      "sizeKB": 722.6,
+      "hash": "af7bbc86",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_10_Crossroads_and_Coffins_Deux/selected/track_10_panel_01.webp",
+      "originalCaption": "The story is done. Out on Highway 61, thirty years have passed, and the music turned to legend."
+    },
+    {
+      "panelId": 2,
+      "name": "Inside the dingy, smoke-tinged Delta tavern, an",
+      "act": "Track 10",
+      "summary": "Inside the dingy, smoke-tinged Delta tavern, an elderly weathered storyteller sits on a worn wooden barstool at the scarred mahogany counter with a half-empty glass of amber whiskey.",
+      "caption": "Down in the Delta, in a roadside tavern where the whiskey's stale and the neon flickers low...",
+      "dialogue": [],
+      "characters": [
+        "kid"
+      ],
+      "objects": [],
+      "shotType": "Wide cinematic horizontal interior shot",
+      "prompt": "Wide cinematic horizontal shot, interior tavern night. Inside the dimly lit, smoky highway dive bar in the Mississippi Delta, an enigmatic elderly African-American man (weathered dark skin, grey stubble, wrinkled knowing features, wearing a worn charcoal suit jacket with loosened collar) sits on a wooden stool at the dark scarred bar counter. Beside his hand rests a half-empty tumbler of amber whiskey. In the background, neon beer signs glow softly through cigarette haze and rain streaks down the tavern window. Complete rectangular black ink panel frame border enclosing all four sides with generous margins. Crucial: Include a prominent torn parchment paper caption box placed across the top of the frame with clear margin below the top border (ensure all text is 100% visible, sharp and legible) with the exact text: \"Down in the Delta, in a roadside tavern where the whiskey's stale and the neon flickers low...\". Use a messy handwritten marker font. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, moody neon and amber tavern lighting, clean cel and gradient shading, no messy watercolor wash, no blur.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep10/panels/panel_02.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep10/panels/panel_02.webp",
+      "sizeKB": 621,
+      "hash": "4ff0fb28",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_10_Crossroads_and_Coffins_Deux/selected/track_10_panel_02.webp",
+      "originalCaption": "Down in the Delta, in a roadside tavern where the whiskey's stale and the neon flickers low..."
+    },
+    {
+      "panelId": 3,
+      "name": "The Old Timer leans across the counter",
+      "act": "Track 10",
+      "summary": "The Old Timer leans across the counter toward a young, lean 20-year-old traveler sitting on the next stool holding a guitar case.",
+      "caption": "...an old timer leans in when the night gets slow, telling the tale to anyone with a six-string and an itch to be someone.",
+      "dialogue": [],
+      "characters": [
+        "kid",
+        "old_timer"
+      ],
+      "objects": [],
+      "shotType": "Wide cinematic horizontal two-shot across the bar",
+      "prompt": "Wide cinematic horizontal two-shot, interior tavern night. At the scarred wooden bar counter under the warm amber glow of pendant lamps, the elderly African-American storyteller leans in close, talking to a lean 20-year-old young man sitting on the adjacent stool. The young man wears a denim jacket, listening with intense, hungry ambition, with a battered black acoustic guitar case leaning upright against his stool. Thin blue cigarette smoke drifts between them in the atmospheric roadhouse interior. Complete rectangular black ink panel frame border enclosing all four sides with generous margins. Crucial: Include a prominent torn parchment paper caption box placed across the top of the frame with clear margin below the top border (ensure all text is 100% visible, sharp and legible) with the exact text: \"...an old timer leans in when the night gets slow, telling the tale to anyone with a six-string and an itch to be someone.\". Use a messy handwritten marker font. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, warm amber tavern chiaroscuro lighting, clean cel and gradient shading, no messy watercolor wash, no blur.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep10/panels/panel_03.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep10/panels/panel_03.webp",
+      "sizeKB": 610.3,
+      "hash": "123dc248",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_10_Crossroads_and_Coffins_Deux/selected/track_10_panel_03.webp",
+      "originalCaption": "...an old timer leans in when the night gets slow, telling the tale to anyone with a six-string and an itch to be someone."
+    },
+    {
+      "panelId": 4,
+      "name": "The Old Timer's weathered dark hands slowly",
+      "act": "Track 10",
+      "summary": "The Old Timer's weathered dark hands slowly spin the heavy glass tumbler of amber whiskey on the moisture-ringed wooden counter, an unlit wooden tobacco pipe resting nearby.",
+      "caption": "He tells of the kid from the dirt-poor West who traded everything for five years at the top.",
+      "dialogue": [],
+      "characters": [
+        "kid",
+        "old_timer"
+      ],
+      "objects": [],
+      "shotType": "Wide cinematic horizontal close-up on the bar counter",
+      "prompt": "Wide cinematic horizontal close-up on the scarred wooden bar counter. The gnarled, weathered dark hands of the elderly storyteller slowly rotate a heavy glass tumbler filled with amber whiskey, creating a wet ring on the dark polished wood. Beside the glass sits an old carved wooden tobacco pipe with a faint wisp of aromatic smoke rising into the dim tavern air. Soft neon reflections gleam on the amber liquid. Complete rectangular black ink panel frame border enclosing all four sides with generous margins. Crucial: Include a prominent torn parchment paper caption box placed across the top of the frame with clear margin below the top border (ensure all text is 100% visible, sharp and legible) with the exact text: \"He tells of the kid from the dirt-poor West who traded everything for five years at the top.\". Use a messy handwritten marker font. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, rich amber tavern lighting with deep shadows, clean cel and gradient shading, no messy watercolor wash, no blur.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep10/panels/panel_04.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep10/panels/panel_04.webp",
+      "sizeKB": 735.5,
+      "hash": "01691b9d",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_10_Crossroads_and_Coffins_Deux/selected/track_10_panel_04.webp",
+      "originalCaption": "He tells of the kid from the dirt-poor West who traded everything for five years at the top."
+    },
+    {
+      "panelId": 5,
+      "name": "Looking past the shoulder of the young",
+      "act": "Track 10",
+      "summary": "Looking past the shoulder of the young traveler at the Old Timer, who gestures animatedly with one hand as he weaves the legendary folklore.",
+      "caption": "Old folks can't agree on where the kid fell, or how the devil came to call in the debt.",
+      "dialogue": [],
+      "characters": [
+        "kid",
+        "devil",
+        "old_timer"
+      ],
+      "objects": [],
+      "shotType": "Wide cinematic horizontal over-the-shoulder shot",
+      "prompt": "Wide cinematic horizontal over-the-shoulder shot, interior bar. Looking past the shoulder of the young musician in his denim jacket toward the elderly storyteller sitting across the corner of the wooden bar. The elderly African-American man (sharp knowing eyes, grey fedora tilted slightly, wrinkled expressive face) gestures with his open dark hand as he spins his mysterious tale, a sly enigmatic smile playing on his weathered lips. Background of dusty liquor bottles glowing in dim tavern light. Complete rectangular black ink panel frame border enclosing all four sides with generous margins. Crucial: Include a prominent torn parchment paper caption box placed across the top of the frame with clear margin below the top border (ensure all text is 100% visible, sharp and legible) with the exact text: \"Old folks can't agree on where the kid fell, or how the devil came to call in the debt.\". Use a messy handwritten marker font. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, atmospheric tavern chiaroscuro lighting, clean cel and gradient shading, no messy watercolor wash, no blur.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep10/panels/panel_05.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep10/panels/panel_05.webp",
+      "sizeKB": 633.4,
+      "hash": "e8ab0256",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_10_Crossroads_and_Coffins_Deux/selected/track_10_panel_05.webp",
+      "originalCaption": "Old folks can't agree on where the kid fell, or how the devil came to call in the debt."
+    },
+    {
+      "panelId": 6,
+      "name": "In the misty midnight mud of the",
+      "act": "Track 10",
+      "summary": "In the misty midnight mud of the remote crossroads under a crescent moon, a solitary guitar and the dark leather ledger lie abandoned beside a spent brass bullet shell.",
+      "caption": "Some say he was shot dead in the mud at the crossroads, a bloody bullet resting on an open ledger.",
+      "dialogue": [],
+      "characters": [],
+      "objects": [],
+      "shotType": "Wide cinematic horizontal visionary flashback shot",
+      "prompt": "Wide cinematic horizontal comic panel (3:2 aspect ratio), misty night exterior. At the desolate dirt crossroads shrouded in eerie blue-grey bayou fog under a pale crescent moon, a solitary acoustic guitar lies face-up in the mud beside an ancient black leather ledger book. Resting on the open aged parchment page of the ledger is a single tarnished brass bullet casing gleaming in the moonlight. Distant silhouette of telephone poles stretching into the fog. Mysterious, haunting folklore atmosphere. Complete rectangular black ink panel frame border enclosing all four sides with generous margins. Crucial: Include a prominent torn parchment paper caption box placed across the top of the frame with clear margin below the top border (ensure all text is 100% visible, sharp and legible) with the exact text: \"Some say he was shot dead in the mud at the crossroads, a bloody bullet resting on an open ledger.\". Use a messy handwritten marker font. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, eerie midnight blue and pale moonlight, clean cel and gradient shading, no messy watercolor wash, no blur.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep10/panels/panel_06.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep10/panels/panel_06.webp",
+      "sizeKB": 699.8,
+      "hash": "68216975",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_10_Crossroads_and_Coffins_Deux/selected/track_10_panel_06.webp",
+      "originalCaption": "Some say he was shot dead in the mud at the crossroads, a bloody bullet resting on an open ledger."
+    },
+    {
+      "panelId": 7,
+      "name": "The remote Blackwater wooden church standing atop",
+      "act": "Track 10",
+      "summary": "The remote Blackwater wooden church standing atop its overgrown hill, its windows blazing with incandescent golden fire beneath an apocalyptic, swirling blood-red evening sky.",
+      "caption": "Some tell of a country preacher in a swamp chapel consumed by hellfire when the sky turned blood red.",
+      "dialogue": [],
+      "characters": [
+        "kid"
+      ],
+      "objects": [],
+      "shotType": "Wide cinematic horizontal visionary flashback shot",
+      "prompt": "Wide cinematic horizontal comic panel (3:2 aspect ratio), apocalyptic exterior dusk. On the crest of a lonely hill in the Mississippi swamp, the rustic wooden country church stands with its tall windows and doorway blazing with blinding, incandescent supernatural golden-orange light, beneath a terrifying swirling blood-red and crimson sky. Tattered black Spanish moss hangs from silhouetted cypress trees around the churchyard. A dramatic, supernatural folklore vision of judgment. Complete rectangular black ink panel frame border enclosing all four sides with generous margins. Crucial: Include a prominent torn parchment paper caption box placed across the top of the frame with clear margin below the top border (ensure all text is 100% visible, sharp and legible) with the exact text: \"Some tell of a country preacher in a swamp chapel consumed by hellfire when the sky turned blood red.\". Use a messy handwritten marker font. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, intense surreal blood-red and golden flame contrast, clean cel and gradient shading, no messy watercolor wash, no blur.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep10/panels/panel_07.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep10/panels/panel_07.webp",
+      "sizeKB": 759.3,
+      "hash": "173bef7e",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_10_Crossroads_and_Coffins_Deux/selected/track_10_panel_07.webp",
+      "originalCaption": "Some tell of a country preacher in a swamp chapel consumed by hellfire when the sky turned blood red."
+    },
+    {
+      "panelId": 8,
+      "name": "Back in the quiet roadside tavern, the",
+      "act": "Track 10",
+      "summary": "Back in the quiet roadside tavern, the Old Timer slowly raises his glass of whiskey to his lips, taking a deliberate sip.",
+      "caption": "The stories don't agree on where he fell, but every one of them ends with his soul in Hell.",
+      "dialogue": [],
+      "characters": [
+        "old_timer"
+      ],
+      "objects": [],
+      "shotType": "Wide cinematic horizontal medium shot, present day tavern",
+      "prompt": "Wide cinematic horizontal medium shot, interior tavern night. Back in the dimly lit Mississippi Delta highway dive bar, the elderly African-American storyteller slowly raises his glass tumbler of amber whiskey to his lips, taking a slow, measured sip. Over the rim of the glass, his deeply lined, dark weathered face and heavy lidded eyes gaze with chilling, ancient wisdom. Soft neon signs reflect in the amber glass. Heavy shadows enfold the tavern booth. Complete rectangular black ink panel frame border enclosing all four sides with generous margins. Crucial: Include a prominent torn parchment paper caption box placed across the top of the frame with clear margin below the top border (ensure all text is 100% visible, sharp and legible) with the exact text: \"The stories don't agree on where he fell, but every one of them ends with his soul in Hell.\". Use a messy handwritten marker font. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, moody neon and tavern chiaroscuro lighting, clean cel and gradient shading, no messy watercolor wash, no blur.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep10/panels/panel_08.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep10/panels/panel_08.webp",
+      "sizeKB": 491.9,
+      "hash": "d07b7b20",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_10_Crossroads_and_Coffins_Deux/selected/track_10_panel_08.webp",
+      "originalCaption": "The stories don't agree on where he fell, but every one of them ends with his soul in Hell."
+    },
+    {
+      "panelId": 9,
+      "name": "The Old Timer lowers his glass and",
+      "act": "Track 10",
+      "summary": "The Old Timer lowers his glass and turns his head to look directly out of the frame at the reader, eyes blazing with supernatural crimson-red demonic embers.",
+      "caption": "The Devil's still dealing.",
+      "dialogue": [],
+      "characters": [
+        "devil",
+        "old_timer"
+      ],
+      "objects": [],
+      "shotType": "Wide cinematic horizontal dramatic close-up",
+      "prompt": "Wide cinematic horizontal dramatic close-up, breaking the fourth wall. The elderly African-American storyteller lowers his glass and turns his head to gaze directly into the camera at the viewer. A chilling, sinister predatory grin spreads across his dark weathered features. Tilted low over his brow is a dusty grey fedora, and beneath its shadowed brim, his uncanny eyes ignite with terrifying supernatural crimson-red fire, casting an eerie demonic glow across his sharp cheekbones and wrinkles—the ancient Devil revealing his true self. Complete rectangular black ink panel frame border enclosing all four sides with generous margins. Crucial: Include a prominent torn parchment paper caption box placed across the top of the frame with clear margin below the top border (ensure all text is 100% visible, sharp and legible) with the exact text: \"The Devil's still dealing.\". Use a messy handwritten marker font. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, searing demonic red eye glow cutting through deep shadows, clean cel and gradient shading, no messy watercolor wash, no blur.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep10/panels/panel_09.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep10/panels/panel_09.webp",
+      "sizeKB": 559.8,
+      "hash": "c2ad0d18",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_10_Crossroads_and_Coffins_Deux/selected/track_10_panel_09.webp",
+      "originalCaption": "The Devil's still dealing."
+    },
+    {
+      "panelId": 10,
+      "name": "On the scarred wooden bar counter right",
+      "act": "Track 10",
+      "summary": "On the scarred wooden bar counter right in front of the viewer, lies the massive, ancient black leather-bound ledger with brass corner brackets, slightly cracked open beside a shot glass and guitar pick.",
+      "caption": "Maybe next time, it's you.",
+      "dialogue": [],
+      "characters": [],
+      "objects": [],
+      "shotType": "Wide cinematic horizontal extreme close-up, final frame",
+      "prompt": "Wide cinematic horizontal comic panel (3:2 aspect ratio), close-up shot on the dark scarred tavern bar counter. In the center of the frame, resting right in front of the viewer, is the massive, ancient black leather-bound ledger book with tarnished brass corner brackets, aged cracked leather, and a dark blood-red ribbon bookmark trailing across the dark wood. The heavy book is slightly cracked open, tempting the viewer. Beside the ledger sits an empty shot glass and a celluloid guitar pick gleaming under the dim amber tavern light. Deep shadowy atmosphere. Complete rectangular black ink panel frame border enclosing all four sides with generous margins. Crucial: Include a prominent torn parchment paper caption box placed across the top of the frame with clear margin below the top border (ensure all text is 100% visible, sharp and legible) with the exact text: \"Maybe next time, it's you.\". Use a messy handwritten marker font. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, mysterious amber tavern lighting with deep rich blacks, clean cel and gradient shading, no messy watercolor wash, no blur.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep10/panels/panel_10.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep10/panels/panel_10.webp",
+      "sizeKB": 767.8,
+      "hash": "d029b58a",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_10_Crossroads_and_Coffins_Deux/selected/track_10_panel_10.webp",
+      "originalCaption": "Maybe next time, it's you."
+    }
+  ],
+  "importedFrom": {
+    "source": "At the Crossroads - 2",
+    "track": 10,
+    "importedAt": "2026-11-16T19:22:00.815Z"
+  }
+}

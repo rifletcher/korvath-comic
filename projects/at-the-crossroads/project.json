@@ -1,0 +1,31 @@
+{
+  "id": "at-the-crossroads",
+  "title": "At the Crossroads",
+  "subtitle": "The Legend of the Kid and the Devil",
+  "genre": "Southern Gothic folk-horror graphic novel told like a blues ballad",
+  "artStyleAnchor": "highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, muted but high-contrast cinematic lighting, clean cel and gradient shading, no messy watercolor wash, no blur",
+  "defaultImageEngine": "meta-ai-cdp",
+  "defaultVoiceEngine": "elevenlabs",
+  "targetEpisodeCount": 10,
+  "defaultPanelsPerEpisode": 10,
+  "createdAt": "2026-11-16T19:22:00.815Z",
+  "updatedAt": "2026-11-16T19:22:00.815Z",
+  "coverImage": "projects/at-the-crossroads/episodes/ep05/panels/panel_02.webp",
+  "invariants": [
+    "The Kid ages across the story: 8-12 in Track 1, late teens/early 20s on the road, 24 at the crossroads, a star in his 30s, a preacher in his 40s",
+    "The Devil appears as a 7-foot shadow with glowing red ember eyes, as the Old Bluesman in a fedora with a pipe, and as the Rider of the Blackwater Devils MC",
+    "The black leather ledger bound with iron clasps is the Devil's book in every appearance"
+  ],
+  "episodes": [
+    "ep01",
+    "ep02",
+    "ep03",
+    "ep04",
+    "ep05",
+    "ep06",
+    "ep07",
+    "ep08",
+    "ep09",
+    "ep10"
+  ]
+}

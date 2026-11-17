@@ -1,0 +1,27 @@
+{
+  "name": "korvath-graphic-novel",
+  "version": "1.0.0",
+  "description": "Korvath the Barbarian Graphic Novel Studio with Venice Grok Imagine Pipeline",
+  "main": "tools/writers_room/writers_room.js",
+  "scripts": {
+    "studio:start": "conan-studio.exe --port 8484",
+    "studio:window": "conan-studio.exe --port 8484 --window",
+    "worker:cdp": "node tools/workers/comic_cli_worker.js --action cdp-status",
+    "test": "node tools/workers/test_worker_modules.js && node tools/writers_room/test_ai_writers_room.js",
+    "test:go": "cd studio && go test ./...",
+    "build:studio": "cd studio && go build -o ../conan-studio-new.exe ."
+  },
+  "keywords": [
+    "korvath",
+    "graphic-novel",
+    "venice-ai",
+    "grok",
+    "sword-and-sorcery"
+  ],
+  "author": "Antigravity & User",
+  "license": "MIT",
+  "dependencies": {
+    "msedge-tts": "^2.1.1",
+    "ws": "^8.22.1"
+  }
+}

@@ -1,0 +1,846 @@
+{
+  "projectId": "shadows-of-chromium",
+  "episodeId": "ep01",
+  "episodeNumber": 1,
+  "title": "Issue #1: Chapter 1",
+  "theme": "shadows-of-chromium_episode_01",
+  "targetPanelCount": 20,
+  "currentStage": "SCRIPT_GATE",
+  "overallProgress": 18,
+  "assignedWorkerTab": null,
+  "updatedAt": "2026-11-11T20:46:26.587Z",
+  "outputs": {
+    "resolution": "Configured for 20 Panels • Awaiting Gate A Approval"
+  },
+  "stages": [
+    {
+      "id": "SCRIPT_GENERATION",
+      "name": "1. Writers Room Script",
+      "status": "COMPLETED",
+      "progress": 100
+    },
+    {
+      "id": "PROMPT_EXPANSION",
+      "name": "2. Latent Anchor & Guardrails",
+      "status": "LOCKED_BY_GATE",
+      "progress": 0
+    },
+    {
+      "id": "VISUAL_RENDERING",
+      "name": "3. Meta AI 2K Panel Rendering",
+      "status": "LOCKED_BY_GATE",
+      "progress": 0
+    },
+    {
+      "id": "VOICE_SYNTHESIS",
+      "name": "4. Multi-Actor Voice & DSP",
+      "status": "LOCKED_BY_GATE",
+      "progress": 0
+    },
+    {
+      "id": "VIDEO_ASSEMBLY",
+      "name": "5. Motion Comic Camera & Concat",
+      "status": "LOCKED_BY_GATE",
+      "progress": 0
+    },
+    {
+      "id": "READY_FOR_RELEASE",
+      "name": "6. Master Release Bundle",
+      "status": "LOCKED_BY_GATE",
+      "progress": 0
+    }
+  ],
+  "gates": [
+    {
+      "id": "SCRIPT_GATE",
+      "name": "Gate A: Storyboard & Dialogue Lock",
+      "afterStage": "SCRIPT_GENERATION",
+      "status": "AWAITING_APPROVAL",
+      "approvedAt": null,
+      "notes": "AI Writers' Room compiled 20-panel screenplay. Ready for director lock."
+    },
+    {
+      "id": "VISUAL_QA_GATE",
+      "name": "Gate B: 8-Point Director Visual Continuity Gate",
+      "afterStage": "VISUAL_RENDERING",
+      "status": "LOCKED",
+      "approvedAt": null,
+      "notes": "Locked until panels render."
+    },
+    {
+      "id": "AUDIO_QA_GATE",
+      "name": "Gate C: 5-Point Acoustic & Polarity Gate",
+      "afterStage": "VOICE_SYNTHESIS",
+      "status": "LOCKED",
+      "approvedAt": null,
+      "notes": "Locked until Gate B is approved."
+    }
+  ],
+  "panels": [
+    {
+      "panelId": 1,
+      "name": "The Obsidian Skyline",
+      "act": "Act I",
+      "summary": "A lone trench-coated figure stands on a rain-slicked fire escape overlooking towering art-deco ziggurat skyscrapers and beaming searchlights cutting through violet smog.",
+      "caption": "In the City of Chromium, money bought heaven, but blood still paid for the elevator.",
+      "dialogue": [
+        {
+          "speaker": "Vincent Cole",
+          "text": "Another night, another glass of gin trying to drown memories that know how to swim."
+        }
+      ],
+      "characters": [
+        "vincent_cole"
+      ],
+      "objects": [
+        "trenchcoat",
+        "fedora",
+        "cigarette"
+      ],
+      "shotType": "High-Angle Panoramic Chiaroscuro Shot",
+      "prompt": "classic vintage noir graphic novel comic book panel, dark art-deco glamour style, rich saturated nighttime jewel tones with electric deep blues, purples, and glowing warm golds. Sleek 2D animation / cinematic poster illustration with dramatic chiaroscuro and high-contrast lighting. Distinct features include stark silhouettes of elegantly dressed figures, towering stepped ziggurat skyscrapers and ornate cityscapes at night with beaming searchlights, plush penthouse interiors with massive crystal chandeliers, ornate brass/gold patterns, spiral staircases, and glowing arched geometric windows. Rich hand-drawn ink outlines, subtle film grain, and atmospheric luxury., High-Angle Panoramic Chiaroscuro Shot. A lone trench-coated figure stands on a rain-slicked fire escape overlooking towering art-deco ziggurat skyscrapers and beaming searchlights cutting through violet smog., Vincent Cole, rugged 1930s private detective, sharp chiseled jaw with dark five o'clock shadow, piercing world-weary hazel eyes, dark brown fedora tilted low, weathered charcoal-grey wool trench coat with upturned collar, loose patterned silk tie, white dress shirt, strictly natural 5-fingered human hands, snub-nosed .38 revolver, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"In the City of Chromium, money bought heaven, but blood still paid for the elevator.\", Include an authentic white comic book speech balloon with black ink outline and directional pointer pointing toward Vincent Cole with the text: \"Another night, another glass of gin trying to drown memories that know how to swim.\"",
+      "imageStatus": "PENDING",
+      "imagePath": "",
+      "webPreviewUrl": "",
+      "sizeKB": 0,
+      "hash": "",
+      "audioStatus": "LOCKED_BY_GATE",
+      "audioPath": "",
+      "qaChecklist": {
+        "facialLikeness": false,
+        "wardrobeContinuity": false,
+        "singleSwordInvariant": true,
+        "cardinalityGuard": true,
+        "handAnatomyGuard": true,
+        "environmentalContinuity": false,
+        "frazettaInkStyle": true,
+        "captionSpeechLegibility": true
+      }
+    },
+    {
+      "panelId": 2,
+      "name": "The Gilded Penthouse",
+      "act": "Act I",
+      "summary": "Inside a decadent art-deco penthouse ballroom, high society elites in tuxedos and backless evening gowns dance beneath a massive crystal chandelier.",
+      "caption": "The Sterling Gala was where the wolves of industry came to admire each other's fangs.",
+      "dialogue": [],
+      "characters": [
+        "society_guests",
+        "viktor_sterling"
+      ],
+      "objects": [
+        "crystal_chandelier",
+        "champagne_flutes"
+      ],
+      "shotType": "Wide Glamour Interior Shot",
+      "prompt": "classic vintage noir graphic novel comic book panel, dark art-deco glamour style, rich saturated nighttime jewel tones with electric deep blues, purples, and glowing warm golds. Sleek 2D animation / cinematic poster illustration with dramatic chiaroscuro and high-contrast lighting. Distinct features include stark silhouettes of elegantly dressed figures, towering stepped ziggurat skyscrapers and ornate cityscapes at night with beaming searchlights, plush penthouse interiors with massive crystal chandeliers, ornate brass/gold patterns, spiral staircases, and glowing arched geometric windows. Rich hand-drawn ink outlines, subtle film grain, and atmospheric luxury., Wide Glamour Interior Shot. Inside a decadent art-deco penthouse ballroom, high society elites in tuxedos and backless evening gowns dance beneath a massive crystal chandelier., Baron Viktor Sterling, cold predatory industrial tycoon in his fifties, silver-templed slicked hair, thin mustache, gold-rimmed monocle over left eye, immaculate double-breasted black tuxedo with satin lapels, diamond cufflinks, smoldering Havana cigar, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"The Sterling Gala was where the wolves of industry came to admire each other's fangs.\"",
+      "imageStatus": "PENDING",
+      "imagePath": "",
+      "webPreviewUrl": "",
+      "sizeKB": 0,
+      "hash": "",
+      "audioStatus": "LOCKED_BY_GATE",
+      "audioPath": "",
+      "qaChecklist": {
+        "facialLikeness": false,
+        "wardrobeContinuity": false,
+        "singleSwordInvariant": true,
+        "cardinalityGuard": true,
+        "handAnatomyGuard": true,
+        "environmentalContinuity": false,
+        "frazettaInkStyle": true,
+        "captionSpeechLegibility": true
+      }
+    },
+    {
+      "panelId": 3,
+      "name": "The Lady in Emerald",
+      "act": "Act I",
+      "summary": "Evelyn Cross, radiant in a backless emerald-silk gown and diamond serpent choker, slips past marble pillars, eyes darting anxiously toward the terrace.",
+      "caption": "Evelyn Cross wore danger like expensive perfume. Everyone in the room smelled it.",
+      "dialogue": [
+        {
+          "speaker": "Evelyn Cross",
+          "text": "Keep moving, Evelyn. Don't look at the guards."
+        }
+      ],
+      "characters": [
+        "evelyn_cross"
+      ],
+      "objects": [
+        "emerald_silk_gown",
+        "diamond_choker"
+      ],
+      "shotType": "Medium Dutch Angle Tracking Shot",
+      "prompt": "classic vintage noir graphic novel comic book panel, dark art-deco glamour style, rich saturated nighttime jewel tones with electric deep blues, purples, and glowing warm golds. Sleek 2D animation / cinematic poster illustration with dramatic chiaroscuro and high-contrast lighting. Distinct features include stark silhouettes of elegantly dressed figures, towering stepped ziggurat skyscrapers and ornate cityscapes at night with beaming searchlights, plush penthouse interiors with massive crystal chandeliers, ornate brass/gold patterns, spiral staircases, and glowing arched geometric windows. Rich hand-drawn ink outlines, subtle film grain, and atmospheric luxury., Medium Dutch Angle Tracking Shot. Evelyn Cross, radiant in a backless emerald-silk gown and diamond serpent choker, slips past marble pillars, eyes darting anxiously toward the terrace., Evelyn Cross, breathtaking 1930s art-deco high-society femme fatale, blend of Veronica Lake and Lauren Bacall, glamorous platinum wave hair cascading over one eye, sultry dark crimson lips, alluring defiant expression, backless emerald-green silk evening gown, diamond-encrusted serpent choker, coiled gold bangles, graceful posture, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"Evelyn Cross wore danger like expensive perfume. Everyone in the room smelled it.\", Include an authentic white comic book speech balloon with black ink outline and directional pointer pointing toward Evelyn Cross with the text: \"Keep moving, Evelyn. Don't look at the guards.\"",
+      "imageStatus": "PENDING",
+      "imagePath": "",
+      "webPreviewUrl": "",
+      "sizeKB": 0,
+      "hash": "",
+      "audioStatus": "LOCKED_BY_GATE",
+      "audioPath": "",
+      "qaChecklist": {
+        "facialLikeness": false,
+        "wardrobeContinuity": false,
+        "singleSwordInvariant": true,
+        "cardinalityGuard": true,
+        "handAnatomyGuard": true,
+        "environmentalContinuity": false,
+        "frazettaInkStyle": true,
+        "captionSpeechLegibility": true
+      }
+    },
+    {
+      "panelId": 4,
+      "name": "The Stolen Ledger",
+      "act": "Act I",
+      "summary": "In a private wood-paneled study with geometric brass inlays, Evelyn cracks a floor safe and slips a black velvet dossier into her clutch.",
+      "caption": "A few sheets of onionskin paper. Enough to hang half the city council before breakfast.",
+      "dialogue": [],
+      "characters": [
+        "evelyn_cross"
+      ],
+      "objects": [
+        "brass_wall_safe",
+        "black_dossier"
+      ],
+      "shotType": "Tight Chiaroscuro Suspense Shot",
+      "prompt": "classic vintage noir graphic novel comic book panel, dark art-deco glamour style, rich saturated nighttime jewel tones with electric deep blues, purples, and glowing warm golds. Sleek 2D animation / cinematic poster illustration with dramatic chiaroscuro and high-contrast lighting. Distinct features include stark silhouettes of elegantly dressed figures, towering stepped ziggurat skyscrapers and ornate cityscapes at night with beaming searchlights, plush penthouse interiors with massive crystal chandeliers, ornate brass/gold patterns, spiral staircases, and glowing arched geometric windows. Rich hand-drawn ink outlines, subtle film grain, and atmospheric luxury., Tight Chiaroscuro Suspense Shot. In a private wood-paneled study with geometric brass inlays, Evelyn cracks a floor safe and slips a black velvet dossier into her clutch., Evelyn Cross, breathtaking 1930s art-deco high-society femme fatale, blend of Veronica Lake and Lauren Bacall, glamorous platinum wave hair cascading over one eye, sultry dark crimson lips, alluring defiant expression, backless emerald-green silk evening gown, diamond-encrusted serpent choker, coiled gold bangles, graceful posture, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"A few sheets of onionskin paper. Enough to hang half the city council before breakfast.\"",
+      "imageStatus": "PENDING",
+      "imagePath": "",
+      "webPreviewUrl": "",
+      "sizeKB": 0,
+      "hash": "",
+      "audioStatus": "LOCKED_BY_GATE",
+      "audioPath": "",
+      "qaChecklist": {
+        "facialLikeness": false,
+        "wardrobeContinuity": false,
+        "singleSwordInvariant": true,
+        "cardinalityGuard": true,
+        "handAnatomyGuard": true,
+        "environmentalContinuity": false,
+        "frazettaInkStyle": true,
+        "captionSpeechLegibility": true
+      }
+    },
+    {
+      "panelId": 5,
+      "name": "The Baron's Warning",
+      "act": "Act I",
+      "summary": "Baron Viktor Sterling, monocled and immaculate in a double-breasted tuxedo, corners Evelyn at the frosted glass doors, cigar smoke swirling in amber backlight.",
+      "caption": "Sterling had built his fortune on crushed competitors. He wasn't in the habit of losing.",
+      "dialogue": [
+        {
+          "speaker": "Baron Viktor Sterling",
+          "text": "Looking for fresh air, my dear? Or something that doesn't belong to you?"
+        }
+      ],
+      "characters": [
+        "viktor_sterling",
+        "evelyn_cross"
+      ],
+      "objects": [
+        "cigar",
+        "monocle"
+      ],
+      "shotType": "Tight Dramatic Confrontation Shot",
+      "prompt": "classic vintage noir graphic novel comic book panel, dark art-deco glamour style, rich saturated nighttime jewel tones with electric deep blues, purples, and glowing warm golds. Sleek 2D animation / cinematic poster illustration with dramatic chiaroscuro and high-contrast lighting. Distinct features include stark silhouettes of elegantly dressed figures, towering stepped ziggurat skyscrapers and ornate cityscapes at night with beaming searchlights, plush penthouse interiors with massive crystal chandeliers, ornate brass/gold patterns, spiral staircases, and glowing arched geometric windows. Rich hand-drawn ink outlines, subtle film grain, and atmospheric luxury., Tight Dramatic Confrontation Shot. Baron Viktor Sterling, monocled and immaculate in a double-breasted tuxedo, corners Evelyn at the frosted glass doors, cigar smoke swirling in amber backlight., Evelyn Cross, breathtaking 1930s art-deco high-society femme fatale, blend of Veronica Lake and Lauren Bacall, glamorous platinum wave hair cascading over one eye, sultry dark crimson lips, alluring defiant expression, backless emerald-green silk evening gown, diamond-encrusted serpent choker, coiled gold bangles, graceful posture, Baron Viktor Sterling, cold predatory industrial tycoon in his fifties, silver-templed slicked hair, thin mustache, gold-rimmed monocle over left eye, immaculate double-breasted black tuxedo with satin lapels, diamond cufflinks, smoldering Havana cigar, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"Sterling had built his fortune on crushed competitors. He wasn't in the habit of losing.\", Include an authentic white comic book speech balloon with black ink outline and directional pointer pointing toward Baron Viktor Sterling with the text: \"Looking for fresh air, my dear? Or something that doesn't belong to you?\"",
+      "imageStatus": "PENDING",
+      "imagePath": "",
+      "webPreviewUrl": "",
+      "sizeKB": 0,
+      "hash": "",
+      "audioStatus": "LOCKED_BY_GATE",
+      "audioPath": "",
+      "qaChecklist": {
+        "facialLikeness": false,
+        "wardrobeContinuity": false,
+        "singleSwordInvariant": true,
+        "cardinalityGuard": true,
+        "handAnatomyGuard": true,
+        "environmentalContinuity": false,
+        "frazettaInkStyle": true,
+        "captionSpeechLegibility": true
+      }
+    },
+    {
+      "panelId": 6,
+      "name": "A Whisper in the Shadows",
+      "act": "Act I",
+      "summary": "Vincent Cole steps out of the terrace rain shadows, hat pulled low, his trench coat soaked, catching Evelyn's eye across the terrace rail.",
+      "caption": "My job was strictly surveillance. But trouble has a way of looking directly at you.",
+      "dialogue": [
+        {
+          "speaker": "Vincent Cole",
+          "text": "Cab's waiting on Forty-Fourth, Miss Cross. Suggest we take it."
+        }
+      ],
+      "characters": [
+        "vincent_cole",
+        "evelyn_cross"
+      ],
+      "objects": [
+        ".38_revolver",
+        "fedora"
+      ],
+      "shotType": "Low-Angle Rain-Slicked Two-Shot",
+      "prompt": "classic vintage noir graphic novel comic book panel, dark art-deco glamour style, rich saturated nighttime jewel tones with electric deep blues, purples, and glowing warm golds. Sleek 2D animation / cinematic poster illustration with dramatic chiaroscuro and high-contrast lighting. Distinct features include stark silhouettes of elegantly dressed figures, towering stepped ziggurat skyscrapers and ornate cityscapes at night with beaming searchlights, plush penthouse interiors with massive crystal chandeliers, ornate brass/gold patterns, spiral staircases, and glowing arched geometric windows. Rich hand-drawn ink outlines, subtle film grain, and atmospheric luxury., Low-Angle Rain-Slicked Two-Shot. Vincent Cole steps out of the terrace rain shadows, hat pulled low, his trench coat soaked, catching Evelyn's eye across the terrace rail., Vincent Cole, rugged 1930s private detective, sharp chiseled jaw with dark five o'clock shadow, piercing world-weary hazel eyes, dark brown fedora tilted low, weathered charcoal-grey wool trench coat with upturned collar, loose patterned silk tie, white dress shirt, strictly natural 5-fingered human hands, snub-nosed .38 revolver, Evelyn Cross, breathtaking 1930s art-deco high-society femme fatale, blend of Veronica Lake and Lauren Bacall, glamorous platinum wave hair cascading over one eye, sultry dark crimson lips, alluring defiant expression, backless emerald-green silk evening gown, diamond-encrusted serpent choker, coiled gold bangles, graceful posture, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"My job was strictly surveillance. But trouble has a way of looking directly at you.\", Include an authentic white comic book speech balloon with black ink outline and directional pointer pointing toward Vincent Cole with the text: \"Cab's waiting on Forty-Fourth, Miss Cross. Suggest we take it.\"",
+      "imageStatus": "PENDING",
+      "imagePath": "",
+      "webPreviewUrl": "",
+      "sizeKB": 0,
+      "hash": "",
+      "audioStatus": "LOCKED_BY_GATE",
+      "audioPath": "",
+      "qaChecklist": {
+        "facialLikeness": false,
+        "wardrobeContinuity": false,
+        "singleSwordInvariant": true,
+        "cardinalityGuard": true,
+        "handAnatomyGuard": true,
+        "environmentalContinuity": false,
+        "frazettaInkStyle": true,
+        "captionSpeechLegibility": true
+      }
+    },
+    {
+      "panelId": 7,
+      "name": "Gunfire in the Rain",
+      "act": "Act II",
+      "summary": "Sterling's heavy-set enforcers in pinstripe suits burst onto the terrace with snub-nosed Tommy guns, muzzle flashes piercing the dark rain.",
+      "caption": "Polite society ended the moment the triggers were pulled.",
+      "dialogue": [
+        {
+          "speaker": "Enforcer",
+          "text": "Clip 'em both! Baron wants the ledger back!"
+        }
+      ],
+      "characters": [
+        "enforcers",
+        "vincent_cole"
+      ],
+      "objects": [
+        "tommy_gun",
+        "muzzle_flash"
+      ],
+      "shotType": "Dynamic Action Freeze Shot",
+      "prompt": "classic vintage noir graphic novel comic book panel, dark art-deco glamour style, rich saturated nighttime jewel tones with electric deep blues, purples, and glowing warm golds. Sleek 2D animation / cinematic poster illustration with dramatic chiaroscuro and high-contrast lighting. Distinct features include stark silhouettes of elegantly dressed figures, towering stepped ziggurat skyscrapers and ornate cityscapes at night with beaming searchlights, plush penthouse interiors with massive crystal chandeliers, ornate brass/gold patterns, spiral staircases, and glowing arched geometric windows. Rich hand-drawn ink outlines, subtle film grain, and atmospheric luxury., Dynamic Action Freeze Shot. Sterling's heavy-set enforcers in pinstripe suits burst onto the terrace with snub-nosed Tommy guns, muzzle flashes piercing the dark rain., Vincent Cole, rugged 1930s private detective, sharp chiseled jaw with dark five o'clock shadow, piercing world-weary hazel eyes, dark brown fedora tilted low, weathered charcoal-grey wool trench coat with upturned collar, loose patterned silk tie, white dress shirt, strictly natural 5-fingered human hands, snub-nosed .38 revolver, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"Polite society ended the moment the triggers were pulled.\", Include an authentic white comic book speech balloon with black ink outline and directional pointer pointing toward Enforcer with the text: \"Clip 'em both! Baron wants the ledger back!\"",
+      "imageStatus": "PENDING",
+      "imagePath": "",
+      "webPreviewUrl": "",
+      "sizeKB": 0,
+      "hash": "",
+      "audioStatus": "LOCKED_BY_GATE",
+      "audioPath": "",
+      "qaChecklist": {
+        "facialLikeness": false,
+        "wardrobeContinuity": false,
+        "singleSwordInvariant": true,
+        "cardinalityGuard": true,
+        "handAnatomyGuard": true,
+        "environmentalContinuity": false,
+        "frazettaInkStyle": true,
+        "captionSpeechLegibility": true
+      }
+    },
+    {
+      "panelId": 8,
+      "name": "The Leap to Chromium Alley",
+      "act": "Act II",
+      "summary": "Vincent grabs Evelyn's wrist, firing his snub-nosed .38 over his shoulder as they plunge from the terrace onto the canvas awning of a roaring delivery truck.",
+      "caption": "Gravity is the only honest thing left in this town.",
+      "dialogue": [
+        {
+          "speaker": "Evelyn Cross",
+          "text": "Are you insane?!"
+        },
+        {
+          "speaker": "Vincent Cole",
+          "text": "Just underpaid!"
+        }
+      ],
+      "characters": [
+        "vincent_cole",
+        "evelyn_cross"
+      ],
+      "objects": [
+        ".38_revolver",
+        "awning"
+      ],
+      "shotType": "Extreme High-Angle Dive Shot",
+      "prompt": "classic vintage noir graphic novel comic book panel, dark art-deco glamour style, rich saturated nighttime jewel tones with electric deep blues, purples, and glowing warm golds. Sleek 2D animation / cinematic poster illustration with dramatic chiaroscuro and high-contrast lighting. Distinct features include stark silhouettes of elegantly dressed figures, towering stepped ziggurat skyscrapers and ornate cityscapes at night with beaming searchlights, plush penthouse interiors with massive crystal chandeliers, ornate brass/gold patterns, spiral staircases, and glowing arched geometric windows. Rich hand-drawn ink outlines, subtle film grain, and atmospheric luxury., Extreme High-Angle Dive Shot. Vincent grabs Evelyn's wrist, firing his snub-nosed .38 over his shoulder as they plunge from the terrace onto the canvas awning of a roaring delivery truck., Vincent Cole, rugged 1930s private detective, sharp chiseled jaw with dark five o'clock shadow, piercing world-weary hazel eyes, dark brown fedora tilted low, weathered charcoal-grey wool trench coat with upturned collar, loose patterned silk tie, white dress shirt, strictly natural 5-fingered human hands, snub-nosed .38 revolver, Evelyn Cross, breathtaking 1930s art-deco high-society femme fatale, blend of Veronica Lake and Lauren Bacall, glamorous platinum wave hair cascading over one eye, sultry dark crimson lips, alluring defiant expression, backless emerald-green silk evening gown, diamond-encrusted serpent choker, coiled gold bangles, graceful posture, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"Gravity is the only honest thing left in this town.\", Include an authentic white comic book speech balloon with black ink outline and directional pointer pointing toward Evelyn Cross with the text: \"Are you insane?!\"",
+      "imageStatus": "PENDING",
+      "imagePath": "",
+      "webPreviewUrl": "",
+      "sizeKB": 0,
+      "hash": "",
+      "audioStatus": "LOCKED_BY_GATE",
+      "audioPath": "",
+      "qaChecklist": {
+        "facialLikeness": false,
+        "wardrobeContinuity": false,
+        "singleSwordInvariant": true,
+        "cardinalityGuard": true,
+        "handAnatomyGuard": true,
+        "environmentalContinuity": false,
+        "frazettaInkStyle": true,
+        "captionSpeechLegibility": true
+      }
+    },
+    {
+      "panelId": 9,
+      "name": "The Neon Haven",
+      "act": "Act II",
+      "summary": "A neon-lit subterranean jazz club 'The Blue Dahlia' glows beneath the wet pavement, saxophone player silhouetted against red neon tubes.",
+      "caption": "Below the avenue, the music was hot, the drinks were watered, and questions were bad for your health.",
+      "dialogue": [],
+      "characters": [
+        "jazz_musicians",
+        "patrons"
+      ],
+      "objects": [
+        "saxophone",
+        "red_neon_sign"
+      ],
+      "shotType": "Deep Atmospheric Establishing Shot",
+      "prompt": "classic vintage noir graphic novel comic book panel, dark art-deco glamour style, rich saturated nighttime jewel tones with electric deep blues, purples, and glowing warm golds. Sleek 2D animation / cinematic poster illustration with dramatic chiaroscuro and high-contrast lighting. Distinct features include stark silhouettes of elegantly dressed figures, towering stepped ziggurat skyscrapers and ornate cityscapes at night with beaming searchlights, plush penthouse interiors with massive crystal chandeliers, ornate brass/gold patterns, spiral staircases, and glowing arched geometric windows. Rich hand-drawn ink outlines, subtle film grain, and atmospheric luxury., Deep Atmospheric Establishing Shot. A neon-lit subterranean jazz club 'The Blue Dahlia' glows beneath the wet pavement, saxophone player silhouetted against red neon tubes., At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"Below the avenue, the music was hot, the drinks were watered, and questions were bad for your health.\"",
+      "imageStatus": "PENDING",
+      "imagePath": "",
+      "webPreviewUrl": "",
+      "sizeKB": 0,
+      "hash": "",
+      "audioStatus": "LOCKED_BY_GATE",
+      "audioPath": "",
+      "qaChecklist": {
+        "facialLikeness": false,
+        "wardrobeContinuity": false,
+        "singleSwordInvariant": true,
+        "cardinalityGuard": true,
+        "handAnatomyGuard": true,
+        "environmentalContinuity": false,
+        "frazettaInkStyle": true,
+        "captionSpeechLegibility": true
+      }
+    },
+    {
+      "panelId": 10,
+      "name": "The Corner Booth",
+      "act": "Act II",
+      "summary": "In a dimly lit leather booth, Vincent bandages a graze on his forearm while Evelyn opens the dossier under the yellow candlelight.",
+      "caption": "In the light, she looked less like a thief and more like a ghost with an agenda.",
+      "dialogue": [
+        {
+          "speaker": "Vincent Cole",
+          "text": "Now tell me why five men just tried to ventilate my overcoat."
+        }
+      ],
+      "characters": [
+        "vincent_cole",
+        "evelyn_cross"
+      ],
+      "objects": [
+        "black_dossier",
+        "whiskey_glass"
+      ],
+      "shotType": "Medium Chiaroscuro Intimate Two-Shot",
+      "prompt": "classic vintage noir graphic novel comic book panel, dark art-deco glamour style, rich saturated nighttime jewel tones with electric deep blues, purples, and glowing warm golds. Sleek 2D animation / cinematic poster illustration with dramatic chiaroscuro and high-contrast lighting. Distinct features include stark silhouettes of elegantly dressed figures, towering stepped ziggurat skyscrapers and ornate cityscapes at night with beaming searchlights, plush penthouse interiors with massive crystal chandeliers, ornate brass/gold patterns, spiral staircases, and glowing arched geometric windows. Rich hand-drawn ink outlines, subtle film grain, and atmospheric luxury., Medium Chiaroscuro Intimate Two-Shot. In a dimly lit leather booth, Vincent bandages a graze on his forearm while Evelyn opens the dossier under the yellow candlelight., Vincent Cole, rugged 1930s private detective, sharp chiseled jaw with dark five o'clock shadow, piercing world-weary hazel eyes, dark brown fedora tilted low, weathered charcoal-grey wool trench coat with upturned collar, loose patterned silk tie, white dress shirt, strictly natural 5-fingered human hands, snub-nosed .38 revolver, Evelyn Cross, breathtaking 1930s art-deco high-society femme fatale, blend of Veronica Lake and Lauren Bacall, glamorous platinum wave hair cascading over one eye, sultry dark crimson lips, alluring defiant expression, backless emerald-green silk evening gown, diamond-encrusted serpent choker, coiled gold bangles, graceful posture, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"In the light, she looked less like a thief and more like a ghost with an agenda.\", Include an authentic white comic book speech balloon with black ink outline and directional pointer pointing toward Vincent Cole with the text: \"Now tell me why five men just tried to ventilate my overcoat.\"",
+      "imageStatus": "PENDING",
+      "imagePath": "",
+      "webPreviewUrl": "",
+      "sizeKB": 0,
+      "hash": "",
+      "audioStatus": "LOCKED_BY_GATE",
+      "audioPath": "",
+      "qaChecklist": {
+        "facialLikeness": false,
+        "wardrobeContinuity": false,
+        "singleSwordInvariant": true,
+        "cardinalityGuard": true,
+        "handAnatomyGuard": true,
+        "environmentalContinuity": false,
+        "frazettaInkStyle": true,
+        "captionSpeechLegibility": true
+      }
+    },
+    {
+      "panelId": 11,
+      "name": "The Chromium Syndicate",
+      "act": "Act II",
+      "summary": "Close-up on Evelyn's manicured hands pointing at blueprint schematics stamped with the chromium eagle insignia of Sterling Industries.",
+      "caption": "It wasn't blackmail. It was a mass grave masked as an industrial takeover.",
+      "dialogue": [
+        {
+          "speaker": "Evelyn Cross",
+          "text": "Sterling isn't just buying the city docks. He's scuttling them."
+        }
+      ],
+      "characters": [
+        "evelyn_cross"
+      ],
+      "objects": [
+        "blueprint_schematic",
+        "chromium_seal"
+      ],
+      "shotType": "Macro Tabletop Prop Shot",
+      "prompt": "classic vintage noir graphic novel comic book panel, dark art-deco glamour style, rich saturated nighttime jewel tones with electric deep blues, purples, and glowing warm golds. Sleek 2D animation / cinematic poster illustration with dramatic chiaroscuro and high-contrast lighting. Distinct features include stark silhouettes of elegantly dressed figures, towering stepped ziggurat skyscrapers and ornate cityscapes at night with beaming searchlights, plush penthouse interiors with massive crystal chandeliers, ornate brass/gold patterns, spiral staircases, and glowing arched geometric windows. Rich hand-drawn ink outlines, subtle film grain, and atmospheric luxury., Macro Tabletop Prop Shot. Close-up on Evelyn's manicured hands pointing at blueprint schematics stamped with the chromium eagle insignia of Sterling Industries., Evelyn Cross, breathtaking 1930s art-deco high-society femme fatale, blend of Veronica Lake and Lauren Bacall, glamorous platinum wave hair cascading over one eye, sultry dark crimson lips, alluring defiant expression, backless emerald-green silk evening gown, diamond-encrusted serpent choker, coiled gold bangles, graceful posture, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"It wasn't blackmail. It was a mass grave masked as an industrial takeover.\", Include an authentic white comic book speech balloon with black ink outline and directional pointer pointing toward Evelyn Cross with the text: \"Sterling isn't just buying the city docks. He's scuttling them.\"",
+      "imageStatus": "PENDING",
+      "imagePath": "",
+      "webPreviewUrl": "",
+      "sizeKB": 0,
+      "hash": "",
+      "audioStatus": "LOCKED_BY_GATE",
+      "audioPath": "",
+      "qaChecklist": {
+        "facialLikeness": false,
+        "wardrobeContinuity": false,
+        "singleSwordInvariant": true,
+        "cardinalityGuard": true,
+        "handAnatomyGuard": true,
+        "environmentalContinuity": false,
+        "frazettaInkStyle": true,
+        "captionSpeechLegibility": true
+      }
+    },
+    {
+      "panelId": 12,
+      "name": "Shadows at the Door",
+      "act": "Act II",
+      "summary": "The frosted glass door of the jazz club rattles as two trench-coated silhouettes with silencers cast elongated shadows across the sawdust floor.",
+      "caption": "Someone had sung. In Valkash, they always sang.",
+      "dialogue": [
+        {
+          "speaker": "Vincent Cole",
+          "text": "Back exit. Now."
+        }
+      ],
+      "characters": [
+        "vincent_cole",
+        "hitmen"
+      ],
+      "objects": [
+        "silencer_pistols",
+        "frosted_glass"
+      ],
+      "shotType": "Silhouette Suspense Composition",
+      "prompt": "classic vintage noir graphic novel comic book panel, dark art-deco glamour style, rich saturated nighttime jewel tones with electric deep blues, purples, and glowing warm golds. Sleek 2D animation / cinematic poster illustration with dramatic chiaroscuro and high-contrast lighting. Distinct features include stark silhouettes of elegantly dressed figures, towering stepped ziggurat skyscrapers and ornate cityscapes at night with beaming searchlights, plush penthouse interiors with massive crystal chandeliers, ornate brass/gold patterns, spiral staircases, and glowing arched geometric windows. Rich hand-drawn ink outlines, subtle film grain, and atmospheric luxury., Silhouette Suspense Composition. The frosted glass door of the jazz club rattles as two trench-coated silhouettes with silencers cast elongated shadows across the sawdust floor., Vincent Cole, rugged 1930s private detective, sharp chiseled jaw with dark five o'clock shadow, piercing world-weary hazel eyes, dark brown fedora tilted low, weathered charcoal-grey wool trench coat with upturned collar, loose patterned silk tie, white dress shirt, strictly natural 5-fingered human hands, snub-nosed .38 revolver, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"Someone had sung. In Valkash, they always sang.\", Include an authentic white comic book speech balloon with black ink outline and directional pointer pointing toward Vincent Cole with the text: \"Back exit. Now.\"",
+      "imageStatus": "PENDING",
+      "imagePath": "",
+      "webPreviewUrl": "",
+      "sizeKB": 0,
+      "hash": "",
+      "audioStatus": "LOCKED_BY_GATE",
+      "audioPath": "",
+      "qaChecklist": {
+        "facialLikeness": false,
+        "wardrobeContinuity": false,
+        "singleSwordInvariant": true,
+        "cardinalityGuard": true,
+        "handAnatomyGuard": true,
+        "environmentalContinuity": false,
+        "frazettaInkStyle": true,
+        "captionSpeechLegibility": true
+      }
+    },
+    {
+      "panelId": 13,
+      "name": "The Fire Escape Squeeze",
+      "act": "Act II",
+      "summary": "Vincent kicks open an iron rusted service grate into a steam-filled ventilation shaft, hauling Evelyn through as bullets splinter the brickwork.",
+      "caption": "Iron and brick. The only friends a private dick has in a pinch.",
+      "dialogue": [],
+      "characters": [
+        "vincent_cole",
+        "evelyn_cross"
+      ],
+      "objects": [
+        "iron_grate",
+        "steam_pipe"
+      ],
+      "shotType": "Tight Dynamic Escape Shot",
+      "prompt": "classic vintage noir graphic novel comic book panel, dark art-deco glamour style, rich saturated nighttime jewel tones with electric deep blues, purples, and glowing warm golds. Sleek 2D animation / cinematic poster illustration with dramatic chiaroscuro and high-contrast lighting. Distinct features include stark silhouettes of elegantly dressed figures, towering stepped ziggurat skyscrapers and ornate cityscapes at night with beaming searchlights, plush penthouse interiors with massive crystal chandeliers, ornate brass/gold patterns, spiral staircases, and glowing arched geometric windows. Rich hand-drawn ink outlines, subtle film grain, and atmospheric luxury., Tight Dynamic Escape Shot. Vincent kicks open an iron rusted service grate into a steam-filled ventilation shaft, hauling Evelyn through as bullets splinter the brickwork., Vincent Cole, rugged 1930s private detective, sharp chiseled jaw with dark five o'clock shadow, piercing world-weary hazel eyes, dark brown fedora tilted low, weathered charcoal-grey wool trench coat with upturned collar, loose patterned silk tie, white dress shirt, strictly natural 5-fingered human hands, snub-nosed .38 revolver, Evelyn Cross, breathtaking 1930s art-deco high-society femme fatale, blend of Veronica Lake and Lauren Bacall, glamorous platinum wave hair cascading over one eye, sultry dark crimson lips, alluring defiant expression, backless emerald-green silk evening gown, diamond-encrusted serpent choker, coiled gold bangles, graceful posture, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"Iron and brick. The only friends a private dick has in a pinch.\"",
+      "imageStatus": "PENDING",
+      "imagePath": "",
+      "webPreviewUrl": "",
+      "sizeKB": 0,
+      "hash": "",
+      "audioStatus": "LOCKED_BY_GATE",
+      "audioPath": "",
+      "qaChecklist": {
+        "facialLikeness": false,
+        "wardrobeContinuity": false,
+        "singleSwordInvariant": true,
+        "cardinalityGuard": true,
+        "handAnatomyGuard": true,
+        "environmentalContinuity": false,
+        "frazettaInkStyle": true,
+        "captionSpeechLegibility": true
+      }
+    },
+    {
+      "panelId": 14,
+      "name": "The Midnight Rooftops",
+      "act": "Act II",
+      "summary": "They emerge onto a vast copper rooftop covered in gargoyles and geometric copper vents, searchlights from police airships sweeping the clouds.",
+      "caption": "The city was waking up to hunt us. The air tasted of ozone and rain.",
+      "dialogue": [
+        {
+          "speaker": "Evelyn Cross",
+          "text": "Where do we go? Sterling owns every badge in town!"
+        }
+      ],
+      "characters": [
+        "vincent_cole",
+        "evelyn_cross"
+      ],
+      "objects": [
+        "art_deco_gargoyle",
+        "police_searchlight"
+      ],
+      "shotType": "Wide Rooftop Cinematic Vista",
+      "prompt": "classic vintage noir graphic novel comic book panel, dark art-deco glamour style, rich saturated nighttime jewel tones with electric deep blues, purples, and glowing warm golds. Sleek 2D animation / cinematic poster illustration with dramatic chiaroscuro and high-contrast lighting. Distinct features include stark silhouettes of elegantly dressed figures, towering stepped ziggurat skyscrapers and ornate cityscapes at night with beaming searchlights, plush penthouse interiors with massive crystal chandeliers, ornate brass/gold patterns, spiral staircases, and glowing arched geometric windows. Rich hand-drawn ink outlines, subtle film grain, and atmospheric luxury., Wide Rooftop Cinematic Vista. They emerge onto a vast copper rooftop covered in gargoyles and geometric copper vents, searchlights from police airships sweeping the clouds., Vincent Cole, rugged 1930s private detective, sharp chiseled jaw with dark five o'clock shadow, piercing world-weary hazel eyes, dark brown fedora tilted low, weathered charcoal-grey wool trench coat with upturned collar, loose patterned silk tie, white dress shirt, strictly natural 5-fingered human hands, snub-nosed .38 revolver, Evelyn Cross, breathtaking 1930s art-deco high-society femme fatale, blend of Veronica Lake and Lauren Bacall, glamorous platinum wave hair cascading over one eye, sultry dark crimson lips, alluring defiant expression, backless emerald-green silk evening gown, diamond-encrusted serpent choker, coiled gold bangles, graceful posture, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"The city was waking up to hunt us. The air tasted of ozone and rain.\", Include an authentic white comic book speech balloon with black ink outline and directional pointer pointing toward Evelyn Cross with the text: \"Where do we go? Sterling owns every badge in town!\"",
+      "imageStatus": "PENDING",
+      "imagePath": "",
+      "webPreviewUrl": "",
+      "sizeKB": 0,
+      "hash": "",
+      "audioStatus": "LOCKED_BY_GATE",
+      "audioPath": "",
+      "qaChecklist": {
+        "facialLikeness": false,
+        "wardrobeContinuity": false,
+        "singleSwordInvariant": true,
+        "cardinalityGuard": true,
+        "handAnatomyGuard": true,
+        "environmentalContinuity": false,
+        "frazettaInkStyle": true,
+        "captionSpeechLegibility": true
+      }
+    },
+    {
+      "panelId": 15,
+      "name": "The Clock Tower Infiltration",
+      "act": "Act III",
+      "summary": "Inside the colossal interior mechanics of the Central Station clock tower, massive brass cogs turn silently amidst swirling golden dust motes.",
+      "caption": "Time was running out for both of us. But mostly for Sterling.",
+      "dialogue": [],
+      "characters": [
+        "vincent_cole"
+      ],
+      "objects": [
+        "giant_clock_cogs",
+        "brass_gears"
+      ],
+      "shotType": "Monumental Industrial Interior Shot",
+      "prompt": "classic vintage noir graphic novel comic book panel, dark art-deco glamour style, rich saturated nighttime jewel tones with electric deep blues, purples, and glowing warm golds. Sleek 2D animation / cinematic poster illustration with dramatic chiaroscuro and high-contrast lighting. Distinct features include stark silhouettes of elegantly dressed figures, towering stepped ziggurat skyscrapers and ornate cityscapes at night with beaming searchlights, plush penthouse interiors with massive crystal chandeliers, ornate brass/gold patterns, spiral staircases, and glowing arched geometric windows. Rich hand-drawn ink outlines, subtle film grain, and atmospheric luxury., Monumental Industrial Interior Shot. Inside the colossal interior mechanics of the Central Station clock tower, massive brass cogs turn silently amidst swirling golden dust motes., Vincent Cole, rugged 1930s private detective, sharp chiseled jaw with dark five o'clock shadow, piercing world-weary hazel eyes, dark brown fedora tilted low, weathered charcoal-grey wool trench coat with upturned collar, loose patterned silk tie, white dress shirt, strictly natural 5-fingered human hands, snub-nosed .38 revolver, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"Time was running out for both of us. But mostly for Sterling.\"",
+      "imageStatus": "PENDING",
+      "imagePath": "",
+      "webPreviewUrl": "",
+      "sizeKB": 0,
+      "hash": "",
+      "audioStatus": "LOCKED_BY_GATE",
+      "audioPath": "",
+      "qaChecklist": {
+        "facialLikeness": false,
+        "wardrobeContinuity": false,
+        "singleSwordInvariant": true,
+        "cardinalityGuard": true,
+        "handAnatomyGuard": true,
+        "environmentalContinuity": false,
+        "frazettaInkStyle": true,
+        "captionSpeechLegibility": true
+      }
+    },
+    {
+      "panelId": 16,
+      "name": "The Confrontation",
+      "act": "Act III",
+      "summary": "Baron Sterling stands on the catwalk behind the glass clock face, flanked by his armed bodyguards, revolver held with icy confidence.",
+      "caption": "Sterling had arrived first. The spider always knows when his web vibrates.",
+      "dialogue": [
+        {
+          "speaker": "Baron Viktor Sterling",
+          "text": "Did you really think a two-bit shamus could dismantle my empire, Cole?"
+        }
+      ],
+      "characters": [
+        "viktor_sterling",
+        "bodyguards",
+        "vincent_cole"
+      ],
+      "objects": [
+        "revolver",
+        "clock_face"
+      ],
+      "shotType": "Dramatic Low-Angle Confrontation",
+      "prompt": "classic vintage noir graphic novel comic book panel, dark art-deco glamour style, rich saturated nighttime jewel tones with electric deep blues, purples, and glowing warm golds. Sleek 2D animation / cinematic poster illustration with dramatic chiaroscuro and high-contrast lighting. Distinct features include stark silhouettes of elegantly dressed figures, towering stepped ziggurat skyscrapers and ornate cityscapes at night with beaming searchlights, plush penthouse interiors with massive crystal chandeliers, ornate brass/gold patterns, spiral staircases, and glowing arched geometric windows. Rich hand-drawn ink outlines, subtle film grain, and atmospheric luxury., Dramatic Low-Angle Confrontation. Baron Sterling stands on the catwalk behind the glass clock face, flanked by his armed bodyguards, revolver held with icy confidence., Vincent Cole, rugged 1930s private detective, sharp chiseled jaw with dark five o'clock shadow, piercing world-weary hazel eyes, dark brown fedora tilted low, weathered charcoal-grey wool trench coat with upturned collar, loose patterned silk tie, white dress shirt, strictly natural 5-fingered human hands, snub-nosed .38 revolver, Baron Viktor Sterling, cold predatory industrial tycoon in his fifties, silver-templed slicked hair, thin mustache, gold-rimmed monocle over left eye, immaculate double-breasted black tuxedo with satin lapels, diamond cufflinks, smoldering Havana cigar, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"Sterling had arrived first. The spider always knows when his web vibrates.\", Include an authentic white comic book speech balloon with black ink outline and directional pointer pointing toward Baron Viktor Sterling with the text: \"Did you really think a two-bit shamus could dismantle my empire, Cole?\"",
+      "imageStatus": "PENDING",
+      "imagePath": "",
+      "webPreviewUrl": "",
+      "sizeKB": 0,
+      "hash": "",
+      "audioStatus": "LOCKED_BY_GATE",
+      "audioPath": "",
+      "qaChecklist": {
+        "facialLikeness": false,
+        "wardrobeContinuity": false,
+        "singleSwordInvariant": true,
+        "cardinalityGuard": true,
+        "handAnatomyGuard": true,
+        "environmentalContinuity": false,
+        "frazettaInkStyle": true,
+        "captionSpeechLegibility": true
+      }
+    },
+    {
+      "panelId": 17,
+      "name": "Evelyn's Gambit",
+      "act": "Act III",
+      "summary": "Evelyn steps into the light, holding a lit emergency flare over an open crate of seismic blasting powder stored in the maintenance catwalk.",
+      "caption": "She didn't bluff. You could see in her eyes she was ready to burn it all down.",
+      "dialogue": [
+        {
+          "speaker": "Evelyn Cross",
+          "text": "Drop your guns, Viktor. Or we all take the express elevator to hell."
+        }
+      ],
+      "characters": [
+        "evelyn_cross",
+        "viktor_sterling"
+      ],
+      "objects": [
+        "red_road_flare",
+        "dynamite_crate"
+      ],
+      "shotType": "High-Tension Medium Shot",
+      "prompt": "classic vintage noir graphic novel comic book panel, dark art-deco glamour style, rich saturated nighttime jewel tones with electric deep blues, purples, and glowing warm golds. Sleek 2D animation / cinematic poster illustration with dramatic chiaroscuro and high-contrast lighting. Distinct features include stark silhouettes of elegantly dressed figures, towering stepped ziggurat skyscrapers and ornate cityscapes at night with beaming searchlights, plush penthouse interiors with massive crystal chandeliers, ornate brass/gold patterns, spiral staircases, and glowing arched geometric windows. Rich hand-drawn ink outlines, subtle film grain, and atmospheric luxury., High-Tension Medium Shot. Evelyn steps into the light, holding a lit emergency flare over an open crate of seismic blasting powder stored in the maintenance catwalk., Evelyn Cross, breathtaking 1930s art-deco high-society femme fatale, blend of Veronica Lake and Lauren Bacall, glamorous platinum wave hair cascading over one eye, sultry dark crimson lips, alluring defiant expression, backless emerald-green silk evening gown, diamond-encrusted serpent choker, coiled gold bangles, graceful posture, Baron Viktor Sterling, cold predatory industrial tycoon in his fifties, silver-templed slicked hair, thin mustache, gold-rimmed monocle over left eye, immaculate double-breasted black tuxedo with satin lapels, diamond cufflinks, smoldering Havana cigar, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"She didn't bluff. You could see in her eyes she was ready to burn it all down.\", Include an authentic white comic book speech balloon with black ink outline and directional pointer pointing toward Evelyn Cross with the text: \"Drop your guns, Viktor. Or we all take the express elevator to hell.\"",
+      "imageStatus": "PENDING",
+      "imagePath": "",
+      "webPreviewUrl": "",
+      "sizeKB": 0,
+      "hash": "",
+      "audioStatus": "LOCKED_BY_GATE",
+      "audioPath": "",
+      "qaChecklist": {
+        "facialLikeness": false,
+        "wardrobeContinuity": false,
+        "singleSwordInvariant": true,
+        "cardinalityGuard": true,
+        "handAnatomyGuard": true,
+        "environmentalContinuity": false,
+        "frazettaInkStyle": true,
+        "captionSpeechLegibility": true
+      }
+    },
+    {
+      "panelId": 18,
+      "name": "The Sunder of Iron & Brass",
+      "act": "Act III",
+      "summary": "Vincent dives forward, firing his .38 to sever the counterweight cable, sending a colossal five-ton brass pendulum swinging through the catwalk.",
+      "caption": "One shot. One clean break against a crooked world.",
+      "dialogue": [],
+      "characters": [
+        "vincent_cole",
+        "viktor_sterling"
+      ],
+      "objects": [
+        "swinging_pendulum",
+        ".38_revolver"
+      ],
+      "shotType": "Dynamic Climax Action Shot",
+      "prompt": "classic vintage noir graphic novel comic book panel, dark art-deco glamour style, rich saturated nighttime jewel tones with electric deep blues, purples, and glowing warm golds. Sleek 2D animation / cinematic poster illustration with dramatic chiaroscuro and high-contrast lighting. Distinct features include stark silhouettes of elegantly dressed figures, towering stepped ziggurat skyscrapers and ornate cityscapes at night with beaming searchlights, plush penthouse interiors with massive crystal chandeliers, ornate brass/gold patterns, spiral staircases, and glowing arched geometric windows. Rich hand-drawn ink outlines, subtle film grain, and atmospheric luxury., Dynamic Climax Action Shot. Vincent dives forward, firing his .38 to sever the counterweight cable, sending a colossal five-ton brass pendulum swinging through the catwalk., Vincent Cole, rugged 1930s private detective, sharp chiseled jaw with dark five o'clock shadow, piercing world-weary hazel eyes, dark brown fedora tilted low, weathered charcoal-grey wool trench coat with upturned collar, loose patterned silk tie, white dress shirt, strictly natural 5-fingered human hands, snub-nosed .38 revolver, Baron Viktor Sterling, cold predatory industrial tycoon in his fifties, silver-templed slicked hair, thin mustache, gold-rimmed monocle over left eye, immaculate double-breasted black tuxedo with satin lapels, diamond cufflinks, smoldering Havana cigar, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"One shot. One clean break against a crooked world.\"",
+      "imageStatus": "PENDING",
+      "imagePath": "",
+      "webPreviewUrl": "",
+      "sizeKB": 0,
+      "hash": "",
+      "audioStatus": "LOCKED_BY_GATE",
+      "audioPath": "",
+      "qaChecklist": {
+        "facialLikeness": false,
+        "wardrobeContinuity": false,
+        "singleSwordInvariant": true,
+        "cardinalityGuard": true,
+        "handAnatomyGuard": true,
+        "environmentalContinuity": false,
+        "frazettaInkStyle": true,
+        "captionSpeechLegibility": true
+      }
+    },
+    {
+      "panelId": 19,
+      "name": "The Fall of the Baron",
+      "act": "Act III",
+      "summary": "Sterling stumbles backward through the shattered glass face of the clock tower, his monocle flying into the void as blueprints scatter into the storm.",
+      "caption": "He fell sixty stories into the chromium city he thought he owned.",
+      "dialogue": [],
+      "characters": [
+        "viktor_sterling"
+      ],
+      "objects": [
+        "shattered_clock_face",
+        "scattering_papers"
+      ],
+      "shotType": "Dramatic Silhouette Free-Fall Shot",
+      "prompt": "classic vintage noir graphic novel comic book panel, dark art-deco glamour style, rich saturated nighttime jewel tones with electric deep blues, purples, and glowing warm golds. Sleek 2D animation / cinematic poster illustration with dramatic chiaroscuro and high-contrast lighting. Distinct features include stark silhouettes of elegantly dressed figures, towering stepped ziggurat skyscrapers and ornate cityscapes at night with beaming searchlights, plush penthouse interiors with massive crystal chandeliers, ornate brass/gold patterns, spiral staircases, and glowing arched geometric windows. Rich hand-drawn ink outlines, subtle film grain, and atmospheric luxury., Dramatic Silhouette Free-Fall Shot. Sterling stumbles backward through the shattered glass face of the clock tower, his monocle flying into the void as blueprints scatter into the storm., Baron Viktor Sterling, cold predatory industrial tycoon in his fifties, silver-templed slicked hair, thin mustache, gold-rimmed monocle over left eye, immaculate double-breasted black tuxedo with satin lapels, diamond cufflinks, smoldering Havana cigar, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"He fell sixty stories into the chromium city he thought he owned.\"",
+      "imageStatus": "PENDING",
+      "imagePath": "",
+      "webPreviewUrl": "",
+      "sizeKB": 0,
+      "hash": "",
+      "audioStatus": "LOCKED_BY_GATE",
+      "audioPath": "",
+      "qaChecklist": {
+        "facialLikeness": false,
+        "wardrobeContinuity": false,
+        "singleSwordInvariant": true,
+        "cardinalityGuard": true,
+        "handAnatomyGuard": true,
+        "environmentalContinuity": false,
+        "frazettaInkStyle": true,
+        "captionSpeechLegibility": true
+      }
+    },
+    {
+      "panelId": 20,
+      "name": "Morning Over Chromium",
+      "act": "Act III",
+      "summary": "Sunrise bleeds pale gold over the art-deco skyline. Vincent and Evelyn stand at the foot of the station steps, dossiers clutched tight, watching the morning fog roll in.",
+      "caption": "The city was still crooked, and the coffee would still taste like mud. But for one morning, the shadows belonged to us.",
+      "dialogue": [
+        {
+          "speaker": "Vincent Cole",
+          "text": "Come on, Miss Cross. I know an all-night diner with honest pie."
+        }
+      ],
+      "characters": [
+        "vincent_cole",
+        "evelyn_cross"
+      ],
+      "objects": [
+        "trenchcoat",
+        "morning_mist"
+      ],
+      "shotType": "Heroic Morning Two-Shot Resolution",
+      "prompt": "classic vintage noir graphic novel comic book panel, dark art-deco glamour style, rich saturated nighttime jewel tones with electric deep blues, purples, and glowing warm golds. Sleek 2D animation / cinematic poster illustration with dramatic chiaroscuro and high-contrast lighting. Distinct features include stark silhouettes of elegantly dressed figures, towering stepped ziggurat skyscrapers and ornate cityscapes at night with beaming searchlights, plush penthouse interiors with massive crystal chandeliers, ornate brass/gold patterns, spiral staircases, and glowing arched geometric windows. Rich hand-drawn ink outlines, subtle film grain, and atmospheric luxury., Heroic Morning Two-Shot Resolution. Sunrise bleeds pale gold over the art-deco skyline. Vincent and Evelyn stand at the foot of the station steps, dossiers clutched tight, watching the morning fog roll in., Vincent Cole, rugged 1930s private detective, sharp chiseled jaw with dark five o'clock shadow, piercing world-weary hazel eyes, dark brown fedora tilted low, weathered charcoal-grey wool trench coat with upturned collar, loose patterned silk tie, white dress shirt, strictly natural 5-fingered human hands, snub-nosed .38 revolver, Evelyn Cross, breathtaking 1930s art-deco high-society femme fatale, blend of Veronica Lake and Lauren Bacall, glamorous platinum wave hair cascading over one eye, sultry dark crimson lips, alluring defiant expression, backless emerald-green silk evening gown, diamond-encrusted serpent choker, coiled gold bangles, graceful posture, At the top corner of the panel, include a clean yellow vintage comic book narrative caption box with black border containing the exact readable English text: \"The city was still crooked, and the coffee would still taste like mud. But for one morning, the shadows belonged to us.\", Include an authentic white comic book speech balloon with black ink outline and directional pointer pointing toward Vincent Cole with the text: \"Come on, Miss Cross. I know an all-night diner with honest pie.\"",
+      "imageStatus": "PENDING",
+      "imagePath": "",
+      "webPreviewUrl": "",
+      "sizeKB": 0,
+      "hash": "",
+      "audioStatus": "LOCKED_BY_GATE",
+      "audioPath": "",
+      "qaChecklist": {
+        "facialLikeness": false,
+        "wardrobeContinuity": false,
+        "singleSwordInvariant": true,
+        "cardinalityGuard": true,
+        "handAnatomyGuard": true,
+        "environmentalContinuity": false,
+        "frazettaInkStyle": true,
+        "captionSpeechLegibility": true
+      }
+    }
+  ]
+}

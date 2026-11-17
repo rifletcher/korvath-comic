@@ -1,0 +1,24 @@
+[
+  {
+    "sender": "user",
+    "text": "What are our locked invariants and what stage is Episode 2 in?",
+    "timestamp": "2026-11-10T19:39:34.930Z"
+  },
+  {
+    "sender": "assistant",
+    "text": "Greetings! Here is the current studio status for **Korvath the Barbarian**:\n\n### 🛡️ Locked Series Invariants\n1. **Single Sword Invariant:** Korvath carries strictly ONE 42-inch straight iron broadsword.\n2. **Natari Weapons:** Twin curved Zamorian daggers only (strictly NO broadsword).\n3. **Anti-Claw Hand Anatomy:** 5-fingered human hands on all characters holding relics.\n4. **Fail-Closed Voice Polarity:** Antagonist slurs are never assigned to the hero or narrator.\n\n### 🎬 Episode 2 Status\n- **Title:** *Issue #2: The Shadow of the Spider*\n- **Current Stage:** `VISUAL_QA_GATE` (Gate B)\n- **Progress:** All 20/20 panels have been generated and marked `VERIFIED`.\n- **Next Step:** Episode 2 is actively awaiting approval at the **VISUAL_QA_GATE** before progressing to Voice Synthesis & Audio QA (`AUDIO_QA_GATE`).\n\nLet me know if you would like to run a continuity inspection, make corrections to any panel prompts, or proceed with approving the visual gate!",
+    "actions": [],
+    "timestamp": "2026-11-10T19:39:34.930Z"
+  },
+  {
+    "sender": "user",
+    "text": "Hello Copilot, summarize what we need to do to pass Gate B.",
+    "timestamp": "2026-11-10T19:42:47.977Z"
+  },
+  {
+    "sender": "assistant",
+    "text": "Greetings! To clear **Gate B (`VISUAL_QA_GATE`)** and promote Episode 2 (*The Shadow of the Spider*) to the voice synthesis and acoustic stage, all 20 panels must pass the **8-Point Visual Director Continuity & QA Checklist**:\n\n1. **Facial Likeness & Human Sanity:** Chiseled jaw, stubble scruff, wolfish eyes, and raven hair matching the model sheet (no ape-brow/Neanderthal distortions).\n2. **Wardrobe & Clothing Continuity (The Mantle/Cape Rule):** Layer-by-layer consistency across preceding/succeeding frames. Korvath's shaggy wolf-fur mantle, cross-chest harness, and war kilt must not vanish without an explicit story beat.\n3. **Carried Object & Relic State Machine:** Strict adherence to item states—Korvath's single 42-inch straight broadsword (no warping into curved scimitars) and Natari's twin Zamorian daggers held correctly without teleporting.\n4. **Cardinality & Anti-Ghost Actor Guard:** Exact headcount verification for every scene (no phantom miniature barbarians or mutant crowd clones).\n5. **Anatomical Sanity & Combat Physics:** Five fingers per hand, proper blade grips, and anatomically coherent combat postures.\n6. **Environmental & Damage Continuity:** Persistent battle wear, soot, and blade grime matching prior action beats.\n7. **Graphic Novel Linework & Cel Aesthetic:** Consistent 1970s Bronze Age pulp look (Frazetta/Buscema style, chiaroscuro lighting, heavy ink brushwork, cel-shading—no blurry CGI/watercolor bleed).\n8. **Caption & Speech Bubble Legibility:** Authentic vintage lettering, clean yellow caption boxes, and speech balloons pointing directly to the active speaker's mouth.\n\nAll 20 panels for Episode 2 currently stand marked as `VERIFIED`. If you are satisfied with the visual continuity across the episode gallery, we can issue an `APPROVE_GATE` action to advance directly to voice synthesis (`AUDIO_QA_GATE`), or trigger targeted `REGENERATE_PANEL` commands if any specific frames require director corrections.",
+    "actions": [],
+    "timestamp": "2026-11-10T19:42:47.977Z"
+  }
+]

@@ -1,0 +1,335 @@
+{
+  "projectId": "at-the-crossroads",
+  "episodeId": "ep02",
+  "episodeNumber": 2,
+  "title": "Track 2: Sell Your Soul",
+  "theme": "Sell Your Soul",
+  "targetPanelCount": 10,
+  "currentStage": "VOICE_SYNTHESIS",
+  "overallProgress": 50,
+  "updatedAt": "2026-11-16T19:22:00.815Z",
+  "outputs": {
+    "resolution": "10 imported panels • ready for voices"
+  },
+  "stages": [
+    {
+      "id": "SCRIPT_GENERATION",
+      "name": "1. Writers Room Script",
+      "status": "COMPLETED",
+      "progress": 100
+    },
+    {
+      "id": "PROMPT_EXPANSION",
+      "name": "2. Latent Anchor & Guardrails",
+      "status": "COMPLETED",
+      "progress": 100
+    },
+    {
+      "id": "VISUAL_RENDERING",
+      "name": "3. Meta AI 2K Panel Rendering",
+      "status": "COMPLETED",
+      "progress": 100
+    },
+    {
+      "id": "VOICE_SYNTHESIS",
+      "name": "4. Multi-Actor Voice & DSP",
+      "status": "PENDING",
+      "progress": 0
+    },
+    {
+      "id": "VIDEO_ASSEMBLY",
+      "name": "5. Motion Comic Camera & Concat",
+      "status": "LOCKED_BY_GATE",
+      "progress": 0
+    },
+    {
+      "id": "READY_FOR_RELEASE",
+      "name": "6. Master Release Bundle",
+      "status": "LOCKED_BY_GATE",
+      "progress": 0
+    }
+  ],
+  "gates": [
+    {
+      "id": "SCRIPT_GATE",
+      "name": "Gate A: Storyboard & Dialogue Lock",
+      "afterStage": "SCRIPT_GENERATION",
+      "status": "APPROVED",
+      "approvedAt": "2026-11-16T19:22:00.815Z",
+      "notes": "Imported script from At the Crossroads (Take 2)."
+    },
+    {
+      "id": "VISUAL_QA_GATE",
+      "name": "Gate B: 8-Point Director Visual Continuity Gate",
+      "afterStage": "VISUAL_RENDERING",
+      "status": "APPROVED",
+      "approvedAt": "2026-11-16T19:22:00.815Z",
+      "notes": "Imported panels already approved in the original project."
+    },
+    {
+      "id": "AUDIO_QA_GATE",
+      "name": "Gate C: 5-Point Acoustic & Polarity Gate",
+      "afterStage": "VOICE_SYNTHESIS",
+      "status": "LOCKED",
+      "notes": "Awaiting voice synthesis."
+    }
+  ],
+  "panels": [
+    {
+      "panelId": 1,
+      "name": "A suited executive dismissively hands a demo",
+      "act": "Track 2",
+      "summary": "A suited executive dismissively hands a demo tape back to the Kid.",
+      "caption": "No label would sign him.",
+      "dialogue": [],
+      "characters": [
+        "kid",
+        "label_man"
+      ],
+      "objects": [],
+      "shotType": "High angle shot",
+      "prompt": "",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep02/panels/panel_01.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep02/panels/panel_01.webp",
+      "sizeKB": 966.4,
+      "hash": "93c6ad4c",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_02_Sell_Your_Soul/selected/track_02_panel_01.webp",
+      "originalCaption": "No label would sign him."
+    },
+    {
+      "panelId": 2,
+      "name": "The Kid plays in a nearly empty,",
+      "act": "Track 2",
+      "summary": "The Kid plays in a nearly empty, run-down Western honky-tonk.",
+      "caption": "He grinded the run-down honky tonks town to town, singing to near-empty rooms like somebody cared.",
+      "dialogue": [],
+      "characters": [
+        "kid"
+      ],
+      "objects": [],
+      "shotType": "Wide Shot",
+      "prompt": "",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep02/panels/panel_02.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep02/panels/panel_02.webp",
+      "sizeKB": 833.6,
+      "hash": "b5795ba6",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_02_Sell_Your_Soul/selected/track_02_panel_02.webp",
+      "originalCaption": "He grinded the run-down honky tonks town to town, singing to near-empty rooms like somebody cared."
+    },
+    {
+      "panelId": 3,
+      "name": "Closing time",
+      "act": "Track 2",
+      "summary": "Closing time. An old itinerant bluesman sits alone drinking.",
+      "caption": "One night the only man who stayed till closing was an old itinerant bluesman.",
+      "dialogue": [],
+      "characters": [
+        "bluesman"
+      ],
+      "objects": [],
+      "shotType": "Medium Shot, shadowy corner",
+      "prompt": "",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep02/panels/panel_03.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep02/panels/panel_03.webp",
+      "sizeKB": 663.6,
+      "hash": "32dc35f8",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_02_Sell_Your_Soul/selected/track_02_panel_03.webp",
+      "originalCaption": "One night the only man who stayed till closing was an old itinerant bluesman."
+    },
+    {
+      "panelId": 4,
+      "name": "The Bluesman gestures with his pipe, grinning",
+      "act": "Track 2",
+      "summary": "The Bluesman gestures with his pipe, grinning wickedly.",
+      "caption": "He told the kid he had the ache but talent alone doesn't sell -",
+      "dialogue": [],
+      "characters": [
+        "bluesman"
+      ],
+      "objects": [],
+      "shotType": "Over-the-shoulder",
+      "prompt": "",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep02/panels/panel_04.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep02/panels/panel_04.webp",
+      "sizeKB": 677.7,
+      "hash": "0bf05b7b",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_02_Sell_Your_Soul/selected/track_02_panel_04.webp",
+      "originalCaption": "He told the kid he had the ache but talent alone doesn't sell -"
+    },
+    {
+      "panelId": 5,
+      "name": "A mythological visual of a man standing",
+      "act": "Track 2",
+      "summary": "A mythological visual of a man standing at an empty dirt crossroads meeting a shadow.",
+      "caption": "- and then told him about the crossroads.",
+      "dialogue": [],
+      "characters": [
+        "devil"
+      ],
+      "objects": [],
+      "shotType": "Stylized Silhouette",
+      "prompt": "",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep02/panels/panel_05.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep02/panels/panel_05.webp",
+      "sizeKB": 729.1,
+      "hash": "6300c4df",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_02_Sell_Your_Soul/selected/track_02_panel_05.webp",
+      "originalCaption": "- and then told him about the crossroads."
+    },
+    {
+      "panelId": 6,
+      "name": "The Bluesman leans in close, lit by",
+      "act": "Track 2",
+      "summary": "The Bluesman leans in close, lit by a neon sign.",
+      "caption": "Stand at midnight where two roads cross, wait for the Devil, sign your name in blood, and the fame starts today.",
+      "dialogue": [],
+      "characters": [
+        "bluesman"
+      ],
+      "objects": [],
+      "shotType": "Close-up on the Bluesman's face",
+      "prompt": "",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep02/panels/panel_06.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep02/panels/panel_06.webp",
+      "sizeKB": 720.6,
+      "hash": "81eeeaaf",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_02_Sell_Your_Soul/selected/track_02_panel_06.webp",
+      "originalCaption": "Stand at midnight where two roads cross, wait for the Devil, sign your name in blood, and the fame starts today."
+    },
+    {
+      "panelId": 7,
+      "name": "The Kid listens intently, conflicted",
+      "act": "Track 2",
+      "summary": "The Kid listens intently, conflicted.",
+      "caption": "He owns your soul when you die, but you get everything you want in the meantime.",
+      "dialogue": [],
+      "characters": [
+        "kid"
+      ],
+      "objects": [],
+      "shotType": "Close-up on the Kid's face",
+      "prompt": "",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep02/panels/panel_07.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep02/panels/panel_07.webp",
+      "sizeKB": 728.9,
+      "hash": "8eddb7a7",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_02_Sell_Your_Soul/selected/track_02_panel_07.webp",
+      "originalCaption": "He owns your soul when you die, but you get everything you want in the meantime."
+    },
+    {
+      "panelId": 8,
+      "name": "The Bluesman stares right through him",
+      "act": "Track 2",
+      "summary": "The Bluesman stares right through him.",
+      "caption": "And he warned: the Devil always comes back to collect - you won't grow old.",
+      "dialogue": [],
+      "characters": [
+        "bluesman"
+      ],
+      "objects": [],
+      "shotType": "Extreme Close-up on Bluesman's eyes",
+      "prompt": "",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep02/panels/panel_08.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep02/panels/panel_08.webp",
+      "sizeKB": 747.4,
+      "hash": "3562a0e1",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_02_Sell_Your_Soul/selected/track_02_panel_08.webp",
+      "originalCaption": "And he warned: the Devil always comes back to collect - you won't grow old."
+    },
+    {
+      "panelId": 9,
+      "name": "The Kid walks out, laughing, throwing his",
+      "act": "Track 2",
+      "summary": "The Kid walks out, laughing, throwing his guitar case in his truck.",
+      "caption": "The kid heard him out, laughed him off as a drunk with a tale, packed up, and hit the road.",
+      "dialogue": [],
+      "characters": [
+        "kid"
+      ],
+      "objects": [],
+      "shotType": "Exterior, Wide Shot",
+      "prompt": "",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep02/panels/panel_09.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep02/panels/panel_09.webp",
+      "sizeKB": 782.8,
+      "hash": "32f09e25",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_02_Sell_Your_Soul/selected/track_02_panel_09.webp",
+      "originalCaption": "The kid heard him out, laughed him off as a drunk with a tale, packed up, and hit the road."
+    },
+    {
+      "panelId": 10,
+      "name": "The Kid drives into the night with",
+      "act": "Track 2",
+      "summary": "The Kid drives into the night with hands on the wheel. Up ahead under the headlights is a dark rural crossroads. In the rearview mirror, his calm eyes are reflected.",
+      "caption": "Seed planted and forgotten.",
+      "dialogue": [],
+      "characters": [
+        "kid"
+      ],
+      "objects": [],
+      "shotType": "Interior truck cab, Driver POV looking over the steering wheel and dashboard through the windshield at night",
+      "prompt": "",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep02/panels/panel_10.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep02/panels/panel_10.webp",
+      "sizeKB": 790.7,
+      "hash": "0171650d",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_02_Sell_Your_Soul/selected/track_02_panel_10.webp",
+      "originalCaption": "Seed planted and forgotten."
+    }
+  ],
+  "importedFrom": {
+    "source": "At the Crossroads - 2",
+    "track": 2,
+    "importedAt": "2026-11-16T19:22:00.815Z"
+  }
+}

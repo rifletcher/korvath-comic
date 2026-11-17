@@ -1,0 +1,36 @@
+node_modules/
+.env
+.env.local
+*.log
+.DS_Store
+Thumbs.db
+
+.chrome_profile/
+.credentials/
+
+
+# Runtime lock/lease files written by the render workers
+projects/.tab_locks/
+projects/.cdp_tab_leases.json
+*.lock
+projects/*/scratch/
+
+# Backups made by Claude during the 2026-11-16 clean-up
+_claude_backup_*/
+
+# New Studio build waiting for launch_studio.bat to swap it in
+conan-studio-new.exe
+
+# Scratch output from test scripts
+scratch/
+
+# Finished videos and their build intermediates (rebuilt from panels + audio by the Studio)
+projects/*/episodes/*/video/*.mp4
+projects/*/episodes/*/video/segments/
+projects/*/episodes/*/video/concat_list.txt
+
+# Snapshots of replaced audio (kept locally only)
+projects/*/episodes/*/audio/_previous/
+
+# Manifest write temp files
+*.tmp.*

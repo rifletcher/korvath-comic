@@ -1,0 +1,118 @@
+{
+  "_about": "Used only when a panel renders on Muse (fal). 'description' replaces the character's normal description in Muse prompts; the sheet is sent as a reference image. Edit freely. 'museWording' is a list of [from, to] word swaps applied to Muse prompts only when that character is on the panel.",
+  "characters": {
+    "korvath": {
+      "aliases": [
+        "protagonist",
+        "the barbarian"
+      ],
+      "sheet": "korvath_model_sheet.webp"
+    },
+    "natari": {
+      "aliases": [
+        "companion",
+        "the girl",
+        "valka"
+      ],
+      "sheet": "natari_model_sheet.webp",
+      "description": "natari, desert thief, oval face with high sharp cheekbones, dark arched brows, almond-shaped dark brown eyes lined with heavy kohl, straight narrow nose, full lips, a red jewel on her forehead, long wavy raven-black hair with bronze beads, hammered bronze scale-mail armour top, bronze chain belt over a long crimson silk skirt sash, coiled gold serpent armbands, sun-bronzed skin",
+      "museWording": [
+        [
+          "breathtaking exotic desert maiden",
+          "desert thief"
+        ],
+        [
+          "strictly revealing ",
+          ""
+        ],
+        [
+          "revealing ",
+          ""
+        ],
+        [
+          "scale-mail bikini top with scalloped cup edges",
+          "scale-mail armour top"
+        ],
+        [
+          "scale-mail bikini top",
+          "scale-mail armour top"
+        ],
+        [
+          "scale bikini top",
+          "scale-mail armour top"
+        ],
+        [
+          "bikini top",
+          "armour top"
+        ],
+        [
+          "interlocking bronze chain bikini bottoms with dangling gold charms",
+          "bronze chain belt"
+        ],
+        [
+          "low-slung chain bikini bottoms",
+          "bronze chain belt"
+        ],
+        [
+          "chain bikini bottoms",
+          "chain belt"
+        ],
+        [
+          "low-slung chain briefs",
+          "bronze chain belt"
+        ],
+        [
+          "chain briefs",
+          "chain belt"
+        ],
+        [
+          "sheer gossamer crimson silk loincloth sash",
+          "long crimson silk skirt sash"
+        ],
+        [
+          "sheer gossamer ",
+          ""
+        ],
+        [
+          "loincloth sash",
+          "skirt sash"
+        ],
+        [
+          "luscious lips",
+          "full lips"
+        ],
+        [
+          "smoldering ",
+          ""
+        ],
+        [
+          "stunning in her",
+          ""
+        ],
+        [
+          "bikini",
+          "armour"
+        ]
+      ]
+    },
+    "kheshat": {
+      "aliases": [
+        "high priest",
+        "priest of sarkath"
+      ],
+      "description": "kheshat, gaunt sinister Sarkeshian high priest, long gaunt face with hollow cheekbones, hooked aquiline nose, thin sneering lips, burning feverish green eyes, trailing obsidian black silk robes with embroidered green serpent coils, ornate gilded cobra headdress crowning shaved head, long emaciated hands with blackened nails"
+    },
+    "thorgar": {
+      "aliases": [
+        "thorgar the undying",
+        "undying king"
+      ]
+    },
+    "cultist_trio": {
+      "aliases": [
+        "cultists",
+        "cultist"
+      ]
+    }
+  }
+}

@@ -1,0 +1,349 @@
+{
+  "projectId": "at-the-crossroads",
+  "episodeId": "ep08",
+  "episodeNumber": 8,
+  "title": "Track 8: A Deal's a Deal",
+  "theme": "A Deal's a Deal",
+  "targetPanelCount": 10,
+  "currentStage": "VOICE_SYNTHESIS",
+  "overallProgress": 50,
+  "updatedAt": "2026-11-16T19:22:00.815Z",
+  "outputs": {
+    "resolution": "10 imported panels • ready for voices"
+  },
+  "stages": [
+    {
+      "id": "SCRIPT_GENERATION",
+      "name": "1. Writers Room Script",
+      "status": "COMPLETED",
+      "progress": 100
+    },
+    {
+      "id": "PROMPT_EXPANSION",
+      "name": "2. Latent Anchor & Guardrails",
+      "status": "COMPLETED",
+      "progress": 100
+    },
+    {
+      "id": "VISUAL_RENDERING",
+      "name": "3. Meta AI 2K Panel Rendering",
+      "status": "COMPLETED",
+      "progress": 100
+    },
+    {
+      "id": "VOICE_SYNTHESIS",
+      "name": "4. Multi-Actor Voice & DSP",
+      "status": "PENDING",
+      "progress": 0
+    },
+    {
+      "id": "VIDEO_ASSEMBLY",
+      "name": "5. Motion Comic Camera & Concat",
+      "status": "LOCKED_BY_GATE",
+      "progress": 0
+    },
+    {
+      "id": "READY_FOR_RELEASE",
+      "name": "6. Master Release Bundle",
+      "status": "LOCKED_BY_GATE",
+      "progress": 0
+    }
+  ],
+  "gates": [
+    {
+      "id": "SCRIPT_GATE",
+      "name": "Gate A: Storyboard & Dialogue Lock",
+      "afterStage": "SCRIPT_GENERATION",
+      "status": "APPROVED",
+      "approvedAt": "2026-11-16T19:22:00.815Z",
+      "notes": "Imported script from At the Crossroads (Take 2)."
+    },
+    {
+      "id": "VISUAL_QA_GATE",
+      "name": "Gate B: 8-Point Director Visual Continuity Gate",
+      "afterStage": "VISUAL_RENDERING",
+      "status": "APPROVED",
+      "approvedAt": "2026-11-16T19:22:00.815Z",
+      "notes": "Imported panels already approved in the original project."
+    },
+    {
+      "id": "AUDIO_QA_GATE",
+      "name": "Gate C: 5-Point Acoustic & Polarity Gate",
+      "afterStage": "VOICE_SYNTHESIS",
+      "status": "LOCKED",
+      "notes": "Awaiting voice synthesis."
+    }
+  ],
+  "panels": [
+    {
+      "panelId": 1,
+      "name": "The Kid returns to the Highway 61",
+      "act": "Track 8",
+      "summary": "The Kid returns to the Highway 61 crossroads ten years later. His candy-apple red Cadillac convertible is parked on the dusty shoulder. The wealthy 29-year-old superstar stands in the exact center of the dirt intersection where he signed the contract. Thick bayou fog drifts across the desolate landscape.",
+      "caption": "He drove all night to the crossroad on 61 and stood in the same spot he'd signed.",
+      "dialogue": [],
+      "characters": [
+        "kid"
+      ],
+      "objects": [],
+      "shotType": "Cinematic Wide Shot",
+      "prompt": "Cinematic wide shot, nighttime rural Mississippi crossroads. In the desolate center of the dirt intersection at Highway 61, the wealthy 29-year-old country-rock superstar (tall 6-foot-1, handsome 29-year-old superstar features, slicked dark hair with loose strands, sharp gaunt cheekbones, wearing his disheveled black embroidered satin western suit with loosened collar, gold rings on his fingers, NOT elderly, NOT haggard, NOT 60 years old) stands motionless in the exact spot he made his deal. Parked on the gravel shoulder nearby is his luxury vintage candy-apple red Cadillac convertible with polished chrome fins, its headlights turned off. Thick bayou fog and atmospheric mist drift across the cracked dirt road and twisted cypress trees under a dark starry midnight sky. Complete rectangular black ink panel frame border enclosing all four sides with generous margins. Include a neatly positioned torn paper caption box fully contained within the upper portion of the frame with generous margin below the top edge (ensure all text is 100% visible, not cut off at borders) with the exact text: \"He drove all night to the crossroad on 61 and stood in the same spot he'd signed.\". Use a messy handwritten marker font. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, eerie midnight chiaroscuro lighting, clean cel and gradient shading, no messy watercolor wash, no blur.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep08/panels/panel_01.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep08/panels/panel_01.webp",
+      "sizeKB": 768.8,
+      "hash": "f1ddee0f",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_08_A_Deals_a_Deal/selected/track_08_panel_01.webp",
+      "originalCaption": "He drove all night to the crossroad on 61 and stood in the same spot he'd signed."
+    },
+    {
+      "panelId": 2,
+      "name": "Midnight strikes",
+      "act": "Track 8",
+      "summary": "Midnight strikes. A supernatural, sudden wave of freezing frost crackles across the damp Mississippi mud and weeds, spreading outward across the crossroads like jagged crystalline veins. Cold supernatural vapor rises from the frozen ground.",
+      "caption": "Midnight came. The cold rolled in - the Devil's arrival sign -",
+      "dialogue": [],
+      "characters": [
+        "kid",
+        "devil"
+      ],
+      "objects": [],
+      "shotType": "Dramatic Low Angle Close-up on the ground",
+      "prompt": "Dramatic low angle close-up on the muddy dirt ground at the crossroads. Midnight strikes as an eerie supernatural wave of freezing cold rolls across the earth: thick, crystalline white frost crackles and spreads rapidly across the dark Mississippi mud, dead weeds, and wagon ruts, transforming the damp earth into brittle white ice. Pale supernatural mist and cold breath vapor coil and rise from the freezing ground. Standing just at the edge of the encroaching frost are the polished black leather dress boots of the superstar. Complete rectangular black ink panel frame border enclosing all four sides with generous margins. Include a neatly positioned torn paper caption box fully contained within the upper portion of the frame with generous margin below the top edge (ensure all text is 100% visible, not cut off at borders) with the exact text: \"Midnight came. The cold rolled in - the Devil's arrival sign -\". Use a messy handwritten marker font. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, chilling supernatural blue-white and shadow lighting, clean cel and gradient shading, no messy watercolor wash, no blur.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep08/panels/panel_02.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep08/panels/panel_02.webp",
+      "sizeKB": 980.7,
+      "hash": "aa80a8d2",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_08_A_Deals_a_Deal/selected/track_08_panel_02.webp",
+      "originalCaption": "Midnight came. The cold rolled in - the Devil's arrival sign -"
+    },
+    {
+      "panelId": 3,
+      "name": "Stepping smoothly out of the pitch-black bayou",
+      "act": "Track 8",
+      "summary": "Stepping smoothly out of the pitch-black bayou fog into the pale moonlight is the Old Bluesman—not the shadowy red-eyed demon the Kid remembered from ten years ago, but the exact elderly bluesman from the honky-tonk bar: weathered African-American man, dusty grey felt fedora tilted low, wrinkled vintage suit, puffing an old wooden pipe with a wide, predatory, mocking grin.",
+      "caption": "- but what walked out of the dark wasn't the shadow-with-red-eyes he remembered. It was the old man from the honky tonk, grinning.",
+      "dialogue": [],
+      "characters": [
+        "kid",
+        "bluesman",
+        "devil"
+      ],
+      "objects": [],
+      "shotType": "Eye-level Medium Shot through swirling mist",
+      "prompt": "Eye-level medium shot through drifting bayou fog. Stepping out of the pitch-black darkness into the pale moonlight at the dirt crossroads is the Devil disguised as the Itinerant Bluesman (enigmatic elderly African-American man with deeply weathered skin, deep knowing wrinkles, uncanny glowing amber eyes that catch unnatural light, wearing a dusty grey felt fedora tilted low over his brow, a wrinkled charcoal vintage pinstripe suit with loosened tie, and a sharp, mocking, predatory grin on his thin lips). He holds an old wooden tobacco pipe in one hand, wisps of fragrant smoke curling into the chilly air. In the background, swirling bayou mist and the distant silhouette of the dark crossroads. Complete rectangular black ink panel frame border enclosing all four sides with generous margins. Include a neatly positioned torn paper caption box fully contained within the upper portion of the frame with generous margin below the top edge (ensure all text is 100% visible, not cut off at borders) with the exact text: \"- but what walked out of the dark wasn't the shadow-with-red-eyes he remembered. It was the old man from the honky tonk, grinning.\". Use a messy handwritten marker font. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, eerie amber and moonlight chiaroscuro lighting, clean cel and gradient shading, no messy watercolor wash, no blur.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep08/panels/panel_03.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep08/panels/panel_03.webp",
+      "sizeKB": 523.2,
+      "hash": "0b26f5ee",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_08_A_Deals_a_Deal/selected/track_08_panel_03.webp",
+      "originalCaption": "- but what walked out of the dark wasn't the shadow-with-red-eyes he remembered. It was the old man from the honky tonk, grinning."
+    },
+    {
+      "panelId": 4,
+      "name": "Absolute, paralyzing horror and shattering realization wash",
+      "act": "Track 8",
+      "summary": "Absolute, paralyzing horror and shattering realization wash over the superstar's face. Cold sweat beads on his gaunt cheekbones, pupils dilated in terror as he realizes the Devil has walked beside him at every step of his life.",
+      "caption": "That was the second his blood ran cold. It had been him all along - every step, every place.",
+      "dialogue": [],
+      "characters": [
+        "kid",
+        "bluesman",
+        "devil"
+      ],
+      "objects": [],
+      "shotType": "Dramatic Extreme Close-up on the Kid's face",
+      "prompt": "Dramatic extreme close-up on the face and eyes of the wealthy country-rock superstar. The 29-year-old superstar (handsome youthful features, slicked dark hair with sweat-drenched strands clinging to his temples, sharp gaunt cheekbones, pale trembling skin, NOT elderly, NOT haggard, NOT 60 years old) is paralyzed by pure, sickening horror and shattering realization. His dark eyes are wide with dilated pupils, reflecting the terrifying image of the grinning old bluesman in the dark. Cold sweat glistens on his brow, and his jaw hangs slightly slack in total dread as the truth hits him. Complete rectangular black ink panel frame border enclosing all four sides with generous margins. Include a neatly positioned torn paper caption box fully contained within the upper portion of the frame with generous margin below the top edge (ensure all text is 100% visible, not cut off at borders) with the exact text: \"That was the second his blood ran cold. It had been him all along - every step, every place.\". Use a messy handwritten marker font. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, intense psychological horror chiaroscuro lighting, clean cel and gradient shading, no messy watercolor wash, no blur.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep08/panels/panel_04.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep08/panels/panel_04.webp",
+      "sizeKB": 603.8,
+      "hash": "b0c1a927",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_08_A_Deals_a_Deal/selected/track_08_panel_04.webp",
+      "originalCaption": "That was the second his blood ran cold. It had been him all along - every step, every place."
+    },
+    {
+      "panelId": 5,
+      "name": "The Kid drops hard to his knees",
+      "act": "Track 8",
+      "summary": "The Kid drops hard to his knees in the frosted mud, desperately pleading with outstretched hands. Looming casually over him in the foreground is the Old Bluesman, pipe in hand, looking down with cruel, amused superiority.",
+      "caption": "He dropped to his knees in the road and begged: take it back, give me back my soul.",
+      "dialogue": [],
+      "characters": [
+        "kid",
+        "bluesman",
+        "devil"
+      ],
+      "objects": [],
+      "shotType": "High angle shot looking down at the crossroads",
+      "prompt": "High angle shot looking down at the dirt crossroads. Broken and desperate, the wealthy 29-year-old superstar (tall, slender build, wearing his black satin western suit now splattered with mud, slicked dark hair disheveled, gold rings on his fingers) has dropped hard onto both knees in the frosted dirt road, clasping his hands together and pleading upward with raw desperation and tears of terror. Standing casually over him in the foreground is the Old Bluesman (elderly African-American man in dusty grey fedora and wrinkled vintage pinstripe suit), holding his smoking wooden pipe and looking down at the kneeling superstar with cold, mocking amusement. Bayou fog swirls around their feet. Complete rectangular black ink panel frame border enclosing all four sides with generous margins. Include a neatly positioned torn paper caption box fully contained within the upper portion of the frame with generous margin below the top edge (ensure all text is 100% visible, not cut off at borders) with the exact text: \"He dropped to his knees in the road and begged: take it back, give me back my soul.\". Use a messy handwritten marker font. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, dramatic moonlight and shadow lighting, clean cel and gradient shading, no messy watercolor wash, no blur.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep08/panels/panel_05.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep08/panels/panel_05.webp",
+      "sizeKB": 857.4,
+      "hash": "d2e666b0",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_08_A_Deals_a_Deal/selected/track_08_panel_05.webp",
+      "originalCaption": "He dropped to his knees in the road and begged: take it back, give me back my soul."
+    },
+    {
+      "panelId": 6,
+      "name": "The Devil (as the Old Bluesman) throws",
+      "act": "Track 8",
+      "summary": "The Devil (as the Old Bluesman) throws his head back and erupts in loud, wicked, unrestrained laughter. Smoke billows from his pipe into the night sky, his silhouette framed against twisted cypress branches and eerie moonlight.",
+      "caption": "The Devil laughed long and loud.",
+      "dialogue": [],
+      "characters": [
+        "bluesman",
+        "devil"
+      ],
+      "objects": [],
+      "shotType": "Low angle shot looking up at the Old Bluesman",
+      "prompt": "Dramatic low angle shot looking up at the Old Bluesman standing tall at the foggy crossroads. The Devil disguised as the itinerant bluesman (enigmatic elderly African-American man, weathered skin, dusty grey felt fedora tilted back slightly, wrinkled vintage charcoal suit) throws his head back and erupts into a long, wicked, booming laugh of pure cruel triumph. His sharp predatory grin is split wide in mocking glee, showing white teeth, while thick clouds of grey pipe smoke billow upward into the cold midnight air. Behind him, ominous silhouette branches of moss-draped cypress trees twist against a pale, sickly moon. Complete rectangular black ink panel frame border enclosing all four sides with generous margins. Include a neatly positioned torn paper caption box fully contained within the upper portion of the frame with generous margin below the top edge (ensure all text is 100% visible, not cut off at borders) with the exact text: \"The Devil laughed long and loud.\". Use a messy handwritten marker font. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, dramatic low-angle shadow and moonlight lighting, clean cel and gradient shading, no messy watercolor wash, no blur.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep08/panels/panel_06.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep08/panels/panel_06.webp",
+      "sizeKB": 683,
+      "hash": "3eddb129",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_08_A_Deals_a_Deal/selected/track_08_panel_06.webp",
+      "originalCaption": "The Devil laughed long and loud."
+    },
+    {
+      "panelId": 7,
+      "name": "Under the shadowy brim of his fedora,",
+      "act": "Track 8",
+      "summary": "Under the shadowy brim of his fedora, the Old Bluesman leans in close, holding his smoking pipe. His uncanny eyes ignite into searing demonic crimson-red fire, revealing the ancient devil beneath the mortal disguise while retaining his distinct identity.",
+      "caption": "",
+      "dialogue": [
+        {
+          "speaker": "Bluesman",
+          "text": "A deal's a deal, boy. You got what you chose. I warned you that night. You knew what you owed. It's signed there in blood and that book stays closed."
+        }
+      ],
+      "characters": [
+        "kid",
+        "bluesman",
+        "devil"
+      ],
+      "objects": [],
+      "shotType": "Dramatic Medium Close-up",
+      "prompt": "Dramatic medium close-up of the Devil disguised as the Itinerant Bluesman. The exact same elderly African-American bluesman (enigmatic elderly African-American man with deeply weathered dark brown skin, short grey beard stubble, deep knowing wrinkles, wearing his dusty grey felt fedora tilted low over his brow, a wrinkled charcoal vintage pinstripe suit with loosened tie, holding his smoking wooden tobacco pipe in his weathered dark hand with aromatic smoke curling past his face). He leans forward with a sharp, sinister predatory sneer on his lips. His uncanny eyes under the brim of the fedora blaze with a chilling supernatural crimson-red fire, casting an ominous demonic glow across his dark weathered features, revealing the ancient devil beneath his calm mortal bluesman persona. He remains fully human in appearance—an elderly African-American bluesman with glowing demonic eyes, NOT a monster, NOT a goblin, no demons in the background. Swirling midnight bayou fog and cypress silhouettes behind him. Complete rectangular black ink panel frame border enclosing all four sides with generous margins. Crucial: Include a neatly positioned torn paper caption box fully contained within the upper portion of the frame with generous margin below the top edge (ensure all text is 100% visible, sharp and legible) with the exact text: \"\\\"A deal's a deal, boy. You got what you chose. I warned you that night. You knew what you owed. It's signed there in blood and that book stays closed.\\\"\". Use a messy handwritten marker font. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, searing red-eye glow and deep shadow lighting, clean cel and gradient shading, no messy watercolor wash, no blur.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep08/panels/panel_07.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep08/panels/panel_07.webp",
+      "sizeKB": 726.1,
+      "hash": "26531412",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_08_A_Deals_a_Deal/selected/track_08_panel_07.webp",
+      "originalCaption": "\"A deal's a deal, boy. You got what you chose. I warned you that night. You knew what you owed. It's signed there in blood and that book stays closed.\""
+    },
+    {
+      "panelId": 8,
+      "name": "The supernatural presence has vanished",
+      "act": "Track 8",
+      "summary": "The supernatural presence has vanished. The Old Bluesman is gone without a trace, leaving only a lingering curl of smoke. The 29-year-old superstar remains alone on his knees in the dirt, head bowed in utter despair, his red Cadillac parked silently nearby under the desolate night sky.",
+      "caption": "Then gone, leaving him alone with the fame he couldn't give back and a debt still due.",
+      "dialogue": [],
+      "characters": [
+        "kid",
+        "bluesman"
+      ],
+      "objects": [],
+      "shotType": "Cinematic Wide Shot pulling back",
+      "prompt": "Cinematic wide shot pulling back from the desolate dirt crossroads. The supernatural bluesman has completely vanished into thin air, leaving only a faint wisp of lingering pipe smoke dissipating into the chilly bayou fog. Kneeling completely alone in the center of the dark, frosted dirt road is the solitary figure of the 29-year-old superstar in his mud-stained black western suit, his head bowed low to his chest, arms hanging limp in overwhelming grief, exhaustion, and utter helplessness. On the gravel shoulder nearby, his pristine vintage candy-apple red Cadillac convertible sits dark and silent under the vast, uncaring starry Delta sky. Complete rectangular black ink panel frame border enclosing all four sides with generous margins. Include a neatly positioned torn paper caption box fully contained within the upper portion of the frame with generous margin below the top edge (ensure all text is 100% visible, not cut off at borders) with the exact text: \"Then gone, leaving him alone with the fame he couldn't give back and a debt still due.\". Use a messy handwritten marker font. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, lonely blue-grey midnight lighting, clean cel and gradient shading, no messy watercolor wash, no blur.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep08/panels/panel_08.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep08/panels/panel_08.webp",
+      "sizeKB": 761.5,
+      "hash": "1c37fe9d",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_08_A_Deals_a_Deal/selected/track_08_panel_08.webp",
+      "originalCaption": "Then gone, leaving him alone with the fame he couldn't give back and a debt still due."
+    },
+    {
+      "panelId": 9,
+      "name": "Sitting behind the steering wheel of the",
+      "act": "Track 8",
+      "summary": "Sitting behind the steering wheel of the Cadillac convertible. The twin beams of headlights illuminate an old, rusted green-and-white roadside sign with bullet holes on the shoulder that reads: \"BLACKWATER 10 MILES\".",
+      "caption": "Climbing back in the car, his headlights hit a sign at the roadside: BLACKWATER, TEN MILES.",
+      "dialogue": [],
+      "characters": [],
+      "objects": [],
+      "shotType": "First-person Dashboard POV looking through windshield",
+      "prompt": "First-person dashboard POV looking through the clear glass windshield of the vintage Cadillac convertible at night. Two hands with gold rings grip the top of the chrome-accented vintage steering wheel. The car's powerful white headlights slice through the dark, misty rural highway ahead, illuminating the shoulder of the empty two-lane asphalt road. Directly caught in the bright headlight beams is an old, rusted, bullet-riddled green-and-white metal road sign that clearly reads: \"BLACKWATER 10 MILES\" with a directional arrow. Beyond the sign, pitch-black Mississippi woods and creeping bayou fog. Complete rectangular black ink panel frame border enclosing all four sides with generous margins. Include a neatly positioned torn paper caption box fully contained within the upper portion of the frame with generous margin below the top edge (ensure all text is 100% visible, not cut off at borders) with the exact text: \"Climbing back in the car, his headlights hit a sign at the roadside: BLACKWATER, TEN MILES.\". Use a messy handwritten marker font. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, sharp headlight beam contrast cutting through dark night, clean cel and gradient shading, no messy watercolor wash, no blur.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep08/panels/panel_09.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep08/panels/panel_09.webp",
+      "sizeKB": 613.9,
+      "hash": "8759f6cd",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_08_A_Deals_a_Deal/selected/track_08_panel_09.webp",
+      "originalCaption": "Climbing back in the car, his headlights hit a sign at the roadside: BLACKWATER, TEN MILES."
+    },
+    {
+      "panelId": 10,
+      "name": "The vintage Cadillac is facing forward, actively",
+      "act": "Track 8",
+      "summary": "The vintage Cadillac is facing forward, actively driving down the dark highway with headlights cutting down the road stretching straight ahead through the windshield. The Kid sits in the proper American left-hand driver's seat, gripping the steering wheel as he drives toward Blackwater with glowing dashboard dials illuminating his face.",
+      "caption": "And a last idea formed - maybe God could do what the Devil wouldn't. Maybe the Lord's forgiveness could outbid the ledger. He turned toward the town.",
+      "dialogue": [],
+      "characters": [
+        "kid",
+        "devil"
+      ],
+      "objects": [],
+      "shotType": "Interior convertible three-quarter view from passenger side angled forward",
+      "prompt": "Interior convertible three-quarter view from the passenger side looking forward toward the windshield and driver. The vintage candy-apple red Cadillac convertible is facing directly forward, driving actively down a dark two-lane Mississippi highway. Through the front windshield, the car's bright headlights illuminate the asphalt road stretching straight ahead into the dark distance toward the faint silhouette of a distant town. On the left side of the vehicle, the 29-year-old superstar (handsome youthful features, slicked dark hair, gaunt cheekbones, disheveled black western shirt collar, gold rings on his fingers, NOT elderly, NOT haggard, NOT 60 years old) sits properly in the American left-hand driver's seat behind the chrome-accented steering wheel (standard US Left-Hand Drive / LHD, steering wheel on the left side of the car, NOT right-hand drive). He grips the steering wheel firmly with both hands, looking determinedly forward down the road. His sharp profile and face are dramatically illuminated from below by the warm amber and green glow of the vintage dashboard gauges, mixed with pale moonlight overhead. Complete rectangular black ink panel frame border enclosing all four sides with generous margins. Crucial: Include a prominent torn parchment paper caption box placed across the top of the frame with clear margin below the top border (ensure all text is 100% visible, sharp and legible) with the exact text: \"And a last idea formed - maybe God could do what the Devil wouldn't. Maybe the Lord's forgiveness could outbid the ledger. He turned toward the town.\". Use a messy handwritten marker font. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, moody dashboard and headlight lighting, clean cel and gradient shading, no messy watercolor wash, no blur.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep08/panels/panel_10.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep08/panels/panel_10.webp",
+      "sizeKB": 665,
+      "hash": "0099fa04",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_08_A_Deals_a_Deal/selected/track_08_panel_10.webp",
+      "originalCaption": "And a last idea formed - maybe God could do what the Devil wouldn't. Maybe the Lord's forgiveness could outbid the ledger. He turned toward the town."
+    }
+  ],
+  "importedFrom": {
+    "source": "At the Crossroads - 2",
+    "track": 8,
+    "importedAt": "2026-11-16T19:22:00.815Z"
+  }
+}

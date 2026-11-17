@@ -1,0 +1,16 @@
+{
+  "speaker": "Natari",
+  "character": "natari",
+  "actorName": "Sarah",
+  "voiceId": "EXAVITQu4vr4xnSDxMaL",
+  "edgeVoice": "",
+  "engineUsed": "ElevenLabs",
+  "elevenLabsError": "",
+  "textToSpeak": "We left an empire's treasure beneath that stone.",
+  "stability": 0.25,
+  "style": 0.8,
+  "dspChain": "volume=1.30",
+  "reusedTake": false,
+  "creditsUsed": 48,
+  "synthesizedAt": "2026-11-16T07:18:24.395Z"
+}

@@ -1,0 +1,343 @@
+{
+  "projectId": "at-the-crossroads",
+  "episodeId": "ep05",
+  "episodeNumber": 5,
+  "title": "Track 5: At the Crossroads",
+  "theme": "At the Crossroads",
+  "targetPanelCount": 10,
+  "currentStage": "VOICE_SYNTHESIS",
+  "overallProgress": 50,
+  "updatedAt": "2026-11-16T19:22:00.815Z",
+  "outputs": {
+    "resolution": "10 imported panels • ready for voices"
+  },
+  "stages": [
+    {
+      "id": "SCRIPT_GENERATION",
+      "name": "1. Writers Room Script",
+      "status": "COMPLETED",
+      "progress": 100
+    },
+    {
+      "id": "PROMPT_EXPANSION",
+      "name": "2. Latent Anchor & Guardrails",
+      "status": "COMPLETED",
+      "progress": 100
+    },
+    {
+      "id": "VISUAL_RENDERING",
+      "name": "3. Meta AI 2K Panel Rendering",
+      "status": "COMPLETED",
+      "progress": 100
+    },
+    {
+      "id": "VOICE_SYNTHESIS",
+      "name": "4. Multi-Actor Voice & DSP",
+      "status": "PENDING",
+      "progress": 0
+    },
+    {
+      "id": "VIDEO_ASSEMBLY",
+      "name": "5. Motion Comic Camera & Concat",
+      "status": "LOCKED_BY_GATE",
+      "progress": 0
+    },
+    {
+      "id": "READY_FOR_RELEASE",
+      "name": "6. Master Release Bundle",
+      "status": "LOCKED_BY_GATE",
+      "progress": 0
+    }
+  ],
+  "gates": [
+    {
+      "id": "SCRIPT_GATE",
+      "name": "Gate A: Storyboard & Dialogue Lock",
+      "afterStage": "SCRIPT_GENERATION",
+      "status": "APPROVED",
+      "approvedAt": "2026-11-16T19:22:00.815Z",
+      "notes": "Imported script from At the Crossroads (Take 2)."
+    },
+    {
+      "id": "VISUAL_QA_GATE",
+      "name": "Gate B: 8-Point Director Visual Continuity Gate",
+      "afterStage": "VISUAL_RENDERING",
+      "status": "APPROVED",
+      "approvedAt": "2026-11-16T19:22:00.815Z",
+      "notes": "Imported panels already approved in the original project."
+    },
+    {
+      "id": "AUDIO_QA_GATE",
+      "name": "Gate C: 5-Point Acoustic & Polarity Gate",
+      "afterStage": "VOICE_SYNTHESIS",
+      "status": "LOCKED",
+      "notes": "Awaiting voice synthesis."
+    }
+  ],
+  "panels": [
+    {
+      "panelId": 1,
+      "name": "In the pitch-black void of midnight, two",
+      "act": "Track 5",
+      "summary": "In the pitch-black void of midnight, two massive glowing red ember eyes narrow into an angry, terrifying, foreboding glare.",
+      "caption": "Two red eyes opened in the dark.",
+      "dialogue": [],
+      "characters": [
+        "devil"
+      ],
+      "objects": [],
+      "shotType": "Extreme Close-up",
+      "prompt": "Extreme close-up shot in deep midnight darkness. In the pitch-black void, two massive, piercing glowing red ember eyes narrow into an angry, menacing, terrifying predatory glare (lowered sinister heavy brow shadows, sharply angled demonic eyelids, intense malevolent and foreboding expression, NOT wide open, NOT round, NOT surprised). The narrowed eyes burn and crackle with intense internal molten crimson fire, sharp vertical demonic pupils, jagged fiery veins, and tiny drifting embers and dark sulfur smoke curling off the lids into deep ink-black shadows. Chilling, sinister, deeply foreboding demonic presence. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, high-contrast chiaroscuro lighting, clean cel and gradient shading, no messy watercolor wash, no blur. Include a neatly positioned torn paper caption box fully contained within the upper portion of the frame with generous margin below the top edge (ensure all text is 100% visible, not cut off at the top or borders) with the exact text: \"Two red eyes opened in the dark.\". Use a messy handwritten marker font.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep05/panels/panel_01.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep05/panels/panel_01.webp",
+      "sizeKB": 562.7,
+      "hash": "7eb07d7a",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_05_At_the_Crossroads/selected/track_05_panel_01.webp",
+      "originalCaption": "Two red eyes opened in the dark."
+    },
+    {
+      "panelId": 2,
+      "name": "The 7-foot tall Shadow steps out onto",
+      "act": "Track 5",
+      "summary": "The 7-foot tall Shadow steps out onto the dirt road of the crossroads; a wave of freezing cold covers the ground in white frost as the Kid watches.",
+      "caption": "A shadow stepped out. The cold rolled in.",
+      "dialogue": [],
+      "characters": [
+        "kid",
+        "devil"
+      ],
+      "objects": [],
+      "shotType": "Wide Shot",
+      "prompt": "Wide cinematic shot at a lonely rural dirt crossroads at midnight. Stepping out into the center of the dark road intersection is a colossal 7-foot-tall supernatural shadow figure enveloped in swirling midnight dust, mist, and red sulfur embers (featureless ink-black silhouette manifestation with two piercing glowing red ember eyes and a razor-sharp jagged white tooth grin, carrying an ancient massive book bound in cracked black leather). A sudden unnatural wave of freezing cold causes a thick layer of white frost and ice crystals to rapidly spread across the dirt road, weeds, and asphalt. In the foreground, the tall 24-year-old young adult man stands watching in awe and shock, while off to the side on the dark shoulder, his vintage 1970s blue rusted pickup truck sits parked with frost creeping over its metal roof. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, eerie midnight moonlight and sulfur red glows, clean cel and gradient shading, no messy watercolor wash, no blur. Include a neatly positioned torn paper caption box fully contained within the upper portion of the frame with generous margin below the top edge (ensure all text is 100% visible, not cut off at the top or borders) with the exact text: \"A shadow stepped out. The cold rolled in.\". Use a messy handwritten marker font.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep05/panels/panel_02.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep05/panels/panel_02.webp",
+      "sizeKB": 833.4,
+      "hash": "7232b88a",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_05_At_the_Crossroads/selected/track_05_panel_02.webp",
+      "originalCaption": "A shadow stepped out. The cold rolled in."
+    },
+    {
+      "panelId": 3,
+      "name": "The colossal 7-foot Shadow looms over the",
+      "act": "Track 5",
+      "summary": "The colossal 7-foot Shadow looms over the tall 24yo young adult man at the crossroads, speaking the pact.",
+      "caption": "",
+      "dialogue": [
+        {
+          "speaker": "Devil",
+          "text": "Let the deal begin."
+        }
+      ],
+      "characters": [
+        "kid",
+        "devil"
+      ],
+      "objects": [],
+      "shotType": "Low angle dynamic two-shot",
+      "prompt": "Low angle dynamic two-shot at the midnight crossroads. The towering 7-foot supernatural shadow figure (composed of swirling black smoke, midnight mist, two glowing red ember eyes, and a terrifying jagged razor-sharp white tooth grin) looms menacingly over the mortal protagonist. Standing tall on his feet in front of the colossal entity is the tall 6-foot-1, broad-shouldered 24-year-old young adult man (athletic adult build, long limbs, towering posture, NOT a child, NOT short, handsome sharp features, tousled dark brown hair, dark stubble, wearing a faded blue denim trucker jacket over a white t-shirt and beat-up jeans, holding his battered sunburst acoustic guitar low at his side), looking up in sheer awe and trembling terror. The entity's smoky claws gesture toward the open night air as speech emanates. Dramatic chiaroscuro lighting with ominous red underglow. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, high-contrast cinematic lighting, clean cel and gradient shading, no messy watercolor wash, no blur. Include a neatly positioned torn paper caption box fully contained within the upper portion of the frame with generous margin below the top edge (ensure all text is 100% visible, not cut off at the top or borders) with the exact text: \"\\\"Let the deal begin.\\\"\". Use a messy handwritten marker font.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep05/panels/panel_03.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep05/panels/panel_03.webp",
+      "sizeKB": 671.7,
+      "hash": "cf11b6e8",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_05_At_the_Crossroads/selected/track_05_panel_03.webp",
+      "originalCaption": "\"Let the deal begin.\""
+    },
+    {
+      "panelId": 4,
+      "name": "A smoky clawed hand extends from darkness,",
+      "act": "Track 5",
+      "summary": "A smoky clawed hand extends from darkness, holding out the heavy ancient black leather ledger book.",
+      "caption": "The Devil held out a book bound in black -",
+      "dialogue": [],
+      "characters": [
+        "devil"
+      ],
+      "objects": [],
+      "shotType": "Close-up on hands",
+      "prompt": "Close-up shot. From the swirling darkness and drifting sulfur embers, a massive, shadowy clawed hand composed of ink-black vapor extends forward into the moonlight, holding out a heavy, ancient ledger book bound in cracked, scorched black leather with heavy rusted iron clasps and buckles. Wisps of black smoke and faint red embers rise from the scorched book binding. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, high-contrast chiaroscuro lighting with faint red ember glows, clean cel and gradient shading, no messy watercolor wash, no blur. Include a neatly positioned torn paper caption box fully contained within the upper portion of the frame with generous margin below the top edge (ensure all text is 100% visible, not cut off at the top or borders) with the exact text: \"The Devil held out a book bound in black -\". Use a messy handwritten marker font.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep05/panels/panel_04.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep05/panels/panel_04.webp",
+      "sizeKB": 726,
+      "hash": "1ef69788",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_05_At_the_Crossroads/selected/track_05_panel_04.webp",
+      "originalCaption": "The Devil held out a book bound in black -"
+    },
+    {
+      "panelId": 5,
+      "name": "The ancient ledger lies open to yellowed",
+      "act": "Track 5",
+      "summary": "The ancient ledger lies open to yellowed pages, awaiting a signature in blood.",
+      "caption": "- sign in blood, no giving it back, the fame, the gold, the name in exchange for his soul, claimed when he dies.",
+      "dialogue": [],
+      "characters": [],
+      "objects": [],
+      "shotType": "Close-up on the book",
+      "prompt": "Close-up on the ancient black leather book held open flat by shadowy clawed fingers. The ancient yellowed parchment pages are lined with faded demonic script and ledger entries, with a stark, blank open space at the bottom awaiting a mortal signature. Smoky black vapor and hot red embers drift across the edges of the brittle parchment paper under the cold midnight moon. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, high-contrast dramatic lighting, clean cel and gradient shading, no messy watercolor wash, no blur. Include a neatly positioned torn paper caption box fully contained within the upper portion of the frame with generous margin below the top edge (ensure all text is 100% visible, not cut off at the top or borders) with the exact text: \"- sign in blood, no giving it back, the fame, the gold, the name in exchange for his soul, claimed when he dies.\". Use a messy handwritten marker font.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep05/panels/panel_05.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep05/panels/panel_05.webp",
+      "sizeKB": 780.4,
+      "hash": "9737f52c",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_05_At_the_Crossroads/selected/track_05_panel_05.webp",
+      "originalCaption": "- sign in blood, no giving it back, the fame, the gold, the name in exchange for his soul, claimed when he dies."
+    },
+    {
+      "panelId": 6,
+      "name": "The young man presses his bloody cut",
+      "act": "Track 5",
+      "summary": "The young man presses his bloody cut palm to the page; the paper blazes with supernatural red fire.",
+      "caption": "The kid cut his hand and signed his name in blood on the page. The page burned red.",
+      "dialogue": [],
+      "characters": [
+        "kid"
+      ],
+      "objects": [],
+      "shotType": "High angle top-down close-up on the book",
+      "prompt": "High angle top-down close-up on the open parchment page of the ancient black ledger book. The 24-year-old adult man's right hand (faded blue denim jacket cuff visible) presses his cut, bleeding palm flat onto the yellowed page. The moment the fresh crimson blood touches the paper, the signature area violently ignites and blazes with a bright, blinding supernatural red light, scorching the page with glowing crimson embers and mystical energy. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, explosive high-contrast supernatural red lighting, clean cel and gradient shading, no messy watercolor wash, no blur. Include a neatly positioned torn paper caption box fully contained within the upper portion of the frame with generous margin below the top edge (ensure all text is 100% visible, not cut off at the top or borders) with the exact text: \"The kid cut his hand and signed his name in blood on the page. The page burned red.\". Use a messy handwritten marker font.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep05/panels/panel_06.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep05/panels/panel_06.webp",
+      "sizeKB": 927.6,
+      "hash": "a28617c0",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_05_At_the_Crossroads/selected/track_05_panel_06.webp",
+      "originalCaption": "The kid cut his hand and signed his name in blood on the page. The page burned red."
+    },
+    {
+      "panelId": 7,
+      "name": "The Shadow violently slams the heavy ledger",
+      "act": "Track 5",
+      "summary": "The Shadow violently slams the heavy ledger shut with an explosive shockwave of smoke and sparks.",
+      "caption": "The book slammed shut.",
+      "dialogue": [
+        {
+          "speaker": "Devil",
+          "text": "The deal is cut."
+        }
+      ],
+      "characters": [
+        "devil"
+      ],
+      "objects": [],
+      "shotType": "Medium shot",
+      "prompt": "Medium shot at the midnight crossroads. The towering 7-foot shadowy entity violently slams the massive black leather ledger book shut between its clawed hands. A dynamic comic impact shockwave erupts from the book, blasting outward a colossal ring of swirling black smoke, flying red sparks, and frost dust. The shadow's razor-sharp white tooth grin gleams with sinister triumph amidst the smoky tempest. Dynamic motion lines. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, explosive chiaroscuro impact lighting, clean cel and gradient shading, no messy watercolor wash, no blur. Include a neatly positioned torn paper caption box fully contained within the upper portion of the frame with generous margin below the top edge (ensure all text is 100% visible, not cut off at the top or borders) with the exact text: \"The book slammed shut. \\\"The deal is cut.\\\"\". Use a messy handwritten marker font.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep05/panels/panel_07.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep05/panels/panel_07.webp",
+      "sizeKB": 812.6,
+      "hash": "0952a2d2",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_05_At_the_Crossroads/selected/track_05_panel_07.webp",
+      "originalCaption": "The book slammed shut. \"The deal is cut.\""
+    },
+    {
+      "panelId": 8,
+      "name": "The Shadow has vanished",
+      "act": "Track 5",
+      "summary": "The Shadow has vanished; the young man stands entirely alone at the crossroads in the fog.",
+      "caption": "Then the Devil was gone.",
+      "dialogue": [],
+      "characters": [
+        "kid",
+        "devil"
+      ],
+      "objects": [],
+      "shotType": "Wide cinematic shot",
+      "prompt": "Wide cinematic shot at the rural crossroads under the pale midnight moon. The supernatural shadow entity has completely vanished into thin air. In the exact dead center of the empty crossroads, the tall 6-foot-1, 24-year-old young adult man (wearing his faded blue denim trucker jacket, white t-shirt, and beat-up jeans, holding his sunburst acoustic guitar by his side) stands entirely alone. Cold white ground fog swirls across the dark asphalt and dirt road around his boots. Off to the side on the gravel shoulder, his vintage 1970s blue rusted pickup truck sits silent and frosted over under the quiet starry sky. Complete solitude and eerie stillness. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, eerie moonlight and dark atmospheric shadows, clean cel and gradient shading, no messy watercolor wash, no blur. Include a neatly positioned torn paper caption box fully contained within the upper portion of the frame with generous margin below the top edge (ensure all text is 100% visible, not cut off at the top or borders) with the exact text: \"Then the Devil was gone.\". Use a messy handwritten marker font.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep05/panels/panel_08.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep05/panels/panel_08.webp",
+      "sizeKB": 761,
+      "hash": "2a177330",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_05_At_the_Crossroads/selected/track_05_panel_08.webp",
+      "originalCaption": "Then the Devil was gone."
+    },
+    {
+      "panelId": 9,
+      "name": "The young man stares down in shock",
+      "act": "Track 5",
+      "summary": "The young man stares down in shock at his palm—the bloody cut has completely and unnaturally healed.",
+      "caption": "The kid looked down and the cut on his hand had already healed. That's when he knew the deal was real.",
+      "dialogue": [],
+      "characters": [
+        "kid"
+      ],
+      "objects": [],
+      "shotType": "Close-up on the hand and face",
+      "prompt": "Close-up shot of the young adult protagonist's hand and face. Bathed in cool moonlight and dim ambient darkness, the tall 24-year-old man (handsome youthful 24-year-old facial features, smooth youthful skin with dark stubble, NOT elderly, NOT haggard, tousled dark brown hair, faded blue denim jacket sleeve) raises his right hand and stares down at his open palm in cold, disbelieving shock and dread. The deep bloody knife cut has completely and unnaturally vanished—the skin is perfectly smooth and healed without a single scar or drop of blood remaining. His eyes are wide, pupils trembling with the terrible realization that the supernatural pact was real. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, high-contrast dramatic moonlight, clean cel and gradient shading, no messy watercolor wash, no blur. Include a neatly positioned torn paper caption box fully contained within the upper portion of the frame with generous margin below the top edge (ensure all text is 100% visible, not cut off at the top or borders) with the exact text: \"The kid looked down and the cut on his hand had already healed. That's when he knew the deal was real.\". Use a messy handwritten marker font.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep05/panels/panel_09.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep05/panels/panel_09.webp",
+      "sizeKB": 688.3,
+      "hash": "7cebf492",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_05_At_the_Crossroads/selected/track_05_panel_09.webp",
+      "originalCaption": "The kid looked down and the cut on his hand had already healed. That's when he knew the deal was real."
+    },
+    {
+      "panelId": 10,
+      "name": "The vintage blue rusted pickup truck drives",
+      "act": "Track 5",
+      "summary": "The vintage blue rusted pickup truck drives away down the Delta highway as the sky turns pale morning gray.",
+      "caption": "One cold thought stood in his chest - this ain't right - but he shoved it off, climbed back in the truck as the sky turned gray, and drove away. The same road, but everything had changed. The world was about to know his name.",
+      "dialogue": [],
+      "characters": [],
+      "objects": [],
+      "shotType": "Cinematic exterior wide shot at dawn",
+      "prompt": "Cinematic exterior wide shot at the break of dawn. Down a lonely two-lane rural Mississippi highway cutting through flat Delta fields, the vintage 1970s blue rusted pickup truck (weathered light blue paint, oxidized patina, white cab roof) drives away into the distance, tires kicking up faint road spray. In the sky ahead, the cold ink-black midnight darkness is giving way to pale lavender, slate gray, and faint amber morning dawn light over the tree line. The rural crossroads is left far behind in the distance. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, muted but high-contrast cinematic dawn lighting, clean cel and gradient shading, no messy watercolor wash, no blur. Include a neatly positioned torn paper caption box fully contained within the upper portion of the frame with generous margin below the top edge (ensure all text is 100% visible, not cut off at the top or borders) with the exact text: \"One cold thought stood in his chest - this ain't right - but he shoved it off, climbed back in the truck as the sky turned gray, and drove away. The same road, but everything had changed. The world was about to know his name.\". Use a messy handwritten marker font.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep05/panels/panel_10.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep05/panels/panel_10.webp",
+      "sizeKB": 829.6,
+      "hash": "1741c12e",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_05_At_the_Crossroads/selected/track_05_panel_10.webp",
+      "originalCaption": "One cold thought stood in his chest - this ain't right - but he shoved it off, climbed back in the truck as the sky turned gray, and drove away. The same road, but everything had changed. The world was about to know his name."
+    }
+  ],
+  "importedFrom": {
+    "source": "At the Crossroads - 2",
+    "track": 5,
+    "importedAt": "2026-11-16T19:22:00.815Z"
+  }
+}

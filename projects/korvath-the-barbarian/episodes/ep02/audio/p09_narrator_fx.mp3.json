@@ -1,0 +1,16 @@
+{
+  "speaker": "Narrator",
+  "character": "narrator",
+  "actorName": "Brian",
+  "voiceId": "nPczCjzI2devNBz1zQrb",
+  "edgeVoice": "",
+  "engineUsed": "ElevenLabs",
+  "elevenLabsError": "",
+  "textToSpeak": "Every corridor had swallowed a hundred thieves before them.",
+  "stability": 0.3,
+  "style": 0.65,
+  "dspChain": "volume=1.25",
+  "reusedTake": true,
+  "creditsUsed": 0,
+  "synthesizedAt": "2026-11-16T12:53:23.200Z"
+}

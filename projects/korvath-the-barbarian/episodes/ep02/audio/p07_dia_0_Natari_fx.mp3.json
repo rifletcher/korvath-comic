@@ -1,0 +1,16 @@
+{
+  "speaker": "Natari",
+  "character": "natari",
+  "actorName": "Sarah",
+  "voiceId": "EXAVITQu4vr4xnSDxMaL",
+  "edgeVoice": "",
+  "engineUsed": "ElevenLabs",
+  "elevenLabsError": "",
+  "textToSpeak": "The altar of Thorgar the Undying lies through the hall of fangs. Watch the flagstones.",
+  "stability": 0.25,
+  "style": 0.8,
+  "dspChain": "volume=1.30",
+  "reusedTake": false,
+  "creditsUsed": 86,
+  "synthesizedAt": "2026-11-16T07:18:14.762Z"
+}

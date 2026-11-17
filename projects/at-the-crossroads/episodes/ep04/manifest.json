@@ -1,0 +1,340 @@
+{
+  "projectId": "at-the-crossroads",
+  "episodeId": "ep04",
+  "episodeNumber": 4,
+  "title": "Track 4: The Devil in Disguise",
+  "theme": "The Devil in Disguise",
+  "targetPanelCount": 10,
+  "currentStage": "VOICE_SYNTHESIS",
+  "overallProgress": 50,
+  "updatedAt": "2026-11-16T19:22:00.815Z",
+  "outputs": {
+    "resolution": "10 imported panels • ready for voices"
+  },
+  "stages": [
+    {
+      "id": "SCRIPT_GENERATION",
+      "name": "1. Writers Room Script",
+      "status": "COMPLETED",
+      "progress": 100
+    },
+    {
+      "id": "PROMPT_EXPANSION",
+      "name": "2. Latent Anchor & Guardrails",
+      "status": "COMPLETED",
+      "progress": 100
+    },
+    {
+      "id": "VISUAL_RENDERING",
+      "name": "3. Meta AI 2K Panel Rendering",
+      "status": "COMPLETED",
+      "progress": 100
+    },
+    {
+      "id": "VOICE_SYNTHESIS",
+      "name": "4. Multi-Actor Voice & DSP",
+      "status": "PENDING",
+      "progress": 0
+    },
+    {
+      "id": "VIDEO_ASSEMBLY",
+      "name": "5. Motion Comic Camera & Concat",
+      "status": "LOCKED_BY_GATE",
+      "progress": 0
+    },
+    {
+      "id": "READY_FOR_RELEASE",
+      "name": "6. Master Release Bundle",
+      "status": "LOCKED_BY_GATE",
+      "progress": 0
+    }
+  ],
+  "gates": [
+    {
+      "id": "SCRIPT_GATE",
+      "name": "Gate A: Storyboard & Dialogue Lock",
+      "afterStage": "SCRIPT_GENERATION",
+      "status": "APPROVED",
+      "approvedAt": "2026-11-16T19:22:00.815Z",
+      "notes": "Imported script from At the Crossroads (Take 2)."
+    },
+    {
+      "id": "VISUAL_QA_GATE",
+      "name": "Gate B: 8-Point Director Visual Continuity Gate",
+      "afterStage": "VISUAL_RENDERING",
+      "status": "APPROVED",
+      "approvedAt": "2026-11-16T19:22:00.815Z",
+      "notes": "Imported panels already approved in the original project."
+    },
+    {
+      "id": "AUDIO_QA_GATE",
+      "name": "Gate C: 5-Point Acoustic & Polarity Gate",
+      "afterStage": "VOICE_SYNTHESIS",
+      "status": "LOCKED",
+      "notes": "Awaiting voice synthesis."
+    }
+  ],
+  "panels": [
+    {
+      "panelId": 1,
+      "name": "The vintage blue rusted pickup truck driving",
+      "act": "Track 4",
+      "summary": "The vintage blue rusted pickup truck driving into the humid Mississippi Delta at dusk.",
+      "caption": "He headed south into the Mississippi Delta and worked bar to bar looking for the old man.",
+      "dialogue": [],
+      "characters": [],
+      "objects": [],
+      "shotType": "Extreme Wide Shot, cinematic landscape",
+      "prompt": "Extreme wide shot, cinematic landscape. An old, beat-up 1970s blue rusted pickup truck (weathered light blue paint, oxidized rust patina, white cab roof) driving down a lonely two-lane asphalt road into the deep Mississippi Delta at dusk. Murky cypress swamps line both sides of the road, ancient cypress trees with hanging grey Spanish moss, humid mist drifting over dark bayou waters. Muted purple, deep green, and amber sunset sky. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, muted but high-contrast cinematic lighting, clean cel and gradient shading, no messy watercolor wash, no blur. Include a torn paper caption box at the top with the exact text: \"He headed south into the Mississippi Delta and worked bar to bar looking for the old man.\". Use a messy handwritten marker font.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep04/panels/panel_01.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep04/panels/panel_01.webp",
+      "sizeKB": 891.4,
+      "hash": "bb510842",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_04_The_Devil_in_Disguise/selected/track_04_panel_01.webp",
+      "originalCaption": "He headed south into the Mississippi Delta and worked bar to bar looking for the old man."
+    },
+    {
+      "panelId": 2,
+      "name": "The tall 24yo young adult man stands",
+      "act": "Track 4",
+      "summary": "The tall 24yo young adult man stands at the bar, holding out a sketch of the Bluesman to an uneasy bartender who shakes his head. (Old bluesman is NOT in the room).",
+      "caption": "Nobody knew him, nobody talked.",
+      "dialogue": [],
+      "characters": [
+        "kid",
+        "bluesman"
+      ],
+      "objects": [],
+      "shotType": "Over-the-shoulder shot inside a dim juke joint",
+      "prompt": "Over-the-shoulder shot inside a dark, rustic wooden Delta juke joint. Only two people present in the room: a tall young adult man standing in the foreground, and the bartender behind the bar. In the foreground, standing tall on his feet at the wooden bar counter (not sitting, tall 6-foot-1 broad-shouldered 24-year-old adult man with long limbs, towering over the bar, athletic back, tousled dark brown hair, wearing a faded blue denim trucker jacket with a battered black guitar case slung across his broad back). From behind his tall shoulder, he holds out a crumpled sheet of paper with a rough charcoal pencil sketch of an elderly African-American man in a fedora. Across the scarred wooden bar counter, an uneasy African-American bartender in a stained apron looks at the paper sketch with nervous, guarded eyes, shaking his head and raising a hand dismissively to push the drawing away. The old bluesman is NOT physically present in the room. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, muted warm tavern lighting, clean cel and gradient shading, no messy watercolor wash, no blur. Include a torn paper caption box at the top with the exact text: \"Nobody knew him, nobody talked.\". Use a messy handwritten marker font.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep04/panels/panel_02.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep04/panels/panel_02.webp",
+      "sizeKB": 819.5,
+      "hash": "7644b4ae",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_04_The_Devil_in_Disguise/selected/track_04_panel_02.webp",
+      "originalCaption": "Nobody knew him, nobody talked."
+    },
+    {
+      "panelId": 3,
+      "name": "A gruff bouncer slams a juke joint",
+      "act": "Track 4",
+      "summary": "A gruff bouncer slams a juke joint door shut in the tall young man's face, rejecting him after a week of dead ends across the Delta.",
+      "caption": "A week in the Delta, every door locked.",
+      "dialogue": [],
+      "characters": [
+        "kid"
+      ],
+      "objects": [],
+      "shotType": "Medium shot, exterior at night in pouring rain",
+      "prompt": "Medium shot, exterior at night in pouring torrential Delta rain. On the weathered wooden porch of a rustic Mississippi juke joint, a gruff African-American bouncer's hand firmly slams a heavy wooden door shut right in the young man's face, refusing to answer questions. Standing outside in the driving rain is the tall 6-foot-1, 24-year-old young adult man (broad shoulders, dark tousled wet hair, stubble, wearing a soaked faded denim trucker jacket with his battered black guitar case slung across his back), looking weary, frustrated, and shut out. Down the dark, rain-soaked road in the foggy background, distant flickering neon beer signs of other closed and unwelcoming bars fade into the misty night, showing a long week of rejection and dead ends. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, high-contrast atmospheric rain lighting, clean cel and gradient shading, no messy watercolor wash, no blur. Include a torn paper caption box at the top with the exact text: \"A week in the Delta, every door locked.\". Use a messy handwritten marker font.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep04/panels/panel_03.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep04/panels/panel_03.webp",
+      "sizeKB": 783.2,
+      "hash": "b486b79a",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_04_The_Devil_in_Disguise/selected/track_04_panel_03.webp",
+      "originalCaption": "A week in the Delta, every door locked."
+    },
+    {
+      "panelId": 4,
+      "name": "The Kid pushes open the creaky screen",
+      "act": "Track 4",
+      "summary": "The Kid pushes open the creaky screen door of a solitary swamp joint.",
+      "caption": "About to give up, he walked into one last joint...",
+      "dialogue": [],
+      "characters": [
+        "kid"
+      ],
+      "objects": [],
+      "shotType": "Low angle exterior shot at entrance",
+      "prompt": "Low angle exterior shot at night. The Kid (tall, lean 6-foot-1 24-year-old man, sharp hungry features, tousled dark brown hair, dark stubble, weary posture, wearing a soaking wet faded denim trucker jacket over a white t-shirt and beat-up jeans, carrying his battered black guitar case in one hand) pushes open the weathered wooden screen door of a solitary, dimly lit roadside swamp shack. Warm amber light and faint tobacco smoke spill out from the doorway into the wet bayou night and creeping ground fog. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, muted cinematic lighting, clean cel and gradient shading, no messy watercolor wash, no blur. Include a torn paper caption box at the top with the exact text: \"About to give up, he walked into one last joint...\". Use a messy handwritten marker font.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep04/panels/panel_04.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep04/panels/panel_04.webp",
+      "sizeKB": 815.9,
+      "hash": "1cd6c904",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_04_The_Devil_in_Disguise/selected/track_04_panel_04.webp",
+      "originalCaption": "About to give up, he walked into one last joint..."
+    },
+    {
+      "panelId": 5,
+      "name": "The elderly Bluesman sits alone at a",
+      "act": "Track 4",
+      "summary": "The elderly Bluesman sits alone at a corner table, grinning knowingly.",
+      "caption": "...and the old man was already sitting there, grinning, like he knew the kid was coming.",
+      "dialogue": [],
+      "characters": [
+        "kid",
+        "bluesman"
+      ],
+      "objects": [],
+      "shotType": "Wide shot interior",
+      "prompt": "Wide shot interior of a dark, rustic, empty Delta tavern at night. Deep in the back corner under a single hanging Edison bulb, the enigmatic elderly African-American Bluesman (weathered dark skin, deep wrinkles, sharp predatory grin, glowing amber eyes, wearing a dusty grey fedora tilted low over his brow and a wrinkled charcoal vintage suit with a loosened dark tie) sits alone at a round wooden table, leisurely smoking a wooden briar pipe with curling blue smoke. He grins a knowing, wicked grin directly toward the entrance, as if he had been expecting the visitor all along. In the foreground doorway stands the tall, lean silhouette of the Kid carrying his guitar case. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, dramatic chiaroscuro tavern lighting, clean cel and gradient shading, no messy watercolor wash, no blur. Include a torn paper caption box at the top with the exact text: \"...and the old man was already sitting there, grinning, like he knew the kid was coming.\". Use a messy handwritten marker font.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep04/panels/panel_05.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep04/panels/panel_05.webp",
+      "sizeKB": 720.8,
+      "hash": "418ee48c",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_04_The_Devil_in_Disguise/selected/track_04_panel_05.webp",
+      "originalCaption": "...and the old man was already sitting there, grinning, like he knew the kid was coming."
+    },
+    {
+      "panelId": 6,
+      "name": "The old Bluesman gestures casually with his",
+      "act": "Track 4",
+      "summary": "The old Bluesman gestures casually with his pipe toward an empty chair.",
+      "caption": "",
+      "dialogue": [
+        {
+          "speaker": "Bluesman",
+          "text": "Heard you was lookin'."
+        }
+      ],
+      "characters": [
+        "bluesman"
+      ],
+      "objects": [],
+      "shotType": "Medium shot inside the tavern",
+      "prompt": "Medium shot inside the tavern. The enigmatic elderly African-American Bluesman (deeply weathered dark skin, intricate wrinkles, sharp predatory grin, uncanny glowing amber eyes beneath the brim of his dusty grey fedora, wearing a wrinkled vintage pinstripe suit and loosened tie) leans back casually in his wooden chair, gesturing toward an empty chair across the table with the polished wooden stem of his smoking tobacco pipe. Wisps of blue-grey smoke curl around his fedora. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, warm moody tavern lighting, clean cel and gradient shading, no messy watercolor wash, no blur. Include a torn paper caption box at the top with the exact text: \"Heard you was lookin'.\". Use a messy handwritten marker font.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep04/panels/panel_06.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep04/panels/panel_06.webp",
+      "sizeKB": 804,
+      "hash": "ae56167d",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_04_The_Devil_in_Disguise/selected/track_04_panel_06.webp",
+      "originalCaption": "\"Heard you was lookin'.\""
+    },
+    {
+      "panelId": 7,
+      "name": "The elderly African-American Bluesman taps his wooden",
+      "act": "Track 4",
+      "summary": "The elderly African-American Bluesman taps his wooden pipe on the scarred table, delivering the directions as sparks fly. All caption text fully visible with ample padding.",
+      "caption": "The directions were plain: Highway 61, where two roads cross, midnight, stand and wait, the Devil comes, and you'll sign your fate.",
+      "dialogue": [],
+      "characters": [
+        "bluesman",
+        "devil"
+      ],
+      "objects": [],
+      "shotType": "Close-up shot on Bluesman and table",
+      "prompt": "Close-up shot of the elderly African-American Bluesman (from character design: enigmatic elderly African-American man, deeply weathered dark brown skin with age spots, deep knowing wrinkles, short salt-and-pepper stubble beard, sharp predatory grin showing teeth, uncanny luminous glowing amber eyes beneath the brim of his dusty grey felt fedora, wearing a wrinkled charcoal pinstripe vintage suit and loosened black tie). Seated at the scarred dark wooden table, his dark weathered hand firmly taps the bowl of his wooden tobacco pipe against the tabletop, sending glowing amber sparks and hot drifting ashes bursting across the wood. Dramatic chiaroscuro tavern shadows, warm amber glows from the pipe embers. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, high-contrast dramatic lighting, clean cel and gradient shading, no messy watercolor wash, no blur. Include a neatly positioned torn paper caption box fully contained within the upper portion of the frame with generous margin below the top edge (ensure all text is 100% visible, not cut off at the top or borders) with the exact text: \"The directions were plain: Highway 61, where two roads cross, midnight, stand and wait, the Devil comes, and you'll sign your fate.\". Use a messy handwritten marker font.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep04/panels/panel_07.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep04/panels/panel_07.webp",
+      "sizeKB": 890.7,
+      "hash": "6b670cef",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_04_The_Devil_in_Disguise/selected/track_04_panel_07.webp",
+      "originalCaption": "The directions were plain: Highway 61, where two roads cross, midnight, stand and wait, the Devil comes, and you'll sign your fate."
+    },
+    {
+      "panelId": 8,
+      "name": "Pure instinctual dread in the Kid's eyes",
+      "act": "Track 4",
+      "summary": "Pure instinctual dread in the Kid's eyes as a chill runs through him.",
+      "caption": "A chill ran through the kid; something in the old man's eyes said run.",
+      "dialogue": [],
+      "characters": [
+        "kid"
+      ],
+      "objects": [],
+      "shotType": "Extreme close-up on the Kid's face",
+      "prompt": "Extreme close-up on the Kid's face (lean 24-year-old young man, handsome sharp features, smooth youthful skin, dark stubble, damp tousled brown hair, NOT elderly, NOT haggard). His brown eyes are wide and dilated with pure, instinctual primitive terror and cold shock, pupils reflecting a faint amber glow. A bead of cold sweat runs down his temple, jaw slightly open, feeling an ominous supernatural chill down his spine that screams for him to run. Dramatic high-contrast shadows. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, psychological horror lighting, clean cel and gradient shading, no messy watercolor wash, no blur. Include a torn paper caption box at the top with the exact text: \"A chill ran through the kid; something in the old man's eyes said run.\". Use a messy handwritten marker font.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep04/panels/panel_08.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep04/panels/panel_08.webp",
+      "sizeKB": 862.1,
+      "hash": "fb4a219c",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_04_The_Devil_in_Disguise/selected/track_04_panel_08.webp",
+      "originalCaption": "A chill ran through the kid; something in the old man's eyes said run."
+    },
+    {
+      "panelId": 9,
+      "name": "The Kid clenches his jaw, overriding his",
+      "act": "Track 4",
+      "summary": "The Kid clenches his jaw, overriding his fear with hunger and ambition, nodding firmly.",
+      "caption": "But the hunger won. He shoved it down and did like he was told.",
+      "dialogue": [],
+      "characters": [
+        "kid"
+      ],
+      "objects": [],
+      "shotType": "Medium close-up on the Kid",
+      "prompt": "Medium close-up of the Kid (tall, lean 24-year-old man, sharp features, tousled brown hair, rough dark stubble, wearing a faded blue denim trucker jacket over a white t-shirt). His face hardens, jaw clenching tight in stubborn defiance as he forcefully swallows down his fear. His eyes narrow with reckless, burning ambition and hunger for greatness. He gives a slow, determined, fateful nod across the table. Heavy moody tavern lighting. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, clean cel and gradient shading, no messy watercolor wash, no blur. Include a torn paper caption box at the top with the exact text: \"But the hunger won. He shoved it down and did like he was told.\". Use a messy handwritten marker font.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep04/panels/panel_09.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep04/panels/panel_09.webp",
+      "sizeKB": 780.3,
+      "hash": "f8b5754e",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_04_The_Devil_in_Disguise/selected/track_04_panel_09.webp",
+      "originalCaption": "But the hunger won. He shoved it down and did like he was told."
+    },
+    {
+      "panelId": 10,
+      "name": "Midnight at the desolate crossroads on Highway",
+      "act": "Track 4",
+      "summary": "Midnight at the desolate crossroads on Highway 61. The truck is parked, headlights off; the Kid stands in the center waiting.",
+      "caption": "Midnight came. He drove to the crossroad, killed his headlights, stepped out, and waited to be found.",
+      "dialogue": [],
+      "characters": [
+        "kid"
+      ],
+      "objects": [],
+      "shotType": "Extreme wide shot, exterior night",
+      "prompt": "Extreme wide shot, cinematic exterior at midnight. A realistic, dark rural intersection in the flat Mississippi Delta where a two-lane dark asphalt highway crosses an unpaved gravel country road at an organic, natural angle. Realistic natural road perspective, no symmetrical roads, no artificial geometry, no glowing sci-fi lines. Tall cypress trees draped with Spanish moss and weathered wooden telephone poles line the roadside, with creeping white ground fog rolling across the dark road and grassy ditch under a vast ink-black night sky with faint stars. Off to the side on the dark gravel shoulder, the vintage 1970s blue rusted pickup truck sits parked with its headlights completely turned off. In the center of the dark road intersection, the tall 6-foot-1, lean 24-year-old Kid stands solitary and motionless, holding his battered sunburst acoustic guitar by his side, waiting silently in the cold midnight fog to be found. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, eerie midnight moonlight, clean cel and gradient shading, no messy watercolor wash, no blur. Include a torn paper caption box at the top with the exact text: \"Midnight came. He drove to the crossroad, killed his headlights, stepped out, and waited to be found.\". Use a messy handwritten marker font.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep04/panels/panel_10.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep04/panels/panel_10.webp",
+      "sizeKB": 867.4,
+      "hash": "debf5f48",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_04_The_Devil_in_Disguise/selected/track_04_panel_10.webp",
+      "originalCaption": "Midnight came. He drove to the crossroad, killed his headlights, stepped out, and waited to be found."
+    }
+  ],
+  "importedFrom": {
+    "source": "At the Crossroads - 2",
+    "track": 4,
+    "importedAt": "2026-11-16T19:22:00.815Z"
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "characters": {
+    "narrator": {
+      "name": "The Storyteller (Narrator)",
+      "aliases": [],
+      "engine": "elevenlabs",
+      "voiceId": "nPczCjzI2devNBz1zQrb",
+      "actorName": "Brian",
+      "persona": "Weathered Southern storyteller telling a legend over whiskey",
+      "defaultStability": 0.4,
+      "defaultStyle": 0.55,
+      "dspChain": "volume=1.25",
+      "edgeFallback": "en-US-ChristopherNeural"
+    },
+    "kid": {
+      "name": "The Kid",
+      "aliases": [
+        "the kid",
+        "young man",
+        "preacher"
+      ],
+      "engine": "elevenlabs",
+      "voiceId": "pNInz6obpgDQGcFmaJgB",
+      "actorName": "Adam",
+      "persona": "Hungry young musician; later a burned-out star and a preacher",
+      "defaultStability": 0.35,
+      "defaultStyle": 0.65,
+      "dspChain": "volume=1.25",
+      "edgeFallback": "en-US-ChristopherNeural"
+    },
+    "devil": {
+      "name": "The Devil",
+      "aliases": [
+        "shadow",
+        "the devil",
+        "rider",
+        "the rider"
+      ],
+      "engine": "elevenlabs",
+      "voiceId": "N2lVS1w4EtoT3dr4eOWO",
+      "actorName": "Callum (Devil)",
+      "persona": "Cold, amused, bottomless; the shadow at the crossroads",
+      "defaultStability": 0.3,
+      "defaultStyle": 0.75,
+      "dspChain": "asetrate=44100*0.90,aresample=44100,equalizer=f=110:width_type=h:width=60:g=6,aecho=0.8:0.6:40:0.25,volume=1.35",
+      "edgeFallback": "en-US-ChristopherNeural"
+    },
+    "bluesman": {
+      "name": "The Old Bluesman",
+      "aliases": [
+        "old bluesman",
+        "the bluesman",
+        "itinerant bluesman"
+      ],
+      "engine": "elevenlabs",
+      "voiceId": "N2lVS1w4EtoT3dr4eOWO",
+      "actorName": "Callum (Bluesman)",
+      "persona": "Warm, knowing old Delta bluesman (the Devil in disguise)",
+      "defaultStability": 0.35,
+      "defaultStyle": 0.65,
+      "dspChain": "asetrate=44100*0.95,aresample=44100,volume=1.30",
+      "edgeFallback": "en-US-ChristopherNeural"
+    },
+    "mother": {
+      "name": "The Mother",
+      "aliases": [
+        "mama",
+        "mom"
+      ],
+      "engine": "elevenlabs",
+      "voiceId": "EXAVITQu4vr4xnSDxMaL",
+      "actorName": "Sarah",
+      "persona": "Tired, loving, worried farm mother",
+      "defaultStability": 0.45,
+      "defaultStyle": 0.55,
+      "dspChain": "volume=1.25",
+      "edgeFallback": "en-US-AvaNeural"
+    },
+    "label_man": {
+      "name": "The Label Man",
+      "aliases": [
+        "label man",
+        "record executive",
+        "executive"
+      ],
+      "engine": "elevenlabs",
+      "voiceId": "IKne3meq5aSn9XLyUdCD",
+      "actorName": "Charlie",
+      "persona": "Slick, dismissive record executive",
+      "defaultStability": 0.4,
+      "defaultStyle": 0.6,
+      "dspChain": "volume=1.25",
+      "edgeFallback": "en-US-ChristopherNeural"
+    },
+    "old_timer": {
+      "name": "The Old Timer",
+      "aliases": [
+        "old timer",
+        "old-timer"
+      ],
+      "engine": "elevenlabs",
+      "voiceId": "JBFqnCBsd6RMkjVDRZzb",
+      "actorName": "George",
+      "persona": "Old barfly telling the legend",
+      "defaultStability": 0.4,
+      "defaultStyle": 0.6,
+      "dspChain": "asetrate=44100*0.94,aresample=44100,volume=1.30",
+      "edgeFallback": "en-US-ChristopherNeural"
+    }
+  },
+  "guards": {
+    "allowEdgeFallback": false
+  }
+}

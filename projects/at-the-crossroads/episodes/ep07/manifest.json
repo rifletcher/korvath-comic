@@ -1,0 +1,337 @@
+{
+  "projectId": "at-the-crossroads",
+  "episodeId": "ep07",
+  "episodeNumber": 7,
+  "title": "Track 7: The Price of the Game",
+  "theme": "The Price of the Game",
+  "targetPanelCount": 10,
+  "currentStage": "VOICE_SYNTHESIS",
+  "overallProgress": 50,
+  "updatedAt": "2026-11-16T19:22:00.815Z",
+  "outputs": {
+    "resolution": "10 imported panels • ready for voices"
+  },
+  "stages": [
+    {
+      "id": "SCRIPT_GENERATION",
+      "name": "1. Writers Room Script",
+      "status": "COMPLETED",
+      "progress": 100
+    },
+    {
+      "id": "PROMPT_EXPANSION",
+      "name": "2. Latent Anchor & Guardrails",
+      "status": "COMPLETED",
+      "progress": 100
+    },
+    {
+      "id": "VISUAL_RENDERING",
+      "name": "3. Meta AI 2K Panel Rendering",
+      "status": "COMPLETED",
+      "progress": 100
+    },
+    {
+      "id": "VOICE_SYNTHESIS",
+      "name": "4. Multi-Actor Voice & DSP",
+      "status": "PENDING",
+      "progress": 0
+    },
+    {
+      "id": "VIDEO_ASSEMBLY",
+      "name": "5. Motion Comic Camera & Concat",
+      "status": "LOCKED_BY_GATE",
+      "progress": 0
+    },
+    {
+      "id": "READY_FOR_RELEASE",
+      "name": "6. Master Release Bundle",
+      "status": "LOCKED_BY_GATE",
+      "progress": 0
+    }
+  ],
+  "gates": [
+    {
+      "id": "SCRIPT_GATE",
+      "name": "Gate A: Storyboard & Dialogue Lock",
+      "afterStage": "SCRIPT_GENERATION",
+      "status": "APPROVED",
+      "approvedAt": "2026-11-16T19:22:00.815Z",
+      "notes": "Imported script from At the Crossroads (Take 2)."
+    },
+    {
+      "id": "VISUAL_QA_GATE",
+      "name": "Gate B: 8-Point Director Visual Continuity Gate",
+      "afterStage": "VISUAL_RENDERING",
+      "status": "APPROVED",
+      "approvedAt": "2026-11-16T19:22:00.815Z",
+      "notes": "Imported panels already approved in the original project."
+    },
+    {
+      "id": "AUDIO_QA_GATE",
+      "name": "Gate C: 5-Point Acoustic & Polarity Gate",
+      "afterStage": "VOICE_SYNTHESIS",
+      "status": "LOCKED",
+      "notes": "Awaiting voice synthesis."
+    }
+  ],
+  "panels": [
+    {
+      "panelId": 1,
+      "name": "Ten years later",
+      "act": "Track 7",
+      "summary": "Ten years later. The wealthy country-rock superstar stands on a massive arena stage beneath blinding white and gold spotlights, fifty thousand fans cheering, but his posture is hollow, robotic, and emotionally bankrupt.",
+      "caption": "Ten years since the deal. Still on top, fifty thousand a night, but hollow.",
+      "dialogue": [],
+      "characters": [
+        "kid"
+      ],
+      "objects": [],
+      "shotType": "Wide Shot, arena concert",
+      "prompt": "Wide shot, epic arena concert. Looking across the massive stage toward the audience, the wealthy country-rock superstar (tall 6-foot-1, handsome 29-year-old superstar features, slicked dark hair with fine strands falling loose, sharp gaunt cheekbones, haunted hollow dark eyes masking existential burnout, NOT elderly, NOT haggard, NOT 60 years old) stands mechanically under blinding white-and-gold arena spotlights. He wears an immaculate custom embroidered black-and-silver satin western suit with pearl-snap buttons and gold rings on his fingers, holding his polished custom jet-black acoustic guitar. Behind him, massive arena speaker stacks, overhead truss lighting rigs, and an endless roaring ocean of fifty thousand fan silhouettes in hazy blue and gold concert light. Complete rectangular black ink panel frame border enclosing all four sides with generous margins. Include a neatly positioned torn paper caption box fully contained within the upper portion of the frame with generous margin below the top edge (ensure all text is 100% visible, not cut off at borders) with the exact text: \"Ten years since the deal. Still on top, fifty thousand a night, but hollow.\". Use a messy handwritten marker font. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, high-contrast arena lighting, clean cel and gradient shading, no messy watercolor wash, no blur.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep07/panels/panel_01.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep07/panels/panel_01.webp",
+      "sizeKB": 751.5,
+      "hash": "7dd8605d",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_07_The_Price_of_the_Game/selected/track_07_panel_01.webp",
+      "originalCaption": "Ten years since the deal. Still on top, fifty thousand a night, but hollow."
+    },
+    {
+      "panelId": 2,
+      "name": "A colossal sea of screaming fans reaching",
+      "act": "Track 7",
+      "summary": "A colossal sea of screaming fans reaching upward into shafts of concert light, holding up posters and glowing commercial signs bearing artificial corporate stage names that aren't his real name.",
+      "caption": "The crowd screamed a name that wasn't his.",
+      "dialogue": [],
+      "characters": [],
+      "objects": [],
+      "shotType": "High angle looking down on the arena crowd",
+      "prompt": "High angle looking down over the screaming arena crowd from above the sea of heads. Thousands of frantic, ecstatic fans reaching upward into beams of gold and cyan stage light and drifting concert haze, holding high hand-painted poster boards, glowing neon signs, and commercial merchandise banners reading corporate stage names like \"JESSE RAY\" and \"THE KING OF COUNTRY ROCK\" (commercial names that aren't his real name). Confetti and atmospheric haze fall through dramatic light beams. Deep graphic novel cross-hatching on the crowd silhouettes. Complete rectangular black ink panel frame border enclosing all four sides with generous margins. Include a neatly positioned torn paper caption box fully contained within the upper portion of the frame with generous margin below the top edge (ensure all text is 100% visible, not cut off at borders) with the exact text: \"The crowd screamed a name that wasn't his.\". Use a messy handwritten marker font. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, dynamic concert lighting, clean cel and gradient shading, no messy watercolor wash, no blur.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep07/panels/panel_02.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep07/panels/panel_02.webp",
+      "sizeKB": 1011.3,
+      "hash": "43d33d74",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_07_The_Price_of_the_Game/selected/track_07_panel_02.webp",
+      "originalCaption": "The crowd screamed a name that wasn't his."
+    },
+    {
+      "panelId": 3,
+      "name": "The superstar sings into a vintage chrome",
+      "act": "Track 7",
+      "summary": "The superstar sings into a vintage chrome stage microphone, but his facial muscles and dead, dull expression show total mechanical detachment—not a single ounce of passion or soul remains in the delivery.",
+      "caption": "The song he'd bled to write meant nothing in his mouth.",
+      "dialogue": [],
+      "characters": [
+        "kid"
+      ],
+      "objects": [],
+      "shotType": "Dramatic close-up on the superstar's mouth and microphone",
+      "prompt": "Dramatic close-up on the superstar's lower face, mouth, jawline, and vintage chrome stage microphone. The handsome 29-year-old superstar (sharp jawline, dark stubble, slicked hair, embroidered satin western shirt collar with silver tips) sings directly into the heavy chrome microphone mesh. His mouth is open in song, but his expression and facial muscles are completely dead, numb, and emotionally detached—pure mechanical routine with no soul or feeling left in the music. Beams of intense arena stage light reflect off the microphone chrome and sweat on his skin. Complete rectangular black ink panel frame border enclosing all four sides with generous margins. Include a neatly positioned torn paper caption box fully contained within the upper portion of the frame with generous margin below the top edge (ensure all text is 100% visible, not cut off at borders) with the exact text: \"The song he'd bled to write meant nothing in his mouth.\". Use a messy handwritten marker font. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, intense stage lighting, clean cel and gradient shading, no messy watercolor wash, no blur.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep07/panels/panel_03.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep07/panels/panel_03.webp",
+      "sizeKB": 657.7,
+      "hash": "f624101f",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_07_The_Price_of_the_Game/selected/track_07_panel_03.webp",
+      "originalCaption": "The song he'd bled to write meant nothing in his mouth."
+    },
+    {
+      "panelId": 4,
+      "name": "Backstage after the show, the superstar leans",
+      "act": "Track 7",
+      "summary": "Backstage after the show, the superstar leans against the marble vanity counter, staring blankly and dissociatively into the vanity mirror. The reflection looks like a hollow commercial stranger.",
+      "caption": "The reflection in the mirror was a famous stranger with a name he didn't own.",
+      "dialogue": [],
+      "characters": [
+        "kid"
+      ],
+      "objects": [],
+      "shotType": "Medium Shot, dressing room vanity mirror",
+      "prompt": "Medium shot, interior backstage VIP dressing room. The wealthy country-rock superstar (tall 6-foot-1, slender, slicked dark hair, gaunt cheekbones, wearing his embroidered black satin western suit with loosened collar, gold rings on his fingers, youthful 29-year-old features, NOT elderly) leans his hands against a marble vanity counter, staring blankly and dissociatively into a large dressing room mirror bordered with glowing round incandescent bulbs. Backstage luxury surrounds him—bouquets of flowers, a silver champagne bucket on ice, framed platinum record plaques on the walls. The mirror reflection stares back with hollow, vacant, haunted eyes—a fabricated celebrity stranger whose soul has been hollowed out. Complete rectangular black ink panel frame border enclosing all four sides with generous margins. Include a neatly positioned torn paper caption box fully contained within the upper portion of the frame with generous margin below the top edge (ensure all text is 100% visible, not cut off at borders) with the exact text: \"The reflection in the mirror was a famous stranger with a name he didn't own.\". Use a messy handwritten marker font. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, warm backstage vanity bulb lighting, clean cel and gradient shading, no messy watercolor wash, no blur.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep07/panels/panel_04.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep07/panels/panel_04.webp",
+      "sizeKB": 713.1,
+      "hash": "c67ab5ce",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_07_The_Price_of_the_Game/selected/track_07_panel_04.webp",
+      "originalCaption": "The reflection in the mirror was a famous stranger with a name he didn't own."
+    },
+    {
+      "panelId": 5,
+      "name": "Nighttime in a penthouse suite",
+      "act": "Track 7",
+      "summary": "Nighttime in a penthouse suite. The superstar lies wide awake on silk sheets in the dark, staring up at the ceiling, tortured by sleep deprivation and the terrifying unknown timeline of the open clock.",
+      "caption": "Nights he lay awake counting days - tortured most by the open clock, because nobody had ever told him how long he had.",
+      "dialogue": [],
+      "characters": [
+        "kid",
+        "devil"
+      ],
+      "objects": [],
+      "shotType": "Top-down bird's-eye angle onto a luxury hotel bed",
+      "prompt": "Top-down bird's-eye angle looking directly down onto an oversized king bed in a luxurious penthouse hotel suite at 3 AM. The wealthy 29-year-old superstar (handsome youthful features, slicked dark hair tousled on the pillow, sharp cheekbones, wearing a black silk undershirt and tailored trousers, gold watch glinting on his wrist, NOT elderly) lies wide awake on rumpled dark silk sheets, staring straight up at the ceiling with wide, terrified, sleep-deprived dark eyes. Cold blue moonlight filters through high luxury curtains, casting deep dramatic chiaroscuro shadows across the room and a faint, ominous phantom shadow of an ancient clock face ticking on the ceiling. His hands clutch the sheets in tight anxiety. Complete rectangular black ink panel frame border enclosing all four sides with generous margins. Include a neatly positioned torn paper caption box fully contained within the upper portion of the frame with generous margin below the top edge: \"Nights he lay awake counting days - tortured most by the open clock, because nobody had ever told him how long he had.\". Use a messy handwritten marker font. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, moody blue moonlight chiaroscuro lighting, clean cel and gradient shading, no messy watercolor wash, no blur.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep07/panels/panel_05.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep07/panels/panel_05.webp",
+      "sizeKB": 771.1,
+      "hash": "a67c3620",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_07_The_Price_of_the_Game/selected/track_07_panel_05.webp",
+      "originalCaption": "Nights he lay awake counting days - tortured most by the open clock, because nobody had ever told him how long he had."
+    },
+    {
+      "panelId": 6,
+      "name": "The superstar in bed in the dark,",
+      "act": "Track 7",
+      "summary": "The superstar in bed in the dark, with an eerie amber-and-smoke spectral overlay of the Old Bluesman's weathered face and warning from the honky-tonk looming above him.",
+      "caption": "The old bluesman's warning from the honky tonk had become his own dying breath...",
+      "dialogue": [],
+      "characters": [
+        "kid",
+        "bluesman",
+        "devil"
+      ],
+      "objects": [],
+      "shotType": "Dramatic double-exposure flashback overlay",
+      "prompt": "Dramatic double-exposure psychological flashback panel. In the dark lower half of the frame, the 29-year-old superstar lies in bed with shadowed gaunt features and wide haunted eyes. Looming above him in an eerie, semi-transparent amber-and-smoke spectral overlay is the menacing, knowing face of the Devil as the Itinerant Bluesman (enigmatic elderly African-American man with deeply weathered skin, deep knowing wrinkles, uncanny glowing amber eyes, wearing his dusty grey felt fedora tilted low over his brow, a sharp predatory grin on his thin lips, wisps of grey tobacco pipe smoke curling into the darkness). The supernatural amber eyes of the bluesman look directly through him, echoing the terrifying memory of the honky-tonk crossroads warning. Complete rectangular black ink panel frame border enclosing all four sides with generous margins. Include a neatly positioned torn paper caption box fully contained within the upper portion of the frame with generous margin below the top edge: \"The old bluesman's warning from the honky tonk had become his own dying breath...\". Use a messy handwritten marker font. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, eerie amber and midnight shadow lighting, clean cel and gradient shading, no messy watercolor wash, no blur.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep07/panels/panel_06.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep07/panels/panel_06.webp",
+      "sizeKB": 538.4,
+      "hash": "8ee19f87",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_07_The_Price_of_the_Game/selected/track_07_panel_06.webp",
+      "originalCaption": "The old bluesman's warning from the honky tonk had become his own dying breath..."
+    },
+    {
+      "panelId": 7,
+      "name": "Backstage, the superstar looks at his hands",
+      "act": "Track 7",
+      "summary": "Backstage, the superstar looks at his hands adorned with luxury gold watches and platinum rings resting against his custom black guitar—wealth everywhere, but feeling completely bankrupt.",
+      "caption": "...fame and gold in hand with nothing left to gain, and everything he was was the price he'd paid.",
+      "dialogue": [],
+      "characters": [
+        "kid",
+        "devil"
+      ],
+      "objects": [],
+      "shotType": "Close-up on hands resting on a guitar",
+      "prompt": "Close-up on the superstar's hands resting atop the polished body of his custom jet-black acoustic guitar backstage. Slender, calloused fingers adorned with heavy gold nugget rings and a luxury gold Swiss watch gleaming on his wrist, resting against the dark gleaming lacquer of the guitar. Immaculate embroidered satin western suit cuffs with pearl-snap buttons are visible at the wrists. The gold jewelry and expensive guitar gleam under harsh artificial lights, but the posture is heavy and lifeless—the bitter realization of having all the wealth in the world with his soul forfeit. Complete rectangular black ink panel frame border enclosing all four sides with generous margins. Include a neatly positioned torn paper caption box fully contained within the upper portion of the frame with generous margin below the top edge: \"...fame and gold in hand with nothing left to gain, and everything he was was the price he'd paid.\". Use a messy handwritten marker font. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, dramatic gold and shadow lighting, clean cel and gradient shading, no messy watercolor wash, no blur.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep07/panels/panel_07.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep07/panels/panel_07.webp",
+      "sizeKB": 590.1,
+      "hash": "2f4cdd96",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_07_The_Price_of_the_Game/selected/track_07_panel_07.webp",
+      "originalCaption": "...fame and gold in hand with nothing left to gain, and everything he was was the price he'd paid."
+    },
+    {
+      "panelId": 8,
+      "name": "During the bridge of a song under",
+      "act": "Track 7",
+      "summary": "During the bridge of a song under blazing spotlights, the superstar abruptly freezes mid-play. A sudden, electrifying transformation washes over his haunted face—a look of absolute, desperate resolve.",
+      "caption": "He made his decision in the bridge - his time felt close...",
+      "dialogue": [],
+      "characters": [
+        "kid"
+      ],
+      "objects": [],
+      "shotType": "Dynamic eye-level medium shot on the arena stage",
+      "prompt": "Dynamic eye-level medium shot on the center of the stadium arena stage mid-concert. Under the blazing white and gold spotlight beams, the wealthy 29-year-old superstar (tall, athletic build, slicked dark hair, gaunt cheekbones, wearing his immaculate black embroidered satin western suit with gold rings) stops playing abruptly right in the middle of a song bridge. His fingers freeze motionless on the strings of his custom jet-black acoustic guitar; his head tilts upward with an electrifying expression of sudden, absolute, reckless resolve washing over his haunted face. The band members in the blurred background behind him look over in startled confusion. Complete rectangular black ink panel frame border enclosing all four sides with generous margins. Include a neatly positioned torn paper caption box fully contained within the upper portion of the frame with generous margin below the top edge: \"He made his decision in the bridge - his time felt close...\". Use a messy handwritten marker font. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, brilliant high-contrast stage lighting, clean cel and gradient shading, no messy watercolor wash, no blur.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep07/panels/panel_08.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep07/panels/panel_08.webp",
+      "sizeKB": 567.8,
+      "hash": "9d839c83",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_07_The_Price_of_the_Game/selected/track_07_panel_08.webp",
+      "originalCaption": "He made his decision in the bridge - his time felt close..."
+    },
+    {
+      "panelId": 9,
+      "name": "The superstar drops his guitar flat on",
+      "act": "Track 7",
+      "summary": "The superstar drops his guitar flat on the center stage under the spotlight and walks away into the dark wings, while crew members stare frozen in shock.",
+      "caption": "...he'd drive back south to the fork on 61 and beg the Devil for a pardon or a way out.",
+      "dialogue": [],
+      "characters": [
+        "kid",
+        "devil"
+      ],
+      "objects": [],
+      "shotType": "Wide Shot pulling away, high drama",
+      "prompt": "Wide shot pulling away, high cinematic drama. In the center of the massive illuminated arena stage beneath an empty circle of blinding white spotlights, the superstar's custom black acoustic guitar lies discarded flat on the stage floor, microphone stand abandoned beside it. Walking briskly away into the dark shadowy wings of the stage is the solitary silhouette of the superstar in his western suit, his back turned to the audience. Road crew technicians and stagehands in headset radios stand frozen in shock and disbelief in the side wings as fifty thousand fans scream in confusion. Complete rectangular black ink panel frame border enclosing all four sides with generous margins. Include a neatly positioned torn paper caption box fully contained within the upper portion of the frame with generous margin below the top edge: \"...he'd drive back south to the fork on 61 and beg the Devil for a pardon or a way out.\". Use a messy handwritten marker font. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, stark chiaroscuro stage-and-shadow lighting, clean cel and gradient shading, no messy watercolor wash, no blur.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep07/panels/panel_09.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep07/panels/panel_09.webp",
+      "sizeKB": 701.8,
+      "hash": "709f1075",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_07_The_Price_of_the_Game/selected/track_07_panel_09.webp",
+      "originalCaption": "...he'd drive back south to the fork on 61 and beg the Devil for a pardon or a way out."
+    },
+    {
+      "panelId": 10,
+      "name": "The vintage Cadillac convertible speeds directly toward",
+      "act": "Track 7",
+      "summary": "The vintage Cadillac convertible speeds directly toward the viewer down the dark highway with its headlights beaming forward, driving south away from the distant glowing concert arena receding on the horizon. The Kid is visible behind the wheel looking forward with grim resolve.",
+      "caption": "He walked out of a sold-out show mid-tour, left the money and the mansion and his name in lights, and pointed the Cadillac south.",
+      "dialogue": [],
+      "characters": [
+        "kid"
+      ],
+      "objects": [],
+      "shotType": "Front three-quarter dramatic cinematic wide shot, nighttime highway",
+      "prompt": "Front three-quarter dramatic cinematic wide shot, nighttime highway. A vintage candy-apple red Cadillac convertible is driving directly forward towards the viewer down an empty dark Mississippi highway, speeding south away from a distant concert arena in the background. The car's powerful twin headlights beam brightly forward toward the viewer, cutting through the dark night and casting long light beams onto the asphalt in the foreground. Behind the car in the far distant horizon, exactly ONE single solitary domed concert arena glows with faint searchlights beaming into the night sky, left far behind in the distance. Seated in the open convertible behind the chrome-accented steering wheel on the driver's side, the 29-year-old superstar (handsome youthful features, slicked dark hair, black sunglasses, black western shirt) looks forward toward the viewer with grim determination as he escapes south into the night. No roadside signs. Complete rectangular black ink panel frame border enclosing all four sides with generous margins. Crucial: Include a prominent torn parchment paper caption box placed across the top of the frame with clear margin below the top border (ensure all text is 100% visible, sharp and legible) with the exact text: \"He walked out of a sold-out show mid-tour, left the money and the mansion and his name in lights, and pointed the Cadillac south.\". Use a messy handwritten marker font. Style: Highly detailed modern graphic novel panel, crisp clean ink linework with fine cross-hatching, rich digital texture, dramatic headlights shining toward foreground, moody stadium glow in far distance, clean cel and gradient shading, no messy watercolor wash, no blur.",
+      "imageEngine": "meta-ai-cdp",
+      "imageStatus": "VERIFIED",
+      "imagePath": "projects/at-the-crossroads/episodes/ep07/panels/panel_10.webp",
+      "webPreviewUrl": "projects/at-the-crossroads/episodes/ep07/panels/panel_10.webp",
+      "sizeKB": 592.2,
+      "hash": "4b37fbbd",
+      "qaNotes": "Imported from At the Crossroads (Take 2): panel approved in the original project.",
+      "audioStatus": "PENDING",
+      "audioPath": "",
+      "importedFrom": "02_Assets/Track_07_The_Price_of_the_Game/selected/track_07_panel_10.webp",
+      "originalCaption": "He walked out of a sold-out show mid-tour, left the money and the mansion and his name in lights, and pointed the Cadillac south."
+    }
+  ],
+  "importedFrom": {
+    "source": "At the Crossroads - 2",
+    "track": 7,
+    "importedAt": "2026-11-16T19:22:00.815Z"
+  }
+}
