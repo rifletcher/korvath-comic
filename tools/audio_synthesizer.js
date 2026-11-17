@@ -13,8 +13,7 @@ const rootDir = path.join(__dirname, '..');
 function getElevenKey() {
   if (process.env.ELEVENLABS_API_KEY) return process.env.ELEVENLABS_API_KEY;
   const envCandidates = [
-    path.join(rootDir, '.env'),
-    'C:\\research\\c-book-generator\\comic-studio\\.env'
+    path.join(rootDir, '.env')
   ];
   for (const envPath of envCandidates) {
     if (fs.existsSync(envPath)) {

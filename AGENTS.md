@@ -5,11 +5,11 @@ These rules govern the autonomous execution, writers' room saga creation, dual c
 ## 🧩 Mandatory Workspace Quality Skills (`.agents/skills/`)
 
 Before executing any stage or promoting an episode past a Studio Quality Gate, you **MUST** read and execute the corresponding workspace skill:
-- **Stage 0 (Onboarding):** [`comic-character-onboarding`](file:///c:/research/c-book-generator/conan/.agents/skills/comic-character-onboarding/SKILL.md) — Quad-pillar entity onboarding & anti-bleed prompt isolation.
-- **Stage 1 / Gate A (`SCRIPT_GATE`):** [`comic-writers-room-and-prompts`](file:///c:/research/c-book-generator/conan/.agents/skills/comic-writers-room-and-prompts/SKILL.md) — Configurable $N$-panel scripting, Llama Guard euphemisms, weapon invariants, and [`verify_storyboard_prompts.js`](file:///c:/research/c-book-generator/conan/.agents/skills/comic-writers-room-and-prompts/scripts/verify_storyboard_prompts.js).
-- **Stage 2 / Gate B (`VISUAL_QA_GATE`):** [`comic-visual-qa-director`](file:///c:/research/c-book-generator/conan/.agents/skills/comic-visual-qa-director/SKILL.md) — 8-point visual inspection rubric, hand/weapon invariants, and speech bubble pointer direction verification.
-- **Stage 3 / Gate C (`AUDIO_QA_GATE`):** [`comic-voice-and-acoustic-qa`](file:///c:/research/c-book-generator/conan/.agents/skills/comic-voice-and-acoustic-qa/SKILL.md) — Fail-closed voice registry casting, visual-speaker alignment (Panel 5 rule), Subterranean Kratos DSP chains, and [`verify_voice_casting.js`](file:///c:/research/c-book-generator/conan/.agents/skills/comic-voice-and-acoustic-qa/scripts/verify_voice_casting.js).
-- **Stage 4 / Gate D (`FINAL_CUT_GATE`):** [`comic-motion-video-assembly`](file:///c:/research/c-book-generator/conan/.agents/skills/comic-motion-video-assembly/SKILL.md) — Aspect ratio preservation (vertical tilts, panoramic sweeps, Ken Burns), zero-drift MPEG-TS concat, and `ffprobe` sync verification.
+- **Stage 0 (Onboarding):** [`comic-character-onboarding`](.agents/skills/comic-character-onboarding/SKILL.md) — Quad-pillar entity onboarding & anti-bleed prompt isolation.
+- **Stage 1 / Gate A (`SCRIPT_GATE`):** [`comic-writers-room-and-prompts`](.agents/skills/comic-writers-room-and-prompts/SKILL.md) — Configurable $N$-panel scripting, Llama Guard euphemisms, weapon invariants, and [`verify_storyboard_prompts.js`](.agents/skills/comic-writers-room-and-prompts/scripts/verify_storyboard_prompts.js).
+- **Stage 2 / Gate B (`VISUAL_QA_GATE`):** [`comic-visual-qa-director`](.agents/skills/comic-visual-qa-director/SKILL.md) — 8-point visual inspection rubric, hand/weapon invariants, and speech bubble pointer direction verification.
+- **Stage 3 / Gate C (`AUDIO_QA_GATE`):** [`comic-voice-and-acoustic-qa`](.agents/skills/comic-voice-and-acoustic-qa/SKILL.md) — Fail-closed voice registry casting, visual-speaker alignment (Panel 5 rule), Subterranean Kratos DSP chains, and [`verify_voice_casting.js`](.agents/skills/comic-voice-and-acoustic-qa/scripts/verify_voice_casting.js).
+- **Stage 4 / Gate D (`FINAL_CUT_GATE`):** [`comic-motion-video-assembly`](.agents/skills/comic-motion-video-assembly/SKILL.md) — Aspect ratio preservation (vertical tilts, panoramic sweeps, Ken Burns), zero-drift MPEG-TS concat, and `ffprobe` sync verification.
 
 ---
 
@@ -17,7 +17,7 @@ Before executing any stage or promoting an episode past a Studio Quality Gate, y
 
 Whenever a new character or recurring weapon/relic/monster is introduced, **NEVER** write or generate panel prompts until the 4-step sequence is 100% complete:
 
-1. **Bible Documentation ([`00_Reference/character_bible.md`](file:///C:/research/c-book-generator/conan/00_Reference/character_bible.md)):**
+1. **Bible Documentation ([`00_Reference/character_bible.md`](00_Reference/character_bible.md)):**
    * **Visual Latent Anchor:** 2-Actor celebrity blend formula + 3 non-negotiable silhouette props + signature color palette.
    * **Dual-Emotion Voice DNA:**
      * Vocal Actor Persona blend & timbre.
@@ -29,7 +29,7 @@ Whenever a new character or recurring weapon/relic/monster is introduced, **NEVE
    * Dual Voice Auditions: `node tools/onboard_character.js --key <key>` $\rightarrow$ `docs/audio/<key>_audition_normal.mp3` & `docs/audio/<key>_audition_combat.mp3`.
    * Weapon/Object Model Sheet: `node tools/generate_model_sheet.js --type object <key>` $\rightarrow$ `00_Reference/sheets/<key>_model_sheet.webp`.
 3. **Audition Approval & Casting Deck:**
-   * Audition both the baseline and combat scream/roar in the web player ([`docs/video_preview.html`](file:///C:/research/c-book-generator/conan/docs/video_preview.html)) to verify visceral depth and dynamic emotional range before rendering sequential story panels.
+   * Audition both the baseline and combat scream/roar in the web player ([`docs/video_preview.html`](docs/video_preview.html)) to verify visceral depth and dynamic emotional range before rendering sequential story panels.
 4. **Dictionary & Engine Pipeline Registration:**
    * Register the machine-readable single-anchor in `00_Reference/character_prompts.json` or `00_Reference/object_prompts.json`.
    * Register the acoustic profile in `tools/build_full_episode_video.js` (`ELEVEN_VOICES` and DSP mapping).

@@ -30,7 +30,7 @@
   * **Acoustic Engine Profile:** ElevenLabs `Brian` (`nPczCjzI2devNBz1zQrb`) with **Subterranean Kratos Mastering Chain** ($-12\%$ pitch shift, $+8\text{dB}$ sub-bass boost @ $95\text{Hz}$, `stability: 0.20-0.32`, `style: 0.85`).
   * **Benchmark Audition A (Grim Threat):** *"I pay for wine with silver. I pay for insults with steel."*
   * **Benchmark Audition B (Battle Roar):** *"DIE, BEAST OF SHADOWS! BURN IN THE PITS OF VALKASH!"*
-  * **Canonical Audio Samples:** [`docs/audio/korvath_deep_brian_subbass_threat.mp3`](file:///c:/research/c-book-generator/conan/docs/audio/korvath_deep_brian_subbass_threat.mp3) & [`docs/audio/korvath_deep_brian_subbass_roar.mp3`](file:///c:/research/c-book-generator/conan/docs/audio/korvath_deep_brian_subbass_roar.mp3)
+  * **Canonical Audio Samples:** [`docs/audio/korvath_deep_brian_subbass_threat.mp3`](docs/audio/korvath_deep_brian_subbass_threat.mp3) & [`docs/audio/korvath_deep_brian_subbass_roar.mp3`](docs/audio/korvath_deep_brian_subbass_roar.mp3)
 
 ---
 
@@ -73,7 +73,7 @@
   * **Acoustic Engine Profile:** ElevenLabs `Sarah` (`EXAVITQu4vr4xnSDxMaL`, `stability: 0.18-0.35`, `style: 0.85`).
   * **Benchmark Audition A (Sultry Streetwise):** *"Keep your hand on your hilt, Korvath. A purse in Valkash buys you a slit throat before dawn."*
   * **Benchmark Audition B (Panicked Scream):** *"It's a trap! The webs... they burn like acid! KORVATH, LOOK OUT!"*
-  * **Canonical Audio Samples:** [`docs/audio/natari_audition_sultry.mp3`](file:///c:/research/c-book-generator/conan/docs/audio/natari_audition_sultry.mp3) & [`docs/audio/natari_audition_scream.mp3`](file:///c:/research/c-book-generator/conan/docs/audio/natari_audition_scream.mp3)
+  * **Canonical Audio Samples:** [`docs/audio/natari_audition_sultry.mp3`](docs/audio/natari_audition_sultry.mp3) & [`docs/audio/natari_audition_scream.mp3`](docs/audio/natari_audition_scream.mp3)
 
 ---
 
@@ -95,7 +95,7 @@
 * **Acoustic Engine Profile:** ElevenLabs `Brian` (`nPczCjzI2devNBz1zQrb`, natural pitch, `stability: 0.30`, `style: 0.65`, `volume: 1.25`).
 * **Benchmark Audition Line:** *"Beyond the red sands of Sarkesh lay Valkash—city of thieves, poisoned wine, and men whose smiles were sharper than their daggers."*
 * **Benchmark Action Line:** *"Steel meets chitin! Fire and venom clash in the dark depths of the ancient vault!"*
-* **Canonical Audio Sample:** [`docs/audio/demo_emotional_brian.mp3`](file:///c:/research/c-book-generator/conan/docs/audio/demo_emotional_brian.mp3)
+* **Canonical Audio Sample:** [`docs/audio/demo_emotional_brian.mp3`](docs/audio/demo_emotional_brian.mp3)
 
 ---
 
@@ -113,7 +113,7 @@
   * **Acoustic Engine Profile:** ElevenLabs `Charlie` (`IKne3meq5aSn9XLyUdCD`, `stability: 0.25-0.40`, `style: 0.75`).
   * **Benchmark Audition A (Arrogant Gloat):** *"Every man in Valkash has a price, barbarian. What is yours...? A purse of gold, or a cup of poisoned wine?"*
   * **Benchmark Audition B (Villain Panic):** *"Guards! Slay him! Cut the northern dog down before he ruins me!"*
-  * **Canonical Audio Samples:** [`docs/audio/malakor_charlie_sneer.mp3`](file:///c:/research/c-book-generator/conan/docs/audio/malakor_charlie_sneer.mp3) & [`docs/audio/malakor_charlie_shout.mp3`](file:///c:/research/c-book-generator/conan/docs/audio/malakor_charlie_shout.mp3)
+  * **Canonical Audio Samples:** [`docs/audio/malakor_charlie_sneer.mp3`](docs/audio/malakor_charlie_sneer.mp3) & [`docs/audio/malakor_charlie_shout.mp3`](docs/audio/malakor_charlie_shout.mp3)
 
 ---
 
@@ -125,7 +125,7 @@
   * **Acoustic Engine Profile:** ElevenLabs `George` (`JBFqnCBsd6RMkjVDRZzb`, `stability: 0.20-0.35`, `style: 0.85`).
   * **Benchmark Audition A (Whispered Ambush):** *"The shadow guild sends its regards, barbarian. Sleep now in the venom..."*
   * **Benchmark Audition B (Death Hiss):** *"The brood queen... will feast upon your entrails...!"*
-  * **Canonical Audio Samples:** [`docs/audio/assassin_whisper.mp3`](file:///c:/research/c-book-generator/conan/docs/audio/assassin_whisper.mp3) & [`docs/audio/assassin_death.mp3`](file:///c:/research/c-book-generator/conan/docs/audio/assassin_death.mp3)
+  * **Canonical Audio Samples:** [`docs/audio/assassin_whisper.mp3`](docs/audio/assassin_whisper.mp3) & [`docs/audio/assassin_death.mp3`](docs/audio/assassin_death.mp3)
 
 ---
 

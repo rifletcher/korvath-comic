@@ -12,7 +12,7 @@ description: >-
 
 Always view the actual rendered `.webp` image files using `read_file` alongside:
 1. The series configuration in `projects/<comicId>/project.json` (`artStyleAnchor`, `genre`, and `invariants`).
-2. The character and object turnaround model sheets in [`00_Reference/sheets/`](file:///c:/research/c-book-generator/conan/00_Reference/sheets) (or `projects/<comicId>/00_Reference/sheets/`).
+2. The character and object turnaround model sheets in [`00_Reference/sheets/`](00_Reference/sheets) (or `projects/<comicId>/00_Reference/sheets/`).
 
 Never mark any panel as `APPROVED` based solely on text metadata.
 

@@ -5123,12 +5123,11 @@
         `;
         const masterVidUrl = resolveAssetSrc(ep.outputs?.masterVideoPath);
         const grokVidUrl = resolveAssetSrc(ep.outputs?.grokVideoPath);
+        // Paths are shown relative to the Studio folder (it can live anywhere)
         const rawMasterDiskPath = ep.outputs?.masterVideoPath
-          ? 'C:\\research\\c-book-generator\\conan\\' + ep.outputs.masterVideoPath.replace(/\//g, '\\')
-          : 'C:\\research\\c-book-generator\\conan\\projects\\' + projectId + '\\episodes\\' + episodeId + '\\video\\' + episodeId + '_motion_comic.mp4';
-        const rawGrokDiskPath = ep.outputs?.grokVideoPath
-          ? 'C:\\research\\c-book-generator\\conan\\' + ep.outputs.grokVideoPath.replace(/\//g, '\\')
-          : 'C:\\research\\c-book-generator\\conan\\docs\\episode_01_motion_comic.mp4';
+          ? ep.outputs.masterVideoPath.replace(/\//g, '\\')
+          : 'projects\\' + projectId + '\\episodes\\' + episodeId + '\\video\\' + episodeId + '_motion_comic.mp4';
+        const rawGrokDiskPath = ep.outputs?.grokVideoPath ? ep.outputs.grokVideoPath.replace(/\//g, '\\') : '';
 
         artifactEl.innerHTML = `
           <div class="script-card">
@@ -5737,7 +5736,7 @@
               <div style="font-size:11px; color:var(--text-muted); margin-top:4px; line-height:1.5;">
                 To enable 1-click uploads, save your Desktop App OAuth client secret JSON from Google Cloud Console as:
                 <code style="display:block; font-family:'JetBrains Mono',monospace; color:#38bdf8; background:#07080c; padding:4px 6px; margin:6px 0; border-radius:4px; word-break:break-all;">
-                  ${st.clientSecretPath || 'C:\\research\\c-book-generator\\conan\\.credentials\\client_secret.json'}
+                  ${st.clientSecretPath || '.credentials\\client_secret.json (in the Studio folder)'}
                 </code>
                 (Steps: 1. console.cloud.google.com → 2. Enable YouTube Data API v3 → 3. Create OAuth Client ID [Desktop App] → 4. Download JSON)
               </div>

@@ -9,13 +9,13 @@ const VENICE_MODELS = new Set([
 
 function getVeniceApiKey() {
   if (process.env.VENICE_API_KEY) return process.env.VENICE_API_KEY;
-  const envPath = 'C:\\research\\c-book-generator\\comic-studio\\.env';
+  const envPath = require('path').join(__dirname, '..', '..', '..', '.env');
   if (fs.existsSync(envPath)) {
     const env = fs.readFileSync(envPath, 'utf8');
     const match = env.match(/VENICE_API_KEY=([^\r\n]+)/);
     if (match) return match[1].trim();
   }
-  throw new Error('VENICE_API_KEY not found in process.env or comic-studio/.env');
+  throw new Error('VENICE_API_KEY not found. Add VENICE_API_KEY=<key> to the .env file in the Studio folder.');
 }
 
 async function renderViaVeniceModel(modelName, prompt) {

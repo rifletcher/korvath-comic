@@ -10,7 +10,7 @@ Use this skill whenever synthesizing dialogue, rebuilding panel audio mixes (`pX
 
 ## 1. Fail-Closed Voice Registry & Canonical Cast
 
-All speakers in `storyboard.json` **MUST** resolve to [`00_Reference/voice_registry.json`](file:///c:/research/c-book-generator/conan/00_Reference/voice_registry.json). Silent fallback to a default voice is strictly forbidden.
+All speakers in `storyboard.json` **MUST** resolve to [`00_Reference/voice_registry.json`](00_Reference/voice_registry.json). Silent fallback to a default voice is strictly forbidden.
 
 | Speaker Key | Role | Canonical ElevenLabs Voice ID | Mandatory FFmpeg DSP Mastering Chain |
 | :--- | :--- | :--- | :--- |

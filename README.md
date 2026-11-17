@@ -38,7 +38,7 @@ This repository is pre-configured for zero-config Vercel deployment:
 ## 🚀 Quick Start CLI
 
 ```bash
-cd C:\research\c-book-generator\conan
+cd C:\projects\comics\korvath-comic
 
 # 1. Author a new saga via the 20-Panel Writers' Room
 npm run room:write

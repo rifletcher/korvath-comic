@@ -10,14 +10,14 @@ Never write or render story panels for a new character, recurring weapon, or rel
 
 ## 1. Visual Latent Anchor & Anti-Bleed Isolation
 
-1. **Document in [`00_Reference/character_bible.md`](file:///c:/research/c-book-generator/conan/00_Reference/character_bible.md)** (or the series-specific `projects/<comicId>/00_Reference/`):
+1. **Document in [`00_Reference/character_bible.md`](00_Reference/character_bible.md)** (or the series-specific `projects/<comicId>/00_Reference/`):
    - **2-Actor Celebrity Blend Formula:** Anchor facial structure using two recognizable archetypes (e.g., young Arnold Schwarzenegger + Henry Cavill jaw/brow).
    - **3 Non-Negotiable Silhouette Props:** Lock wardrobe layers (e.g., heavy shaggy wolf-fur mantle, cross-chest leather harness with brass buckles, fur-trimmed war kilt).
    - **Signature Color Palette:** Define primary and accent hex/cel colors.
 2. **Strict Character vs. Object Prompt Separation (Anti-Claw-Hand Rule):**
    - **NEVER** include relic or pedestal descriptors (such as *"black iron serpent claw setting"* or *"coiled tentacle hilt"*) inside a character's body or wardrobe prompt.
-   - Store character body/wardrobe DNA exclusively in [`00_Reference/character_prompts.json`](file:///c:/research/c-book-generator/conan/00_Reference/character_prompts.json).
-   - Store weapon/relic geometry exclusively in [`00_Reference/object_prompts.json`](file:///c:/research/c-book-generator/conan/00_Reference/object_prompts.json).
+   - Store character body/wardrobe DNA exclusively in [`00_Reference/character_prompts.json`](00_Reference/character_prompts.json).
+   - Store weapon/relic geometry exclusively in [`00_Reference/object_prompts.json`](00_Reference/object_prompts.json).
    - When a character holds an object in a panel, explicitly bind the interface with human anatomy: *"gripping the wire-wrapped hilt with five human fingers, thumb locked over the rectangular iron crossguard"*.
 
 ## 2. Turnaround Model Sheets
@@ -35,7 +35,7 @@ Generate visual reference sheets before rendering sequential panels:
 
 ## 3. Dual-Emotion Voice DNA & Auditions
 
-1. **Register Actor & DSP Mastering Chain in [`00_Reference/voice_registry.json`](file:///c:/research/c-book-generator/conan/00_Reference/voice_registry.json):**
+1. **Register Actor & DSP Mastering Chain in [`00_Reference/voice_registry.json`](00_Reference/voice_registry.json):**
    - Verify the ElevenLabs `voice_id` returns HTTP 200 (never use unverified placeholder IDs).
    - Define both `stability` (`0.18–0.35` for combat, `0.40–0.55` for baseline) and `style` (`0.65–0.85`).
    - Specify the FFmpeg `dsp_filter` chain (e.g., Korvath's canonical Subterranean Kratos chain: `asetrate=44100*0.88,aresample=44100,equalizer=f=95:width_type=h:width=60:g=8,volume=1.45`).

@@ -23,8 +23,7 @@ const VENICE_MODELS = new Set([
 function getVeniceApiKey() {
   if (process.env.VENICE_API_KEY) return process.env.VENICE_API_KEY;
   const envCandidates = [
-    path.join(rootDir, '.env'),
-    'C:\\research\\c-book-generator\\comic-studio\\.env'
+    path.join(rootDir, '.env')
   ];
   for (const envPath of envCandidates) {
     if (fs.existsSync(envPath)) {
