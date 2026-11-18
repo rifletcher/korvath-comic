@@ -415,7 +415,6 @@ async function uploadVideoToYouTube(accessToken, meta, onProgress) {
   console.log(`   Title    : ${meta.title}`);
   console.log(`   File     : ${meta.masterVideoPath} (${(fileSize / (1024 * 1024)).toFixed(1)} MB)`);
   console.log(`   Privacy  : ${meta.privacy}`);
-  console.log(`   Label    : Altered or synthetic content (AI-generated art and voices)`);
 
   // Step 1: Initiate session
   const initPayload = JSON.stringify({
@@ -427,10 +426,7 @@ async function uploadVideoToYouTube(accessToken, meta, onProgress) {
     },
     status: {
       privacyStatus: meta.privacy,
-      selfDeclaredMadeForKids: false,
-      // YouTube's "Altered or synthetic content" disclosure: the artwork and
-      // voices are AI-generated, so every upload is labelled.
-      containsSyntheticMedia: true
+      selfDeclaredMadeForKids: false
     }
   });
 

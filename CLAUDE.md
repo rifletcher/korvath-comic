@@ -39,13 +39,12 @@ After server changes Rob must close the Studio and rerun `launch_studio.bat`. Fr
 - **Manifest writes** go through the shared `manifest.json.lock` (Go `store/manifest_lock.go`, Node `tools/lib/manifest_lock.js`) with read-modify-write.
 - **Studio API security:** per-launch token, POST + JSON only for writes, no wildcard CORS, every project/episode ID validated (`studio/security.go`). Keep new endpoints behind the same middleware.
 - **Windows file names are case-insensitive.** Compare paths/speaker names case-insensitively when cleaning up files.
-- **YouTube uploads** set `status.containsSyntheticMedia` (AI disclosure label).
+- **YouTube uploads** do not set the AI-disclosure label (`containsSyntheticMedia`): Rob decided against it on 2026-11-18. Don't re-add it unless he asks.
 - **Re-render as copy** clones an episode for another model (`ep02-grok`, `ep02-muse`), reusing script and paid audio; the original is untouched.
 - Don't commit, push or delete without Rob's say-so. Don't change story content (names, lore) unless asked — it's Rob's call.
 
 ## Open items / known issues
 
-- Episode 1 was uploaded (unlisted) before the AI-disclosure label existed; it needs the label set in YouTube Studio or via a Studio "update label" step (not built yet).
 - Story content still has legal exposure Rob knows about: celebrity-blend character prompts (Cavill/Momoa, Hayek/de Armas) and leftover Conan/Hyborian/Crom references. The "Conan" name also remains in file and exe names.
 - `README.md` and `AGENTS.md` are out of date (describe old 5-/7-agent pipelines and npm scripts that no longer exist). Trust the code and this file over them.
 - The ElevenLabs key only needs Text to Speech + User → Read; Rob's current key is full-access.
